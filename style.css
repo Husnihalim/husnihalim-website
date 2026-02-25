@@ -371,10 +371,10 @@ table {
     position: relative;
     min-height: 100vh;
     display: flex;
-    align-items: center;
+    flex-direction: column;
+    align-items: stretch;
     background: var(--color-dark-bg);
     overflow: hidden;
-    padding: 8rem var(--container-padding) 4rem;
 }
 
 .hero::before {
@@ -384,8 +384,84 @@ table {
     background-image: url('https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=1920&q=80');
     background-size: cover;
     background-position: center;
-    opacity: 0.07;
+    opacity: 0.05;
     z-index: 0;
+}
+
+/* Two-column inner layout */
+.hero-inner {
+    position: relative;
+    z-index: var(--z-hero-content);
+    display: grid;
+    grid-template-columns: 1fr auto;
+    align-items: flex-end;
+    gap: clamp(2rem, 4vw, 5rem);
+    max-width: var(--container-max);
+    width: 100%;
+    margin: 0 auto;
+    padding: 8rem var(--container-padding) 4rem;
+    flex: 1;
+}
+
+/* ---- Portrait (right column) ---- */
+.hero-portrait-wrap {
+    position: relative;
+    width: clamp(260px, 30vw, 440px);
+    align-self: flex-end;
+    flex-shrink: 0;
+}
+
+/* Soft ambient glow behind portrait */
+.hero-portrait-glow {
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(ellipse at 50% 80%, rgba(139, 34, 82, 0.18) 0%, transparent 70%);
+    z-index: 0;
+    pointer-events: none;
+}
+
+.hero-portrait {
+    position: relative;
+    z-index: 1;
+    display: block;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    object-position: top center;
+
+    /* Fade portrait edges into dark background */
+    -webkit-mask-image:
+        linear-gradient(to bottom, black 0%, black 55%, transparent 95%),
+        linear-gradient(to right, transparent 0%, black 6%, black 94%, transparent 100%);
+    mask-image:
+        linear-gradient(to bottom, black 0%, black 55%, transparent 95%),
+        linear-gradient(to right, transparent 0%, black 6%, black 94%, transparent 100%);
+    -webkit-mask-composite: intersect;
+    mask-composite: intersect;
+
+    /* Subtle enhancement — lifts from dark bg */
+    filter: brightness(1.08) contrast(1.06) saturate(0.9);
+}
+
+/* Small credential badge under portrait */
+.hero-portrait-cred {
+    position: absolute;
+    bottom: 12%;
+    left: 0;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.25rem;
+    z-index: 2;
+}
+
+.hero-portrait-cred-line {
+    font-size: 0.625rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.14em;
+    color: rgba(196, 120, 50, 0.75);
 }
 
 /* Abstract geometric background — Circles & Arcs (not triangles) */
@@ -488,11 +564,12 @@ table {
     66% { transform: translate(-8px, 10px) scale(0.98); }
 }
 
-/* Hero Content */
+/* Hero Content (left column) */
 .hero-content {
     position: relative;
     z-index: var(--z-hero-content);
-    max-width: 820px;
+    max-width: 680px;
+    align-self: center;
 }
 
 .hero-badge {
@@ -640,7 +717,7 @@ table {
 /* Hero Scroll Indicator */
 .hero-scroll-indicator {
     position: absolute;
-    bottom: 3rem;
+    bottom: 2rem;
     right: var(--container-padding);
     display: flex;
     flex-direction: column;
@@ -2035,6 +2112,23 @@ table {
         --container-padding: 1.5rem;
     }
 
+    .hero-inner {
+        grid-template-columns: 1fr;
+        align-items: flex-start;
+        padding-bottom: 0;
+    }
+
+    .hero-portrait-wrap {
+        width: 100%;
+        max-width: 420px;
+        margin: 0 auto;
+    }
+
+    .hero-portrait {
+        -webkit-mask-image: linear-gradient(to bottom, black 0%, black 55%, transparent 92%);
+        mask-image: linear-gradient(to bottom, black 0%, black 55%, transparent 92%);
+    }
+
     .nav-links {
         gap: 1.5rem;
     }
@@ -2126,8 +2220,27 @@ table {
     }
 
     .hero {
-        padding: 7rem var(--container-padding) 4rem;
         min-height: 100svh;
+    }
+
+    .hero-inner {
+        grid-template-columns: 1fr;
+        padding: 7rem var(--container-padding) 0;
+        gap: 1.5rem;
+    }
+
+    .hero-content {
+        max-width: none;
+    }
+
+    .hero-portrait-wrap {
+        width: 100%;
+        max-width: 360px;
+        margin: 0 auto;
+    }
+
+    .hero-portrait-cred {
+        display: none;
     }
 
     .hero-title {
