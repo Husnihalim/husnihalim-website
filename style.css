@@ -714,6 +714,12 @@ table {
     line-height: 1.3;
 }
 
+/* Hide portrait when no image loaded */
+.hero-portrait[src=""],
+.hero-portrait:not([src]) {
+    visibility: hidden;
+}
+
 /* Hero Scroll Indicator */
 .hero-scroll-indicator {
     position: absolute;
