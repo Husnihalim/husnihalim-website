@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PDCA Implementation Problems in Malaysian SMEs | Husni Halim</title>
+<meta name="description" content="Most Malaysian manufacturing SMEs plan extensively and do minimally. PDCA specialist explains why the cycle stalls, why "check" never happens, and how to run PDCA that produces real results.">
+<meta name="author" content="Husni Halim">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://husnihalim.com/blog/pdca-implementation-problems/">
+<meta property="og:title" content="PDCA Implementation Problems in Malaysian SMEs | Husni Halim">
+<meta property="og:description" content="Most Malaysian manufacturing SMEs plan extensively and do minimally. PDCA specialist explains why the cycle stalls, why "check" never happens, and how to run PDCA that produces real results.">
+<meta property="og:image" content="https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?auto=format&fit=crop&w=1200&h=630&q=80">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://husnihalim.com/blog/pdca-implementation-problems/">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400;1,600&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&display=swap" rel="stylesheet">
+<style>
+:root {
+  --c-dark: #0c1b2e;
+  --c-accent: #8b2252;
+  --c-secondary: #c47832;
+  --c-warm: #f9f7f4;
+  --c-soft: #ece8e3;
+  --c-body: #374151;
+  --c-mid: #6b7280;
+  --font-h: 'Cormorant Garamond', Georgia, serif;
+  --font-b: 'DM Sans', -apple-system, sans-serif;
+}
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:var(--font-b);background:var(--c-warm);color:var(--c-body);-webkit-font-smoothing:antialiased}
+
+/* NAV */
+.nav{background:var(--c-dark);padding:14px 40px;display:flex;justify-content:space-between;align-items:center;position:sticky;top:0;z-index:100}
+.nav-logo{color:#fff;font-family:var(--font-h);font-size:20px;font-weight:600;text-decoration:none;letter-spacing:1px}
+.nav-logo em{color:var(--c-secondary);font-style:italic}
+.nav-links{display:flex;gap:28px;list-style:none}
+.nav-links a{color:#ccc;font-size:13px;text-decoration:none;font-family:var(--font-b);letter-spacing:.4px;transition:color .2s}
+.nav-links a:hover{color:#fff}
+.nav-cta{background:var(--c-accent)!important;color:#fff!important;padding:8px 16px;border-radius:4px}
+
+/* HERO */
+.post-hero{position:relative;height:440px;overflow:hidden;background:var(--c-dark)}
+.post-hero img{width:100%;height:100%;object-fit:cover;opacity:.45}
+.post-hero-overlay{position:absolute;inset:0;background:linear-gradient(to top,rgba(12,27,46,.95) 30%,rgba(12,27,46,.4))}
+.post-hero-content{position:absolute;bottom:0;left:0;right:0;padding:48px;max-width:900px}
+.post-cat{font-family:var(--font-b);font-size:11px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--c-secondary);margin-bottom:14px}
+.post-title{font-family:var(--font-h);font-size:clamp(26px,4vw,44px);line-height:1.2;color:#fff;margin-bottom:16px;font-weight:600}
+.post-meta{font-size:13px;color:rgba(255,255,255,.6);display:flex;gap:16px;flex-wrap:wrap}
+.post-meta span{display:flex;align-items:center;gap:6px}
+
+/* LAYOUT */
+.page-wrap{max-width:1160px;margin:0 auto;padding:0 24px;display:grid;grid-template-columns:1fr 300px;gap:64px;align-items:start}
+article{padding:48px 0 80px}
+.post-subtitle{font-size:20px;line-height:1.65;color:#555;font-style:italic;margin-bottom:36px;padding-bottom:36px;border-bottom:1px solid #ddd;font-family:var(--font-h)}
+
+/* ARTICLE BODY */
+article h2{font-family:var(--font-h);font-size:26px;font-weight:600;color:var(--c-dark);margin:44px 0 16px;padding-left:16px;border-left:3px solid var(--c-accent)}
+article h3{font-family:var(--font-h);font-size:20px;font-weight:600;color:#222;margin:28px 0 10px}
+article p{font-size:17px;line-height:1.85;color:var(--c-body);margin-bottom:20px}
+article ul,article ol{margin:10px 0 20px 22px}
+article li{font-size:16px;line-height:1.75;margin-bottom:8px;color:var(--c-body)}
+.callout{background:#fff8f2;border-left:3px solid var(--c-secondary);border-radius:4px;padding:20px 24px;margin:32px 0;font-size:16px;line-height:1.7;color:#444}
+.callout strong{color:var(--c-accent)}
+blockquote{padding:24px 32px;margin:36px 0;background:#f4f0fb;border-radius:6px;font-family:var(--font-h);font-size:22px;line-height:1.6;color:#2a1a4e;font-style:italic;text-align:center}
+table{width:100%;border-collapse:collapse;margin:28px 0;font-size:14px}
+th{background:var(--c-dark);color:#fff;padding:12px 16px;text-align:left;font-family:var(--font-b);font-weight:600;letter-spacing:.3px}
+td{padding:12px 16px;border-bottom:1px solid #eee;color:var(--c-body);line-height:1.5;font-size:14px}
+tr:nth-child(even) td{background:#f9f7f4}
+tr:hover td{background:#fff8f2}
+.tags{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:36px}
+.tag{background:var(--c-soft);color:#555;font-size:11px;padding:5px 12px;border-radius:20px;font-weight:500;letter-spacing:.4px}
+
+/* AUTHOR BIO */
+.author-bio{display:flex;gap:20px;align-items:flex-start;background:#fff;border:1px solid #eee;border-radius:8px;padding:24px;margin-top:56px}
+.author-av{width:60px;height:60px;border-radius:50%;background:var(--c-dark);display:flex;align-items:center;justify-content:center;color:var(--c-secondary);font-family:var(--font-h);font-size:22px;font-weight:600;flex-shrink:0}
+.author-bio p{font-size:14px;line-height:1.6;color:#555;margin-bottom:4px}
+.author-bio strong{color:#111;font-size:15px;display:block;margin-bottom:4px}
+
+/* SIDEBAR */
+aside{padding-top:48px;position:sticky;top:70px}
+.s-card{background:#fff;border:1px solid #eee;border-radius:8px;padding:22px;margin-bottom:22px}
+.s-card h4{font-family:var(--font-b);font-size:10px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:#999;margin-bottom:14px}
+.toc li{list-style:none;padding:8px 0;border-bottom:1px solid #f0f0f0;font-size:13px;color:#555}
+.toc li:last-child{border-bottom:none}
+.toc li::before{content:"→ ";color:var(--c-secondary)}
+.rel-post{display:block;padding:9px 0;border-bottom:1px solid #f0f0f0;font-size:13px;color:#444;text-decoration:none;line-height:1.4}
+.rel-post:last-child{border-bottom:none}
+.rel-post:hover{color:var(--c-accent)}
+.cta-card{background:var(--c-dark);border-radius:8px;padding:22px;text-align:center}
+.cta-card h4{color:#fff;font-size:14px;line-height:1.5;margin-bottom:8px;letter-spacing:normal;text-transform:none;font-family:var(--font-h);font-style:italic;font-size:17px}
+.cta-card p{font-size:12px;color:#aaa;margin-bottom:14px;line-height:1.5}
+.cta-btn{display:block;background:var(--c-accent);color:#fff;padding:10px;border-radius:4px;font-size:13px;font-weight:600;text-decoration:none;letter-spacing:.4px}
+.cta-btn:hover{background:#a0285e}
+
+/* BREADCRUMB */
+.breadcrumb{max-width:1160px;margin:0 auto;padding:20px 24px 0;font-size:12px;color:#999;font-family:var(--font-b)}
+.breadcrumb a{color:var(--c-mid);text-decoration:none}
+.breadcrumb a:hover{color:var(--c-accent)}
+.breadcrumb span{margin:0 6px}
+
+/* BACK LINK */
+.back-btn{display:inline-flex;align-items:center;gap:8px;color:var(--c-accent);font-size:13px;text-decoration:none;font-weight:500;padding:0 0 24px}
+.back-btn:hover{gap:12px}
+
+/* FOOTER */
+.footer{background:var(--c-dark);color:#888;text-align:center;padding:32px;font-size:13px;margin-top:80px}
+.footer a{color:var(--c-secondary);text-decoration:none}
+
+@media(max-width:800px){
+  .page-wrap{grid-template-columns:1fr}
+  aside{display:none}
+  .nav{padding:12px 20px}
+  .post-hero-content{padding:24px}
+  .nav-links{gap:14px}
+}
+</style>
+</head>
+<body>
+<nav class="nav">
+  <a href="/" class="nav-logo">Husni<em>Halim</em></a>
+  <ul class="nav-links">
+    <li><a href="/#about">About</a></li>
+    <li><a href="/#expertise">Expertise</a></li>
+    <li><a href="/#training">Training</a></li>
+    <li><a href="/blog/" style="color:#fff">Blog</a></li>
+    <li><a href="/#contact" class="nav-cta">Get In Touch</a></li>
+  </ul>
+</nav>
+
+<div class="post-hero">
+  <img src="https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?auto=format&fit=crop&w=1200&h=630&q=80" alt="PDCA in Malaysian SMEs: Why It Always Gets Stuck at Plan" loading="lazy" onerror="this.style.display='none'">
+  <div class="post-hero-overlay"></div>
+  <div class="post-hero-content">
+    <div class="post-cat">Continuous Improvement</div>
+    <h1 class="post-title">PDCA in Malaysian SMEs: Why It Always Gets Stuck at Plan</h1>
+    <div class="post-meta">
+      <span>May 2026</span>
+      <span>·</span>
+      <span>7 min read</span>
+    </div>
+  </div>
+</div>
+
+<div class="breadcrumb">
+  <a href="/">Home</a><span>›</span>
+  <a href="/blog/">Blog</a><span>›</span>
+  PDCA in Malaysian SMEs: Why It Always Gets Stuck at Plan
+</div>
+
+<div class="page-wrap">
+  <article>
+    <a class="back-btn" href="/blog/">← Back to Blog</a>
+
+    <div class="tags">
+      <span class="tag">PDCA</span><span class="tag">Continuous Improvement</span><span class="tag">SME Malaysia</span><span class="tag">Problem Solving</span>
+    </div>
+
+    <p class="post-subtitle">The PDCA cycle is four steps. Most Malaysian manufacturing SMEs complete one and a half of them. Here is why — and what a full PDCA cycle actually looks like in practice.</p>
+
+    
+<p>Deming's PDCA cycle — Plan, Do, Check, Act — is the most widely taught problem-solving framework in Malaysian manufacturing. It appears in HRDC training programmes, ISO procedure manuals, and KPI reports across the country. It is also the most consistently incomplete improvement methodology in practice.</p>
+<p>The observable reality in most Malaysian manufacturing SMEs: teams plan extensively, do incompletely, skip check entirely, and rarely act in the sense of standardising and propagating what worked. The cycle completes about 30% of its rotation and then stops.</p>
+
+<h2>Why Plan Phase Takes All the Time</h2>
+<p>Planning feels productive. Meetings are held. Root cause analyses are drawn. Fishbone diagrams are completed. Action plans are written. Presentations are made to management. All of this activity creates the impression of progress without requiring any change to the actual process.</p>
+<p>The planning phase has no natural endpoint in many organisations — it can always be more thorough, more complete, more validated. This is compounded by organisational risk aversion: implementing a countermeasure requires committing to a course of action that might not work, and that failure is visible. Planning does not carry that exposure.</p>
+<div class="callout"><strong>Rule of thumb:</strong> If your team has been in the Plan phase for more than two weeks on a shop-floor problem, the planning is no longer the constraint. The constraint is the decision to implement.</div>
+
+<h2>Why Do Phase Is Incomplete</h2>
+<p>Implementation is partial because the countermeasures designed in the Plan phase often turn out to be more difficult to implement than anticipated. Equipment constraints, budget limitations, or scheduling conflicts mean that only some of the planned actions get executed. The team moves to "check" before the implementation is complete — and then wonders why the results are not as expected.</p>
+<p>The discipline of the Do phase requires completing the implementation as designed before measuring results. Measuring a partial implementation produces data that cannot be meaningfully interpreted — you do not know whether the incomplete actions are why the results are insufficient.</p>
+
+<h2>Why Check Never Happens</h2>
+<p>The Check phase requires collecting data and comparing it objectively against the target established in the Plan phase. This comparison will produce one of two findings: either the countermeasure worked, or it did not work as expected. Both are valuable findings. The second is unwelcome.</p>
+<p>Organisations that have not normalised "this did not work as expected" as a legitimate outcome of the Check phase — where it is treated as learning rather than failure — will unconsciously avoid rigorous checking. The result is that countermeasures that are partially effective are declared successes, and the root cause remains partially unaddressed.</p>
+
+<h2>Why Act Never Standardises</h2>
+<p>When a countermeasure does work, the Act phase should result in the successful method being standardised and applied wherever the same root cause exists elsewhere in the factory. This is the compounding mechanism of PDCA — not just fixing one problem, but building organisational capability by capturing what works and replicating it.</p>
+<p>In practice, standardisation is skipped because it requires updating procedures, retraining operators, and communicating across departments — all of which take more effort than the team has available after the immediate problem is resolved. The improvement is real but localised. The same problem recurs on a different line six months later, and the cycle starts again from scratch.</p>
+
+
+    <div class="author-bio">
+      <div class="author-av">H</div>
+      <div>
+        <strong>Husni Halim</strong>
+        <p>HRDC Certified Trainer (TTT/10228) and MPC Certified Productivity Expert. Principal Consultant at Visi Armada Consulting, specialising in lean manufacturing, OEE, and Kaizen for Malaysian manufacturers.</p>
+      </div>
+    </div>
+  </article>
+
+  <aside>
+    <div class="s-card">
+      <h4>In this article</h4>
+      <ul class="toc"><li>Why Plan Phase Takes All the Time</li>
+<li>Why Do Phase Is Incomplete</li>
+<li>Why Check Never Happens</li>
+<li>Why Act Never Standardises</li></ul>
+    </div>
+    <div class="s-card">
+      <h4>Related Articles</h4>
+      <a class="rel-post" href="/blog/visual-management-failures/">Visual Management Failures: Boards Nobody Reads</a>
+<a class="rel-post" href="/blog/5s-implementation-problems/">5S Implementation Problems: Why It Never Sticks After Training</a>
+<a class="rel-post" href="/blog/andon-system-implementation-problems/">Andon Systems That Nobody Uses After Installation</a>
+<a class="rel-post" href="/blog/oee-training-malaysia/">OEE Training Malaysia 2026: The Complete Guide for Manufacturing Leaders</a>
+    </div>
+    <div class="cta-card">
+      <h4>Need help implementing this in your factory?</h4>
+      <p>HRDC claimable training available across Malaysia.</p>
+      <a href="/#contact" class="cta-btn">Get In Touch →</a>
+    </div>
+  </aside>
+</div>
+
+<footer class="footer">
+  <p>© 2026 Husni Halim · <a href="/">husnihalim.com</a> · HRDC Accredited Trainer TTT/10228</p>
+</footer>
+</body>
+</html>
