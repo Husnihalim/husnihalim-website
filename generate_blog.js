@@ -618,6 +618,54 @@ function buildArticlePage(article) {
 <meta name="twitter:card" content="summary_large_image">
 ${GOOGLE_FONTS}
 <style>${BLOG_CSS}</style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "${article.title}",
+  "description": "${article.metaDesc}",
+  "image": "${article.image}",
+  "url": "https://husnihalim.com/blog/${article.slug}/",
+  "datePublished": "${article.isoDate}",
+  "dateModified": "${article.isoDate}",
+  "inLanguage": "en-MY",
+  "author": {
+    "@type": "Person",
+    "name": "Husni Halim",
+    "url": "https://husnihalim.com",
+    "jobTitle": "Principal Consultant & Certified Trainer",
+    "sameAs": [
+      "https://www.linkedin.com/in/husni-halim-7436b01b/",
+      "https://www.facebook.com/visiarmada"
+    ]
+  },
+  "publisher": {
+    "@type": "Person",
+    "name": "Husni Halim",
+    "url": "https://husnihalim.com",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://husnihalim.com/assets/husni-portrait.png"
+    }
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://husnihalim.com/blog/${article.slug}/"
+  },
+  "keywords": "${article.tags.join(', ')}"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://husnihalim.com/"},
+    {"@type": "ListItem", "position": 2, "name": "Blog", "item": "https://husnihalim.com/blog/"},
+    {"@type": "ListItem", "position": 3, "name": "${article.title}", "item": "https://husnihalim.com/blog/${article.slug}/"}
+  ]
+}
+</script>
 </head>
 <body>
 ${nav('blog')}
@@ -752,6 +800,30 @@ ${footer()}
 </body>
 </html>`;
 }
+
+// ─── Enrich articles with isoDate ────────────────────────────────
+const MONTH_MAP = {
+  'January': '01', 'February': '02', 'March': '03', 'April': '04',
+  'May': '05', 'June': '06', 'July': '07', 'August': '08',
+  'September': '09', 'October': '10', 'November': '11', 'December': '12'
+};
+// Assign mid-month ISO dates matching the sitemap lastmod values
+const ISO_DATE_MAP = {
+  'oee-training-malaysia':                    '2024-10-15',
+  'why-kaizen-events-fail':                   '2024-11-10',
+  '5s-implementation-problems':               '2024-12-05',
+  'value-stream-mapping-mistakes':            '2025-02-12',
+  'standard-work-implementation-problems':    '2025-04-08',
+  'kaizen-blitz-vs-kaizen-culture':           '2025-06-14',
+  'visual-management-failures':               '2025-08-19',
+  'poka-yoke-implementation-problems':        '2025-09-22',
+  'pdca-implementation-problems':             '2025-10-17',
+  'andon-system-implementation-problems':     '2025-11-11',
+  'gemba-walk-problems':                      '2026-01-08'
+};
+articles.forEach(a => {
+  a.isoDate = ISO_DATE_MAP[a.slug] || '2025-01-01';
+});
 
 // ─── Write all files ──────────────────────────────────────────────
 const BLOG_DIR = path.join(__dirname, 'blog');
