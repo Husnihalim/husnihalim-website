@@ -141,12 +141,21 @@ aside{padding-top:48px;position:sticky;top:70px}
 .card-footer{padding:14px 24px;border-top:1px solid #f0f0f0;display:flex;justify-content:space-between;align-items:center}
 .card-meta{font-size:12px;color:#aaa}
 .card-read{font-size:12px;color:var(--c-accent);font-weight:600}
+
+/* Mobile Nav fix */
+.hamburger{display:none;flex-direction:column;gap:5px;background:none;border:none;cursor:pointer;padding:8px;margin-left:auto}
+.hamburger-line{display:block;width:24px;height:2px;background:#fff;border-radius:2px;transition:transform .25s,opacity .25s}
+.hamburger.active .hamburger-line:nth-child(1){transform:translateY(7px) rotate(45deg)}
+.hamburger.active .hamburger-line:nth-child(2){opacity:0}
+.hamburger.active .hamburger-line:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+@media(max-width:768px){.hamburger{display:flex}.nav-links{position:fixed;inset:0;background:var(--c-dark);z-index:999;flex-direction:column;justify-content:center;align-items:center;gap:2rem;opacity:0;visibility:hidden;transition:opacity .25s,visibility .25s;padding:2rem}.nav-links.open{opacity:1;visibility:visible}.nav-links a{font-size:1.4rem;color:#fff;letter-spacing:.02em}.nav-cta{background:var(--c-accent)!important;padding:10px 24px;border-radius:4px}.nav{padding:12px 20px}}
+@media(max-width:480px){article p,.post-subtitle{font-size:15px}article h2{font-size:22px}article h3{font-size:18px}blockquote{font-size:18px;padding:16px 20px}.page-wrap{padding:0 16px}.post-hero-content{padding:16px}.blog-grid{padding:0 16px;gap:20px}.card h2{font-size:17px}.share-btn{padding:9px 14px;font-size:12px}}
 </style>
 </head>
 <body>
 <nav class="nav">
   <a href="/" class="nav-logo">Husni<em>Halim</em></a>
-  <ul class="nav-links">
+  <button class="hamburger" id="hamburger" aria-label="Toggle navigation" aria-expanded="false"><span class="hamburger-line"></span><span class="hamburger-line"></span><span class="hamburger-line"></span></button><ul class="nav-links">
     <li><a href="/#about">About</a></li>
     <li><a href="/#expertise">Expertise</a></li>
     <li><a href="/#training">Training</a></li>
@@ -351,5 +360,5 @@ aside{padding-top:48px;position:sticky;top:70px}
 <footer class="footer">
   <p>© 2026 Husni Halim · <a href="/">husnihalim.com</a> · HRDC Accredited Trainer TTT/10228</p>
 </footer>
-</body>
+<script>(function(){var btn=document.getElementById("hamburger");var nav=document.querySelector(".nav-links");if(!btn||!nav)return;btn.addEventListener("click",function(){var open=nav.classList.toggle("open");btn.classList.toggle("active",open);btn.setAttribute("aria-expanded",open);});nav.querySelectorAll("a").forEach(function(a){a.addEventListener("click",function(){nav.classList.remove("open");btn.classList.remove("active");btn.setAttribute("aria-expanded","false");});});}());</script></body>
 </html>

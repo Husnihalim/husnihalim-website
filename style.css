@@ -650,6 +650,8 @@ table {
     transition: all var(--transition-base);
     cursor: pointer;
     border: 2px solid transparent;
+    touch-action: manipulation;
+    -webkit-tap-highlight-color: transparent;
 }
 
 .btn-primary {
