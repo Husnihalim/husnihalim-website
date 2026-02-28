@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Why Gemba Walks Do Not Work in Malaysian Manufacturing | Husni Halim</title>
+<meta name="description" content="Gemba walks that audit rather than learn are not gemba walks. Lean consultant explains the most common gemba walk mistakes in Malaysian manufacturing and what effective gemba leadership looks like.">
+<meta name="author" content="Husni Halim">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://husnihalim.com/blog/gemba-walk-problems/">
+<meta property="og:title" content="Why Gemba Walks Do Not Work in Malaysian Manufacturing | Husni Halim">
+<meta property="og:description" content="Gemba walks that audit rather than learn are not gemba walks. Lean consultant explains the most common gemba walk mistakes in Malaysian manufacturing and what effective gemba leadership looks like.">
+<meta property="og:image" content="https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=1200&h=630&q=80">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://husnihalim.com/blog/gemba-walk-problems/">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400;1,600&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&display=swap" rel="stylesheet">
+<style>
+:root {
+  --c-dark: #0c1b2e;
+  --c-accent: #8b2252;
+  --c-secondary: #c47832;
+  --c-warm: #f9f7f4;
+  --c-soft: #ece8e3;
+  --c-body: #374151;
+  --c-mid: #6b7280;
+  --font-h: 'Cormorant Garamond', Georgia, serif;
+  --font-b: 'DM Sans', -apple-system, sans-serif;
+}
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:var(--font-b);background:var(--c-warm);color:var(--c-body);-webkit-font-smoothing:antialiased}
+
+/* NAV */
+.nav{background:var(--c-dark);padding:14px 40px;display:flex;justify-content:space-between;align-items:center;position:sticky;top:0;z-index:100}
+.nav-logo{color:#fff;font-family:var(--font-h);font-size:20px;font-weight:600;text-decoration:none;letter-spacing:1px}
+.nav-logo em{color:var(--c-secondary);font-style:italic}
+.nav-links{display:flex;gap:28px;list-style:none}
+.nav-links a{color:#ccc;font-size:13px;text-decoration:none;font-family:var(--font-b);letter-spacing:.4px;transition:color .2s}
+.nav-links a:hover{color:#fff}
+.nav-cta{background:var(--c-accent)!important;color:#fff!important;padding:8px 16px;border-radius:4px}
+
+/* HERO */
+.post-hero{position:relative;height:440px;overflow:hidden;background:var(--c-dark)}
+.post-hero img{width:100%;height:100%;object-fit:cover;opacity:.45}
+.post-hero-overlay{position:absolute;inset:0;background:linear-gradient(to top,rgba(12,27,46,.95) 30%,rgba(12,27,46,.4))}
+.post-hero-content{position:absolute;bottom:0;left:0;right:0;padding:48px;max-width:900px}
+.post-cat{font-family:var(--font-b);font-size:11px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--c-secondary);margin-bottom:14px}
+.post-title{font-family:var(--font-h);font-size:clamp(26px,4vw,44px);line-height:1.2;color:#fff;margin-bottom:16px;font-weight:600}
+.post-meta{font-size:13px;color:rgba(255,255,255,.6);display:flex;gap:16px;flex-wrap:wrap}
+.post-meta span{display:flex;align-items:center;gap:6px}
+
+/* LAYOUT */
+.page-wrap{max-width:1160px;margin:0 auto;padding:0 24px;display:grid;grid-template-columns:1fr 300px;gap:64px;align-items:start}
+article{padding:48px 0 80px}
+.post-subtitle{font-size:20px;line-height:1.65;color:#555;font-style:italic;margin-bottom:36px;padding-bottom:36px;border-bottom:1px solid #ddd;font-family:var(--font-h)}
+
+/* ARTICLE BODY */
+article h2{font-family:var(--font-h);font-size:26px;font-weight:600;color:var(--c-dark);margin:44px 0 16px;padding-left:16px;border-left:3px solid var(--c-accent)}
+article h3{font-family:var(--font-h);font-size:20px;font-weight:600;color:#222;margin:28px 0 10px}
+article p{font-size:17px;line-height:1.85;color:var(--c-body);margin-bottom:20px}
+article ul,article ol{margin:10px 0 20px 22px}
+article li{font-size:16px;line-height:1.75;margin-bottom:8px;color:var(--c-body)}
+.callout{background:#fff8f2;border-left:3px solid var(--c-secondary);border-radius:4px;padding:20px 24px;margin:32px 0;font-size:16px;line-height:1.7;color:#444}
+.callout strong{color:var(--c-accent)}
+blockquote{padding:24px 32px;margin:36px 0;background:#f4f0fb;border-radius:6px;font-family:var(--font-h);font-size:22px;line-height:1.6;color:#2a1a4e;font-style:italic;text-align:center}
+table{width:100%;border-collapse:collapse;margin:28px 0;font-size:14px}
+th{background:var(--c-dark);color:#fff;padding:12px 16px;text-align:left;font-family:var(--font-b);font-weight:600;letter-spacing:.3px}
+td{padding:12px 16px;border-bottom:1px solid #eee;color:var(--c-body);line-height:1.5;font-size:14px}
+tr:nth-child(even) td{background:#f9f7f4}
+tr:hover td{background:#fff8f2}
+.tags{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:36px}
+.tag{background:var(--c-soft);color:#555;font-size:11px;padding:5px 12px;border-radius:20px;font-weight:500;letter-spacing:.4px}
+
+/* AUTHOR BIO */
+.author-bio{display:flex;gap:20px;align-items:flex-start;background:#fff;border:1px solid #eee;border-radius:8px;padding:24px;margin-top:56px}
+.author-av{width:60px;height:60px;border-radius:50%;background:var(--c-dark);display:flex;align-items:center;justify-content:center;color:var(--c-secondary);font-family:var(--font-h);font-size:22px;font-weight:600;flex-shrink:0}
+.author-bio p{font-size:14px;line-height:1.6;color:#555;margin-bottom:4px}
+.author-bio strong{color:#111;font-size:15px;display:block;margin-bottom:4px}
+/* SHARE */
+.share-bar{margin-top:40px;padding-top:32px;border-top:1px solid #eee}
+.share-bar p{font-family:var(--font-b);font-size:10px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:#999;margin-bottom:14px}
+.share-btns{display:flex;gap:10px;flex-wrap:wrap}
+.share-btn{display:inline-flex;align-items:center;gap:8px;padding:10px 18px;border-radius:6px;font-size:13px;font-weight:600;text-decoration:none;transition:opacity .15s}
+.share-btn:hover{opacity:.82}
+.share-btn-li{background:#0077b5;color:#fff}
+.share-btn-fb{background:#1877f2;color:#fff}
+.share-btn-va{background:var(--c-dark);color:var(--c-secondary);border:1px solid var(--c-secondary)}
+
+/* SIDEBAR */
+aside{padding-top:48px;position:sticky;top:70px}
+.s-card{background:#fff;border:1px solid #eee;border-radius:8px;padding:22px;margin-bottom:22px}
+.s-card h4{font-family:var(--font-b);font-size:10px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:#999;margin-bottom:14px}
+.toc li{list-style:none;padding:8px 0;border-bottom:1px solid #f0f0f0;font-size:13px;color:#555}
+.toc li:last-child{border-bottom:none}
+.toc li::before{content:"→ ";color:var(--c-secondary)}
+.rel-post{display:block;padding:9px 0;border-bottom:1px solid #f0f0f0;font-size:13px;color:#444;text-decoration:none;line-height:1.4}
+.rel-post:last-child{border-bottom:none}
+.rel-post:hover{color:var(--c-accent)}
+.cta-card{background:var(--c-dark);border-radius:8px;padding:22px;text-align:center}
+.cta-card h4{color:#fff;font-size:14px;line-height:1.5;margin-bottom:8px;letter-spacing:normal;text-transform:none;font-family:var(--font-h);font-style:italic;font-size:17px}
+.cta-card p{font-size:12px;color:#aaa;margin-bottom:14px;line-height:1.5}
+.cta-btn{display:block;background:var(--c-accent);color:#fff;padding:10px;border-radius:4px;font-size:13px;font-weight:600;text-decoration:none;letter-spacing:.4px}
+.cta-btn:hover{background:#a0285e}
+
+/* BREADCRUMB */
+.breadcrumb{max-width:1160px;margin:0 auto;padding:20px 24px 0;font-size:12px;color:#999;font-family:var(--font-b)}
+.breadcrumb a{color:var(--c-mid);text-decoration:none}
+.breadcrumb a:hover{color:var(--c-accent)}
+.breadcrumb span{margin:0 6px}
+
+/* BACK LINK */
+.back-btn{display:inline-flex;align-items:center;gap:8px;color:var(--c-accent);font-size:13px;text-decoration:none;font-weight:500;padding:0 0 24px}
+.back-btn:hover{gap:12px}
+
+/* FOOTER */
+.footer{background:var(--c-dark);color:#888;text-align:center;padding:32px;font-size:13px;margin-top:80px}
+.footer a{color:var(--c-secondary);text-decoration:none}
+
+@media(max-width:800px){
+  .page-wrap{grid-template-columns:1fr}
+  aside{display:none}
+  .nav{padding:12px 20px}
+  .post-hero-content{padding:24px}
+  .nav-links{gap:14px}
+}
+</style>
+</head>
+<body>
+<nav class="nav">
+  <a href="/" class="nav-logo">Husni<em>Halim</em></a>
+  <ul class="nav-links">
+    <li><a href="/#about">About</a></li>
+    <li><a href="/#expertise">Expertise</a></li>
+    <li><a href="/#training">Training</a></li>
+    <li><a href="/blog/" style="color:#fff">Blog</a></li>
+    <li><a href="/#contact" class="nav-cta">Get In Touch</a></li>
+  </ul>
+</nav>
+
+<div class="post-hero">
+  <img src="https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=1200&h=630&q=80" alt="Why Gemba Walks Do Not Work: Doing Gemba the Wrong Way" loading="lazy" onerror="this.style.display='none'">
+  <div class="post-hero-overlay"></div>
+  <div class="post-hero-content">
+    <div class="post-cat">Lean Manufacturing</div>
+    <h1 class="post-title">Why Gemba Walks Do Not Work: Doing Gemba the Wrong Way</h1>
+    <div class="post-meta">
+      <span>January 2026</span>
+      <span>·</span>
+      <span>7 min read</span>
+    </div>
+  </div>
+</div>
+
+<div class="breadcrumb">
+  <a href="/">Home</a><span>›</span>
+  <a href="/blog/">Blog</a><span>›</span>
+  Why Gemba Walks Do Not Work: Doing Gemba the Wrong Way
+</div>
+
+<div class="page-wrap">
+  <article>
+    <a class="back-btn" href="/blog/">← Back to Blog</a>
+
+    <div class="tags">
+      <span class="tag">Gemba Walk</span><span class="tag">Lean Leadership</span><span class="tag">Continuous Improvement</span><span class="tag">Factory Management</span>
+    </div>
+
+    <p class="post-subtitle">Gemba walks are one of the most powerful habits in lean leadership. They are also one of the most commonly performed incorrectly — producing the appearance of engagement without any of the substance.</p>
+
+    
+<p>Gemba walk is a Japanese management practice meaning "go to the actual place" — the practice of leaders regularly visiting the shop floor not to inspect and direct, but to observe, understand, and support the people doing the work. Toyota leaders are famous for their gemba discipline, and the practice has been widely adopted in Malaysian manufacturing as part of lean implementation programmes.</p>
+<p>The adoption has been mostly superficial. Gemba walks are scheduled, conducted, and reported. And they produce almost no operational improvement — because almost every common error in gemba walk practice undermines the purpose of the activity.</p>
+
+<h2>The Walk Is an Audit, Not an Observation</h2>
+<p>The most damaging gemba walk mistake is treating it as an inspection. The leader walks through the production area looking for non-conformances: 5S violations, operators not following standard work, safety hazards. Problems are noted. People are held accountable. The leader returns to the office.</p>
+<p>This is an audit, not a gemba walk. Audits serve a different purpose and require a different mindset. Gemba walking as an audit creates defensive behaviour from operators and supervisors — people straighten up, put things away, and answer questions with what management wants to hear rather than what is actually happening. The leader returns to the office with a false picture of the operation.</p>
+<div class="callout"><strong>The purpose of gemba:</strong> To understand the actual conditions of work. To see the problems that standard reports do not capture. To ask questions that surface the knowledge of the people closest to the work. None of this is achievable when the walk creates defensiveness.</div>
+
+<h2>Leaders Talk More Than They Observe</h2>
+<p>Effective gemba requires sustained, silent observation before any conversation. A leader who arrives at a workstation, watches for 30 seconds, and then begins directing — telling operators what they should be doing differently, explaining what the correct method is — has not observed. They have visited and lectured.</p>
+<p>The discipline of gemba observation requires standing at a workstation for long enough to understand the work cycle, to notice the informal workarounds that operators have developed, to see where the hesitations and recoveries happen. This typically takes five to ten minutes of sustained attention. It is not natural for leaders accustomed to action and decision-making. It must be practised deliberately.</p>
+
+<h2>Questions Are Leading, Not Open</h2>
+<p>When leaders do ask questions during gemba walks, they frequently ask leading questions: "Shouldn't this be stored over here?" "Is this the correct procedure?" "Do you know the target for today?"</p>
+<p>Leading questions confirm what the leader already believes. They do not surface the operator's actual experience of the work. Effective gemba questions are open: "What makes this step the hardest?" "What would you change about this process if you could?" "What is stopping you from hitting the target today?" These questions elicit information the leader cannot obtain from reports — and that information is the value of gemba.</p>
+
+<h2>No Follow-Through on What Was Learned</h2>
+<p>Even when a gemba walk is conducted correctly — observing properly, asking open questions, listening genuinely — it produces no value if what was learned is not acted on. Operators and supervisors who surface real problems during gemba walks and receive no follow-up will stop surfacing real problems. The walk becomes a performance: leaders perform observation, operators perform normalcy.</p>
+<p>Every gemba walk should result in specific follow-up commitments — problems identified, owners assigned, timelines established. And those commitments must be tracked and completed. The credibility of gemba depends entirely on what happens after the walk ends.</p>
+
+
+    <div class="author-bio">
+      <div class="author-av">H</div>
+      <div>
+        <strong>Husni Halim</strong>
+        <p>HRDC Certified Trainer (TTT/10228) and MPC Certified Productivity Expert. Principal Consultant at Visi Armada Consulting, specialising in lean manufacturing, OEE, and Kaizen for Malaysian manufacturers.</p>
+      </div>
+    </div>
+
+    <div class="share-bar">
+      <p>Share this article</p>
+      <div class="share-btns">
+        <a class="share-btn share-btn-li" href="https://www.linkedin.com/sharing/share-offsite/?url=https://husnihalim.com/blog/gemba-walk-problems/" target="_blank" rel="noopener">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+          Share on LinkedIn
+        </a>
+        <a class="share-btn share-btn-fb" href="https://www.facebook.com/sharer/sharer.php?u=https://husnihalim.com/blog/gemba-walk-problems/" target="_blank" rel="noopener">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+          Share on Facebook
+        </a>
+        <a class="share-btn share-btn-va" href="https://www.visiarmada.com" target="_blank" rel="noopener">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/></svg>
+          Visi Armada
+        </a>
+      </div>
+    </div>
+  </article>
+
+  <aside>
+    <div class="s-card">
+      <h4>In this article</h4>
+      <ul class="toc"><li>The Walk Is an Audit, Not an Observation</li>
+<li>Leaders Talk More Than They Observe</li>
+<li>Questions Are Leading, Not Open</li>
+<li>No Follow-Through on What Was Learned</li></ul>
+    </div>
+    <div class="s-card">
+      <h4>Related Articles</h4>
+      <a class="rel-post" href="/blog/why-kaizen-events-fail/">Why Kaizen Events Fail in Manufacturing Plants</a>
+<a class="rel-post" href="/blog/5s-implementation-problems/">5S Implementation Problems: Why It Never Sticks After Training</a>
+<a class="rel-post" href="/blog/pdca-implementation-problems/">PDCA in Malaysian SMEs: Why It Always Gets Stuck at Plan</a>
+<a class="rel-post" href="/blog/standard-work-implementation-problems/">Why Standard Work Never Gets Followed After Training</a>
+    </div>
+    <div class="cta-card">
+      <h4>Need help implementing this in your factory?</h4>
+      <p>HRDC claimable training available across Malaysia.</p>
+      <a href="/#contact" class="cta-btn">Get In Touch →</a>
+    </div>
+  </aside>
+</div>
+
+<footer class="footer">
+  <p>© 2026 Husni Halim · <a href="/">husnihalim.com</a> · HRDC Accredited Trainer TTT/10228</p>
+</footer>
+</body>
+</html>

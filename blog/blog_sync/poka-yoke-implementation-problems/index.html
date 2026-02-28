@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Why Poka-Yoke Implementations Fail in Manufacturing | Husni Halim</title>
+<meta name="description" content="Poka-yoke devices that get bypassed or ignored are not error-proofing — they are false confidence. Lean consultant explains why most poka-yoke implementations fail and how to design ones that hold.">
+<meta name="author" content="Husni Halim">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://husnihalim.com/blog/poka-yoke-implementation-problems/">
+<meta property="og:title" content="Why Poka-Yoke Implementations Fail in Manufacturing | Husni Halim">
+<meta property="og:description" content="Poka-yoke devices that get bypassed or ignored are not error-proofing — they are false confidence. Lean consultant explains why most poka-yoke implementations fail and how to design ones that hold.">
+<meta property="og:image" content="https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?auto=format&fit=crop&w=1200&h=630&q=80">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://husnihalim.com/blog/poka-yoke-implementation-problems/">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400;1,600&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&display=swap" rel="stylesheet">
+<style>
+:root {
+  --c-dark: #0c1b2e;
+  --c-accent: #8b2252;
+  --c-secondary: #c47832;
+  --c-warm: #f9f7f4;
+  --c-soft: #ece8e3;
+  --c-body: #374151;
+  --c-mid: #6b7280;
+  --font-h: 'Cormorant Garamond', Georgia, serif;
+  --font-b: 'DM Sans', -apple-system, sans-serif;
+}
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:var(--font-b);background:var(--c-warm);color:var(--c-body);-webkit-font-smoothing:antialiased}
+
+/* NAV */
+.nav{background:var(--c-dark);padding:14px 40px;display:flex;justify-content:space-between;align-items:center;position:sticky;top:0;z-index:100}
+.nav-logo{color:#fff;font-family:var(--font-h);font-size:20px;font-weight:600;text-decoration:none;letter-spacing:1px}
+.nav-logo em{color:var(--c-secondary);font-style:italic}
+.nav-links{display:flex;gap:28px;list-style:none}
+.nav-links a{color:#ccc;font-size:13px;text-decoration:none;font-family:var(--font-b);letter-spacing:.4px;transition:color .2s}
+.nav-links a:hover{color:#fff}
+.nav-cta{background:var(--c-accent)!important;color:#fff!important;padding:8px 16px;border-radius:4px}
+
+/* HERO */
+.post-hero{position:relative;height:440px;overflow:hidden;background:var(--c-dark)}
+.post-hero img{width:100%;height:100%;object-fit:cover;opacity:.45}
+.post-hero-overlay{position:absolute;inset:0;background:linear-gradient(to top,rgba(12,27,46,.95) 30%,rgba(12,27,46,.4))}
+.post-hero-content{position:absolute;bottom:0;left:0;right:0;padding:48px;max-width:900px}
+.post-cat{font-family:var(--font-b);font-size:11px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--c-secondary);margin-bottom:14px}
+.post-title{font-family:var(--font-h);font-size:clamp(26px,4vw,44px);line-height:1.2;color:#fff;margin-bottom:16px;font-weight:600}
+.post-meta{font-size:13px;color:rgba(255,255,255,.6);display:flex;gap:16px;flex-wrap:wrap}
+.post-meta span{display:flex;align-items:center;gap:6px}
+
+/* LAYOUT */
+.page-wrap{max-width:1160px;margin:0 auto;padding:0 24px;display:grid;grid-template-columns:1fr 300px;gap:64px;align-items:start}
+article{padding:48px 0 80px}
+.post-subtitle{font-size:20px;line-height:1.65;color:#555;font-style:italic;margin-bottom:36px;padding-bottom:36px;border-bottom:1px solid #ddd;font-family:var(--font-h)}
+
+/* ARTICLE BODY */
+article h2{font-family:var(--font-h);font-size:26px;font-weight:600;color:var(--c-dark);margin:44px 0 16px;padding-left:16px;border-left:3px solid var(--c-accent)}
+article h3{font-family:var(--font-h);font-size:20px;font-weight:600;color:#222;margin:28px 0 10px}
+article p{font-size:17px;line-height:1.85;color:var(--c-body);margin-bottom:20px}
+article ul,article ol{margin:10px 0 20px 22px}
+article li{font-size:16px;line-height:1.75;margin-bottom:8px;color:var(--c-body)}
+.callout{background:#fff8f2;border-left:3px solid var(--c-secondary);border-radius:4px;padding:20px 24px;margin:32px 0;font-size:16px;line-height:1.7;color:#444}
+.callout strong{color:var(--c-accent)}
+blockquote{padding:24px 32px;margin:36px 0;background:#f4f0fb;border-radius:6px;font-family:var(--font-h);font-size:22px;line-height:1.6;color:#2a1a4e;font-style:italic;text-align:center}
+table{width:100%;border-collapse:collapse;margin:28px 0;font-size:14px}
+th{background:var(--c-dark);color:#fff;padding:12px 16px;text-align:left;font-family:var(--font-b);font-weight:600;letter-spacing:.3px}
+td{padding:12px 16px;border-bottom:1px solid #eee;color:var(--c-body);line-height:1.5;font-size:14px}
+tr:nth-child(even) td{background:#f9f7f4}
+tr:hover td{background:#fff8f2}
+.tags{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:36px}
+.tag{background:var(--c-soft);color:#555;font-size:11px;padding:5px 12px;border-radius:20px;font-weight:500;letter-spacing:.4px}
+
+/* AUTHOR BIO */
+.author-bio{display:flex;gap:20px;align-items:flex-start;background:#fff;border:1px solid #eee;border-radius:8px;padding:24px;margin-top:56px}
+.author-av{width:60px;height:60px;border-radius:50%;background:var(--c-dark);display:flex;align-items:center;justify-content:center;color:var(--c-secondary);font-family:var(--font-h);font-size:22px;font-weight:600;flex-shrink:0}
+.author-bio p{font-size:14px;line-height:1.6;color:#555;margin-bottom:4px}
+.author-bio strong{color:#111;font-size:15px;display:block;margin-bottom:4px}
+/* SHARE */
+.share-bar{margin-top:40px;padding-top:32px;border-top:1px solid #eee}
+.share-bar p{font-family:var(--font-b);font-size:10px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:#999;margin-bottom:14px}
+.share-btns{display:flex;gap:10px;flex-wrap:wrap}
+.share-btn{display:inline-flex;align-items:center;gap:8px;padding:10px 18px;border-radius:6px;font-size:13px;font-weight:600;text-decoration:none;transition:opacity .15s}
+.share-btn:hover{opacity:.82}
+.share-btn-li{background:#0077b5;color:#fff}
+.share-btn-fb{background:#1877f2;color:#fff}
+.share-btn-va{background:var(--c-dark);color:var(--c-secondary);border:1px solid var(--c-secondary)}
+
+/* SIDEBAR */
+aside{padding-top:48px;position:sticky;top:70px}
+.s-card{background:#fff;border:1px solid #eee;border-radius:8px;padding:22px;margin-bottom:22px}
+.s-card h4{font-family:var(--font-b);font-size:10px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:#999;margin-bottom:14px}
+.toc li{list-style:none;padding:8px 0;border-bottom:1px solid #f0f0f0;font-size:13px;color:#555}
+.toc li:last-child{border-bottom:none}
+.toc li::before{content:"→ ";color:var(--c-secondary)}
+.rel-post{display:block;padding:9px 0;border-bottom:1px solid #f0f0f0;font-size:13px;color:#444;text-decoration:none;line-height:1.4}
+.rel-post:last-child{border-bottom:none}
+.rel-post:hover{color:var(--c-accent)}
+.cta-card{background:var(--c-dark);border-radius:8px;padding:22px;text-align:center}
+.cta-card h4{color:#fff;font-size:14px;line-height:1.5;margin-bottom:8px;letter-spacing:normal;text-transform:none;font-family:var(--font-h);font-style:italic;font-size:17px}
+.cta-card p{font-size:12px;color:#aaa;margin-bottom:14px;line-height:1.5}
+.cta-btn{display:block;background:var(--c-accent);color:#fff;padding:10px;border-radius:4px;font-size:13px;font-weight:600;text-decoration:none;letter-spacing:.4px}
+.cta-btn:hover{background:#a0285e}
+
+/* BREADCRUMB */
+.breadcrumb{max-width:1160px;margin:0 auto;padding:20px 24px 0;font-size:12px;color:#999;font-family:var(--font-b)}
+.breadcrumb a{color:var(--c-mid);text-decoration:none}
+.breadcrumb a:hover{color:var(--c-accent)}
+.breadcrumb span{margin:0 6px}
+
+/* BACK LINK */
+.back-btn{display:inline-flex;align-items:center;gap:8px;color:var(--c-accent);font-size:13px;text-decoration:none;font-weight:500;padding:0 0 24px}
+.back-btn:hover{gap:12px}
+
+/* FOOTER */
+.footer{background:var(--c-dark);color:#888;text-align:center;padding:32px;font-size:13px;margin-top:80px}
+.footer a{color:var(--c-secondary);text-decoration:none}
+
+@media(max-width:800px){
+  .page-wrap{grid-template-columns:1fr}
+  aside{display:none}
+  .nav{padding:12px 20px}
+  .post-hero-content{padding:24px}
+  .nav-links{gap:14px}
+}
+</style>
+</head>
+<body>
+<nav class="nav">
+  <a href="/" class="nav-logo">Husni<em>Halim</em></a>
+  <ul class="nav-links">
+    <li><a href="/#about">About</a></li>
+    <li><a href="/#expertise">Expertise</a></li>
+    <li><a href="/#training">Training</a></li>
+    <li><a href="/blog/" style="color:#fff">Blog</a></li>
+    <li><a href="/#contact" class="nav-cta">Get In Touch</a></li>
+  </ul>
+</nav>
+
+<div class="post-hero">
+  <img src="https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?auto=format&fit=crop&w=1200&h=630&q=80" alt="Why Poka-Yoke Implementations Fail on Production Lines" loading="lazy" onerror="this.style.display='none'">
+  <div class="post-hero-overlay"></div>
+  <div class="post-hero-content">
+    <div class="post-cat">Lean Manufacturing</div>
+    <h1 class="post-title">Why Poka-Yoke Implementations Fail on Production Lines</h1>
+    <div class="post-meta">
+      <span>September 2025</span>
+      <span>·</span>
+      <span>7 min read</span>
+    </div>
+  </div>
+</div>
+
+<div class="breadcrumb">
+  <a href="/">Home</a><span>›</span>
+  <a href="/blog/">Blog</a><span>›</span>
+  Why Poka-Yoke Implementations Fail on Production Lines
+</div>
+
+<div class="page-wrap">
+  <article>
+    <a class="back-btn" href="/blog/">← Back to Blog</a>
+
+    <div class="tags">
+      <span class="tag">Poka-Yoke</span><span class="tag">Error Proofing</span><span class="tag">Quality</span><span class="tag">Lean Manufacturing</span>
+    </div>
+
+    <p class="post-subtitle">Error-proofing should make defects impossible. In practice, most poka-yoke devices are bypassed, broken, or ignored within months of installation.</p>
+
+    
+<p>Poka-yoke — error-proofing — is one of the most elegant concepts in lean manufacturing. Design the process so the error is physically impossible to make. No training required, no discipline required, no inspection required. The defect simply cannot happen.</p>
+<p>In practice, most poka-yoke implementations do not achieve this. The device gets bypassed during a production rush. The sensor gets taped over because it triggers false positives. The fixture that prevents incorrect assembly gets modified because it slows the line. Six months after installation, the error rate has returned to its pre-poka-yoke level — and the organisation has gained false confidence that the problem is solved.</p>
+
+<h2>The Device Addresses the Symptom, Not the Source</h2>
+<p>Many poka-yoke implementations are reactive — designed to detect an error after it has already occurred, rather than prevent the condition that causes the error. A light that alerts the operator when a part is assembled incorrectly is not error-proofing. It is error-detection. The assembly error has still happened. The poka-yoke has just caught it slightly earlier.</p>
+<p>True error-proofing makes the incorrect action physically impossible. A fixture that only accepts a correctly oriented part, not one that beeps when the part is oriented incorrectly. The distinction matters because detection-based poka-yoke depends on the operator responding correctly to the alert, which introduces human judgment back into a system that was meant to eliminate it.</p>
+
+<h2>The Device Creates a Production Constraint</h2>
+<p>Operators who are being measured on output will bypass any device that slows them down, if bypassing is physically possible and the bypass is not immediately visible to supervision.</p>
+<p>A poka-yoke that is bypassed provides no protection against the error it was designed to prevent — and creates the additional problem of giving quality management the false impression that the error is controlled. This is more dangerous than having no poka-yoke at all.</p>
+<div class="callout"><strong>Design principle:</strong> A poka-yoke that can be bypassed will be bypassed. The device design must make bypass either physically impossible or immediately obvious — not rely on operator compliance with a rule against bypass.</div>
+
+<h2>No Maintenance System for the Devices</h2>
+<p>Poka-yoke devices are equipment. Like all equipment, they degrade, fail, and require maintenance. Sensors drift. Fixtures wear. Electrical connections corrode. A poka-yoke that has failed silently — still appearing to function but no longer detecting the error condition — is indistinguishable from a functioning device until a defect escapes.</p>
+<p>Every poka-yoke device needs a verification protocol: a periodic test using a known defective part that verifies the device correctly identifies the error condition. This test must be scheduled, documented, and treated with the same seriousness as any other critical process check.</p>
+
+<h2>The Error Rate After Installation Is Not Measured</h2>
+<p>The effectiveness of a poka-yoke must be measured after installation. If the defect rate for the error that was targeted has not dropped to zero or near-zero, the poka-yoke is not working. Most organisations install the device, report that "poka-yoke has been implemented," and do not verify whether the target defect rate has actually changed.</p>
+<p>Measurement closes the loop. It identifies whether the implementation has achieved its purpose — and if not, it forces the question of why, which leads to the design improvements that make the device actually effective.</p>
+
+
+    <div class="author-bio">
+      <div class="author-av">H</div>
+      <div>
+        <strong>Husni Halim</strong>
+        <p>HRDC Certified Trainer (TTT/10228) and MPC Certified Productivity Expert. Principal Consultant at Visi Armada Consulting, specialising in lean manufacturing, OEE, and Kaizen for Malaysian manufacturers.</p>
+      </div>
+    </div>
+
+    <div class="share-bar">
+      <p>Share this article</p>
+      <div class="share-btns">
+        <a class="share-btn share-btn-li" href="https://www.linkedin.com/sharing/share-offsite/?url=https://husnihalim.com/blog/poka-yoke-implementation-problems/" target="_blank" rel="noopener">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+          Share on LinkedIn
+        </a>
+        <a class="share-btn share-btn-fb" href="https://www.facebook.com/sharer/sharer.php?u=https://husnihalim.com/blog/poka-yoke-implementation-problems/" target="_blank" rel="noopener">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+          Share on Facebook
+        </a>
+        <a class="share-btn share-btn-va" href="https://www.visiarmada.com" target="_blank" rel="noopener">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/></svg>
+          Visi Armada
+        </a>
+      </div>
+    </div>
+  </article>
+
+  <aside>
+    <div class="s-card">
+      <h4>In this article</h4>
+      <ul class="toc"><li>The Device Addresses the Symptom, Not the Source</li>
+<li>The Device Creates a Production Constraint</li>
+<li>No Maintenance System for the Devices</li>
+<li>The Error Rate After Installation Is Not Measured</li></ul>
+    </div>
+    <div class="s-card">
+      <h4>Related Articles</h4>
+      <a class="rel-post" href="/blog/why-kaizen-events-fail/">Why Kaizen Events Fail in Manufacturing Plants</a>
+<a class="rel-post" href="/blog/standard-work-implementation-problems/">Why Standard Work Never Gets Followed After Training</a>
+<a class="rel-post" href="/blog/5s-implementation-problems/">5S Implementation Problems: Why It Never Sticks After Training</a>
+<a class="rel-post" href="/blog/oee-training-malaysia/">OEE Training Malaysia: The Complete Guide for Manufacturing Leaders</a>
+    </div>
+    <div class="cta-card">
+      <h4>Need help implementing this in your factory?</h4>
+      <p>HRDC claimable training available across Malaysia.</p>
+      <a href="/#contact" class="cta-btn">Get In Touch →</a>
+    </div>
+  </aside>
+</div>
+
+<footer class="footer">
+  <p>© 2026 Husni Halim · <a href="/">husnihalim.com</a> · HRDC Accredited Trainer TTT/10228</p>
+</footer>
+</body>
+</html>
