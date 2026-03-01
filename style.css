@@ -1242,6 +1242,17 @@ table {
     color: var(--color-white);
 }
 
+.training-cta {
+    margin-top: var(--space-3xl);
+    text-align: center;
+}
+
+@media (max-width: 480px) {
+    .training-cta {
+        margin-top: var(--space-2xl);
+    }
+}
+
 .section--training .section-subheading {
     color: rgba(255, 255, 255, 0.5);
 }
@@ -1330,6 +1341,14 @@ table {
    ================================================================ */
 .section--track-record {
     background: var(--color-white);
+}
+
+/* "Trusted by Industry Leaders" heading inside track-record section.
+   Restores margin-top lost when element class changed from
+   .section-subheading--logos -> .section-heading--center */
+.section--track-record .section-heading--center {
+    margin-top: var(--space-4xl);
+    margin-bottom: var(--space-2xl);
 }
 
 /* Track Table */
