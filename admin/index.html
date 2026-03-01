@@ -295,7 +295,11 @@ tr:hover td{background:var(--gold-light)}
  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
  Submissions
  </button>
- </nav>
+       <button class="nav-item" data-panel="portfolio">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 5H7a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2h-2"/><rect x="9" y="3" width="6" height="4" rx="1"/><line x1="9" y1="12" x2="15" y2="12"/><line x1="9" y1="16" x2="13" y2="16"/></svg>
+        Portfolio
+      </button>
+    </nav>
 
  <div class="sidebar-footer">
  <button class="logout-btn" id="logoutBtn">
@@ -310,11 +314,7 @@ tr:hover td{background:var(--gold-light)}
  <h1 class="topbar-title" id="topbarTitle">Dashboard</h1>
  <div class="topbar-actions">
  <span class="topbar-site-badge badge-vac" id="siteBadge">VAC</span>
- <button class="btn btn-secondary btn-sm" id="initPortfolioBtn" title="Push all 48 portfolio rows into CMS so they are editable here" style="background:#2a6496;border-color:#2a6496;">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><polyline points="1,4 1,10 7,10"/><path d="M3.51 15a9 9 0 1 0 .49-3.15"/></svg>
-              Init Portfolio
-            </button>
-            <button class="btn btn-primary btn-sm" id="saveAllBtn">
+ <button class="btn btn-primary btn-sm" id="saveAllBtn">
  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><path d="M19 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11l5 5v11a2 2 0 0 1-2 2z"/><polyline points="17,21 17,13 7,13 7,21"/><polyline points="7,3 7,8 15,8"/></svg>
  Save All
  </button>
@@ -473,6 +473,43 @@ tr:hover td{background:var(--gold-light)}
  </table>
  </div>
  </div>
+
+    <div class="panel" id="panel-portfolio">
+      <div style="display:flex;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;gap:12px;margin-bottom:24px;">
+        <div>
+          <h2 style="margin:0 0 6px;font-size:22px;">Portfolio Manager</h2>
+          <p style="margin:0;color:var(--text-light);font-size:14px;">Changes sync to <strong>both husnihalim.com and visiarmada.com</strong> simultaneously.</p>
+        </div>
+        <div style="display:flex;gap:10px;flex-wrap:wrap;">
+          <button class="btn btn-secondary btn-sm" id="addPortfolioRowBtn">+ Add Entry</button>
+          <button class="btn btn-primary btn-sm" id="savePortfolioBothBtn" style="background:#27ae60;border-color:#27ae60;">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14" style="margin-right:4px;"><path d="M19 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11l5 5v11a2 2 0 0 1-2 2z"/><polyline points="17,21 17,13 7,13 7,21"/><polyline points="7,3 7,8 15,8"/></svg>
+            Save &amp; Sync Both Sites
+          </button>
+        </div>
+      </div>
+      <div id="portfolioTableWrap" style="overflow-x:auto;"></div>
+      <!-- Add/Edit modal -->
+      <div id="portfolioModal" style="display:none;position:fixed;inset:0;background:rgba(0,0,0,.45);z-index:999;align-items:center;justify-content:center;">
+        <div style="background:#fff;border-radius:10px;padding:28px;width:460px;max-width:95vw;box-shadow:0 8px 40px rgba(0,0,0,.18);">
+          <h3 id="portfolioModalTitle" style="margin:0 0 20px;font-size:17px;">Add Entry</h3>
+          <div style="display:flex;flex-direction:column;gap:12px;">
+            <div><label style="font-size:12px;font-weight:600;color:#666;display:block;margin-bottom:4px;">CLIENT</label>
+              <input id="pmClient" class="edit-field-input" style="width:100%;box-sizing:border-box;" placeholder="e.g. Intel Technology Sdn Bhd"></div>
+            <div><label style="font-size:12px;font-weight:600;color:#666;display:block;margin-bottom:4px;">INDUSTRY</label>
+              <input id="pmIndustry" class="edit-field-input" style="width:100%;box-sizing:border-box;" placeholder="e.g. Semiconductor"></div>
+            <div><label style="font-size:12px;font-weight:600;color:#666;display:block;margin-bottom:4px;">PROGRAM / TOPIC</label>
+              <input id="pmProgram" class="edit-field-input" style="width:100%;box-sizing:border-box;" placeholder="e.g. Overall Equipment Effectiveness (OEE)"></div>
+            <div><label style="font-size:12px;font-weight:600;color:#666;display:block;margin-bottom:4px;">YEAR (leave blank for —)</label>
+              <input id="pmYear" class="edit-field-input" style="width:100%;box-sizing:border-box;" placeholder="e.g. 2024"></div>
+          </div>
+          <div style="display:flex;justify-content:flex-end;gap:10px;margin-top:20px;">
+            <button class="btn btn-secondary btn-sm" id="portfolioModalCancel">Cancel</button>
+            <button class="btn btn-primary btn-sm" id="portfolioModalSave">Save Entry</button>
+          </div>
+        </div>
+      </div>
+    </div>
  </div>
 
  </main>
@@ -1701,6 +1738,269 @@ async function initPortfolio() {
 
 const initPortfolioBtn = document.getElementById('initPortfolioBtn');
 if (initPortfolioBtn) initPortfolioBtn.addEventListener('click', initPortfolio);
+
+
+// ===== PORTFOLIO CRUD =====
+let portfolioRows = [];
+let portfolioEditIndex = -1; // -1 = add mode
+
+const DEFAULT_PORTFOLIO = [
+  {client:'JPA (Government)',industry:'Government',program:'Staying Competitive in the Era of AI',year:'2025'},
+  {client:'MARii IPC Programme',industry:'Automotive',program:'Lean Manufacturing (4 batches \u00b7 170 pax)',year:'2025'},
+  {client:'Koito Manufacturing Sdn Bhd',industry:'Automotive',program:'Total Quality Management',year:'2025'},
+  {client:'Panasonic Aircond Malaysia',industry:'Electronics',program:'Problem Solving',year:'2025'},
+  {client:'Jabatan Pengangkutan Jalan (JKA)',industry:'Government',program:'Organisational Culture',year:'2025'},
+  {client:'MARii IPC Programme',industry:'Automotive',program:'Lean Manufacturing (3 batches \u00b7 165 pax)',year:'2024'},
+  {client:'Carotino Sdn Bhd',industry:'Cooking Oil / Palm Oil',program:'5S & Kaizen (1-Year \u00b7 300 employees)',year:'2024'},
+  {client:'Inari Technology',industry:'Electronics',program:'Manufacturing Foundation',year:'2024'},
+  {client:'Sharp TV Manufacturing',industry:'Electronics',program:'Kaizen Principles',year:'2024'},
+  {client:'Munchy Food Industries Sdn Bhd',industry:'F&B Manufacturing',program:'OEE',year:'2024'},
+  {client:'HRDCorp Public Training',industry:'Multi-sector',program:'Overall Equipment Effectiveness',year:'2024'},
+  {client:'TERAJU Pritech 4.0',industry:'Bumiputera Manufacturers',program:'OEE \u2014 Lead Consultant (30 factories)',year:'2023\u20132025'},
+  {client:'Fakulti AI, UTM',industry:'Education / AI',program:'Kaizen Principles',year:'2023'},
+  {client:'Intel Technology Sdn Bhd',industry:'Semiconductor',program:'Overall Equipment Effectiveness (OEE)',year:'2023'},
+  {client:'New Age Aluminium Ind Sdn Bhd',industry:'Aluminum Fabrication',program:'OEE',year:'2023'},
+  {client:'Datasonic Group Berhad',industry:'IT Services',program:'OEE',year:'2023'},
+  {client:'Safran Landing Systems (M) Sdn Bhd',industry:'Aerospace',program:'Overall Equipment Effectiveness (OEE)',year:'2023'},
+  {client:'Mitsui High-Tec Malaysia Sdn Bhd',industry:'Electronics Parts',program:'Value Stream Mapping',year:'2023'},
+  {client:'Mitsui High-Tec Malaysia Sdn Bhd',industry:'Electronics Parts',program:'Lead Time Reduction',year:'2023'},
+  {client:'Mitsui High-Tec Malaysia Sdn Bhd',industry:'Electronics Parts',program:'TPM',year:'2023'},
+  {client:'Mitsui High-Tec Malaysia Sdn Bhd',industry:'Electronics Parts',program:'7 QC Tools',year:'2023'},
+  {client:'Maxeon Solar Technologies',industry:'Solar Panel',program:'OEE & Lean Manufacturing',year:'2023'},
+  {client:'Sapura Industrial Berhad',industry:'Automotive',program:'FMEA AIAG VDA',year:'2023'},
+  {client:'MARii IPC Programme',industry:'Automotive',program:'Lean Manufacturing (3 batches \u00b7 115 pax)',year:'2023'},
+  {client:'HRDCorp Public Training',industry:'Multi-sector',program:'Overall Equipment Effectiveness',year:'2023'},
+  {client:'HRDCorp Public Training',industry:'Multi-sector',program:'Overall Equipment Effectiveness',year:'2022'},
+  {client:'Aeon Bakery',industry:'Bakery',program:'Quality Improvement',year:''},
+  {client:'Asian NDK Crystal Sdn Bhd',industry:'Automotive Parts',program:'OEE',year:''},
+  {client:'Chemi Con',industry:'Automotive',program:'OEE',year:''},
+  {client:'Datasonic Sdn Bhd',industry:'IT Company',program:'OEE',year:''},
+  {client:'ExtechPro (M) Sdn Bhd',industry:'HVAC Services',program:'7 QC Tools',year:''},
+  {client:'FBK Manufacturing',industry:'Automotive Parts',program:'7 QC Tools',year:''},
+  {client:'FCL Components',industry:'Semiconductor',program:'7 MP',year:''},
+  {client:'FSR Technologies Sdn Bhd',industry:'Motor ECU',program:'Critical Thinking',year:''},
+  {client:'Help University',industry:'Education',program:'Problem Solving',year:''},
+  {client:'HT Ceramics',industry:'Gloves',program:'Kaizen Principles',year:''},
+  {client:'Kato Manufacturing',industry:'PCB',program:'Supervisory Skills',year:''},
+  {client:'Kato Manufacturing',industry:'Manufacturing',program:'TPM',year:''},
+  {client:'Koito Manufacturing Sdn Bhd',industry:'Automotive',program:'5 Whys & RCA',year:''},
+  {client:'Koito',industry:'Automotive (LED)',program:'Root Cause Analysis',year:''},
+  {client:'Kulim Technology Park',industry:'Education',program:'Manufacturing Foundation',year:''},
+  {client:'Lyndon Basell',industry:'Plastic Pallets',program:'8D Problem Solving',year:''},
+  {client:'Plastitechnic (M) Sdn Bhd',industry:'Plastic',program:'8D Report',year:''},
+  {client:'POS Logistic Berhad',industry:'Logistic',program:'SIPOC ICOR',year:''},
+  {client:'Sato Manufacturing',industry:'Plastic Manufacturing',program:'FMEA',year:''},
+  {client:'Smart Meter Tech (M) Sdn Bhd',industry:'TNB Meter',program:'5S',year:''},
+  {client:'UCAM',industry:'Education',program:'Data Analytics',year:''},
+  {client:'WRP',industry:'Gloves',program:'RCA & Problem Solving',year:''}
+];
+
+function escHtml(s) {
+  return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+}
+
+function loadPortfolioRows() {
+  const content = (contentData && contentData.content) ? contentData.content : {};
+  const loaded = [];
+  for (let i = 1; i <= 200; i++) {
+    const entry = content['hh-project-' + i];
+    if (!entry) break;
+    const html = entry.text || '';
+    // Parse: <td><strong>CLIENT</strong></td><td>INDUSTRY</td><td>PROGRAM</td><td>YEAR</td>
+    const m = html.match(/<td><strong>([\s\S]*?)<\/strong><\/td>\s*<td>([\s\S]*?)<\/td>\s*<td>([\s\S]*?)<\/td>\s*<td>([\s\S]*?)<\/td>/);
+    if (m) {
+      loaded.push({
+        client: m[1].replace(/&amp;/g,'&').replace(/&mdash;/g,'\u2014'),
+        industry: m[2].replace(/&amp;/g,'&'),
+        program: m[3].replace(/&amp;/g,'&').replace(/&middot;/g,'\u00b7').replace(/&mdash;/g,'\u2014').replace(/&ndash;/g,'\u2013'),
+        year: m[4].replace(/&mdash;/g,'').replace(/&ndash;/g,'\u2013').trim()
+      });
+    }
+  }
+  portfolioRows = loaded.length > 0 ? loaded : JSON.parse(JSON.stringify(DEFAULT_PORTFOLIO));
+}
+
+function renderPortfolioTable() {
+  const wrap = document.getElementById('portfolioTableWrap');
+  if (!wrap) return;
+  if (portfolioRows.length === 0) {
+    wrap.innerHTML = '<div style="padding:20px;color:#999;">No entries yet. Click + Add Entry.</div>';
+    return;
+  }
+  const rows = portfolioRows.map((r, i) =>
+    '<tr>' +
+      '<td style="width:28px;padding:8px 6px;color:#999;font-size:12px;">' + (i+1) + '</td>' +
+      '<td style="padding:8px;font-weight:600;">' + escHtml(r.client) + '</td>' +
+      '<td style="padding:8px;font-size:13px;color:#555;">' + escHtml(r.industry) + '</td>' +
+      '<td style="padding:8px;font-size:13px;">' + escHtml(r.program) + '</td>' +
+      '<td style="padding:8px;font-size:13px;color:#888;white-space:nowrap;">' + escHtml(r.year || '\u2014') + '</td>' +
+      '<td style="padding:8px;white-space:nowrap;">' +
+        '<button onclick="openPortfolioEdit(' + i + ')" style="background:#3498db;color:#fff;border:none;border-radius:4px;padding:4px 10px;font-size:12px;cursor:pointer;margin-right:4px;">Edit</button>' +
+        '<button onclick="deletePortfolioRow(' + i + ')" style="background:#e74c3c;color:#fff;border:none;border-radius:4px;padding:4px 10px;font-size:12px;cursor:pointer;">Del</button>' +
+        (i > 0 ? '<button onclick="movePortfolioRow(' + i + ',-1)" style="background:#95a5a6;color:#fff;border:none;border-radius:4px;padding:4px 8px;font-size:12px;cursor:pointer;margin-left:4px;">&uarr;</button>' : '') +
+        (i < portfolioRows.length-1 ? '<button onclick="movePortfolioRow(' + i + ',1)" style="background:#95a5a6;color:#fff;border:none;border-radius:4px;padding:4px 8px;font-size:12px;cursor:pointer;margin-left:2px;">&darr;</button>' : '') +
+      '</td>' +
+    '</tr>'
+  ).join('');
+  wrap.innerHTML =
+    '<p style="font-size:13px;color:#888;margin:0 0 12px;">' + portfolioRows.length + ' entries total</p>' +
+    '<table style="width:100%;border-collapse:collapse;font-size:14px;">' +
+      '<thead><tr style="background:#f5f5f5;">' +
+        '<th style="padding:8px 6px;text-align:left;font-size:11px;color:#999;">#</th>' +
+        '<th style="padding:8px;text-align:left;font-size:11px;color:#666;">CLIENT</th>' +
+        '<th style="padding:8px;text-align:left;font-size:11px;color:#666;">INDUSTRY</th>' +
+        '<th style="padding:8px;text-align:left;font-size:11px;color:#666;">PROGRAM</th>' +
+        '<th style="padding:8px;text-align:left;font-size:11px;color:#666;">YEAR</th>' +
+        '<th style="padding:8px;text-align:left;font-size:11px;color:#666;">ACTIONS</th>' +
+      '</tr></thead>' +
+      '<tbody>' + rows + '</tbody>' +
+    '</table>';
+}
+
+function openPortfolioEdit(i) {
+  portfolioEditIndex = i;
+  const r = portfolioRows[i];
+  document.getElementById('portfolioModalTitle').textContent = 'Edit Entry';
+  document.getElementById('pmClient').value = r.client;
+  document.getElementById('pmIndustry').value = r.industry;
+  document.getElementById('pmProgram').value = r.program;
+  document.getElementById('pmYear').value = r.year;
+  document.getElementById('portfolioModal').style.display = 'flex';
+}
+
+function deletePortfolioRow(i) {
+  if (!confirm('Delete "' + portfolioRows[i].client + '"?')) return;
+  portfolioRows.splice(i, 1);
+  renderPortfolioTable();
+}
+
+function movePortfolioRow(i, dir) {
+  const j = i + dir;
+  if (j < 0 || j >= portfolioRows.length) return;
+  const tmp = portfolioRows[i];
+  portfolioRows[i] = portfolioRows[j];
+  portfolioRows[j] = tmp;
+  renderPortfolioTable();
+}
+
+function rowToHtmlString(r) {
+  const yr = r.year ? r.year : '&mdash;';
+  const client = r.client.replace(/&/g,'&amp;');
+  const industry = r.industry.replace(/&/g,'&amp;');
+  const program = r.program.replace(/&/g,'&amp;').replace(/\u00b7/g,'&middot;').replace(/\u2014/g,'&mdash;').replace(/\u2013/g,'&ndash;');
+  const yearStr = yr.replace(/\u2013/g,'&ndash;');
+  return '<td><strong>' + client + '</strong></td><td>' + industry + '</td><td>' + program + '</td><td>' + yearStr + '</td>';
+}
+
+async function savePortfolioBothSites() {
+  const btn = document.getElementById('savePortfolioBothBtn');
+  if (!authToken) { toast('Please log in first', 'error'); return; }
+  btn.disabled = true;
+  btn.textContent = 'Saving...';
+  try {
+    const patch = {};
+    portfolioRows.forEach((r, i) => {
+      patch['hh-project-' + (i+1)] = { text: rowToHtmlString(r), styles: {} };
+    });
+    let errors = [];
+    for (const site of ['husni', 'vac']) {
+      try {
+        const resp = await fetch(API + '/content?site=' + site, { headers: headers() });
+        const data = await resp.json();
+        const siteData = (data && data._version === 2) ? data : { _version: 2, content: {}, sections: {}, theme: {}, images: {} };
+        if (!siteData.content) siteData.content = {};
+        // Remove stale keys
+        Object.keys(siteData.content).forEach(k => {
+          if (k.startsWith('project-row-') || k.startsWith('hh-project-')) delete siteData.content[k];
+        });
+        Object.assign(siteData.content, patch);
+        const saveResp = await fetch(API + '/content?site=' + site, {
+          method: 'PUT',
+          headers: { ...headers(), 'Content-Type': 'application/json' },
+          body: JSON.stringify(siteData)
+        });
+        const result = await saveResp.json();
+        if (result.success === false) throw new Error(result.error || 'Save failed for ' + site);
+      } catch(e) {
+        errors.push(site + ': ' + e.message);
+      }
+    }
+    // Update local contentData
+    if (!contentData) contentData = { _version: 2, content: {}, sections: {}, theme: {}, images: {} };
+    if (!contentData.content) contentData.content = {};
+    Object.keys(contentData.content).forEach(k => {
+      if (k.startsWith('project-row-') || k.startsWith('hh-project-')) delete contentData.content[k];
+    });
+    Object.assign(contentData.content, patch);
+    if (errors.length > 0) {
+      toast('Partial save — errors: ' + errors.join('; '), 'error');
+    } else {
+      toast('\u2713 Portfolio saved to BOTH sites (' + portfolioRows.length + ' entries)', 'success');
+    }
+  } catch(e) {
+    toast('Save failed: ' + e.message, 'error');
+  } finally {
+    btn.disabled = false;
+    btn.innerHTML = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14" style="margin-right:4px;"><path d="M19 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11l5 5v11a2 2 0 0 1-2 2z"/><polyline points="17,21 17,13 7,13 7,21"/><polyline points="7,3 7,8 15,8"/></svg>Save &amp; Sync Both Sites';
+  }
+}
+
+// Wire up nav → load data when panel opens
+(function() {
+  // Hook into panel switching
+  function patchNavForPortfolio() {
+    const navBtns = document.querySelectorAll('.nav-item[data-panel]');
+    navBtns.forEach(btn => {
+      if (btn.dataset.panel === 'portfolio') {
+        btn.addEventListener('click', function() {
+          loadPortfolioRows();
+          renderPortfolioTable();
+        });
+      }
+    });
+  }
+  // Also listen for direct panel-portfolio activation
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', patchNavForPortfolio);
+  } else {
+    patchNavForPortfolio();
+  }
+
+  // Add row button
+  document.addEventListener('click', function(e) {
+    if (e.target && e.target.id === 'addPortfolioRowBtn') {
+      portfolioEditIndex = -1;
+      document.getElementById('portfolioModalTitle').textContent = 'Add Entry';
+      document.getElementById('pmClient').value = '';
+      document.getElementById('pmIndustry').value = '';
+      document.getElementById('pmProgram').value = '';
+      document.getElementById('pmYear').value = '';
+      document.getElementById('portfolioModal').style.display = 'flex';
+    }
+    if (e.target && e.target.id === 'savePortfolioBothBtn') {
+      savePortfolioBothSites();
+    }
+    if (e.target && e.target.id === 'portfolioModalCancel') {
+      document.getElementById('portfolioModal').style.display = 'none';
+    }
+    if (e.target && e.target.id === 'portfolioModalSave') {
+      const client = document.getElementById('pmClient').value.trim();
+      const industry = document.getElementById('pmIndustry').value.trim();
+      const program = document.getElementById('pmProgram').value.trim();
+      const year = document.getElementById('pmYear').value.trim();
+      if (!client) { alert('Client name is required.'); return; }
+      const entry = { client, industry, program, year };
+      if (portfolioEditIndex === -1) {
+        portfolioRows.push(entry);
+      } else {
+        portfolioRows[portfolioEditIndex] = entry;
+      }
+      document.getElementById('portfolioModal').style.display = 'none';
+      renderPortfolioTable();
+    }
+  });
+})();
+// ===== END PORTFOLIO CRUD =====
 
 </script>
 </body>
