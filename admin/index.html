@@ -1,24 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>VAC Multi-Site CMS</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-    <style>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>VAC Multi-Site CMS</title>
+ <link rel="preconnect" href="https://fonts.googleapis.com">
+ <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+ <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+ <style>
 /* ===== RESET & VARIABLES ===== */
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 :root{
-  --sidebar-bg:#1a1a2e;--sidebar-hover:#16213e;--sidebar-active:#0f3460;
-  --gold:#c9a84c;--gold-hover:#b8943f;--gold-light:rgba(201,168,76,.12);
-  --topbar-bg:#fff;--content-bg:#f5f5f5;--card-bg:#fff;
-  --text-primary:#1a1a2e;--text-secondary:#64748b;--text-light:#94a3b8;--text-white:#e2e8f0;
-  --border:#e2e8f0;--danger:#ef4444;--danger-hover:#dc2626;--success:#22c55e;--info:#3b82f6;
-  --husni-accent:#8b2252;--husni-light:rgba(139,34,82,.12);
-  --sidebar-width:260px;--topbar-height:60px;--radius:8px;
-  --shadow:0 1px 3px rgba(0,0,0,.08);--shadow-md:0 4px 6px rgba(0,0,0,.07);
+ --sidebar-bg:#1a1a2e;--sidebar-hover:#16213e;--sidebar-active:#0f3460;
+ --gold:#c9a84c;--gold-hover:#b8943f;--gold-light:rgba(201,168,76,.12);
+ --topbar-bg:#fff;--content-bg:#f5f5f5;--card-bg:#fff;
+ --text-primary:#1a1a2e;--text-secondary:#64748b;--text-light:#94a3b8;--text-white:#e2e8f0;
+ --border:#e2e8f0;--danger:#ef4444;--danger-hover:#dc2626;--success:#22c55e;--info:#3b82f6;
+ --husni-accent:#8b2252;--husni-light:rgba(139,34,82,.12);
+ --sidebar-width:260px;--topbar-height:60px;--radius:8px;
+ --shadow:0 1px 3px rgba(0,0,0,.08);--shadow-md:0 4px 6px rgba(0,0,0,.07);
 }
 body{font-family:'Inter',-apple-system,BlinkMacSystemFont,sans-serif;background:var(--content-bg);color:var(--text-primary);line-height:1.6;overflow-x:hidden}
 a{color:var(--gold);text-decoration:none}
@@ -204,12 +204,12 @@ tr:hover td{background:var(--gold-light)}
 
 /* ===== RESPONSIVE ===== */
 @media(max-width:1024px){
-  .sidebar{transform:translateX(-100%)}
-  .sidebar.open{transform:translateX(0)}
-  .topbar{left:0}
-  .main-content{margin-left:0}
-  .theme-grid{grid-template-columns:1fr}
-  .section-controls{grid-template-columns:1fr}
+ .sidebar{transform:translateX(-100%)}
+ .sidebar.open{transform:translateX(0)}
+ .topbar{left:0}
+ .main-content{margin-left:0}
+ .theme-grid{grid-template-columns:1fr}
+ .section-controls{grid-template-columns:1fr}
 }
 .hamburger-admin{display:none;position:fixed;top:14px;left:16px;z-index:110;width:40px;height:40px;border:none;background:var(--sidebar-bg);color:#fff;border-radius:var(--radius);font-size:20px;align-items:center;justify-content:center;cursor:pointer}
 @media(max-width:1024px){.hamburger-admin{display:flex}}
@@ -221,274 +221,274 @@ tr:hover td{background:var(--gold-light)}
 
 /* ===== FONT PREVIEW ===== */
 .font-option{padding:4px 8px}
-    </style>
+ </style>
 </head>
 <body>
 
 <!-- ===== LOGIN SCREEN ===== -->
 <div id="loginScreen" class="login-screen">
-  <div class="login-card">
-    <div class="login-logo">
-      <span class="login-logo-v">V</span><span class="login-logo-ac">AC</span>
-      <span class="login-logo-sub">Content Management</span>
-    </div>
-    <h2 class="login-title">Admin Login</h2>
-    <div class="login-field">
-      <label>Username</label>
-      <input type="text" id="loginUser" placeholder="Enter username" autocomplete="username">
-    </div>
-    <div class="login-field">
-      <label>Password</label>
-      <input type="password" id="loginPass" placeholder="Enter password" autocomplete="current-password">
-    </div>
-    <button class="login-btn" id="loginBtn">Sign In</button>
-    <div class="login-error" id="loginError">Invalid credentials</div>
-  </div>
+ <div class="login-card">
+ <div class="login-logo">
+ <span class="login-logo-v">V</span><span class="login-logo-ac">AC</span>
+ <span class="login-logo-sub">Content Management</span>
+ </div>
+ <h2 class="login-title">Admin Login</h2>
+ <div class="login-field">
+ <label>Username</label>
+ <input type="text" id="loginUser" placeholder="Enter username" autocomplete="username">
+ </div>
+ <div class="login-field">
+ <label>Password</label>
+ <input type="password" id="loginPass" placeholder="Enter password" autocomplete="current-password">
+ </div>
+ <button class="login-btn" id="loginBtn">Sign In</button>
+ <div class="login-error" id="loginError">Invalid credentials</div>
+ </div>
 </div>
 
 <!-- ===== ADMIN LAYOUT ===== -->
 <div id="adminLayout" class="admin-layout" style="display:none">
 
-  <!-- Hamburger for mobile -->
-  <button class="hamburger-admin" id="adminHamburger">&#9776;</button>
+ <!-- Hamburger for mobile -->
+ <button class="hamburger-admin" id="adminHamburger">&#9776;</button>
 
-  <!-- SIDEBAR -->
-  <aside class="sidebar" id="adminSidebar">
-    <div class="sidebar-header">
-      <div class="sidebar-brand">CMS</div>
-      <div class="sidebar-sub">Multi-Site Manager</div>
-    </div>
+ <!-- SIDEBAR -->
+ <aside class="sidebar" id="adminSidebar">
+ <div class="sidebar-header">
+ <div class="sidebar-brand">CMS</div>
+ <div class="sidebar-sub">Multi-Site Manager</div>
+ </div>
 
-    <div class="site-switcher">
-      <button class="site-btn active" data-site="vac">VAC</button>
-      <button class="site-btn" data-site="husni">Husni</button>
-    </div>
+ <div class="site-switcher">
+ <button class="site-btn active" data-site="vac">VAC</button>
+ <button class="site-btn" data-site="husni">Husni</button>
+ </div>
 
-    <nav class="sidebar-nav">
-      <button class="nav-item active" data-panel="dashboard">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></svg>
-        Dashboard
-      </button>
-      <button class="nav-item" data-panel="content">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"/></svg>
-        Content Editor
-      </button>
-      <button class="nav-item" data-panel="media">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg>
-        Media Library
-      </button>
-      <div class="nav-divider"></div>
-      <button class="nav-item" data-panel="sections">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><line x1="3" y1="9" x2="21" y2="9"/><line x1="3" y1="15" x2="21" y2="15"/></svg>
-        Section Backgrounds
-      </button>
-      <button class="nav-item" data-panel="theme">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>
-        Theme &amp; Branding
-      </button>
-      <button class="nav-item" data-panel="images">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg>
-        Images Editor
-      </button>
-      <div class="nav-divider"></div>
-      <button class="nav-item" data-panel="submissions">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
-        Submissions
-      </button>
-    </nav>
+ <nav class="sidebar-nav">
+ <button class="nav-item active" data-panel="dashboard">
+ <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></svg>
+ Dashboard
+ </button>
+ <button class="nav-item" data-panel="content">
+ <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"/></svg>
+ Content Editor
+ </button>
+ <button class="nav-item" data-panel="media">
+ <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg>
+ Media Library
+ </button>
+ <div class="nav-divider"></div>
+ <button class="nav-item" data-panel="sections">
+ <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><line x1="3" y1="9" x2="21" y2="9"/><line x1="3" y1="15" x2="21" y2="15"/></svg>
+ Section Backgrounds
+ </button>
+ <button class="nav-item" data-panel="theme">
+ <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>
+ Theme &amp; Branding
+ </button>
+ <button class="nav-item" data-panel="images">
+ <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg>
+ Images Editor
+ </button>
+ <div class="nav-divider"></div>
+ <button class="nav-item" data-panel="submissions">
+ <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+ Submissions
+ </button>
+ </nav>
 
-    <div class="sidebar-footer">
-      <button class="logout-btn" id="logoutBtn">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"/><polyline points="16,17 21,12 16,7"/><line x1="21" y1="12" x2="9" y2="12"/></svg>
-        Sign Out
-      </button>
-    </div>
-  </aside>
+ <div class="sidebar-footer">
+ <button class="logout-btn" id="logoutBtn">
+ <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"/><polyline points="16,17 21,12 16,7"/><line x1="21" y1="12" x2="9" y2="12"/></svg>
+ Sign Out
+ </button>
+ </div>
+ </aside>
 
-  <!-- TOPBAR -->
-  <header class="topbar">
-    <h1 class="topbar-title" id="topbarTitle">Dashboard</h1>
-    <div class="topbar-actions">
-      <span class="topbar-site-badge badge-vac" id="siteBadge">VAC</span>
-      <button class="btn btn-primary btn-sm" id="saveAllBtn">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><path d="M19 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11l5 5v11a2 2 0 0 1-2 2z"/><polyline points="17,21 17,13 7,13 7,21"/><polyline points="7,3 7,8 15,8"/></svg>
-        Save All
-      </button>
-      <a class="btn btn-secondary btn-sm" id="previewBtn" target="_blank">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15,3 21,3 21,9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
-        Preview
-      </a>
-    </div>
-  </header>
+ <!-- TOPBAR -->
+ <header class="topbar">
+ <h1 class="topbar-title" id="topbarTitle">Dashboard</h1>
+ <div class="topbar-actions">
+ <span class="topbar-site-badge badge-vac" id="siteBadge">VAC</span>
+ <button class="btn btn-primary btn-sm" id="saveAllBtn">
+ <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><path d="M19 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11l5 5v11a2 2 0 0 1-2 2z"/><polyline points="17,21 17,13 7,13 7,21"/><polyline points="7,3 7,8 15,8"/></svg>
+ Save All
+ </button>
+ <a class="btn btn-secondary btn-sm" id="previewBtn" target="_blank">
+ <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15,3 21,3 21,9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+ Preview
+ </a>
+ </div>
+ </header>
 
-  <!-- MAIN PANELS -->
-  <main class="main-content">
+ <!-- MAIN PANELS -->
+ <main class="main-content">
 
-    <!-- DASHBOARD -->
-    <div class="panel active" id="panel-dashboard">
-      <div class="dash-stats">
-        <div class="dash-stat"><div class="dash-stat-num" id="statEditable">0</div><div class="dash-stat-label">Editable Fields</div></div>
-        <div class="dash-stat"><div class="dash-stat-num" id="statMedia">0</div><div class="dash-stat-label">Media Files</div></div>
-        <div class="dash-stat"><div class="dash-stat-num" id="statSections">0</div><div class="dash-stat-label">Sections</div></div>
-        <div class="dash-stat"><div class="dash-stat-num" id="statSubmissions">0</div><div class="dash-stat-label">Submissions</div></div>
-      </div>
-      <div class="card">
-        <div class="card-header"><h3 class="card-title">Quick Start</h3></div>
-        <p style="font-size:14px;color:var(--text-secondary);line-height:1.8">
-          Welcome to the CMS. Use the sidebar to navigate between panels.<br>
-          <strong>Content Editor</strong> — Edit text, fonts, colors, and alignment for every section.<br>
-          <strong>Media Library</strong> — Upload images from your PC, manage all media files.<br>
-          <strong>Section Backgrounds</strong> — Add background images, colors, and overlays to any section.<br>
-          <strong>Theme &amp; Branding</strong> — Change logo, favicon, brand colors, and fonts.<br>
-          <strong>Images Editor</strong> — Replace any image on the site, edit alt text and styling.<br>
-          Switch between <strong>VAC</strong> and <strong>Husni</strong> sites using the buttons above.
-        </p>
-      </div>
-    </div>
+ <!-- DASHBOARD -->
+ <div class="panel active" id="panel-dashboard">
+ <div class="dash-stats">
+ <div class="dash-stat"><div class="dash-stat-num" id="statEditable">0</div><div class="dash-stat-label">Editable Fields</div></div>
+ <div class="dash-stat"><div class="dash-stat-num" id="statMedia">0</div><div class="dash-stat-label">Media Files</div></div>
+ <div class="dash-stat"><div class="dash-stat-num" id="statSections">0</div><div class="dash-stat-label">Sections</div></div>
+ <div class="dash-stat"><div class="dash-stat-num" id="statSubmissions">0</div><div class="dash-stat-label">Submissions</div></div>
+ </div>
+ <div class="card">
+ <div class="card-header"><h3 class="card-title">Quick Start</h3></div>
+ <p style="font-size:14px;color:var(--text-secondary);line-height:1.8">
+ Welcome to the CMS. Use the sidebar to navigate between panels.<br>
+ <strong>Content Editor</strong> — Edit text, fonts, colors, and alignment for every section.<br>
+ <strong>Media Library</strong> — Upload images from your PC, manage all media files.<br>
+ <strong>Section Backgrounds</strong> — Add background images, colors, and overlays to any section.<br>
+ <strong>Theme &amp; Branding</strong> — Change logo, favicon, brand colors, and fonts.<br>
+ <strong>Images Editor</strong> — Replace any image on the site, edit alt text and styling.<br>
+ Switch between <strong>VAC</strong> and <strong>Husni</strong> sites using the buttons above.
+ </p>
+ </div>
+ </div>
 
-    <!-- CONTENT EDITOR -->
-    <div class="panel" id="panel-content">
-      <div class="card">
-        <div class="card-header">
-          <div><h3 class="card-title">Content Editor</h3><p class="card-subtitle">Edit text content with full styling controls</p></div>
-        </div>
-        <div id="contentFields"></div>
-      </div>
-    </div>
+ <!-- CONTENT EDITOR -->
+ <div class="panel" id="panel-content">
+ <div class="card">
+ <div class="card-header">
+ <div><h3 class="card-title">Content Editor</h3><p class="card-subtitle">Edit text content with full styling controls</p></div>
+ </div>
+ <div id="contentFields"></div>
+ </div>
+ </div>
 
-    <!-- MEDIA LIBRARY -->
-    <div class="panel" id="panel-media">
-      <div class="card">
-        <div class="card-header">
-          <div><h3 class="card-title">Media Library</h3><p class="card-subtitle">Upload and manage images</p></div>
-        </div>
-        <div class="upload-zone" id="uploadZone">
-          <div class="upload-zone-icon">&#128247;</div>
-          <div class="upload-zone-text">Drag &amp; drop images here or click to upload</div>
-          <div class="upload-zone-hint">JPG, PNG, SVG, WebP — Max 10MB</div>
-          <input type="file" id="fileInput" accept="image/*" multiple style="display:none">
-        </div>
-        <div class="upload-progress" id="uploadProgress">
-          <div class="upload-progress-bar"><div class="upload-progress-fill" id="uploadFill"></div></div>
-        </div>
-        <div class="media-grid" id="mediaGrid"></div>
-      </div>
-    </div>
+ <!-- MEDIA LIBRARY -->
+ <div class="panel" id="panel-media">
+ <div class="card">
+ <div class="card-header">
+ <div><h3 class="card-title">Media Library</h3><p class="card-subtitle">Upload and manage images</p></div>
+ </div>
+ <div class="upload-zone" id="uploadZone">
+ <div class="upload-zone-icon">&#128247;</div>
+ <div class="upload-zone-text">Drag &amp; drop images here or click to upload</div>
+ <div class="upload-zone-hint">JPG, PNG, SVG, WebP — Max 10MB</div>
+ <input type="file" id="fileInput" accept="image/*" multiple style="display:none">
+ </div>
+ <div class="upload-progress" id="uploadProgress">
+ <div class="upload-progress-bar"><div class="upload-progress-fill" id="uploadFill"></div></div>
+ </div>
+ <div class="media-grid" id="mediaGrid"></div>
+ </div>
+ </div>
 
-    <!-- SECTION BACKGROUNDS -->
-    <div class="panel" id="panel-sections">
-      <div class="card">
-        <div class="card-header">
-          <div><h3 class="card-title">Section Backgrounds</h3><p class="card-subtitle">Control visibility, backgrounds, and overlays for each section</p></div>
-        </div>
-        <div id="sectionsList"></div>
-      </div>
-    </div>
+ <!-- SECTION BACKGROUNDS -->
+ <div class="panel" id="panel-sections">
+ <div class="card">
+ <div class="card-header">
+ <div><h3 class="card-title">Section Backgrounds</h3><p class="card-subtitle">Control visibility, backgrounds, and overlays for each section</p></div>
+ </div>
+ <div id="sectionsList"></div>
+ </div>
+ </div>
 
-    <!-- THEME & BRANDING -->
-    <div class="panel" id="panel-theme">
-      <div class="card">
-        <div class="card-header">
-          <div><h3 class="card-title">Theme &amp; Branding</h3><p class="card-subtitle">Customize logo, colors, and typography</p></div>
-          <button class="btn btn-secondary btn-sm" id="resetThemeBtn">Reset Defaults</button>
-        </div>
-        <div class="theme-grid">
-          <div>
-            <div class="form-group">
-              <label class="form-label">Logo</label>
-              <div class="theme-preview" id="logoPreview"><p style="color:var(--text-light)">No custom logo</p></div>
-              <div style="display:flex;gap:8px;margin-top:10px">
-                <button class="btn btn-secondary btn-sm" id="pickLogoBtn">Choose from Media</button>
-                <button class="btn btn-danger btn-sm" id="removeLogoBtn">Remove</button>
-              </div>
-            </div>
-            <div class="form-group">
-              <label class="form-label">Favicon</label>
-              <div class="theme-preview" id="faviconPreview" style="padding:12px"><p style="color:var(--text-light)">No custom favicon</p></div>
-              <div style="display:flex;gap:8px;margin-top:10px">
-                <button class="btn btn-secondary btn-sm" id="pickFaviconBtn">Choose from Media</button>
-                <button class="btn btn-danger btn-sm" id="removeFaviconBtn">Remove</button>
-              </div>
-            </div>
-          </div>
-          <div>
-            <div class="form-group">
-              <label class="form-label">Primary Color</label>
-              <div style="display:flex;align-items:center;gap:12px">
-                <input type="color" id="themePrimaryColor" class="form-input" style="width:60px;height:40px;padding:4px">
-                <input type="text" id="themePrimaryHex" class="form-input" style="width:100px" placeholder="#c9a84c">
-                <span class="theme-color-preview" id="primaryPreview"></span>
-              </div>
-            </div>
-            <div class="form-group">
-              <label class="form-label">Secondary Color</label>
-              <div style="display:flex;align-items:center;gap:12px">
-                <input type="color" id="themeSecondaryColor" class="form-input" style="width:60px;height:40px;padding:4px">
-                <input type="text" id="themeSecondaryHex" class="form-input" style="width:100px" placeholder="#e8b4b8">
-                <span class="theme-color-preview" id="secondaryPreview"></span>
-              </div>
-            </div>
-            <div class="form-group">
-              <label class="form-label">Heading Font</label>
-              <select class="form-select" id="themeFontHeading">
-                <option value="">Default (site CSS)</option>
-              </select>
-            </div>
-            <div class="form-group">
-              <label class="form-label">Body Font</label>
-              <select class="form-select" id="themeFontBody">
-                <option value="">Default (site CSS)</option>
-              </select>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
+ <!-- THEME & BRANDING -->
+ <div class="panel" id="panel-theme">
+ <div class="card">
+ <div class="card-header">
+ <div><h3 class="card-title">Theme &amp; Branding</h3><p class="card-subtitle">Customize logo, colors, and typography</p></div>
+ <button class="btn btn-secondary btn-sm" id="resetThemeBtn">Reset Defaults</button>
+ </div>
+ <div class="theme-grid">
+ <div>
+ <div class="form-group">
+ <label class="form-label">Logo</label>
+ <div class="theme-preview" id="logoPreview"><p style="color:var(--text-light)">No custom logo</p></div>
+ <div style="display:flex;gap:8px;margin-top:10px">
+ <button class="btn btn-secondary btn-sm" id="pickLogoBtn">Choose from Media</button>
+ <button class="btn btn-danger btn-sm" id="removeLogoBtn">Remove</button>
+ </div>
+ </div>
+ <div class="form-group">
+ <label class="form-label">Favicon</label>
+ <div class="theme-preview" id="faviconPreview" style="padding:12px"><p style="color:var(--text-light)">No custom favicon</p></div>
+ <div style="display:flex;gap:8px;margin-top:10px">
+ <button class="btn btn-secondary btn-sm" id="pickFaviconBtn">Choose from Media</button>
+ <button class="btn btn-danger btn-sm" id="removeFaviconBtn">Remove</button>
+ </div>
+ </div>
+ </div>
+ <div>
+ <div class="form-group">
+ <label class="form-label">Primary Color</label>
+ <div style="display:flex;align-items:center;gap:12px">
+ <input type="color" id="themePrimaryColor" class="form-input" style="width:60px;height:40px;padding:4px">
+ <input type="text" id="themePrimaryHex" class="form-input" style="width:100px" placeholder="#c9a84c">
+ <span class="theme-color-preview" id="primaryPreview"></span>
+ </div>
+ </div>
+ <div class="form-group">
+ <label class="form-label">Secondary Color</label>
+ <div style="display:flex;align-items:center;gap:12px">
+ <input type="color" id="themeSecondaryColor" class="form-input" style="width:60px;height:40px;padding:4px">
+ <input type="text" id="themeSecondaryHex" class="form-input" style="width:100px" placeholder="#e8b4b8">
+ <span class="theme-color-preview" id="secondaryPreview"></span>
+ </div>
+ </div>
+ <div class="form-group">
+ <label class="form-label">Heading Font</label>
+ <select class="form-select" id="themeFontHeading">
+ <option value="">Default (site CSS)</option>
+ </select>
+ </div>
+ <div class="form-group">
+ <label class="form-label">Body Font</label>
+ <select class="form-select" id="themeFontBody">
+ <option value="">Default (site CSS)</option>
+ </select>
+ </div>
+ </div>
+ </div>
+ </div>
+ </div>
 
-    <!-- IMAGES EDITOR -->
-    <div class="panel" id="panel-images">
-      <div class="card">
-        <div class="card-header">
-          <div><h3 class="card-title">Images Editor</h3><p class="card-subtitle">Replace, style, and manage all site images</p></div>
-        </div>
-        <div id="imagesList"></div>
-      </div>
-    </div>
+ <!-- IMAGES EDITOR -->
+ <div class="panel" id="panel-images">
+ <div class="card">
+ <div class="card-header">
+ <div><h3 class="card-title">Images Editor</h3><p class="card-subtitle">Replace, style, and manage all site images</p></div>
+ </div>
+ <div id="imagesList"></div>
+ </div>
+ </div>
 
-    <!-- SUBMISSIONS -->
-    <div class="panel" id="panel-submissions">
-      <div class="card">
-        <div class="card-header">
-          <div><h3 class="card-title">Contact Submissions</h3><p class="card-subtitle">View messages from the contact form</p></div>
-          <button class="btn btn-secondary btn-sm" id="refreshSubmissions">Refresh</button>
-        </div>
-        <div class="table-wrap">
-          <table id="submissionsTable">
-            <thead><tr><th>Date</th><th>Name</th><th>Email</th><th>Message</th></tr></thead>
-            <tbody id="submissionsBody"></tbody>
-          </table>
-        </div>
-      </div>
-    </div>
+ <!-- SUBMISSIONS -->
+ <div class="panel" id="panel-submissions">
+ <div class="card">
+ <div class="card-header">
+ <div><h3 class="card-title">Contact Submissions</h3><p class="card-subtitle">View messages from the contact form</p></div>
+ <button class="btn btn-secondary btn-sm" id="refreshSubmissions">Refresh</button>
+ </div>
+ <div class="table-wrap">
+ <table id="submissionsTable">
+ <thead><tr><th>Date</th><th>Name</th><th>Email</th><th>Message</th></tr></thead>
+ <tbody id="submissionsBody"></tbody>
+ </table>
+ </div>
+ </div>
+ </div>
 
-  </main>
+ </main>
 </div>
 
 <!-- MEDIA PICKER MODAL -->
 <div class="modal-overlay" id="mediaPickerModal">
-  <div class="modal">
-    <div class="modal-header">
-      <h3>Select Media</h3>
-      <button class="modal-close" id="mediaPickerClose">&times;</button>
-    </div>
-    <div class="modal-body">
-      <div class="media-picker-grid" id="mediaPickerGrid"></div>
-    </div>
-    <div class="modal-footer">
-      <button class="btn btn-secondary" id="mediaPickerCancel">Cancel</button>
-      <button class="btn btn-primary" id="mediaPickerSelect">Select</button>
-    </div>
-  </div>
+ <div class="modal">
+ <div class="modal-header">
+ <h3>Select Media</h3>
+ <button class="modal-close" id="mediaPickerClose">&times;</button>
+ </div>
+ <div class="modal-body">
+ <div class="media-picker-grid" id="mediaPickerGrid"></div>
+ </div>
+ <div class="modal-footer">
+ <button class="btn btn-secondary" id="mediaPickerCancel">Cancel</button>
+ <button class="btn btn-primary" id="mediaPickerSelect">Select</button>
+ </div>
+ </div>
 </div>
 
 <!-- TOAST CONTAINER -->
@@ -496,8 +496,8 @@ tr:hover td{background:var(--gold-light)}
 
 <script>
 /* ========================================
-   CMS Admin Panel - Full Script
-   ======================================== */
+ CMS Admin Panel - Full Script
+ ======================================== */
 (function() {
 'use strict';
 
@@ -507,55 +507,55 @@ const isLocal = location.protocol === 'file:';
 // ===== STATE =====
 let currentSite = 'vac';
 let token = localStorage.getItem('cms_token') || '';
-let contentData = {};  // { _version:2, content:{}, images:{}, sections:{}, theme:{} }
-let mediaList = [];    // [{id, filename, size, type, uploaded}]
+let contentData = {}; // { _version:2, content:{}, images:{}, sections:{}, theme:{} }
+let mediaList = []; // [{id, filename, size, type, uploaded}]
 let hasUnsavedChanges = false;
 let autoSaveTimer = null;
 let mediaPickerCallback = null;
 
 // Google Fonts list
 const GOOGLE_FONTS = [
-  'Inter','Roboto','Open Sans','Lato','Montserrat','Poppins','Raleway',
-  'Playfair Display','Merriweather','Oswald','Source Sans 3','Nunito',
-  'PT Sans','Quicksand','Cormorant Garamond','Libre Baskerville'
+ 'Inter','Roboto','Open Sans','Lato','Montserrat','Poppins','Raleway',
+ 'Playfair Display','Merriweather','Oswald','Source Sans 3','Nunito',
+ 'PT Sans','Quicksand','Cormorant Garamond','Libre Baskerville'
 ];
 
 // Site section definitions
 const SITE_SECTIONS = {
-  vac: [
-    {id:'hero',label:'Hero Section'},
-    {id:'about',label:'About Section'},
-    {id:'programs',label:'Programs Section'},
-    {id:'projects',label:'Projects / Impact'},
-    {id:'team',label:'Team Section'},
-    {id:'testimonials',label:'Testimonials'},
-    {id:'contact',label:'Contact Section'}
-  ],
-  husni: [
-    {id:'hero',label:'Hero Section'},
-    {id:'about',label:'About Section'},
-    {id:'tracks',label:'Speaking Tracks'},
-    {id:'flagship',label:'Flagship Programs'},
-    {id:'experience',label:'Experience'},
-    {id:'testimonials',label:'Testimonials'},
-    {id:'contact',label:'Contact Section'}
-  ]
+ vac: [
+ {id:'hero',label:'Hero Section'},
+ {id:'about',label:'About Section'},
+ {id:'programs',label:'Programs Section'},
+ {id:'projects',label:'Projects / Impact'},
+ {id:'team',label:'Team Section'},
+ {id:'testimonials',label:'Testimonials'},
+ {id:'contact',label:'Contact Section'}
+ ],
+ husni: [
+ {id:'hero',label:'Hero Section'},
+ {id:'about',label:'About Section'},
+ {id:'tracks',label:'Speaking Tracks'},
+ {id:'flagship',label:'Flagship Programs'},
+ {id:'experience',label:'Experience'},
+ {id:'testimonials',label:'Testimonials'},
+ {id:'contact',label:'Contact Section'}
+ ]
 };
 
 // Site image definitions (data-image attrs)
 const SITE_IMAGES = {
-  vac: [
-    {id:'nav-logo',label:'Navigation Logo'},
-    {id:'editorial-1',label:'Editorial Break 1'},
-    {id:'editorial-2',label:'Editorial Break 2'},
-    {id:'editorial-3',label:'Editorial Break 3'},
-    {id:'footer-logo',label:'Footer Logo'}
-  ],
-  husni: [
-    {id:'hh-editorial-1',label:'Editorial Break 1'},
-    {id:'hh-editorial-2',label:'Editorial Break 2'},
-    {id:'hh-editorial-3',label:'Editorial Break 3'}
-  ]
+ vac: [
+ {id:'nav-logo',label:'Navigation Logo'},
+ {id:'editorial-1',label:'Editorial Break 1'},
+ {id:'editorial-2',label:'Editorial Break 2'},
+ {id:'editorial-3',label:'Editorial Break 3'},
+ {id:'footer-logo',label:'Footer Logo'}
+ ],
+ husni: [
+ {id:'hh-editorial-1',label:'Editorial Break 1'},
+ {id:'hh-editorial-2',label:'Editorial Break 2'},
+ {id:'hh-editorial-3',label:'Editorial Break 3'}
+ ]
 };
 
 // ===== DOM REFS =====
@@ -564,62 +564,62 @@ const $$ = (s) => document.querySelectorAll(s);
 
 // ===== AUTH =====
 function headers() {
-  return { 'Content-Type':'application/json', 'Authorization':'Bearer '+token };
+ return { 'Content-Type':'application/json', 'Authorization':'Bearer '+token };
 }
 
 async function login() {
-  const user = $('#loginUser').value.trim();
-  const pass = $('#loginPass').value;
-  if (!user || !pass) return;
+ const user = $('#loginUser').value.trim();
+ const pass = $('#loginPass').value;
+ if (!user || !pass) return;
 
-  try {
-    if (isLocal) {
-      if (user === 'admin' && pass === 'admin') {
-        token = 'local-dev-token';
-        localStorage.setItem('cms_token', token);
-        showAdmin();
-      } else {
-        showLoginError('Invalid credentials');
-      }
-      return;
-    }
-    const resp = await fetch(API + '/login', {
-      method: 'POST',
-      headers: {'Content-Type':'application/json'},
-      body: JSON.stringify({username: user, password: pass})
-    });
-    const data = await resp.json();
-    if (data.token) {
-      token = data.token;
-      localStorage.setItem('cms_token', token);
-      showAdmin();
-    } else {
-      showLoginError(data.error || 'Login failed');
-    }
-  } catch(e) {
-    showLoginError('Connection error');
-  }
+ try {
+ if (isLocal) {
+ if (user === 'admin' && pass === 'admin') {
+ token = 'local-dev-token';
+ localStorage.setItem('cms_token', token);
+ showAdmin();
+ } else {
+ showLoginError('Invalid credentials');
+ }
+ return;
+ }
+ const resp = await fetch(API + '/login', {
+ method: 'POST',
+ headers: {'Content-Type':'application/json'},
+ body: JSON.stringify({username: user, password: pass})
+ });
+ const data = await resp.json();
+ if (data.token) {
+ token = data.token;
+ localStorage.setItem('cms_token', token);
+ showAdmin();
+ } else {
+ showLoginError(data.error || 'Login failed');
+ }
+ } catch(e) {
+ showLoginError('Connection error');
+ }
 }
 
 function showLoginError(msg) {
-  const el = $('#loginError');
-  el.textContent = msg;
-  el.style.display = 'block';
-  setTimeout(() => el.style.display = 'none', 4000);
+ const el = $('#loginError');
+ el.textContent = msg;
+ el.style.display = 'block';
+ setTimeout(() => el.style.display = 'none', 4000);
 }
 
 function logout() {
-  token = '';
-  localStorage.removeItem('cms_token');
-  hasUnsavedChanges = false;
-  $('#loginScreen').style.display = '';
-  $('#adminLayout').style.display = 'none';
+ token = '';
+ localStorage.removeItem('cms_token');
+ hasUnsavedChanges = false;
+ $('#loginScreen').style.display = '';
+ $('#adminLayout').style.display = 'none';
 }
 
 function showAdmin() {
-  $('#loginScreen').style.display = 'none';
-  $('#adminLayout').style.display = 'flex';
-  loadEverything();
+ $('#loginScreen').style.display = 'none';
+ $('#adminLayout').style.display = 'flex';
+ loadEverything();
 }
 
 // ===== INIT =====
@@ -631,386 +631,386 @@ if (token) showAdmin();
 
 // Mobile hamburger
 $('#adminHamburger').addEventListener('click', () => {
-  $('#adminSidebar').classList.toggle('open');
+ $('#adminSidebar').classList.toggle('open');
 });
 
 // ===== NAVIGATION =====
 $$('.nav-item').forEach(btn => {
-  btn.addEventListener('click', () => {
-    const panel = btn.dataset.panel;
-    $$('.nav-item').forEach(b => b.classList.remove('active'));
-    btn.classList.add('active');
-    $$('.panel').forEach(p => p.classList.remove('active'));
-    const target = $('#panel-' + panel);
-    if (target) target.classList.add('active');
-    $('#topbarTitle').textContent = btn.textContent.trim();
-    // Close mobile sidebar
-    $('#adminSidebar').classList.remove('open');
-  });
+ btn.addEventListener('click', () => {
+ const panel = btn.dataset.panel;
+ $$('.nav-item').forEach(b => b.classList.remove('active'));
+ btn.classList.add('active');
+ $$('.panel').forEach(p => p.classList.remove('active'));
+ const target = $('#panel-' + panel);
+ if (target) target.classList.add('active');
+ $('#topbarTitle').textContent = btn.textContent.trim();
+ // Close mobile sidebar
+ $('#adminSidebar').classList.remove('open');
+ });
 });
 
 // ===== SITE SWITCHER =====
 $$('.site-btn').forEach(btn => {
-  btn.addEventListener('click', () => {
-    if (hasUnsavedChanges && !confirm('You have unsaved changes. Switch site anyway?')) return;
-    currentSite = btn.dataset.site;
-    $$('.site-btn').forEach(b => b.classList.remove('active'));
-    btn.classList.add('active');
-    updateSiteBadge();
-    loadEverything();
-  });
+ btn.addEventListener('click', () => {
+ if (hasUnsavedChanges && !confirm('You have unsaved changes. Switch site anyway?')) return;
+ currentSite = btn.dataset.site;
+ $$('.site-btn').forEach(b => b.classList.remove('active'));
+ btn.classList.add('active');
+ updateSiteBadge();
+ loadEverything();
+ });
 });
 
 function updateSiteBadge() {
-  const badge = $('#siteBadge');
-  badge.textContent = currentSite.toUpperCase();
-  badge.className = 'topbar-site-badge ' + (currentSite === 'vac' ? 'badge-vac' : 'badge-husni');
-  // Preview link
-  $('#previewBtn').href = currentSite === 'vac' ? '/' : '/husni/';
+ const badge = $('#siteBadge');
+ badge.textContent = currentSite.toUpperCase();
+ badge.className = 'topbar-site-badge ' + (currentSite === 'vac' ? 'badge-vac' : 'badge-husni');
+ // Preview link
+ $('#previewBtn').href = currentSite === 'vac' ? '/' : '/husni/';
 }
 updateSiteBadge();
 
 // ===== LOAD ALL DATA =====
 async function loadEverything() {
-  hasUnsavedChanges = false;
-  await Promise.all([loadContent(), loadMedia(), loadSubmissions()]);
-  renderContentEditor();
-  renderMediaGrid();
-  renderSections();
-  renderTheme();
-  renderImages();
-  updateDashboard();
+ hasUnsavedChanges = false;
+ await Promise.all([loadContent(), loadMedia(), loadSubmissions()]);
+ renderContentEditor();
+ renderMediaGrid();
+ renderSections();
+ renderTheme();
+ renderImages();
+ updateDashboard();
 }
 
 // ===== CONTENT =====
 async function loadContent() {
-  try {
-    if (isLocal) {
-      contentData = JSON.parse(localStorage.getItem(currentSite + '_edits') || '{}');
-    } else {
-      const resp = await fetch(API + '/content?site=' + currentSite, { headers: headers() });
-      contentData = await resp.json();
-    }
-  } catch(e) {
-    contentData = {};
-  }
-  if (!contentData._version) {
-    contentData = { _version: 2, content: {}, images: {}, sections: {}, theme: {} };
-  }
-  if (!contentData.content) contentData.content = {};
-  if (!contentData.images) contentData.images = {};
-  if (!contentData.sections) contentData.sections = {};
-  if (!contentData.theme) contentData.theme = {};
+ try {
+ if (isLocal) {
+ contentData = JSON.parse(localStorage.getItem(currentSite + '_edits') || '{}');
+ } else {
+ const resp = await fetch(API + '/content?site=' + currentSite, { headers: headers() });
+ contentData = await resp.json();
+ }
+ } catch(e) {
+ contentData = {};
+ }
+ if (!contentData._version) {
+ contentData = { _version: 2, content: {}, images: {}, sections: {}, theme: {} };
+ }
+ if (!contentData.content) contentData.content = {};
+ if (!contentData.images) contentData.images = {};
+ if (!contentData.sections) contentData.sections = {};
+ if (!contentData.theme) contentData.theme = {};
 }
 
 // ===== MEDIA =====
 async function loadMedia() {
-  try {
-    if (isLocal) {
-      mediaList = JSON.parse(localStorage.getItem(currentSite + '_media_index') || '[]');
-    } else {
-      const resp = await fetch(API + '/media?site=' + currentSite, { headers: headers() });
-      const data = await resp.json();
-      mediaList = data.media || data || [];
-    }
-  } catch(e) {
-    mediaList = [];
-  }
+ try {
+ if (isLocal) {
+ mediaList = JSON.parse(localStorage.getItem(currentSite + '_media_index') || '[]');
+ } else {
+ const resp = await fetch(API + '/media?site=' + currentSite, { headers: headers() });
+ const data = await resp.json();
+ mediaList = data.media || data || [];
+ }
+ } catch(e) {
+ mediaList = [];
+ }
 }
 
 // ===== SUBMISSIONS =====
 async function loadSubmissions() {
-  try {
-    if (isLocal) {
-      const subs = JSON.parse(localStorage.getItem(currentSite + '_submissions') || '[]');
-      renderSubmissions(subs);
-    } else {
-      const resp = await fetch(API + '/submissions?site=' + currentSite, { headers: headers() });
-      const data = await resp.json();
-      renderSubmissions(data.submissions || data || []);
-    }
-  } catch(e) {
-    renderSubmissions([]);
-  }
+ try {
+ if (isLocal) {
+ const subs = JSON.parse(localStorage.getItem(currentSite + '_submissions') || '[]');
+ renderSubmissions(subs);
+ } else {
+ const resp = await fetch(API + '/submissions?site=' + currentSite, { headers: headers() });
+ const data = await resp.json();
+ renderSubmissions(data.submissions || data || []);
+ }
+ } catch(e) {
+ renderSubmissions([]);
+ }
 }
 
 // ===== SAVE =====
 async function saveContent() {
-  try {
-    if (isLocal) {
-      localStorage.setItem(currentSite + '_edits', JSON.stringify(contentData));
-    } else {
-      const resp = await fetch(API + '/content?site=' + currentSite, {
-        method: 'PUT',
-        headers: headers(),
-        body: JSON.stringify(contentData)
-      });
-      const result = await resp.json();
-      if (result.error) throw new Error(result.error);
-    }
-    hasUnsavedChanges = false;
-    toast('Content saved successfully', 'success');
-  } catch(e) {
-    toast('Save failed: ' + e.message, 'error');
-  }
+ try {
+ if (isLocal) {
+ localStorage.setItem(currentSite + '_edits', JSON.stringify(contentData));
+ } else {
+ const resp = await fetch(API + '/content?site=' + currentSite, {
+ method: 'PUT',
+ headers: headers(),
+ body: JSON.stringify(contentData)
+ });
+ const result = await resp.json();
+ if (result.error) throw new Error(result.error);
+ }
+ hasUnsavedChanges = false;
+ toast('Content saved successfully', 'success');
+ } catch(e) {
+ toast('Save failed: ' + e.message, 'error');
+ }
 }
 
 $('#saveAllBtn').addEventListener('click', saveContent);
 
 // ===== CONTENT EDITOR =====
 function renderContentEditor() {
-  const container = $('#contentFields');
-  container.innerHTML = '';
+ const container = $('#contentFields');
+ container.innerHTML = '';
 
-  // Fetch editable fields from the site HTML (defined here for each site)
-  const fields = getEditableFields();
+ // Fetch editable fields from the site HTML (defined here for each site)
+ const fields = getEditableFields();
 
-  fields.forEach(field => {
-    const entry = contentData.content[field.key] || {};
-    const text = entry.text !== undefined ? entry.text : field.defaultText;
-    const styles = entry.styles || {};
+ fields.forEach(field => {
+ const entry = contentData.content[field.key] || {};
+ const text = entry.text !== undefined ? entry.text : field.defaultText;
+ const styles = entry.styles || {};
 
-    const wrap = document.createElement('div');
-    wrap.className = 'edit-field';
+ const wrap = document.createElement('div');
+ wrap.className = 'edit-field';
 
-    // Header
-    const header = document.createElement('div');
-    header.className = 'edit-field-header';
-    header.innerHTML = '<span class="edit-field-label">' + field.label + '</span><span class="edit-field-key">' + field.key + '</span>';
-    wrap.appendChild(header);
+ // Header
+ const header = document.createElement('div');
+ header.className = 'edit-field-header';
+ header.innerHTML = '<span class="edit-field-label">' + field.label + '</span><span class="edit-field-key">' + field.key + '</span>';
+ wrap.appendChild(header);
 
-    // Style toolbar
-    const toolbar = createStyleToolbar(field.key, styles);
-    wrap.appendChild(toolbar);
+ // Style toolbar
+ const toolbar = createStyleToolbar(field.key, styles);
+ wrap.appendChild(toolbar);
 
-    // Text area
-    const textarea = document.createElement('textarea');
-    textarea.className = 'edit-field-input';
-    textarea.value = text;
-    textarea.rows = field.multiline ? 4 : 2;
-    textarea.dataset.key = field.key;
-    textarea.addEventListener('input', () => {
-      if (!contentData.content[field.key]) contentData.content[field.key] = {};
-      contentData.content[field.key].text = textarea.value;
-      markDirty();
-    });
-    wrap.appendChild(textarea);
+ // Text area
+ const textarea = document.createElement('textarea');
+ textarea.className = 'edit-field-input';
+ textarea.value = text;
+ textarea.rows = field.multiline ? 4 : 2;
+ textarea.dataset.key = field.key;
+ textarea.addEventListener('input', () => {
+ if (!contentData.content[field.key]) contentData.content[field.key] = {};
+ contentData.content[field.key].text = textarea.value;
+ markDirty();
+ });
+ wrap.appendChild(textarea);
 
-    container.appendChild(wrap);
-  });
+ container.appendChild(wrap);
+ });
 }
 
 function createStyleToolbar(key, styles) {
-  const tb = document.createElement('div');
-  tb.className = 'style-toolbar';
+ const tb = document.createElement('div');
+ tb.className = 'style-toolbar';
 
-  // Font family
-  const fontSel = document.createElement('select');
-  fontSel.title = 'Font Family';
-  fontSel.innerHTML = '<option value="">Default</option>';
-  GOOGLE_FONTS.forEach(f => {
-    fontSel.innerHTML += '<option value="' + f + '"' + (styles.fontFamily && styles.fontFamily.includes(f) ? ' selected' : '') + '>' + f + '</option>';
-  });
-  fontSel.addEventListener('change', () => { setStyle(key, 'fontFamily', fontSel.value || null); });
-  tb.appendChild(fontSel);
+ // Font family
+ const fontSel = document.createElement('select');
+ fontSel.title = 'Font Family';
+ fontSel.innerHTML = '<option value="">Default</option>';
+ GOOGLE_FONTS.forEach(f => {
+ fontSel.innerHTML += '<option value="' + f + '"' + (styles.fontFamily && styles.fontFamily.includes(f) ? ' selected' : '') + '>' + f + '</option>';
+ });
+ fontSel.addEventListener('change', () => { setStyle(key, 'fontFamily', fontSel.value || null); });
+ tb.appendChild(fontSel);
 
-  // Font size
-  const sizeSel = document.createElement('select');
-  sizeSel.title = 'Font Size';
-  sizeSel.innerHTML = '<option value="">Size</option>';
-  [12,14,16,18,20,24,28,32,36,40,48,56,64,72].forEach(s => {
-    sizeSel.innerHTML += '<option value="' + s + 'px"' + (styles.fontSize === s+'px' ? ' selected' : '') + '>' + s + 'px</option>';
-  });
-  sizeSel.addEventListener('change', () => { setStyle(key, 'fontSize', sizeSel.value || null); });
-  tb.appendChild(sizeSel);
+ // Font size
+ const sizeSel = document.createElement('select');
+ sizeSel.title = 'Font Size';
+ sizeSel.innerHTML = '<option value="">Size</option>';
+ [12,14,16,18,20,24,28,32,36,40,48,56,64,72].forEach(s => {
+ sizeSel.innerHTML += '<option value="' + s + 'px"' + (styles.fontSize === s+'px' ? ' selected' : '') + '>' + s + 'px</option>';
+ });
+ sizeSel.addEventListener('change', () => { setStyle(key, 'fontSize', sizeSel.value || null); });
+ tb.appendChild(sizeSel);
 
-  // Color
-  const colorInput = document.createElement('input');
-  colorInput.type = 'color';
-  colorInput.title = 'Text Color';
-  colorInput.value = styles.color || '#000000';
-  colorInput.addEventListener('input', () => { setStyle(key, 'color', colorInput.value); });
-  tb.appendChild(colorInput);
+ // Color
+ const colorInput = document.createElement('input');
+ colorInput.type = 'color';
+ colorInput.title = 'Text Color';
+ colorInput.value = styles.color || '#000000';
+ colorInput.addEventListener('input', () => { setStyle(key, 'color', colorInput.value); });
+ tb.appendChild(colorInput);
 
-  // Separator
-  tb.appendChild(createSep());
+ // Separator
+ tb.appendChild(createSep());
 
-  // Bold
-  const boldBtn = createTbBtn('B', 'Bold', styles.fontWeight === 'bold');
-  boldBtn.addEventListener('click', () => {
-    const active = boldBtn.classList.toggle('active');
-    setStyle(key, 'fontWeight', active ? 'bold' : null);
-  });
-  tb.appendChild(boldBtn);
+ // Bold
+ const boldBtn = createTbBtn('B', 'Bold', styles.fontWeight === 'bold');
+ boldBtn.addEventListener('click', () => {
+ const active = boldBtn.classList.toggle('active');
+ setStyle(key, 'fontWeight', active ? 'bold' : null);
+ });
+ tb.appendChild(boldBtn);
 
-  // Italic
-  const italicBtn = createTbBtn('I', 'Italic', styles.fontStyle === 'italic');
-  italicBtn.style.fontStyle = 'italic';
-  italicBtn.addEventListener('click', () => {
-    const active = italicBtn.classList.toggle('active');
-    setStyle(key, 'fontStyle', active ? 'italic' : null);
-  });
-  tb.appendChild(italicBtn);
+ // Italic
+ const italicBtn = createTbBtn('I', 'Italic', styles.fontStyle === 'italic');
+ italicBtn.style.fontStyle = 'italic';
+ italicBtn.addEventListener('click', () => {
+ const active = italicBtn.classList.toggle('active');
+ setStyle(key, 'fontStyle', active ? 'italic' : null);
+ });
+ tb.appendChild(italicBtn);
 
-  // Underline
-  const uBtn = createTbBtn('U', 'Underline', styles.textDecoration === 'underline');
-  uBtn.style.textDecoration = 'underline';
-  uBtn.addEventListener('click', () => {
-    const active = uBtn.classList.toggle('active');
-    setStyle(key, 'textDecoration', active ? 'underline' : null);
-  });
-  tb.appendChild(uBtn);
+ // Underline
+ const uBtn = createTbBtn('U', 'Underline', styles.textDecoration === 'underline');
+ uBtn.style.textDecoration = 'underline';
+ uBtn.addEventListener('click', () => {
+ const active = uBtn.classList.toggle('active');
+ setStyle(key, 'textDecoration', active ? 'underline' : null);
+ });
+ tb.appendChild(uBtn);
 
-  // Separator
-  tb.appendChild(createSep());
+ // Separator
+ tb.appendChild(createSep());
 
-  // Alignment
-  ['left','center','right'].forEach(align => {
-    const label = align === 'left' ? '&#9776;' : align === 'center' ? '&#8801;' : '&#8801;';
-    const aBtn = createTbBtn(label, 'Align ' + align, styles.textAlign === align);
-    aBtn.addEventListener('click', () => {
-      tb.querySelectorAll('[data-align]').forEach(b => b.classList.remove('active'));
-      aBtn.classList.add('active');
-      setStyle(key, 'textAlign', align);
-    });
-    aBtn.dataset.align = align;
-    tb.appendChild(aBtn);
-  });
+ // Alignment
+ ['left','center','right'].forEach(align => {
+ const label = align === 'left' ? '&#9776;' : align === 'center' ? '&#8801;' : '&#8801;';
+ const aBtn = createTbBtn(label, 'Align ' + align, styles.textAlign === align);
+ aBtn.addEventListener('click', () => {
+ tb.querySelectorAll('[data-align]').forEach(b => b.classList.remove('active'));
+ aBtn.classList.add('active');
+ setStyle(key, 'textAlign', align);
+ });
+ aBtn.dataset.align = align;
+ tb.appendChild(aBtn);
+ });
 
-  // Separator
-  tb.appendChild(createSep());
+ // Separator
+ tb.appendChild(createSep());
 
-  // Reset
-  const resetBtn = document.createElement('button');
-  resetBtn.className = 'tb-reset';
-  resetBtn.textContent = 'Reset';
-  resetBtn.title = 'Reset all styles to default';
-  resetBtn.addEventListener('click', () => {
-    if (contentData.content[key]) {
-      contentData.content[key].styles = {};
-      markDirty();
-      renderContentEditor();
-    }
-  });
-  tb.appendChild(resetBtn);
+ // Reset
+ const resetBtn = document.createElement('button');
+ resetBtn.className = 'tb-reset';
+ resetBtn.textContent = 'Reset';
+ resetBtn.title = 'Reset all styles to default';
+ resetBtn.addEventListener('click', () => {
+ if (contentData.content[key]) {
+ contentData.content[key].styles = {};
+ markDirty();
+ renderContentEditor();
+ }
+ });
+ tb.appendChild(resetBtn);
 
-  return tb;
+ return tb;
 }
 
 function createTbBtn(html, title, active) {
-  const btn = document.createElement('button');
-  btn.className = 'tb-btn' + (active ? ' active' : '');
-  btn.innerHTML = html;
-  btn.title = title;
-  return btn;
+ const btn = document.createElement('button');
+ btn.className = 'tb-btn' + (active ? ' active' : '');
+ btn.innerHTML = html;
+ btn.title = title;
+ return btn;
 }
 function createSep() {
-  const s = document.createElement('div');
-  s.className = 'tb-sep';
-  return s;
+ const s = document.createElement('div');
+ s.className = 'tb-sep';
+ return s;
 }
 
 function setStyle(key, prop, value) {
-  if (!contentData.content[key]) contentData.content[key] = {};
-  if (!contentData.content[key].styles) contentData.content[key].styles = {};
-  if (value === null || value === '') {
-    delete contentData.content[key].styles[prop];
-  } else {
-    contentData.content[key].styles[prop] = value;
-  }
-  markDirty();
+ if (!contentData.content[key]) contentData.content[key] = {};
+ if (!contentData.content[key].styles) contentData.content[key].styles = {};
+ if (value === null || value === '') {
+ delete contentData.content[key].styles[prop];
+ } else {
+ contentData.content[key].styles[prop] = value;
+ }
+ markDirty();
 }
 
 function getEditableFields() {
-  if (currentSite === 'vac') {
-    return [
-      {key:'hero-title',label:'Hero Title',defaultText:'Visi Armada Consulting'},
-      {key:'hero-subtitle',label:'Hero Subtitle',defaultText:'',multiline:true},
-      {key:'about-title',label:'About Title',defaultText:'About VAC'},
-      {key:'about-text',label:'About Text',defaultText:'',multiline:true},
-      {key:'about-mission',label:'Mission Statement',defaultText:'',multiline:true},
-      {key:'programs-title',label:'Programs Title',defaultText:'Our Programs'},
-      {key:'programs-subtitle',label:'Programs Subtitle',defaultText:''},
-      {key:'projects-title',label:'Projects Title',defaultText:'Our Impact'},
-      {key:'team-title',label:'Team Title',defaultText:'Our Team'},
-      {key:'testimonials-title',label:'Testimonials Title',defaultText:'Testimonials'},
-      {key:'contact-title',label:'Contact Title',defaultText:'Get In Touch'},
-      {key:'contact-subtitle',label:'Contact Subtitle',defaultText:''},
-      {key:'footer-tagline',label:'Footer Tagline',defaultText:''},
-      {key:'footer-desc',label:'Footer Description',defaultText:'',multiline:true}
-    ];
-  } else {
-    return [
-      {key:'hero-title',label:'Hero Title',defaultText:'Husni Halim'},
-      {key:'hero-subtitle',label:'Hero Subtitle',defaultText:'',multiline:true},
-      {key:'hero-desc',label:'Hero Description',defaultText:'',multiline:true},
-      {key:'about-title',label:'About Title',defaultText:'About Husni'},
-      {key:'about-text',label:'About Text',defaultText:'',multiline:true},
-      {key:'about-philosophy',label:'Philosophy Text',defaultText:'',multiline:true},
-      {key:'tracks-title',label:'Tracks Title',defaultText:'Speaking Tracks'},
-      {key:'tracks-subtitle',label:'Tracks Subtitle',defaultText:''},
-      {key:'flagship-title',label:'Flagship Title',defaultText:'Flagship Programs'},
-      {key:'flagship-subtitle',label:'Flagship Subtitle',defaultText:''},
-      {key:'experience-title',label:'Experience Title',defaultText:'Experience'},
-      {key:'testimonials-title',label:'Testimonials Title',defaultText:'Testimonials'},
-      {key:'contact-title',label:'Contact Title',defaultText:'Get In Touch'},
-      {key:'contact-subtitle',label:'Contact Subtitle',defaultText:''},
-      {key:'footer-tagline',label:'Footer Tagline',defaultText:''},
-      {key:'footer-desc',label:'Footer Description',defaultText:'',multiline:true}
-    ];
-  }
+ if (currentSite === 'vac') {
+ return [
+ {key:'hero-title',label:'Hero Title',defaultText:'Visi Armada Consulting'},
+ {key:'hero-subtitle',label:'Hero Subtitle',defaultText:'',multiline:true},
+ {key:'about-title',label:'About Title',defaultText:'About VAC'},
+ {key:'about-text',label:'About Text',defaultText:'',multiline:true},
+ {key:'about-mission',label:'Mission Statement',defaultText:'',multiline:true},
+ {key:'programs-title',label:'Programs Title',defaultText:'Our Programs'},
+ {key:'programs-subtitle',label:'Programs Subtitle',defaultText:''},
+ {key:'projects-title',label:'Projects Title',defaultText:'Our Impact'},
+ {key:'team-title',label:'Team Title',defaultText:'Our Team'},
+ {key:'testimonials-title',label:'Testimonials Title',defaultText:'Testimonials'},
+ {key:'contact-title',label:'Contact Title',defaultText:'Get In Touch'},
+ {key:'contact-subtitle',label:'Contact Subtitle',defaultText:''},
+ {key:'footer-tagline',label:'Footer Tagline',defaultText:''},
+ {key:'footer-desc',label:'Footer Description',defaultText:'',multiline:true}
+ ];
+ } else {
+ return [
+ {key:'hero-title',label:'Hero Title',defaultText:'Husni Halim'},
+ {key:'hero-subtitle',label:'Hero Subtitle',defaultText:'',multiline:true},
+ {key:'hero-desc',label:'Hero Description',defaultText:'',multiline:true},
+ {key:'about-title',label:'About Title',defaultText:'About Husni'},
+ {key:'about-text',label:'About Text',defaultText:'',multiline:true},
+ {key:'about-philosophy',label:'Philosophy Text',defaultText:'',multiline:true},
+ {key:'tracks-title',label:'Tracks Title',defaultText:'Speaking Tracks'},
+ {key:'tracks-subtitle',label:'Tracks Subtitle',defaultText:''},
+ {key:'flagship-title',label:'Flagship Title',defaultText:'Flagship Programs'},
+ {key:'flagship-subtitle',label:'Flagship Subtitle',defaultText:''},
+ {key:'experience-title',label:'Experience Title',defaultText:'Experience'},
+ {key:'testimonials-title',label:'Testimonials Title',defaultText:'Testimonials'},
+ {key:'contact-title',label:'Contact Title',defaultText:'Get In Touch'},
+ {key:'contact-subtitle',label:'Contact Subtitle',defaultText:''},
+ {key:'footer-tagline',label:'Footer Tagline',defaultText:''},
+ {key:'footer-desc',label:'Footer Description',defaultText:'',multiline:true}
+ ];
+ }
 }
 
 // ===== MEDIA LIBRARY =====
 function renderMediaGrid() {
-  const grid = $('#mediaGrid');
-  grid.innerHTML = '';
+ const grid = $('#mediaGrid');
+ grid.innerHTML = '';
 
-  if (mediaList.length === 0) {
-    grid.innerHTML = '<div class="empty-state"><p>No media files yet. Upload images above.</p></div>';
-    return;
-  }
+ if (mediaList.length === 0) {
+ grid.innerHTML = '<div class="empty-state"><p>No media files yet. Upload images above.</p></div>';
+ return;
+ }
 
-  mediaList.forEach(item => {
-    const el = document.createElement('div');
-    el.className = 'media-item';
+ mediaList.forEach(item => {
+ const el = document.createElement('div');
+ el.className = 'media-item';
 
-    const imgUrl = getMediaUrl(item.id);
-    el.innerHTML =
-      '<img class="media-item-img" src="' + imgUrl + '" alt="' + (item.filename || item.id) + '" loading="lazy">' +
-      '<div class="media-item-info">' +
-        '<div class="media-item-name">' + (item.filename || item.id) + '</div>' +
-        '<div class="media-item-size">' + formatBytes(item.size || 0) + '</div>' +
-        '<div class="media-item-actions">' +
-          '<button class="btn btn-secondary btn-sm copy-url" data-id="' + item.id + '">Copy URL</button>' +
-          '<button class="btn btn-danger btn-sm delete-media" data-id="' + item.id + '">Delete</button>' +
-        '</div>' +
-      '</div>';
-    grid.appendChild(el);
-  });
+ const imgUrl = getMediaUrl(item.id);
+ el.innerHTML =
+ '<img class="media-item-img" src="' + imgUrl + '" alt="' + (item.filename || item.id) + '" loading="lazy">' +
+ '<div class="media-item-info">' +
+ '<div class="media-item-name">' + (item.filename || item.id) + '</div>' +
+ '<div class="media-item-size">' + formatBytes(item.size || 0) + '</div>' +
+ '<div class="media-item-actions">' +
+ '<button class="btn btn-secondary btn-sm copy-url" data-id="' + item.id + '">Copy URL</button>' +
+ '<button class="btn btn-danger btn-sm delete-media" data-id="' + item.id + '">Delete</button>' +
+ '</div>' +
+ '</div>';
+ grid.appendChild(el);
+ });
 
-  // Copy URL
-  grid.querySelectorAll('.copy-url').forEach(btn => {
-    btn.addEventListener('click', () => {
-      const url = getMediaUrl(btn.dataset.id);
-      navigator.clipboard.writeText(url).then(() => toast('URL copied', 'info'));
-    });
-  });
+ // Copy URL
+ grid.querySelectorAll('.copy-url').forEach(btn => {
+ btn.addEventListener('click', () => {
+ const url = getMediaUrl(btn.dataset.id);
+ navigator.clipboard.writeText(url).then(() => toast('URL copied', 'info'));
+ });
+ });
 
-  // Delete
-  grid.querySelectorAll('.delete-media').forEach(btn => {
-    btn.addEventListener('click', async () => {
-      if (!confirm('Delete this image permanently?')) return;
-      await deleteMedia(btn.dataset.id);
-    });
-  });
+ // Delete
+ grid.querySelectorAll('.delete-media').forEach(btn => {
+ btn.addEventListener('click', async () => {
+ if (!confirm('Delete this image permanently?')) return;
+ await deleteMedia(btn.dataset.id);
+ });
+ });
 }
 
 function getMediaUrl(id) {
-  if (isLocal) {
-    return localStorage.getItem(currentSite + '_media_' + id) || '';
-  }
-  return API + '/media/' + id + '?site=' + currentSite;
+ if (isLocal) {
+ return localStorage.getItem(currentSite + '_media_' + id) || '';
+ }
+ return API + '/media/' + id + '?site=' + currentSite;
 }
 
 // Upload zone
@@ -1021,594 +1021,594 @@ uploadZone.addEventListener('click', () => fileInput.click());
 uploadZone.addEventListener('dragover', (e) => { e.preventDefault(); uploadZone.classList.add('drag-over'); });
 uploadZone.addEventListener('dragleave', () => uploadZone.classList.remove('drag-over'));
 uploadZone.addEventListener('drop', (e) => {
-  e.preventDefault();
-  uploadZone.classList.remove('drag-over');
-  handleFiles(e.dataTransfer.files);
+ e.preventDefault();
+ uploadZone.classList.remove('drag-over');
+ handleFiles(e.dataTransfer.files);
 });
 fileInput.addEventListener('change', () => {
-  handleFiles(fileInput.files);
-  fileInput.value = '';
+ handleFiles(fileInput.files);
+ fileInput.value = '';
 });
 
 async function handleFiles(files) {
-  for (const file of files) {
-    if (!file.type.startsWith('image/')) { toast('Only image files allowed', 'error'); continue; }
-    if (file.size > 10 * 1024 * 1024) { toast('Max file size is 10MB', 'error'); continue; }
-    await uploadFile(file);
-  }
+ for (const file of files) {
+ if (!file.type.startsWith('image/')) { toast('Only image files allowed', 'error'); continue; }
+ if (file.size > 10 * 1024 * 1024) { toast('Max file size is 10MB', 'error'); continue; }
+ await uploadFile(file);
+ }
 }
 
 async function uploadFile(file) {
-  const progress = $('#uploadProgress');
-  const fill = $('#uploadFill');
-  progress.style.display = 'block';
-  fill.style.width = '20%';
+ const progress = $('#uploadProgress');
+ const fill = $('#uploadFill');
+ progress.style.display = 'block';
+ fill.style.width = '20%';
 
-  try {
-    const compressed = await compressImage(file);
-    fill.style.width = '60%';
+ try {
+ const compressed = await compressImage(file);
+ fill.style.width = '60%';
 
-    if (isLocal) {
-      const id = 'img_' + Date.now() + '_' + Math.random().toString(36).substr(2, 6);
-      localStorage.setItem(currentSite + '_media_' + id, compressed.dataUrl);
-      mediaList.push({ id, filename: file.name, size: compressed.size, type: file.type, uploaded: new Date().toISOString() });
-      localStorage.setItem(currentSite + '_media_index', JSON.stringify(mediaList));
-      fill.style.width = '100%';
-      toast('Image uploaded', 'success');
-    } else {
-      const resp = await fetch(API + '/media/upload?site=' + currentSite, {
-        method: 'POST',
-        headers: headers(),
-        body: JSON.stringify({
-          filename: file.name,
-          data: compressed.base64,
-          type: file.type,
-          size: compressed.size
-        })
-      });
-      const result = await resp.json();
-      if (result.error) throw new Error(result.error);
-      fill.style.width = '100%';
-      await loadMedia();
-      toast('Image uploaded: ' + file.name, 'success');
-    }
+ if (isLocal) {
+ const id = 'img_' + Date.now() + '_' + Math.random().toString(36).substr(2, 6);
+ localStorage.setItem(currentSite + '_media_' + id, compressed.dataUrl);
+ mediaList.push({ id, filename: file.name, size: compressed.size, type: file.type, uploaded: new Date().toISOString() });
+ localStorage.setItem(currentSite + '_media_index', JSON.stringify(mediaList));
+ fill.style.width = '100%';
+ toast('Image uploaded', 'success');
+ } else {
+ const resp = await fetch(API + '/media/upload?site=' + currentSite, {
+ method: 'POST',
+ headers: headers(),
+ body: JSON.stringify({
+ filename: file.name,
+ data: compressed.base64,
+ type: file.type,
+ size: compressed.size
+ })
+ });
+ const result = await resp.json();
+ if (result.error) throw new Error(result.error);
+ fill.style.width = '100%';
+ await loadMedia();
+ toast('Image uploaded: ' + file.name, 'success');
+ }
 
-    renderMediaGrid();
-    updateDashboard();
-  } catch(e) {
-    toast('Upload failed: ' + e.message, 'error');
-  }
+ renderMediaGrid();
+ updateDashboard();
+ } catch(e) {
+ toast('Upload failed: ' + e.message, 'error');
+ }
 
-  setTimeout(() => {
-    progress.style.display = 'none';
-    fill.style.width = '0';
-  }, 1000);
+ setTimeout(() => {
+ progress.style.display = 'none';
+ fill.style.width = '0';
+ }, 1000);
 }
 
 async function compressImage(file) {
-  return new Promise((resolve) => {
-    if (file.type === 'image/svg+xml') {
-      const reader = new FileReader();
-      reader.onload = () => {
-        const base64 = reader.result.split(',')[1];
-        resolve({ base64, dataUrl: reader.result, size: file.size });
-      };
-      reader.readAsDataURL(file);
-      return;
-    }
+ return new Promise((resolve) => {
+ if (file.type === 'image/svg+xml') {
+ const reader = new FileReader();
+ reader.onload = () => {
+ const base64 = reader.result.split(',')[1];
+ resolve({ base64, dataUrl: reader.result, size: file.size });
+ };
+ reader.readAsDataURL(file);
+ return;
+ }
 
-    const img = new Image();
-    const canvas = document.createElement('canvas');
-    const ctx = canvas.getContext('2d');
+ const img = new Image();
+ const canvas = document.createElement('canvas');
+ const ctx = canvas.getContext('2d');
 
-    img.onload = () => {
-      let w = img.width, h = img.height;
-      const MAX = 1920;
-      if (w > MAX) { h = Math.round(h * MAX / w); w = MAX; }
-      if (h > MAX) { w = Math.round(w * MAX / h); h = MAX; }
-      canvas.width = w;
-      canvas.height = h;
-      ctx.drawImage(img, 0, 0, w, h);
+ img.onload = () => {
+ let w = img.width, h = img.height;
+ const MAX = 1920;
+ if (w > MAX) { h = Math.round(h * MAX / w); w = MAX; }
+ if (h > MAX) { w = Math.round(w * MAX / h); h = MAX; }
+ canvas.width = w;
+ canvas.height = h;
+ ctx.drawImage(img, 0, 0, w, h);
 
-      const dataUrl = canvas.toDataURL('image/jpeg', 0.8);
-      const base64 = dataUrl.split(',')[1];
-      const size = Math.round(base64.length * 0.75);
-      resolve({ base64, dataUrl, size });
-    };
+ const dataUrl = canvas.toDataURL('image/jpeg', 0.8);
+ const base64 = dataUrl.split(',')[1];
+ const size = Math.round(base64.length * 0.75);
+ resolve({ base64, dataUrl, size });
+ };
 
-    const reader = new FileReader();
-    reader.onload = () => { img.src = reader.result; };
-    reader.readAsDataURL(file);
-  });
+ const reader = new FileReader();
+ reader.onload = () => { img.src = reader.result; };
+ reader.readAsDataURL(file);
+ });
 }
 
 async function deleteMedia(id) {
-  try {
-    if (isLocal) {
-      localStorage.removeItem(currentSite + '_media_' + id);
-      mediaList = mediaList.filter(m => m.id !== id);
-      localStorage.setItem(currentSite + '_media_index', JSON.stringify(mediaList));
-    } else {
-      await fetch(API + '/media/' + id + '?site=' + currentSite, { method: 'DELETE', headers: headers() });
-      await loadMedia();
-    }
-    renderMediaGrid();
-    updateDashboard();
-    toast('Image deleted', 'success');
-  } catch(e) {
-    toast('Delete failed: ' + e.message, 'error');
-  }
+ try {
+ if (isLocal) {
+ localStorage.removeItem(currentSite + '_media_' + id);
+ mediaList = mediaList.filter(m => m.id !== id);
+ localStorage.setItem(currentSite + '_media_index', JSON.stringify(mediaList));
+ } else {
+ await fetch(API + '/media/' + id + '?site=' + currentSite, { method: 'DELETE', headers: headers() });
+ await loadMedia();
+ }
+ renderMediaGrid();
+ updateDashboard();
+ toast('Image deleted', 'success');
+ } catch(e) {
+ toast('Delete failed: ' + e.message, 'error');
+ }
 }
 
 // ===== SECTIONS MANAGER =====
 function renderSections() {
-  const container = $('#sectionsList');
-  container.innerHTML = '';
+ const container = $('#sectionsList');
+ container.innerHTML = '';
 
-  const sections = SITE_SECTIONS[currentSite] || [];
+ const sections = SITE_SECTIONS[currentSite] || [];
 
-  sections.forEach(sec => {
-    const settings = contentData.sections[sec.id] || {};
-    const el = document.createElement('div');
-    el.className = 'section-item';
+ sections.forEach(sec => {
+ const settings = contentData.sections[sec.id] || {};
+ const el = document.createElement('div');
+ el.className = 'section-item';
 
-    el.innerHTML =
-      '<div class="section-item-header">' +
-        '<span class="section-item-title">' + sec.label + '</span>' +
-        '<label class="toggle-switch">' +
-          '<input type="checkbox" data-section="' + sec.id + '" data-prop="visible" ' + (settings.visible !== false ? 'checked' : '') + '>' +
-          '<span class="toggle-slider"></span>' +
-          '<span class="toggle-label">Visible</span>' +
-        '</label>' +
-      '</div>' +
-      '<div class="section-controls">' +
-        '<div class="form-group">' +
-          '<label class="form-label">Background Color</label>' +
-          '<input type="color" class="form-input" style="width:60px;height:36px;padding:4px" data-section="' + sec.id + '" data-prop="backgroundColor" value="' + (settings.backgroundColor || '#ffffff') + '">' +
-        '</div>' +
-        '<div class="form-group">' +
-          '<label class="form-label">Background Image</label>' +
-          '<div style="display:flex;gap:8px">' +
-            '<button class="btn btn-secondary btn-sm pick-bg-img" data-section="' + sec.id + '">Choose Image</button>' +
-            '<button class="btn btn-danger btn-sm remove-bg-img" data-section="' + sec.id + '">Remove</button>' +
-          '</div>' +
-          (settings.backgroundImage ? '<div style="margin-top:6px;font-size:12px;color:var(--text-light)">Current: ' + settings.backgroundImage + '</div>' : '') +
-        '</div>' +
-        '<div class="form-group">' +
-          '<label class="form-label">Overlay Color</label>' +
-          '<input type="color" class="form-input" style="width:60px;height:36px;padding:4px" data-section="' + sec.id + '" data-prop="backgroundOverlayColor" value="' + (settings.backgroundOverlayColor || '#000000') + '">' +
-        '</div>' +
-        '<div class="form-group">' +
-          '<label class="form-label">Overlay Opacity: <span class="opacity-val">' + Math.round((settings.backgroundOverlayOpacity || 0.4) * 100) + '%</span></label>' +
-          '<input type="range" min="0" max="100" value="' + Math.round((settings.backgroundOverlayOpacity || 0.4) * 100) + '" data-section="' + sec.id + '" data-prop="backgroundOverlayOpacity" style="width:100%">' +
-        '</div>' +
-        '<div class="form-group">' +
-          '<label class="form-label">Background Position</label>' +
-          '<select class="form-select" data-section="' + sec.id + '" data-prop="backgroundPosition">' +
-            '<option value="center"' + (settings.backgroundPosition === 'center' || !settings.backgroundPosition ? ' selected' : '') + '>Center</option>' +
-            '<option value="top"' + (settings.backgroundPosition === 'top' ? ' selected' : '') + '>Top</option>' +
-            '<option value="bottom"' + (settings.backgroundPosition === 'bottom' ? ' selected' : '') + '>Bottom</option>' +
-          '</select>' +
-        '</div>' +
-        '<div class="form-group">' +
-          '<label class="form-label">Background Size</label>' +
-          '<select class="form-select" data-section="' + sec.id + '" data-prop="backgroundSize">' +
-            '<option value="cover"' + (settings.backgroundSize === 'cover' || !settings.backgroundSize ? ' selected' : '') + '>Cover</option>' +
-            '<option value="contain"' + (settings.backgroundSize === 'contain' ? ' selected' : '') + '>Contain</option>' +
-          '</select>' +
-        '</div>' +
-      '</div>';
+ el.innerHTML =
+ '<div class="section-item-header">' +
+ '<span class="section-item-title">' + sec.label + '</span>' +
+ '<label class="toggle-switch">' +
+ '<input type="checkbox" data-section="' + sec.id + '" data-prop="visible" ' + (settings.visible !== false ? 'checked' : '') + '>' +
+ '<span class="toggle-slider"></span>' +
+ '<span class="toggle-label">Visible</span>' +
+ '</label>' +
+ '</div>' +
+ '<div class="section-controls">' +
+ '<div class="form-group">' +
+ '<label class="form-label">Background Color</label>' +
+ '<input type="color" class="form-input" style="width:60px;height:36px;padding:4px" data-section="' + sec.id + '" data-prop="backgroundColor" value="' + (settings.backgroundColor || '#ffffff') + '">' +
+ '</div>' +
+ '<div class="form-group">' +
+ '<label class="form-label">Background Image</label>' +
+ '<div style="display:flex;gap:8px">' +
+ '<button class="btn btn-secondary btn-sm pick-bg-img" data-section="' + sec.id + '">Choose Image</button>' +
+ '<button class="btn btn-danger btn-sm remove-bg-img" data-section="' + sec.id + '">Remove</button>' +
+ '</div>' +
+ (settings.backgroundImage ? '<div style="margin-top:6px;font-size:12px;color:var(--text-light)">Current: ' + settings.backgroundImage + '</div>' : '') +
+ '</div>' +
+ '<div class="form-group">' +
+ '<label class="form-label">Overlay Color</label>' +
+ '<input type="color" class="form-input" style="width:60px;height:36px;padding:4px" data-section="' + sec.id + '" data-prop="backgroundOverlayColor" value="' + (settings.backgroundOverlayColor || '#000000') + '">' +
+ '</div>' +
+ '<div class="form-group">' +
+ '<label class="form-label">Overlay Opacity: <span class="opacity-val">' + Math.round((settings.backgroundOverlayOpacity || 0.4) * 100) + '%</span></label>' +
+ '<input type="range" min="0" max="100" value="' + Math.round((settings.backgroundOverlayOpacity || 0.4) * 100) + '" data-section="' + sec.id + '" data-prop="backgroundOverlayOpacity" style="width:100%">' +
+ '</div>' +
+ '<div class="form-group">' +
+ '<label class="form-label">Background Position</label>' +
+ '<select class="form-select" data-section="' + sec.id + '" data-prop="backgroundPosition">' +
+ '<option value="center"' + (settings.backgroundPosition === 'center' || !settings.backgroundPosition ? ' selected' : '') + '>Center</option>' +
+ '<option value="top"' + (settings.backgroundPosition === 'top' ? ' selected' : '') + '>Top</option>' +
+ '<option value="bottom"' + (settings.backgroundPosition === 'bottom' ? ' selected' : '') + '>Bottom</option>' +
+ '</select>' +
+ '</div>' +
+ '<div class="form-group">' +
+ '<label class="form-label">Background Size</label>' +
+ '<select class="form-select" data-section="' + sec.id + '" data-prop="backgroundSize">' +
+ '<option value="cover"' + (settings.backgroundSize === 'cover' || !settings.backgroundSize ? ' selected' : '') + '>Cover</option>' +
+ '<option value="contain"' + (settings.backgroundSize === 'contain' ? ' selected' : '') + '>Contain</option>' +
+ '</select>' +
+ '</div>' +
+ '</div>';
 
-    container.appendChild(el);
-  });
+ container.appendChild(el);
+ });
 
-  // Bind events
-  container.querySelectorAll('[data-prop="visible"]').forEach(cb => {
-    cb.addEventListener('change', () => {
-      ensureSection(cb.dataset.section);
-      contentData.sections[cb.dataset.section].visible = cb.checked;
-      markDirty();
-    });
-  });
+ // Bind events
+ container.querySelectorAll('[data-prop="visible"]').forEach(cb => {
+ cb.addEventListener('change', () => {
+ ensureSection(cb.dataset.section);
+ contentData.sections[cb.dataset.section].visible = cb.checked;
+ markDirty();
+ });
+ });
 
-  container.querySelectorAll('[data-prop="backgroundColor"]').forEach(input => {
-    input.addEventListener('input', () => {
-      ensureSection(input.dataset.section);
-      contentData.sections[input.dataset.section].backgroundColor = input.value;
-      markDirty();
-    });
-  });
+ container.querySelectorAll('[data-prop="backgroundColor"]').forEach(input => {
+ input.addEventListener('input', () => {
+ ensureSection(input.dataset.section);
+ contentData.sections[input.dataset.section].backgroundColor = input.value;
+ markDirty();
+ });
+ });
 
-  container.querySelectorAll('[data-prop="backgroundOverlayColor"]').forEach(input => {
-    input.addEventListener('input', () => {
-      ensureSection(input.dataset.section);
-      contentData.sections[input.dataset.section].backgroundOverlayColor = input.value;
-      markDirty();
-    });
-  });
+ container.querySelectorAll('[data-prop="backgroundOverlayColor"]').forEach(input => {
+ input.addEventListener('input', () => {
+ ensureSection(input.dataset.section);
+ contentData.sections[input.dataset.section].backgroundOverlayColor = input.value;
+ markDirty();
+ });
+ });
 
-  container.querySelectorAll('[data-prop="backgroundOverlayOpacity"]').forEach(input => {
-    input.addEventListener('input', () => {
-      ensureSection(input.dataset.section);
-      const val = parseInt(input.value) / 100;
-      contentData.sections[input.dataset.section].backgroundOverlayOpacity = val;
-      input.closest('.form-group').querySelector('.opacity-val').textContent = input.value + '%';
-      markDirty();
-    });
-  });
+ container.querySelectorAll('[data-prop="backgroundOverlayOpacity"]').forEach(input => {
+ input.addEventListener('input', () => {
+ ensureSection(input.dataset.section);
+ const val = parseInt(input.value) / 100;
+ contentData.sections[input.dataset.section].backgroundOverlayOpacity = val;
+ input.closest('.form-group').querySelector('.opacity-val').textContent = input.value + '%';
+ markDirty();
+ });
+ });
 
-  container.querySelectorAll('[data-prop="backgroundPosition"]').forEach(sel => {
-    sel.addEventListener('change', () => {
-      ensureSection(sel.dataset.section);
-      contentData.sections[sel.dataset.section].backgroundPosition = sel.value;
-      markDirty();
-    });
-  });
+ container.querySelectorAll('[data-prop="backgroundPosition"]').forEach(sel => {
+ sel.addEventListener('change', () => {
+ ensureSection(sel.dataset.section);
+ contentData.sections[sel.dataset.section].backgroundPosition = sel.value;
+ markDirty();
+ });
+ });
 
-  container.querySelectorAll('[data-prop="backgroundSize"]').forEach(sel => {
-    sel.addEventListener('change', () => {
-      ensureSection(sel.dataset.section);
-      contentData.sections[sel.dataset.section].backgroundSize = sel.value;
-      markDirty();
-    });
-  });
+ container.querySelectorAll('[data-prop="backgroundSize"]').forEach(sel => {
+ sel.addEventListener('change', () => {
+ ensureSection(sel.dataset.section);
+ contentData.sections[sel.dataset.section].backgroundSize = sel.value;
+ markDirty();
+ });
+ });
 
-  container.querySelectorAll('.pick-bg-img').forEach(btn => {
-    btn.addEventListener('click', () => {
-      openMediaPicker((id) => {
-        ensureSection(btn.dataset.section);
-        contentData.sections[btn.dataset.section].backgroundImage = id;
-        markDirty();
-        renderSections();
-      });
-    });
-  });
+ container.querySelectorAll('.pick-bg-img').forEach(btn => {
+ btn.addEventListener('click', () => {
+ openMediaPicker((id) => {
+ ensureSection(btn.dataset.section);
+ contentData.sections[btn.dataset.section].backgroundImage = id;
+ markDirty();
+ renderSections();
+ });
+ });
+ });
 
-  container.querySelectorAll('.remove-bg-img').forEach(btn => {
-    btn.addEventListener('click', () => {
-      ensureSection(btn.dataset.section);
-      delete contentData.sections[btn.dataset.section].backgroundImage;
-      markDirty();
-      renderSections();
-    });
-  });
+ container.querySelectorAll('.remove-bg-img').forEach(btn => {
+ btn.addEventListener('click', () => {
+ ensureSection(btn.dataset.section);
+ delete contentData.sections[btn.dataset.section].backgroundImage;
+ markDirty();
+ renderSections();
+ });
+ });
 }
 
 function ensureSection(id) {
-  if (!contentData.sections[id]) contentData.sections[id] = {};
+ if (!contentData.sections[id]) contentData.sections[id] = {};
 }
 
 // ===== THEME & BRANDING =====
 function renderTheme() {
-  const theme = contentData.theme || {};
+ const theme = contentData.theme || {};
 
-  // Populate font selects
-  ['#themeFontHeading','#themeFontBody'].forEach(sel => {
-    const select = $(sel);
-    select.innerHTML = '<option value="">Default (site CSS)</option>';
-    GOOGLE_FONTS.forEach(f => {
-      select.innerHTML += '<option value="' + f + '">' + f + '</option>';
-    });
-  });
+ // Populate font selects
+ ['#themeFontHeading','#themeFontBody'].forEach(sel => {
+ const select = $(sel);
+ select.innerHTML = '<option value="">Default (site CSS)</option>';
+ GOOGLE_FONTS.forEach(f => {
+ select.innerHTML += '<option value="' + f + '">' + f + '</option>';
+ });
+ });
 
-  // Set values
-  const pc = theme.primaryColor || (currentSite === 'vac' ? '#c9a84c' : '#8b2252');
-  const sc = theme.secondaryColor || (currentSite === 'vac' ? '#e8b4b8' : '#d4a574');
-  $('#themePrimaryColor').value = pc;
-  $('#themePrimaryHex').value = pc;
-  $('#primaryPreview').style.backgroundColor = pc;
-  $('#themeSecondaryColor').value = sc;
-  $('#themeSecondaryHex').value = sc;
-  $('#secondaryPreview').style.backgroundColor = sc;
+ // Set values
+ const pc = theme.primaryColor || (currentSite === 'vac' ? '#c9a84c' : '#8b2252');
+ const sc = theme.secondaryColor || (currentSite === 'vac' ? '#e8b4b8' : '#d4a574');
+ $('#themePrimaryColor').value = pc;
+ $('#themePrimaryHex').value = pc;
+ $('#primaryPreview').style.backgroundColor = pc;
+ $('#themeSecondaryColor').value = sc;
+ $('#themeSecondaryHex').value = sc;
+ $('#secondaryPreview').style.backgroundColor = sc;
 
-  if (theme.fontHeading) $('#themeFontHeading').value = theme.fontHeading;
-  if (theme.fontBody) $('#themeFontBody').value = theme.fontBody;
+ if (theme.fontHeading) $('#themeFontHeading').value = theme.fontHeading;
+ if (theme.fontBody) $('#themeFontBody').value = theme.fontBody;
 
-  // Logo preview
-  if (theme.logo) {
-    $('#logoPreview').innerHTML = '<img src="' + getMediaUrl(theme.logo) + '" style="max-width:200px;max-height:60px;object-fit:contain">';
-  } else {
-    $('#logoPreview').innerHTML = '<p style="color:var(--text-light)">No custom logo</p>';
-  }
+ // Logo preview
+ if (theme.logo) {
+ $('#logoPreview').innerHTML = '<img src="' + getMediaUrl(theme.logo) + '" style="max-width:200px;max-height:60px;object-fit:contain">';
+ } else {
+ $('#logoPreview').innerHTML = '<p style="color:var(--text-light)">No custom logo</p>';
+ }
 
-  // Favicon preview
-  if (theme.favicon) {
-    $('#faviconPreview').innerHTML = '<img src="' + getMediaUrl(theme.favicon) + '" style="max-width:48px;max-height:48px">';
-  } else {
-    $('#faviconPreview').innerHTML = '<p style="color:var(--text-light)">No custom favicon</p>';
-  }
+ // Favicon preview
+ if (theme.favicon) {
+ $('#faviconPreview').innerHTML = '<img src="' + getMediaUrl(theme.favicon) + '" style="max-width:48px;max-height:48px">';
+ } else {
+ $('#faviconPreview').innerHTML = '<p style="color:var(--text-light)">No custom favicon</p>';
+ }
 }
 
 // Theme event listeners
 $('#themePrimaryColor').addEventListener('input', function() {
-  contentData.theme.primaryColor = this.value;
-  $('#themePrimaryHex').value = this.value;
-  $('#primaryPreview').style.backgroundColor = this.value;
-  markDirty();
+ contentData.theme.primaryColor = this.value;
+ $('#themePrimaryHex').value = this.value;
+ $('#primaryPreview').style.backgroundColor = this.value;
+ markDirty();
 });
 $('#themePrimaryHex').addEventListener('change', function() {
-  if (/^#[0-9a-f]{6}$/i.test(this.value)) {
-    contentData.theme.primaryColor = this.value;
-    $('#themePrimaryColor').value = this.value;
-    $('#primaryPreview').style.backgroundColor = this.value;
-    markDirty();
-  }
+ if (/^#[0-9a-f]{6}$/i.test(this.value)) {
+ contentData.theme.primaryColor = this.value;
+ $('#themePrimaryColor').value = this.value;
+ $('#primaryPreview').style.backgroundColor = this.value;
+ markDirty();
+ }
 });
 $('#themeSecondaryColor').addEventListener('input', function() {
-  contentData.theme.secondaryColor = this.value;
-  $('#themeSecondaryHex').value = this.value;
-  $('#secondaryPreview').style.backgroundColor = this.value;
-  markDirty();
+ contentData.theme.secondaryColor = this.value;
+ $('#themeSecondaryHex').value = this.value;
+ $('#secondaryPreview').style.backgroundColor = this.value;
+ markDirty();
 });
 $('#themeSecondaryHex').addEventListener('change', function() {
-  if (/^#[0-9a-f]{6}$/i.test(this.value)) {
-    contentData.theme.secondaryColor = this.value;
-    $('#themeSecondaryColor').value = this.value;
-    $('#secondaryPreview').style.backgroundColor = this.value;
-    markDirty();
-  }
+ if (/^#[0-9a-f]{6}$/i.test(this.value)) {
+ contentData.theme.secondaryColor = this.value;
+ $('#themeSecondaryColor').value = this.value;
+ $('#secondaryPreview').style.backgroundColor = this.value;
+ markDirty();
+ }
 });
 $('#themeFontHeading').addEventListener('change', function() {
-  contentData.theme.fontHeading = this.value || null;
-  markDirty();
+ contentData.theme.fontHeading = this.value || null;
+ markDirty();
 });
 $('#themeFontBody').addEventListener('change', function() {
-  contentData.theme.fontBody = this.value || null;
-  markDirty();
+ contentData.theme.fontBody = this.value || null;
+ markDirty();
 });
 
 // Logo picker
 $('#pickLogoBtn').addEventListener('click', () => {
-  openMediaPicker((id) => {
-    contentData.theme.logo = id;
-    markDirty();
-    renderTheme();
-  });
+ openMediaPicker((id) => {
+ contentData.theme.logo = id;
+ markDirty();
+ renderTheme();
+ });
 });
 $('#removeLogoBtn').addEventListener('click', () => {
-  delete contentData.theme.logo;
-  markDirty();
-  renderTheme();
+ delete contentData.theme.logo;
+ markDirty();
+ renderTheme();
 });
 
 // Favicon picker
 $('#pickFaviconBtn').addEventListener('click', () => {
-  openMediaPicker((id) => {
-    contentData.theme.favicon = id;
-    markDirty();
-    renderTheme();
-  });
+ openMediaPicker((id) => {
+ contentData.theme.favicon = id;
+ markDirty();
+ renderTheme();
+ });
 });
 $('#removeFaviconBtn').addEventListener('click', () => {
-  delete contentData.theme.favicon;
-  markDirty();
-  renderTheme();
+ delete contentData.theme.favicon;
+ markDirty();
+ renderTheme();
 });
 
 // Reset theme
 $('#resetThemeBtn').addEventListener('click', () => {
-  if (!confirm('Reset all theme settings to defaults?')) return;
-  contentData.theme = {};
-  markDirty();
-  renderTheme();
-  toast('Theme reset to defaults', 'info');
+ if (!confirm('Reset all theme settings to defaults?')) return;
+ contentData.theme = {};
+ markDirty();
+ renderTheme();
+ toast('Theme reset to defaults', 'info');
 });
 
 // ===== IMAGES EDITOR =====
 function renderImages() {
-  const container = $('#imagesList');
-  container.innerHTML = '';
+ const container = $('#imagesList');
+ container.innerHTML = '';
 
-  const images = SITE_IMAGES[currentSite] || [];
+ const images = SITE_IMAGES[currentSite] || [];
 
-  if (images.length === 0) {
-    container.innerHTML = '<div class="empty-state"><p>No configurable images for this site.</p></div>';
-    return;
-  }
+ if (images.length === 0) {
+ container.innerHTML = '<div class="empty-state"><p>No configurable images for this site.</p></div>';
+ return;
+ }
 
-  images.forEach(img => {
-    const saved = contentData.images[img.id] || {};
-    const el = document.createElement('div');
-    el.className = 'img-editor-item';
+ images.forEach(img => {
+ const saved = contentData.images[img.id] || {};
+ const el = document.createElement('div');
+ el.className = 'img-editor-item';
 
-    const imgSrc = saved.src ? getMediaUrl(saved.src) : '';
-    const placeholder = 'data:image/svg+xml;base64,' + btoa('<svg xmlns="http://www.w3.org/2000/svg" width="160" height="120" fill="%23ddd"><rect width="160" height="120"/><text x="50%" y="50%" text-anchor="middle" dy=".3em" fill="%23999" font-size="14">No image</text></svg>');
+ const imgSrc = saved.src ? getMediaUrl(saved.src) : '';
+ const placeholder = 'data:image/svg+xml;base64,' + btoa('<svg xmlns="http://www.w3.org/2000/svg" width="160" height="120" fill="%23ddd"><rect width="160" height="120"/><text x="50%" y="50%" text-anchor="middle" dy=".3em" fill="%23999" font-size="14">No image</text></svg>');
 
-    el.innerHTML =
-      '<img class="img-editor-thumb" src="' + (imgSrc || placeholder) + '" alt="' + img.label + '">' +
-      '<div class="img-editor-controls">' +
-        '<div class="img-editor-title">' + img.label + ' <span style="font-weight:400;color:var(--text-light);font-size:12px">(' + img.id + ')</span></div>' +
-        '<div class="img-editor-row">' +
-          '<label>Image:</label>' +
-          '<button class="btn btn-secondary btn-sm pick-img" data-img="' + img.id + '">Choose from Media</button>' +
-          '<button class="btn btn-danger btn-sm remove-img" data-img="' + img.id + '">Remove</button>' +
-        '</div>' +
-        '<div class="img-editor-row">' +
-          '<label>Alt Text:</label>' +
-          '<input type="text" class="form-input" placeholder="Describe the image" data-img="' + img.id + '" data-prop="alt" value="' + (saved.alt || '') + '">' +
-        '</div>' +
-        '<div class="img-editor-row">' +
-          '<label>Object Fit:</label>' +
-          '<select class="form-select" data-img="' + img.id + '" data-prop="objectFit">' +
-            '<option value="">Default</option>' +
-            '<option value="cover"' + (saved.objectFit === 'cover' ? ' selected' : '') + '>Cover</option>' +
-            '<option value="contain"' + (saved.objectFit === 'contain' ? ' selected' : '') + '>Contain</option>' +
-            '<option value="fill"' + (saved.objectFit === 'fill' ? ' selected' : '') + '>Fill</option>' +
-          '</select>' +
-        '</div>' +
-        '<div class="img-editor-row">' +
-          '<label>Border Radius:</label>' +
-          '<input type="range" min="0" max="50" value="' + (parseInt(saved.borderRadius) || 0) + '" data-img="' + img.id + '" data-prop="borderRadius">' +
-          '<span class="br-val" style="font-size:12px;min-width:40px">' + (parseInt(saved.borderRadius) || 0) + 'px</span>' +
-        '</div>' +
-      '</div>';
+ el.innerHTML =
+ '<img class="img-editor-thumb" src="' + (imgSrc || placeholder) + '" alt="' + img.label + '">' +
+ '<div class="img-editor-controls">' +
+ '<div class="img-editor-title">' + img.label + ' <span style="font-weight:400;color:var(--text-light);font-size:12px">(' + img.id + ')</span></div>' +
+ '<div class="img-editor-row">' +
+ '<label>Image:</label>' +
+ '<button class="btn btn-secondary btn-sm pick-img" data-img="' + img.id + '">Choose from Media</button>' +
+ '<button class="btn btn-danger btn-sm remove-img" data-img="' + img.id + '">Remove</button>' +
+ '</div>' +
+ '<div class="img-editor-row">' +
+ '<label>Alt Text:</label>' +
+ '<input type="text" class="form-input" placeholder="Describe the image" data-img="' + img.id + '" data-prop="alt" value="' + (saved.alt || '') + '">' +
+ '</div>' +
+ '<div class="img-editor-row">' +
+ '<label>Object Fit:</label>' +
+ '<select class="form-select" data-img="' + img.id + '" data-prop="objectFit">' +
+ '<option value="">Default</option>' +
+ '<option value="cover"' + (saved.objectFit === 'cover' ? ' selected' : '') + '>Cover</option>' +
+ '<option value="contain"' + (saved.objectFit === 'contain' ? ' selected' : '') + '>Contain</option>' +
+ '<option value="fill"' + (saved.objectFit === 'fill' ? ' selected' : '') + '>Fill</option>' +
+ '</select>' +
+ '</div>' +
+ '<div class="img-editor-row">' +
+ '<label>Border Radius:</label>' +
+ '<input type="range" min="0" max="50" value="' + (parseInt(saved.borderRadius) || 0) + '" data-img="' + img.id + '" data-prop="borderRadius">' +
+ '<span class="br-val" style="font-size:12px;min-width:40px">' + (parseInt(saved.borderRadius) || 0) + 'px</span>' +
+ '</div>' +
+ '</div>';
 
-    container.appendChild(el);
-  });
+ container.appendChild(el);
+ });
 
-  // Events
-  container.querySelectorAll('.pick-img').forEach(btn => {
-    btn.addEventListener('click', () => {
-      openMediaPicker((id) => {
-        if (!contentData.images[btn.dataset.img]) contentData.images[btn.dataset.img] = {};
-        contentData.images[btn.dataset.img].src = id;
-        markDirty();
-        renderImages();
-      });
-    });
-  });
+ // Events
+ container.querySelectorAll('.pick-img').forEach(btn => {
+ btn.addEventListener('click', () => {
+ openMediaPicker((id) => {
+ if (!contentData.images[btn.dataset.img]) contentData.images[btn.dataset.img] = {};
+ contentData.images[btn.dataset.img].src = id;
+ markDirty();
+ renderImages();
+ });
+ });
+ });
 
-  container.querySelectorAll('.remove-img').forEach(btn => {
-    btn.addEventListener('click', () => {
-      delete contentData.images[btn.dataset.img];
-      markDirty();
-      renderImages();
-    });
-  });
+ container.querySelectorAll('.remove-img').forEach(btn => {
+ btn.addEventListener('click', () => {
+ delete contentData.images[btn.dataset.img];
+ markDirty();
+ renderImages();
+ });
+ });
 
-  container.querySelectorAll('[data-prop="alt"]').forEach(input => {
-    input.addEventListener('change', () => {
-      if (!contentData.images[input.dataset.img]) contentData.images[input.dataset.img] = {};
-      contentData.images[input.dataset.img].alt = input.value;
-      markDirty();
-    });
-  });
+ container.querySelectorAll('[data-prop="alt"]').forEach(input => {
+ input.addEventListener('change', () => {
+ if (!contentData.images[input.dataset.img]) contentData.images[input.dataset.img] = {};
+ contentData.images[input.dataset.img].alt = input.value;
+ markDirty();
+ });
+ });
 
-  container.querySelectorAll('[data-prop="objectFit"]').forEach(sel => {
-    sel.addEventListener('change', () => {
-      if (!contentData.images[sel.dataset.img]) contentData.images[sel.dataset.img] = {};
-      contentData.images[sel.dataset.img].objectFit = sel.value || null;
-      markDirty();
-    });
-  });
+ container.querySelectorAll('[data-prop="objectFit"]').forEach(sel => {
+ sel.addEventListener('change', () => {
+ if (!contentData.images[sel.dataset.img]) contentData.images[sel.dataset.img] = {};
+ contentData.images[sel.dataset.img].objectFit = sel.value || null;
+ markDirty();
+ });
+ });
 
-  container.querySelectorAll('[data-prop="borderRadius"]').forEach(input => {
-    input.addEventListener('input', () => {
-      if (!contentData.images[input.dataset.img]) contentData.images[input.dataset.img] = {};
-      contentData.images[input.dataset.img].borderRadius = input.value + 'px';
-      input.closest('.img-editor-row').querySelector('.br-val').textContent = input.value + 'px';
-      markDirty();
-    });
-  });
+ container.querySelectorAll('[data-prop="borderRadius"]').forEach(input => {
+ input.addEventListener('input', () => {
+ if (!contentData.images[input.dataset.img]) contentData.images[input.dataset.img] = {};
+ contentData.images[input.dataset.img].borderRadius = input.value + 'px';
+ input.closest('.img-editor-row').querySelector('.br-val').textContent = input.value + 'px';
+ markDirty();
+ });
+ });
 }
 
 // ===== SUBMISSIONS =====
 function renderSubmissions(subs) {
-  const tbody = $('#submissionsBody');
-  tbody.innerHTML = '';
+ const tbody = $('#submissionsBody');
+ tbody.innerHTML = '';
 
-  if (!subs || subs.length === 0) {
-    tbody.innerHTML = '<tr><td colspan="4" style="text-align:center;color:var(--text-light);padding:40px">No submissions yet</td></tr>';
-    return;
-  }
+ if (!subs || subs.length === 0) {
+ tbody.innerHTML = '<tr><td colspan="4" style="text-align:center;color:var(--text-light);padding:40px">No submissions yet</td></tr>';
+ return;
+ }
 
-  subs.sort((a, b) => new Date(b.timestamp) - new Date(a.timestamp));
+ subs.sort((a, b) => new Date(b.timestamp) - new Date(a.timestamp));
 
-  subs.forEach(s => {
-    const tr = document.createElement('tr');
-    const date = s.timestamp ? new Date(s.timestamp).toLocaleDateString('en-MY', {day:'numeric',month:'short',year:'numeric',hour:'2-digit',minute:'2-digit'}) : '-';
-    tr.innerHTML =
-      '<td>' + date + '</td>' +
-      '<td>' + escapeHtml(s.name || '-') + '</td>' +
-      '<td>' + escapeHtml(s.email || '-') + '</td>' +
-      '<td style="max-width:300px;white-space:pre-wrap">' + escapeHtml(s.message || s.inquiry || '-') + '</td>';
-    tbody.appendChild(tr);
-  });
+ subs.forEach(s => {
+ const tr = document.createElement('tr');
+ const date = s.timestamp ? new Date(s.timestamp).toLocaleDateString('en-MY', {day:'numeric',month:'short',year:'numeric',hour:'2-digit',minute:'2-digit'}) : '-';
+ tr.innerHTML =
+ '<td>' + date + '</td>' +
+ '<td>' + escapeHtml(s.name || '-') + '</td>' +
+ '<td>' + escapeHtml(s.email || '-') + '</td>' +
+ '<td style="max-width:300px;white-space:pre-wrap">' + escapeHtml(s.message || s.inquiry || '-') + '</td>';
+ tbody.appendChild(tr);
+ });
 
-  $('#statSubmissions').textContent = subs.length;
+ $('#statSubmissions').textContent = subs.length;
 }
 
 $('#refreshSubmissions').addEventListener('click', loadSubmissions);
 
 // ===== MEDIA PICKER MODAL =====
 function openMediaPicker(callback) {
-  mediaPickerCallback = callback;
-  const grid = $('#mediaPickerGrid');
-  grid.innerHTML = '';
+ mediaPickerCallback = callback;
+ const grid = $('#mediaPickerGrid');
+ grid.innerHTML = '';
 
-  if (mediaList.length === 0) {
-    grid.innerHTML = '<div class="empty-state"><p>No media files. Upload images in the Media Library first.</p></div>';
-  } else {
-    mediaList.forEach(item => {
-      const el = document.createElement('div');
-      el.className = 'media-picker-item';
-      el.dataset.id = item.id;
-      el.innerHTML =
-        '<img src="' + getMediaUrl(item.id) + '" alt="' + (item.filename || item.id) + '">' +
-        '<div class="media-picker-item-name">' + (item.filename || item.id) + '</div>';
-      el.addEventListener('click', () => {
-        grid.querySelectorAll('.media-picker-item').forEach(i => i.classList.remove('selected'));
-        el.classList.add('selected');
-      });
-      grid.appendChild(el);
-    });
-  }
+ if (mediaList.length === 0) {
+ grid.innerHTML = '<div class="empty-state"><p>No media files. Upload images in the Media Library first.</p></div>';
+ } else {
+ mediaList.forEach(item => {
+ const el = document.createElement('div');
+ el.className = 'media-picker-item';
+ el.dataset.id = item.id;
+ el.innerHTML =
+ '<img src="' + getMediaUrl(item.id) + '" alt="' + (item.filename || item.id) + '">' +
+ '<div class="media-picker-item-name">' + (item.filename || item.id) + '</div>';
+ el.addEventListener('click', () => {
+ grid.querySelectorAll('.media-picker-item').forEach(i => i.classList.remove('selected'));
+ el.classList.add('selected');
+ });
+ grid.appendChild(el);
+ });
+ }
 
-  $('#mediaPickerModal').classList.add('show');
+ $('#mediaPickerModal').classList.add('show');
 }
 
 $('#mediaPickerClose').addEventListener('click', closeMediaPicker);
 $('#mediaPickerCancel').addEventListener('click', closeMediaPicker);
 $('#mediaPickerSelect').addEventListener('click', () => {
-  const selected = $('#mediaPickerGrid .media-picker-item.selected');
-  if (selected && mediaPickerCallback) {
-    mediaPickerCallback(selected.dataset.id);
-  }
-  closeMediaPicker();
+ const selected = $('#mediaPickerGrid .media-picker-item.selected');
+ if (selected && mediaPickerCallback) {
+ mediaPickerCallback(selected.dataset.id);
+ }
+ closeMediaPicker();
 });
 
 function closeMediaPicker() {
-  $('#mediaPickerModal').classList.remove('show');
-  mediaPickerCallback = null;
+ $('#mediaPickerModal').classList.remove('show');
+ mediaPickerCallback = null;
 }
 
 // ===== DASHBOARD =====
 function updateDashboard() {
-  const fields = getEditableFields();
-  $('#statEditable').textContent = fields.length;
-  $('#statMedia').textContent = mediaList.length;
-  $('#statSections').textContent = (SITE_SECTIONS[currentSite] || []).length;
+ const fields = getEditableFields();
+ $('#statEditable').textContent = fields.length;
+ $('#statMedia').textContent = mediaList.length;
+ $('#statSections').textContent = (SITE_SECTIONS[currentSite] || []).length;
 }
 
 // ===== UTILITIES =====
 function markDirty() {
-  hasUnsavedChanges = true;
-  // Auto-save draft to localStorage
-  clearTimeout(autoSaveTimer);
-  autoSaveTimer = setTimeout(() => {
-    localStorage.setItem(currentSite + '_draft', JSON.stringify(contentData));
-  }, 5000);
+ hasUnsavedChanges = true;
+ // Auto-save draft to localStorage
+ clearTimeout(autoSaveTimer);
+ autoSaveTimer = setTimeout(() => {
+ localStorage.setItem(currentSite + '_draft', JSON.stringify(contentData));
+ }, 5000);
 }
 
 function toast(msg, type) {
-  const container = $('#toastContainer');
-  const el = document.createElement('div');
-  el.className = 'toast toast-' + (type || 'info');
-  el.textContent = msg;
-  container.appendChild(el);
-  setTimeout(() => { el.style.opacity = '0'; el.style.transform = 'translateX(40px)'; setTimeout(() => el.remove(), 300); }, 3500);
+ const container = $('#toastContainer');
+ const el = document.createElement('div');
+ el.className = 'toast toast-' + (type || 'info');
+ el.textContent = msg;
+ container.appendChild(el);
+ setTimeout(() => { el.style.opacity = '0'; el.style.transform = 'translateX(40px)'; setTimeout(() => el.remove(), 300); }, 3500);
 }
 
 function formatBytes(bytes) {
-  if (bytes === 0) return '0 B';
-  const k = 1024;
-  const sizes = ['B','KB','MB'];
-  const i = Math.floor(Math.log(bytes) / Math.log(k));
-  return parseFloat((bytes / Math.pow(k, i)).toFixed(1)) + ' ' + sizes[i];
+ if (bytes === 0) return '0 B';
+ const k = 1024;
+ const sizes = ['B','KB','MB'];
+ const i = Math.floor(Math.log(bytes) / Math.log(k));
+ return parseFloat((bytes / Math.pow(k, i)).toFixed(1)) + ' ' + sizes[i];
 }
 
 function escapeHtml(str) {
-  const div = document.createElement('div');
-  div.textContent = str;
-  return div.innerHTML;
+ const div = document.createElement('div');
+ div.textContent = str;
+ return div.innerHTML;
 }
 
 // Unsaved changes warning
 window.addEventListener('beforeunload', (e) => {
-  if (hasUnsavedChanges) {
-    e.preventDefault();
-    e.returnValue = '';
-  }
+ if (hasUnsavedChanges) {
+ e.preventDefault();
+ e.returnValue = '';
+ }
 });
 
 })();

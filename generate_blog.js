@@ -8,18 +8,18 @@ const GOOGLE_FONTS = `<link rel="preconnect" href="https://fonts.googleapis.com"
 
 // ─── Articles data ────────────────────────────────────────────────
 const articles = [
-  {
-    slug: 'why-kaizen-events-fail',
-    title: 'Why Kaizen Events Fail in Manufacturing Plants',
-    subtitle: 'Most Kaizen events produce a report, not results. Here are the six root causes of Kaizen failure — and what successful implementation actually looks like.',
-    metaTitle: 'Why Kaizen Events Fail in Manufacturing Malaysia | Husni Halim',
-    metaDesc: 'Most Kaizen events in Malaysian manufacturing plants produce a report, not results. Lean consultant explains the 6 root causes of Kaizen failure and what successful implementation looks like.',
-    category: 'Kaizen',
-    readTime: '9 min read',
-    date: 'November 2024',
-    image: 'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=1200&h=630&q=80',
-    tags: ['Kaizen', 'Lean Manufacturing', 'Continuous Improvement', 'Malaysia'],
-    body: `
+ {
+ slug: 'why-kaizen-events-fail',
+ title: 'Why Kaizen Events Fail in Manufacturing Plants',
+ subtitle: 'Most Kaizen events produce a report, not results. Here are the six root causes of Kaizen failure — and what successful implementation actually looks like.',
+ metaTitle: 'Why Kaizen Events Fail in Manufacturing Malaysia | Husni Halim',
+ metaDesc: 'Most Kaizen events in Malaysian manufacturing plants produce a report, not results. Lean consultant explains the 6 root causes of Kaizen failure and what successful implementation looks like.',
+ category: 'Kaizen',
+ readTime: '9 min read',
+ date: 'November 2024',
+ image: 'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=1200&h=630&q=80',
+ tags: ['Kaizen', 'Lean Manufacturing', 'Continuous Improvement', 'Malaysia'],
+ body: `
 <p>Most Kaizen events in Malaysian factories follow the same script. A consultant or internal team runs a three to five day workshop. Participants map the current state, identify waste, brainstorm improvements, and fill an A3 report with promising actions. Everyone claps. Three months later, the factory floor looks exactly the same.</p>
 <p>This is not a Malaysian problem exclusively — it is a global pattern. But it is particularly acute in Malaysian manufacturing because of specific cultural and structural factors that undermine Kaizen sustainability even when the technical work is done correctly.</p>
 <p>Here are the six most common reasons Kaizen events fail — and what to do instead.</p>
@@ -65,19 +65,19 @@ const articles = [
 </tbody>
 </table>
 `
-  },
-  {
-    slug: '5s-implementation-problems',
-    title: '5S Implementation Problems: Why It Never Sticks After Training',
-    subtitle: 'Thousands of Malaysian factories have run 5S programmes. A fraction of them are still practising 5S six months later. The reasons are consistent and fixable.',
-    metaTitle: '5S Implementation Problems in Malaysian Factories | Husni Halim',
-    metaDesc: 'Why does 5S fail after training in Malaysian manufacturing? Certified lean consultant explains the most common 5S implementation problems and how to build a 5S system that lasts.',
-    category: 'Lean Manufacturing',
-    readTime: '8 min read',
-    date: 'December 2024',
-    image: 'https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?auto=format&fit=crop&w=1200&h=630&q=80',
-    tags: ['5S', 'Lean Manufacturing', 'Workplace Organisation', 'Malaysia'],
-    body: `
+ },
+ {
+ slug: '5s-implementation-problems',
+ title: '5S Implementation Problems: Why It Never Sticks After Training',
+ subtitle: 'Thousands of Malaysian factories have run 5S programmes. A fraction of them are still practising 5S six months later. The reasons are consistent and fixable.',
+ metaTitle: '5S Implementation Problems in Malaysian Factories | Husni Halim',
+ metaDesc: 'Why does 5S fail after training in Malaysian manufacturing? Certified lean consultant explains the most common 5S implementation problems and how to build a 5S system that lasts.',
+ category: 'Lean Manufacturing',
+ readTime: '8 min read',
+ date: 'December 2024',
+ image: 'https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?auto=format&fit=crop&w=1200&h=630&q=80',
+ tags: ['5S', 'Lean Manufacturing', 'Workplace Organisation', 'Malaysia'],
+ body: `
 <p>5S is taught in virtually every lean manufacturing training programme in Malaysia. It is the entry point — the foundation on which everything else is built. And yet, after more than a decade of running 5S programmes across Malaysian factories, the honest observation is this: most 5S implementations fail within six months of the initial training.</p>
 <p>Not because 5S is complicated. Because of predictable, recurring mistakes that are almost always present when a 5S programme collapses.</p>
 
@@ -108,19 +108,19 @@ const articles = [
 <p>A 5S system that is actually working has these observable characteristics: any visitor can walk into any area and identify a non-conformance within 30 seconds without being told what to look for. Every location has a defined owner. Audit scores trend consistently above a threshold, not because of pressure, but because the standards are achievable and clearly communicated. And operators can explain the purpose of the standard, not just follow it.</p>
 <p>That last point matters most. Operators who understand why a standard exists will maintain it under pressure. Operators who are just following instructions will abandon it the moment no one is watching.</p>
 `
-  },
-  {
-    slug: 'value-stream-mapping-mistakes',
-    title: 'Value Stream Mapping Mistakes That Make VSM Useless',
-    subtitle: 'Value Stream Mapping is one of the most powerful tools in lean manufacturing. It is also one of the most commonly misused. Here is what goes wrong.',
-    metaTitle: 'Value Stream Mapping Mistakes in Manufacturing | Husni Halim',
-    metaDesc: 'VSM is powerful when done correctly. Lean consultant explains the most common value stream mapping mistakes that produce maps nobody acts on — and how to build a VSM that drives real improvement.',
-    category: 'Lean Manufacturing',
-    readTime: '8 min read',
-    date: 'February 2025',
-    image: 'https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=1200&h=630&q=80',
-    tags: ['VSM', 'Value Stream Mapping', 'Lean Manufacturing', 'Waste Elimination'],
-    body: `
+ },
+ {
+ slug: 'value-stream-mapping-mistakes',
+ title: 'Value Stream Mapping Mistakes That Make VSM Useless',
+ subtitle: 'Value Stream Mapping is one of the most powerful tools in lean manufacturing. It is also one of the most commonly misused. Here is what goes wrong.',
+ metaTitle: 'Value Stream Mapping Mistakes in Manufacturing | Husni Halim',
+ metaDesc: 'VSM is powerful when done correctly. Lean consultant explains the most common value stream mapping mistakes that produce maps nobody acts on — and how to build a VSM that drives real improvement.',
+ category: 'Lean Manufacturing',
+ readTime: '8 min read',
+ date: 'February 2025',
+ image: 'https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=1200&h=630&q=80',
+ tags: ['VSM', 'Value Stream Mapping', 'Lean Manufacturing', 'Waste Elimination'],
+ body: `
 <p>Value Stream Mapping is taught in almost every lean training programme. The exercise of drawing the current state, calculating flow metrics, and designing the future state is genuinely powerful when it is done well. The problem is that most VSM exercises produce a beautiful map that gets framed on a wall and never acted upon.</p>
 <p>Here are the mistakes that produce maps nobody uses.</p>
 
@@ -146,19 +146,19 @@ const articles = [
 <p>Every future state map should be accompanied by a kaizen burst list that identifies the specific improvement events needed to close the gap, sequenced in the right order (flow improvements before pull, pull improvements before levelling), with target completion dates and named owners for each.</p>
 <div class="callout"><strong>VSM done right:</strong> Current state mapped at gemba → Future state designed with pull logic → Kaizen burst list with sequenced events → Implementation roadmap with owners and dates → Regular review of progress against the map.</div>
 `
-  },
-  {
-    slug: 'standard-work-implementation-problems',
-    title: 'Why Standard Work Never Gets Followed After Training',
-    subtitle: 'Standard work is the foundation of every lean system. It is also the most consistently ignored element. Understanding why reveals a lot about how improvement programmes fail.',
-    metaTitle: 'Why Standard Work Fails After Training in Manufacturing | Husni Halim',
-    metaDesc: 'Standard work documents get created, operators get trained, and three months later nobody follows them. Lean consultant explains why standard work fails and how to build a system that actually holds.',
-    category: 'Lean Manufacturing',
-    readTime: '7 min read',
-    date: 'April 2025',
-    image: 'https://images.unsplash.com/photo-1565618013578-d6bcdbf1b90d?auto=format&fit=crop&w=1200&h=630&q=80',
-    tags: ['Standard Work', 'Lean Manufacturing', 'SOPs', 'Operator Training'],
-    body: `
+ },
+ {
+ slug: 'standard-work-implementation-problems',
+ title: 'Why Standard Work Never Gets Followed After Training',
+ subtitle: 'Standard work is the foundation of every lean system. It is also the most consistently ignored element. Understanding why reveals a lot about how improvement programmes fail.',
+ metaTitle: 'Why Standard Work Fails After Training in Manufacturing | Husni Halim',
+ metaDesc: 'Standard work documents get created, operators get trained, and three months later nobody follows them. Lean consultant explains why standard work fails and how to build a system that actually holds.',
+ category: 'Lean Manufacturing',
+ readTime: '7 min read',
+ date: 'April 2025',
+ image: 'https://images.unsplash.com/photo-1565618013578-d6bcdbf1b90d?auto=format&fit=crop&w=1200&h=630&q=80',
+ tags: ['Standard Work', 'Lean Manufacturing', 'SOPs', 'Operator Training'],
+ body: `
 <p>Standard work is documented. Operators are trained. SOPs are laminated and posted at workstations. Six months later, a factory visit reveals that approximately 40% of operators are following the standard, 40% have modified it in ways they believe are improvements, and 20% have reverted entirely to a previous method or invented their own.</p>
 <p>This pattern is so consistent across Malaysian manufacturing plants that it can be predicted before arriving at a factory. Here is why it happens.</p>
 
@@ -182,19 +182,19 @@ const articles = [
 <h2>What Working Standard Work Looks Like</h2>
 <p>In factories where standard work is genuinely working, you can walk to any workstation, pick up the standard work document, observe the operator, and verify that what the operator is doing matches what the document describes. The document is visual and current. The operator can explain why each step is done the way it is. And when you ask the supervisor when the document was last updated, they can tell you exactly.</p>
 `
-  },
-  {
-    slug: 'kaizen-blitz-vs-kaizen-culture',
-    title: 'Kaizen Blitz vs Kaizen Culture: Why One-Off Events Always Fail Long-Term',
-    subtitle: 'The difference between factories that improve continuously and factories that run Kaizen events is not the events. It is what happens between them.',
-    metaTitle: 'Kaizen Blitz vs Kaizen Culture: Why Events Fail Without Systems | Husni Halim',
-    metaDesc: 'Running Kaizen events without building Kaizen culture produces temporary results. Lean consultant explains the difference between blitz-based and culture-based continuous improvement programmes.',
-    category: 'Kaizen',
-    readTime: '7 min read',
-    date: 'June 2025',
-    image: 'https://images.unsplash.com/photo-1542744094-24638eff58bb?auto=format&fit=crop&w=1200&h=630&q=80',
-    tags: ['Kaizen', 'Continuous Improvement', 'Lean Culture', 'Manufacturing'],
-    body: `
+ },
+ {
+ slug: 'kaizen-blitz-vs-kaizen-culture',
+ title: 'Kaizen Blitz vs Kaizen Culture: Why One-Off Events Always Fail Long-Term',
+ subtitle: 'The difference between factories that improve continuously and factories that run Kaizen events is not the events. It is what happens between them.',
+ metaTitle: 'Kaizen Blitz vs Kaizen Culture: Why Events Fail Without Systems | Husni Halim',
+ metaDesc: 'Running Kaizen events without building Kaizen culture produces temporary results. Lean consultant explains the difference between blitz-based and culture-based continuous improvement programmes.',
+ category: 'Kaizen',
+ readTime: '7 min read',
+ date: 'June 2025',
+ image: 'https://images.unsplash.com/photo-1542744094-24638eff58bb?auto=format&fit=crop&w=1200&h=630&q=80',
+ tags: ['Kaizen', 'Continuous Improvement', 'Lean Culture', 'Manufacturing'],
+ body: `
 <p>There are two types of factories that run Kaizen programmes. The first type runs events — focused, intensive workshops that produce documented improvements, get reported to management, and appear on the year-end performance review. The second type builds a system where improvement is how the factory thinks and operates every day. The difference in long-term performance between these two types is not marginal. It is categorical.</p>
 
 <h2>What a Kaizen Blitz Actually Produces</h2>
@@ -212,19 +212,19 @@ const articles = [
 <p>The transition from blitz-dependent to culture-driven improvement requires three things: a functioning daily management system where abnormalities are visible and responded to; a structured operator idea-generation and implementation process; and leadership behaviour that models improvement rather than just demanding it.</p>
 <p>None of these require a significant financial investment. They require a consistent behavioural commitment from management that is sustained for long enough — typically 12 to 18 months — for the new habits to become the default way of operating.</p>
 `
-  },
-  {
-    slug: 'visual-management-failures',
-    title: 'Visual Management Failures: Boards Nobody Reads',
-    subtitle: 'Every lean factory has visual management boards. Very few of them actually manage anything. Here is the difference between decoration and function.',
-    metaTitle: 'Visual Management Failures in Manufacturing | Why Boards Nobody Reads | Husni Halim',
-    metaDesc: 'Visual management boards that nobody reads are worse than having no boards — they signal that the management system is not real. Lean consultant explains what effective visual management actually requires.',
-    category: 'Lean Manufacturing',
-    readTime: '7 min read',
-    date: 'August 2025',
-    image: 'https://images.unsplash.com/photo-1553877522-43269d4ea984?auto=format&fit=crop&w=1200&h=630&q=80',
-    tags: ['Visual Management', 'Lean Manufacturing', 'Daily Management', 'Manufacturing'],
-    body: `
+ },
+ {
+ slug: 'visual-management-failures',
+ title: 'Visual Management Failures: Boards Nobody Reads',
+ subtitle: 'Every lean factory has visual management boards. Very few of them actually manage anything. Here is the difference between decoration and function.',
+ metaTitle: 'Visual Management Failures in Manufacturing | Why Boards Nobody Reads | Husni Halim',
+ metaDesc: 'Visual management boards that nobody reads are worse than having no boards — they signal that the management system is not real. Lean consultant explains what effective visual management actually requires.',
+ category: 'Lean Manufacturing',
+ readTime: '7 min read',
+ date: 'August 2025',
+ image: 'https://images.unsplash.com/photo-1553877522-43269d4ea984?auto=format&fit=crop&w=1200&h=630&q=80',
+ tags: ['Visual Management', 'Lean Manufacturing', 'Daily Management', 'Manufacturing'],
+ body: `
 <p>Walk through any Malaysian manufacturing plant that has implemented lean and you will find visual management boards. Production status boards. Quality trend charts. Safety scorecards. 5S audit results. OEE displays. They are on the walls, at the production lines, in the corridor between departments.</p>
 <p>Now watch the operators and supervisors who work in front of those boards every day. Watch whether they look at them during a shift. Watch whether the data on those boards drives any observable decision or action. In most factories, the answer is no — and the boards have become expensive wallpaper.</p>
 
@@ -245,19 +245,19 @@ const articles = [
 <p>Visual management without a structured daily management routine is a display, not a system. The boards need to be the centrepiece of a regular, brief meeting where the team reviews status against plan, identifies problems, and agrees on immediate countermeasures.</p>
 <p>The most effective format is a 15-minute stand-up at the board at the start of each shift — covering yesterday's performance, today's plan, any safety or quality concerns, and specific problems that need attention. The board provides the structure. The meeting provides the discipline. Together they create a real management system.</p>
 `
-  },
-  {
-    slug: 'poka-yoke-implementation-problems',
-    title: 'Why Poka-Yoke Implementations Fail on Production Lines',
-    subtitle: 'Error-proofing should make defects impossible. In practice, most poka-yoke devices are bypassed, broken, or ignored within months of installation.',
-    metaTitle: 'Why Poka-Yoke Implementations Fail in Manufacturing | Husni Halim',
-    metaDesc: 'Poka-yoke devices that get bypassed or ignored are not error-proofing — they are false confidence. Lean consultant explains why most poka-yoke implementations fail and how to design ones that hold.',
-    category: 'Lean Manufacturing',
-    readTime: '7 min read',
-    date: 'September 2025',
-    image: 'https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?auto=format&fit=crop&w=1200&h=630&q=80',
-    tags: ['Poka-Yoke', 'Error Proofing', 'Quality', 'Lean Manufacturing'],
-    body: `
+ },
+ {
+ slug: 'poka-yoke-implementation-problems',
+ title: 'Why Poka-Yoke Implementations Fail on Production Lines',
+ subtitle: 'Error-proofing should make defects impossible. In practice, most poka-yoke devices are bypassed, broken, or ignored within months of installation.',
+ metaTitle: 'Why Poka-Yoke Implementations Fail in Manufacturing | Husni Halim',
+ metaDesc: 'Poka-yoke devices that get bypassed or ignored are not error-proofing — they are false confidence. Lean consultant explains why most poka-yoke implementations fail and how to design ones that hold.',
+ category: 'Lean Manufacturing',
+ readTime: '7 min read',
+ date: 'September 2025',
+ image: 'https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?auto=format&fit=crop&w=1200&h=630&q=80',
+ tags: ['Poka-Yoke', 'Error Proofing', 'Quality', 'Lean Manufacturing'],
+ body: `
 <p>Poka-yoke — error-proofing — is one of the most elegant concepts in lean manufacturing. Design the process so the error is physically impossible to make. No training required, no discipline required, no inspection required. The defect simply cannot happen.</p>
 <p>In practice, most poka-yoke implementations do not achieve this. The device gets bypassed during a production rush. The sensor gets taped over because it triggers false positives. The fixture that prevents incorrect assembly gets modified because it slows the line. Six months after installation, the error rate has returned to its pre-poka-yoke level — and the organisation has gained false confidence that the problem is solved.</p>
 
@@ -278,19 +278,19 @@ const articles = [
 <p>The effectiveness of a poka-yoke must be measured after installation. If the defect rate for the error that was targeted has not dropped to zero or near-zero, the poka-yoke is not working. Most organisations install the device, report that "poka-yoke has been implemented," and do not verify whether the target defect rate has actually changed.</p>
 <p>Measurement closes the loop. It identifies whether the implementation has achieved its purpose — and if not, it forces the question of why, which leads to the design improvements that make the device actually effective.</p>
 `
-  },
-  {
-    slug: 'pdca-implementation-problems',
-    title: 'PDCA in Malaysian SMEs: Why It Always Gets Stuck at Plan',
-    subtitle: 'The PDCA cycle is four steps. Most Malaysian manufacturing SMEs complete one and a half of them. Here is why — and what a full PDCA cycle actually looks like in practice.',
-    metaTitle: 'PDCA Implementation Problems in Malaysian SMEs | Husni Halim',
-    metaDesc: 'Most Malaysian manufacturing SMEs plan extensively and do minimally. PDCA specialist explains why the cycle stalls, why "check" never happens, and how to run PDCA that produces real results.',
-    category: 'Continuous Improvement',
-    readTime: '7 min read',
-    date: 'October 2025',
-    image: 'https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?auto=format&fit=crop&w=1200&h=630&q=80',
-    tags: ['PDCA', 'Continuous Improvement', 'SME Malaysia', 'Problem Solving'],
-    body: `
+ },
+ {
+ slug: 'pdca-implementation-problems',
+ title: 'PDCA in Malaysian SMEs: Why It Always Gets Stuck at Plan',
+ subtitle: 'The PDCA cycle is four steps. Most Malaysian manufacturing SMEs complete one and a half of them. Here is why — and what a full PDCA cycle actually looks like in practice.',
+ metaTitle: 'PDCA Implementation Problems in Malaysian SMEs | Husni Halim',
+ metaDesc: 'Most Malaysian manufacturing SMEs plan extensively and do minimally. PDCA specialist explains why the cycle stalls, why "check" never happens, and how to run PDCA that produces real results.',
+ category: 'Continuous Improvement',
+ readTime: '7 min read',
+ date: 'October 2025',
+ image: 'https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?auto=format&fit=crop&w=1200&h=630&q=80',
+ tags: ['PDCA', 'Continuous Improvement', 'SME Malaysia', 'Problem Solving'],
+ body: `
 <p>Deming's PDCA cycle — Plan, Do, Check, Act — is the most widely taught problem-solving framework in Malaysian manufacturing. It appears in HRDC training programmes, ISO procedure manuals, and KPI reports across the country. It is also the most consistently incomplete improvement methodology in practice.</p>
 <p>The observable reality in most Malaysian manufacturing SMEs: teams plan extensively, do incompletely, skip check entirely, and rarely act in the sense of standardising and propagating what worked. The cycle completes about 30% of its rotation and then stops.</p>
 
@@ -311,19 +311,19 @@ const articles = [
 <p>When a countermeasure does work, the Act phase should result in the successful method being standardised and applied wherever the same root cause exists elsewhere in the factory. This is the compounding mechanism of PDCA — not just fixing one problem, but building organisational capability by capturing what works and replicating it.</p>
 <p>In practice, standardisation is skipped because it requires updating procedures, retraining operators, and communicating across departments — all of which take more effort than the team has available after the immediate problem is resolved. The improvement is real but localised. The same problem recurs on a different line six months later, and the cycle starts again from scratch.</p>
 `
-  },
-  {
-    slug: 'andon-system-implementation-problems',
-    title: 'Andon Systems That Nobody Uses After Installation',
-    subtitle: 'Andon is one of the most powerful tools in the Toyota Production System. In most non-Toyota factories, it is an expensive light installation that operators learn to ignore.',
-    metaTitle: 'Andon System Implementation Problems in Manufacturing Malaysia | Husni Halim',
-    metaDesc: 'Andon systems that operators do not activate are not andon systems — they are coloured lights. Lean consultant explains why andon implementations fail and what a functioning andon system requires.',
-    category: 'Lean Manufacturing',
-    readTime: '7 min read',
-    date: 'November 2025',
-    image: 'https://images.unsplash.com/photo-1565618014297-ec85f49db6aa?auto=format&fit=crop&w=1200&h=630&q=80',
-    tags: ['Andon', 'Lean Manufacturing', 'Toyota Production System', 'Factory Management'],
-    body: `
+ },
+ {
+ slug: 'andon-system-implementation-problems',
+ title: 'Andon Systems That Nobody Uses After Installation',
+ subtitle: 'Andon is one of the most powerful tools in the Toyota Production System. In most non-Toyota factories, it is an expensive light installation that operators learn to ignore.',
+ metaTitle: 'Andon System Implementation Problems in Manufacturing Malaysia | Husni Halim',
+ metaDesc: 'Andon systems that operators do not activate are not andon systems — they are coloured lights. Lean consultant explains why andon implementations fail and what a functioning andon system requires.',
+ category: 'Lean Manufacturing',
+ readTime: '7 min read',
+ date: 'November 2025',
+ image: 'https://images.unsplash.com/photo-1565618014297-ec85f49db6aa?auto=format&fit=crop&w=1200&h=630&q=80',
+ tags: ['Andon', 'Lean Manufacturing', 'Toyota Production System', 'Factory Management'],
+ body: `
 <p>The andon system is one of the most recognisable elements of the Toyota Production System. When a problem occurs at a workstation, the operator activates the andon — a signal that alerts the team leader, triggers a swift response, and if the problem is not resolved within a defined response time, stops the line.</p>
 <p>The concept is simple and powerful. The implementation in non-Toyota environments is consistently problematic. The most common outcome: the andon system is installed, operators are trained, and within three months, activations have dropped to near zero — not because problems have stopped occurring, but because operators have learned that activating the andon is not worth the consequences.</p>
 
@@ -343,19 +343,19 @@ const articles = [
 <h2>What a Functioning Andon System Requires</h2>
 <p>Three non-negotiable conditions: a management culture where activation is treated as a positive contribution rather than a problem source; response times that are measured, targeted, and consistently achieved; and the genuine authority to stop production when the problem cannot be resolved within the response window. Remove any one of these and the system will not function as designed.</p>
 `
-  },
-  {
-    slug: 'gemba-walk-problems',
-    title: 'Why Gemba Walks Do Not Work: Doing Gemba the Wrong Way',
-    subtitle: 'Gemba walks are one of the most powerful habits in lean leadership. They are also one of the most commonly performed incorrectly — producing the appearance of engagement without any of the substance.',
-    metaTitle: 'Why Gemba Walks Do Not Work in Malaysian Manufacturing | Husni Halim',
-    metaDesc: 'Gemba walks that audit rather than learn are not gemba walks. Lean consultant explains the most common gemba walk mistakes in Malaysian manufacturing and what effective gemba leadership looks like.',
-    category: 'Lean Manufacturing',
-    readTime: '7 min read',
-    date: 'January 2026',
-    image: 'https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=1200&h=630&q=80',
-    tags: ['Gemba Walk', 'Lean Leadership', 'Continuous Improvement', 'Factory Management'],
-    body: `
+ },
+ {
+ slug: 'gemba-walk-problems',
+ title: 'Why Gemba Walks Do Not Work: Doing Gemba the Wrong Way',
+ subtitle: 'Gemba walks are one of the most powerful habits in lean leadership. They are also one of the most commonly performed incorrectly — producing the appearance of engagement without any of the substance.',
+ metaTitle: 'Why Gemba Walks Do Not Work in Malaysian Manufacturing | Husni Halim',
+ metaDesc: 'Gemba walks that audit rather than learn are not gemba walks. Lean consultant explains the most common gemba walk mistakes in Malaysian manufacturing and what effective gemba leadership looks like.',
+ category: 'Lean Manufacturing',
+ readTime: '7 min read',
+ date: 'January 2026',
+ image: 'https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=1200&h=630&q=80',
+ tags: ['Gemba Walk', 'Lean Leadership', 'Continuous Improvement', 'Factory Management'],
+ body: `
 <p>Gemba walk is a Japanese management practice meaning "go to the actual place" — the practice of leaders regularly visiting the shop floor not to inspect and direct, but to observe, understand, and support the people doing the work. Toyota leaders are famous for their gemba discipline, and the practice has been widely adopted in Malaysian manufacturing as part of lean implementation programmes.</p>
 <p>The adoption has been mostly superficial. Gemba walks are scheduled, conducted, and reported. And they produce almost no operational improvement — because almost every common error in gemba walk practice undermines the purpose of the activity.</p>
 
@@ -376,19 +376,19 @@ const articles = [
 <p>Even when a gemba walk is conducted correctly — observing properly, asking open questions, listening genuinely — it produces no value if what was learned is not acted on. Operators and supervisors who surface real problems during gemba walks and receive no follow-up will stop surfacing real problems. The walk becomes a performance: leaders perform observation, operators perform normalcy.</p>
 <p>Every gemba walk should result in specific follow-up commitments — problems identified, owners assigned, timelines established. And those commitments must be tracked and completed. The credibility of gemba depends entirely on what happens after the walk ends.</p>
 `
-  },
-  {
-    slug: 'oee-training-malaysia',
-    title: 'OEE Training Malaysia: The Complete Guide for Manufacturing Leaders',
-    subtitle: 'Overall Equipment Effectiveness is the most widely misunderstood KPI in Malaysian manufacturing. This guide explains what OEE actually measures, why most OEE numbers are wrong, and what real OEE improvement requires.',
-    metaTitle: 'OEE Training Malaysia | HRDC Claimable | Husni Halim',
-    metaDesc: 'HRDC claimable OEE training in Malaysia by certified consultant. Serving automotive, semiconductor, aerospace MRO, and FMCG sectors. Proven results across 30+ factories.',
-    category: 'OEE & TPM',
-    readTime: '11 min read',
-    date: 'October 2024',
-    image: 'https://images.unsplash.com/photo-1621905251918-48416bd8575a?auto=format&fit=crop&w=1200&h=630&q=80',
-    tags: ['OEE', 'TPM', 'HRDC Claimable', 'Manufacturing Malaysia', 'Productivity'],
-    body: `
+ },
+ {
+ slug: 'oee-training-malaysia',
+ title: 'OEE Training Malaysia: The Complete Guide for Manufacturing Leaders',
+ subtitle: 'Overall Equipment Effectiveness is the most widely misunderstood KPI in Malaysian manufacturing. This guide explains what OEE actually measures, why most OEE numbers are wrong, and what real OEE improvement requires.',
+ metaTitle: 'OEE Training Malaysia | HRDC Claimable | Husni Halim',
+ metaDesc: 'HRDC claimable OEE training in Malaysia by certified consultant. Serving automotive, semiconductor, aerospace MRO, and FMCG sectors. Proven results across 30+ factories.',
+ category: 'OEE & TPM',
+ readTime: '11 min read',
+ date: 'October 2024',
+ image: 'https://images.unsplash.com/photo-1621905251918-48416bd8575a?auto=format&fit=crop&w=1200&h=630&q=80',
+ tags: ['OEE', 'TPM', 'HRDC Claimable', 'Manufacturing Malaysia', 'Productivity'],
+ body: `
 <p>Overall Equipment Effectiveness — OEE — is the most commonly reported manufacturing KPI in Malaysia. It is also the most consistently misunderstood, miscalculated, and misused metric in the industry. Plants report OEE numbers of 85% and above while producing at rates that suggest 45% or below. The gap between the number and reality is not fraud — it is a systematic misunderstanding of what OEE is designed to measure.</p>
 <p>This guide covers what OEE actually measures, the most common calculation errors, what world-class OEE looks like by industry, and what a structured OEE improvement programme requires.</p>
 
@@ -423,21 +423,21 @@ const articles = [
 <p>OEE training programmes in Malaysia can be claimed under HRDC (Human Resource Development Corporation) for eligible employers. A structured OEE training programme covering measurement methodology, loss analysis, TPM fundamentals, and improvement project facilitation is typically delivered over two to three days, with a project component that applies the methodology to actual equipment in the participant's facility.</p>
 <p>The most effective OEE training programmes are not classroom programmes. They are delivered at the factory, using the factory's actual equipment and actual loss data, with participants who are responsible for the equipment's performance. This ensures that the training produces an improvement plan that is immediately actionable rather than a generic understanding that does not translate to implementation.</p>
 `
-  }
+ }
 ];
 
 // ─── Shared CSS ───────────────────────────────────────────────────
 const BLOG_CSS = `
 :root {
-  --c-dark: #0c1b2e;
-  --c-accent: #8b2252;
-  --c-secondary: #c47832;
-  --c-warm: #f9f7f4;
-  --c-soft: #ece8e3;
-  --c-body: #374151;
-  --c-mid: #6b7280;
-  --font-h: 'Cormorant Garamond', Georgia, serif;
-  --font-b: 'DM Sans', -apple-system, sans-serif;
+ --c-dark: #0c1b2e;
+ --c-accent: #8b2252;
+ --c-secondary: #c47832;
+ --c-warm: #f9f7f4;
+ --c-soft: #ece8e3;
+ --c-body: #374151;
+ --c-mid: #6b7280;
+ --font-h: 'Cormorant Garamond', Georgia, serif;
+ --font-b: 'DM Sans', -apple-system, sans-serif;
 }
 *,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
 html{scroll-behavior:smooth}
@@ -530,11 +530,11 @@ aside{padding-top:48px;position:sticky;top:70px}
 .footer a{color:var(--c-secondary);text-decoration:none}
 
 @media(max-width:800px){
-  .page-wrap{grid-template-columns:1fr}
-  aside{display:none}
-  .nav{padding:12px 20px}
-  .post-hero-content{padding:24px}
-  .nav-links{gap:14px}
+ .page-wrap{grid-template-columns:1fr}
+ aside{display:none}
+ .nav{padding:12px 20px}
+ .post-hero-content{padding:24px}
+ .nav-links{gap:14px}
 }
 `;
 
@@ -562,45 +562,45 @@ const LISTING_EXTRA_CSS = `
 
 // ─── Helper: nav HTML ─────────────────────────────────────────────
 function nav(active = '') {
-  return `<nav class="nav">
-  <a href="/" class="nav-logo">Husni<em>Halim</em></a>
-  <ul class="nav-links">
-    <li><a href="/#about">About</a></li>
-    <li><a href="/#expertise">Expertise</a></li>
-    <li><a href="/#training">Training</a></li>
-    <li><a href="/blog/" ${active === 'blog' ? 'style="color:#fff"' : ''}>Blog</a></li>
-    <li><a href="/#contact" class="nav-cta">Get In Touch</a></li>
-  </ul>
+ return `<nav class="nav">
+ <a href="/" class="nav-logo">Husni<em>Halim</em></a>
+ <ul class="nav-links">
+ <li><a href="/#about">About</a></li>
+ <li><a href="/#expertise">Expertise</a></li>
+ <li><a href="/#training">Training</a></li>
+ <li><a href="/blog/" ${active === 'blog' ? 'style="color:#fff"' : ''}>Blog</a></li>
+ <li><a href="/#contact" class="nav-cta">Get In Touch</a></li>
+ </ul>
 </nav>`;
 }
 
 // ─── Helper: footer HTML ──────────────────────────────────────────
 function footer() {
-  return `<footer class="footer">
-  <p>© ${new Date().getFullYear()} Husni Halim · <a href="/">husnihalim.com</a> · HRDC Accredited Trainer TTT/10228</p>
+ return `<footer class="footer">
+ <p>© ${new Date().getFullYear()} Husni Halim · <a href="/">husnihalim.com</a> · HRDC Accredited Trainer </p>
 </footer>`;
 }
 
 // ─── Helper: related articles (3 random excl current) ────────────
 function relatedArticles(currentSlug) {
-  return articles
-    .filter(a => a.slug !== currentSlug)
-    .sort(() => Math.random() - 0.5)
-    .slice(0, 4)
-    .map(a => `<a class="rel-post" href="/blog/${a.slug}/">${a.title}</a>`)
-    .join('\n');
+ return articles
+ .filter(a => a.slug !== currentSlug)
+ .sort(() => Math.random() - 0.5)
+ .slice(0, 4)
+ .map(a => `<a class="rel-post" href="/blog/${a.slug}/">${a.title}</a>`)
+ .join('\n');
 }
 
 // ─── Helper: TOC from h2 tags ─────────────────────────────────────
 function extractTOC(body) {
-  const matches = [...body.matchAll(/<h2>(.*?)<\/h2>/g)];
-  return matches.map(m => `<li>${m[1]}</li>`).join('\n');
+ const matches = [...body.matchAll(/<h2>(.*?)<\/h2>/g)];
+ return matches.map(m => `<li>${m[1]}</li>`).join('\n');
 }
 
 // ─── Build article page ───────────────────────────────────────────
 function buildArticlePage(article) {
-  const toc = extractTOC(article.body);
-  return `<!DOCTYPE html>
+ const toc = extractTOC(article.body);
+ return `<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
@@ -620,50 +620,50 @@ ${GOOGLE_FONTS}
 <style>${BLOG_CSS}</style>
 <script type="application/ld+json">
 {
-  "@context": "https://schema.org",
-  "@type": "BlogPosting",
-  "headline": "${article.title}",
-  "description": "${article.metaDesc}",
-  "image": "${article.image}",
-  "url": "https://husnihalim.com/blog/${article.slug}/",
-  "datePublished": "${article.isoDate}",
-  "dateModified": "${article.isoDate}",
-  "inLanguage": "en-MY",
-  "author": {
-    "@type": "Person",
-    "name": "Husni Halim",
-    "url": "https://husnihalim.com",
-    "jobTitle": "Principal Consultant & Certified Trainer",
-    "sameAs": [
-      "https://www.linkedin.com/in/husni-halim-7436b01b/",
-      "https://www.facebook.com/visiarmada"
-    ]
-  },
-  "publisher": {
-    "@type": "Person",
-    "name": "Husni Halim",
-    "url": "https://husnihalim.com",
-    "logo": {
-      "@type": "ImageObject",
-      "url": "https://husnihalim.com/assets/husni-portrait.png"
-    }
-  },
-  "mainEntityOfPage": {
-    "@type": "WebPage",
-    "@id": "https://husnihalim.com/blog/${article.slug}/"
-  },
-  "keywords": "${article.tags.join(', ')}"
+ "@context": "https://schema.org",
+ "@type": "BlogPosting",
+ "headline": "${article.title}",
+ "description": "${article.metaDesc}",
+ "image": "${article.image}",
+ "url": "https://husnihalim.com/blog/${article.slug}/",
+ "datePublished": "${article.isoDate}",
+ "dateModified": "${article.isoDate}",
+ "inLanguage": "en-MY",
+ "author": {
+ "@type": "Person",
+ "name": "Husni Halim",
+ "url": "https://husnihalim.com",
+ "jobTitle": "Principal Consultant & Certified Trainer",
+ "sameAs": [
+ "https://www.linkedin.com/in/husni-halim-7436b01b/",
+ "https://www.facebook.com/visiarmada"
+ ]
+ },
+ "publisher": {
+ "@type": "Person",
+ "name": "Husni Halim",
+ "url": "https://husnihalim.com",
+ "logo": {
+ "@type": "ImageObject",
+ "url": "https://husnihalim.com/assets/husni-portrait.png"
+ }
+ },
+ "mainEntityOfPage": {
+ "@type": "WebPage",
+ "@id": "https://husnihalim.com/blog/${article.slug}/"
+ },
+ "keywords": "${article.tags.join(', ')}"
 }
 </script>
 <script type="application/ld+json">
 {
-  "@context": "https://schema.org",
-  "@type": "BreadcrumbList",
-  "itemListElement": [
-    {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://husnihalim.com/"},
-    {"@type": "ListItem", "position": 2, "name": "Blog", "item": "https://husnihalim.com/blog/"},
-    {"@type": "ListItem", "position": 3, "name": "${article.title}", "item": "https://husnihalim.com/blog/${article.slug}/"}
-  ]
+ "@context": "https://schema.org",
+ "@type": "BreadcrumbList",
+ "itemListElement": [
+ {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://husnihalim.com/"},
+ {"@type": "ListItem", "position": 2, "name": "Blog", "item": "https://husnihalim.com/blog/"},
+ {"@type": "ListItem", "position": 3, "name": "${article.title}", "item": "https://husnihalim.com/blog/${article.slug}/"}
+ ]
 }
 </script>
 </head>
@@ -671,79 +671,79 @@ ${GOOGLE_FONTS}
 ${nav('blog')}
 
 <div class="post-hero">
-  <img src="${article.image}" alt="${article.title}" loading="lazy" onerror="this.style.display='none'">
-  <div class="post-hero-overlay"></div>
-  <div class="post-hero-content">
-    <div class="post-cat">${article.category}</div>
-    <h1 class="post-title">${article.title}</h1>
-    <div class="post-meta">
-      <span>${article.date}</span>
-      <span>·</span>
-      <span>${article.readTime}</span>
-    </div>
-  </div>
+ <img src="${article.image}" alt="${article.title}" loading="lazy" onerror="this.style.display='none'">
+ <div class="post-hero-overlay"></div>
+ <div class="post-hero-content">
+ <div class="post-cat">${article.category}</div>
+ <h1 class="post-title">${article.title}</h1>
+ <div class="post-meta">
+ <span>${article.date}</span>
+ <span>·</span>
+ <span>${article.readTime}</span>
+ </div>
+ </div>
 </div>
 
 <div class="breadcrumb">
-  <a href="/">Home</a><span>›</span>
-  <a href="/blog/">Blog</a><span>›</span>
-  ${article.title}
+ <a href="/">Home</a><span>›</span>
+ <a href="/blog/">Blog</a><span>›</span>
+ ${article.title}
 </div>
 
 <div class="page-wrap">
-  <article>
-    <a class="back-btn" href="/blog/">← Back to Blog</a>
+ <article>
+ <a class="back-btn" href="/blog/">← Back to Blog</a>
 
-    <div class="tags">
-      ${article.tags.map(t => `<span class="tag">${t}</span>`).join('')}
-    </div>
+ <div class="tags">
+ ${article.tags.map(t => `<span class="tag">${t}</span>`).join('')}
+ </div>
 
-    <p class="post-subtitle">${article.subtitle}</p>
+ <p class="post-subtitle">${article.subtitle}</p>
 
-    ${article.body}
+ ${article.body}
 
-    <div class="author-bio">
-      <div class="author-av">H</div>
-      <div>
-        <strong>Husni Halim</strong>
-        <p>HRDC Certified Trainer (TTT/10228) and MPC Certified Productivity Expert. Principal Consultant at Visi Armada Consulting, specialising in lean manufacturing, OEE, and Kaizen for Malaysian manufacturers.</p>
-      </div>
-    </div>
+ <div class="author-bio">
+ <div class="author-av">H</div>
+ <div>
+ <strong>Husni Halim</strong>
+ <p>HRDC Certified Trainer and MPC Certified Productivity Expert. Principal Consultant at Visi Armada Consulting, specialising in lean manufacturing, OEE, and Kaizen for Malaysian manufacturers.</p>
+ </div>
+ </div>
 
-    <div class="share-bar">
-      <p>Share this article</p>
-      <div class="share-btns">
-        <a class="share-btn share-btn-li" href="https://www.linkedin.com/sharing/share-offsite/?url=https://husnihalim.com/blog/${article.slug}/" target="_blank" rel="noopener">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
-          Share on LinkedIn
-        </a>
-        <a class="share-btn share-btn-fb" href="https://www.facebook.com/sharer/sharer.php?u=https://husnihalim.com/blog/${article.slug}/" target="_blank" rel="noopener">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
-          Share on Facebook
-        </a>
-        <a class="share-btn share-btn-va" href="https://www.visiarmada.com" target="_blank" rel="noopener">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/></svg>
-          Visi Armada
-        </a>
-      </div>
-    </div>
-  </article>
+ <div class="share-bar">
+ <p>Share this article</p>
+ <div class="share-btns">
+ <a class="share-btn share-btn-li" href="https://www.linkedin.com/sharing/share-offsite/?url=https://husnihalim.com/blog/${article.slug}/" target="_blank" rel="noopener">
+ <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+ Share on LinkedIn
+ </a>
+ <a class="share-btn share-btn-fb" href="https://www.facebook.com/sharer/sharer.php?u=https://husnihalim.com/blog/${article.slug}/" target="_blank" rel="noopener">
+ <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+ Share on Facebook
+ </a>
+ <a class="share-btn share-btn-va" href="https://www.visiarmada.com" target="_blank" rel="noopener">
+ <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/></svg>
+ Visi Armada
+ </a>
+ </div>
+ </div>
+ </article>
 
-  <aside>
-    <div class="s-card">
-      <h4>In this article</h4>
-      <ul class="toc">${toc}</ul>
-    </div>
-    <div class="s-card">
-      <h4>Related Articles</h4>
-      ${relatedArticles(article.slug)}
-    </div>
-    <div class="cta-card">
-      <h4>Need help implementing this in your factory?</h4>
-      <p>HRDC claimable training available across Malaysia.</p>
-      <a href="/#contact" class="cta-btn">Get In Touch →</a>
-    </div>
-  </aside>
+ <aside>
+ <div class="s-card">
+ <h4>In this article</h4>
+ <ul class="toc">${toc}</ul>
+ </div>
+ <div class="s-card">
+ <h4>Related Articles</h4>
+ ${relatedArticles(article.slug)}
+ </div>
+ <div class="cta-card">
+ <h4>Need help implementing this in your factory?</h4>
+ <p>HRDC claimable training available across Malaysia.</p>
+ <a href="/#contact" class="cta-btn">Get In Touch →</a>
+ </div>
+ </aside>
 </div>
 
 ${footer()}
@@ -753,25 +753,25 @@ ${footer()}
 
 // ─── Build blog listing page ──────────────────────────────────────
 function buildListingPage() {
-  const cards = articles.map(a => `
+ const cards = articles.map(a => `
 <div class="card">
-  <a href="/blog/${a.slug}/">
-    <div class="card-img">
-      <img src="${a.image}" alt="${a.title}" loading="lazy" onerror="this.style.opacity='.3'">
-    </div>
-    <div class="card-body">
-      <div class="card-cat">${a.category}</div>
-      <h2>${a.title}</h2>
-      <p>${a.subtitle.slice(0, 120)}…</p>
-    </div>
-    <div class="card-footer">
-      <span class="card-meta">${a.date} · ${a.readTime}</span>
-      <span class="card-read">Read →</span>
-    </div>
-  </a>
+ <a href="/blog/${a.slug}/">
+ <div class="card-img">
+ <img src="${a.image}" alt="${a.title}" loading="lazy" onerror="this.style.opacity='.3'">
+ </div>
+ <div class="card-body">
+ <div class="card-cat">${a.category}</div>
+ <h2>${a.title}</h2>
+ <p>${a.subtitle.slice(0, 120)}…</p>
+ </div>
+ <div class="card-footer">
+ <span class="card-meta">${a.date} · ${a.readTime}</span>
+ <span class="card-read">Read →</span>
+ </div>
+ </a>
 </div>`).join('\n');
 
-  return `<!DOCTYPE html>
+ return `<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
@@ -789,9 +789,9 @@ ${GOOGLE_FONTS}
 <body>
 ${nav('blog')}
 <div class="blog-hero">
-  <div class="label">Lean &amp; Kaizen Insights</div>
-  <h1>Insights for Malaysian Manufacturers</h1>
-  <p>Practical guides on lean manufacturing, Kaizen, OEE, and operational excellence — written from the factory floor, not the textbook.</p>
+ <div class="label">Lean &amp; Kaizen Insights</div>
+ <h1>Insights for Malaysian Manufacturers</h1>
+ <p>Practical guides on lean manufacturing, Kaizen, OEE, and operational excellence — written from the factory floor, not the textbook.</p>
 </div>
 <div class="blog-grid">
 ${cards}
@@ -803,26 +803,26 @@ ${footer()}
 
 // ─── Enrich articles with isoDate ────────────────────────────────
 const MONTH_MAP = {
-  'January': '01', 'February': '02', 'March': '03', 'April': '04',
-  'May': '05', 'June': '06', 'July': '07', 'August': '08',
-  'September': '09', 'October': '10', 'November': '11', 'December': '12'
+ 'January': '01', 'February': '02', 'March': '03', 'April': '04',
+ 'May': '05', 'June': '06', 'July': '07', 'August': '08',
+ 'September': '09', 'October': '10', 'November': '11', 'December': '12'
 };
 // Assign mid-month ISO dates matching the sitemap lastmod values
 const ISO_DATE_MAP = {
-  'oee-training-malaysia':                    '2024-10-15',
-  'why-kaizen-events-fail':                   '2024-11-10',
-  '5s-implementation-problems':               '2024-12-05',
-  'value-stream-mapping-mistakes':            '2025-02-12',
-  'standard-work-implementation-problems':    '2025-04-08',
-  'kaizen-blitz-vs-kaizen-culture':           '2025-06-14',
-  'visual-management-failures':               '2025-08-19',
-  'poka-yoke-implementation-problems':        '2025-09-22',
-  'pdca-implementation-problems':             '2025-10-17',
-  'andon-system-implementation-problems':     '2025-11-11',
-  'gemba-walk-problems':                      '2026-01-08'
+ 'oee-training-malaysia': '2024-10-15',
+ 'why-kaizen-events-fail': '2024-11-10',
+ '5s-implementation-problems': '2024-12-05',
+ 'value-stream-mapping-mistakes': '2025-02-12',
+ 'standard-work-implementation-problems': '2025-04-08',
+ 'kaizen-blitz-vs-kaizen-culture': '2025-06-14',
+ 'visual-management-failures': '2025-08-19',
+ 'poka-yoke-implementation-problems': '2025-09-22',
+ 'pdca-implementation-problems': '2025-10-17',
+ 'andon-system-implementation-problems': '2025-11-11',
+ 'gemba-walk-problems': '2026-01-08'
 };
 articles.forEach(a => {
-  a.isoDate = ISO_DATE_MAP[a.slug] || '2025-01-01';
+ a.isoDate = ISO_DATE_MAP[a.slug] || '2025-01-01';
 });
 
 // ─── Write all files ──────────────────────────────────────────────
@@ -835,10 +835,10 @@ console.log('✓ blog/index.html');
 
 // Article pages
 for (const article of articles) {
-  const dir = path.join(BLOG_DIR, article.slug);
-  fs.mkdirSync(dir, { recursive: true });
-  fs.writeFileSync(path.join(dir, 'index.html'), buildArticlePage(article));
-  console.log(`✓ blog/${article.slug}/index.html`);
+ const dir = path.join(BLOG_DIR, article.slug);
+ fs.mkdirSync(dir, { recursive: true });
+ fs.writeFileSync(path.join(dir, 'index.html'), buildArticlePage(article));
+ console.log(`✓ blog/${article.slug}/index.html`);
 }
 
 console.log(`\nDone — ${articles.length + 1} files generated.`);
