@@ -909,7 +909,7 @@ table {
     font-size: var(--text-base);
     line-height: 1.75;
     color: var(--color-body-text);
-    margin-bottom: var(--space-lg);
+    margin-bottom: var(--space-lg);    text-align: justify;    hyphens: auto;
 }
 
 .body-text:last-child {
@@ -919,7 +919,7 @@ table {
 .body-text--lead {
     font-size: clamp(var(--text-lg), 1.5vw, var(--text-xl));
     line-height: 1.8;
-    color: var(--color-body-text);
+    color: var(--color-body-text);    text-align: justify;    hyphens: auto;
 }
 
 .subheading {
