@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>How to Improve OEE in Semiconductor Factories Malaysia | Husni Halim</title>
+<meta name="description" content="HRDC certified consultant explains how to improve OEE in Malaysian semiconductor factories. Loss analysis, benchmarks, and improvement roadmap for backend assembly and test.">
+<meta name="author" content="Husni Halim">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://husnihalim.com/blog/oee-semiconductor-factories-malaysia/">
+<meta property="og:title" content="How to Improve OEE in Semiconductor Factories Malaysia | Husni Halim">
+<meta property="og:description" content="HRDC certified consultant explains how to improve OEE in Malaysian semiconductor factories. Loss analysis, benchmarks, and improvement roadmap for backend assembly and test.">
+<meta property="og:image" content="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&h=630&q=80">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://husnihalim.com/blog/oee-semiconductor-factories-malaysia/">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400;1,600&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&display=swap" rel="stylesheet">
+<style>
+:root {
+  --c-dark: #0c1b2e;
+  --c-accent: #8b2252;
+  --c-secondary: #c47832;
+  --c-warm: #f9f7f4;
+  --c-soft: #ece8e3;
+  --c-body: #374151;
+  --c-mid: #6b7280;
+  --font-h: 'Cormorant Garamond', Georgia, serif;
+  --font-b: 'DM Sans', -apple-system, sans-serif;
+}
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:var(--font-b);background:var(--c-warm);color:var(--c-body);-webkit-font-smoothing:antialiased}
+
+/* NAV */
+.nav{background:var(--c-dark);padding:14px 40px;display:flex;justify-content:space-between;align-items:center;position:sticky;top:0;z-index:100}
+.nav-logo{color:#fff;font-family:var(--font-h);font-size:20px;font-weight:600;text-decoration:none;letter-spacing:1px}
+.nav-logo em{color:var(--c-secondary);font-style:italic}
+.nav-links{display:flex;gap:28px;list-style:none}
+.nav-links a{color:#ccc;font-size:13px;text-decoration:none;font-family:var(--font-b);letter-spacing:.4px;transition:color .2s}
+.nav-links a:hover{color:#fff}
+.nav-cta{background:var(--c-accent)!important;color:#fff!important;padding:8px 16px;border-radius:4px}
+
+/* HERO */
+.post-hero{position:relative;height:440px;overflow:hidden;background:var(--c-dark)}
+.post-hero img{width:100%;height:100%;object-fit:cover;opacity:.45}
+.post-hero-overlay{position:absolute;inset:0;background:linear-gradient(to top,rgba(12,27,46,.95) 30%,rgba(12,27,46,.4))}
+.post-hero-content{position:absolute;bottom:0;left:0;right:0;padding:48px;max-width:900px}
+.post-cat{font-family:var(--font-b);font-size:11px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--c-secondary);margin-bottom:14px}
+.post-title{font-family:var(--font-h);font-size:clamp(26px,4vw,44px);line-height:1.2;color:#fff;margin-bottom:16px;font-weight:600}
+.post-meta{font-size:13px;color:rgba(255,255,255,.6);display:flex;gap:16px;flex-wrap:wrap}
+.post-meta span{display:flex;align-items:center;gap:6px}
+
+/* LAYOUT */
+.page-wrap{max-width:1160px;margin:0 auto;padding:0 24px;display:grid;grid-template-columns:1fr 300px;gap:64px;align-items:start}
+article{padding:48px 0 80px}
+.post-subtitle{font-size:20px;line-height:1.65;color:#555;font-style:italic;margin-bottom:36px;padding-bottom:36px;border-bottom:1px solid #ddd;font-family:var(--font-h)}
+
+/* ARTICLE BODY */
+article h2{font-family:var(--font-h);font-size:26px;font-weight:600;color:var(--c-dark);margin:44px 0 16px;padding-left:16px;border-left:3px solid var(--c-accent)}
+article h3{font-family:var(--font-h);font-size:20px;font-weight:600;color:#222;margin:28px 0 10px}
+article p{font-size:17px;line-height:1.85;color:var(--c-body);margin-bottom:20px}
+article ul,article ol{margin:10px 0 20px 22px}
+article li{font-size:16px;line-height:1.75;margin-bottom:8px;color:var(--c-body)}
+.callout{background:#fff8f2;border-left:3px solid var(--c-secondary);border-radius:4px;padding:20px 24px;margin:32px 0;font-size:16px;line-height:1.7;color:#444}
+.callout strong{color:var(--c-accent)}
+blockquote{padding:24px 32px;margin:36px 0;background:#f4f0fb;border-radius:6px;font-family:var(--font-h);font-size:22px;line-height:1.6;color:#2a1a4e;font-style:italic;text-align:center}
+table{width:100%;border-collapse:collapse;margin:28px 0;font-size:14px}
+th{background:var(--c-dark);color:#fff;padding:12px 16px;text-align:left;font-family:var(--font-b);font-weight:600;letter-spacing:.3px}
+td{padding:12px 16px;border-bottom:1px solid #eee;color:var(--c-body);line-height:1.5;font-size:14px}
+tr:nth-child(even) td{background:#f9f7f4}
+tr:hover td{background:#fff8f2}
+.tags{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:36px}
+.tag{background:var(--c-soft);color:#555;font-size:11px;padding:5px 12px;border-radius:20px;font-weight:500;letter-spacing:.4px}
+
+/* AUTHOR BIO */
+.author-bio{display:flex;gap:20px;align-items:flex-start;background:#fff;border:1px solid #eee;border-radius:8px;padding:24px;margin-top:56px}
+.author-av{width:60px;height:60px;border-radius:50%;background:var(--c-dark);display:flex;align-items:center;justify-content:center;color:var(--c-secondary);font-family:var(--font-h);font-size:22px;font-weight:600;flex-shrink:0}
+.author-bio p{font-size:14px;line-height:1.6;color:#555;margin-bottom:4px}
+.author-bio strong{color:#111;font-size:15px;display:block;margin-bottom:4px}
+/* SHARE */
+.share-bar{margin-top:40px;padding-top:32px;border-top:1px solid #eee}
+.share-bar p{font-family:var(--font-b);font-size:10px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:#999;margin-bottom:14px}
+.share-btns{display:flex;gap:10px;flex-wrap:wrap}
+.share-btn{display:inline-flex;align-items:center;gap:8px;padding:10px 18px;border-radius:6px;font-size:13px;font-weight:600;text-decoration:none;transition:opacity .15s}
+.share-btn:hover{opacity:.82}
+.share-btn-li{background:#0077b5;color:#fff}
+.share-btn-fb{background:#1877f2;color:#fff}
+.share-btn-va{background:var(--c-dark);color:var(--c-secondary);border:1px solid var(--c-secondary)}
+
+/* SIDEBAR */
+aside{padding-top:48px;position:sticky;top:70px}
+.s-card{background:#fff;border:1px solid #eee;border-radius:8px;padding:22px;margin-bottom:22px}
+.s-card h4{font-family:var(--font-b);font-size:10px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:#999;margin-bottom:14px}
+.toc li{list-style:none;padding:8px 0;border-bottom:1px solid #f0f0f0;font-size:13px;color:#555}
+.toc li:last-child{border-bottom:none}
+.toc li::before{content:"→ ";color:var(--c-secondary)}
+.rel-post{display:block;padding:9px 0;border-bottom:1px solid #f0f0f0;font-size:13px;color:#444;text-decoration:none;line-height:1.4}
+.rel-post:last-child{border-bottom:none}
+.rel-post:hover{color:var(--c-accent)}
+.cta-card{background:var(--c-dark);border-radius:8px;padding:22px;text-align:center}
+.cta-card h4{color:#fff;font-size:14px;line-height:1.5;margin-bottom:8px;letter-spacing:normal;text-transform:none;font-family:var(--font-h);font-style:italic;font-size:17px}
+.cta-card p{font-size:12px;color:#aaa;margin-bottom:14px;line-height:1.5}
+.cta-btn{display:block;background:var(--c-accent);color:#fff;padding:10px;border-radius:4px;font-size:13px;font-weight:600;text-decoration:none;letter-spacing:.4px}
+.cta-btn:hover{background:#a0285e}
+
+/* BREADCRUMB */
+.breadcrumb{max-width:1160px;margin:0 auto;padding:20px 24px 0;font-size:12px;color:#999;font-family:var(--font-b)}
+.breadcrumb a{color:var(--c-mid);text-decoration:none}
+.breadcrumb a:hover{color:var(--c-accent)}
+.breadcrumb span{margin:0 6px}
+
+/* BACK LINK */
+.back-btn{display:inline-flex;align-items:center;gap:8px;color:var(--c-accent);font-size:13px;text-decoration:none;font-weight:500;padding:0 0 24px}
+.back-btn:hover{gap:12px}
+
+/* FOOTER */
+.footer{background:var(--c-dark);color:#888;text-align:center;padding:32px;font-size:13px;margin-top:80px}
+.footer a{color:var(--c-secondary);text-decoration:none}
+
+@media(max-width:800px){
+  .page-wrap{grid-template-columns:1fr}
+  aside{display:none}
+  .nav{padding:12px 20px}
+  .post-hero-content{padding:24px}
+  .nav-links{gap:14px}
+}
+</style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "How to Improve OEE in Semiconductor Factories Malaysia",
+  "description": "HRDC certified consultant explains how to improve OEE in Malaysian semiconductor factories. Loss analysis, benchmarks, and improvement roadmap for backend assembly and test.",
+  "image": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&h=630&q=80",
+  "url": "https://husnihalim.com/blog/oee-semiconductor-factories-malaysia/",
+  "datePublished": "2026-03-03",
+  "dateModified": "2026-03-03",
+  "inLanguage": "en-MY",
+  "author": {
+    "@type": "Person",
+    "name": "Husni Halim",
+    "url": "https://husnihalim.com",
+    "jobTitle": "Principal Consultant & Certified Trainer",
+    "sameAs": [
+      "https://www.linkedin.com/in/husni-halim-7436b01b/",
+      "https://www.facebook.com/visiarmada"
+    ]
+  },
+  "publisher": {
+    "@type": "Person",
+    "name": "Husni Halim",
+    "url": "https://husnihalim.com",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://husnihalim.com/assets/husni-portrait.png"
+    }
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://husnihalim.com/blog/oee-semiconductor-factories-malaysia/"
+  },
+  "keywords": "OEE, Semiconductor, TPM, Lean Manufacturing, Malaysia"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://husnihalim.com/"},
+    {"@type": "ListItem", "position": 2, "name": "Blog", "item": "https://husnihalim.com/blog/"},
+    {"@type": "ListItem", "position": 3, "name": "How to Improve OEE in Semiconductor Factories Malaysia", "item": "https://husnihalim.com/blog/oee-semiconductor-factories-malaysia/"}
+  ]
+}
+</script>
+</head>
+<body>
+<nav class="nav">
+  <a href="/" class="nav-logo">Husni<em>Halim</em></a>
+  <ul class="nav-links">
+    <li><a href="/#about">About</a></li>
+    <li><a href="/#expertise">Expertise</a></li>
+    <li><a href="/#training">Training</a></li>
+    <li><a href="/blog/" style="color:#fff">Blog</a></li>
+    <li><a href="/#contact" class="nav-cta">Get In Touch</a></li>
+  </ul>
+</nav>
+
+<div class="post-hero">
+  <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&h=630&q=80" alt="How to Improve OEE in Semiconductor Factories Malaysia" loading="lazy" onerror="this.style.display='none'">
+  <div class="post-hero-overlay"></div>
+  <div class="post-hero-content">
+    <div class="post-cat">OEE & TPM</div>
+    <h1 class="post-title">How to Improve OEE in Semiconductor Factories Malaysia</h1>
+    <div class="post-meta">
+      <span>March 2026</span>
+      <span>·</span>
+      <span>10 min read</span>
+    </div>
+  </div>
+</div>
+
+<div class="breadcrumb">
+  <a href="/">Home</a><span>›</span>
+  <a href="/blog/">Blog</a><span>›</span>
+  How to Improve OEE in Semiconductor Factories Malaysia
+</div>
+
+<div class="page-wrap">
+  <article>
+    <a class="back-btn" href="/blog/">← Back to Blog</a>
+
+    <div class="tags">
+      <span class="tag">OEE</span><span class="tag">Semiconductor</span><span class="tag">TPM</span><span class="tag">Lean Manufacturing</span><span class="tag">Malaysia</span>
+    </div>
+
+    <p class="post-subtitle">Malaysian semiconductor plants run 15 to 30 percentage points below world-class OEE. Here is what the data shows, what drives the gap, and the improvement roadmap that actually works in backend assembly and test operations.</p>
+
+    
+<p>Malaysia's semiconductor sector is under pressure. With global chip demand fluctuating and factory managers squeezed between rising energy costs and headcount constraints, improving Overall Equipment Effectiveness (OEE) has moved from a "nice to have" metric to a survival imperative. Yet most Malaysian semiconductor plants I visit are running OEE between 55% and 70% — well below the world-class benchmark of 85%.</p>
+
+<p>This guide explains why semiconductor OEE improvement is fundamentally different from automotive or FMCG manufacturing, what the real loss drivers are, and what a practical improvement roadmap looks like — not a textbook framework, but what actually works on the production floor of Malaysian fabs and backend assembly operations in Penang, Kulim, and the Klang Valley.</p>
+
+<h2>Why Semiconductor OEE Is Different From Other Industries</h2>
+
+<p>Most OEE frameworks were developed for high-volume, low-mix manufacturing. Semiconductor fabrication is the opposite: long cycle times, complex multi-step processes, clean room constraints, and yield-based quality losses that do not behave like the defect rates you see in automotive stamping or food processing.</p>
+
+<p>In a typical Malaysian backend semiconductor plant — IC assembly, wire bonding, moulding, or test — three dynamics make OEE management uniquely challenging:</p>
+
+<p><strong>Recipe complexity.</strong> A single wire bonder may run 40 to 80 different device types per shift, each with its own bonding parameters, die size, and pad layout. Changeover loss is embedded in the process, not an exception to be eliminated.</p>
+
+<p><strong>Equipment sensitivity.</strong> Machines like die attach, wire bond, and flip chip tools are highly sensitive to temperature, humidity, and vibration. Minor environmental drift causes yield loss that shows up as quality OEE loss — but the root cause is actually an equipment or facility issue, not operator error.</p>
+
+<p><strong>Interdependent bottlenecks.</strong> In semiconductor flow, the constraint shifts. A short burst of downtime at the wire bonder does not necessarily affect output if the moulding press is already the bottleneck. Traditional OEE measured at each machine independently can mislead improvement priorities and waste engineering resources on non-constraint equipment.</p>
+
+<p>This is why simply installing an OEE monitoring system and chasing daily OEE percentages rarely moves the needle in semiconductor manufacturing. The measurement framework must match the operational reality.</p>
+
+<h2>The Three Loss Categories That Drive Down Semiconductor OEE</h2>
+
+<p>The standard OEE formula — Availability x Performance x Quality — applies to semiconductor, but the dominant losses within each category are different from what you encounter in other sectors.</p>
+
+<h3>1. Availability Losses: Unplanned Downtime and Minor Stoppages</h3>
+
+<p>Across the semiconductor backend plants I have worked with, unplanned downtime accounts for 40% to 60% of total OEE loss. Common culprits include wire bonder jamming from lead frame misfeeds often linked to incoming reel quality variation, moulding press compound blockages caused by incorrect pre-heat parameters, vision system false rejects that halt automatic transfer between stations, and vacuum system failures causing pick-and-place heads to misplace dies.</p>
+
+<p>Many plants track these as "minor stoppages" separately from "breakdowns" and fail to apply the same rigour of root cause analysis. A stoppage that takes four minutes to clear and occurs 15 times per shift is costing you one hour of capacity — the same as a single one-hour breakdown — but it never appears on the formal breakdown log and never triggers a proper countermeasure.</p>
+
+<h3>2. Performance Losses: Speed and Rate Losses</h3>
+
+<p>Running below rated speed is endemic in Malaysian semiconductor plants, and it is almost always invisible. Machine operators and technicians routinely slow down wire bonders or test handlers by five to ten percent "to reduce defects" — a workaround that suppresses the symptom without fixing the root cause. The result is a chronic performance OEE loss that no one officially owns.</p>
+
+<p>The fix requires engineering discipline: document the designed cycle time per device type, measure actual cycle time daily, and require a formal deviation approval process before any speed reduction is permitted. This is standard work applied to equipment settings, and it is a principle covered in detail in <a href="/blog/standard-work-implementation-problems/">why standard work never gets followed after training</a>.</p>
+
+<h3>3. Quality Losses: Yield and Scrap</h3>
+
+<p>Semiconductor quality loss in OEE terms captures the cost of defects — units that fail electrical test, visual inspection, or dimensional checks. In backend assembly, yield losses cluster around three areas: wire bond quality including looping height, ball size, and pull strength; mould void and delamination; and mark legibility failures. Each has its own diagnostic path, and most require correlation analysis between process parameters and test results — something that operators cannot do without engineering support and proper data infrastructure. Without this infrastructure, quality losses in OEE are tracked but never systematically reduced.</p>
+
+<h2>OEE Benchmarks: Typical vs World-Class for Semiconductor Malaysia</h2>
+
+<table class="compare-table">
+  <thead>
+    <tr>
+      <th>OEE Component</th>
+      <th>Typical Malaysian Semiconductor Plant</th>
+      <th>World-Class Benchmark</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Availability</td>
+      <td>75–82%</td>
+      <td>90% or above</td>
+    </tr>
+    <tr>
+      <td>Performance</td>
+      <td>80–88%</td>
+      <td>95% or above</td>
+    </tr>
+    <tr>
+      <td>Quality (Yield)</td>
+      <td>92–97%</td>
+      <td>99% or above</td>
+    </tr>
+    <tr>
+      <td>Overall OEE</td>
+      <td>55–70%</td>
+      <td>85% or above</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>The 15 to 30 percentage point gap between typical and world-class is not an engineering impossibility. It is a management and systems gap. The equipment capacity is there — Malaysian semiconductor plants use the same equipment platforms as world-class fabs in Japan, Taiwan, and South Korea. The question is whether the organisation has the data discipline, improvement capability, and management system to unlock the capacity that already exists inside the factory.</p>
+
+<div class="callout">
+  <strong>HRDC Claimable OEE Training for Semiconductor Teams</strong>
+  <p>Husni Halim delivers structured OEE and TPM training workshops designed specifically for Malaysian semiconductor and electronics manufacturing environments. All programmes are HRDC claimable under SBL-Khas. Delivered on-site using your actual production data and equipment. Suitable for production engineers, maintenance leads, and manufacturing managers. <a href="/#contact">Contact Husni for a consultation</a> or read the complete <a href="/blog/oee-training-malaysia/">OEE Training Malaysia guide</a>.</p>
+</div>
+
+<h2>A Practical OEE Improvement Roadmap for Semiconductor Plants</h2>
+
+<p>Theory aside, here is the sequence that produces results in Malaysian semiconductor factories — based on programmes I have led across backend assembly and test operations:</p>
+
+<h3>Step 1: Fix Your OEE Data Collection Before Anything Else</h3>
+
+<p>Before you can improve OEE, you need accurate OEE data. Most plants I audit have three different OEE numbers for the same production line: one from the machine SCADA, one from the production system, and one from the shift supervisor's daily report. They rarely agree, and in most cases none of them are fully correct.</p>
+
+<p>Start with a single agreed definition of loading time, planned downtime, and all loss categories. Define what counts as a breakdown versus a minor stoppage versus a changeover. Get engineering, production, and maintenance to sign off on the definitions and the measurement logic. Only then does your OEE number mean something actionable.</p>
+
+<h3>Step 2: Focus Improvement on the Constraint, Not Every Machine</h3>
+
+<p>Improving OEE at a non-bottleneck machine produces zero additional output. In semiconductor backend flow, identify the rate-limiting operation — often wire bonding or final test — and focus all improvement energy there first. A five percent OEE improvement at the constraint is worth more than a twenty percent improvement spread across all other workstations combined.</p>
+
+<p>This is where most Malaysian semiconductor improvement programmes fail. Random improvement activity spread across all machines is why Kaizen programmes stall — a pattern explored in <a href="/blog/why-kaizen-events-fail/">why Kaizen events fail in manufacturing plants</a>. Constraint-focused improvement is not obvious, but it is the only approach that reliably moves the output number.</p>
+
+<h3>Step 3: Implement Operator-Led Equipment Health Checks</h3>
+
+<p>Autonomous maintenance — where production operators take ownership of basic equipment care — is the single highest-leverage OEE improvement activity in semiconductor manufacturing. Clean, inspect, and lubricate routines for wire bonders and die attach machines can eliminate 30 to 50 percent of unplanned stoppages within 90 days when implemented properly.</p>
+
+<p>The critical success factor is that operators must understand why they are doing the checks, not just what to check. When an operator understands the linkage between vacuum filter cleanliness and pick-and-place accuracy, they act like equipment owners instead of machine minders. That shift in mindset is what makes autonomous maintenance sustainable beyond the initial implementation period.</p>
+
+<h3>Step 4: Run Focused Improvement Projects on the Top Loss Categories</h3>
+
+<p>Once your data is clean and your constraint is identified, run structured Kaizen or Six Sigma projects on the top three loss categories at the bottleneck machine. Each project should have a specific numerical target — for example, reduce wire bonder unplanned downtime from eight percent to three percent — with a named team lead, a four to eight week project timeline, and a weekly review cadence. Without this structure, improvement activity dissolves back into firefighting within three months regardless of how good the analysis was.</p>
+
+<h2>What Results Can You Realistically Expect?</h2>
+
+<p>Based on OEE improvement programmes I have led in Malaysian semiconductor plants, a focused 12-month programme with proper data infrastructure, constraint-focused Kaizen, and autonomous maintenance implementation typically delivers availability improvement of eight to fifteen percentage points, performance improvement of five to ten percentage points, quality yield improvement of one to three percentage points, and a net OEE improvement of fifteen to twenty-five percentage points.</p>
+
+<p>To put that in business terms: for a plant running 20 wire bonders at 60% OEE, a fifteen-point improvement to 75% OEE is equivalent to adding three additional machines to the line — without capital expenditure. That is the financial case for OEE improvement in semiconductor manufacturing, and it is why the leading Malaysian semiconductor manufacturers invest in structured OEE programmes rather than treating it as an IT or data project.</p>
+
+<h2>Getting Started: OEE Diagnostic for Malaysian Semiconductor Plants</h2>
+
+<p>If your plant is below 70% OEE and you want a structured path to improvement, the starting point is an OEE diagnostic — typically a two to three day on-site assessment that identifies the top five loss categories at your bottleneck equipment and quantifies the improvement opportunity in output and revenue terms. This gives you a fact-based business case for the improvement investment and a clear prioritised action list before any training or project work begins.</p>
+
+<p>The diagnostic uses your existing production data — no new systems or sensors are required to get started. What changes is how that data is analysed and acted on. <a href="/#contact">Reach out through the contact section</a> to discuss whether an OEE diagnostic is the right starting point for your operation.</p>
+
+
+    <div class="author-bio">
+      <div class="author-av">H</div>
+      <div>
+        <strong>Husni Halim</strong>
+        <p>HRDC Certified Trainer (TTT/10228) and MPC Certified Productivity Expert. Principal Consultant at Visi Armada Consulting, specialising in lean manufacturing, OEE, and Kaizen for Malaysian manufacturers.</p>
+      </div>
+    </div>
+
+    <div class="share-bar">
+      <p>Share this article</p>
+      <div class="share-btns">
+        <a class="share-btn share-btn-li" href="https://www.linkedin.com/sharing/share-offsite/?url=https://husnihalim.com/blog/oee-semiconductor-factories-malaysia/" target="_blank" rel="noopener">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+          Share on LinkedIn
+        </a>
+        <a class="share-btn share-btn-fb" href="https://www.facebook.com/sharer/sharer.php?u=https://husnihalim.com/blog/oee-semiconductor-factories-malaysia/" target="_blank" rel="noopener">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+          Share on Facebook
+        </a>
+        <a class="share-btn share-btn-va" href="https://www.visiarmada.com" target="_blank" rel="noopener">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/></svg>
+          Visi Armada
+        </a>
+      </div>
+    </div>
+  </article>
+
+  <aside>
+    <div class="s-card">
+      <h4>In this article</h4>
+      <ul class="toc"><li>Why Semiconductor OEE Is Different From Other Industries</li>
+<li>The Three Loss Categories That Drive Down Semiconductor OEE</li>
+<li>OEE Benchmarks: Typical vs World-Class for Semiconductor Malaysia</li>
+<li>A Practical OEE Improvement Roadmap for Semiconductor Plants</li>
+<li>What Results Can You Realistically Expect?</li>
+<li>Getting Started: OEE Diagnostic for Malaysian Semiconductor Plants</li></ul>
+    </div>
+    <div class="s-card">
+      <h4>Related Articles</h4>
+      <a class="rel-post" href="/blog/5s-implementation-problems/">5S Implementation Problems: Why It Never Sticks After Training</a>
+<a class="rel-post" href="/blog/andon-system-implementation-problems/">Andon Systems That Nobody Uses After Installation</a>
+<a class="rel-post" href="/blog/why-kaizen-events-fail/">Why Kaizen Events Fail in Manufacturing Plants</a>
+<a class="rel-post" href="/blog/standard-work-implementation-problems/">Why Standard Work Never Gets Followed After Training</a>
+    </div>
+    <div class="cta-card">
+      <h4>Need help implementing this in your factory?</h4>
+      <p>HRDC claimable training available across Malaysia.</p>
+      <a href="/#contact" class="cta-btn">Get In Touch →</a>
+    </div>
+  </aside>
+</div>
+
+<footer class="footer">
+  <p>© 2026 Husni Halim · <a href="/">husnihalim.com</a> · HRDC Accredited Trainer TTT/10228</p>
+</footer>
+</body>
+</html>

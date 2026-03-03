@@ -15,15 +15,15 @@
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400;1,600&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&display=swap" rel="stylesheet">
 <style>
 :root {
- --c-dark: #0c1b2e;
- --c-accent: #8b2252;
- --c-secondary: #c47832;
- --c-warm: #f9f7f4;
- --c-soft: #ece8e3;
- --c-body: #374151;
- --c-mid: #6b7280;
- --font-h: 'Cormorant Garamond', Georgia, serif;
- --font-b: 'DM Sans', -apple-system, sans-serif;
+  --c-dark: #0c1b2e;
+  --c-accent: #8b2252;
+  --c-secondary: #c47832;
+  --c-warm: #f9f7f4;
+  --c-soft: #ece8e3;
+  --c-body: #374151;
+  --c-mid: #6b7280;
+  --font-h: 'Cormorant Garamond', Georgia, serif;
+  --font-b: 'DM Sans', -apple-system, sans-serif;
 }
 *,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
 html{scroll-behavior:smooth}
@@ -116,11 +116,11 @@ aside{padding-top:48px;position:sticky;top:70px}
 .footer a{color:var(--c-secondary);text-decoration:none}
 
 @media(max-width:800px){
- .page-wrap{grid-template-columns:1fr}
- aside{display:none}
- .nav{padding:12px 20px}
- .post-hero-content{padding:24px}
- .nav-links{gap:14px}
+  .page-wrap{grid-template-columns:1fr}
+  aside{display:none}
+  .nav{padding:12px 20px}
+  .post-hero-content{padding:24px}
+  .nav-links{gap:14px}
 }
 
 .blog-hero{background:var(--c-dark);padding:80px 24px 60px;text-align:center}
@@ -141,224 +141,232 @@ aside{padding-top:48px;position:sticky;top:70px}
 .card-footer{padding:14px 24px;border-top:1px solid #f0f0f0;display:flex;justify-content:space-between;align-items:center}
 .card-meta{font-size:12px;color:#aaa}
 .card-read{font-size:12px;color:var(--c-accent);font-weight:600}
-
-/* Mobile Nav fix */
-.hamburger{display:none;flex-direction:column;gap:5px;background:none;border:none;cursor:pointer;padding:8px;margin-left:auto}
-.hamburger-line{display:block;width:24px;height:2px;background:#fff;border-radius:2px;transition:transform .25s,opacity .25s}
-.hamburger.active .hamburger-line:nth-child(1){transform:translateY(7px) rotate(45deg)}
-.hamburger.active .hamburger-line:nth-child(2){opacity:0}
-.hamburger.active .hamburger-line:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
-@media(max-width:768px){.hamburger{display:flex}.nav-links{position:fixed;inset:0;background:var(--c-dark);z-index:999;flex-direction:column;justify-content:center;align-items:center;gap:2rem;opacity:0;visibility:hidden;transition:opacity .25s,visibility .25s;padding:2rem}.nav-links.open{opacity:1;visibility:visible}.nav-links a{font-size:1.4rem;color:#fff;letter-spacing:.02em}.nav-cta{background:var(--c-accent)!important;padding:10px 24px;border-radius:4px}.nav{padding:12px 20px}}
-@media(max-width:480px){article p,.post-subtitle{font-size:15px}article h2{font-size:22px}article h3{font-size:18px}blockquote{font-size:18px;padding:16px 20px}.page-wrap{padding:0 16px}.post-hero-content{padding:16px}.blog-grid{padding:0 16px;gap:20px}.card h2{font-size:17px}.share-btn{padding:9px 14px;font-size:12px}}
 </style>
 </head>
 <body>
 <nav class="nav">
- <a href="/" class="nav-logo">Husni<em>Halim</em></a>
- <button class="hamburger" id="hamburger" aria-label="Toggle navigation" aria-expanded="false"><span class="hamburger-line"></span><span class="hamburger-line"></span><span class="hamburger-line"></span></button><ul class="nav-links">
- <li><a href="/#about">About</a></li>
- <li><a href="/#expertise">Expertise</a></li>
- <li><a href="/#training">Training</a></li>
- <li><a href="/blog/" style="color:#fff">Blog</a></li>
- <li><a href="/#contact" class="nav-cta">Get In Touch</a></li>
- </ul>
+  <a href="/" class="nav-logo">Husni<em>Halim</em></a>
+  <ul class="nav-links">
+    <li><a href="/#about">About</a></li>
+    <li><a href="/#expertise">Expertise</a></li>
+    <li><a href="/#training">Training</a></li>
+    <li><a href="/blog/" style="color:#fff">Blog</a></li>
+    <li><a href="/#contact" class="nav-cta">Get In Touch</a></li>
+  </ul>
 </nav>
 <div class="blog-hero">
- <div class="label">Lean &amp; Kaizen Insights</div>
- <h1>Insights for Malaysian Manufacturers</h1>
- <p>Practical guides on lean manufacturing, Kaizen, OEE, and operational excellence — written from the factory floor, not the textbook.</p>
+  <div class="label">Lean &amp; Kaizen Insights</div>
+  <h1>Insights for Malaysian Manufacturers</h1>
+  <p>Practical guides on lean manufacturing, Kaizen, OEE, and operational excellence — written from the factory floor, not the textbook.</p>
 </div>
 <div class="blog-grid">
 
 <div class="card">
- <a href="/blog/why-kaizen-events-fail/">
- <div class="card-img">
- <img src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=1200&h=630&q=80" alt="Why Kaizen Events Fail in Manufacturing Plants" loading="lazy" onerror="this.style.opacity='.3'">
- </div>
- <div class="card-body">
- <div class="card-cat">Kaizen</div>
- <h2>Why Kaizen Events Fail in Manufacturing Plants</h2>
- <p>Most Kaizen events produce a report, not results. Here are the six root causes of Kaizen failure — and what successful i…</p>
- </div>
- <div class="card-footer">
- <span class="card-meta">November 2024 · 9 min read</span>
- <span class="card-read">Read →</span>
- </div>
- </a>
+  <a href="/blog/why-kaizen-events-fail/">
+    <div class="card-img">
+      <img src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=1200&h=630&q=80" alt="Why Kaizen Events Fail in Manufacturing Plants" loading="lazy" onerror="this.style.opacity='.3'">
+    </div>
+    <div class="card-body">
+      <div class="card-cat">Kaizen</div>
+      <h2>Why Kaizen Events Fail in Manufacturing Plants</h2>
+      <p>Most Kaizen events produce a report, not results. Here are the six root causes of Kaizen failure — and what successful i…</p>
+    </div>
+    <div class="card-footer">
+      <span class="card-meta">November 2024 · 9 min read</span>
+      <span class="card-read">Read →</span>
+    </div>
+  </a>
 </div>
 
 <div class="card">
- <a href="/blog/5s-implementation-problems/">
- <div class="card-img">
- <img src="https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?auto=format&fit=crop&w=1200&h=630&q=80" alt="5S Implementation Problems: Why It Never Sticks After Training" loading="lazy" onerror="this.style.opacity='.3'">
- </div>
- <div class="card-body">
- <div class="card-cat">Lean Manufacturing</div>
- <h2>5S Implementation Problems: Why It Never Sticks After Training</h2>
- <p>Thousands of Malaysian factories have run 5S programmes. A fraction of them are still practising 5S six months later. Th…</p>
- </div>
- <div class="card-footer">
- <span class="card-meta">December 2024 · 8 min read</span>
- <span class="card-read">Read →</span>
- </div>
- </a>
+  <a href="/blog/5s-implementation-problems/">
+    <div class="card-img">
+      <img src="https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?auto=format&fit=crop&w=1200&h=630&q=80" alt="5S Implementation Problems: Why It Never Sticks After Training" loading="lazy" onerror="this.style.opacity='.3'">
+    </div>
+    <div class="card-body">
+      <div class="card-cat">Lean Manufacturing</div>
+      <h2>5S Implementation Problems: Why It Never Sticks After Training</h2>
+      <p>Thousands of Malaysian factories have run 5S programmes. A fraction of them are still practising 5S six months later. Th…</p>
+    </div>
+    <div class="card-footer">
+      <span class="card-meta">December 2024 · 8 min read</span>
+      <span class="card-read">Read →</span>
+    </div>
+  </a>
 </div>
 
 <div class="card">
- <a href="/blog/value-stream-mapping-mistakes/">
- <div class="card-img">
- <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=1200&h=630&q=80" alt="Value Stream Mapping Mistakes That Make VSM Useless" loading="lazy" onerror="this.style.opacity='.3'">
- </div>
- <div class="card-body">
- <div class="card-cat">Lean Manufacturing</div>
- <h2>Value Stream Mapping Mistakes That Make VSM Useless</h2>
- <p>Value Stream Mapping is one of the most powerful tools in lean manufacturing. It is also one of the most commonly misuse…</p>
- </div>
- <div class="card-footer">
- <span class="card-meta">February 2025 · 8 min read</span>
- <span class="card-read">Read →</span>
- </div>
- </a>
+  <a href="/blog/value-stream-mapping-mistakes/">
+    <div class="card-img">
+      <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=1200&h=630&q=80" alt="Value Stream Mapping Mistakes That Make VSM Useless" loading="lazy" onerror="this.style.opacity='.3'">
+    </div>
+    <div class="card-body">
+      <div class="card-cat">Lean Manufacturing</div>
+      <h2>Value Stream Mapping Mistakes That Make VSM Useless</h2>
+      <p>Value Stream Mapping is one of the most powerful tools in lean manufacturing. It is also one of the most commonly misuse…</p>
+    </div>
+    <div class="card-footer">
+      <span class="card-meta">February 2025 · 8 min read</span>
+      <span class="card-read">Read →</span>
+    </div>
+  </a>
 </div>
 
 <div class="card">
- <a href="/blog/standard-work-implementation-problems/">
- <div class="card-img">
- <img src="https://images.unsplash.com/photo-1565618013578-d6bcdbf1b90d?auto=format&fit=crop&w=1200&h=630&q=80" alt="Why Standard Work Never Gets Followed After Training" loading="lazy" onerror="this.style.opacity='.3'">
- </div>
- <div class="card-body">
- <div class="card-cat">Lean Manufacturing</div>
- <h2>Why Standard Work Never Gets Followed After Training</h2>
- <p>Standard work is the foundation of every lean system. It is also the most consistently ignored element. Understanding wh…</p>
- </div>
- <div class="card-footer">
- <span class="card-meta">April 2025 · 7 min read</span>
- <span class="card-read">Read →</span>
- </div>
- </a>
+  <a href="/blog/standard-work-implementation-problems/">
+    <div class="card-img">
+      <img src="https://images.unsplash.com/photo-1565618013578-d6bcdbf1b90d?auto=format&fit=crop&w=1200&h=630&q=80" alt="Why Standard Work Never Gets Followed After Training" loading="lazy" onerror="this.style.opacity='.3'">
+    </div>
+    <div class="card-body">
+      <div class="card-cat">Lean Manufacturing</div>
+      <h2>Why Standard Work Never Gets Followed After Training</h2>
+      <p>Standard work is the foundation of every lean system. It is also the most consistently ignored element. Understanding wh…</p>
+    </div>
+    <div class="card-footer">
+      <span class="card-meta">April 2025 · 7 min read</span>
+      <span class="card-read">Read →</span>
+    </div>
+  </a>
 </div>
 
 <div class="card">
- <a href="/blog/kaizen-blitz-vs-kaizen-culture/">
- <div class="card-img">
- <img src="https://images.unsplash.com/photo-1542744094-24638eff58bb?auto=format&fit=crop&w=1200&h=630&q=80" alt="Kaizen Blitz vs Kaizen Culture: Why One-Off Events Always Fail Long-Term" loading="lazy" onerror="this.style.opacity='.3'">
- </div>
- <div class="card-body">
- <div class="card-cat">Kaizen</div>
- <h2>Kaizen Blitz vs Kaizen Culture: Why One-Off Events Always Fail Long-Term</h2>
- <p>The difference between factories that improve continuously and factories that run Kaizen events is not the events. It is…</p>
- </div>
- <div class="card-footer">
- <span class="card-meta">June 2025 · 7 min read</span>
- <span class="card-read">Read →</span>
- </div>
- </a>
+  <a href="/blog/kaizen-blitz-vs-kaizen-culture/">
+    <div class="card-img">
+      <img src="https://images.unsplash.com/photo-1542744094-24638eff58bb?auto=format&fit=crop&w=1200&h=630&q=80" alt="Kaizen Blitz vs Kaizen Culture: Why One-Off Events Always Fail Long-Term" loading="lazy" onerror="this.style.opacity='.3'">
+    </div>
+    <div class="card-body">
+      <div class="card-cat">Kaizen</div>
+      <h2>Kaizen Blitz vs Kaizen Culture: Why One-Off Events Always Fail Long-Term</h2>
+      <p>The difference between factories that improve continuously and factories that run Kaizen events is not the events. It is…</p>
+    </div>
+    <div class="card-footer">
+      <span class="card-meta">June 2025 · 7 min read</span>
+      <span class="card-read">Read →</span>
+    </div>
+  </a>
 </div>
 
 <div class="card">
- <a href="/blog/visual-management-failures/">
- <div class="card-img">
- <img src="https://images.unsplash.com/photo-1553877522-43269d4ea984?auto=format&fit=crop&w=1200&h=630&q=80" alt="Visual Management Failures: Boards Nobody Reads" loading="lazy" onerror="this.style.opacity='.3'">
- </div>
- <div class="card-body">
- <div class="card-cat">Lean Manufacturing</div>
- <h2>Visual Management Failures: Boards Nobody Reads</h2>
- <p>Every lean factory has visual management boards. Very few of them actually manage anything. Here is the difference betwe…</p>
- </div>
- <div class="card-footer">
- <span class="card-meta">August 2025 · 7 min read</span>
- <span class="card-read">Read →</span>
- </div>
- </a>
+  <a href="/blog/visual-management-failures/">
+    <div class="card-img">
+      <img src="https://images.unsplash.com/photo-1553877522-43269d4ea984?auto=format&fit=crop&w=1200&h=630&q=80" alt="Visual Management Failures: Boards Nobody Reads" loading="lazy" onerror="this.style.opacity='.3'">
+    </div>
+    <div class="card-body">
+      <div class="card-cat">Lean Manufacturing</div>
+      <h2>Visual Management Failures: Boards Nobody Reads</h2>
+      <p>Every lean factory has visual management boards. Very few of them actually manage anything. Here is the difference betwe…</p>
+    </div>
+    <div class="card-footer">
+      <span class="card-meta">August 2025 · 7 min read</span>
+      <span class="card-read">Read →</span>
+    </div>
+  </a>
 </div>
 
 <div class="card">
- <a href="/blog/poka-yoke-implementation-problems/">
- <div class="card-img">
- <img src="https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?auto=format&fit=crop&w=1200&h=630&q=80" alt="Why Poka-Yoke Implementations Fail on Production Lines" loading="lazy" onerror="this.style.opacity='.3'">
- </div>
- <div class="card-body">
- <div class="card-cat">Lean Manufacturing</div>
- <h2>Why Poka-Yoke Implementations Fail on Production Lines</h2>
- <p>Error-proofing should make defects impossible. In practice, most poka-yoke devices are bypassed, broken, or ignored with…</p>
- </div>
- <div class="card-footer">
- <span class="card-meta">September 2025 · 7 min read</span>
- <span class="card-read">Read →</span>
- </div>
- </a>
+  <a href="/blog/poka-yoke-implementation-problems/">
+    <div class="card-img">
+      <img src="https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?auto=format&fit=crop&w=1200&h=630&q=80" alt="Why Poka-Yoke Implementations Fail on Production Lines" loading="lazy" onerror="this.style.opacity='.3'">
+    </div>
+    <div class="card-body">
+      <div class="card-cat">Lean Manufacturing</div>
+      <h2>Why Poka-Yoke Implementations Fail on Production Lines</h2>
+      <p>Error-proofing should make defects impossible. In practice, most poka-yoke devices are bypassed, broken, or ignored with…</p>
+    </div>
+    <div class="card-footer">
+      <span class="card-meta">September 2025 · 7 min read</span>
+      <span class="card-read">Read →</span>
+    </div>
+  </a>
 </div>
 
 <div class="card">
- <a href="/blog/pdca-implementation-problems/">
- <div class="card-img">
- <img src="https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?auto=format&fit=crop&w=1200&h=630&q=80" alt="PDCA in Malaysian SMEs: Why It Always Gets Stuck at Plan" loading="lazy" onerror="this.style.opacity='.3'">
- </div>
- <div class="card-body">
- <div class="card-cat">Continuous Improvement</div>
- <h2>PDCA in Malaysian SMEs: Why It Always Gets Stuck at Plan</h2>
- <p>The PDCA cycle is four steps. Most Malaysian manufacturing SMEs complete one and a half of them. Here is why — and what …</p>
- </div>
- <div class="card-footer">
- <span class="card-meta">October 2025 · 7 min read</span>
- <span class="card-read">Read →</span>
- </div>
- </a>
+  <a href="/blog/pdca-implementation-problems/">
+    <div class="card-img">
+      <img src="https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?auto=format&fit=crop&w=1200&h=630&q=80" alt="PDCA in Malaysian SMEs: Why It Always Gets Stuck at Plan" loading="lazy" onerror="this.style.opacity='.3'">
+    </div>
+    <div class="card-body">
+      <div class="card-cat">Continuous Improvement</div>
+      <h2>PDCA in Malaysian SMEs: Why It Always Gets Stuck at Plan</h2>
+      <p>The PDCA cycle is four steps. Most Malaysian manufacturing SMEs complete one and a half of them. Here is why — and what …</p>
+    </div>
+    <div class="card-footer">
+      <span class="card-meta">October 2025 · 7 min read</span>
+      <span class="card-read">Read →</span>
+    </div>
+  </a>
 </div>
 
 <div class="card">
- <a href="/blog/andon-system-implementation-problems/">
- <div class="card-img">
- <img src="https://images.unsplash.com/photo-1565618014297-ec85f49db6aa?auto=format&fit=crop&w=1200&h=630&q=80" alt="Andon Systems That Nobody Uses After Installation" loading="lazy" onerror="this.style.opacity='.3'">
- </div>
- <div class="card-body">
- <div class="card-cat">Lean Manufacturing</div>
- <h2>Andon Systems That Nobody Uses After Installation</h2>
- <p>Andon is one of the most powerful tools in the Toyota Production System. In most non-Toyota factories, it is an expensiv…</p>
- </div>
- <div class="card-footer">
- <span class="card-meta">November 2025 · 7 min read</span>
- <span class="card-read">Read →</span>
- </div>
- </a>
+  <a href="/blog/andon-system-implementation-problems/">
+    <div class="card-img">
+      <img src="https://images.unsplash.com/photo-1565618014297-ec85f49db6aa?auto=format&fit=crop&w=1200&h=630&q=80" alt="Andon Systems That Nobody Uses After Installation" loading="lazy" onerror="this.style.opacity='.3'">
+    </div>
+    <div class="card-body">
+      <div class="card-cat">Lean Manufacturing</div>
+      <h2>Andon Systems That Nobody Uses After Installation</h2>
+      <p>Andon is one of the most powerful tools in the Toyota Production System. In most non-Toyota factories, it is an expensiv…</p>
+    </div>
+    <div class="card-footer">
+      <span class="card-meta">November 2025 · 7 min read</span>
+      <span class="card-read">Read →</span>
+    </div>
+  </a>
 </div>
 
 <div class="card">
- <a href="/blog/gemba-walk-problems/">
- <div class="card-img">
- <img src="https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=1200&h=630&q=80" alt="Why Gemba Walks Do Not Work: Doing Gemba the Wrong Way" loading="lazy" onerror="this.style.opacity='.3'">
- </div>
- <div class="card-body">
- <div class="card-cat">Lean Manufacturing</div>
- <h2>Why Gemba Walks Do Not Work: Doing Gemba the Wrong Way</h2>
- <p>Gemba walks are one of the most powerful habits in lean leadership. They are also one of the most commonly performed inc…</p>
- </div>
- <div class="card-footer">
- <span class="card-meta">January 2026 · 7 min read</span>
- <span class="card-read">Read →</span>
- </div>
- </a>
+  <a href="/blog/gemba-walk-problems/">
+    <div class="card-img">
+      <img src="https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=1200&h=630&q=80" alt="Why Gemba Walks Do Not Work: Doing Gemba the Wrong Way" loading="lazy" onerror="this.style.opacity='.3'">
+    </div>
+    <div class="card-body">
+      <div class="card-cat">Lean Manufacturing</div>
+      <h2>Why Gemba Walks Do Not Work: Doing Gemba the Wrong Way</h2>
+      <p>Gemba walks are one of the most powerful habits in lean leadership. They are also one of the most commonly performed inc…</p>
+    </div>
+    <div class="card-footer">
+      <span class="card-meta">January 2026 · 7 min read</span>
+      <span class="card-read">Read →</span>
+    </div>
+  </a>
 </div>
 
 <div class="card">
- <a href="/blog/oee-training-malaysia/">
- <div class="card-img">
- <img src="https://images.unsplash.com/photo-1621905251918-48416bd8575a?auto=format&fit=crop&w=1200&h=630&q=80" alt="OEE Training Malaysia: The Complete Guide for Manufacturing Leaders" loading="lazy" onerror="this.style.opacity='.3'">
- </div>
- <div class="card-body">
- <div class="card-cat">OEE & TPM</div>
- <h2>OEE Training Malaysia: The Complete Guide for Manufacturing Leaders</h2>
- <p>Overall Equipment Effectiveness is the most widely misunderstood KPI in Malaysian manufacturing. This guide explains wha…</p>
- </div>
- <div class="card-footer">
- <span class="card-meta">October 2024 · 11 min read</span>
- <span class="card-read">Read →</span>
- </div>
- </a>
+  <a href="/blog/oee-training-malaysia/">
+    <div class="card-img">
+      <img src="https://images.unsplash.com/photo-1621905251918-48416bd8575a?auto=format&fit=crop&w=1200&h=630&q=80" alt="OEE Training Malaysia: The Complete Guide for Manufacturing Leaders" loading="lazy" onerror="this.style.opacity='.3'">
+    </div>
+    <div class="card-body">
+      <div class="card-cat">OEE & TPM</div>
+      <h2>OEE Training Malaysia: The Complete Guide for Manufacturing Leaders</h2>
+      <p>Overall Equipment Effectiveness is the most widely misunderstood KPI in Malaysian manufacturing. This guide explains wha…</p>
+    </div>
+    <div class="card-footer">
+      <span class="card-meta">October 2024 · 11 min read</span>
+      <span class="card-read">Read →</span>
+    </div>
+  </a>
+</div>
+
+<div class="card">
+  <a href="/blog/oee-semiconductor-factories-malaysia/">
+    <div class="card-img">
+      <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&h=630&q=80" alt="How to Improve OEE in Semiconductor Factories Malaysia" loading="lazy" onerror="this.style.opacity='.3'">
+    </div>
+    <div class="card-body">
+      <div class="card-cat">OEE & TPM</div>
+      <h2>How to Improve OEE in Semiconductor Factories Malaysia</h2>
+      <p>Malaysian semiconductor plants run 15 to 30 percentage points below world-class OEE. Here is what the data shows, what d…</p>
+    </div>
+    <div class="card-footer">
+      <span class="card-meta">March 2026 · 10 min read</span>
+      <span class="card-read">Read →</span>
+    </div>
+  </a>
 </div>
 </div>
 <footer class="footer">
- <p>© 2026 Husni Halim · <a href="/">husnihalim.com</a> · HRDC Accredited Trainer </p>
+  <p>© 2026 Husni Halim · <a href="/">husnihalim.com</a> · HRDC Accredited Trainer TTT/10228</p>
 </footer>
-<script>(function(){var btn=document.getElementById("hamburger");var nav=document.querySelector(".nav-links");if(!btn||!nav)return;btn.addEventListener("click",function(){var open=nav.classList.toggle("open");btn.classList.toggle("active",open);btn.setAttribute("aria-expanded",open);});nav.querySelectorAll("a").forEach(function(a){a.addEventListener("click",function(){nav.classList.remove("open");btn.classList.remove("active");btn.setAttribute("aria-expanded","false");});});}());</script></body>
+</body>
 </html>
