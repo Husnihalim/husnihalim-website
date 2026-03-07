@@ -1,0 +1,1166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <meta name="description" content="Husni Halim - HRDC Accredited Trainer & MPC Certified Productivity Expert. 16+ years in Lean Manufacturing, OEE, Kaizen, 5S, TPM & AI for Industry 4.0. HRDF Claimable corporate training across Malaysia. Certified Process Kaizen Engineer (Solving Efeso Consulting, Milan, Italy). Principal Consultant at Visi Armada Consulting.">
+ <meta name="keywords" content="Husni Halim, HRDC Accredited trainer Malaysia, HRDF claimable trainer, HRD Corp Accredited trainer, OEE consultant Malaysia, OEE training Malaysia, lean manufacturing trainer Malaysia, kaizen training HRDC claimable, certified process kaizen engineer, operational excellence consultant, 5S training Malaysia, TPM training Malaysia, manufacturing consultant Malaysia, MPC certified productivity expert, factory productivity trainer, AI for industry 4.0 training, value stream mapping trainer, problem solving training Malaysia, corporate trainer Malaysia, continuous improvement consultant, lean six sigma Malaysia, industry 4.0 consultant Malaysia">
+ <meta name="author" content="Husni Halim">
+ <meta name="robots" content="index, follow">
+ <link rel="canonical" href="https://husnihalim.com/">
+
+ <!-- Open Graph / Facebook -->
+ <meta property="og:type" content="profile">
+ <meta property="og:url" content="https://husnihalim.com/">
+ <meta property="og:title" content="Husni Halim | HRDC Accredited Trainer & OEE Consultant Malaysia - HRDF Claimable">
+ <meta property="og:description" content="HRDC Accredited Trainer & MPC Certified Productivity Expert. HRDF Claimable corporate training in Lean Manufacturing, OEE, Kaizen, 5S, TPM & AI for Industry 4.0. 500+ professionals trained across Malaysia.">
+ <meta property="og:site_name" content="Husni Halim">
+ <meta property="og:locale" content="en_MY">
+ <meta property="profile:first_name" content="Husni">
+ <meta property="profile:last_name" content="Halim">
+
+ <!-- Twitter -->
+ <meta name="twitter:card" content="summary_large_image">
+ <meta name="twitter:title" content="Husni Halim | HRDC Accredited Trainer & OEE Consultant Malaysia">
+ <meta name="twitter:description" content="HRDF Claimable corporate training: Lean Manufacturing, OEE, Kaizen, 5S, TPM & AI for Industry 4.0. MPC Certified. 500+ professionals trained across Malaysia.">
+
+ <!-- Geo Tags -->
+ <meta name="geo.region" content="MY-10">
+ <meta name="geo.placename" content="Seri Kembangan, Selangor">
+ <meta name="geo.position" content="3.0319;101.6841">
+
+ <title>Husni Halim | HRDC Accredited Trainer Malaysia - HRDF Claimable OEE, Lean Manufacturing, Kaizen Training</title>
+ <link rel="preconnect" href="https://fonts.googleapis.com">
+ <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+ <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,300;1,9..40,400;1,9..40,500&display=swap" rel="stylesheet">
+ <link rel="stylesheet" href="style.css">
+ <link rel="icon" href="favicon.ico" sizes="any">
+ <link rel="icon" href="favicon.svg" type="image/svg+xml">
+ <link rel="icon" href="favicon-32x32.png" sizes="32x32" type="image/png">
+ <link rel="icon" href="favicon-16x16.png" sizes="16x16" type="image/png">
+ <link rel="apple-touch-icon" href="apple-touch-icon.png">
+
+ <!-- Structured Data - Person -->
+ <script type="application/ld+json">
+ {
+ "@context": "https://schema.org",
+ "@type": "Person",
+ "name": "Husni Halim",
+ "url": "https://husnihalim.com",
+ "jobTitle": "Principal Consultant & Certified Trainer",
+ "worksFor": {
+ "@type": "Organization",
+ "name": "Visi Armada Consulting",
+ "url": "https://visiarmada.com"
+ },
+ "description": "HRDC Accredited Trainer & MPC Certified Productivity Expert with 16+ years in manufacturing operational excellence. Specializing in HRDF claimable corporate training: OEE, Lean Manufacturing, Kaizen, 5S, TPM, VSM & AI for Industry 4.0 across Malaysia.",
+ "address": {
+ "@type": "PostalAddress",
+ "addressLocality": "Puchong",
+ "addressRegion": "Selangor",
+ "addressCountry": "MY"
+ },
+ "telephone": "+60165261901",
+ "email": "husnihalim@visiarmada.com",
+ "knowsAbout": ["Overall Equipment Effectiveness (OEE)", "Lean Manufacturing", "Kaizen", "5S Methodology", "Total Productive Maintenance (TPM)", "Value Stream Mapping (VSM)", "Industry 4.0", "AI for Manufacturing", "Problem Solving", "Continuous Improvement", "Six Sigma", "HRDF Claimable Training", "Factory Productivity", "Operational Excellence"],
+ "hasCredential": [
+ { "@type": "EducationalOccupationalCredential", "credentialCategory": "HRDC Accredited Trainer", "recognizedBy": {"@type": "Organization", "name": "Human Resource Development Corporation Malaysia"} },
+ { "@type": "EducationalOccupationalCredential", "credentialCategory": "MPC Certified Productivity Expert", "recognizedBy": {"@type": "Organization", "name": "Malaysia Productivity Corporation"} },
+ { "@type": "EducationalOccupationalCredential", "credentialCategory": "Certified Process Kaizen Engineer", "recognizedBy": {"@type": "Organization", "name": "Solving Efeso Consulting"} },
+    { "@type": "EducationalOccupationalCredential", "credentialCategory": "Certificate of Global Leadership Excellence", "recognizedBy": {"@type": "Organization", "name": "Global Skill Development Council (GSDC)"}, "identifier": "40739", "dateCreated": "2025-12-29" }
+ ],
+ "hasOccupation": {
+ "@type": "Occupation",
+ "name": "Management Consultant & Corporate Trainer",
+ "occupationalCategory": "13-1111",
+ "skills": "OEE, Lean Manufacturing, Kaizen, 5S, TPM, VSM, Problem Solving, AI, Industry 4.0"
+ },
+ "alumniOf": {
+ "@type": "CollegeOrUniversity",
+ "name": "University of Arizona",
+ "sameAs": "https://www.arizona.edu"
+ },
+ "image": "https://husnihalim.com/assets/husni-portrait.png",
+ "sameAs": [
+ "https://www.linkedin.com/in/husni-halim-7436b01b/",
+ "https://www.facebook.com/visiarmada",
+ "https://visiarmada.com"
+ ]
+ }
+ </script>
+
+ <!-- Structured Data - Professional Service (LocalBusiness) -->
+ <script type="application/ld+json">
+ {
+ "@context": "https://schema.org",
+ "@type": "ProfessionalService",
+ "name": "Visi Armada Consulting — Husni Halim",
+ "url": "https://husnihalim.com",
+ "logo": "https://husnihalim.com/assets/husni-portrait.png",
+ "image": "https://husnihalim.com/assets/husni-portrait.png",
+ "description": "HRDC-claimable lean manufacturing, OEE, Kaizen, 5S and TPM training and consulting for Malaysian factories and manufacturers.",
+ "address": {
+ "@type": "PostalAddress",
+ "addressLocality": "Puchong",
+ "addressRegion": "Selangor",
+ "addressCountry": "MY"
+ },
+ "geo": {
+ "@type": "GeoCoordinates",
+ "latitude": "3.0319",
+ "longitude": "101.6841"
+ },
+ "telephone": "+60165261901",
+ "email": "husnihalim@visiarmada.com",
+ "areaServed": {
+ "@type": "Country",
+ "name": "Malaysia"
+ },
+ "serviceType": ["OEE Training", "Lean Manufacturing Consulting", "Kaizen Training", "5S Training", "TPM Training", "Value Stream Mapping", "HRDC Claimable Training"],
+ "hasOfferCatalog": {
+ "@type": "OfferCatalog",
+ "name": "HRDC Claimable Corporate Training Programs",
+ "itemListElement": [
+ {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "OEE Training Malaysia"}},
+ {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Kaizen Training Malaysia"}},
+ {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "5S Training Malaysia"}},
+ {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Lean Manufacturing Training Malaysia"}},
+ {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "TPM Training Malaysia"}}
+ ]
+ },
+ "sameAs": [
+ "https://www.linkedin.com/in/husni-halim-7436b01b/",
+ "https://www.facebook.com/visiarmada",
+ "https://visiarmada.com"
+ ]
+ }
+ </script>
+
+ <!-- Structured Data - Training Courses -->
+ <script type="application/ld+json">
+ {
+ "@context": "https://schema.org",
+ "@type": "ItemList",
+ "name": "Training Programs by Husni Halim",
+ "description": "HRDC-claimable corporate training programs",
+ "numberOfItems": 8,
+ "itemListElement": [
+ {"@type": "Course", "position": 1, "name": "Overall Equipment Effectiveness (OEE)", "provider": {"@type": "Person", "name": "Husni Halim"}, "educationalCredentialAwarded": "HRDC Claimable Certificate"},
+ {"@type": "Course", "position": 2, "name": "Kaizen Principles & Applications", "provider": {"@type": "Person", "name": "Husni Halim"}, "educationalCredentialAwarded": "HRDC Claimable Certificate"},
+ {"@type": "Course", "position": 3, "name": "Lean Manufacturing & Value Stream Mapping", "provider": {"@type": "Person", "name": "Husni Halim"}, "educationalCredentialAwarded": "HRDC Claimable Certificate"},
+ {"@type": "Course", "position": 4, "name": "5S Workplace Organization", "provider": {"@type": "Person", "name": "Husni Halim"}, "educationalCredentialAwarded": "HRDC Claimable Certificate"},
+ {"@type": "Course", "position": 5, "name": "Total Productive Maintenance (TPM)", "provider": {"@type": "Person", "name": "Husni Halim"}, "educationalCredentialAwarded": "HRDC Claimable Certificate"},
+ {"@type": "Course", "position": 6, "name": "Problem Solving Methodologies", "provider": {"@type": "Person", "name": "Husni Halim"}, "educationalCredentialAwarded": "HRDC Claimable Certificate"},
+ {"@type": "Course", "position": 7, "name": "AI for Industry & Competitiveness", "provider": {"@type": "Person", "name": "Husni Halim"}, "educationalCredentialAwarded": "HRDC Claimable Certificate"}
+ ]
+ }
+ </script>
+</head>
+<body>
+
+ <!-- ========== NAVIGATION ========== -->
+ <nav class="main-nav" id="navbar">
+ <div class="nav-inner">
+ <a href="#hero" class="nav-logo" aria-label="Husni Halim Home">
+ <span class="nav-logo-text" data-editable="hh-nav-logo">Husni<em>Halim</em></span>
+ </a>
+ <button class="hamburger" id="hamburger" aria-label="Toggle navigation menu" aria-expanded="false">
+ <span class="hamburger-line"></span>
+ <span class="hamburger-line"></span>
+ <span class="hamburger-line"></span>
+ </button>
+ <ul class="nav-links" id="navLinks">
+ <li><a href="#about">About</a></li>
+ <li><a href="#expertise">Expertise</a></li>
+ <li><a href="#credentials">Credentials</a></li>
+ <li><a href="/hrdc-training/">HRDC Training</a></li><li><a href="/consulting/">Consulting</a></li>
+ <li><a href="#track-record">Track Record</a></li>
+ <li><a href="#testimonials">Testimonials</a></li>
+ <li><a href="/blog/">Blog</a></li>
+ <li><a href="#contact" class="nav-cta">Get In Touch</a></li>
+ </ul>
+ </div>
+ </nav>
+
+ <!-- ========== HERO SECTION ========== -->
+ <section class="hero" id="hero">
+ <div class="hero-bg-shapes">
+ <div class="hero-shape hero-shape--1"></div>
+ <div class="hero-shape hero-shape--2"></div>
+ <div class="hero-shape hero-shape--3"></div>
+ <div class="hero-accent-line"></div>
+ </div>
+
+ <div class="hero-inner">
+ <!-- Left: Text -->
+ <div class="hero-content">
+ <div class="hero-badge reveal" data-editable="hh-hero-badge">
+ <span>HRDC Accredited Trainer &bull; B.Sc. Aerospace Engineering</span>
+ </div>
+ <h1 class="hero-title reveal" data-editable="hh-hero-title">
+ Husni<br><em>Halim</em>
+ </h1>
+ <p class="hero-role reveal" data-editable="hh-hero-role">
+ Managing Director & Principal Consultant</p>
+ </p>
+ <p class="hero-subtitle reveal" data-editable="hh-hero-subtitle">
+ A seasoned manufacturing professional, Principal Consultant, and accredited HRDC trainer with over 16 years of hands-on experience in heavy manufacturing. Specializing in High Voltage (HV) Power Cable and Oil & Gas sectors, with a global perspective on operational excellence gained from working across Norway, Brazil, China, Indonesia, and Italy.
+ </p>
+ <div class="hero-actions reveal">
+ <a href="#expertise" class="btn btn-primary">View Expertise</a>
+ <a href="#contact" class="btn btn-outline">Book a Session</a>
+ </div>
+ 
+ </div>
+
+ <!-- Right: Portrait -->
+ <div class="hero-portrait-wrap">
+ <div class="hero-portrait-glow"></div>
+ <img
+ class="hero-portrait"
+ data-image="hh-portrait"
+ src="assets/husni-portrait.png"
+ alt="Husni Halim — Principal Consultant &amp; Certified Trainer"
+ loading="eager"
+  fetchpriority="high" loading="eager">
+ 
+ <div class="hero-stats reveal">
+ <div class="hero-stat">
+ <span class="hero-stat-number" data-editable="hh-hero-stat-1-num">16+</span>
+ <span class="hero-stat-label" data-editable="hh-hero-stat-1-label">Years Industry Experience</span>
+ </div>
+ <div class="hero-stat">
+ <span class="hero-stat-number" data-editable="hh-hero-stat-2-num">35+</span>
+ <span class="hero-stat-label" data-editable="hh-hero-stat-2-label">Corporate Projects</span>
+ </div>
+ <div class="hero-stat">
+ <span class="hero-stat-number" data-editable="hh-hero-stat-3-num">500+</span>
+ <span class="hero-stat-label" data-editable="hh-hero-stat-3-label">Professionals Trained</span>
+ </div>
+ </div>
+ </div>
+ </div>
+
+ <div class="hero-scroll-indicator">
+ <span>Scroll</span>
+ <div class="scroll-line"></div>
+ </div>
+ </section>
+
+ <!-- ========== ABOUT / PROFILE ========== -->
+ <section class="section section--about" id="about">
+ <div class="container">
+ <div class="section-label reveal">
+ <span class="section-number">01</span>
+ <span class="section-name">Profile</span>
+ </div>
+ <div class="editorial-grid editorial-grid--about">
+ <div class="editorial-col editorial-col--profile reveal">
+ <h2 class="section-heading" data-editable="hh-about-heading">About Husni Halim</h2>
+ <div class="decorative-line"></div>
+ <p class="body-text body-text--lead" data-editable="hh-about-text-1">
+ Husni Halim is a Principal Consultant and HRDC accredited trainer with over 16 years of hands-on manufacturing experience — built across roles with the world’s number one power cable manufacturer and one of the largest oil and gas engineering firms out of Oslo, Norway. That global industrial background now drives his work across Malaysia: transforming factory operations and building workforce capability in operational excellence.
+ </p>
+ <p class="body-text" data-editable="hh-about-text-2">
+ A University of Arizona graduate (B.Sc. Aerospace Engineering, 2003), Husni began his career at Sumitomo Metal Mining as a Design Engineer before moving into global manufacturing roles — serving as a Process Kaizen Engineer at major production sites in Sorocaba (Brazil), Tianjin (China), Cikampek (Indonesia), and Napoli (Italy), then spending four years with a premier oil and gas engineering firm in Oslo, Norway.
+
+ Back in Malaysia as Managing Director of Visi Armada Consulting, he works with manufacturers as both a certified trainer and hands-on operations consultant. His flagship programs include leading OEE implementation across 30 Bumiputera factories under TERAJU’s Pritech 4.0 national initiative, multi-year capability programs for MARII IPC, and ongoing process improvement engagements across logistics, aerospace MRO, and precision manufacturing.
+ </p>
+ </div>
+ <div class="editorial-col editorial-col--highlights reveal">
+ <div class="highlight-card">
+ <h3 class="subheading" data-editable="hh-about-highlight-heading">Core Philosophy</h3>
+ <p class="body-text" data-editable="hh-about-highlight-text">
+ "Excellence is not a destination but a continuous journey. Every factory floor holds untapped potential — my role is to unlock it through proven methodologies, hands-on engagement, and a relentless commitment to measurable results."
+ </p>
+ </div>
+ </div>
+ </div>
+ </div>
+ </div>
+ </section>
+
+ <!-- ========== EDITORIAL IMAGE BREAK ========== -->
+ <div class="editorial-image-break reveal">
+ <img data-image="hh-editorial-1" src="https://images.unsplash.com/photo-1581092160607-ee22621dd758?w=1600&q=80" alt="Manufacturing facility and operational excellence consulting" class="editorial-break-img" loading="lazy">
+ <div class="editorial-image-caption">16+ years delivering operational excellence across Malaysia's manufacturing industry</div>
+ </div>
+
+ <!-- ========== PROFESSIONAL QUOTE ========== -->
+ <section class="section section--quote" id="quote">
+ <div class="container">
+ <div class="quote-layout reveal">
+ <div class="quote-mark">&ldquo;</div>
+ <blockquote class="quote-text" data-editable="hh-quote-text">
+ I believe every organization has the potential to achieve operational excellence. My role is to bridge the gap between current practices and world-class standards — through knowledge transfer, hands-on coaching, and sustainable system improvement that empowers teams to drive their own continuous improvement journey.
+ </blockquote>
+ <div class="quote-attribution">
+ <div class="quote-line"></div>
+ <p class="quote-name" data-editable="hh-quote-name">Husni Halim</p>
+ <p class="quote-title" data-editable="hh-quote-title">Managing Director, Visi Armada Consulting</p>
+ </div>
+ </div>
+ </div>
+ </section>
+
+ <!-- ========== EXPERTISE / SPECIALIZATIONS ========== -->
+ <section class="section section--expertise" id="expertise">
+ <div class="container">
+ <div class="section-label reveal">
+ <span class="section-number">02</span>
+ <span class="section-name">Specializations</span>
+ </div>
+ <h2 class="section-heading section-heading--center reveal" data-editable="hh-expertise-heading">Areas of Expertise</h2>
+ <p class="section-subheading reveal" data-editable="hh-expertise-subheading">Deep specialization across manufacturing operations, continuous improvement, and digital transformation — delivering practical, results-oriented solutions.</p>
+ <div class="expertise-grid">
+ <article class="expertise-card reveal">
+ <div class="expertise-card-number">01</div>
+ <h3 class="expertise-card-title" data-editable="hh-expertise-1-title">Overall Equipment Effectiveness (OEE)</h3>
+ <div class="expertise-card-line"></div>
+ <p class="expertise-card-text" data-editable="hh-expertise-1-text">
+ Comprehensive OEE implementation and optimization — from measurement system design to targeted improvement strategies. Proven methodology for maximizing availability, performance, and quality across manufacturing lines.
+ </p>
+ <div class="expertise-card-tags">
+ <span class="tag">OEE Analysis</span>
+ <span class="tag">Loss Elimination</span>
+ <span class="tag">Performance Metrics</span>
+ </div>
+ </article>
+ <article class="expertise-card reveal">
+ <div class="expertise-card-number">02</div>
+ <h3 class="expertise-card-title" data-editable="hh-expertise-2-title">Kaizen &amp; Continuous Improvement</h3>
+ <div class="expertise-card-line"></div>
+ <p class="expertise-card-text" data-editable="hh-expertise-2-text">
+ Certified Process Kaizen Engineer (Solving Efeso Consulting of Milan, Italy). Expert in deploying systematic improvement cycles, Gemba walks, rapid improvement events, and building a culture of continuous improvement at every organizational level.
+ </p>
+ <div class="expertise-card-tags">
+ <span class="tag">Process Kaizen</span>
+ <span class="tag">Gemba</span>
+ <span class="tag">PDCA</span>
+ </div>
+ </article>
+ <article class="expertise-card reveal">
+ <div class="expertise-card-number">03</div>
+ <h3 class="expertise-card-title" data-editable="hh-expertise-3-title">Lean Manufacturing &amp; 5S</h3>
+ <div class="expertise-card-line"></div>
+ <p class="expertise-card-text" data-editable="hh-expertise-3-text">
+ End-to-end Lean transformation consulting — from Value Stream Mapping and waste elimination to 5S workplace organization, visual management, and standard work implementation for sustained operational gains.
+ </p>
+ <div class="expertise-card-tags">
+ <span class="tag">Lean</span>
+ <span class="tag">5S</span>
+ <span class="tag">VSM</span>
+ <span class="tag">Waste Elimination</span>
+ </div>
+ </article>
+ <article class="expertise-card reveal">
+ <div class="expertise-card-number">04</div>
+ <h3 class="expertise-card-title" data-editable="hh-expertise-4-title">Total Productive Maintenance (TPM)</h3>
+ <div class="expertise-card-line"></div>
+ <p class="expertise-card-text" data-editable="hh-expertise-4-text">
+ Designing and deploying TPM systems that transition organizations from reactive to proactive maintenance cultures. Specialized in autonomous maintenance, planned maintenance, and equipment reliability optimization.
+ </p>
+ <div class="expertise-card-tags">
+ <span class="tag">TPM</span>
+ <span class="tag">Autonomous Maintenance</span>
+ <span class="tag">Reliability</span>
+ </div>
+ </article>
+ <article class="expertise-card reveal">
+ <div class="expertise-card-number">05</div>
+ <h3 class="expertise-card-title" data-editable="hh-expertise-5-title">Problem Solving &amp; Quality Systems</h3>
+ <div class="expertise-card-line"></div>
+ <p class="expertise-card-text" data-editable="hh-expertise-5-text">
+ Structured problem-solving methodologies including 8D, 5-Why Analysis, Fishbone Diagrams, FMEA, and Quality Management Systems. Building capability for root-cause analysis and prevention-oriented quality cultures.
+ </p>
+ <div class="expertise-card-tags">
+ <span class="tag">8D</span>
+ <span class="tag">5-Why</span>
+ <span class="tag">FMEA</span>
+ <span class="tag">QMS</span>
+ </div>
+ </article>
+ <article class="expertise-card reveal">
+ <div class="expertise-card-number">06</div>
+ <h3 class="expertise-card-title" data-editable="hh-expertise-6-title">AI &amp; Industry 4.0 for Manufacturing</h3>
+ <div class="expertise-card-line"></div>
+ <p class="expertise-card-text" data-editable="hh-expertise-6-text">
+ Bridging traditional operational excellence with emerging technologies. Training programs on AI applications in manufacturing, IoT integration, smart factory concepts, and staying competitive in the era of digital transformation.
+ </p>
+ <div class="expertise-card-tags">
+ <span class="tag">AI</span>
+ <span class="tag">Industry 4.0</span>
+ <span class="tag">IoT</span>
+ <span class="tag">Smart Factory</span>
+ </div>
+ </article>
+ </div>
+ </div>
+ </section>
+
+ <!-- ========== CREDENTIALS & CERTIFICATIONS ========== -->
+ <section class="section section--credentials" id="credentials">
+ <div class="container">
+ <div class="section-label reveal">
+ <span class="section-number">03</span>
+ <span class="section-name">Credentials</span>
+ </div>
+ <h2 class="section-heading reveal" data-editable="hh-credentials-heading">Certifications &amp; Accreditations</h2>
+ <div class="credentials-grid">
+ <div class="credential-card reveal">
+ <div class="credential-icon">
+ <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="32" cy="28" r="20" stroke="currentColor" stroke-width="2.5"/><path d="M24 52l8-8 8 8M32 44v-8" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M22 28l7 7 13-13" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+ </div>
+ <h3 class="credential-title" data-editable="hh-cred-1-title">HRDC Accredited Trainer</h3>
+ <p class="credential-text" data-editable="hh-cred-1-text">Accredited Train-The-Trainer certified by Human Resource Development Corporation Malaysia (HRD Corp). Authorized to deliver HRDC-claimable training programs across Malaysia.</p>
+ </div>
+ <div class="credential-card reveal">
+ <div class="credential-icon">
+ <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="12" y="12" width="40" height="40" rx="6" stroke="currentColor" stroke-width="2.5"/><path d="M22 32l7 7 13-13" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+ </div>
+ <h3 class="credential-title" data-editable="hh-cred-2-title">MPC Certified Productivity Expert</h3>
+ <p class="credential-text" data-editable="hh-cred-2-text">Certified Productivity Expert by Malaysia Productivity Corporation (MPC). Recognized for demonstrated excellence in organizational productivity improvement methodologies.</p>
+ </div>
+ <div class="credential-card reveal">
+ <div class="credential-icon">
+ <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M32 8l6 18h18l-15 11 6 18-15-11-15 11 6-18L8 26h18l6-18z" stroke="currentColor" stroke-width="2.5" stroke-linejoin="round"/></svg>
+ </div>
+ <h3 class="credential-title" data-editable="hh-cred-3-title">Certified Process Kaizen Engineer</h3>
+ <p class="credential-text" data-editable="hh-cred-3-text">Certified by Solving Efeso Consulting of Milan, Italy — a leading global consulting firm in operations strategy and performance improvement. Expert-level qualification in process kaizen methodology and continuous improvement engineering.</p>
+ </div>
+ <div class="credential-card reveal">
+ <div class="credential-icon">
+ <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="32" cy="32" r="22" stroke="currentColor" stroke-width="2.5"/><path d="M32 16v16l10 10" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+ </div>
+ <h3 class="credential-title" data-editable="hh-cred-4-title">Pritech4.0 OEE Program Consultant</h3>
+ <p class="credential-text" data-editable="hh-cred-4-text">Appointed Consultant for TERAJU's national Pritech4.0 OEE program — a 2-year initiative delivering Overall Equipment Effectiveness training and consulting across 30 factories in Malaysia.</p>
+ </div>
+ <div class="credential-card reveal">
+ <div class="credential-icon">
+ <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 52V20l20-12 20 12v32" stroke="currentColor" stroke-width="2.5" stroke-linejoin="round"/><path d="M22 52V36h20v16" stroke="currentColor" stroke-width="2.5" stroke-linejoin="round"/><circle cx="32" cy="28" r="4" stroke="currentColor" stroke-width="2.5"/></svg>
+ </div>
+ <h3 class="credential-title" data-editable="hh-cred-5-title">Manufacturing Industry Veteran</h3>
+ <p class="credential-text" data-editable="hh-cred-5-text">16+ years of direct manufacturing experience across semiconductors, electronics, automotives, aerospace, FMCG, and oil &amp; gas sectors — bringing real-world operational insight to every engagement.</p>
+ </div>
+ <div class="credential-card reveal">
+ <div class="credential-icon">
+ <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8 52l24-40 24 40H8z" stroke="currentColor" stroke-width="2.5" stroke-linejoin="round"/><path d="M32 30v10M32 46v2" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/></svg>
+ </div>
+ <h3 class="credential-title" data-editable="hh-cred-6-title">MPC QE5.0 Certified Auditor</h3>
+ <p class="credential-text" data-editable="hh-cred-6-text">Certified under Malaysia Productivity Corporation’s Quality Excellence 5.0 (QE5.0) framework — a national standard for organizational productivity and quality management. Qualified to assess and audit production systems against MPC’s structured productivity benchmarks.</p>
+ </div>
+        <div class="credential-card reveal">
+          <div class="credential-icon">
+            <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="32" cy="32" r="22" stroke="currentColor" stroke-width="2.5"/>
+              <path d="M10 32h44M32 10c-6 6-9 14-9 22s3 16 9 22M32 10c6 6 9 14 9 22s-3 16-9 22" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
+              <path d="M20 18c4 2 8 3 12 3s8-1 12-3M20 46c4-2 8-3 12-3s8 1 12 3" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+            </svg>
+          </div>
+          <h3 class="credential-title" data-editable="hh-cred-7-title">GSDC Global Leadership Excellence</h3>
+          <p class="credential-text" data-editable="hh-cred-7-text">Certified by the Global Skill Development Council (GSDC) — an internationally recognized credentialing body for professionals worldwide. Validates expertise in strategic leadership, organizational effectiveness, and executive-level decision-making. Certificate ID: 40739, issued December 2025.</p>
+        </div>
+ </div>
+ </div>
+ </section>
+
+ <!-- ========== TRAINING PROGRAMS ========== -->
+ <section class="section section--training" id="training">
+ <div class="container">
+ <div class="section-label reveal">
+ <span class="section-number">04</span>
+ <span class="section-name">Training Catalogue</span>
+ </div>
+ <h2 class="section-heading section-heading--center reveal" data-editable="hh-training-heading">Training Programs</h2>
+ <p class="section-subheading reveal" data-editable="hh-training-subheading">Comprehensive, HRDC-claimable training programs designed for measurable impact — tailored to your organization's unique operational challenges.</p>
+ <div class="training-grid">
+ 
+ </div>
+ <div class="training-badge reveal">
+ <div class="training-badge-inner">
+ <span class="training-badge-icon">&#10003;</span>
+ <span class="training-badge-text" data-editable="hh-training-badge-text">All programs are 100% HRDC Claimable &bull; Customized to your organization</span>
+ </div>
+ </div>
+    <div class="training-cta reveal" style="text-align:center;margin-top:48px;">
+      <a href="/hrdc-training/" class="btn btn-primary" style="display:inline-flex;align-items:center;gap:10px;padding:16px 36px;font-size:16px;font-weight:600;letter-spacing:0.02em;">
+        View Full Training Catalogue
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" width="18" height="18"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </a>
+    </div>
+ </div>
+ </section>
+
+ <!-- ========== EDITORIAL IMAGE BREAK 2 ========== -->
+ <div class="editorial-image-break reveal">
+ <img data-image="hh-editorial-2" src="https://images.unsplash.com/photo-1531482615713-2afd69097998?w=1600&q=80" alt="Corporate training workshop and coaching session" class="editorial-break-img" loading="lazy">
+ <div class="editorial-image-caption">Hands-on training workshops with measurable impact</div>
+ </div>
+
+ <!-- ========== TRACK RECORD / PAST PROJECTS ========== -->
+ <section class="section section--track-record" id="track-record">
+ <div class="container">
+ <div class="section-label reveal">
+ <span class="section-number">05</span>
+ <span class="section-name">Track Record</span>
+ </div>
+ <h2 class="section-heading reveal" data-editable="hh-track-heading">Client Portfolio</h2>
+ <p class="section-subheading reveal" data-editable="hh-track-subheading">A curated selection of corporate and government engagements across Malaysia's leading industries.</p>
+ <div class="track-table-wrapper reveal">
+ <table class="track-table">
+ <thead>
+ <tr>
+ <th>Client</th>
+ <th>Industry</th>
+ <th>Program</th>
+ <th>Year</th>
+ </tr>
+ </thead>
+ <tbody>
+  <!-- 2025 -->
+  <tr data-editable="hh-project-1">
+    <td><strong>JPA (Government)</strong></td>
+    <td>Government</td>
+    <td>Staying Competitive in the Era of AI</td>
+    <td>2025</td>
+  </tr>
+  <tr data-editable="hh-project-2">
+    <td><strong>MARii IPC Programme</strong></td>
+    <td>Automotive</td>
+    <td>Lean Manufacturing (4 batches &middot; 170 pax)</td>
+    <td>2025</td>
+  </tr>
+  <tr data-editable="hh-project-3">
+    <td><strong>Koito Manufacturing Sdn Bhd</strong></td>
+    <td>Automotive</td>
+    <td>Total Quality Management</td>
+    <td>2025</td>
+  </tr>
+  <tr data-editable="hh-project-4">
+    <td><strong>Panasonic Aircond Malaysia</strong></td>
+    <td>Electronics</td>
+    <td>Problem Solving</td>
+    <td>2025</td>
+  </tr>
+  <tr data-editable="hh-project-5">
+    <td><strong>Jabatan Pengangkutan Jalan (JKA)</strong></td>
+    <td>Government</td>
+    <td>Organisational Culture</td>
+    <td>2025</td>
+  </tr>
+  <!-- 2024 -->
+  <tr data-editable="hh-project-6">
+    <td><strong>MARii IPC Programme</strong></td>
+    <td>Automotive</td>
+    <td>Lean Manufacturing (3 batches &middot; 165 pax)</td>
+    <td>2024</td>
+  </tr>
+  <tr data-editable="hh-project-7">
+    <td><strong>Carotino Sdn Bhd</strong></td>
+    <td>Cooking Oil / Palm Oil</td>
+    <td>5S &amp; Kaizen (1-Year &middot; 300 employees)</td>
+    <td>2024</td>
+  </tr>
+  <tr data-editable="hh-project-8">
+    <td><strong>Inari Technology</strong></td>
+    <td>Electronics</td>
+    <td>Manufacturing Foundation</td>
+    <td>2024</td>
+  </tr>
+  <tr data-editable="hh-project-9">
+    <td><strong>Sharp TV Manufacturing</strong></td>
+    <td>Electronics</td>
+    <td>Kaizen Principles</td>
+    <td>2024</td>
+  </tr>
+  <tr data-editable="hh-project-10">
+    <td><strong>Munchy Food Industries Sdn Bhd</strong></td>
+    <td>F&amp;B Manufacturing</td>
+    <td>OEE</td>
+    <td>2024</td>
+  </tr>
+  <tr data-editable="hh-project-11">
+    <td><strong>HRDCorp Public Training</strong></td>
+    <td>Multi-sector</td>
+    <td>Overall Equipment Effectiveness</td>
+    <td>2024</td>
+  </tr>
+  <!-- 2023–2025 -->
+  <tr data-editable="hh-project-12">
+    <td><strong>TERAJU Pritech 4.0</strong></td>
+    <td>Bumiputera Manufacturers</td>
+    <td>OEE &mdash; Lead Consultant (30 factories)</td>
+    <td>2023&ndash;2025</td>
+  </tr>
+  <!-- 2023 -->
+  <tr data-editable="hh-project-13">
+    <td><strong>Fakulti AI, UTM</strong></td>
+    <td>Education / AI</td>
+    <td>Kaizen Principles</td>
+    <td>2023</td>
+  </tr>
+  <tr data-editable="hh-project-14">
+    <td><strong>Intel Technology Sdn Bhd</strong></td>
+    <td>Semiconductor</td>
+    <td>Overall Equipment Effectiveness (OEE)</td>
+    <td>2023</td>
+  </tr>
+  <tr data-editable="hh-project-15">
+    <td><strong>New Age Aluminium Ind Sdn Bhd</strong></td>
+    <td>Aluminum Fabrication</td>
+    <td>OEE</td>
+    <td>2023</td>
+  </tr>
+  <tr data-editable="hh-project-16">
+    <td><strong>Datasonic Group Berhad</strong></td>
+    <td>IT Services</td>
+    <td>OEE</td>
+    <td>2023</td>
+  </tr>
+  <tr data-editable="hh-project-17">
+    <td><strong>Safran Landing Systems (M) Sdn Bhd</strong></td>
+    <td>Aerospace</td>
+    <td>Overall Equipment Effectiveness (OEE)</td>
+    <td>2023</td>
+  </tr>
+  <tr data-editable="hh-project-18">
+    <td><strong>Mitsui High-Tec Malaysia Sdn Bhd</strong></td>
+    <td>Electronics Parts</td>
+    <td>Value Stream Mapping</td>
+    <td>2023</td>
+  </tr>
+  <tr data-editable="hh-project-19">
+    <td><strong>Mitsui High-Tec Malaysia Sdn Bhd</strong></td>
+    <td>Electronics Parts</td>
+    <td>Lead Time Reduction</td>
+    <td>2023</td>
+  </tr>
+  <tr data-editable="hh-project-20">
+    <td><strong>Mitsui High-Tec Malaysia Sdn Bhd</strong></td>
+    <td>Electronics Parts</td>
+    <td>TPM</td>
+    <td>2023</td>
+  </tr>
+  <tr data-editable="hh-project-21">
+    <td><strong>Mitsui High-Tec Malaysia Sdn Bhd</strong></td>
+    <td>Electronics Parts</td>
+    <td>7 QC Tools</td>
+    <td>2023</td>
+  </tr>
+  <tr data-editable="hh-project-22">
+    <td><strong>Maxeon Solar Technologies</strong></td>
+    <td>Solar Panel</td>
+    <td>OEE &amp; Lean Manufacturing</td>
+    <td>2023</td>
+  </tr>
+  <tr data-editable="hh-project-23">
+    <td><strong>Sapura Industrial Berhad</strong></td>
+    <td>Automotive</td>
+    <td>FMEA AIAG VDA</td>
+    <td>2023</td>
+  </tr>
+  <tr data-editable="hh-project-24">
+    <td><strong>MARii IPC Programme</strong></td>
+    <td>Automotive</td>
+    <td>Lean Manufacturing (3 batches &middot; 115 pax)</td>
+    <td>2023</td>
+  </tr>
+  <tr data-editable="hh-project-25">
+    <td><strong>HRDCorp Public Training</strong></td>
+    <td>Multi-sector</td>
+    <td>Overall Equipment Effectiveness</td>
+    <td>2023</td>
+  </tr>
+  <!-- 2022 -->
+  <tr data-editable="hh-project-26">
+    <td><strong>HRDCorp Public Training</strong></td>
+    <td>Multi-sector</td>
+    <td>Overall Equipment Effectiveness</td>
+    <td>2022</td>
+  </tr>
+  <!-- Undated -->
+  <tr data-editable="hh-project-27">
+    <td><strong>Aeon Bakery</strong></td>
+    <td>Bakery</td>
+    <td>Quality Improvement</td>
+    <td>&mdash;</td>
+  </tr>
+  <tr data-editable="hh-project-28">
+    <td><strong>Asian NDK Crystal Sdn Bhd</strong></td>
+    <td>Automotive Parts</td>
+    <td>OEE</td>
+    <td>&mdash;</td>
+  </tr>
+  <tr data-editable="hh-project-29">
+    <td><strong>Chemi Con</strong></td>
+    <td>Automotive</td>
+    <td>OEE</td>
+    <td>&mdash;</td>
+  </tr>
+  <tr data-editable="hh-project-30">
+    <td><strong>Datasonic Sdn Bhd</strong></td>
+    <td>IT Company</td>
+    <td>OEE</td>
+    <td>&mdash;</td>
+  </tr>
+  <tr data-editable="hh-project-31">
+    <td><strong>ExtechPro (M) Sdn Bhd</strong></td>
+    <td>HVAC Services</td>
+    <td>7 QC Tools</td>
+    <td>&mdash;</td>
+  </tr>
+  <tr data-editable="hh-project-32">
+    <td><strong>FBK Manufacturing</strong></td>
+    <td>Automotive Parts</td>
+    <td>7 QC Tools</td>
+    <td>&mdash;</td>
+  </tr>
+  <tr data-editable="hh-project-33">
+    <td><strong>FCL Components</strong></td>
+    <td>Semiconductor</td>
+    <td>7 MP</td>
+    <td>&mdash;</td>
+  </tr>
+  <tr data-editable="hh-project-34">
+    <td><strong>FSR Technologies Sdn Bhd</strong></td>
+    <td>Motor ECU</td>
+    <td>Critical Thinking</td>
+    <td>&mdash;</td>
+  </tr>
+  <tr data-editable="hh-project-35">
+    <td><strong>Help University</strong></td>
+    <td>Education</td>
+    <td>Problem Solving</td>
+    <td>&mdash;</td>
+  </tr>
+  <tr data-editable="hh-project-36">
+    <td><strong>HT Ceramics</strong></td>
+    <td>Gloves</td>
+    <td>Kaizen Principles</td>
+    <td>&mdash;</td>
+  </tr>
+  <tr data-editable="hh-project-37">
+    <td><strong>Kato Manufacturing</strong></td>
+    <td>PCB</td>
+    <td>Supervisory Skills</td>
+    <td>&mdash;</td>
+  </tr>
+  <tr data-editable="hh-project-38">
+    <td><strong>Kato Manufacturing</strong></td>
+    <td>Manufacturing</td>
+    <td>TPM</td>
+    <td>&mdash;</td>
+  </tr>
+  <tr data-editable="hh-project-39">
+    <td><strong>Koito Manufacturing Sdn Bhd</strong></td>
+    <td>Automotive</td>
+    <td>5 Whys &amp; RCA</td>
+    <td>&mdash;</td>
+  </tr>
+  <tr data-editable="hh-project-40">
+    <td><strong>Koito</strong></td>
+    <td>Automotive (LED)</td>
+    <td>Root Cause Analysis</td>
+    <td>&mdash;</td>
+  </tr>
+  <tr data-editable="hh-project-41">
+    <td><strong>Kulim Technology Park</strong></td>
+    <td>Education</td>
+    <td>Manufacturing Foundation</td>
+    <td>&mdash;</td>
+  </tr>
+  <tr data-editable="hh-project-42">
+    <td><strong>Lyndon Basell</strong></td>
+    <td>Plastic Pallets</td>
+    <td>8D Problem Solving</td>
+    <td>&mdash;</td>
+  </tr>
+  <tr data-editable="hh-project-43">
+    <td><strong>Plastitechnic (M) Sdn Bhd</strong></td>
+    <td>Plastic</td>
+    <td>8D Report</td>
+    <td>&mdash;</td>
+  </tr>
+  <tr data-editable="hh-project-44">
+    <td><strong>POS Logistic Berhad</strong></td>
+    <td>Logistic</td>
+    <td>SIPOC ICOR</td>
+    <td>&mdash;</td>
+  </tr>
+  <tr data-editable="hh-project-45">
+    <td><strong>Sato Manufacturing</strong></td>
+    <td>Plastic Manufacturing</td>
+    <td>FMEA</td>
+    <td>&mdash;</td>
+  </tr>
+  <tr data-editable="hh-project-46">
+    <td><strong>Smart Meter Tech (M) Sdn Bhd</strong></td>
+    <td>TNB Meter</td>
+    <td>5S</td>
+    <td>&mdash;</td>
+  </tr>
+  <tr data-editable="hh-project-47">
+    <td><strong>UCAM</strong></td>
+    <td>Education</td>
+    <td>Data Analytics</td>
+    <td>&mdash;</td>
+  </tr>
+  <tr data-editable="hh-project-48">
+    <td><strong>WRP</strong></td>
+    <td>Gloves</td>
+    <td>RCA &amp; Problem Solving</td>
+    <td>&mdash;</td>
+  </tr>
+</tbody>
+ </table>
+ </div>
+
+ <!-- Client Logos -->
+ <h2 class="section-heading section-heading--center reveal" data-editable="hh-clients-heading">Trusted by Industry Leaders</h2>
+ <div class="clients-grid reveal">
+          <div class="client-logo-item"><span>JPA</span></div>
+          <div class="client-logo-item"><span>JPJ</span></div>
+          <div class="client-logo-item"><span>TERAJU</span></div>
+          <div class="client-logo-item"><span>HRD Corp</span></div>
+          <div class="client-logo-item"><span>MARii IPC</span></div>
+          <div class="client-logo-item"><span>Intel</span></div>
+          <div class="client-logo-item"><span>Inari</span></div>
+          <div class="client-logo-item"><span>Mitsui High-Tec</span></div>
+          <div class="client-logo-item"><span>Maxeon Solar</span></div>
+          <div class="client-logo-item"><span>FCL Components</span></div>
+          <div class="client-logo-item"><span>Asian NDK Crystal</span></div>
+          <div class="client-logo-item"><span>Koito</span></div>
+          <div class="client-logo-item"><span>Panasonic</span></div>
+          <div class="client-logo-item"><span>Safran</span></div>
+          <div class="client-logo-item"><span>Sapura Industrial</span></div>
+          <div class="client-logo-item"><span>Chemi-Con</span></div>
+          <div class="client-logo-item"><span>FBK Manufacturing</span></div>
+          <div class="client-logo-item"><span>FSR Technologies</span></div>
+          <div class="client-logo-item"><span>Sharp</span></div>
+          <div class="client-logo-item"><span>Carotino</span></div>
+          <div class="client-logo-item"><span>Munchy's</span></div>
+          <div class="client-logo-item"><span>HT Ceramics</span></div>
+          <div class="client-logo-item"><span>Kato Manufacturing</span></div>
+          <div class="client-logo-item"><span>Plastitechnic</span></div>
+          <div class="client-logo-item"><span>Sato Manufacturing</span></div>
+          <div class="client-logo-item"><span>WRP</span></div>
+          <div class="client-logo-item"><span>Smart Meter Tech</span></div>
+          <div class="client-logo-item"><span>ExtechPro</span></div>
+          <div class="client-logo-item"><span>New Age Aluminium</span></div>
+          <div class="client-logo-item"><span>Datasonic</span></div>
+          <div class="client-logo-item"><span>Pos Logistics</span></div>
+          <div class="client-logo-item"><span>AEON Bakery</span></div>
+          <div class="client-logo-item"><span>Lyondell Basell</span></div>
+          <div class="client-logo-item"><span>UTM</span></div>
+          <div class="client-logo-item"><span>Help University</span></div>
+          <div class="client-logo-item"><span>UCAM</span></div>
+          <div class="client-logo-item"><span>Kulim Tech Park</span></div>
+        </div>
+
+ <div class="track-summary reveal">
+ <div class="track-summary-stat">
+ <span class="track-summary-num" data-editable="hh-track-total-num">48+</span>
+ <span class="track-summary-text" data-editable="hh-track-total-text">Corporate &amp; Government Engagements Delivered</span>
+ </div>
+ </div>
+ </div>
+ </section>
+
+ <!-- ========== FLAGSHIP PROGRAMS ========== -->
+ <section class="section section--flagship" id="flagship">
+ <div class="container">
+ <div class="section-label reveal">
+ <span class="section-number">06</span>
+ <span class="section-name">Major Programs</span>
+ </div>
+ <h2 class="section-heading section-heading--center reveal" data-editable="hh-flagship-heading">Flagship Engagements</h2>
+ <div class="flagship-grid">
+ <article class="flagship-card reveal">
+ <div class="flagship-card-accent"></div>
+ <div class="flagship-card-content">
+ <span class="flagship-card-year" data-editable="hh-flag-1-year">2-Year National Program</span>
+ <h3 class="flagship-card-title" data-editable="hh-flag-1-title">TERAJU Pritech4.0 OEE Program</h3>
+ <p class="flagship-card-text" data-editable="hh-flag-1-text">Lead Consultant for this national program delivering OEE training and hands-on consulting across 30 Bumiputera factories throughout Malaysia, driving Industry 4.0 readiness and operational excellence in the manufacturing sector.</p>
+ <div class="flagship-card-stat">
+ <span class="flagship-card-stat-num">30</span>
+ <span class="flagship-card-stat-label">Factories Nationwide</span>
+ </div>
+ </div>
+ </article>
+ <article class="flagship-card reveal">
+ <div class="flagship-card-accent"></div>
+ <div class="flagship-card-content">
+ <span class="flagship-card-year" data-editable="hh-flag-2-year">2023, 2024 &amp; 2025</span>
+ <h3 class="flagship-card-title" data-editable="hh-flag-2-title">MARII IPC Program</h3>
+ <p class="flagship-card-text" data-editable="hh-flag-2-text">Training lead for this large-scale industry placement and capability program in partnership with MARII. Successfully trained and placed 250 participants into automotive industry positions across Malaysia.</p>
+ <div class="flagship-card-stat">
+ <span class="flagship-card-stat-num">250</span>
+ <span class="flagship-card-stat-label">Pax Trained &amp; Placed</span>
+ </div>
+ </div>
+ </article>
+ <article class="flagship-card reveal">
+ <div class="flagship-card-accent"></div>
+ <div class="flagship-card-content">
+ <span class="flagship-card-year" data-editable="hh-flag-3-year">1-Year Engagement</span>
+ <h3 class="flagship-card-title" data-editable="hh-flag-3-title">Carotino 5S Consulting</h3>
+ <p class="flagship-card-text" data-editable="hh-flag-3-text">Year-long 5S workplace organization consulting — implementing Sort, Set-in-Order, Shine, Standardize, and Sustain methodologies across Carotino's manufacturing operations with measurable improvement outcomes.</p>
+ <div class="flagship-card-stat">
+ <span class="flagship-card-stat-num">12</span>
+ <span class="flagship-card-stat-label">Months Consulting</span>
+ </div>
+ </div>
+ </article>
+ </div>
+ </div>
+ </section>
+
+ <!-- ========== EDITORIAL IMAGE BREAK 3 ========== -->
+ <div class="editorial-image-break editorial-image-break--alt reveal">
+ <img data-image="hh-editorial-3" src="https://images.unsplash.com/photo-1504384764586-bb4cdc1707b0?w=1600&q=80" alt="Factory floor lean manufacturing and 5S implementation" class="editorial-break-img" loading="lazy">
+ <div class="editorial-image-caption">On-site factory consulting — from OEE to 5S implementation</div>
+ </div>
+
+ <!-- ========== TESTIMONIALS ========== -->
+ <section class="section section--testimonials" id="testimonials">
+ <div class="container">
+ <div class="section-label reveal">
+ <span class="section-number">07</span>
+ <span class="section-name">Testimonials</span>
+ </div>
+ <h2 class="section-heading reveal" data-editable="hh-testimonials-heading">What Clients Say</h2>
+ <div class="testimonials-grid">
+ <article class="testimonial-card reveal">
+ <div class="testimonial-quote-mark">&ldquo;</div>
+ <blockquote class="testimonial-text" data-editable="hh-testimonial-1-text">
+ Topic is relevant to our work place. Easy to understand and the trainer is very engaging with lots of activities for better understanding of the concepts.
+ </blockquote>
+ <div class="testimonial-attribution">
+ <div class="testimonial-line"></div>
+ <p class="testimonial-source" data-editable="hh-testimonial-1-source">Safran Landing Systems</p>
+ <p class="testimonial-detail" data-editable="hh-testimonial-1-detail">OEE Training Program</p>
+ </div>
+ </article>
+ <article class="testimonial-card reveal">
+ <div class="testimonial-quote-mark">&ldquo;</div>
+ <blockquote class="testimonial-text" data-editable="hh-testimonial-2-text">
+ Trainer really understands what he talked about, and engaging. Much better understanding on the subject especially for us who are not very technical.
+ </blockquote>
+ <div class="testimonial-attribution">
+ <div class="testimonial-line"></div>
+ <p class="testimonial-source" data-editable="hh-testimonial-2-source">Munchy's Food Industries</p>
+ <p class="testimonial-detail" data-editable="hh-testimonial-2-detail">Manufacturing Training</p>
+ </div>
+ </article>
+ <article class="testimonial-card reveal">
+ <div class="testimonial-quote-mark">&ldquo;</div>
+ <blockquote class="testimonial-text" data-editable="hh-testimonial-3-text">
+ Perfect! Wouldn't change a thing. Group activity is perfect to understand better on OEE. The practical approach made complex concepts accessible.
+ </blockquote>
+ <div class="testimonial-attribution">
+ <div class="testimonial-line"></div>
+ <p class="testimonial-source" data-editable="hh-testimonial-3-source">Public Training Participant</p>
+ <p class="testimonial-detail" data-editable="hh-testimonial-3-detail">Public OEE Training Course</p>
+ </div>
+ </article>
+ </div>
+ </div>
+ </section>
+
+ <!-- ========== APPROACH / METHODOLOGY ========== -->
+ <section class="section section--approach" id="approach">
+ <div class="container">
+ <div class="section-label reveal">
+ <span class="section-number">08</span>
+ <span class="section-name">Methodology</span>
+ </div>
+ <h2 class="section-heading reveal" data-editable="hh-approach-heading">Training Approach</h2>
+ <div class="approach-grid">
+ <div class="approach-step reveal">
+ <div class="approach-step-num">01</div>
+ <div class="approach-step-content">
+ <h3 class="approach-step-title" data-editable="hh-approach-1-title">Needs Analysis &amp; Assessment</h3>
+ <p class="approach-step-text" data-editable="hh-approach-1-text">Every engagement begins with a thorough Training Needs Analysis — identifying specific pain points, skill gaps, and operational challenges unique to your organization.</p>
+ </div>
+ </div>
+ <div class="approach-step reveal">
+ <div class="approach-step-num">02</div>
+ <div class="approach-step-content">
+ <h3 class="approach-step-title" data-editable="hh-approach-2-title">Customized Program Design</h3>
+ <p class="approach-step-text" data-editable="hh-approach-2-text">Programs are tailored — never off-the-shelf. Every module is built around your context, your industry, and your measurable outcomes with clear KPIs.</p>
+ </div>
+ </div>
+ <div class="approach-step reveal">
+ <div class="approach-step-num">03</div>
+ <div class="approach-step-content">
+ <h3 class="approach-step-title" data-editable="hh-approach-3-title">Hands-On Delivery</h3>
+ <p class="approach-step-text" data-editable="hh-approach-3-text">Training blends theory with practical application — Gemba walks, shop-floor exercises, case studies, and group activities that reinforce learning through doing.</p>
+ </div>
+ </div>
+ <div class="approach-step reveal">
+ <div class="approach-step-num">04</div>
+ <div class="approach-step-content">
+ <h3 class="approach-step-title" data-editable="hh-approach-4-title">Post-Program Follow-Through</h3>
+ <p class="approach-step-text" data-editable="hh-approach-4-text">Continuous support beyond the classroom — follow-up assessments, implementation guidance, and monitoring to ensure training translates into sustainable operational results.</p>
+ </div>
+ </div>
+ </div>
+ </div>
+ </section>
+
+ <!-- ========== BLOG TEASER ========== -->
+ <section class="section section--blog" id="blog" style="background:#f9f7f4;padding:80px 0">
+ <div class="container">
+ <div class="section-label reveal">
+ <span class="section-number">09</span>
+ <span class="section-name">Insights</span>
+ </div>
+ <h2 class="section-heading reveal" style="margin-bottom:12px">From the Factory Floor</h2>
+ <p class="section-subheading reveal" style="margin-bottom:48px">Practical lean manufacturing and Kaizen insights — written from real factory experience across 30+ Malaysian plants.</p>
+ <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:28px;margin-bottom:40px">
+ <a href="/blog/why-kaizen-events-fail/" style="text-decoration:none;background:#fff;border:1px solid #ece8e3;border-radius:8px;padding:28px;display:block;transition:box-shadow .2s" onmouseover="this.style.boxShadow='0 8px 28px rgba(12,27,46,.09)'" onmouseout="this.style.boxShadow='none'">
+ <div style="font-size:10px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:#c47832;margin-bottom:10px">Kaizen</div>
+ <h3 style="font-family:'Cormorant Garamond',serif;font-size:20px;color:#0c1b2e;margin-bottom:10px;line-height:1.3">Why Kaizen Events Fail in Manufacturing Plants</h3>
+ <p style="font-size:14px;color:#6b7280;line-height:1.6">The six root causes of Kaizen failure — and what successful implementation actually looks like.</p>
+ </a>
+ <a href="/blog/5s-implementation-problems/" style="text-decoration:none;background:#fff;border:1px solid #ece8e3;border-radius:8px;padding:28px;display:block;transition:box-shadow .2s" onmouseover="this.style.boxShadow='0 8px 28px rgba(12,27,46,.09)'" onmouseout="this.style.boxShadow='none'">
+ <div style="font-size:10px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:#c47832;margin-bottom:10px">Lean Manufacturing</div>
+ <h3 style="font-family:'Cormorant Garamond',serif;font-size:20px;color:#0c1b2e;margin-bottom:10px;line-height:1.3">5S Implementation Problems: Why It Never Sticks</h3>
+ <p style="font-size:14px;color:#6b7280;line-height:1.6">Why thousands of Malaysian factories run 5S but a fraction are still practising it six months later.</p>
+ </a>
+ <a href="/blog/oee-training-malaysia/" style="text-decoration:none;background:#fff;border:1px solid #ece8e3;border-radius:8px;padding:28px;display:block;transition:box-shadow .2s" onmouseover="this.style.boxShadow='0 8px 28px rgba(12,27,46,.09)'" onmouseout="this.style.boxShadow='none'">
+ <div style="font-size:10px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:#c47832;margin-bottom:10px">OEE &amp; TPM</div>
+ <h3 style="font-family:'Cormorant Garamond',serif;font-size:20px;color:#0c1b2e;margin-bottom:10px;line-height:1.3">OEE Training Malaysia: The Complete Guide</h3>
+ <p style="font-size:14px;color:#6b7280;line-height:1.6">What OEE actually measures, why most OEE numbers are wrong, and what real improvement requires.</p>
+ </a>
+ </div>
+ <div style="text-align:center">
+ <a href="/blog/" style="display:inline-block;border:1.5px solid #8b2252;color:#8b2252;padding:12px 32px;border-radius:4px;font-size:14px;font-weight:600;text-decoration:none;letter-spacing:.4px">View All Articles →</a>
+ </div>
+ </div>
+ </section>
+
+ <!-- ========== CONTACT ========== -->
+ <section class="section section--contact" id="contact">
+ <div class="container">
+ <div class="section-label reveal">
+ <span class="section-number">10</span>
+ <span class="section-name">Contact Me</span>
+ </div>
+ <h2 class="section-heading reveal" data-editable="hh-contact-heading">Contact Me</h2>
+ <div class="contact-grid">
+ <div class="contact-info reveal">
+ <div class="contact-info-block">
+ <h3 class="contact-info-label">Phone</h3>
+ <p class="contact-info-value" data-editable="hh-contact-phone">
+ <a href="tel:+60165241901">+6016 526-1901</a>
+ </p>
+ </div>
+ <div class="contact-info-block">
+ <h3 class="contact-info-label">Email</h3>
+ <p class="contact-info-value" data-editable="hh-contact-email">
+ <a href="mailto:husni@visiarmada.com">husnihalim@visiarmada.com</a>
+ </p>
+ </div>
+ <div class="contact-info-block">
+ <h3 class="contact-info-label">Based In</h3>
+ <p class="contact-info-value" data-editable="hh-contact-location">
+ Puchong, Selangor,<br>Malaysia
+ </p>
+ </div>
+ <div class="contact-info-block">
+ <h3 class="contact-info-label">Affiliated With</h3>
+ <p class="contact-info-value" data-editable="hh-contact-company">
+ <a href="https://visiarmada.com" target="_blank" rel="noopener">Visi Armada Consulting</a>
+ </p>
+ </div>
+ <div class="contact-cred-badge">
+ <div class="cred-badge-inner">
+ <span class="cred-badge-icon">&#10003;</span>
+ <span class="cred-badge-text" data-editable="hh-contact-badge-text">HRDC Accredited &bull; MPC Certified &bull; All Programs Claimable</span>
+ </div>
+ </div>
+ </div>
+ <div class="contact-form-wrapper reveal">
+ <form class="contact-form" id="contactForm" action="#" method="POST">
+ <div class="form-group">
+ <label for="contactName" class="form-label">Full Name</label>
+ <input type="text" id="contactName" name="name" class="form-input" required autocomplete="name" placeholder="Your full name">
+ </div>
+ <div class="form-row">
+ <div class="form-group">
+ <label for="contactEmail" class="form-label">Email Address</label>
+ <input type="email" id="contactEmail" name="email" class="form-input" required autocomplete="email" placeholder="you@company.com">
+ </div>
+ <div class="form-group">
+ <label for="contactPhone" class="form-label">Phone Number</label>
+ <input type="tel" id="contactPhone" name="phone" class="form-input" autocomplete="tel" placeholder="+60XX XXX-XXXX">
+ </div>
+ </div>
+ <div class="form-group">
+ <label for="contactCompany" class="form-label">Company / Organization</label>
+ <input type="text" id="contactCompany" name="company" class="form-input" autocomplete="organization" placeholder="Your company name">
+ </div>
+ <div class="form-group">
+ <label for="contactMessage" class="form-label">Message</label>
+ <textarea id="contactMessage" name="message" class="form-textarea" rows="5" required placeholder="Tell me about your training needs..."></textarea>
+ </div>
+ <button type="submit" class="btn btn-primary btn-submit">Send Inquiry</button>
+ </form>
+ </div>
+ </div>
+ </div>
+ </section>
+
+ <!-- ========== FOOTER ========== -->
+ <footer class="footer" id="footer">
+ <div class="container">
+ <div class="footer-grid">
+ <div class="footer-brand">
+ <div class="footer-logo">
+ <span class="footer-logo-text" data-editable="hh-footer-logo">Husni<em>Halim</em></span>
+ </div>
+ <p class="footer-tagline" data-editable="hh-footer-tagline">Managing Director & Principal Consultant — transforming factory operations and elevating workforce capabilities through proven operational excellence methodologies.</p>
+ <p class="footer-cred">HRDC Accredited Trainer &bull; B.Sc. Aerospace Engineering &bull; Global Kaizen Experience</p>
+ </div>
+ <div class="footer-links-col">
+ <h4 class="footer-col-title">Quick Links</h4>
+ <ul class="footer-links">
+ <li><a href="#about">About</a></li>
+ <li><a href="#expertise">Expertise</a></li>
+ <li><a href="#credentials">Credentials</a></li>
+ <li><a href="/hrdc-training/">HRDC Training</a></li><li><a href="/consulting/">Consulting</a></li>
+ <li><a href="#track-record">Track Record</a></li>
+ </ul>
+ </div>
+ <div class="footer-links-col">
+ <h4 class="footer-col-title">Specializations</h4>
+ <ul class="footer-links">
+ <li><a href="#expertise">OEE</a></li>
+ <li><a href="#expertise">Kaizen</a></li>
+ <li><a href="#expertise">Lean Manufacturing</a></li>
+ <li><a href="#expertise">5S &amp; TPM</a></li>
+ <li><a href="#expertise">AI &amp; Industry 4.0</a></li>
+ </ul>
+ </div>
+ <div class="footer-links-col">
+ <h4 class="footer-col-title">Contact</h4>
+ <ul class="footer-links">
+ <li><a href="tel:+60165241901">+6016 526-1901</a></li>
+ <li><a href="mailto:husni@visiarmada.com">husnihalim@visiarmada.com</a></li>
+ <li>Puchong, Selangor</li>
+ <li><a href="https://visiarmada.com" target="_blank" rel="noopener">Visi Armada Consulting</a></li>
+ </ul>
+ </div>
+ </div>
+ <div class="footer-bottom">
+ <p class="footer-copyright" data-editable="hh-footer-copyright">&copy; 2025 Husni Halim. All rights reserved.</p>
+ <p class="footer-reg">HRDC Accredited Trainer &bull; MPC Certified Productivity Expert &bull; MPC QE5.0 Certified auditor &bull;Certified Process Kaizen Engineer</p>
+ <a href="admin/index.html" class="footer-admin-link">Admin</a>
+ </div>
+ </div>
+ </footer>
+
+ <script src="script.js"></script>
+</body>
+</html>

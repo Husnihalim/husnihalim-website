@@ -1,0 +1,91 @@
+functionsDirectory = "/Users/abc/Documents/Claude CoWork/husnihalim-website/netlify/functions"
+functionsDirectoryOrigin = "config"
+headersOrigin = "config"
+redirectsOrigin = "config"
+plugins = []
+
+[build]
+edge_functions = "/Users/abc/Documents/Claude CoWork/husnihalim-website/netlify/edge-functions"
+publish = "/Users/abc/Documents/Claude CoWork/husnihalim-website"
+publishOrigin = "config"
+functions = "/Users/abc/Documents/Claude CoWork/husnihalim-website/netlify/functions"
+
+[build.environment]
+
+[build.processing]
+
+[build.processing.css]
+
+[build.processing.html]
+
+[build.processing.images]
+
+[build.processing.js]
+
+[build.services]
+
+[[edge_functions]]
+path = "/blog/:slug"
+function = "blog-og"
+
+[functions]
+
+[functions."*"]
+
+[[headers]]
+for = "/*"
+
+[headers.values]
+X-Frame-Options = "SAMEORIGIN"
+X-Content-Type-Options = "nosniff"
+Referrer-Policy = "strict-origin-when-cross-origin"
+X-XSS-Protection = "1; mode=block"
+
+[[headers]]
+for = "/admin/*"
+
+[headers.values]
+X-Robots-Tag = "noindex, nofollow"
+
+[[headers]]
+for = "/data/*"
+
+[headers.values]
+X-Robots-Tag = "noindex, nofollow"
+Content-Type = "application/json"
+
+[[redirects]]
+from = "/api/*"
+to = "/.netlify/functions/:splat"
+status = 200.0
+force = false
+
+[redirects.query]
+
+[redirects.conditions]
+
+[redirects.headers]
+
+[[redirects]]
+from = "/blog/:slug"
+to = "/blog-post.html?slug=:slug"
+status = 200.0
+force = false
+
+[redirects.query]
+
+[redirects.conditions]
+
+[redirects.headers]
+
+[[redirects]]
+from = "/rss.xml"
+to = "/.netlify/functions/cms/rss?site=husni"
+status = 200.0
+force = false
+
+[redirects.query]
+
+[redirects.conditions]
+
+[redirects.headers]

@@ -1,0 +1,1 @@
+{"bundles":[{"asset":"d9c826ee67db3a67c0dd57267a05da5a635ea7b7f0d2824b15002665a0468281.eszip","format":"eszip2"}],"routes":[{"function":"blog-og","pattern":"^/blog(?:/([^/]+?))/?$","excluded_patterns":[],"path":"/blog/:slug"}],"post_cache_routes":[],"bundler_version":"14.9.5","layers":[],"import_map":"netlify:import-map","function_config":{}}
