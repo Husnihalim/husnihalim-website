@@ -472,30 +472,40 @@
   }
 
   /* ══════════════════════════
-     SECTION 5 — BLOG (warm white)
+     SECTION 5 — BLOG
   ══════════════════════════ */
-  .blog { padding:88px 64px; background:var(--warm-white); border-top:1px solid var(--soft-gray); }
+  .blog {
+    padding:88px 64px;
+    background-color: #1a1f2e;
+    background-image:
+      radial-gradient(ellipse at 10% 50%, rgba(139,34,82,0.18) 0%, transparent 55%),
+      radial-gradient(ellipse at 90% 20%, rgba(12,54,100,0.2) 0%, transparent 50%),
+      linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px);
+    background-size: auto, auto, 48px 48px, 48px 48px;
+    border-top: 1px solid rgba(255,255,255,0.05);
+  }
   .blog-inner { max-width:1060px; margin:0 auto; }
   .blog-top { display:flex; justify-content:space-between; align-items:flex-end; margin-bottom:12px; }
   .blog-top h2 {
     font-family:var(--font-h); font-size:2.4rem; font-weight:600;
-    color:var(--heading);
+    color:#fff;
   }
-  .blog-top a { color:var(--accent); font-size:0.87rem; font-weight:600; text-decoration:none; }
+  .blog-top a { color:var(--gold); font-size:0.87rem; font-weight:600; text-decoration:none; }
   .blog-top a:hover { text-decoration:underline; }
-  .blog-sub { font-size:0.97rem; color:var(--mid-gray); max-width:520px; line-height:1.75; margin-bottom:44px; font-weight:300; }
+  .blog-sub { font-size:0.97rem; color:rgba(255,255,255,0.62); max-width:520px; line-height:1.75; margin-bottom:44px; font-weight:300; }
 
   /* Blog grid — hero + 2 stacked */
   .blog-grid { display:grid; grid-template-columns:1fr 1fr; gap:22px; align-items:start; }
 
   /* Hero card — left, tall */
   .blog-card {
-    background:#fff; border-radius:8px; overflow:hidden;
-    border:1px solid var(--soft-gray);
-    transition:box-shadow 0.2s, border-color 0.2s;
+    background:rgba(255,255,255,0.05); border-radius:8px; overflow:hidden;
+    border:1px solid rgba(255,255,255,0.1);
+    transition:box-shadow 0.2s, border-color 0.2s, background 0.2s;
     text-decoration:none; display:block; color:inherit;
   }
-  .blog-card:hover { box-shadow:0 6px 24px rgba(0,0,0,0.08); border-color:rgba(139,34,82,0.3); }
+  .blog-card:hover { box-shadow:0 6px 32px rgba(0,0,0,0.3); border-color:rgba(139,34,82,0.5); background:rgba(255,255,255,0.08); }
 
   .blog-card-hero {
     grid-row: span 2;
@@ -522,10 +532,10 @@
     color:#fff; line-height:1.3; margin-top:6px;
   }
   .blog-body { padding:22px; }
-  .blog-tag { font-size:0.67rem; color:var(--accent); font-weight:700; text-transform:uppercase; letter-spacing:1px; margin-bottom:7px; font-family:var(--font-b); }
-  .blog-body h4 { font-family:var(--font-h); font-size:1.05rem; font-weight:600; margin-bottom:8px; line-height:1.4; color:var(--heading); }
-  .blog-body p { font-size:0.8rem; color:var(--mid-gray); line-height:1.65; margin-bottom:14px; font-weight:300; }
-  .read-more { font-size:0.79rem; color:var(--accent); font-weight:600; }
+  .blog-tag { font-size:0.67rem; color:var(--gold); font-weight:700; text-transform:uppercase; letter-spacing:1px; margin-bottom:7px; font-family:var(--font-b); }
+  .blog-body h4 { font-family:var(--font-h); font-size:1.05rem; font-weight:600; margin-bottom:8px; line-height:1.4; color:#fff; }
+  .blog-body p { font-size:0.8rem; color:rgba(255,255,255,0.62); line-height:1.65; margin-bottom:14px; font-weight:300; }
+  .read-more { font-size:0.79rem; color:var(--gold); font-weight:600; }
   .blog-card:hover .read-more { text-decoration:underline; }
 
   /* About Husni hero card — blog section */
@@ -558,19 +568,19 @@
   .c3 { background:linear-gradient(135deg, #1a3a4a, #0d2233); }
 
   .blog-callout {
-    margin-top:38px; background:#fff; border-radius:8px;
-    padding:28px 34px; border:1px solid var(--soft-gray);
+    margin-top:38px; background:rgba(255,255,255,0.04); border-radius:8px;
+    padding:28px 34px; border:1px solid rgba(255,255,255,0.1);
     display:flex; align-items:center; justify-content:space-between; gap:24px; flex-wrap:wrap;
   }
-  .blog-callout h4 { font-family:var(--font-h); font-size:1.2rem; font-weight:600; color:var(--heading); margin-bottom:6px; }
-  .blog-callout p { font-size:0.83rem; color:var(--mid-gray); line-height:1.6; font-weight:300; }
+  .blog-callout h4 { font-family:var(--font-h); font-size:1.2rem; font-weight:600; color:#fff; margin-bottom:6px; }
+  .blog-callout p { font-size:0.83rem; color:rgba(255,255,255,0.58); line-height:1.6; font-weight:300; }
   .btn-outline {
-    background:transparent; color:var(--heading); border:1.5px solid var(--heading);
+    background:transparent; color:rgba(255,255,255,0.85); border:1.5px solid rgba(255,255,255,0.3);
     padding:11px 26px; border-radius:4px; font-size:0.87rem; font-weight:600;
     text-decoration:none; white-space:nowrap; flex-shrink:0;
-    transition:background 0.2s, color 0.2s; font-family:var(--font-b);
+    transition:background 0.2s, color 0.2s, border-color 0.2s; font-family:var(--font-b);
   }
-  .btn-outline:hover { background:var(--heading); color:#fff; }
+  .btn-outline:hover { background:rgba(255,255,255,0.1); border-color:rgba(255,255,255,0.6); }
 
   /* ── TESTIMONIAL QUOTES ── */
   .t-quote {
@@ -1071,7 +1081,7 @@
   <div class="blog-inner">
     <div class="blog-top">
       <div>
-        <div class="sec-label">From the Blog</div>
+        <div class="sec-label" style="color:var(--gold);">From the Blog</div>
         <h2>I also write about this stuff</h2>
       </div>
       <a href="/blog/">View all articles →</a>
@@ -1081,30 +1091,9 @@
     </p>
     <div class="blog-grid">
 
-      <!-- HERO CARD — About Husni -->
-      <div class="blog-card blog-card-hero">
-        <div class="blog-hero-img">
-          <img src="husni.png" alt="Husni Halim — Lean Manufacturing Consultant" />
-          <div class="blog-hero-overlay">
-            <div class="blog-tag">The Consultant</div>
-            <h4>Husni Halim</h4>
-          </div>
-        </div>
-        <div class="blog-body blog-about-body">
-          <p class="blog-about-title">Managing Director &amp; Principal Consultant</p>
-          <p>HRDC-certified lean manufacturing consultant with 16 years in heavy manufacturing, oil &amp; gas, and food production across Malaysia. I write every article on this blog from direct floor experience — no theory, no textbook rewrites.</p>
-          <div class="blog-about-stats">
-            <div><strong>35+</strong><span>projects</span></div>
-            <div><strong>16 yrs</strong><span>industry</span></div>
-            <div><strong>500+</strong><span>trained</span></div>
-          </div>
-          <a href="/blog/" class="read-more">Read the blog → husnihalim.com/blog</a>
-        </div>
-      </div>
-
-      <!-- SMALL CARD 1 -->
-      <a href="/blog/why-kaizen-events-fail/" class="blog-card blog-card-small">
-        <div class="blog-thumb-small c2">⚡</div>
+      <!-- BLOG CARD 1 -->
+      <a href="/blog/why-kaizen-events-fail/" class="blog-card">
+        <div class="blog-thumb-small c2" style="height:160px;">⚡</div>
         <div class="blog-body">
           <div class="blog-tag">Kaizen · Culture</div>
           <h4>Why Kaizen Events Fail in Manufacturing Malaysia</h4>
@@ -1113,9 +1102,9 @@
         </div>
       </a>
 
-      <!-- SMALL CARD 2 -->
-      <a href="/blog/visual-management-failures/" class="blog-card blog-card-small">
-        <div class="blog-thumb-small c3">📊</div>
+      <!-- BLOG CARD 2 -->
+      <a href="/blog/visual-management-failures/" class="blog-card">
+        <div class="blog-thumb-small c3" style="height:160px;">📊</div>
         <div class="blog-body">
           <div class="blog-tag">Visual Management</div>
           <h4>Visual Management Failures: Why Boards Nobody Reads</h4>
