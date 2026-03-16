@@ -7,7 +7,7 @@
 <meta name="description" content="HRDC-certified lean manufacturing consultant. 16+ years, 35+ corporate projects, 500+ professionals trained across Malaysia. I fix the recurring production floor problems that training alone never solves. Free floor assessment available."/>
 
 <!-- Canonical -->
-<link rel="canonical" href="https://husnihalim.com/"/>
+<link rel="canonical" href="https://husnihalimcom/"/>
 
 <!-- Open Graph -->
 <meta property="og:type"        content="website"/>
@@ -295,6 +295,11 @@
     font-family:var(--font-b);
   }
   .email-form button:hover { background:#721b44; }
+  .name-row { display:flex; gap:10px; margin-bottom:10px; }
+  .name-row input { flex:1; background:rgba(255,255,255,0.07); border:1px solid rgba(255,255,255,0.15); border-radius:4px; padding:12px 14px; color:inherit; font-family:var(--font-b); font-size:0.85rem; transition:border-color 0.2s; }
+  .name-row input:focus { border-color:var(--accent); outline:none; }
+  .name-row input::placeholder { color:rgba(255,255,255,0.3); }
+  @media (max-width:500px) { .name-row { flex-direction:column; gap:8px; } }
   .card-note { font-size:0.69rem; color:rgba(255,255,255,0.28); text-align:center; margin-top:10px; }
 
   /* ── TRUST BAR ── */
@@ -812,6 +817,10 @@
     </ul>
     <form class="email-form" name="floor-assessment" method="POST" data-netlify="true" action="/thank-you/">
       <input type="hidden" name="form-name" value="floor-assessment" />
+      <div class="name-row">
+        <input type="text" name="firstname" placeholder="First name" required />
+        <input type="text" name="lastname" placeholder="Last name" required />
+      </div>
       <div class="email-row">
         <input type="email" name="email" placeholder="your@email.com" required />
         <button type="submit">Send →</button>
