@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>TPM Autonomous Maintenance Implementation Malaysia | Husni Halim</title>
+<meta name="description" content="Step-by-step guide to TPM autonomous maintenance implementation in Malaysian factories. HRDC certified consultant explains the 7 steps, common failure modes, and how to build operator ownership.">
+<meta name="author" content="Husni Halim">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://husnihalim.com/blog/tpm-autonomous-maintenance-implementation-malaysia/">
+<meta property="og:title" content="TPM Autonomous Maintenance Implementation Malaysia | Husni Halim">
+<meta property="og:description" content="Step-by-step guide to TPM autonomous maintenance implementation in Malaysian factories. HRDC certified consultant explains the 7 steps, common failure modes, and how to build operator ownership.">
+<meta property="og:image" content="https://images.unsplash.com/photo-1565043589221-1a6fd9ae45c7?auto=format&fit=crop&w=1200&h=630&q=80">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://husnihalim.com/blog/tpm-autonomous-maintenance-implementation-malaysia/">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400;1,600&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&display=swap" rel="stylesheet">
+<style>
+:root {
+  --c-dark: #0c1b2e;
+  --c-accent: #8b2252;
+  --c-secondary: #c47832;
+  --c-warm: #f9f7f4;
+  --c-soft: #ece8e3;
+  --c-body: #374151;
+  --c-mid: #6b7280;
+  --font-h: 'Cormorant Garamond', Georgia, serif;
+  --font-b: 'DM Sans', -apple-system, sans-serif;
+}
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:var(--font-b);background:var(--c-warm);color:var(--c-body);-webkit-font-smoothing:antialiased}
+
+/* NAV */
+.nav{background:var(--c-dark);padding:14px 40px;display:flex;justify-content:space-between;align-items:center;position:sticky;top:0;z-index:100}
+.nav-logo{color:#fff;font-family:var(--font-h);font-size:20px;font-weight:600;text-decoration:none;letter-spacing:1px}
+.nav-logo em{color:var(--c-secondary);font-style:italic}
+.nav-links{display:flex;gap:28px;list-style:none}
+.nav-links a{color:#ccc;font-size:13px;text-decoration:none;font-family:var(--font-b);letter-spacing:.4px;transition:color .2s}
+.nav-links a:hover{color:#fff}
+.nav-cta{background:var(--c-accent)!important;color:#fff!important;padding:8px 16px;border-radius:4px}
+
+/* HERO */
+.post-hero{position:relative;height:440px;overflow:hidden;background:var(--c-dark)}
+.post-hero img{width:100%;height:100%;object-fit:cover;opacity:.45}
+.post-hero-overlay{position:absolute;inset:0;background:linear-gradient(to top,rgba(12,27,46,.95) 30%,rgba(12,27,46,.4))}
+.post-hero-content{position:absolute;bottom:0;left:0;right:0;padding:48px;max-width:900px}
+.post-cat{font-family:var(--font-b);font-size:11px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--c-secondary);margin-bottom:14px}
+.post-title{font-family:var(--font-h);font-size:clamp(26px,4vw,44px);line-height:1.2;color:#fff;margin-bottom:16px;font-weight:600}
+.post-meta{font-size:13px;color:rgba(255,255,255,.6);display:flex;gap:16px;flex-wrap:wrap}
+.post-meta span{display:flex;align-items:center;gap:6px}
+
+/* LAYOUT */
+.page-wrap{max-width:1160px;margin:0 auto;padding:0 24px;display:grid;grid-template-columns:1fr 300px;gap:64px;align-items:start}
+article{padding:48px 0 80px}
+.post-subtitle{font-size:20px;line-height:1.65;color:#555;font-style:italic;margin-bottom:36px;padding-bottom:36px;border-bottom:1px solid #ddd;font-family:var(--font-h)}
+
+/* ARTICLE BODY */
+article h2{font-family:var(--font-h);font-size:26px;font-weight:600;color:var(--c-dark);margin:44px 0 16px;padding-left:16px;border-left:3px solid var(--c-accent)}
+article h3{font-family:var(--font-h);font-size:20px;font-weight:600;color:#222;margin:28px 0 10px}
+article p{font-size:17px;line-height:1.85;color:var(--c-body);margin-bottom:20px}
+article ul,article ol{margin:10px 0 20px 22px}
+article li{font-size:16px;line-height:1.75;margin-bottom:8px;color:var(--c-body)}
+.callout{background:#fff8f2;border-left:3px solid var(--c-secondary);border-radius:4px;padding:20px 24px;margin:32px 0;font-size:16px;line-height:1.7;color:#444}
+.callout strong{color:var(--c-accent)}
+blockquote{padding:24px 32px;margin:36px 0;background:#f4f0fb;border-radius:6px;font-family:var(--font-h);font-size:22px;line-height:1.6;color:#2a1a4e;font-style:italic;text-align:center}
+table{width:100%;border-collapse:collapse;margin:28px 0;font-size:14px}
+th{background:var(--c-dark);color:#fff;padding:12px 16px;text-align:left;font-family:var(--font-b);font-weight:600;letter-spacing:.3px}
+td{padding:12px 16px;border-bottom:1px solid #eee;color:var(--c-body);line-height:1.5;font-size:14px}
+tr:nth-child(even) td{background:#f9f7f4}
+tr:hover td{background:#fff8f2}
+.tags{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:36px}
+.tag{background:var(--c-soft);color:#555;font-size:11px;padding:5px 12px;border-radius:20px;font-weight:500;letter-spacing:.4px}
+
+/* AUTHOR BIO */
+.author-bio{display:flex;gap:20px;align-items:flex-start;background:#fff;border:1px solid #eee;border-radius:8px;padding:24px;margin-top:56px}
+.author-av{width:60px;height:60px;border-radius:50%;background:var(--c-dark);display:flex;align-items:center;justify-content:center;color:var(--c-secondary);font-family:var(--font-h);font-size:22px;font-weight:600;flex-shrink:0}
+.author-bio p{font-size:14px;line-height:1.6;color:#555;margin-bottom:4px}
+.author-bio strong{color:#111;font-size:15px;display:block;margin-bottom:4px}
+/* SHARE */
+.share-bar{margin-top:40px;padding-top:32px;border-top:1px solid #eee}
+.share-bar p{font-family:var(--font-b);font-size:10px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:#999;margin-bottom:14px}
+.share-btns{display:flex;gap:10px;flex-wrap:wrap}
+.share-btn{display:inline-flex;align-items:center;gap:8px;padding:10px 18px;border-radius:6px;font-size:13px;font-weight:600;text-decoration:none;transition:opacity .15s}
+.share-btn:hover{opacity:.82}
+.share-btn-li{background:#0077b5;color:#fff}
+.share-btn-fb{background:#1877f2;color:#fff}
+.share-btn-va{background:var(--c-dark);color:var(--c-secondary);border:1px solid var(--c-secondary)}
+
+/* SIDEBAR */
+aside{padding-top:48px;position:sticky;top:70px}
+.s-card{background:#fff;border:1px solid #eee;border-radius:8px;padding:22px;margin-bottom:22px}
+.s-card h4{font-family:var(--font-b);font-size:10px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:#999;margin-bottom:14px}
+.toc li{list-style:none;padding:8px 0;border-bottom:1px solid #f0f0f0;font-size:13px;color:#555}
+.toc li:last-child{border-bottom:none}
+.toc li::before{content:"→ ";color:var(--c-secondary)}
+.rel-post{display:block;padding:9px 0;border-bottom:1px solid #f0f0f0;font-size:13px;color:#444;text-decoration:none;line-height:1.4}
+.rel-post:last-child{border-bottom:none}
+.rel-post:hover{color:var(--c-accent)}
+.cta-card{background:var(--c-dark);border-radius:8px;padding:22px;text-align:center}
+.cta-card h4{color:#fff;font-size:14px;line-height:1.5;margin-bottom:8px;letter-spacing:normal;text-transform:none;font-family:var(--font-h);font-style:italic;font-size:17px}
+.cta-card p{font-size:12px;color:#aaa;margin-bottom:14px;line-height:1.5}
+.cta-btn{display:block;background:var(--c-accent);color:#fff;padding:10px;border-radius:4px;font-size:13px;font-weight:600;text-decoration:none;letter-spacing:.4px}
+.cta-btn:hover{background:#a0285e}
+
+/* BREADCRUMB */
+.breadcrumb{max-width:1160px;margin:0 auto;padding:20px 24px 0;font-size:12px;color:#999;font-family:var(--font-b)}
+.breadcrumb a{color:var(--c-mid);text-decoration:none}
+.breadcrumb a:hover{color:var(--c-accent)}
+.breadcrumb span{margin:0 6px}
+
+/* BACK LINK */
+.back-btn{display:inline-flex;align-items:center;gap:8px;color:var(--c-accent);font-size:13px;text-decoration:none;font-weight:500;padding:0 0 24px}
+.back-btn:hover{gap:12px}
+
+/* FOOTER */
+.footer{background:var(--c-dark);color:#888;text-align:center;padding:32px;font-size:13px;margin-top:80px}
+.footer a{color:var(--c-secondary);text-decoration:none}
+
+@media(max-width:800px){
+  .page-wrap{grid-template-columns:1fr}
+  aside{display:none}
+  .nav{padding:12px 20px}
+  .post-hero-content{padding:24px}
+  .nav-links{gap:14px}
+}
+</style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "TPM Autonomous Maintenance Implementation in Malaysian Factories",
+  "description": "Step-by-step guide to TPM autonomous maintenance implementation in Malaysian factories. HRDC certified consultant explains the 7 steps, common failure modes, and how to build operator ownership.",
+  "image": "https://images.unsplash.com/photo-1565043589221-1a6fd9ae45c7?auto=format&fit=crop&w=1200&h=630&q=80",
+  "url": "https://husnihalim.com/blog/tpm-autonomous-maintenance-implementation-malaysia/",
+  "datePublished": "2026-03-17",
+  "dateModified": "2026-03-17",
+  "inLanguage": "en-MY",
+  "author": {
+    "@type": "Person",
+    "name": "Husni Halim",
+    "url": "https://husnihalim.com",
+    "jobTitle": "Principal Consultant & Certified Trainer",
+    "sameAs": [
+      "https://www.linkedin.com/in/husni-halim-7436b01b/",
+      "https://www.facebook.com/visiarmada"
+    ]
+  },
+  "publisher": {
+    "@type": "Person",
+    "name": "Husni Halim",
+    "url": "https://husnihalim.com",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://husnihalim.com/assets/husni-portrait.png"
+    }
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://husnihalim.com/blog/tpm-autonomous-maintenance-implementation-malaysia/"
+  },
+  "keywords": "TPM, Autonomous Maintenance, Lean Manufacturing, OEE, Malaysia"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://husnihalim.com/"},
+    {"@type": "ListItem", "position": 2, "name": "Blog", "item": "https://husnihalim.com/blog/"},
+    {"@type": "ListItem", "position": 3, "name": "TPM Autonomous Maintenance Implementation in Malaysian Factories", "item": "https://husnihalim.com/blog/tpm-autonomous-maintenance-implementation-malaysia/"}
+  ]
+}
+</script>
+</head>
+<body>
+<nav class="nav">
+  <a href="/" class="nav-logo">Husni<em>Halim</em></a>
+  <ul class="nav-links">
+    <li><a href="/#about">About</a></li>
+    <li><a href="/#expertise">Expertise</a></li>
+    <li><a href="/#training">Training</a></li>
+    <li><a href="/blog/" style="color:#fff">Blog</a></li>
+    <li><a href="/#contact" class="nav-cta">Get In Touch</a></li>
+  </ul>
+</nav>
+
+<div class="post-hero">
+  <img src="https://images.unsplash.com/photo-1565043589221-1a6fd9ae45c7?auto=format&fit=crop&w=1200&h=630&q=80" alt="TPM Autonomous Maintenance Implementation in Malaysian Factories" loading="lazy" onerror="this.style.display='none'">
+  <div class="post-hero-overlay"></div>
+  <div class="post-hero-content">
+    <div class="post-cat">OEE & TPM</div>
+    <h1 class="post-title">TPM Autonomous Maintenance Implementation in Malaysian Factories</h1>
+    <div class="post-meta">
+      <span>March 2026</span>
+      <span>·</span>
+      <span>11 min read</span>
+    </div>
+  </div>
+</div>
+
+<div class="breadcrumb">
+  <a href="/">Home</a><span>›</span>
+  <a href="/blog/">Blog</a><span>›</span>
+  TPM Autonomous Maintenance Implementation in Malaysian Factories
+</div>
+
+<div class="page-wrap">
+  <article>
+    <a class="back-btn" href="/blog/">← Back to Blog</a>
+
+    <div class="tags">
+      <span class="tag">TPM</span><span class="tag">Autonomous Maintenance</span><span class="tag">Lean Manufacturing</span><span class="tag">OEE</span><span class="tag">Malaysia</span>
+    </div>
+
+    <p class="post-subtitle">Autonomous maintenance transfers basic equipment care from the maintenance department to operators — and it is the single highest-leverage step in any TPM programme. Here is how to implement it correctly in Malaysian manufacturing.</p>
+
+    
+<p>Of all the pillars in Total Productive Maintenance, autonomous maintenance is the one that delivers the fastest and most visible results — and the one that most Malaysian factories implement incorrectly. When done right, it transfers daily equipment care from an overloaded maintenance department to the operators who run the equipment, improving availability, reducing unplanned breakdowns, and building a shop floor culture where everyone owns equipment performance. When done wrong, it becomes a cleaning roster that collapses within three months.</p>
+
+<p>This article explains the seven-step autonomous maintenance model, the specific implementation challenges in Malaysian manufacturing, and the design decisions that determine whether the programme sustains or fades.</p>
+
+<h2>What Autonomous Maintenance Is — and What It Is Not</h2>
+
+<p>Autonomous maintenance (AM) — called Jishu Hozen in Japanese — is the practice of having machine operators perform a defined set of daily and periodic equipment care activities: cleaning, inspection, lubrication, tightening, and basic adjustments. The goal is to restore equipment to its optimal condition and then maintain that condition through operator activity rather than depending on the maintenance department for all interactions with the machine.</p>
+
+<p>This is not about replacing skilled maintenance technicians. It is about freeing them from reactive breakdowns caused by deterioration that operators could have detected and prevented — so that their time can be invested in planned maintenance, predictive maintenance, and equipment improvement work. In most Malaysian factories running without AM, 40 to 60 percent of maintenance department time is consumed by breakdowns that were entirely predictable and preventable. Autonomous maintenance eliminates the largest share of that waste.</p>
+
+<div class="callout">
+  <strong>The AM Logic:</strong> Operators clean → they discover abnormalities → abnormalities are addressed before they become failures → equipment availability rises → OEE improves → production cost per unit falls. The cleaning is not the goal. The discovery and prevention is.
+</div>
+
+<h2>The Seven Steps of Autonomous Maintenance</h2>
+
+<p>The classical TPM model structures AM implementation as a seven-step programme. Each step must be completed and sustained before the next begins. Skipping steps is the most common reason AM programmes plateau and collapse.</p>
+
+<h3>Step 1: Initial Cleaning and Inspection</h3>
+
+<p>The first step is a thorough, hands-on cleaning of the equipment — not by the cleaning crew, but by the operators who run it. The purpose is not housekeeping. It is to restore the equipment to a condition where abnormalities are visible, and to force the operator into close physical contact with every part of the machine. During Step 1 cleaning, operators discover contamination sources, loose bolts, damaged seals, oil leaks, worn components, and unsafe conditions that have been invisible under layers of accumulated grime. Each finding is tagged with a coloured marker — a physical abnormality tag — that creates a visible record of what was found and what action is required. This is the first moment in most operators' working lives when they have been given both the permission and the tools to notice what is wrong with their machine.</p>
+
+<h3>Step 2: Countermeasures for Contamination and Hard-to-Access Areas</h3>
+
+<p>Once the machine is clean and abnormalities are tagged, Step 2 addresses the sources of contamination and the physical access problems that made Step 1 difficult. If chips accumulate in a housing because the cover design allows them in, the solution is to improve the cover — not to clean the chips more frequently. If a lubrication point is inaccessible without removing a guard, the solution is to extend the lube point to the equipment exterior. Step 2 makes it easier to maintain the clean condition achieved in Step 1, and easier for operators to perform the ongoing activities that follow. Skipping Step 2 means the machine will be dirty again within a week, and the programme loses credibility.</p>
+
+<h3>Step 3: Cleaning and Lubrication Standards</h3>
+
+<p>Step 3 formalises what operators are expected to do and when. A cleaning and lubrication standard is a visual document — typically posted at the machine — that specifies every cleaning task (location, method, frequency, time required), every lubrication point (lubricant type, quantity, frequency), and every inspection check (what to look for, acceptance criteria, action if abnormal). The standard must be realistic. If it requires 45 minutes and is scheduled for a 10-minute shift changeover, it will not be done. Building the standard around what can actually be completed in the available time — and then protecting that time — is a management responsibility.</p>
+
+<h3>Step 4: General Inspection</h3>
+
+<p>Step 4 develops operators' technical competence to inspect the key mechanical, electrical, and hydraulic systems of their equipment. This requires structured training — not a one-day classroom session, but point-of-learning modules delivered at the machine that explain how each system works, what normal looks like, and how to identify early signs of deterioration. After Step 4, operators can distinguish between a pneumatic system running at the correct pressure and one that is slowly losing pressure due to a fitting leak — and they know what to do about it. This step closes the knowledge gap that is the root cause of most equipment abnormalities going undetected until they become failures.</p>
+
+<h3>Step 5: Autonomous Inspection</h3>
+
+<p>By Step 5, cleaning and inspection are combined into a single integrated activity that operators perform as part of their routine. The formal checklists from Step 3 are refined based on operating experience, and the inspection intervals are adjusted based on actual deterioration patterns observed over the preceding months. Operators at this step are no longer following a prescribed routine mechanically — they understand why each check is done and can adapt when they encounter something outside the standard condition.</p>
+
+<h3>Step 6: Standardisation</h3>
+
+<p>Step 6 extends autonomous maintenance principles beyond the individual machine to the entire work area. Visual management standards for the workstation, tool storage, material flow, and workplace organisation are developed and formalised. This is the AM equivalent of the Standardise step in 5S — creating documented, visual standards that make the correct state immediately apparent and the incorrect state immediately visible. The relationship between 5S and autonomous maintenance is explored in detail in <a href="/blog/5s-implementation-problems/">5S implementation problems in Malaysian factories</a>.</p>
+
+<h3>Step 7: Full Self-Management</h3>
+
+<p>At Step 7, the AM programme is fully embedded. Operators manage their own equipment cleaning, inspection, and basic maintenance activities without supervisor prompting. They detect abnormalities, raise them through the proper channels, track resolution, and continuously improve their own standards. The maintenance department has been transformed from a reactive breakdown-repair service into a function focused on planned maintenance, condition monitoring, and equipment improvement. OEE is measured and owned at the operator level. This is the state that most TPM textbooks describe as the destination — in Malaysian manufacturing, it is typically two to three years from the start of Step 1 implementation.</p>
+
+<h2>Autonomous Maintenance by Equipment Type in Malaysia</h2>
+
+<table>
+<thead><tr><th>Equipment Type</th><th>Primary AM Focus</th><th>Typical Step 1 Duration</th><th>Key Abnormality Category</th></tr></thead>
+<tbody>
+<tr><td>Injection moulding (plastics)</td><td>Mould cleaning, lubrication, temperature sensors</td><td>4–8 hours per machine</td><td>Contamination in mould cavities, worn tie bars</td></tr>
+<tr><td>CNC machining centres</td><td>Coolant system, chip clearance, axis lubrication</td><td>6–12 hours per machine</td><td>Coolant contamination, loose clamping fixtures</td></tr>
+<tr><td>Conveyor and assembly lines</td><td>Drive chain, belt tension, sensor cleaning</td><td>2–4 hours per zone</td><td>Belt wear, sensor misalignment, debris accumulation</td></tr>
+<tr><td>Packaging machinery</td><td>Seal bar condition, film feed, date coder</td><td>3–6 hours per machine</td><td>Seal bar wear, film tracking issues</td></tr>
+<tr><td>Semiconductor back-end (wire bonders, die attach)</td><td>Optics cleaning, bonding tool condition</td><td>2–3 hours per machine</td><td>Contaminated optics, worn capillaries</td></tr>
+</tbody>
+</table>
+
+<h2>Why Autonomous Maintenance Fails in Malaysian Factories</h2>
+
+<p>The failure modes are consistent across industries and plant sizes. The most common is treating AM as a cleaning programme rather than a deterioration-prevention system. When management presents AM to operators as "we need the machines cleaner," the response is compliance — operators clean the visible surfaces, the abnormality tags are never raised, and the programme produces no improvement in breakdown frequency. The programme succeeds when it is presented as "we need you to become the first line of defence for your equipment" — which is a completely different psychological contract.</p>
+
+<p>The second failure mode is not protecting the time. Step 3 AM standards require between 10 and 45 minutes per shift depending on equipment complexity. If production scheduling does not ring-fence this time — if operators are expected to complete AM activities as extra work on top of their normal production load — the activities will be skipped whenever production pressure mounts. And production pressure always mounts. The lesson here is identical to what drives all lean implementation failures, as explored in <a href="/blog/why-kaizen-events-fail/">why Kaizen events fail in manufacturing plants</a>: without the supporting management system, the technical tools produce nothing.</p>
+
+<p>The third failure mode is abnormality tags that never get resolved. When operators raise 50 tags in Step 1 and 45 of them are still open six months later, they conclude that the programme is performative — that management is collecting their feedback and doing nothing with it. The AM programme's credibility depends entirely on the speed and completeness of abnormality resolution, particularly in the early stages. A target of 80 percent tag closure within 30 days is a reasonable starting standard. Anything slower breaks the feedback loop that motivates operator engagement.</p>
+
+<div class="callout">
+  <strong>Common Mistake to Avoid:</strong> Running a "TPM Launch Day" where operators clean their machines while managers take photos, then returning to normal operations the following week. Autonomous maintenance is not a launch event. It is a system that requires daily management commitment and a multi-year implementation horizon. One launch day with no follow-through damages the credibility of any future improvement initiative.
+</div>
+
+<h2>The Link Between Autonomous Maintenance and OEE Improvement</h2>
+
+<p>Autonomous maintenance directly attacks the Availability component of OEE by eliminating the minor stoppages and unplanned breakdowns caused by deterioration that operators detect and resolve before they become failures. In a well-implemented AM programme, minor stoppage frequency typically falls by 30 to 50 percent within 12 months of Step 1 completion. Unplanned breakdown duration falls by 20 to 40 percent over the same period, as the remaining breakdowns that do occur are detected at an earlier stage of deterioration — when they are faster and cheaper to repair.</p>
+
+<p>The Quality component of OEE also improves, because many quality defects in Malaysian manufacturing are caused by equipment conditions — worn tooling, contaminated media, misaligned fixtures — that AM inspection detects before they produce defective output. A progressive die that is beginning to deflect will show visible wear patterns on the die face that an operator trained in Step 4 general inspection will notice. The same die, uninspected, produces a shift of defective stampings before it fails catastrophically. The connection between consistent equipment condition and first-pass quality is one of the strongest arguments for AM investment in quality-critical manufacturing sectors.</p>
+
+<h2>HRDC Claimable TPM and Autonomous Maintenance Training in Malaysia</h2>
+
+<p>TPM implementation training and autonomous maintenance coaching for Malaysian manufacturers can be claimed under HRDC SBL-Khas for registered employers. A structured programme covering TPM foundations, the seven-step AM model, abnormality identification, cleaning and lubrication standard development, and visual management for equipment care is typically delivered across two to three days of classroom and hands-on work, followed by facilitated implementation coaching at the factory over six to twelve months.</p>
+
+<p>The most effective format combines training with live implementation — participants begin their Step 1 activity on actual production equipment during the programme, so that the first abnormality tags are raised before the training closes and the maintenance team can begin resolution work immediately. This approach compresses the timeline from training to visible results from months to weeks, and it produces a concrete demonstration of what AM looks like in practice that sustains momentum after the trainer leaves.</p>
+
+<p>If your maintenance department is reactive, your operators are disengaged from equipment condition, and your OEE Availability component is below 80 percent, autonomous maintenance implementation is the highest-leverage first step available to you. <a href="/#contact">Contact Husni through the contact section</a> to discuss a scoped TPM diagnostic and implementation programme for your facility.</p>
+
+
+    <div class="author-bio">
+      <div class="author-av">H</div>
+      <div>
+        <strong>Husni Halim</strong>
+        <p>HRDC Certified Trainer (TTT/10228) and MPC Certified Productivity Expert. Principal Consultant at Visi Armada Consulting, specialising in lean manufacturing, OEE, and Kaizen for Malaysian manufacturers.</p>
+      </div>
+    </div>
+
+    <div class="share-bar">
+      <p>Share this article</p>
+      <div class="share-btns">
+        <a class="share-btn share-btn-li" href="https://www.linkedin.com/sharing/share-offsite/?url=https://husnihalim.com/blog/tpm-autonomous-maintenance-implementation-malaysia/" target="_blank" rel="noopener">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+          Share on LinkedIn
+        </a>
+        <a class="share-btn share-btn-fb" href="https://www.facebook.com/sharer/sharer.php?u=https://husnihalim.com/blog/tpm-autonomous-maintenance-implementation-malaysia/" target="_blank" rel="noopener">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+          Share on Facebook
+        </a>
+        <a class="share-btn share-btn-va" href="https://www.visiarmada.com" target="_blank" rel="noopener">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/></svg>
+          Visi Armada
+        </a>
+      </div>
+    </div>
+  </article>
+
+  <aside>
+    <div class="s-card">
+      <h4>In this article</h4>
+      <ul class="toc"><li>What Autonomous Maintenance Is — and What It Is Not</li>
+<li>The Seven Steps of Autonomous Maintenance</li>
+<li>Autonomous Maintenance by Equipment Type in Malaysia</li>
+<li>Why Autonomous Maintenance Fails in Malaysian Factories</li>
+<li>The Link Between Autonomous Maintenance and OEE Improvement</li>
+<li>HRDC Claimable TPM and Autonomous Maintenance Training in Malaysia</li></ul>
+    </div>
+    <div class="s-card">
+      <h4>Related Articles</h4>
+      <a class="rel-post" href="/blog/why-kaizen-events-fail/">Why Kaizen Events Fail in Manufacturing Plants</a>
+<a class="rel-post" href="/blog/pdca-implementation-problems/">PDCA in Malaysian SMEs: Why It Always Gets Stuck at Plan</a>
+<a class="rel-post" href="/blog/kaizen-blitz-vs-kaizen-culture/">Kaizen Blitz vs Kaizen Culture: Why One-Off Events Always Fail Long-Term</a>
+<a class="rel-post" href="/blog/kaizen-coaching-mro-aviation-malaysia/">Kaizen Coaching for MRO and Aviation Maintenance Malaysia</a>
+    </div>
+    <div class="cta-card">
+      <h4>Need help implementing this in your factory?</h4>
+      <p>HRDC claimable training available across Malaysia.</p>
+      <a href="/#contact" class="cta-btn">Get In Touch →</a>
+    </div>
+  </aside>
+</div>
+
+<footer class="footer">
+  <p>© 2026 Husni Halim · <a href="/">husnihalim.com</a> · HRDC Accredited Trainer TTT/10228</p>
+</footer>
+</body>
+</html>

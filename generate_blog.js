@@ -425,6 +425,89 @@ const articles = [
 `
   },
   {
+    slug: 'kaizen-coaching-mro-aviation-malaysia',
+    title: 'Kaizen Coaching for MRO and Aviation Maintenance Malaysia',
+    subtitle: 'Aviation MRO is one of the most complex operational environments in Malaysian industry. Here is how Kaizen coaching applies to hangar operations, component shops, and maintenance planning — and why the approach must be different from conventional factory-floor lean.',
+    metaTitle: 'Kaizen Coaching for MRO and Aviation Maintenance Malaysia | Husni Halim',
+    metaDesc: 'Kaizen coaching for aviation MRO in Malaysia. Reduce TAT, improve hangar 5S, and standardise maintenance workflows. HRDC claimable. By MPC Certified consultant.',
+    category: 'Kaizen',
+    readTime: '10 min read',
+    date: 'March 2026',
+    image: 'https://images.unsplash.com/photo-1540962351504-03099e0a754b?auto=format&fit=crop&w=1200&h=630&q=80',
+    tags: ['Kaizen', 'MRO', 'Aviation Maintenance', 'Lean Manufacturing', 'Malaysia'],
+    body: `
+<p>Malaysia's aviation MRO (Maintenance, Repair, and Overhaul) sector is one of the most technically demanding industrial environments in the country. Facilities in Subang, KLIA, Penang, and Johor Bahru perform everything from routine line maintenance and scheduled A-checks to heavy C-checks and D-checks on widebody aircraft. The workforce is highly credentialled — licensed aircraft maintenance engineers, CAAM-approved inspectors, and specialised avionics technicians — yet the operations that surround their technical work are frequently chaotic, slow, and wasteful.</p>
+
+<p>This is where Kaizen coaching makes a measurable difference. Not Kaizen as it is practised on an automotive stamping line or a food processing plant — MRO Kaizen requires a calibrated approach that respects regulatory constraints, safety culture, and the inherent variability of aircraft maintenance work. When applied correctly, it delivers significant reductions in turn-around time (TAT), dramatic improvements in parts availability and hangar flow, and a measurable increase in the proportion of mechanics' time spent on value-adding work rather than waiting, searching, and walking.</p>
+
+<h2>Why Kaizen in Aviation MRO is Different From Factory Lean</h2>
+
+<p>Most Kaizen frameworks were developed for repetitive, high-volume manufacturing environments where process variation is the enemy and standardisation is the goal. Aviation MRO has a fundamentally different production structure. Aircraft come in different configurations, different maintenance histories, and different findings that are discovered only after inspection begins. The scope of a C-check is never fully known until the first stage of the work package is opened. This variability is not a defect in the process — it is an inherent characteristic of complex maintenance work.</p>
+
+<p>This means that Kaizen in MRO cannot simply eliminate variation. Instead, it must distinguish between necessary variability — the kind driven by actual aircraft condition — and unnecessary waste: time spent waiting for job cards, searching for tooling, chasing parts, repeating paperwork, or navigating a disorganised hangar bay. The first category must be managed; the second can and should be eliminated.</p>
+
+<p>The other critical difference is the regulatory environment. CAAM, FAA, and EASA requirements mean that process changes in aviation MRO must go through a structured approval pathway. A Kaizen improvement that changes a maintenance procedure, a tool calibration process, or a parts handling method cannot simply be implemented on Monday after a Friday workshop. This is not an obstacle to Kaizen — it is a design constraint that shapes how improvement projects are structured and timed.</p>
+
+<h2>Five Kaizen Principles That Deliver Results in Malaysian Aviation MRO</h2>
+
+<h3>1. Gemba-Based Problem Identification</h3>
+
+<p>The first step in any MRO Kaizen engagement is structured observation on the hangar floor — not interviews, not reports, and not management estimates of where the time goes. In every MRO facility I have worked with in Malaysia, the actual distribution of mechanics' time is dramatically different from what supervisors believe. A typical finding: mechanics in a component shop spend 35 to 45 percent of their working time in activities that are not direct maintenance work — waiting for parts, locating tools, completing or correcting paperwork, or coordinating with planning and stores. Kaizen starts by making this visible through time-observation studies, then systematically attacking the largest non-value-adding categories.</p>
+
+<h3>2. 5S as a Foundation, Not a Housekeeping Programme</h3>
+
+<p>5S in an aviation hangar is not about aesthetics. It is about safety, reliability, and speed. A Foreign Object Damage (FOD) event caused by an unsecured tool is a serious safety and regulatory incident. A mechanic who cannot find the correct torque wrench in under two minutes has a workflow problem, not a discipline problem. When 5S is implemented correctly in MRO — with shadow boards, dedicated tool stations, clearly demarcated work zones, and visual indicators for calibration status — it eliminates a large category of daily friction and creates the visual control environment that makes standard work possible. The challenges of implementing 5S sustainably, and why it typically stalls after the initial audit, are covered in detail in <a href="/blog/5s-implementation-problems/">5S implementation problems in Malaysian factories</a>.</p>
+
+<h3>3. Standard Work for Repeatable Maintenance Tasks</h3>
+
+<p>Not all MRO work is variable. A significant proportion of hangar activity involves tasks that are performed on every aircraft of a given type, on every visit of a given check interval, under the same conditions. Tyre changes, oil servicing, toilet servicing, galley equipment inspections, and many avionics functional checks are essentially repetitive. Standard work for these tasks — including the sequence of steps, the tooling required, the acceptance criteria, and the time allocation — reduces variation, accelerates training of new technicians, and provides a baseline against which actual performance can be measured. The key failure mode, where standard work is created but never followed, is explored in <a href="/blog/standard-work-implementation-problems/">why standard work documentation fails in lean manufacturing</a>.</p>
+
+<h3>4. Pull-Based Parts and Materials Flow</h3>
+
+<p>Parts waiting is one of the largest sources of TAT loss in Malaysian MRO operations. Aircraft on jacks cannot progress to the next maintenance phase when the required parts have not been kitted and staged. The typical MRO response is to build larger parts buffer stocks — which ties up working capital and creates its own inventory management problems. The Kaizen approach is to analyse the actual demand patterns for high-frequency consumables and rotable parts, redesign the kitting and staging process to bring parts to the point of use before the mechanic needs them, and establish a visual replenishment system for consumables so that stockouts are visible before they create delays. This is a pull-flow principle applied to a service environment — and it delivers measurable TAT improvement within weeks of implementation.</p>
+
+<h3>5. Visual Management of Maintenance Progress</h3>
+
+<p>In a complex C-check with 800 to 1,200 job cards across multiple aircraft zones, managing progress is a planning and communication challenge. Many Malaysian MRO facilities rely on their MRO management software for status tracking — but the information is often updated late, incomplete, or inaccessible to the mechanics and team leads who need it in real time on the hangar floor. Visual management in MRO means bringing the critical schedule information to where the work happens: zone boards showing job card completion status by day, visual indicators for items awaiting inspection sign-off, and escalation signals for jobs that are behind schedule. This is the MRO equivalent of the andon system in manufacturing — making problems visible immediately rather than discovering them at the daily coordination meeting.</p>
+
+<h2>Turn-Around Time: The Primary KPI for MRO Kaizen</h2>
+
+<p>In aviation MRO, the equivalent of OEE is TAT — Turn-Around Time. The faster an aircraft can be returned to service after scheduled maintenance, the more revenue it generates for the airline and the more capacity the MRO facility can sell. TAT is also the primary competitive differentiator among Malaysian MRO providers competing for regional airline contracts.</p>
+
+<table>
+<thead><tr><th>Kaizen Focus Area</th><th>Typical TAT Impact</th><th>Implementation Timeframe</th><th>Complexity</th></tr></thead>
+<tbody>
+<tr><td>5S and tooling organisation</td><td>5–10% TAT reduction</td><td>4–8 weeks</td><td>Low</td></tr>
+<tr><td>Parts kitting and staging</td><td>10–20% TAT reduction</td><td>8–12 weeks</td><td>Medium</td></tr>
+<tr><td>Standard work for repetitive tasks</td><td>8–15% TAT reduction</td><td>12–20 weeks</td><td>Medium–High</td></tr>
+<tr><td>Visual management and zone boards</td><td>5–12% TAT reduction</td><td>4–8 weeks</td><td>Low–Medium</td></tr>
+<tr><td>Full Kaizen coaching programme (all areas)</td><td>20–35% TAT reduction</td><td>6–12 months</td><td>High</td></tr>
+</tbody>
+</table>
+
+<p>The combined effect of a structured Kaizen coaching programme across all five focus areas typically delivers a 20 to 35 percent reduction in TAT for the targeted check type. For a Malaysian MRO facility performing 40 to 60 C-checks per year, a 25 percent TAT reduction represents significant additional capacity — and a corresponding improvement in contract competitiveness and revenue per bay-day.</p>
+
+<h2>Common Failure Modes in MRO Kaizen Programmes</h2>
+
+<p>MRO Kaizen fails for the same reasons it fails in manufacturing — but with additional failure modes specific to the aviation environment. The most common are: treating Kaizen as a one-time workshop rather than a sustained coaching engagement; attempting to apply factory-floor Kaizen tools directly without adapting them to the MRO context; not securing CAAM or engineering approval before attempting to standardise maintenance procedures; and running improvement projects on non-bottleneck activities while the critical path through the C-check remains unchanged.</p>
+
+<p>The last point is particularly important. In a complex C-check, there is always a critical path — a sequence of interdependent tasks that determines the minimum possible TAT regardless of how efficiently all other work is done. Kaizen effort invested outside the critical path produces no TAT improvement. This is the same constraint-focused logic described in the OEE improvement context: improvement at a non-bottleneck is waste in a systems sense, regardless of how impressive it looks at the team level. The pattern of Kaizen effort dissolving into activity without results is explored in <a href="/blog/why-kaizen-events-fail/">why Kaizen events fail in manufacturing plants</a>.</p>
+
+<div class="callout">
+  <strong>What a Kaizen Coaching Engagement Looks Like in Malaysian Aviation MRO</strong>
+  <p>A structured MRO Kaizen coaching programme typically runs over six to twelve months and includes an initial diagnostic phase (two to three days of gemba observation and data collection), a prioritised improvement roadmap based on actual TAT loss drivers, facilitated Kaizen workshops for the top two to three improvement areas, standard work development and visual management implementation, and a monthly coaching cadence with the operations and planning team to sustain gains and build internal lean capability. The goal is not just to improve TAT for the current programme — it is to build a facility where the operations team can identify and solve its own flow problems without external support. <a href="/#contact">Contact Husni to discuss a programme scoped to your facility.</a></p>
+</div>
+
+<h2>HRDC Claimable Kaizen Training for Aviation MRO Teams</h2>
+
+<p>Kaizen and lean manufacturing training for Malaysian MRO teams is eligible for HRDC (Human Resource Development Corporation) claims under SBL-Khas for registered employers. Training can be delivered in a format specifically adapted for aviation maintenance personnel — with case examples drawn from hangar environments, component shops, and line maintenance operations rather than automotive or semiconductor factories. Participants from planning, stores, maintenance, and quality functions benefit most when trained together, as TAT improvement requires cross-functional coordination that classroom training alone cannot develop.</p>
+
+<p>The most effective programme combines two to three days of foundational Kaizen and lean principles training with a live improvement project at the facility — identifying a real TAT or flow problem, analysing it using lean tools, and implementing the first improvement actions before the training closes. This approach ensures the training produces tangible results rather than theoretical knowledge that does not survive contact with the day-to-day pressures of a live MRO operation.</p>
+
+<p>If your MRO facility is under pressure on TAT, dealing with recurring parts availability issues, or struggling to sustain 5S after the initial launch, a Kaizen diagnostic is the fastest way to identify where the improvement leverage actually is. <a href="/#contact">Reach out through the contact section</a> to discuss what a programme scoped to your operation would look like.</p>
+`
+  },
+  {
     slug: 'oee-semiconductor-factories-malaysia',
     title: 'How to Improve OEE in Semiconductor Factories Malaysia',
     subtitle: 'Malaysian semiconductor plants run 15 to 30 percentage points below world-class OEE. Here is what the data shows, what drives the gap, and the improvement roadmap that actually works in backend assembly and test operations.',
@@ -552,6 +635,104 @@ const articles = [
 <p>If your plant is below 70% OEE and you want a structured path to improvement, the starting point is an OEE diagnostic — typically a two to three day on-site assessment that identifies the top five loss categories at your bottleneck equipment and quantifies the improvement opportunity in output and revenue terms. This gives you a fact-based business case for the improvement investment and a clear prioritised action list before any training or project work begins.</p>
 
 <p>The diagnostic uses your existing production data — no new systems or sensors are required to get started. What changes is how that data is analysed and acted on. <a href="/#contact">Reach out through the contact section</a> to discuss whether an OEE diagnostic is the right starting point for your operation.</p>
+`
+  },
+  {
+    slug: 'tpm-autonomous-maintenance-implementation-malaysia',
+    title: 'TPM Autonomous Maintenance Implementation in Malaysian Factories',
+    subtitle: 'Autonomous maintenance transfers basic equipment care from the maintenance department to operators — and it is the single highest-leverage step in any TPM programme. Here is how to implement it correctly in Malaysian manufacturing.',
+    metaTitle: 'TPM Autonomous Maintenance Implementation Malaysia | Husni Halim',
+    metaDesc: 'Step-by-step guide to TPM autonomous maintenance implementation in Malaysian factories. HRDC certified consultant explains the 7 steps, common failure modes, and how to build operator ownership.',
+    category: 'OEE & TPM',
+    readTime: '11 min read',
+    date: 'March 2026',
+    image: 'https://images.unsplash.com/photo-1565043589221-1a6fd9ae45c7?auto=format&fit=crop&w=1200&h=630&q=80',
+    tags: ['TPM', 'Autonomous Maintenance', 'Lean Manufacturing', 'OEE', 'Malaysia'],
+    body: `
+<p>Of all the pillars in Total Productive Maintenance, autonomous maintenance is the one that delivers the fastest and most visible results — and the one that most Malaysian factories implement incorrectly. When done right, it transfers daily equipment care from an overloaded maintenance department to the operators who run the equipment, improving availability, reducing unplanned breakdowns, and building a shop floor culture where everyone owns equipment performance. When done wrong, it becomes a cleaning roster that collapses within three months.</p>
+
+<p>This article explains the seven-step autonomous maintenance model, the specific implementation challenges in Malaysian manufacturing, and the design decisions that determine whether the programme sustains or fades.</p>
+
+<h2>What Autonomous Maintenance Is — and What It Is Not</h2>
+
+<p>Autonomous maintenance (AM) — called Jishu Hozen in Japanese — is the practice of having machine operators perform a defined set of daily and periodic equipment care activities: cleaning, inspection, lubrication, tightening, and basic adjustments. The goal is to restore equipment to its optimal condition and then maintain that condition through operator activity rather than depending on the maintenance department for all interactions with the machine.</p>
+
+<p>This is not about replacing skilled maintenance technicians. It is about freeing them from reactive breakdowns caused by deterioration that operators could have detected and prevented — so that their time can be invested in planned maintenance, predictive maintenance, and equipment improvement work. In most Malaysian factories running without AM, 40 to 60 percent of maintenance department time is consumed by breakdowns that were entirely predictable and preventable. Autonomous maintenance eliminates the largest share of that waste.</p>
+
+<div class="callout">
+  <strong>The AM Logic:</strong> Operators clean → they discover abnormalities → abnormalities are addressed before they become failures → equipment availability rises → OEE improves → production cost per unit falls. The cleaning is not the goal. The discovery and prevention is.
+</div>
+
+<h2>The Seven Steps of Autonomous Maintenance</h2>
+
+<p>The classical TPM model structures AM implementation as a seven-step programme. Each step must be completed and sustained before the next begins. Skipping steps is the most common reason AM programmes plateau and collapse.</p>
+
+<h3>Step 1: Initial Cleaning and Inspection</h3>
+
+<p>The first step is a thorough, hands-on cleaning of the equipment — not by the cleaning crew, but by the operators who run it. The purpose is not housekeeping. It is to restore the equipment to a condition where abnormalities are visible, and to force the operator into close physical contact with every part of the machine. During Step 1 cleaning, operators discover contamination sources, loose bolts, damaged seals, oil leaks, worn components, and unsafe conditions that have been invisible under layers of accumulated grime. Each finding is tagged with a coloured marker — a physical abnormality tag — that creates a visible record of what was found and what action is required. This is the first moment in most operators' working lives when they have been given both the permission and the tools to notice what is wrong with their machine.</p>
+
+<h3>Step 2: Countermeasures for Contamination and Hard-to-Access Areas</h3>
+
+<p>Once the machine is clean and abnormalities are tagged, Step 2 addresses the sources of contamination and the physical access problems that made Step 1 difficult. If chips accumulate in a housing because the cover design allows them in, the solution is to improve the cover — not to clean the chips more frequently. If a lubrication point is inaccessible without removing a guard, the solution is to extend the lube point to the equipment exterior. Step 2 makes it easier to maintain the clean condition achieved in Step 1, and easier for operators to perform the ongoing activities that follow. Skipping Step 2 means the machine will be dirty again within a week, and the programme loses credibility.</p>
+
+<h3>Step 3: Cleaning and Lubrication Standards</h3>
+
+<p>Step 3 formalises what operators are expected to do and when. A cleaning and lubrication standard is a visual document — typically posted at the machine — that specifies every cleaning task (location, method, frequency, time required), every lubrication point (lubricant type, quantity, frequency), and every inspection check (what to look for, acceptance criteria, action if abnormal). The standard must be realistic. If it requires 45 minutes and is scheduled for a 10-minute shift changeover, it will not be done. Building the standard around what can actually be completed in the available time — and then protecting that time — is a management responsibility.</p>
+
+<h3>Step 4: General Inspection</h3>
+
+<p>Step 4 develops operators' technical competence to inspect the key mechanical, electrical, and hydraulic systems of their equipment. This requires structured training — not a one-day classroom session, but point-of-learning modules delivered at the machine that explain how each system works, what normal looks like, and how to identify early signs of deterioration. After Step 4, operators can distinguish between a pneumatic system running at the correct pressure and one that is slowly losing pressure due to a fitting leak — and they know what to do about it. This step closes the knowledge gap that is the root cause of most equipment abnormalities going undetected until they become failures.</p>
+
+<h3>Step 5: Autonomous Inspection</h3>
+
+<p>By Step 5, cleaning and inspection are combined into a single integrated activity that operators perform as part of their routine. The formal checklists from Step 3 are refined based on operating experience, and the inspection intervals are adjusted based on actual deterioration patterns observed over the preceding months. Operators at this step are no longer following a prescribed routine mechanically — they understand why each check is done and can adapt when they encounter something outside the standard condition.</p>
+
+<h3>Step 6: Standardisation</h3>
+
+<p>Step 6 extends autonomous maintenance principles beyond the individual machine to the entire work area. Visual management standards for the workstation, tool storage, material flow, and workplace organisation are developed and formalised. This is the AM equivalent of the Standardise step in 5S — creating documented, visual standards that make the correct state immediately apparent and the incorrect state immediately visible. The relationship between 5S and autonomous maintenance is explored in detail in <a href="/blog/5s-implementation-problems/">5S implementation problems in Malaysian factories</a>.</p>
+
+<h3>Step 7: Full Self-Management</h3>
+
+<p>At Step 7, the AM programme is fully embedded. Operators manage their own equipment cleaning, inspection, and basic maintenance activities without supervisor prompting. They detect abnormalities, raise them through the proper channels, track resolution, and continuously improve their own standards. The maintenance department has been transformed from a reactive breakdown-repair service into a function focused on planned maintenance, condition monitoring, and equipment improvement. OEE is measured and owned at the operator level. This is the state that most TPM textbooks describe as the destination — in Malaysian manufacturing, it is typically two to three years from the start of Step 1 implementation.</p>
+
+<h2>Autonomous Maintenance by Equipment Type in Malaysia</h2>
+
+<table>
+<thead><tr><th>Equipment Type</th><th>Primary AM Focus</th><th>Typical Step 1 Duration</th><th>Key Abnormality Category</th></tr></thead>
+<tbody>
+<tr><td>Injection moulding (plastics)</td><td>Mould cleaning, lubrication, temperature sensors</td><td>4–8 hours per machine</td><td>Contamination in mould cavities, worn tie bars</td></tr>
+<tr><td>CNC machining centres</td><td>Coolant system, chip clearance, axis lubrication</td><td>6–12 hours per machine</td><td>Coolant contamination, loose clamping fixtures</td></tr>
+<tr><td>Conveyor and assembly lines</td><td>Drive chain, belt tension, sensor cleaning</td><td>2–4 hours per zone</td><td>Belt wear, sensor misalignment, debris accumulation</td></tr>
+<tr><td>Packaging machinery</td><td>Seal bar condition, film feed, date coder</td><td>3–6 hours per machine</td><td>Seal bar wear, film tracking issues</td></tr>
+<tr><td>Semiconductor back-end (wire bonders, die attach)</td><td>Optics cleaning, bonding tool condition</td><td>2–3 hours per machine</td><td>Contaminated optics, worn capillaries</td></tr>
+</tbody>
+</table>
+
+<h2>Why Autonomous Maintenance Fails in Malaysian Factories</h2>
+
+<p>The failure modes are consistent across industries and plant sizes. The most common is treating AM as a cleaning programme rather than a deterioration-prevention system. When management presents AM to operators as "we need the machines cleaner," the response is compliance — operators clean the visible surfaces, the abnormality tags are never raised, and the programme produces no improvement in breakdown frequency. The programme succeeds when it is presented as "we need you to become the first line of defence for your equipment" — which is a completely different psychological contract.</p>
+
+<p>The second failure mode is not protecting the time. Step 3 AM standards require between 10 and 45 minutes per shift depending on equipment complexity. If production scheduling does not ring-fence this time — if operators are expected to complete AM activities as extra work on top of their normal production load — the activities will be skipped whenever production pressure mounts. And production pressure always mounts. The lesson here is identical to what drives all lean implementation failures, as explored in <a href="/blog/why-kaizen-events-fail/">why Kaizen events fail in manufacturing plants</a>: without the supporting management system, the technical tools produce nothing.</p>
+
+<p>The third failure mode is abnormality tags that never get resolved. When operators raise 50 tags in Step 1 and 45 of them are still open six months later, they conclude that the programme is performative — that management is collecting their feedback and doing nothing with it. The AM programme's credibility depends entirely on the speed and completeness of abnormality resolution, particularly in the early stages. A target of 80 percent tag closure within 30 days is a reasonable starting standard. Anything slower breaks the feedback loop that motivates operator engagement.</p>
+
+<div class="callout">
+  <strong>Common Mistake to Avoid:</strong> Running a "TPM Launch Day" where operators clean their machines while managers take photos, then returning to normal operations the following week. Autonomous maintenance is not a launch event. It is a system that requires daily management commitment and a multi-year implementation horizon. One launch day with no follow-through damages the credibility of any future improvement initiative.
+</div>
+
+<h2>The Link Between Autonomous Maintenance and OEE Improvement</h2>
+
+<p>Autonomous maintenance directly attacks the Availability component of OEE by eliminating the minor stoppages and unplanned breakdowns caused by deterioration that operators detect and resolve before they become failures. In a well-implemented AM programme, minor stoppage frequency typically falls by 30 to 50 percent within 12 months of Step 1 completion. Unplanned breakdown duration falls by 20 to 40 percent over the same period, as the remaining breakdowns that do occur are detected at an earlier stage of deterioration — when they are faster and cheaper to repair.</p>
+
+<p>The Quality component of OEE also improves, because many quality defects in Malaysian manufacturing are caused by equipment conditions — worn tooling, contaminated media, misaligned fixtures — that AM inspection detects before they produce defective output. A progressive die that is beginning to deflect will show visible wear patterns on the die face that an operator trained in Step 4 general inspection will notice. The same die, uninspected, produces a shift of defective stampings before it fails catastrophically. The connection between consistent equipment condition and first-pass quality is one of the strongest arguments for AM investment in quality-critical manufacturing sectors.</p>
+
+<h2>HRDC Claimable TPM and Autonomous Maintenance Training in Malaysia</h2>
+
+<p>TPM implementation training and autonomous maintenance coaching for Malaysian manufacturers can be claimed under HRDC SBL-Khas for registered employers. A structured programme covering TPM foundations, the seven-step AM model, abnormality identification, cleaning and lubrication standard development, and visual management for equipment care is typically delivered across two to three days of classroom and hands-on work, followed by facilitated implementation coaching at the factory over six to twelve months.</p>
+
+<p>The most effective format combines training with live implementation — participants begin their Step 1 activity on actual production equipment during the programme, so that the first abnormality tags are raised before the training closes and the maintenance team can begin resolution work immediately. This approach compresses the timeline from training to visible results from months to weeks, and it produces a concrete demonstration of what AM looks like in practice that sustains momentum after the trainer leaves.</p>
+
+<p>If your maintenance department is reactive, your operators are disengaged from equipment condition, and your OEE Availability component is below 80 percent, autonomous maintenance implementation is the highest-leverage first step available to you. <a href="/#contact">Contact Husni through the contact section</a> to discuss a scoped TPM diagnostic and implementation programme for your facility.</p>
 `
   }
 ];
@@ -950,7 +1131,9 @@ const ISO_DATE_MAP = {
   'pdca-implementation-problems':             '2025-10-17',
   'andon-system-implementation-problems':     '2025-11-11',
   'gemba-walk-problems':                      '2026-01-08',
-  'oee-semiconductor-factories-malaysia':     '2026-03-03'
+  'kaizen-coaching-mro-aviation-malaysia':    '2026-03-14',
+  'oee-semiconductor-factories-malaysia':     '2026-03-03',
+  'tpm-autonomous-maintenance-implementation-malaysia': '2026-03-17'
 };
 articles.forEach(a => {
   a.isoDate = ISO_DATE_MAP[a.slug] || '2025-01-01';
