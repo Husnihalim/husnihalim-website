@@ -832,19 +832,18 @@
   document.querySelector('form[name="floor-assessment"]').addEventListener('submit', function(e) {
     e.preventDefault();
     var form = e.target;
+    var btn  = form.querySelector('button[type="submit"]');
+    btn.disabled = true;
+    btn.textContent = 'Sending…';
+
     var data = new FormData(form);
-    fetch('/', {
+    fetch('/.netlify/functions/submit-form', {
       method: 'POST',
       headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
       body: new URLSearchParams(data).toString()
     })
-    .then(function(res) {
-      if (res.ok) {
-        window.location.href = '/thank-you/';
-      } else {
-        // Fallback: still redirect so user isn't stuck
-        window.location.href = '/thank-you/';
-      }
+    .then(function() {
+      window.location.href = '/thank-you/';
     })
     .catch(function() {
       window.location.href = '/thank-you/';
