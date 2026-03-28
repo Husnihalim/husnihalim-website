@@ -609,7 +609,59 @@
  .footer-links a:hover { color:#fff; }
  .footer-copy { font-size:11px; color:rgba(255,255,255,.25); }
  .footer-reg { font-size:10px; color:rgba(255,255,255,.2); margin-top:6px; letter-spacing:.3px; }
- </style>
+ 
+ /* ---- NAV DROPDOWN ---- */
+ .nav-dropdown { position:relative; }
+ .dropdown-menu {
+   display:none;
+   position:absolute;
+   top:calc(100% + 4px);
+   left:50%;
+   transform:translateX(-50%);
+   background:#0c1b2e;
+   border-top:2px solid var(--gold);
+   min-width:240px;
+   z-index:300;
+   list-style:none;
+   padding:4px 0;
+   box-shadow:0 12px 36px rgba(0,0,0,.5);
+   border-radius:0 0 4px 4px;
+ }
+ .dropdown-menu li a {
+   display:block;
+   padding:9px 20px;
+   color:rgba(255,255,255,.7);
+   font-size:12px;
+   letter-spacing:.3px;
+   text-decoration:none;
+   border-bottom:1px solid rgba(255,255,255,.05);
+   transition:background .15s, color .15s;
+   white-space:nowrap;
+ }
+ .dropdown-menu li:last-child a { border-bottom:none; }
+ .dropdown-menu li a:hover { background:rgba(255,255,255,.07); color:#fff; }
+ .nav-dropdown:hover .dropdown-menu,
+ .nav-dropdown:focus-within .dropdown-menu { display:block; }
+ .nav-dropdown > a::after { content:' ▾'; font-size:9px; opacity:.7; }
+
+ /* ---- COURSE CARD LINK ---- */
+ .course-link {
+   display:inline-flex;
+   align-items:center;
+   gap:5px;
+   margin-top:14px;
+   color:var(--gold);
+   font-size:12px;
+   font-weight:600;
+   letter-spacing:.4px;
+   text-decoration:none;
+   border-top:1px solid var(--warm);
+   padding-top:12px;
+   width:100%;
+ }
+ .course-link:hover { color:var(--navy); }
+ .course-link::after { content:'›'; font-size:15px; }
+</style>
 </head>
 <body>
 
@@ -618,7 +670,17 @@
  <a href="/" class="nav-logo">Husni<em>Halim</em></a>
  <ul class="nav-links">
  <li><a href="/#about">About</a></li>
- <li><a href="/hrdc-training/" class="active">Training</a></li>
+ <li class="nav-dropdown"><a href="/hrdc-training/" class="active">Training</a>
+    <ul class="dropdown-menu">
+      <li><a href="/hrdc-training/oee/">OEE Training</a></li>
+      <li><a href="/hrdc-training/kaizen/">Kaizen</a></li>
+      <li><a href="/hrdc-training/lean-manufacturing/">Lean Manufacturing &amp; VSM</a></li>
+      <li><a href="/hrdc-training/5s/">5S Workplace Organization</a></li>
+      <li><a href="/hrdc-training/tpm/">Total Productive Maintenance</a></li>
+      <li><a href="/hrdc-training/tqm/">Total Quality Management</a></li>
+      <li><a href="/hrdc-training/problem-solving/">Problem Solving</a></li>
+      <li><a href="/hrdc-training/ai-industry-4-0/">AI for Industry 4.0</a></li>
+    </ul></li>
  <li><a href="/consulting/">Consulting</a></li>
  <li><a href="/#track-record">Track Record</a></li>
  <li><a href="/blog/">Blog</a></li>
@@ -729,6 +791,7 @@
  <span class="pill pill-dur">2 Days</span>
  <span class="pill pill-aud">All Levels</span>
  <span class="pill pill-hrdc">&#10003; HRDC Claimable</span>
+ <a href="/hrdc-training/oee/" class="course-link">View Full Programme</a>
  </div>
  <p class="course-desc">Delivered by a Certified Process Kaizen Engineer (Solving Efeso Consulting, Milan, Italy) who ran Kaizen events across global manufacturing plants in Brazil, China, Indonesia, and Italy before bringing the same methodology to Malaysian factories. Participants learn to plan and facilitate Gemba-based improvement events, apply PDCA rigorously to real problems, and build the internal structure for continuous improvement that actually sustains beyond the training day.</p>
  <ul class="outcomes">
@@ -753,6 +816,7 @@
  <span class="pill pill-dur">2 Days</span>
  <span class="pill pill-aud">Engineers · Supervisors</span>
  <span class="pill pill-hrdc">&#10003; HRDC Claimable</span>
+ <a href="/hrdc-training/kaizen/" class="course-link">View Full Programme</a>
  </div>
  <p class="course-desc">Most manufacturers understand Lean as a concept but struggle with where to start. This program makes it practical — participants draw their actual current state value stream, identify waste with specificity, design a realistic future state, and leave with an implementation roadmap for their own production line. Covers the full Lean toolkit from the 7 wastes to pull systems and flow design.</p>
  <ul class="outcomes">
@@ -777,6 +841,7 @@
  <span class="pill pill-dur">1–2 Days</span>
  <span class="pill pill-aud">All Levels</span>
  <span class="pill pill-hrdc">&#10003; HRDC Claimable</span>
+ <a href="/hrdc-training/lean-manufacturing/" class="course-link">View Full Programme</a>
  </div>
  <p class="course-desc">Thousands of Malaysian factories run 5S training. Most see initial results that fade within six months. This program focuses specifically on what makes 5S stick — audit design, visual management systems, accountability structures, and the leadership behaviours that sustain the standard. Includes a Carotino-tested implementation framework from a year-long 5S consulting engagement.</p>
  <ul class="outcomes">
@@ -801,6 +866,7 @@
  <span class="pill pill-dur">2 Days</span>
  <span class="pill pill-aud">Maintenance · Production Teams</span>
  <span class="pill pill-hrdc">&#10003; HRDC Claimable</span>
+ <a href="/hrdc-training/5s/" class="course-link">View Full Programme</a>
  </div>
  <p class="course-desc">Unplanned breakdowns are one of the biggest OEE killers in Malaysian manufacturing. This TPM program builds the systems to prevent them — transitioning maintenance culture from reactive firefighting to proactive ownership. Participants implement the two foundational TPM pillars (autonomous and planned maintenance) with practical tools they can deploy immediately on the production floor.</p>
  <ul class="outcomes">
@@ -825,6 +891,7 @@
  <span class="pill pill-dur">2 Days</span>
  <span class="pill pill-aud">QA · Production · Management</span>
  <span class="pill pill-hrdc">&#10003; HRDC Claimable</span>
+ <a href="/hrdc-training/tpm/" class="course-link">View Full Programme</a>
  </div>
  <p class="course-desc">Quality cannot be inspected into a product — it has to be built in at every stage of the production process. This TQM program covers quality culture transformation, defect prevention through process control, cross-functional quality ownership, and the management systems that make quality a shared organizational value rather than a QA department responsibility. Delivered with automotive-sector precision.</p>
  <ul class="outcomes">
@@ -849,6 +916,7 @@
  <span class="pill pill-dur">1–2 Days</span>
  <span class="pill pill-aud">Engineers · QA · Supervisors</span>
  <span class="pill pill-hrdc">&#10003; HRDC Claimable</span>
+ <a href="/hrdc-training/tqm/" class="course-link">View Full Programme</a>
  </div>
  <p class="course-desc">Most factory teams jump to solutions before they have properly defined the problem — and the same issues recur month after month. This program builds systematic root-cause analysis capability using 8D, 5-Why, Fishbone Diagrams, Pareto Analysis, and A3 thinking. Participants work on real problems from their own production environment throughout the training, not textbook examples.</p>
  <ul class="outcomes">
@@ -873,6 +941,7 @@
  <span class="pill pill-dur">1 Day</span>
  <span class="pill pill-aud">Management · Engineers · Teams</span>
  <span class="pill pill-hrdc">&#10003; HRDC Claimable</span>
+ <a href="/hrdc-training/problem-solving/" class="course-link">View Full Programme</a>
  </div>
  <p class="course-desc">Malaysian manufacturers face real competitive pressure from automation and AI adoption — but most AI training is filled with jargon and theory disconnected from the factory floor. This program is different: practical, clear, and focused on what AI actually means for production operations. Participants assess their own Industry 4.0 readiness and leave with a realistic digital transformation roadmap, not a buzzword deck.</p>
  <ul class="outcomes">
@@ -889,6 +958,7 @@
  </div>
  </div>
 
+ <a href="/hrdc-training/ai-industry-4-0/" class="course-link">View Full Programme</a>
  </div>
  </div>
 </section>
