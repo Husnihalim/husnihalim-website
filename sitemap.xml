@@ -197,4 +197,28 @@
     <priority>0.8</priority>
   </url>
 
+  <url>
+    <loc>https://husnihalim.com/case-studies/</loc>
+    <lastmod>2025-01-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://husnihalim.com/blog/lean-six-sigma-malaysia/</loc>
+    <lastmod>2025-01-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://husnihalim.com/industries/automotive/</loc>
+    <lastmod>2025-01-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://husnihalim.com/industries/semiconductor-electronics/</loc>
+    <lastmod>2025-01-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
 </urlset>
