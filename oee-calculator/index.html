@@ -646,7 +646,60 @@
   }
   .card, .section-card, .comp-card { box-shadow: none; border: 1px solid var(--border); }
  }
+
+/* ── SEO CONTENT SECTION ── */
+.seo-content { background: var(--cream); padding: 80px 24px 96px; }
+.seo-inner { max-width: 860px; margin: 0 auto; }
+.seo-label { display: inline-block; font-family: 'DM Sans', sans-serif; font-size: 11px; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: var(--gold); margin-bottom: 14px; }
+.seo-intro h2 { font-family: 'Cormorant Garamond', serif; font-size: clamp(2rem, 4vw, 2.8rem); font-weight: 600; color: var(--navy); line-height: 1.2; margin: 0 0 20px; }
+.seo-intro p, .seo-content p { font-family: 'DM Sans', sans-serif; font-size: 1.05rem; line-height: 1.8; color: var(--text); margin-bottom: 16px; }
+.seo-content h3 { font-family: 'Cormorant Garamond', serif; font-size: clamp(1.5rem, 3vw, 2rem); font-weight: 600; color: var(--navy); margin: 56px 0 18px; line-height: 1.25; }
+.seo-content h4 { font-family: 'DM Sans', sans-serif; font-size: 1rem; font-weight: 700; color: var(--navy); margin: 0 0 10px; }
+.seo-content h5 { font-family: 'DM Sans', sans-serif; font-size: 0.95rem; font-weight: 700; color: var(--navy); margin: 0 0 8px; }
+.seo-formula-block { background: var(--navy); border-radius: 12px; padding: 32px; margin: 40px 0; }
+.seo-formula-block h3 { color: #fff; margin: 0 0 14px; }
+.seo-formula-block p { color: rgba(255,255,255,0.8); }
+.formula-display { display: flex; flex-wrap: wrap; align-items: center; gap: 12px; margin: 20px 0; }
+.f-term { background: rgba(196,120,50,0.2); border: 1px solid var(--gold); color: var(--gold); font-family: 'DM Sans', sans-serif; font-weight: 700; font-size: 1rem; padding: 8px 16px; border-radius: 6px; }
+.f-op { color: rgba(255,255,255,0.6); font-size: 1.4rem; font-weight: 300; }
+.f-result { background: var(--gold); color: var(--navy); font-family: 'DM Sans', sans-serif; font-weight: 700; font-size: 1rem; padding: 8px 16px; border-radius: 6px; }
+.seo-three-cols { display: grid; grid-template-columns: 1fr; gap: 24px; margin: 24px 0 40px; }
+@media (min-width: 700px) { .seo-three-cols { grid-template-columns: repeat(3, 1fr); } }
+.seo-col { background: #fff; border: 1px solid var(--warm); border-top: 3px solid var(--gold); border-radius: 10px; padding: 24px; }
+.seo-col-icon { font-size: 1.6rem; margin-bottom: 12px; }
+.seo-col p { font-size: 0.93rem; color: var(--muted); line-height: 1.75; }
+.seo-highlight-box { background: #fff; border-left: 4px solid var(--gold); border-radius: 0 10px 10px 0; padding: 32px; margin: 40px 0; }
+.seo-highlight-box h3 { margin-top: 0; }
+.seo-losses-grid { display: grid; grid-template-columns: 1fr; gap: 16px; margin: 24px 0 40px; }
+@media (min-width: 700px) { .seo-losses-grid { grid-template-columns: repeat(2, 1fr); } }
+.loss-item { background: #fff; border: 1px solid var(--warm); border-radius: 10px; padding: 22px; }
+.loss-item p { font-size: 0.92rem; color: var(--muted); line-height: 1.7; margin: 0; }
+.loss-tag { display: inline-block; font-family: 'DM Sans', sans-serif; font-size: 10px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; padding: 3px 8px; border-radius: 4px; margin-bottom: 10px; }
+.loss-avail .loss-tag { background: #fef3e2; color: #b45309; }
+.loss-perf  .loss-tag { background: #e8f4fd; color: #1e6fa8; }
+.loss-qual  .loss-tag { background: #edfbf0; color: #16783a; }
+.bench-table-wrap { overflow-x: auto; margin: 24px 0 40px; border-radius: 10px; border: 1px solid var(--warm); }
+.bench-table { width: 100%; border-collapse: collapse; font-family: 'DM Sans', sans-serif; font-size: 0.93rem; }
+.bench-table th { background: var(--navy); color: #fff; padding: 12px 18px; text-align: left; font-weight: 600; }
+.bench-table td { padding: 11px 18px; border-bottom: 1px solid var(--warm); color: var(--text); }
+.bench-table tr:last-child td { border-bottom: none; }
+.bench-table tr:nth-child(even) td { background: var(--cream); }
+.seo-steps { margin: 24px 0 40px; }
+.step-list { display: flex; flex-direction: column; gap: 20px; margin-top: 20px; }
+.step-item { display: flex; gap: 20px; align-items: flex-start; }
+.step-num { flex-shrink: 0; width: 38px; height: 38px; border-radius: 50%; background: var(--navy); color: var(--gold); font-family: 'Cormorant Garamond', serif; font-size: 1.1rem; font-weight: 700; display: flex; align-items: center; justify-content: center; margin-top: 2px; }
+.step-body h5 { margin: 0 0 6px; }
+.step-body p { font-size: 0.93rem; color: var(--muted); line-height: 1.75; margin: 0; }
+.seo-faq { margin-top: 40px; }
+.faq-item { border: 1px solid var(--warm); border-radius: 10px; margin-bottom: 12px; overflow: hidden; }
+.faq-item summary { font-family: 'DM Sans', sans-serif; font-size: 0.97rem; font-weight: 600; color: var(--navy); padding: 18px 22px; cursor: pointer; list-style: none; display: flex; justify-content: space-between; align-items: center; gap: 12px; }
+.faq-item summary::-webkit-details-marker { display: none; }
+.faq-item summary::after { content: '+'; font-size: 1.3rem; color: var(--gold); flex-shrink: 0; transition: transform 0.2s; }
+.faq-item[open] summary::after { transform: rotate(45deg); }
+.faq-item p { padding: 0 22px 20px; font-size: 0.93rem; color: var(--muted); line-height: 1.8; margin: 0; }
+.faq-item a { color: var(--gold); }
  </style>
+
 </head>
 <body>
 
@@ -1196,6 +1249,210 @@
 </div><!-- end wizard-wrap -->
 </div><!-- end wizard -->
 </div><!-- end calc-section -->
+
+<!-- ═══════════════════ SEO CONTENT SECTION ═══════════════════ -->
+<section class="seo-content">
+ <div class="seo-inner">
+
+  <!-- INTRO -->
+  <div class="seo-intro">
+   <span class="seo-label">Understanding OEE</span>
+   <h2>What Is OEE — and Why Does Every Manufacturer Need to Track It?</h2>
+   <p>If you run a production facility, there is one number that cuts through all the noise and tells you, plainly, how well your factory is really performing. That number is <strong>OEE — Overall Equipment Effectiveness</strong>. It is the gold-standard KPI used by lean manufacturers, plant managers, and operations directors worldwide to measure and improve production efficiency.</p>
+   <p>Most factories assume they are running at 70–80% efficiency. When they calculate OEE properly for the first time, they discover the real number is often closer to 40–55%. The gap between perceived and actual productivity represents hundreds of thousands — sometimes millions — of ringgit in lost output every year. OEE makes that invisible loss visible.</p>
+  </div>
+
+  <!-- FORMULA -->
+  <div class="seo-formula-block">
+   <h3>The OEE Formula Explained</h3>
+   <p>OEE is calculated by multiplying three separate performance ratios together:</p>
+   <div class="formula-display">
+    <span class="f-term">Availability</span>
+    <span class="f-op">×</span>
+    <span class="f-term">Performance</span>
+    <span class="f-op">×</span>
+    <span class="f-term">Quality</span>
+    <span class="f-op">=</span>
+    <span class="f-result">OEE %</span>
+   </div>
+   <p>Each factor is expressed as a percentage, so a machine with 90% Availability, 95% Performance, and 99% Quality achieves an OEE of just 84.6% — and that is already considered world-class. In practice, most lines run at 50–60% OEE, which means nearly half of all planned production time produces no value whatsoever.</p>
+  </div>
+
+  <!-- THREE PILLARS -->
+  <h3>The Three Components of OEE</h3>
+  <div class="seo-three-cols">
+
+   <div class="seo-col">
+    <div class="seo-col-icon">⏱</div>
+    <h4>Availability</h4>
+    <p>Availability measures the proportion of planned production time that your equipment is actually running. It is reduced by any event that stops production for a meaningful period — unplanned breakdowns, changeovers that run long, waiting for materials, operator shortages, and scheduled maintenance that overruns.</p>
+    <p>A machine planned to run for 8 hours but stopped for 1.5 hours has an Availability of 81.25%. For most Malaysian manufacturers, unplanned downtime is the single biggest contributor to low OEE — and the most immediately fixable one.</p>
+   </div>
+
+   <div class="seo-col">
+    <div class="seo-col-icon">⚡</div>
+    <h4>Performance</h4>
+    <p>Performance captures how fast your equipment runs compared to its designed or ideal cycle time. Even when a machine is running, it may not be producing at full speed. Causes include minor stoppages (jams, sensor faults, material jams that self-clear), operators deliberately slowing machines to avoid defects, worn tooling that increases cycle time, and suboptimal machine settings.</p>
+    <p>Performance losses are the most under-reported category in manufacturing. Because the machine appears to be running, operators rarely log these events — yet they consistently account for 15–25% of total OEE loss in factories that have never done a proper time study.</p>
+   </div>
+
+   <div class="seo-col">
+    <div class="seo-col-icon">✅</div>
+    <h4>Quality</h4>
+    <p>Quality is the ratio of good units produced to total units started. It accounts for scrap, rework, and any product that does not meet specification on the first pass — including units produced during warm-up periods and process adjustments. If you produce 1,000 units but 80 are rejected or reworked, your Quality rate is 92%.</p>
+    <p>Poor first-pass quality is expensive in two ways: you consume material and machine time producing defective product, and then you spend additional time and labour either scrapping or reworking it. Every defect costs you twice.</p>
+   </div>
+
+  </div>
+
+  <!-- WHY IT MATTERS -->
+  <div class="seo-highlight-box">
+   <h3>Why OEE Matters More Than Any Other Manufacturing KPI</h3>
+   <p>There is no shortage of metrics in manufacturing — cycle time, yield, MTBF, MTTR, throughput, utilisation. Most of them measure one dimension of performance in isolation. OEE is different because it is a <em>composite</em> metric: it forces you to account for all three sources of loss simultaneously. A machine with excellent uptime but slow speed and poor quality will still show a low OEE. There is nowhere to hide.</p>
+   <p>This is why lean manufacturing practitioners, TPM (Total Productive Maintenance) programmes, and Industry 4.0 frameworks all treat OEE as a foundational KPI. It gives management a single, unambiguous number that reflects how much of the factory's potential is actually being realised — and it drives the right conversations about where to focus improvement effort.</p>
+   <p>Beyond the operational benefits, OEE has a direct financial implication. Every percentage point of OEE improvement represents additional output from the same asset base, without additional capital investment. For a line running 20 hours a day with a product value of RM 500 per hour, moving OEE from 55% to 65% — a 10-point improvement — adds RM 2,000 of output per day, or roughly RM 500,000 per year. That is the kind of return that no capital expenditure project can match.</p>
+  </div>
+
+  <!-- SIX BIG LOSSES -->
+  <h3>The Six Big Losses That Drive Down OEE</h3>
+  <p>The OEE framework was developed alongside Total Productive Maintenance (TPM) and identifies six categories of loss — three that affect each OEE component. Understanding which category is your biggest loss is the first step to improvement.</p>
+
+  <div class="seo-losses-grid">
+   <div class="loss-item loss-avail">
+    <span class="loss-tag">Availability Loss</span>
+    <h5>1. Breakdowns</h5>
+    <p>Unplanned equipment failures that stop production. The most visible and disruptive loss — and often the one that gets the most management attention, even when it is not the largest loss in percentage terms.</p>
+   </div>
+   <div class="loss-item loss-avail">
+    <span class="loss-tag">Availability Loss</span>
+    <h5>2. Setup &amp; Adjustments</h5>
+    <p>Time lost during planned changeovers, product switches, tooling changes, and any subsequent adjustments before the line runs stably again. SMED (Single Minute Exchange of Die) techniques can dramatically reduce this loss.</p>
+   </div>
+   <div class="loss-item loss-perf">
+    <span class="loss-tag">Performance Loss</span>
+    <h5>3. Minor Stoppages</h5>
+    <p>Brief interruptions — typically under 5 minutes — where the machine stops or idles and an operator restarts it without logging a formal downtime. Individually small, but collectively these account for enormous losses on high-speed lines.</p>
+   </div>
+   <div class="loss-item loss-perf">
+    <span class="loss-tag">Performance Loss</span>
+    <h5>4. Reduced Speed</h5>
+    <p>Any situation where the machine runs below its design speed or ideal cycle time. Often invisible because the machine is technically "running" — but it is producing less than it should. Detailed time studies are the only way to surface this loss accurately.</p>
+   </div>
+   <div class="loss-item loss-qual">
+    <span class="loss-tag">Quality Loss</span>
+    <h5>5. Startup &amp; Yield Losses</h5>
+    <p>Defects produced during the warm-up phase after a changeover or startup, before the process stabilises. Many plants fail to count these units against their quality rate, which inflates their reported OEE.</p>
+   </div>
+   <div class="loss-item loss-qual">
+    <span class="loss-tag">Quality Loss</span>
+    <h5>6. Production Defects &amp; Rework</h5>
+    <p>Scrap and rework produced during steady-state production. Even if defective units are successfully reworked and sold, the time and material consumed in rework is pure waste that reduces your effective OEE.</p>
+   </div>
+  </div>
+
+  <!-- BENCHMARKS -->
+  <h3>OEE Benchmarks: How Does Your Industry Compare?</h3>
+  <p>OEE benchmarks vary significantly by industry. A food and beverage line running at 60% OEE may be performing well given the complexity of their changeovers and cleaning requirements, while a dedicated automotive stamping press at 60% OEE would be considered a serious underperformer. The table below shows typical industry benchmarks for Malaysian and Southeast Asian manufacturers.</p>
+
+  <div class="bench-table-wrap">
+   <table class="bench-table">
+    <thead>
+     <tr><th>Industry</th><th>Average OEE</th><th>World-Class OEE</th></tr>
+    </thead>
+    <tbody>
+     <tr><td>Automotive</td><td>62%</td><td>85%</td></tr>
+     <tr><td>Food &amp; Beverage</td><td>48%</td><td>65%</td></tr>
+     <tr><td>Pharmaceutical</td><td>58%</td><td>80%</td></tr>
+     <tr><td>Electronics / PCB Assembly</td><td>55%</td><td>78%</td></tr>
+     <tr><td>Plastics &amp; Rubber</td><td>52%</td><td>72%</td></tr>
+     <tr><td>Metal Fabrication</td><td>55%</td><td>78%</td></tr>
+     <tr><td>Chemical Processing</td><td>62%</td><td>82%</td></tr>
+     <tr><td>Packaging</td><td>55%</td><td>75%</td></tr>
+     <tr><td>Textile &amp; Apparel</td><td>50%</td><td>68%</td></tr>
+     <tr><td>Printing &amp; Publishing</td><td>50%</td><td>72%</td></tr>
+    </tbody>
+   </table>
+  </div>
+
+  <p>If your OEE score is more than 15 points below your industry's world-class benchmark, you have a significant and addressable performance gap. The good news is that most of the improvement required does not come from capital investment — it comes from identifying and eliminating the specific losses that are dragging your number down.</p>
+
+  <!-- HOW TO IMPROVE -->
+  <div class="seo-steps">
+   <h3>How to Improve Your OEE: A Practical Starting Point</h3>
+   <p>Calculating your OEE score is the beginning, not the end. Here is the approach I use with manufacturing clients across Malaysia to turn an OEE number into a focused improvement plan.</p>
+
+   <div class="step-list">
+    <div class="step-item">
+     <div class="step-num">1</div>
+     <div class="step-body">
+      <h5>Establish an Honest Baseline</h5>
+      <p>Most factories do not know their real OEE because they are not capturing data consistently. The first step is to commit to logging every downtime event, speed reduction, and quality reject for a minimum of four consecutive weeks on your target line. Use this calculator to compute your current baseline, then use it again after one month of disciplined data collection — the results often differ substantially.</p>
+     </div>
+    </div>
+    <div class="step-item">
+     <div class="step-num">2</div>
+     <div class="step-body">
+      <h5>Identify Your Biggest Loss Category</h5>
+      <p>Look at your Availability, Performance, and Quality scores individually. The lowest score is almost always where the most improvement opportunity lies. Resist the temptation to work on all three simultaneously — focused effort on one loss category consistently outperforms a scattered approach across all three.</p>
+     </div>
+    </div>
+    <div class="step-item">
+     <div class="step-num">3</div>
+     <div class="step-body">
+      <h5>Use a Pareto Analysis to Find the Vital Few</h5>
+      <p>Within your biggest loss category, run a Pareto analysis on specific causes. If Availability is your main issue, list every downtime event by frequency and duration over the four weeks. In virtually every factory, 20% of the failure modes account for 80% of the total downtime. Fix those three or four root causes and your OEE will improve measurably without touching the others.</p>
+     </div>
+    </div>
+    <div class="step-item">
+     <div class="step-num">4</div>
+     <div class="step-body">
+      <h5>Implement Countermeasures Using a Structured Problem-Solving Method</h5>
+      <p>Use a structured tool — 5 Why analysis, A3 Problem Solving, or a basic Cause-and-Effect diagram — to get to the root cause of your top losses. Surface-level fixes (replacing a part, retraining an operator) often provide temporary relief but allow the same problem to recur. Root cause countermeasures last.</p>
+     </div>
+    </div>
+    <div class="step-item">
+     <div class="step-num">5</div>
+     <div class="step-body">
+      <h5>Set a Realistic Improvement Target and Review Monthly</h5>
+      <p>A sustainable OEE improvement programme targets 3–5 percentage points per quarter on a focused line. Set a specific target, review your OEE data every month, and adjust your actions based on what the data is telling you. OEE improvement is not a one-time project — it is an ongoing management discipline.</p>
+     </div>
+    </div>
+   </div>
+  </div>
+
+  <!-- FAQ -->
+  <div class="seo-faq">
+   <h3>Frequently Asked Questions About OEE</h3>
+
+   <details class="faq-item">
+    <summary>What is a good OEE score for my factory?</summary>
+    <p>World-class OEE is generally cited as 85% for discrete manufacturing, but this benchmark does not apply equally to all industries. A food and beverage plant with complex cleaning-in-place requirements and frequent SKU changeovers may consider 65% OEE world-class, while a single-product, high-volume automotive press should be targeting above 85%. Use the benchmark comparison in this calculator to assess your score against your specific industry rather than a generic global benchmark.</p>
+   </details>
+
+   <details class="faq-item">
+    <summary>What is the difference between OEE and utilisation?</summary>
+    <p>Utilisation measures what percentage of total calendar time the machine is running — it is the broadest measure and does not account for speed or quality. OEE is more precise: it measures only the planned production time (excluding scheduled maintenance, planned holidays, etc.) and within that time, it accounts for all three dimensions of loss — downtime, speed, and quality. A machine can have high utilisation but very low OEE if it runs slowly or produces many defects.</p>
+   </details>
+
+   <details class="faq-item">
+    <summary>Can OEE exceed 100%?</summary>
+    <p>In theory, OEE cannot exceed 100% because it is a measure of efficiency relative to ideal performance. However, if you set your ideal cycle time incorrectly (slower than the machine's true capability), your Performance score can exceed 100%, which inflates your OEE beyond 100%. This is a data quality issue — it means your ideal cycle time needs to be recalibrated based on actual machine capability.</p>
+   </details>
+
+   <details class="faq-item">
+    <summary>How often should I calculate OEE?</summary>
+    <p>For a meaningful operational KPI, OEE should ideally be calculated per shift or at minimum per day. Weekly or monthly OEE averages are useful for management reporting and trend analysis, but they hide the shift-to-shift variation that reveals the real causes of loss. If your data collection is manual, a weekly calculation using a structured log sheet is a practical starting point. Use this calculator to compute your OEE manually using your collected data before investing in automated monitoring systems.</p>
+   </details>
+
+   <details class="faq-item">
+    <summary>My OEE score is low. Where do I start?</summary>
+    <p>Start with the component that scored lowest — Availability, Performance, or Quality. Then spend two weeks doing nothing but observing and logging on that specific dimension. If Availability is lowest, log every downtime event with its duration and probable cause. If Performance is lowest, do a time study and count every micro-stop. Data quality is the foundation of OEE improvement. Once you have four weeks of clean data, a Pareto analysis will tell you exactly where to focus. If you want help interpreting your data and building a focused improvement plan, <a href="https://husnihalim.com/#contact">reach out for a floor assessment</a>.</p>
+   </details>
+
+  </div><!-- end faq -->
+
+ </div><!-- end seo-inner -->
+</section>
 
 <!-- FOOTER -->
 <footer class="site-footer">
