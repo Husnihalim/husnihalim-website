@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>OEE Training Malaysia | HRDC Claimable | Husni Halim</title>
-<meta name="description" content="HRDC claimable OEE training in Malaysia. Serving automotive, semiconductor, aerospace MRO, and FMCG sectors. Proven results across 30+ factories.">
+<meta name="description" content="HRDC claimable OEE training in Malaysia by certified consultant. Serving automotive, semiconductor, aerospace MRO, and FMCG sectors. Proven results across 30+ factories.">
 <meta name="author" content="Husni Halim">
 <meta name="robots" content="index, follow">
 <link rel="canonical" href="https://husnihalim.com/blog/oee-training-malaysia/">
@@ -126,239 +126,6 @@ aside{padding-top:48px;position:sticky;top:70px}
   .post-hero-content{padding:24px}
   .nav-links{gap:14px}
 }
-
-   /* ============================================================
-      SITE NAV — unified across all pages
-   ============================================================ */
-   nav#site-nav {
-     background: var(--navy);
-     padding: 0 20px;
-     display: flex;
-     align-items: center;
-     justify-content: space-between;
-     height: 60px;
-     position: sticky;
-     top: 0;
-     z-index: 100;
-     flex-wrap: wrap;
-   }
-
-   .nav-logo {
-     font-family: 'Cormorant Garamond', serif;
-     font-size: 20px;
-     color: #fff;
-     font-weight: 600;
-     letter-spacing: .3px;
-     text-decoration: none;
-     flex-shrink: 0;
-   }
-   .nav-logo em { color: var(--gold); font-style: italic; }
-
-   /* Hamburger button — visible on mobile only */
-   .nav-hamburger {
-     display: flex;
-     flex-direction: column;
-     justify-content: center;
-     gap: 5px;
-     width: 36px;
-     height: 36px;
-     cursor: pointer;
-     background: none;
-     border: none;
-     padding: 4px;
-   }
-   .nav-hamburger span {
-     display: block;
-     width: 22px;
-     height: 2px;
-     background: rgba(255,255,255,.72);
-     border-radius: 2px;
-     transition: all .25s;
-   }
-
-   /* Desktop nav links — hidden on mobile by default */
-   .nav-links {
-     display: none;
-     list-style: none;
-     margin: 0;
-     padding: 0;
-   }
-
-   /* Mobile open state */
-   nav#site-nav.nav-open {
-     height: auto;
-     padding-bottom: 12px;
-     align-items: flex-start;
-   }
-   nav#site-nav.nav-open > .nav-logo,
-   nav#site-nav.nav-open > .nav-hamburger {
-     margin-top: 14px;
-   }
-   nav#site-nav.nav-open .nav-links {
-     display: flex;
-     flex-direction: column;
-     width: 100%;
-     border-top: 1px solid rgba(255,255,255,.08);
-     padding-top: 6px;
-     margin-top: 10px;
-     gap: 0;
-   }
-   nav#site-nav.nav-open .nav-links > li > a {
-     display: block;
-     padding: 11px 4px;
-     border-bottom: 1px solid rgba(255,255,255,.05);
-     color: rgba(255,255,255,.78);
-     font-size: 14px;
-     text-decoration: none;
-   }
-   nav#site-nav.nav-open .dropdown-menu {
-     display: flex !important;
-     flex-direction: column;
-     padding-left: 16px;
-     padding-bottom: 4px;
-   }
-   nav#site-nav.nav-open .dropdown-menu a {
-     padding: 7px 0;
-     color: rgba(255,255,255,.5);
-     font-size: 13px;
-     border: none !important;
-   }
-
-   /* Desktop (≥ 960px) */
-   @media (min-width: 960px) {
-     nav#site-nav {
-       padding: 0 40px;
-       height: 66px;
-       flex-wrap: nowrap;
-       align-items: center;
-     }
-     .nav-hamburger { display: none; }
-
-     .nav-links {
-       display: flex !important;
-       flex-direction: row;
-       align-items: center;
-       gap: 0;
-       width: auto;
-       border: none;
-       margin: 0;
-       padding: 0;
-     }
-     .nav-links > li {
-       position: relative;
-     }
-     .nav-links > li > a {
-       display: flex;
-       align-items: center;
-       height: 66px;
-       padding: 0 13px;
-       color: rgba(255,255,255,.68);
-       font-size: 13px;
-       letter-spacing: .4px;
-       white-space: nowrap;
-       transition: color .2s;
-       text-decoration: none;
-     }
-     .nav-links > li > a:hover { color: #fff; }
-     .nav-links > li.active > a { color: var(--gold); }
-
-     /* Dropdown chevron */
-     .nav-dropdown > a::after {
-       content: '';
-       display: inline-block;
-       width: 0;
-       height: 0;
-       border-left: 3.5px solid transparent;
-       border-right: 3.5px solid transparent;
-       border-top: 4px solid rgba(255,255,255,.4);
-       margin-left: 5px;
-       vertical-align: middle;
-       transition: transform .2s;
-     }
-     .nav-dropdown:hover > a::after { transform: rotate(180deg); }
-
-     /* Dropdown panel */
-     .dropdown-menu {
-       display: none;
-       position: absolute;
-       top: 100%;
-       left: -8px;
-       background: #0d2035;
-       border: 1px solid rgba(255,255,255,.09);
-       border-top: 2px solid var(--gold);
-       border-radius: 0 0 6px 6px;
-       padding: 6px 0;
-       min-width: 230px;
-       z-index: 200;
-       box-shadow: 0 12px 32px rgba(0,0,0,.4);
-     }
-     .nav-dropdown:hover .dropdown-menu { display: block; }
-     .dropdown-menu a {
-       display: block;
-       padding: 10px 20px;
-       color: rgba(255,255,255,.62);
-       font-size: 13px;
-       white-space: nowrap;
-       transition: background .15s, color .15s;
-       text-decoration: none;
-     }
-     .dropdown-menu a:hover {
-       background: rgba(255,255,255,.05);
-       color: #fff;
-     }
-     .dropdown-divider {
-       height: 1px;
-       background: rgba(255,255,255,.07);
-       margin: 5px 0;
-     }
-
-     /* CTA button */
-     .nav-links .nav-cta {
-       background: var(--gold) !important;
-       color: #fff !important;
-       height: 34px !important;
-       padding: 0 18px !important;
-       border-radius: 3px;
-       margin-left: 10px;
-       font-weight: 600 !important;
-       font-size: 13px !important;
-       letter-spacing: .3px !important;
-     }
-     .nav-links .nav-cta:hover { background: #b36c2b !important; }
-   }
-
-   /* ============================================================
-      SITE FOOTER — unified
-   ============================================================ */
-   footer {
-     background: var(--navy, #0c1b2e);
-     padding: 40px 20px;
-     text-align: center;
-   }
-   .footer-logo {
-     font-family: 'Cormorant Garamond', serif;
-     font-size: 20px;
-     color: #fff;
-     font-weight: 600;
-     margin-bottom: 18px;
-     display: block;
-   }
-   .footer-logo em { color: var(--gold, #c47832); font-style: italic; }
-   .footer-links {
-     display: flex;
-     justify-content: center;
-     flex-wrap: wrap;
-     gap: 6px 20px;
-     margin-bottom: 20px;
-   }
-   .footer-links a {
-     font-size: 13px;
-     color: rgba(255,255,255,.5);
-     text-decoration: none;
-     transition: color .2s;
-   }
-   .footer-links a:hover { color: var(--gold-light, #c8a96e); }
-   .footer-copy { font-size: 12px; color: rgba(255,255,255,.28); }
 </style>
 <script type="application/ld+json">
 {
@@ -387,7 +154,7 @@ aside{padding-top:48px;position:sticky;top:70px}
     "url": "https://husnihalim.com",
     "logo": {
       "@type": "ImageObject",
-      "url": "https://husnihalim.com/assets/husni-portrait.webp"
+      "url": "https://husnihalim.com/assets/husni-portrait.png"
     }
   },
   "mainEntityOfPage": {
@@ -410,37 +177,14 @@ aside{padding-top:48px;position:sticky;top:70px}
 </script>
 </head>
 <body>
-<nav id="site-nav">
-  <a href="/" class="nav-logo">Husni <em>Halim</em></a>
-  <button class="nav-hamburger" aria-label="Toggle navigation" onclick="this.closest('nav').classList.toggle('nav-open')">
-    <span></span><span></span><span></span>
-  </button>
-  <ul class="nav-links" role="list">
-    <li><a href="/consulting/">Consulting</a></li>
-    <li class="nav-dropdown">
-      <a href="/hrdc-training/">HRDC Training</a>
-      <ul class="dropdown-menu">
-        <li><a href="/hrdc-training/oee/">OEE</a></li>
-        <li><a href="/hrdc-training/kaizen/">Kaizen</a></li>
-        <li><a href="/hrdc-training/lean-manufacturing/">Lean Manufacturing</a></li>
-        <li><a href="/hrdc-training/5s/">5S</a></li>
-        <li><a href="/hrdc-training/tpm/">TPM</a></li>
-        <li><a href="/hrdc-training/tqm/">TQM</a></li>
-        <li><a href="/hrdc-training/problem-solving/">Problem Solving</a></li>
-        <li><a href="/hrdc-training/ai-industry-4-0/">AI &amp; Industry 4.0</a></li>
-      </ul>
-    </li>
-    <li class="nav-dropdown">
-      <a href="/industries/">Industries</a>
-      <ul class="dropdown-menu">
-        <li><a href="/industries/automotive/">Automotive</a></li>
-        <li><a href="/industries/semiconductor-electronics/">Semiconductor &amp; Electronics</a></li>
-      </ul>
-    </li>
-    <li><a href="/case-studies/">Case Studies</a></li>
-    <li class="active"><a href="/blog/">Blog</a></li>
-    <li><a href="/oee-calculator/">OEE Calculator</a></li>
-    <li><a href="/consulting/" class="nav-cta">Book Free Assessment</a></li>
+<nav class="nav">
+  <a href="/" class="nav-logo">Husni<em>Halim</em></a>
+  <ul class="nav-links">
+    <li><a href="/#about">About</a></li>
+    <li><a href="/#expertise">Expertise</a></li>
+    <li><a href="/#training">Training</a></li>
+    <li><a href="/blog/" style="color:#fff">Blog</a></li>
+    <li><a href="/#contact" class="nav-cta">Get In Touch</a></li>
   </ul>
 </nav>
 
@@ -509,59 +253,12 @@ aside{padding-top:48px;position:sticky;top:70px}
 <p>OEE training programmes in Malaysia can be claimed under HRDC (Human Resource Development Corporation) for eligible employers. A structured OEE training programme covering measurement methodology, loss analysis, TPM fundamentals, and improvement project facilitation is typically delivered over two to three days, with a project component that applies the methodology to actual equipment in the participant's facility.</p>
 <p>The most effective OEE training programmes are not classroom programmes. They are delivered at the factory, using the factory's actual equipment and actual loss data, with participants who are responsible for the equipment's performance. This ensures that the training produces an improvement plan that is immediately actionable rather than a generic understanding that does not translate to implementation.</p>
 
-<h2>Why OEE Without Loss Analysis Is Just a Number</h2>
-<p>Many factories have implemented OEE dashboards — automated systems that collect equipment data and calculate OEE scores, updated in real time. These dashboards are undeniably impressive. And many of them are completely useless for improvement because they show the OEE score without categorising the losses that make up the gap.</p>
-<p>The challenge is that OEE is a lag indicator. It tells you the current state, but not which losses are worth attacking. A machine with 70% OEE could get to 80% by reducing changeover time by 20 minutes (Availability improvement), or by improving first-pass yield (Quality improvement), or by adjusting process parameters to increase run speed (Performance improvement). These require completely different countermeasures, and until the specific loss categories are visible, the improvement effort will be unfocused.</p>
-<p>Effective OEE systems separate the score from the loss analysis. The dashboard shows OEE, but the shop floor visual management board shows the Six Big Losses in descending order. That is where the improvement conversation happens.</p>
-
-<h2>The Link Between OEE and Shift-Level Accountability</h2>
-<p>OEE improves when the people running the equipment know what their OEE is, understand which losses are making up the gap, and are held accountable for shifting that number in the right direction. This requires daily OEE visibility at the shift level — not monthly or weekly, but the previous shift's OEE reviewed at shift handover.</p>
-<p>The shift team can influence three categories of loss: Availability (through equipment care and response time to minor stoppages), Performance (through attention to process parameter control), and Quality (through operator discipline during setup and operation). When the team can see these losses in real time and their supervisor reviews them at handover, the responsibility for improvement becomes operational rather than abstract.</p>
-
-<h2>The Six Big Losses: A Practical Breakdown for Malaysian Factories</h2>
-<p>OEE is built on the concept of Six Big Losses — the six categories of waste that reduce manufacturing effectiveness from the theoretical maximum. Understanding these losses in practice is the foundation of any OEE improvement programme.</p>
-<p>Breakdowns are unplanned downtime events caused by equipment failure. In Malaysian manufacturing, breakdowns are often the most visible loss and the first target of OEE improvement programmes — but they are rarely the largest loss. Setup and adjustments cover changeover time, warm-up time, and process adjustments. For factories running high product variety, this is often the single largest Availability loss category. Idling and minor stoppages are brief interruptions that do not get logged as breakdowns — jams, sensor trips, material blockages — but in aggregate can account for 5–15% of available production time in automated and semi-automated lines.</p>
-<p>Reduced speed loss is the gap between the equipment's designed maximum rate and its actual operating rate. This loss is notoriously under-reported because there is often no reference point for what the theoretical maximum actually is. Process defects cover first-pass failures during steady-state production. Startup rejects cover defects produced during setup and before the process stabilises. In food manufacturing, this is a major quality loss category tied directly to changeover cleaning and parameter re-establishment.</p>
-<p>The reason these six categories matter is that each responds to different countermeasures. Breakdowns respond to TPM. Changeover time responds to SMED. Minor stoppages respond to <a href="/blog/andon-system-implementation-problems/" style="color:#8b2252;">Andon systems and autonomous maintenance</a>. Reduced speed responds to process parameter control. Defects respond to Kaizen and error-proofing. Using an aggregate OEE score without loss categorisation makes it impossible to choose the right improvement tool.</p>
-
-<h2>How to Set Up Your First OEE Measurement System</h2>
-<p>Many factories delay OEE implementation because they believe they need an automated data collection system before they can begin. This is not the case. A manual OEE system, using paper-based downtime logs and a shift-end calculation, is sufficient to begin the improvement cycle and often produces faster results than a digital system because it requires operators to actively engage with the data.</p>
-<p>The starting point is defining planned production time correctly. For each production line or machine, establish the planned operating window per shift — the time the machine is expected to run, excluding planned breaks and scheduled maintenance. This is the denominator for all OEE calculations. Getting this definition right is the most important setup step, and it is the one most frequently done incorrectly.</p>
-<p>Next, create a downtime log at the machine level. Operators or operators' supervisors record every stoppage event with a start time, end time, and reason code. The reason codes should map to the Six Big Losses — not to generic codes like "machine fault" or "other." When reason codes are specific (e.g., "feed jam at station 3," "incorrect setup parameter"), the data becomes actionable. When they are generic, the data is useless for improvement.</p>
-<p>Calculate OEE at the shift level, post the result on the visual management board in the work area, and review it at the daily production meeting. The review should take five minutes and focus on one question: what was the top loss yesterday, and what is the countermeasure? Over time, this daily review drives OEE improvement more reliably than any software system — because improvement comes from changing operator behaviour and management response patterns, not from better reporting.</p>
-
-<h2>What to Expect from an HRDC Claimable OEE Training Programme</h2>
-<p>A well-designed HRDC claimable OEE training programme is not a generic classroom course on OEE theory. The most effective programmes are factory-based and use the participant's own equipment and loss data as the learning material. This approach compresses the learning-to-application cycle from months to days.</p>
-<p>A typical two to three day HRDC claimable OEE programme covers OEE calculation methodology and common errors on day one; loss categorisation, the Six Big Losses, and data collection system design on day two; and improvement project facilitation — where participants identify their top loss category and design a structured countermeasure — on day three. Participants leave with a working OEE measurement template calibrated to their own equipment, a loss analysis of their current performance, and a 30-day improvement action plan.</p>
-<p>The selection criteria for the right OEE training provider matter significantly. Look for trainers with direct factory implementation experience — not just teaching experience. An OEE consultant who has personally managed OEE improvement programmes on production floors will ask fundamentally different questions during the factory-based exercises, and will anticipate implementation obstacles that a classroom trainer will not recognise. The difference in outcomes between a well-matched and a generic OEE training programme is substantial, and it shows up in whether the measurement system is still running and driving improvement six months after the training.</p>
-
-
-
-<div class="related-articles" style="background:#f8f6f3;border-left:4px solid #c8a96e;padding:1.5rem 2rem;margin:3rem 0;border-radius:0 8px 8px 0;">
-  <h3 style="font-size:1rem;text-transform:uppercase;letter-spacing:0.05em;color:#c8a96e;margin:0 0 1rem 0;">Related Reading</h3>
-  <ul style="list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:0.5rem;">
-    <li><a href="/blog/andon-system-implementation-problems/" style="color:#2c2c2c;text-decoration:none;font-weight:500;">Andon System Implementation Problems in Malaysian Factories →</a></li>
-    <li><a href="/blog/standard-work-implementation-problems/" style="color:#2c2c2c;text-decoration:none;font-weight:500;">Standard Work Implementation Problems in Malaysian Factories →</a></li>
-    <li><a href="/blog/value-stream-mapping-mistakes/" style="color:#2c2c2c;text-decoration:none;font-weight:500;">Value Stream Mapping Mistakes That Derail Lean Programmes →</a></li>
-  </ul>
-</div>
-
-<div class="cta-block" style="background:#2c2c2c;color:#fff;padding:2.5rem;margin:3rem 0;border-radius:8px;text-align:center;">
-  <h3 style="color:#c8a96e;margin:0 0 0.75rem 0;font-size:1.4rem;">Running into these problems in your factory?</h3>
-  <p style="margin:0 0 1.5rem 0;opacity:0.85;line-height:1.6;">Husni Halim is an HRDC Accredited Trainer and MPC Certified Productivity Expert with 16+ years resolving exactly these issues in Malaysian manufacturing. Let's talk.</p>
-  <a href="/consulting/" style="display:inline-block;background:#c8a96e;color:#fff;padding:0.875rem 2rem;border-radius:4px;text-decoration:none;font-weight:600;letter-spacing:0.02em;">Book a Free 30-Min Consultation →</a>
-  <div style="margin-top:1.2rem;display:flex;justify-content:center;gap:1.5rem;flex-wrap:wrap;">
-    <a href="/consulting/" style="color:#c8a96e;text-decoration:none;font-size:0.9rem;font-weight:500;">→ View Consulting Services</a>
-    <a href="/hrdc-training/" style="color:#c8a96e;text-decoration:none;font-size:0.9rem;font-weight:500;">→ HRDC Claimable Training</a>
-  </div>
-</div>
-
 
     <div class="author-bio">
       <div class="author-av">H</div>
       <div>
         <strong>Husni Halim</strong>
-        <p>HRDC Accredited Trainer and MPC Certified Productivity Expert. Principal Consultant at Visi Armada Consulting, specialising in lean manufacturing, OEE, and Kaizen for Malaysian manufacturers.</p>
+        <p>HRDC Certified Trainer (TTT/10228) and MPC Certified Productivity Expert. Principal Consultant at Visi Armada Consulting, specialising in lean manufacturing, OEE, and Kaizen for Malaysian manufacturers.</p>
       </div>
     </div>
 
@@ -591,19 +288,14 @@ aside{padding-top:48px;position:sticky;top:70px}
 <li>The Most Common OEE Calculation Errors in Malaysia</li>
 <li>OEE by Industry Sector in Malaysia</li>
 <li>What a Structured OEE Improvement Programme Requires</li>
-<li>HRDC Claimable OEE Training in Malaysia</li>
-<li>Why OEE Without Loss Analysis Is Just a Number</li>
-<li>The Link Between OEE and Shift-Level Accountability</li>
-<li>The Six Big Losses: A Practical Breakdown for Malaysian Factories</li>
-<li>How to Set Up Your First OEE Measurement System</li>
-<li>What to Expect from an HRDC Claimable OEE Training Programme</li></ul>
+<li>HRDC Claimable OEE Training in Malaysia</li></ul>
     </div>
     <div class="s-card">
       <h4>Related Articles</h4>
-      <a class="rel-post" href="/blog/andon-system-implementation-problems/">Andon Systems That Nobody Uses After Installation</a>
-<a class="rel-post" href="/blog/pdca-implementation-problems/">PDCA in Malaysian SMEs: Why It Always Gets Stuck at Plan</a>
-<a class="rel-post" href="/blog/oee-semiconductor-factories-malaysia/">How to Improve OEE in Semiconductor Factories Malaysia</a>
-<a class="rel-post" href="/blog/kaizen-blitz-vs-kaizen-culture/">Kaizen Blitz vs Kaizen Culture: Why One-Off Events Always Fail Long-Term</a>
+      <a class="rel-post" href="/blog/5s-audit-checklist-malaysian-factories/">5S Implementation Audit Checklist for Malaysian Factories</a>
+<a class="rel-post" href="/blog/why-kaizen-events-fail/">Why Kaizen Events Fail in Manufacturing Plants</a>
+<a class="rel-post" href="/blog/poka-yoke-implementation-problems/">Why Poka-Yoke Implementations Fail on Production Lines</a>
+<a class="rel-post" href="/blog/tpm-autonomous-maintenance-implementation-malaysia/">TPM Autonomous Maintenance Implementation in Malaysian Factories</a>
     </div>
     <div class="cta-card">
       <h4>Need help implementing this in your factory?</h4>
@@ -613,18 +305,8 @@ aside{padding-top:48px;position:sticky;top:70px}
   </aside>
 </div>
 
-<footer>
- <div class="footer-logo">Husni <em>Halim</em></div>
- <nav class="footer-links" aria-label="Footer">
-   <a href="/">Home</a>
-   <a href="/consulting/">Consulting</a>
-   <a href="/hrdc-training/">HRDC Training</a>
-   <a href="/industries/">Industries</a>
-   <a href="/case-studies/">Case Studies</a>
-   <a href="/oee-calculator/">OEE Calculator</a>
-   <a href="/blog/">Blog</a>
- </nav>
- <div class="footer-copy">&copy; 2025 Husni Halim &middot; Visi Armada Consulting &middot; HRDC-Certified Lean Manufacturing Consultant Malaysia</div>
+<footer class="footer">
+  <p>© 2026 Husni Halim · <a href="/">husnihalim.com</a> · HRDC Accredited Trainer TTT/10228</p>
 </footer>
 </body>
 </html>
