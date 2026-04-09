@@ -929,6 +929,72 @@
      .nav-links .nav-cta:hover { background: #b36c2b !important; }
    }
 </style>
+
+<!-- AI Entity Schema: Person + LocalBusiness (GEO/SEO 2026) -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Person",
+      "@id": "https://husnihalim.com/#husni-halim",
+      "name": "Husni Halim",
+      "jobTitle": "Lean Manufacturing Consultant & HRDC Accredited Trainer",
+      "description": "16+ years on the shop floor. HRDC Accredited Trainer (TTT No. 10228), MPC Certified Productivity Expert, Certified Process Kaizen Engineer (Solving EFESO, Milan). Led OEE implementation across 30+ factories in Malaysia including Intel, Safran, Panasonic, and TERAJU Pritech 4.0 programme.",
+      "url": "https://husnihalim.com",
+      "image": "https://husnihalim.com/husni.png",
+      "sameAs": [
+        "https://www.linkedin.com/in/husni-halim-7436b01b/"
+      ],
+      "knowsAbout": ["Lean Manufacturing", "Kaizen", "OEE", "TPM", "5S", "Industry 4.0", "HRDC Training Malaysia"],
+      "worksFor": {
+        "@id": "https://husnihalim.com/#visi-armada-consulting"
+      }
+    },
+    {
+      "@type": "LocalBusiness",
+      "@id": "https://husnihalim.com/#visi-armada-consulting",
+      "name": "Visi Armada Consulting | Husni Halim",
+      "alternateName": "VAC",
+      "description": "HRDC-accredited Lean Manufacturing consulting and training in Malaysia. OEE, Kaizen, TPM, 5S, and AI for Industry 4.0. 30+ factories transformed. Average 37% waste reduction.",
+      "url": "https://husnihalim.com",
+      "logo": "https://husnihalim.com/husni.png",
+      "founder": { "@id": "https://husnihalim.com/#husni-halim" },
+      "areaServed": ["Malaysia", "Penang", "Johor", "Selangor", "Kuala Lumpur", "Kedah", "Perak"],
+      "serviceType": ["Lean Manufacturing Consulting", "Kaizen Training", "OEE Implementation", "HRDC Claimable Training"],
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Manufacturing Consulting & Training Services",
+        "itemListElement": [
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "90-Day Floor Turnaround Consulting" } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "OEE Implementation & Training" } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Kaizen & Continuous Improvement" } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "HRDC Claimable Lean Manufacturing Training" } }
+        ]
+      },
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.9",
+        "reviewCount": "30",
+        "bestRating": "5"
+      }
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://husnihalim.com/#website",
+      "url": "https://husnihalim.com",
+      "name": "Husni Halim | Visi Armada Consulting",
+      "description": "HRDC Accredited Lean Manufacturing Consultant Malaysia — OEE, Kaizen, TPM, 5S training and consulting for factories.",
+      "publisher": { "@id": "https://husnihalim.com/#visi-armada-consulting" },
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": "https://husnihalim.com/?s={search_term_string}",
+        "query-input": "required name=search_term_string"
+      }
+    }
+  ]
+}
+</script>
 </head>
 <body>
 
