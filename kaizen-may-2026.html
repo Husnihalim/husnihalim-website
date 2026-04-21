@@ -1,0 +1,919 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="index, follow">
+    <meta name="description" content="Kaizen Champion Development Program - May 18-22, 2026. 5-day intensive training with 90-day coaching support. HRDC-accredited. Limited to 15 participants.">
+    
+    <!-- Canonical -->
+    <link rel="canonical" href="https://husnihalim.com/kaizen-may-2026"/>
+    
+    <!-- Open Graph -->
+    <meta property="og:type" content="website"/>
+    <meta property="og:url" content="https://husnihalim.com/kaizen-may-2026"/>
+    <meta property="og:title" content="Kaizen Champion Development Program - May 18-22, 2026"/>
+    <meta property="og:description" content="5-day intensive Kaizen training with 90-day coaching support. Develop your team's continuous improvement capability. HRDC-accredited. Limited spots."/>
+    <meta property="og:locale" content="en_MY"/>
+    
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary"/>
+    <meta name="twitter:title" content="Kaizen Champion Development Program"/>
+    <meta name="twitter:description" content="5-day Kaizen training + 90-day coaching. May 18-22, 2026."/>
+    
+    <title>Kaizen Champion | May 18-22, 2026</title>
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            color: #1a1a1a;
+            background-color: #ffffff;
+        }
+
+        /* ===== TYPOGRAPHY ===== */
+        h1 { font-size: 2.8rem; font-weight: 700; line-height: 1.2; color: #0d5a5a; margin-bottom: 1rem; }
+        h2 { font-size: 2rem; font-weight: 700; line-height: 1.3; color: #0d5a5a; margin-bottom: 1.5rem; }
+        h3 { font-size: 1.3rem; font-weight: 600; color: #0d5a5a; margin-bottom: 1rem; }
+        p { font-size: 1rem; line-height: 1.7; margin-bottom: 1rem; color: #333; }
+
+        /* ===== COLORS ===== */
+        :root {
+            --primary: #0d5a5a;
+            --primary-light: #1a8a8a;
+            --accent: #d97706;
+            --accent-light: #f59e0b;
+            --bg-light: #f8fafc;
+            --border: #e2e8f0;
+            --text-dark: #1a1a1a;
+            --text-light: #666;
+            --success: #059669;
+        }
+
+        /* ===== LAYOUT ===== */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        section {
+            padding: 80px 0;
+        }
+
+        /* ===== BUTTONS ===== */
+        .btn {
+            display: inline-block;
+            padding: 14px 32px;
+            border-radius: 8px;
+            font-size: 1rem;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            border: none;
+            text-align: center;
+        }
+
+        .btn-primary {
+            background-color: var(--accent);
+            color: white;
+            border: 2px solid var(--accent);
+        }
+
+        .btn-primary:hover {
+            background-color: var(--accent-light);
+            transform: translateY(-2px);
+            box-shadow: 0 8px 16px rgba(217, 119, 6, 0.3);
+        }
+
+        .btn-secondary {
+            background-color: transparent;
+            color: var(--primary);
+            border: 2px solid var(--primary);
+        }
+
+        .btn-secondary:hover {
+            background-color: var(--primary);
+            color: white;
+        }
+
+        /* ===== HERO SECTION ===== */
+        .hero {
+            background: linear-gradient(135deg, var(--primary) 0%, #164646 100%);
+            color: white;
+            padding: 120px 0;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 400px;
+            height: 400px;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 50%;
+            transform: translate(200px, -200px);
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero-content h1 {
+            font-size: 3.2rem;
+            color: white;
+            margin-bottom: 1rem;
+            font-weight: 800;
+        }
+
+        .hero-content .subheading {
+            font-size: 1.5rem;
+            color: #d4d4d4;
+            margin-bottom: 1.5rem;
+        }
+
+        .hero-content p {
+            font-size: 1.1rem;
+            color: #e0e0e0;
+            max-width: 600px;
+            margin-bottom: 2rem;
+            line-height: 1.8;
+        }
+
+        .hero-cta {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+
+        /* ===== STATS BAR ===== */
+        .stats-bar {
+            background-color: var(--bg-light);
+            padding: 40px 0;
+            border-top: 1px solid var(--border);
+            border-bottom: 1px solid var(--border);
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+        }
+
+        .stat-item {
+            text-align: center;
+        }
+
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: 800;
+            color: var(--primary);
+            margin-bottom: 0.5rem;
+        }
+
+        .stat-label {
+            font-size: 0.95rem;
+            color: var(--text-light);
+        }
+
+        /* ===== CURRICULUM ===== */
+        .curriculum-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .day-card {
+            background-color: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+            transition: all 0.3s ease;
+        }
+
+        .day-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+        }
+
+        .day-header {
+            background-color: var(--primary);
+            color: white;
+            padding: 1.5rem;
+            font-size: 1.1rem;
+            font-weight: 700;
+        }
+
+        .day-content {
+            padding: 1.5rem;
+        }
+
+        .day-content h4 {
+            color: var(--primary);
+            font-size: 1rem;
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+        }
+
+        .day-content p {
+            font-size: 0.9rem;
+            color: var(--text-light);
+            margin-bottom: 0.5rem;
+        }
+
+        .day-content ul {
+            list-style: none;
+            margin: 1rem 0;
+        }
+
+        .day-content li {
+            padding: 0.3rem 0;
+            font-size: 0.85rem;
+            color: var(--text-light);
+            padding-left: 1.2rem;
+            position: relative;
+        }
+
+        .day-content li::before {
+            content: '•';
+            position: absolute;
+            left: 0;
+            color: var(--accent);
+            font-weight: bold;
+        }
+
+        /* ===== COMMITMENT SECTION ===== */
+        .commitment-section {
+            background: linear-gradient(135deg, var(--primary) 0%, #164646 100%);
+            color: white;
+            margin: 4rem 0;
+            border-radius: 12px;
+            padding: 3rem;
+        }
+
+        .commitment-section h3 {
+            color: white;
+            font-size: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .commitment-list {
+            list-style: none;
+        }
+
+        .commitment-list li {
+            padding: 1rem 0;
+            padding-left: 2rem;
+            position: relative;
+            font-size: 1rem;
+        }
+
+        .commitment-list li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: var(--accent);
+            font-weight: bold;
+            font-size: 1.3rem;
+        }
+
+        .commitment-section p {
+            color: #e0e0e0;
+            margin-top: 2rem;
+            font-size: 0.95rem;
+        }
+
+        /* ===== PRICING ===== */
+        .pricing-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .pricing-card {
+            background-color: white;
+            border-radius: 12px;
+            padding: 2rem;
+            border: 2px solid var(--border);
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+
+        .pricing-card.featured {
+            border: 2px solid var(--accent);
+            transform: scale(1.05);
+            box-shadow: 0 8px 24px rgba(217, 119, 6, 0.2);
+        }
+
+        .pricing-card h3 {
+            font-size: 1.2rem;
+            margin-bottom: 1rem;
+        }
+
+        .price {
+            font-size: 2.5rem;
+            font-weight: 800;
+            color: var(--primary);
+            margin: 1rem 0;
+        }
+
+        .price-period {
+            font-size: 0.9rem;
+            color: var(--text-light);
+            margin-bottom: 1.5rem;
+        }
+
+        .pricing-card ul {
+            list-style: none;
+            text-align: left;
+            margin: 1.5rem 0;
+        }
+
+        .pricing-card li {
+            padding: 0.5rem 0;
+            font-size: 0.9rem;
+            padding-left: 1.2rem;
+            position: relative;
+        }
+
+        .pricing-card li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: var(--success);
+            font-weight: bold;
+        }
+
+        /* ===== FAQ ===== */
+        .faq-item {
+            margin-bottom: 1.5rem;
+            border-bottom: 1px solid var(--border);
+            padding-bottom: 1.5rem;
+        }
+
+        .faq-item:last-child {
+            border-bottom: none;
+        }
+
+        .faq-question {
+            font-weight: 600;
+            color: var(--primary);
+            font-size: 1rem;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            user-select: none;
+        }
+
+        .faq-question::after {
+            content: '▼';
+            font-size: 0.8rem;
+            transition: transform 0.3s ease;
+        }
+
+        .faq-item.open .faq-question::after {
+            transform: rotate(180deg);
+        }
+
+        .faq-answer {
+            display: none;
+            margin-top: 1rem;
+            color: var(--text-light);
+            font-size: 0.95rem;
+            line-height: 1.7;
+        }
+
+        .faq-item.open .faq-answer {
+            display: block;
+        }
+
+        /* ===== FORM ===== */
+        .form-section {
+            background: linear-gradient(135deg, var(--primary) 0%, #164646 100%);
+            color: white;
+            margin: 4rem 0;
+            border-radius: 12px;
+            padding: 3rem;
+        }
+
+        .form-section h2 {
+            color: white;
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        .form-content {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 500;
+            font-size: 0.95rem;
+        }
+
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            border-radius: 8px;
+            font-size: 1rem;
+            background-color: rgba(255, 255, 255, 0.95);
+            color: #1a1a1a;
+            font-family: inherit;
+        }
+
+        .form-group input:focus,
+        .form-group select:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: var(--accent);
+            background-color: white;
+            box-shadow: 0 0 0 3px rgba(217, 119, 6, 0.1);
+        }
+
+        .form-group textarea {
+            resize: vertical;
+            min-height: 120px;
+        }
+
+        .checkbox-group {
+            display: flex;
+            align-items: flex-start;
+            gap: 0.75rem;
+        }
+
+        .checkbox-group input[type="checkbox"] {
+            width: auto;
+            margin-top: 4px;
+        }
+
+        .checkbox-group label {
+            margin: 0;
+            font-size: 0.9rem;
+        }
+
+        .form-submit {
+            width: 100%;
+            padding: 14px;
+            background-color: var(--accent);
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            margin-top: 1rem;
+        }
+
+        .form-submit:hover {
+            background-color: var(--accent-light);
+            transform: translateY(-2px);
+        }
+
+        /* ===== FOOTER ===== */
+        footer {
+            background-color: #1a1a1a;
+            color: white;
+            padding: 2rem 0;
+            text-align: center;
+        }
+
+        footer p {
+            color: #999;
+            font-size: 0.9rem;
+        }
+
+        footer a {
+            color: #ccc;
+            text-decoration: none;
+        }
+
+        /* ===== RESPONSIVE ===== */
+        @media (max-width: 768px) {
+            h1 { font-size: 2rem; }
+            h2 { font-size: 1.5rem; }
+            section { padding: 40px 0; }
+            .hero { padding: 60px 0; }
+            .hero-content h1 { font-size: 2rem; }
+            .pricing-card.featured { transform: scale(1); }
+        }
+    </style>
+</head>
+<body>
+
+<!-- ===== HERO SECTION ===== -->
+<section class="hero">
+    <div class="container">
+        <div class="hero-content">
+            <h1>Kaizen Champion Development Program</h1>
+            <div class="subheading">May 18-22, 2026 | Penang / Selangor</div>
+            <p>Learn continuous improvement from someone who's implemented Kaizen in factories across 6 continents. Train 1,000+ professionals. Walk away with ONE measurable improvement project your team will implement immediately.</p>
+            <div class="hero-cta">
+                <button class="btn btn-primary" onclick="document.getElementById('registration-form').scrollIntoView({behavior: 'smooth'})">Apply Now - Limited Spots</button>
+                <button class="btn btn-secondary" onclick="document.getElementById('curriculum').scrollIntoView({behavior: 'smooth'})">See Curriculum</button>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ===== STATS BAR ===== -->
+<section class="stats-bar">
+    <div class="container">
+        <div class="stats-grid">
+            <div class="stat-item">
+                <div class="stat-number">1,000+</div>
+                <div class="stat-label">Professionals Trained</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number">50+</div>
+                <div class="stat-label">Companies</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number">6</div>
+                <div class="stat-label">Continents</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number">20+</div>
+                <div class="stat-label">Years Experience</div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ===== CURRICULUM ===== -->
+<section style="background-color: #f8fafc;" id="curriculum">
+    <div class="container">
+        <h2>What You'll Learn</h2>
+        <p style="color: var(--text-light); font-size: 1.05rem; margin-bottom: 2rem;">Five days. Continuous. Each day builds on the last, leading to real, implementable improvements for your factory.</p>
+        
+        <div class="curriculum-grid">
+            <div class="day-card">
+                <div class="day-header">Day 1: Kaizen Foundations</div>
+                <div class="day-content">
+                    <h4>Philosophy & Mindset</h4>
+                    <ul>
+                        <li>The 8 Wastes framework</li>
+                        <li>Kaizen history & cultural context</li>
+                        <li>Real Malaysian factory examples</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="day-card">
+                <div class="day-header">Day 2: Assessment</div>
+                <div class="day-content">
+                    <h4>Root Cause Analysis</h4>
+                    <ul>
+                        <li>Value Stream Mapping (VSM)</li>
+                        <li>5 Why analysis</li>
+                        <li>Fishbone diagrams</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="day-card">
+                <div class="day-header">Day 3: Solution Design</div>
+                <div class="day-content">
+                    <h4>Ideation & Planning</h4>
+                    <ul>
+                        <li>Brainstorming frameworks</li>
+                        <li>Rapid prototyping</li>
+                        <li>Cost-benefit analysis</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="day-card">
+                <div class="day-header">Day 4: Implementation</div>
+                <div class="day-content">
+                    <h4>Execution & Change Management</h4>
+                    <ul>
+                        <li>Running a Kaizen event</li>
+                        <li>Leading teams & managing resistance</li>
+                        <li>Standard work & visual controls</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="day-card">
+                <div class="day-header">Day 5: Sustainability</div>
+                <div class="day-content">
+                    <h4>Certification & Next Steps</h4>
+                    <ul>
+                        <li>Measuring success (KPIs)</li>
+                        <li>100-day sustainability roadmap</li>
+                        <li>Building Kaizen culture</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="day-card">
+                <div class="day-header">After Program</div>
+                <div class="day-content">
+                    <h4>90-Day Support</h4>
+                    <ul>
+                        <li>Online coaching: 1 hour every 2 weeks</li>
+                        <li>Email support (24-hour response)</li>
+                        <li>Problem-solving for roadblocks</li>
+                        <li>Alumni network access</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ===== COMMITMENT SECTION ===== -->
+<section style="background-color: white;">
+    <div class="container">
+        <div class="commitment-section">
+            <h3>Our Commitment to You</h3>
+            <ul class="commitment-list">
+                <li>You will have 90 days of post-program support</li>
+                <li>Online coaching: 1 hour every two weeks (6 sessions total)</li>
+                <li>Email support: Questions answered within 24 hours</li>
+                <li>If you hit roadblocks—technical, organizational, or otherwise—we'll help you solve them</li>
+            </ul>
+            <p><strong>We're committed to your success, not just your completion.</strong></p>
+        </div>
+    </div>
+</section>
+
+<!-- ===== PRICING SECTION ===== -->
+<section style="background-color: #f8fafc;">
+    <div class="container">
+        <h2>Investment & Packages</h2>
+        <div class="pricing-grid">
+            <div class="pricing-card">
+                <h3>Standard</h3>
+                <div class="price">RM 5,000</div>
+                <div class="price-period">per person</div>
+                <ul>
+                    <li>5 days hands-on training</li>
+                    <li>Complete Kaizen toolkit</li>
+                    <li>HRDC-recognized certificate</li>
+                    <li>90-day post-program support</li>
+                    <li>Alumni network access</li>
+                </ul>
+                <button class="btn btn-primary" style="width: 100%; margin-top: 1.5rem;" onclick="document.getElementById('registration-form').scrollIntoView({behavior: 'smooth'})">Register</button>
+            </div>
+
+            <div class="pricing-card featured">
+                <h3>Early Bird</h3>
+                <div class="price">RM 4,500</div>
+                <div class="price-period">per person (by May 10)</div>
+                <ul>
+                    <li>5 days hands-on training</li>
+                    <li>Complete Kaizen toolkit</li>
+                    <li>HRDC-recognized certificate</li>
+                    <li>90-day post-program support</li>
+                    <li>Alumni network access</li>
+                </ul>
+                <button class="btn btn-primary" style="width: 100%; margin-top: 1.5rem;" onclick="document.getElementById('registration-form').scrollIntoView({behavior: 'smooth'})">Register Now</button>
+            </div>
+
+            <div class="pricing-card">
+                <h3>Group Discount</h3>
+                <div class="price">RM 4,000</div>
+                <div class="price-period">per person (5+ from same company)</div>
+                <ul>
+                    <li>5 days hands-on training</li>
+                    <li>Complete Kaizen toolkit</li>
+                    <li>HRDC-recognized certificate</li>
+                    <li>90-day post-program support</li>
+                    <li>2 free follow-up sessions</li>
+                </ul>
+                <button class="btn btn-secondary" style="width: 100%; margin-top: 1.5rem;" onclick="alert('Contact Husni at husni@visiarmada.com for group pricing')">Contact Us</button>
+            </div>
+        </div>
+
+        <div style="background-color: white; padding: 2rem; border-radius: 12px; margin-top: 2rem; border-left: 4px solid var(--success);">
+            <h3 style="color: var(--success); margin-bottom: 1rem;">HRDC Claimable</h3>
+            <p>This program qualifies under the Skills Recognition Program (SRP). Typical subsidy: 15-30% rebate after completion. We'll provide all required documentation.</p>
+        </div>
+    </div>
+</section>
+
+<!-- ===== PROGRAM DETAILS ===== -->
+<section style="background-color: white;">
+    <div class="container">
+        <h2>Program Details</h2>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem; margin-top: 2rem;">
+            <div>
+                <h3 style="color: var(--accent); font-size: 1.1rem; margin-bottom: 0.5rem;">📅 Dates</h3>
+                <p>Monday, May 18 - Friday, May 22, 2026</p>
+            </div>
+            <div>
+                <h3 style="color: var(--accent); font-size: 1.1rem; margin-bottom: 0.5rem;">📍 Location</h3>
+                <p>Penang / Selangor<br>(Hotel TBD - will confirm)</p>
+            </div>
+            <div>
+                <h3 style="color: var(--accent); font-size: 1.1rem; margin-bottom: 0.5rem;">⏰ Daily Hours</h3>
+                <p>8:30 AM - 5:00 PM<br>(Lunch & coffee breaks included)</p>
+            </div>
+            <div>
+                <h3 style="color: var(--accent); font-size: 1.1rem; margin-bottom: 0.5rem;">👥 Class Size</h3>
+                <p>Maximum 15 participants<br>(Small enough for personalization)</p>
+            </div>
+            <div>
+                <h3 style="color: var(--accent); font-size: 1.1rem; margin-bottom: 0.5rem;">📜 Certificate</h3>
+                <p>HRDC-Recognized<br>Kaizen Champion Development Certificate</p>
+            </div>
+            <div>
+                <h3 style="color: var(--accent); font-size: 1.1rem; margin-bottom: 0.5rem;">✅ Included</h3>
+                <p>Meals, materials, toolkit, certificate, 90-day support</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ===== FAQ SECTION ===== -->
+<section style="background-color: #f8fafc;">
+    <div class="container">
+        <h2>Frequently Asked Questions</h2>
+        <div style="max-width: 700px; margin: 0 auto;">
+            <div class="faq-item open">
+                <div class="faq-question">Who should attend this program?</div>
+                <div class="faq-answer">Production managers, supervisors, engineers, plant managers, operations directors, and HR staff responsible for continuous improvement. Anyone wanting to drive measurable operational improvements in manufacturing.</div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">Do I need prior Kaizen or Lean experience?</div>
+                <div class="faq-answer">No. This program is designed for people with zero experience and works well for those familiar with Lean. We start from fundamentals and build up.</div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">What happens after the program ends?</div>
+                <div class="faq-answer">You get 90 days of post-program support: online coaching (1 hour every 2 weeks = 6 sessions), email support (24-hour response), access to alumni WhatsApp group, and invitations to future networking events.</div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">Is this HRDC claimable?</div>
+                <div class="faq-answer">Yes. This program qualifies under the Skills Recognition Program (SRP). Most companies get 15-30% back after completion. We'll provide all required documentation.</div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">What's the ROI?</div>
+                <div class="faq-answer">Typical ROI is 5-10x within 6 months. Most participants say one improvement project pays for the entire program. We have case studies available.</div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">Can we send multiple people from our company?</div>
+                <div class="faq-answer">Yes, and we reward it. 5-9 people = 10% discount per person. 10+ people = 20% discount + extra support.</div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">Is this training online or in-person?</div>
+                <div class="faq-answer">Completely in-person at the hotel venue. The hands-on components require being there. The coaching support after is online.</div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">What if we have more questions?</div>
+                <div class="faq-answer">Call Husni at +60 16-661-1141 or email husni@visiarmada.com. We're happy to discuss your specific situation.</div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ===== REGISTRATION FORM ===== -->
+<section id="registration-form" style="background-color: white;">
+    <div class="form-section">
+        <h2>Reserve Your Spot</h2>
+        <div class="form-content">
+            <form onsubmit="handleFormSubmit(event)">
+                <div class="form-group">
+                    <label for="name">Full Name *</label>
+                    <input type="text" id="name" name="name" placeholder="Your full name" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="company">Company Name *</label>
+                    <input type="text" id="company" name="company" placeholder="Your company name" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="position">Position / Job Title *</label>
+                    <input type="text" id="position" name="position" placeholder="Your role at company" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email Address *</label>
+                    <input type="email" id="email" name="email" placeholder="your.email@company.com" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="phone">Phone Number *</label>
+                    <input type="tel" id="phone" name="phone" placeholder="+60 12-345-6789" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="challenge">What's your biggest manufacturing challenge? *</label>
+                    <select id="challenge" name="challenge" required>
+                        <option value="">-- Select One --</option>
+                        <option value="downtime">Equipment downtime / maintenance</option>
+                        <option value="quality">Quality / defects / scrap</option>
+                        <option value="delays">Production delays / lead time</option>
+                        <option value="retention">Talent retention / skills gaps</option>
+                        <option value="cost">Cost reduction / margin pressure</option>
+                        <option value="efficiency">Process inefficiency</option>
+                        <option value="other">Other (please specify in comments)</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="comments">Additional Comments</label>
+                    <textarea id="comments" name="comments" placeholder="Any questions or additional info?"></textarea>
+                </div>
+
+                <div class="checkbox-group">
+                    <input type="checkbox" id="commitment" name="commitment" required>
+                    <label for="commitment">Yes, I understand this is a 5-day, in-person program and I commit to attending all 5 days.</label>
+                </div>
+
+                <button type="submit" class="form-submit">Reserve My Spot</button>
+            </form>
+
+            <p style="text-align: center; margin-top: 1.5rem; color: #ccc; font-size: 0.85rem;">
+                Questions? Call Husni at +60 16-661-1141 or email husni@visiarmada.com
+            </p>
+        </div>
+    </div>
+</section>
+
+<!-- ===== FOOTER ===== -->
+<footer>
+    <div class="container">
+        <p>&copy; 2026 Husni Halim Consulting. Kaizen Champion Development Program. All rights reserved.</p>
+        <p style="margin-top: 1rem;">
+            <a href="https://husnihalim.com">← Back to Husni Halim</a> | 
+            <a href="mailto:husni@visiarmada.com">husni@visiarmada.com</a> | 
+            <a href="tel:+60166611141">+60 16-661-1141</a>
+        </p>
+    </div>
+</footer>
+
+<!-- ===== JAVASCRIPT ===== -->
+<script>
+    // FAQ Accordion
+    const faqItems = document.querySelectorAll('.faq-item');
+    faqItems.forEach(item => {
+        const question = item.querySelector('.faq-question');
+        question.addEventListener('click', () => {
+            faqItems.forEach(other => {
+                if (other !== item) {
+                    other.classList.remove('open');
+                }
+            });
+            item.classList.toggle('open');
+        });
+    });
+
+    // Form Submission
+    function handleFormSubmit(event) {
+        event.preventDefault();
+        const formData = {
+            name: document.getElementById('name').value,
+            company: document.getElementById('company').value,
+            position: document.getElementById('position').value,
+            email: document.getElementById('email').value,
+            phone: document.getElementById('phone').value,
+            challenge: document.getElementById('challenge').value,
+            comments: document.getElementById('comments').value,
+        };
+
+        // Show success message
+        alert('Thank you for registering!\n\nWe\'ll be in touch shortly to confirm your spot.\n\nCheck your email for confirmation details.');
+        document.querySelector('form').reset();
+
+        // In production, you would send this data to your backend
+        // For now, you can uncomment the line below to send via email:
+        // window.location.href = `mailto:husni@visiarmada.com?subject=Kaizen%20Program%20Registration:%20${formData.name}&body=${JSON.stringify(formData)}`;
+    }
+</script>
+
+</body>
+</html>
