@@ -804,7 +804,7 @@
     <div class="form-section">
         <h2>Reserve Your Spot</h2>
         <div class="form-content">
-            <form onsubmit="handleFormSubmit(event)">
+            <form action="https://formspree.io/f/xyzabcde" method="POST">
                 <div class="form-group">
                     <label for="name">Full Name *</label>
                     <input type="text" id="name" name="name" placeholder="Your full name" required>
@@ -858,7 +858,9 @@
             </form>
 
             <p style="text-align: center; margin-top: 1.5rem; color: #ccc; font-size: 0.85rem;">
-                Questions? Call Husni at +60 16-661-1141 or email husni@visiarmada.com
+                Questions?<br>
+                Pn Zila / En Husni: +60 16-526-1901<br>
+                Email: admin@visiarmada.com
             </p>
         </div>
     </div>
@@ -891,28 +893,6 @@
             item.classList.toggle('open');
         });
     });
-
-    // Form Submission
-    function handleFormSubmit(event) {
-        event.preventDefault();
-        const formData = {
-            name: document.getElementById('name').value,
-            company: document.getElementById('company').value,
-            position: document.getElementById('position').value,
-            email: document.getElementById('email').value,
-            phone: document.getElementById('phone').value,
-            challenge: document.getElementById('challenge').value,
-            comments: document.getElementById('comments').value,
-        };
-
-        // Show success message
-        alert('Thank you for registering!\n\nWe\'ll be in touch shortly to confirm your spot.\n\nCheck your email for confirmation details.');
-        document.querySelector('form').reset();
-
-        // In production, you would send this data to your backend
-        // For now, you can uncomment the line below to send via email:
-        // window.location.href = `mailto:husni@visiarmada.com?subject=Kaizen%20Program%20Registration:%20${formData.name}&body=${JSON.stringify(formData)}`;
-    }
 </script>
 
 </body>
