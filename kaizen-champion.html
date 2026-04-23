@@ -857,11 +857,17 @@
 <header>
     <div class="header-content">
         <div class="logo">
-            <img src="VAC_Logo_NoBox.png" alt="Visi Armada Consulting">
+            <a href="/" style="display: flex; align-items: center; text-decoration: none;">
+                <img src="VAC_Logo_NoBox.png" alt="Visi Armada Consulting">
+            </a>
         </div>
         <nav>
+            <a href="/">Home</a>
+            <a href="/#about">About</a>
+            <a href="/assessment.html">Free Assessment</a>
+            <a href="/blog/">Blog</a>
+            <span style="color: #ddd;">|</span>
             <a href="#program">Program</a>
-            <a href="#objectives">Objectives</a>
             <a href="#curriculum">Curriculum</a>
             <a href="#pricing">Pricing</a>
         </nav>
@@ -1494,23 +1500,56 @@
 <!-- ===== FOOTER ===== -->
 <footer>
     <div class="container">
-        <h4>Kaizen Champion Development Program</h4>
-        <p>May 18–22, 2026<br>Selangor, Malaysia</p>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 2rem; margin-bottom: 2rem;">
+            <!-- Program Info -->
+            <div>
+                <h4 style="margin: 0 0 1rem 0; color: var(--c-dark);">Kaizen Champion Program</h4>
+                <p style="margin: 0.5rem 0; font-size: 0.9rem;">May 18–22, 2026<br>Selangor, Malaysia</p>
+                <p style="margin: 0.5rem 0 0 0; font-size: 0.85rem; color: #666;">Limited to 15 participants</p>
+            </div>
 
-        <div class="divider"></div>
+            <!-- Contact Info -->
+            <div>
+                <h4 style="margin: 0 0 1rem 0; color: var(--c-dark);">Questions?</h4>
+                <p style="margin: 0; font-size: 0.9rem;">
+                    <strong>Husni Halim</strong><br>
+                    Principal Consultant<br>
+                    <a href="tel:+60165261901" style="color: var(--c-accent); text-decoration: none;">+60 16-526-1901</a><br>
+                    <a href="mailto:husnihalim@visiarmada.com" style="color: var(--c-accent); text-decoration: none;">husnihalim@visiarmada.com</a>
+                </p>
+            </div>
 
-        <p><strong>Delivered by Visi Armada Consulting</strong><br>
-        16+ years in manufacturing process improvement</p>
+            <!-- Main Navigation -->
+            <div>
+                <h4 style="margin: 0 0 1rem 0; color: var(--c-dark);">Services</h4>
+                <ul style="list-style: none; margin: 0; padding: 0;">
+                    <li><a href="/" style="color: #666; text-decoration: none; font-size: 0.9rem; display: block; margin-bottom: 0.5rem;">← Back to Home</a></li>
+                    <li><a href="/#about" style="color: #666; text-decoration: none; font-size: 0.9rem; display: block; margin-bottom: 0.5rem;">About</a></li>
+                    <li><a href="/#expertise" style="color: #666; text-decoration: none; font-size: 0.9rem; display: block; margin-bottom: 0.5rem;">Expertise</a></li>
+                    <li><a href="/#training" style="color: #666; text-decoration: none; font-size: 0.9rem; display: block; margin-bottom: 0.5rem;">Training</a></li>
+                    <li><a href="/blog" style="color: #666; text-decoration: none; font-size: 0.9rem; display: block; margin-bottom: 0.5rem;">Blog</a></li>
+                </ul>
+            </div>
 
-        <p>
-            Phone: <a href="tel:+60165261901">+60 16-526-1901</a><br>
-            Email: <a href="mailto:husnihalim@visiarmada.com">husnihalim@visiarmada.com</a><br>
-            Web: <a href="https://visiarmada.com">visiarmada.com</a>
-        </p>
-    </div>
+            <!-- CTA -->
+            <div>
+                <h4 style="margin: 0 0 1rem 0; color: var(--c-dark);">Get Started</h4>
+                <p style="margin: 0 0 1rem 0; font-size: 0.9rem; color: #666;">Ready to transform your manufacturing?</p>
+                <a href="/#contact" style="display: inline-block; background: var(--c-accent); color: #fff; padding: 0.7rem 1.2rem; border-radius: 4px; text-decoration: none; font-size: 0.9rem; font-weight: 600;">Get In Touch</a>
+            </div>
+        </div>
 
-    <div class="footer-bottom">
-        <p>&copy; 2026 Visi Armada Consulting. All rights reserved.</p>
+        <div class="divider" style="margin: 2rem 0;"></div>
+
+        <div style="text-align: center; padding-top: 1.5rem;">
+            <p style="margin: 0 0 0.5rem 0; color: #666; font-size: 0.9rem;">
+                <strong>Delivered by Visi Armada Consulting</strong><br>
+                16+ years in manufacturing process improvement
+            </p>
+            <p style="margin: 0; color: #999; font-size: 0.85rem;">
+                &copy; 2026 Visi Armada Consulting. All rights reserved.
+            </p>
+        </div>
     </div>
 </footer>
 

@@ -1,1546 +1,400 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="robots" content="index, follow">
-    <meta name="description" content="Kaizen Champion Development Program - 5-day intensive training for manufacturing leadership. May 18-22, 2026. Sustainable improvement methodology.">
-    
-    <link rel="canonical" href="https://visiarmada.com/kaizen-champion"/>
-    
-    <meta property="og:type" content="website"/>
-    <meta property="og:url" content="https://visiarmada.com/kaizen-champion"/>
-    <meta property="og:title" content="Kaizen Champion Development Program"/>
-    <meta property="og:description" content="5-day intensive Kaizen training for manufacturing leaders. Proven methodology. Limited cohorts."/>
-    <meta property="og:locale" content="en_MY"/>
-    
-    <title>Kaizen Champion Development Program | Visi Armada Consulting</title>
-    
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        html {
-            scroll-behavior: smooth;
-        }
-
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', sans-serif;
-            line-height: 1.6;
-            color: #1a1a1a;
-            background-color: #fafafa;
-        }
-
-        /* ===== TYPOGRAPHY ===== */
-        h1 { 
-            font-size: 3.5rem; 
-            font-weight: 700; 
-            line-height: 1.15; 
-            color: #000;
-            letter-spacing: -0.5px;
-            margin-bottom: 1rem; 
-        }
-        h2 { 
-            font-size: 2.2rem; 
-            font-weight: 700; 
-            line-height: 1.25; 
-            color: #000;
-            letter-spacing: -0.3px;
-            margin-bottom: 1.5rem; 
-        }
-        h3 { 
-            font-size: 1.3rem; 
-            font-weight: 600; 
-            color: #1a1a1a;
-            letter-spacing: -0.2px;
-            margin-bottom: 1rem; 
-        }
-        h4 { 
-            font-size: 1rem; 
-            font-weight: 600; 
-            color: #1a1a1a;
-            margin-bottom: 0.8rem; 
-        }
-        p { 
-            font-size: 0.95rem; 
-            line-height: 1.7; 
-            margin-bottom: 1.2rem; 
-            color: #555; 
-            font-weight: 400;
-        }
-        a { 
-            color: #c41e3a; 
-            text-decoration: none; 
-            transition: color 0.3s ease; 
-            font-weight: 500;
-        }
-        a:hover { 
-            color: #8b1a2e; 
-        }
-
-        /* ===== LAYOUT ===== */
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 40px;
-        }
-
-        section {
-            padding: 100px 0;
-        }
-
-        section.light {
-            background-color: #f5f5f5;
-        }
-
-        section.dark {
-            background-color: #1a1a1a;
-            color: white;
-        }
-
-        section.dark p {
-            color: #ccc;
-        }
-
-        section.dark h2,
-        section.dark h3 {
-            color: white;
-        }
-
-        /* ===== BUTTONS ===== */
-        .btn {
-            display: inline-block;
-            padding: 12px 28px;
-            border-radius: 0px;
-            font-size: 0.95rem;
-            font-weight: 600;
-            text-decoration: none;
-            transition: all 0.3s ease;
-            cursor: pointer;
-            border: none;
-            text-align: center;
-            letter-spacing: 0.5px;
-            text-transform: uppercase;
-        }
-
-        .btn-primary {
-            background-color: #c41e3a;
-            color: white;
-        }
-
-        .btn-primary:hover {
-            background-color: #8b1a2e;
-            transform: translateY(-1px);
-            box-shadow: 0 4px 12px rgba(196, 30, 58, 0.25);
-        }
-
-        .btn-secondary {
-            background-color: transparent;
-            color: #c41e3a;
-            border: 1px solid #c41e3a;
-        }
-
-        .btn-secondary:hover {
-            background-color: #c41e3a;
-            color: white;
-        }
-
-        /* ===== HEADER/NAV ===== */
-        header {
-            background: white;
-            border-bottom: 1px solid #e8e8e8;
-            position: sticky;
-            top: 0;
-            z-index: 100;
-            padding: 1.2rem 0;
-        }
-
-        .header-content {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 40px;
-        }
-
-        .logo img {
-            height: 40px;
-            width: auto;
-        }
-
-        nav {
-            display: flex;
-            gap: 3rem;
-        }
-
-        nav a {
-            font-size: 0.9rem;
-            font-weight: 500;
-            color: #555;
-            border-bottom: 2px solid transparent;
-            padding-bottom: 0.5rem;
-            transition: all 0.3s;
-        }
-
-        nav a:hover {
-            color: #c41e3a;
-            border-bottom-color: #c41e3a;
-        }
-
-        .header-cta {
-            margin-left: 2rem;
-        }
-
-        /* ===== HERO SECTION ===== */
-        .hero {
-            background: linear-gradient(135deg, #f5f5f5 0%, #ffffff 100%);
-            padding: 120px 0 80px;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .hero::before {
-            content: '';
-            position: absolute;
-            top: -100px;
-            right: -100px;
-            width: 600px;
-            height: 600px;
-            background: linear-gradient(135deg, rgba(196, 30, 58, 0.08) 0%, rgba(196, 30, 58, 0) 100%);
-            border-radius: 50%;
-            pointer-events: none;
-        }
-
-        .hero-content {
-            position: relative;
-            z-index: 1;
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 60px;
-            align-items: center;
-        }
-
-        .hero-text h1 {
-            color: #000;
-            font-size: 3.2rem;
-            margin-bottom: 1.5rem;
-            line-height: 1.1;
-        }
-
-        .hero-text .subheading {
-            font-size: 1.2rem;
-            color: #555;
-            margin-bottom: 2rem;
-            font-weight: 400;
-            line-height: 1.6;
-        }
-
-        .hero-text p {
-            font-size: 0.95rem;
-            color: #666;
-            margin-bottom: 2rem;
-            max-width: 500px;
-        }
-
-        .hero-cta {
-            display: flex;
-            gap: 1rem;
-            margin-top: 2.5rem;
-        }
-
-        .hero-stats {
-            background: white;
-            padding: 3rem;
-            border-radius: 0;
-            border: 1px solid #e8e8e8;
-            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
-        }
-
-        .stat-item {
-            margin-bottom: 2rem;
-            padding-bottom: 2rem;
-            border-bottom: 1px solid #e8e8e8;
-        }
-
-        .stat-item:last-child {
-            margin-bottom: 0;
-            padding-bottom: 0;
-            border-bottom: none;
-        }
-
-        .stat-item .number {
-            font-size: 2rem;
-            font-weight: 700;
-            color: #c41e3a;
-            line-height: 1;
-        }
-
-        .stat-item .label {
-            font-size: 0.85rem;
-            color: #888;
-            margin-top: 0.5rem;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-        }
-
-        @media (max-width: 768px) {
-            .hero-content {
-                grid-template-columns: 1fr;
-            }
-            .hero-text h1 {
-                font-size: 2.2rem;
-            }
-            nav {
-                gap: 1.5rem;
-            }
-            .header-content {
-                padding: 0 20px;
-            }
-            .container {
-                padding: 0 20px;
-            }
-        }
-
-        /* ===== ABOUT SECTION ===== */
-        .about {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 60px;
-            align-items: start;
-        }
-
-        .about-content h2 {
-            margin-bottom: 2rem;
-        }
-
-        .about-content p {
-            margin-bottom: 1.5rem;
-        }
-
-        .about-highlight {
-            background: white;
-            padding: 2rem;
-            border-left: 3px solid #c41e3a;
-            margin: 2rem 0;
-            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
-        }
-
-        .about-highlight p {
-            margin: 0;
-            font-size: 0.95rem;
-        }
-
-        .highlight-card {
-            background: white;
-            padding: 1.8rem;
-            margin-bottom: 1.5rem;
-            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
-            border-radius: 0;
-        }
-
-        .highlight-card h4 {
-            color: #c41e3a;
-            margin-bottom: 0.8rem;
-        }
-
-        .highlight-card p {
-            margin: 0;
-            font-size: 0.9rem;
-            color: #666;
-        }
-
-        @media (max-width: 768px) {
-            .about {
-                grid-template-columns: 1fr;
-            }
-        }
-
-        /* ===== OBJECTIVES SECTION ===== */
-        .objectives-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 30px;
-            margin-top: 3rem;
-        }
-
-        .objective-card {
-            background: white;
-            padding: 2rem;
-            border-radius: 0;
-            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
-            transition: all 0.3s ease;
-            border-top: 3px solid #c41e3a;
-        }
-
-        .objective-card:hover {
-            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12);
-            transform: translateY(-2px);
-        }
-
-        .objective-card h4 {
-            color: #000;
-            margin-bottom: 0.8rem;
-            font-size: 1rem;
-        }
-
-        .objective-card p {
-            font-size: 0.9rem;
-            color: #666;
-            margin: 0;
-            line-height: 1.6;
-        }
-
-        @media (max-width: 768px) {
-            .objectives-grid {
-                grid-template-columns: 1fr;
-            }
-        }
-
-        /* ===== OUTCOMES SECTION ===== */
-        .outcomes-container {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 40px;
-            margin-top: 3rem;
-        }
-
-        .outcome-category h3 {
-            color: #c41e3a;
-            margin-bottom: 1.5rem;
-            padding-bottom: 1rem;
-            border-bottom: 1px solid #e8e8e8;
-            font-size: 1.1rem;
-        }
-
-        .outcome-category ul {
-            list-style: none;
-        }
-
-        .outcome-category li {
-            padding-left: 20px;
-            margin-bottom: 1rem;
-            position: relative;
-            font-size: 0.9rem;
-            color: #666;
-            line-height: 1.6;
-        }
-
-        .outcome-category li:before {
-            content: '→';
-            position: absolute;
-            left: 0;
-            color: #c41e3a;
-            font-weight: bold;
-            font-size: 0.9rem;
-        }
-
-        @media (max-width: 768px) {
-            .outcomes-container {
-                grid-template-columns: 1fr;
-            }
-        }
-
-        /* ===== CURRICULUM SECTION ===== */
-        .curriculum-day {
-            background: white;
-            border: 1px solid #e8e8e8;
-            border-radius: 0;
-            margin-bottom: 1.5rem;
-            overflow: hidden;
-            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
-        }
-
-        .day-header {
-            background: #1a1a1a;
-            color: white;
-            padding: 1.5rem;
-            cursor: pointer;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            font-weight: 600;
-            font-size: 0.95rem;
-            transition: background 0.3s;
-        }
-
-        .day-header:hover {
-            background: #2a2a2a;
-        }
-
-        .day-number {
-            display: inline-block;
-            background: #c41e3a;
-            color: white;
-            padding: 0.4rem 0.9rem;
-            border-radius: 0;
-            margin-right: 1rem;
-            font-size: 0.85rem;
-            font-weight: 700;
-            letter-spacing: 0.5px;
-        }
-
-        .day-toggle {
-            font-size: 1.3rem;
-            transition: transform 0.3s;
-            color: #ccc;
-        }
-
-        .curriculum-day.open .day-toggle {
-            transform: rotate(180deg);
-        }
-
-        .day-content {
-            display: none;
-            padding: 2rem;
-        }
-
-        .curriculum-day.open .day-content {
-            display: block;
-        }
-
-        .day-content > p:first-child {
-            color: #888;
-            font-size: 0.9rem;
-            margin-bottom: 2rem;
-            padding-bottom: 1.5rem;
-            border-bottom: 1px solid #e8e8e8;
-        }
-
-        .session {
-            margin-bottom: 2rem;
-        }
-
-        .session:last-child {
-            margin-bottom: 0;
-        }
-
-        .session-header {
-            background: #f5f5f5;
-            padding: 1rem 1.2rem;
-            border-radius: 0;
-            margin-bottom: 1rem;
-            font-weight: 600;
-            color: #1a1a1a;
-            font-size: 0.95rem;
-        }
-
-        .session-topics {
-            list-style: none;
-            padding-left: 0;
-        }
-
-        .session-topics li {
-            padding: 0.7rem 0;
-            padding-left: 1.8rem;
-            position: relative;
-            color: #666;
-            font-size: 0.9rem;
-            line-height: 1.6;
-        }
-
-        .session-topics li:before {
-            content: '•';
-            position: absolute;
-            left: 0;
-            color: #c41e3a;
-            font-weight: bold;
-            font-size: 1rem;
-        }
-
-        .session-topics strong {
-            color: #1a1a1a;
-            font-weight: 600;
-        }
-
-        /* ===== FEATURES SECTION ===== */
-        .features-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 40px;
-            margin-top: 3rem;
-        }
-
-        .feature-card {
-            text-align: left;
-            padding: 2rem;
-            background: white;
-            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
-        }
-
-        .feature-icon {
-            font-size: 2rem;
-            margin-bottom: 1.2rem;
-        }
-
-        .feature-card h4 {
-            color: #1a1a1a;
-            margin-bottom: 0.8rem;
-            font-size: 1rem;
-        }
-
-        .feature-card p {
-            font-size: 0.9rem;
-            color: #666;
-            margin: 0;
-            line-height: 1.6;
-        }
-
-        @media (max-width: 768px) {
-            .features-grid {
-                grid-template-columns: 1fr;
-            }
-        }
-
-        /* ===== PRICING SECTION ===== */
-        .pricing-container {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 30px;
-            margin-top: 3rem;
-        }
-
-        .pricing-card {
-            border: 1px solid #e8e8e8;
-            border-radius: 0;
-            padding: 2.5rem;
-            text-align: center;
-            transition: all 0.3s ease;
-            background: white;
-            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
-            display: flex;
-            flex-direction: column;
-        }
-
-        .pricing-card.featured {
-            border: 2px solid #c41e3a;
-            transform: scale(1.02);
-            box-shadow: 0 4px 16px rgba(196, 30, 58, 0.2);
-        }
-
-        .pricing-card h3 {
-            margin-bottom: 0.5rem;
-            font-size: 1.1rem;
-        }
-
-        .price {
-            font-size: 2.2rem;
-            font-weight: 700;
-            color: #c41e3a;
-            margin: 1.5rem 0 0.5rem;
-        }
-
-        .price-details {
-            font-size: 0.85rem;
-            color: #888;
-            margin-bottom: 1.5rem;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-        }
-
-        .pricing-card ul {
-            list-style: none;
-            text-align: left;
-            margin: 2rem 0;
-            flex-grow: 1;
-        }
-
-        .pricing-card li {
-            padding: 0.6rem 0;
-            padding-left: 2rem;
-            position: relative;
-            color: #666;
-            font-size: 0.9rem;
-            line-height: 1.6;
-        }
-
-        .pricing-card li:before {
-            content: '✓';
-            position: absolute;
-            left: 0;
-            color: #059669;
-            font-weight: bold;
-        }
-
-        .pricing-card .btn {
-            margin-top: auto;
-        }
-
-        @media (max-width: 768px) {
-            .pricing-container {
-                grid-template-columns: 1fr;
-            }
-            .pricing-card.featured {
-                transform: scale(1);
-            }
-        }
-
-        /* ===== FAQ SECTION ===== */
-        .faq-item {
-            border: 1px solid #e8e8e8;
-            border-radius: 0;
-            margin-bottom: 1rem;
-            overflow: hidden;
-            background: white;
-        }
-
-        .faq-question {
-            background: white;
-            padding: 1.5rem;
-            cursor: pointer;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            font-weight: 600;
-            color: #1a1a1a;
-            transition: all 0.3s;
-            font-size: 0.95rem;
-        }
-
-        .faq-question:hover {
-            background: #f5f5f5;
-        }
-
-        .faq-toggle {
-            font-size: 1.3rem;
-            transition: transform 0.3s;
-            color: #c41e3a;
-        }
-
-        .faq-item.open .faq-question {
-            background: #f5f5f5;
-        }
-
-        .faq-item.open .faq-toggle {
-            transform: rotate(180deg);
-        }
-
-        .faq-answer {
-            display: none;
-            padding: 1.5rem;
-            background: white;
-            color: #666;
-            border-top: 1px solid #e8e8e8;
-            font-size: 0.9rem;
-            line-height: 1.7;
-        }
-
-        .faq-item.open .faq-answer {
-            display: block;
-        }
-
-        /* ===== FORM SECTION ===== */
-        .form-container {
-            background: white;
-            border: 1px solid #e8e8e8;
-            border-radius: 0;
-            padding: 3rem;
-            max-width: 600px;
-            margin: 2rem auto;
-            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
-        }
-
-        .form-group {
-            margin-bottom: 1.5rem;
-        }
-
-        label {
-            display: block;
-            margin-bottom: 0.5rem;
-            font-weight: 600;
-            color: #1a1a1a;
-            font-size: 0.9rem;
-        }
-
-        input, select, textarea {
-            width: 100%;
-            padding: 0.8rem;
-            border: 1px solid #e8e8e8;
-            border-radius: 0;
-            font-family: inherit;
-            font-size: 0.9rem;
-            transition: border-color 0.3s;
-            background: white;
-        }
-
-        input:focus, select:focus, textarea:focus {
-            outline: none;
-            border-color: #c41e3a;
-            box-shadow: 0 0 0 3px rgba(196, 30, 58, 0.1);
-        }
-
-        textarea {
-            resize: vertical;
-            min-height: 100px;
-        }
-
-        .form-submit {
-            width: 100%;
-            background: #c41e3a;
-            color: white;
-            padding: 1rem;
-            border: none;
-            border-radius: 0;
-            font-size: 0.9rem;
-            font-weight: 600;
-            cursor: pointer;
-            transition: all 0.3s;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-        }
-
-        .form-submit:hover {
-            background: #8b1a2e;
-        }
-
-        /* ===== FOOTER ===== */
-        footer {
-            background: #1a1a1a;
-            color: #ccc;
-            padding: 4rem 0 1rem;
-            margin-top: 6rem;
-        }
-
-        footer .container {
-            border-bottom: 1px solid #333;
-            padding-bottom: 3rem;
-            margin-bottom: 2rem;
-        }
-
-        footer p {
-            color: #999;
-            margin-bottom: 0.8rem;
-            font-size: 0.9rem;
-        }
-
-        footer a {
-            color: #c41e3a;
-        }
-
-        footer a:hover {
-            color: #ff3d52;
-        }
-
-        .footer-bottom {
-            text-align: center;
-            color: #666;
-            font-size: 0.85rem;
-        }
-
-        /* ===== UTILITIES ===== */
-        .text-center { 
-            text-align: center; 
-        }
-
-        .divider {
-            height: 1px;
-            background: #e8e8e8;
-            margin: 3rem 0;
-        }
-
-        @media (max-width: 768px) {
-            h1 { font-size: 2rem; }
-            h2 { font-size: 1.5rem; }
-            section { padding: 50px 0; }
-            nav { display: none; }
-            .hero-cta { flex-direction: column; }
-            .btn { width: 100%; }
-        }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lean Manufacturing Consulting & Training | Husni Halim</title>
+<meta name="description" content="HRDC certified lean manufacturing consultant. Kaizen training, process optimization, and operational excellence for Malaysian manufacturing SMEs.">
+<meta name="author" content="Husni Halim">
+<meta property="og:title" content="Lean Manufacturing Consulting & Training | Husni Halim">
+<meta property="og:description" content="Transform your manufacturing operations with proven lean and Kaizen methodology.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400;1,600&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&display=swap" rel="stylesheet">
+<style>
+:root {
+  --c-dark: #0c1b2e;
+  --c-accent: #8b2252;
+  --c-secondary: #c47832;
+  --c-warm: #f9f7f4;
+  --c-soft: #ece8e3;
+  --c-body: #374151;
+  --c-mid: #6b7280;
+  --font-h: 'Cormorant Garamond', Georgia, serif;
+  --font-b: 'DM Sans', -apple-system, sans-serif;
+}
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:var(--font-b);background:var(--c-warm);color:var(--c-body);-webkit-font-smoothing:antialiased}
+
+/* NAV */
+.nav{background:var(--c-dark);padding:14px 40px;display:flex;justify-content:space-between;align-items:center;position:sticky;top:0;z-index:100}
+.nav-logo{color:#fff;font-family:var(--font-h);font-size:20px;font-weight:600;text-decoration:none;letter-spacing:1px;display:flex;align-items:center}
+.nav-logo em{color:var(--c-secondary);font-style:italic}
+.nav-links{display:flex;gap:28px;list-style:none}
+.nav-links a{color:#ccc;font-size:13px;text-decoration:none;font-family:var(--font-b);letter-spacing:.4px;transition:color .2s}
+.nav-links a:hover{color:#fff}
+.nav-cta{background:var(--c-accent)!important;color:#fff!important;padding:8px 16px;border-radius:4px}
+
+/* HERO */
+.hero{background:var(--c-dark);padding:100px 40px;text-align:center;color:#fff}
+.hero h1{font-family:var(--font-h);font-size:clamp(32px,5vw,56px);font-weight:300;line-height:1.2;margin-bottom:20px}
+.hero p{font-size:18px;color:rgba(255,255,255,.75);max-width:700px;margin:0 auto 40px;line-height:1.7}
+.hero .label{font-size:11px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--c-secondary);margin-bottom:16px;display:inline-block}
+.hero .cta-buttons{display:flex;gap:16px;justify-content:center;flex-wrap:wrap}
+
+/* BUTTONS */
+.btn{display:inline-block;padding:12px 28px;border-radius:4px;font-size:13px;font-weight:600;text-decoration:none;letter-spacing:.4px;transition:all .2s;cursor:pointer;border:none}
+.btn-primary{background:var(--c-accent);color:#fff}
+.btn-primary:hover{background:#a0285e;transform:translateY(-2px)}
+.btn-secondary{background:transparent;color:#fff;border:1px solid rgba(255,255,255,.4)}
+.btn-secondary:hover{border-color:#fff}
+
+/* SECTIONS */
+.section{max-width:1160px;margin:0 auto;padding:80px 24px}
+.section h2{font-family:var(--font-h);font-size:clamp(28px,4vw,44px);color:var(--c-dark);margin-bottom:16px;font-weight:600}
+.section-label{font-size:11px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--c-secondary);margin-bottom:12px}
+.section-desc{font-size:16px;color:var(--c-mid);margin-bottom:48px;line-height:1.7;max-width:600px}
+
+/* ABOUT SECTION */
+#about{background:#fff}
+.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center;margin-top:40px}
+.about-text p{font-size:16px;line-height:1.8;margin-bottom:16px;color:var(--c-body)}
+.about-text strong{color:var(--c-dark)}
+.about-badge{display:inline-block;background:var(--c-soft);color:var(--c-dark);padding:8px 16px;border-radius:4px;font-size:12px;font-weight:600;margin-top:24px;letter-spacing:.3px}
+
+/* SERVICES GRID */
+.services-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:32px;margin-top:40px}
+.service-card{background:#fff;border:1px solid #eee;border-radius:8px;padding:40px;transition:all .3s}
+.service-card:hover{box-shadow:0 12px 36px rgba(12,27,46,.1);transform:translateY(-4px)}
+.service-card h3{font-family:var(--font-h);font-size:22px;color:var(--c-dark);margin-bottom:16px;font-weight:600}
+.service-card p{font-size:15px;line-height:1.7;color:var(--c-body);margin-bottom:24px}
+.service-card .btn{display:inline-block;width:100%;text-align:center}
+
+/* KAIZEN HIGHLIGHT */
+.kaizen-hero{background:linear-gradient(135deg,var(--c-accent),#a0285e);color:#fff;padding:80px 40px;text-align:center;margin:80px 24px;border-radius:8px}
+.kaizen-hero h2{color:#fff;font-family:var(--font-h);font-size:clamp(28px,4vw,44px);margin-bottom:20px}
+.kaizen-hero p{font-size:17px;color:rgba(255,255,255,.9);max-width:600px;margin:0 auto 40px;line-height:1.7}
+.kaizen-hero .btn{background:#fff;color:var(--c-accent)}
+.kaizen-hero .btn:hover{background:rgba(255,255,255,.9)}
+
+/* EXPERTISE */
+#expertise{background:var(--c-warm)}
+.expertise-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:32px;margin-top:40px}
+.exp-item{background:#fff;padding:28px;border-radius:6px;border-left:3px solid var(--c-secondary)}
+.exp-item h4{font-size:16px;color:var(--c-dark);margin-bottom:12px;font-weight:600}
+.exp-item p{font-size:14px;line-height:1.7;color:var(--c-body);margin-bottom:0}
+
+/* TRAINING SECTION */
+#training{background:#fff}
+.training-cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:32px;margin-top:40px}
+.training-card{background:var(--c-warm);padding:40px;border-radius:8px;border-top:4px solid var(--c-secondary)}
+.training-card h3{font-family:var(--font-h);font-size:22px;color:var(--c-dark);margin-bottom:12px;font-weight:600}
+.training-card .duration{font-size:12px;color:var(--c-secondary);font-weight:600;letter-spacing:.5px;text-transform:uppercase;margin-bottom:16px}
+.training-card p{font-size:15px;line-height:1.7;color:var(--c-body);margin-bottom:24px}
+.training-card ul{margin-left:20px;margin-bottom:24px}
+.training-card li{font-size:14px;color:var(--c-body);line-height:1.8;margin-bottom:8px}
+
+/* BLOG PREVIEW */
+#blog-section{background:var(--c-warm)}
+.blog-preview{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:28px;margin-top:40px}
+.blog-card{background:#fff;border-radius:6px;overflow:hidden;border:1px solid #eee;transition:all .3s}
+.blog-card:hover{box-shadow:0 8px 24px rgba(12,27,46,.08)}
+.blog-card a{text-decoration:none;color:inherit;display:flex;flex-direction:column;height:100%}
+.blog-card-img{height:180px;background:var(--c-dark);overflow:hidden}
+.blog-card-img img{width:100%;height:100%;object-fit:cover;transition:transform .4s}
+.blog-card:hover .blog-card-img img{transform:scale(1.04)}
+.blog-card-body{padding:20px;flex:1;display:flex;flex-direction:column}
+.blog-card-cat{font-size:10px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--c-secondary);margin-bottom:8px}
+.blog-card h4{font-family:var(--font-h);font-size:18px;color:var(--c-dark);line-height:1.4;margin-bottom:10px;font-weight:600}
+.blog-card p{font-size:13px;color:var(--c-mid);line-height:1.6;flex:1;margin-bottom:0}
+.blog-card-meta{padding:12px 20px;border-top:1px solid #f0f0f0;font-size:12px;color:#aaa}
+.view-blog-btn{display:inline-block;background:var(--c-accent);color:#fff;padding:12px 28px;border-radius:4px;font-size:13px;font-weight:600;text-decoration:none;margin-top:40px;transition:all .2s}
+.view-blog-btn:hover{background:#a0285e}
+
+/* CTA SECTION */
+.cta-section{background:var(--c-dark);color:#fff;padding:80px 40px;text-align:center}
+.cta-section h2{color:#fff;font-family:var(--font-h);font-size:clamp(28px,4vw,44px);margin-bottom:16px}
+.cta-section p{font-size:18px;color:rgba(255,255,255,.8);max-width:600px;margin:0 auto 32px;line-height:1.7}
+.cta-section .btn{background:var(--c-accent)}
+.cta-section .btn:hover{background:#a0285e}
+
+/* FOOTER */
+footer{background:var(--c-dark);color:#888;padding:60px 40px 40px}
+footer .max-w{max-width:1160px;margin:0 auto}
+.footer-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:40px;margin-bottom:40px;padding-bottom:40px;border-bottom:1px solid #333}
+.footer-col h4{font-family:var(--font-h);font-size:16px;color:#fff;margin-bottom:16px;font-weight:600}
+.footer-col ul{list-style:none}
+.footer-col a{color:#999;text-decoration:none;font-size:14px;line-height:2;transition:color .2s}
+.footer-col a:hover{color:var(--c-secondary)}
+.footer-bottom{text-align:center;font-size:13px}
+
+@media(max-width:800px){
+  .nav{padding:12px 20px;flex-direction:column;gap:16px}
+  .nav-links{flex-direction:column;gap:14px;width:100%}
+  .hero{padding:60px 20px}
+  .hero .cta-buttons{flex-direction:column;width:100%}
+  .hero .cta-buttons .btn{width:100%}
+  .about-grid{grid-template-columns:1fr;gap:40px}
+  .section{padding:60px 20px}
+  .kaizen-hero{margin:40px 20px}
+  .footer-grid{grid-template-columns:1fr;gap:24px}
+}
+</style>
 </head>
 <body>
 
-<!-- ===== HEADER ===== -->
-<header>
-    <div class="header-content">
-        <div class="logo">
-            <img src="VAC_Logo_NoBox.png" alt="Visi Armada Consulting">
-        </div>
-        <nav>
-            <a href="#program">Program</a>
-            <a href="#objectives">Objectives</a>
-            <a href="#curriculum">Curriculum</a>
-            <a href="#pricing">Pricing</a>
-        </nav>
-        <div class="header-cta">
-            <a href="#register" class="btn btn-primary">Reserve Now</a>
-        </div>
-    </div>
-</header>
+<nav class="nav">
+  <a href="/" class="nav-logo">Husni<em>Halim</em></a>
+  <ul class="nav-links">
+    <li><a href="#about">About</a></li>
+    <li><a href="#expertise">Expertise</a></li>
+    <li><a href="#training">Training</a></li>
+    <li><a href="/blog/">Blog</a></li>
+    <li><a href="#contact" class="nav-cta">Get In Touch</a></li>
+  </ul>
+</nav>
 
-<!-- ===== HERO SECTION ===== -->
-<section class="hero" id="program">
-    <div class="container">
-        <div class="hero-content">
-            <div class="hero-text">
-                <h1>Kaizen Champion Development Program</h1>
-                <p class="subheading">Embedded continuous improvement for manufacturing excellence</p>
-                <p>A comprehensive five-day program designed for engineers, operations managers, and team leaders who drive sustainable operational improvement. Learn proven methodologies from over two decades of industry deployment across Fortune 500 manufacturers.</p>
-
-                <div class="hero-cta">
-                    <a href="#register" class="btn btn-primary">Reserve Your Spot</a>
-                    <a href="#curriculum" class="btn btn-secondary">View Curriculum</a>
-                </div>
-            </div>
-
-            <div class="hero-stats">
-                <div class="stat-item">
-                    <div class="number">5</div>
-                    <div class="label">Intensive Days</div>
-                </div>
-                <div class="stat-item">
-                    <div class="number">90</div>
-                    <div class="label">Days Coaching</div>
-                </div>
-                <div class="stat-item">
-                    <div class="number">10x</div>
-                    <div class="label">Average ROI</div>
-                </div>
-                <div class="stat-item">
-                    <div class="number">15</div>
-                    <div class="label">Max Cohort Size</div>
-                </div>
-            </div>
-        </div>
-    </div>
+<!-- HERO -->
+<section class="hero">
+  <div class="label">Manufacturing Excellence</div>
+  <h1>Transform Your Operations with Lean & Kaizen</h1>
+  <p>HRDC certified consulting and training for Malaysian manufacturing companies. Build sustainable improvement culture, reduce waste, and unlock operational excellence.</p>
+  <div class="cta-buttons">
+    <a href="#training" class="btn btn-primary">Explore Kaizen Training</a>
+    <a href="/assessment.html" class="btn btn-secondary">Free Assessment</a>
+  </div>
 </section>
 
-<!-- ===== ABOUT SECTION ===== -->
-<section class="light">
-    <div class="container">
-        <div class="about">
-            <div class="about-content">
-                <h2>Why Kaizen?</h2>
-                <p>Kaizen—continuous improvement embedded in daily operations—is the difference between reactive firefighting and systematic, sustained improvement. Organizations that embed this methodology see measurable results within weeks.</p>
-
-                <div class="about-highlight">
-                    <p><strong>Investment Returns:</strong> Typical kaizen projects eliminate RM 50,000–80,000 in annual waste (scrap, downtime, rework, inventory, labor). ROI ranges from 10x within 6 months. Most organizations recover the program investment from their first improvement initiative.</p>
-                </div>
-
-                <p>This is not theoretical training. 80% of the curriculum is applied directly to your operations, using your data, solving your challenges.</p>
-            </div>
-
-            <div>
-                <div class="highlight-card">
-                    <h4>Root Cause Analysis</h4>
-                    <p>5 Why, Fishbone, and 7QC Tools applied to your actual operational data.</p>
-                </div>
-
-                <div class="highlight-card">
-                    <h4>A3 Report Methodology</h4>
-                    <p>Communicate improvement logic on one professional page—standard across leading manufacturers.</p>
-                </div>
-
-                <div class="highlight-card">
-                    <h4>90-Day Implementation</h4>
-                    <p>Structured coaching to ensure improvements lock in and prevent regression.</p>
-                </div>
-
-                <div class="highlight-card">
-                    <h4>Online Coaching Sessions</h4>
-                    <p>6 bi-weekly sessions over 3 months. Email support and consultations throughout.</p>
-                </div>
-            </div>
-        </div>
+<!-- ABOUT -->
+<section id="about" class="section">
+  <div class="section-label">About</div>
+  <h2>Lean Manufacturing Expertise for Malaysian Industry</h2>
+  <div class="about-grid">
+    <div class="about-text">
+      <p>With over a decade of hands-on experience in manufacturing operations, I work directly with Malaysian SMEs and larger facilities to implement lean manufacturing and Kaizen methodologies that actually stick.</p>
+      <p>Rather than textbook theory, my approach is grounded in factory-floor reality. I've worked through the challenges that Malaysian manufacturers face—resource constraints, cultural transitions, and sustainability beyond the initial event.</p>
+      <p>My training and consulting programs focus on building internal capability so your teams can continue improving long after the engagement ends.</p>
+      <span class="about-badge">HRDC Certified Trainer</span>
     </div>
+    <div class="about-text">
+      <p><strong>What I Specialize In:</strong></p>
+      <p>• Kaizen event design and facilitation<br>
+      • Lean manufacturing system implementation<br>
+      • 5S and visual management<br>
+      • Value stream mapping and optimization<br>
+      • Standard work and process discipline<br>
+      • Poka-yoke and error-proofing strategies<br>
+      • OEE improvement programs<br>
+      • Production leadership coaching</p>
+      <p>I work with manufacturing teams that are serious about building a culture of continuous improvement, not just checking boxes on a training checklist.</p>
+    </div>
+  </div>
 </section>
 
-<!-- ===== OBJECTIVES SECTION ===== -->
-<section id="objectives">
-    <div class="container">
-        <h2 class="text-center">Program Objectives</h2>
-        <p class="text-center" style="color: #888; font-size: 0.95rem; margin-bottom: 3rem;">Participants will develop the knowledge, skills, and mindset to lead sustainable operational improvement in their organizations.</p>
-
-        <div class="objectives-grid">
-            <div class="objective-card">
-                <h4>Kaizen Philosophy & Leadership</h4>
-                <p>Understand the history, principles, and role of a Champion in embedding continuous improvement culture.</p>
-            </div>
-
-            <div class="objective-card">
-                <h4>Waste Identification</h4>
-                <p>Recognize and quantify the 8 Wastes in your operations—overproduction to underutilized talent.</p>
-            </div>
-
-            <div class="objective-card">
-                <h4>Baseline Assessment</h4>
-                <p>Establish current state using Quality, Cost, and Delivery (QCD) framework—the business language of improvement.</p>
-            </div>
-
-            <div class="objective-card">
-                <h4>Root Cause Analysis</h4>
-                <p>Apply 5 Why, Fishbone diagrams, and systematic thinking to find true causes, not symptoms.</p>
-            </div>
-
-            <div class="objective-card">
-                <h4>Data-Driven Problem Solving</h4>
-                <p>Master 7QC Tools: Check Sheets, Pareto, Histograms, Control Charts. Make decisions on data, not opinion.</p>
-            </div>
-
-            <div class="objective-card">
-                <h4>Countermeasure Design</h4>
-                <p>Create effective solutions using Poka Yoke, Jidoka, Visual Management, and Standard Work.</p>
-            </div>
-
-            <div class="objective-card">
-                <h4>A3 Reporting</h4>
-                <p>Develop professional one-page improvement reports. Communicate logic, data, and action plans clearly.</p>
-            </div>
-
-            <div class="objective-card">
-                <h4>Implementation Leadership</h4>
-                <p>Plan and execute kaizen initiatives with clear ownership, KPIs, pilot strategies, and daily accountability.</p>
-            </div>
-
-            <div class="objective-card">
-                <h4>Culture & Sustainability</h4>
-                <p>Lock in gains, prevent regression, build internal capability, develop future champions through mentorship.</p>
-            </div>
-
-            <div class="objective-card">
-                <h4>KPI Management</h4>
-                <p>Design dashboards, quantify business impact, communicate improvement ROI to leadership.</p>
-            </div>
-
-            <div class="objective-card">
-                <h4>Team Development</h4>
-                <p>Coach team members through PDCA cycles, build problem-solving capability, scale continuous improvement.</p>
-            </div>
-
-            <div class="objective-card">
-                <h4>Change Leadership</h4>
-                <p>Lead teams through transformation. Manage resistance, build buy-in, sustain momentum.</p>
-            </div>
-        </div>
+<!-- SERVICES OVERVIEW -->
+<section class="section" style="background:#f5f5f5">
+  <div class="section-label">How I Can Help</div>
+  <h2>Services & Offerings</h2>
+  <div class="services-grid">
+    <div class="service-card">
+      <h3>Free 90-Day Assessment</h3>
+      <p>A structured review of your current manufacturing operations, lean readiness, and improvement opportunities. Identify quick wins and strategic focus areas with zero commitment.</p>
+      <a href="/assessment.html" class="btn btn-primary">Schedule Assessment</a>
     </div>
+    <div class="service-card">
+      <h3>Consulting Engagements</h3>
+      <p>Tailored consulting to implement lean systems, optimize processes, and embed continuous improvement culture. Short-term projects or ongoing partnership—your choice.</p>
+      <a href="#contact" class="btn btn-primary">Discuss Consulting</a>
+    </div>
+    <div class="service-card">
+      <h3>Open Training Programs</h3>
+      <p>Group training sessions covering Kaizen fundamentals, 5S, standard work, value stream mapping, and more. Register your team or attend as an individual.</p>
+      <a href="#training" class="btn btn-primary">View Training Dates</a>
+    </div>
+  </div>
 </section>
 
-<!-- ===== LEARNING OUTCOMES SECTION ===== -->
-<section class="light">
-    <div class="container">
-        <h2 class="text-center">Learning Outcomes</h2>
+<!-- KAIZEN CHAMPION HIGHLIGHT -->
+<div class="kaizen-hero">
+  <div style="max-width:1160px;margin:0 auto">
+    <h2>Kaizen Champion Development Program</h2>
+    <p>Intensive 5-day program for manufacturing leaders and Kaizen coordinators. May 18–22, 2026. Build the capability to lead continuous improvement in your organization.</p>
+    <a href="/kaizen-champion" class="btn btn-primary">Explore Kaizen Champion</a>
+  </div>
+</div>
 
-        <div class="outcomes-container">
-            <div class="outcome-category">
-                <h3>Knowledge Competencies</h3>
-                <ul>
-                    <li>Kaizen philosophy and competitive advantage</li>
-                    <li>The 8 Wastes (Muda) framework</li>
-                    <li>QCD business impact model</li>
-                    <li>PDCA continuous improvement cycle</li>
-                    <li>Root cause analysis methodologies</li>
-                    <li>7 Quality Control Tools</li>
-                    <li>Poka Yoke and Jidoka concepts</li>
-                    <li>A3 Report structure and logic</li>
-                </ul>
-            </div>
-
-            <div class="outcome-category">
-                <h3>Technical Skills</h3>
-                <ul>
-                    <li>Baseline assessment and data collection</li>
-                    <li>Perform systematic root cause analysis</li>
-                    <li>Apply 7QC Tools for data analysis</li>
-                    <li>Design countermeasures and controls</li>
-                    <li>Facilitate 5S audits and assessments</li>
-                    <li>Document standard work procedures</li>
-                    <li>Create professional A3 Reports</li>
-                    <li>Plan and pilot improvements</li>
-                    <li>Lead daily management reviews</li>
-                    <li>Develop KPI dashboards</li>
-                    <li>Coach team members through PDCA</li>
-                    <li>Manage implementation and change</li>
-                </ul>
-            </div>
-
-            <div class="outcome-category">
-                <h3>Leadership Mindset</h3>
-                <ul>
-                    <li>Waste exists in every process</li>
-                    <li>Reality is on the factory floor</li>
-                    <li>Data drives every decision</li>
-                    <li>Root causes are systemic, not personal</li>
-                    <li>Small improvements compound exponentially</li>
-                    <li>Culture sustains results long-term</li>
-                    <li>Frontline staff are your best experts</li>
-                    <li>Lead by coaching, not controlling</li>
-                    <li>Address resistance with empathy</li>
-                </ul>
-            </div>
-        </div>
+<!-- EXPERTISE -->
+<section id="expertise" class="section">
+  <div class="section-label">Key Focus Areas</div>
+  <h2>Lean & Kaizen Expertise</h2>
+  <div class="expertise-grid">
+    <div class="exp-item">
+      <h4>Kaizen Events & Culture</h4>
+      <p>Move beyond one-off events to build sustainable continuous improvement culture in your organization.</p>
     </div>
+    <div class="exp-item">
+      <h4>5S & Visual Management</h4>
+      <p>Implement 5S programs that stick. Design visual management boards that actually drive behavior.</p>
+    </div>
+    <div class="exp-item">
+      <h4>Standard Work & Process Discipline</h4>
+      <p>Create and enforce standard work that becomes the baseline for continuous improvement.</p>
+    </div>
+    <div class="exp-item">
+      <h4>Value Stream Mapping</h4>
+      <p>Identify and eliminate waste. Map current and future states to guide strategic improvement.</p>
+    </div>
+    <div class="exp-item">
+      <h4>OEE & Productivity</h4>
+      <p>Measure and improve overall equipment effectiveness. Drive yield, speed, and reliability gains.</p>
+    </div>
+    <div class="exp-item">
+      <h4>Production Leadership</h4>
+      <p>Coaching for plant managers, supervisors, and team leads to lead lean transformation.</p>
+    </div>
+  </div>
 </section>
 
-<!-- ===== 5-DAY CURRICULUM ===== -->
-<section id="curriculum">
-    <div class="container">
-        <h2 class="text-center">5-Day Curriculum</h2>
-        <p class="text-center" style="font-size: 1rem; font-weight: 600; color: #000; margin-bottom: 0.5rem;"><strong>May 18–22, 2026 | 9:00 AM – 5:00 PM | De Palma, Shah Alam</strong></p>
-        <p class="text-center" style="color: #888; font-size: 0.95rem; margin-bottom: 3rem;">Limited to 15 participants per cohort</p>
-
-        <!-- DAY 1 -->
-        <div class="curriculum-day open">
-            <div class="day-header" onclick="this.parentElement.classList.toggle('open')">
-                <span><span class="day-number">Day 1</span>Foundation of Kaizen</span>
-                <span class="day-toggle">∧</span>
-            </div>
-            <div class="day-content">
-                <p><strong>Learning Focus:</strong> Kaizen philosophy, Champion leadership role, QCD framework, PDCA methodology, operational excellence mindset</p>
-
-                <div class="session">
-                    <div class="session-header">MORNING: 9:00 AM – 1:00 PM</div>
-                    <ul class="session-topics">
-                        <li><strong>Program Overview & Participant Introductions</strong> — Setting context and building group cohesion</li>
-                        <li><strong>Kaizen: Philosophy & Historical Context</strong> — Origins, evolution, and relevance to modern operations</li>
-                        <li><strong>The Role of a Kaizen Champion</strong> — Responsibilities, required competencies, organizational impact</li>
-                        <li><strong>QCD Framework</strong> — Quality, Cost, Delivery and their interconnection to profitability</li>
-                        <li><strong>The PDCA Cycle</strong> — Plan-Do-Check-Act as the engine of continuous improvement</li>
-                    </ul>
-                </div>
-
-                <div class="session">
-                    <div class="session-header">AFTERNOON: 2:00 PM – 5:00 PM</div>
-                    <ul class="session-topics">
-                        <li><strong>Reactive vs. Proactive Mindset</strong> — From crisis management to prevention</li>
-                        <li><strong>Champion Competencies Framework</strong> — Technical, leadership, and change management skills</li>
-                        <li><strong>Operational Excellence Case Study</strong> — Analysis of successful improvement methodologies</li>
-                        <li><strong>PDCA Exercise: Applied Problem Solving</strong> — Small group practice on operational challenges</li>
-                        <li><strong>Personal Goal Setting</strong> — Individual commitment to learning and action</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-
-        <!-- DAY 2 -->
-        <div class="curriculum-day">
-            <div class="day-header" onclick="this.parentElement.classList.toggle('open')">
-                <span><span class="day-number">Day 2</span>Baseline & Problem Identification</span>
-                <span class="day-toggle">∧</span>
-            </div>
-            <div class="day-content">
-                <p><strong>Learning Focus:</strong> Current-state assessment, 8 Wastes, assessment methodology, data collection, 5S framework</p>
-
-                <div class="session">
-                    <div class="session-header">MORNING: 9:00 AM – 1:00 PM</div>
-                    <ul class="session-topics">
-                        <li><strong>Day 1 Recap & Reflection</strong> — Reinforcing PDCA and QCD concepts</li>
-                        <li><strong>The 8 Wastes (Muda)</strong> — Overproduction, Waiting, Transport, Processing, Inventory, Motion, Defects, Talent</li>
-                        <li><strong>Baseline Metrics & KPIs</strong> — Cycle time, defect rate, downtime, lead time, labor productivity</li>
-                        <li><strong>Assessment Methodology</strong> — Systematic approach to understanding current state</li>
-                    </ul>
-                </div>
-
-                <div class="session">
-                    <div class="session-header">AFTERNOON: 2:00 PM – 5:00 PM</div>
-                    <ul class="session-topics">
-                        <li><strong>Process Assessment</strong> — Structured observation and data collection methods</li>
-                        <li><strong>Waste Identification Workshop</strong> — Recognize each type of waste in your process</li>
-                        <li><strong>5S Framework</strong> — Sort, Set, Shine, Standardize, Sustain: organizing for efficiency</li>
-                        <li><strong>Data Collection Planning</strong> — Define process, select metrics, assign ownership, establish timeline</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-
-        <!-- DAY 3 -->
-        <div class="curriculum-day">
-            <div class="day-header" onclick="this.parentElement.classList.toggle('open')">
-                <span><span class="day-number">Day 3</span>Root Cause Analysis & Solutions</span>
-                <span class="day-toggle">∧</span>
-            </div>
-            <div class="day-content">
-                <p><strong>Learning Focus:</strong> Systematic root cause analysis, data-driven problem solving, countermeasure design, implementation planning</p>
-
-                <div class="session">
-                    <div class="session-header">MORNING: 9:00 AM – 1:00 PM</div>
-                    <ul class="session-topics">
-                        <li><strong>Root Cause Analysis Overview</strong> — Why symptoms must lead to systemic causes</li>
-                        <li><strong>5 Why Analysis Method</strong> — Drilling down to true root causes through structured questioning</li>
-                        <li><strong>Fishbone Diagram Construction</strong> — Man, Machine, Method, Material, Environment framework</li>
-                        <li><strong>7 Quality Control Tools</strong> — Check Sheet, Pareto, Histogram, Run Chart, Scatter Plot, Stratification, Control Chart</li>
-                    </ul>
-                </div>
-
-                <div class="session">
-                    <div class="session-header">AFTERNOON: 2:00 PM – 5:00 PM</div>
-                    <ul class="session-topics">
-                        <li><strong>Data Analysis Workshop</strong> — Apply 7QC Tools to your baseline data, identify patterns</li>
-                        <li><strong>Countermeasure Development</strong> — Design specific, testable solutions to root causes</li>
-                        <li><strong>Quality Control Circles (QCC)</strong> — Employee-led problem-solving and suggestion systems</li>
-                        <li><strong>Implementation Plan Framework</strong> — Who, what, when, resources, success metrics</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-
-        <!-- DAY 4 -->
-        <div class="curriculum-day">
-            <div class="day-header" onclick="this.parentElement.classList.toggle('open')">
-                <span><span class="day-number">Day 4</span>Implementation & Leadership</span>
-                <span class="day-toggle">∧</span>
-            </div>
-            <div class="day-content">
-                <p><strong>Learning Focus:</strong> A3 reporting, mistake-proofing, visual management, standard work, change leadership</p>
-
-                <div class="session">
-                    <div class="session-header">MORNING: 9:00 AM – 1:00 PM</div>
-                    <ul class="session-topics">
-                        <li><strong>Implementation Mindset</strong> — From analysis to execution; starting small with pilot approaches</li>
-                        <li><strong>A3 Report Development</strong> — One-page improvement communication: background, analysis, solutions, plan, results</li>
-                        <li><strong>Poka Yoke (Mistake-Proofing)</strong> — Design processes to prevent errors before they occur</li>
-                        <li><strong>Jidoka (Autonomation)</strong> — Build in quality; processes/machines stop when abnormality detected</li>
-                    </ul>
-                </div>
-
-                <div class="session">
-                    <div class="session-header">AFTERNOON: 2:00 PM – 5:00 PM</div>
-                    <ul class="session-topics">
-                        <li><strong>Visual Management Systems</strong> — Make status, problems, and targets visible at a glance</li>
-                        <li><strong>Andon System</strong> — Visual signals for abnormalities; production stops to address issues immediately</li>
-                        <li><strong>Standard Work Documentation</strong> — Best known method: sequence, timing, quality criteria</li>
-                        <li><strong>Leading Change</strong> — Communicate why, involve staff, train thoroughly, celebrate early wins</li>
-                        <li><strong>Pilot & Rollout Strategy</strong> — Start small, monitor daily, adjust quickly, scale to full deployment</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-
-        <!-- DAY 5 -->
-        <div class="curriculum-day">
-            <div class="day-header" onclick="this.parentElement.classList.toggle('open')">
-                <span><span class="day-number">Day 5</span>Sustainability & Culture</span>
-                <span class="day-toggle">∧</span>
-            </div>
-            <div class="day-content">
-                <p><strong>Learning Focus:</strong> Locking in improvements, preventing regression, building culture, KPI management, mentorship</p>
-
-                <div class="session">
-                    <div class="session-header">MORNING: 9:00 AM – 1:00 PM</div>
-                    <ul class="session-topics">
-                        <li><strong>Sustainability Strategy</strong> — Improvement is easy; sustaining it is the challenge</li>
-                        <li><strong>Systems & Habits for Sustainability</strong> — Standard work audits, visual metrics, accountability, recognition</li>
-                        <li><strong>Preventing Regression</strong> — Monthly reviews, quick-fix protocols, training refreshes, next-phase planning</li>
-                        <li><strong>Motivation & Engagement</strong> — Clear purpose, early wins, autonomy, growth opportunities</li>
-                        <li><strong>Managing Resistance</strong> — Address fear, habit, effort, ownership barriers with empathy and communication</li>
-                    </ul>
-                </div>
-
-                <div class="session">
-                    <div class="session-header">AFTERNOON: 2:00 PM – 5:00 PM</div>
-                    <ul class="session-topics">
-                        <li><strong>KPI Tracking & Dashboards</strong> — Quality, Cost, Delivery metrics over 90+ days</li>
-                        <li><strong>Business Impact Calculation</strong> — RM savings, ROI, payback period, link to business strategy</li>
-                        <li><strong>Mentorship & Coaching Framework</strong> — Identify potential, coach through PDCA, develop next leaders</li>
-                        <li><strong>Capstone Presentations</strong> — Each participant presents A3 Report, peer feedback, celebration</li>
-                        <li><strong>90-Day Action Plan Review</strong> — Coaching schedule, email support, alumni network, next steps</li>
-                        <li><strong>Closing Ceremony</strong> — Recap, commitment, thank you, networking</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-
+<!-- TRAINING -->
+<section id="training" class="section" style="background:#f5f5f5">
+  <div class="section-label">Training & Development</div>
+  <h2>Build Lean Capability in Your Team</h2>
+  <div class="training-cards">
+    <div class="training-card">
+      <h3>Kaizen Champion Program</h3>
+      <div class="duration">May 18–22, 2026 • 5 Days</div>
+      <p>Intensive immersion for manufacturing leaders and coordinators. Master Kaizen event facilitation, lean tools, and change leadership.</p>
+      <ul>
+        <li>Kaizen methodology and event design</li>
+        <li>5S implementation and sustainability</li>
+        <li>Value stream mapping</li>
+        <li>Standard work development</li>
+        <li>Team dynamics and resistance management</li>
+      </ul>
+      <a href="/kaizen-champion" class="btn btn-primary">Learn More & Register</a>
     </div>
+    <div class="training-card">
+      <h3>Lean Fundamentals Workshop</h3>
+      <div class="duration">Customized Dates • 2–3 Days</div>
+      <p>Foundational training for production teams. Build understanding of lean principles and basic improvement tools.</p>
+      <ul>
+        <li>Lean manufacturing principles</li>
+        <li>7 types of waste and muda elimination</li>
+        <li>5S methodology</li>
+        <li>Visual management basics</li>
+        <li>Hands-on workshop exercises</li>
+      </ul>
+      <a href="#contact" class="btn btn-primary">Request Workshop</a>
+    </div>
+    <div class="training-card">
+      <h3>Kaizen Event Facilitation</h3>
+      <div class="duration">Customized Dates • 3–5 Days</div>
+      <p>Real-world Kaizen event conducted at your facility. Your team leads the event with coaching and facilitation support.</p>
+      <ul>
+        <li>On-site event planning</li>
+        <li>Rapid improvement cycle</li>
+        <li>Team engagement and sustainment</li>
+        <li>Results documentation</li>
+        <li>Post-event coaching</li>
+      </ul>
+      <a href="#contact" class="btn btn-primary">Schedule Event</a>
+    </div>
+  </div>
 </section>
 
-<!-- ===== FEATURES SECTION ===== -->
-<section class="light">
-    <div class="container">
-        <h2 class="text-center">Program Includes</h2>
-
-        <div class="features-grid">
-            <div class="feature-card">
-                <h4>Complete Tools Handbook</h4>
-                <p>A3 templates, Fishbone diagrams, Check Sheets, Pareto charts, 5S assessments, Standard Work forms, Visual Management templates.</p>
-            </div>
-
-            <div class="feature-card">
-                <h4>Data Analysis Workshop</h4>
-                <p>Apply 7QC Tools to your baseline data. Analyze patterns. Develop countermeasures specific to your operation.</p>
-            </div>
-
-            <div class="feature-card">
-                <h4>A3 Report Guidance</h4>
-                <p>Template, worked example, peer review during program. Leave with a complete, ready-to-present improvement plan.</p>
-            </div>
-
-            <div class="feature-card">
-                <h4>90-Day Coaching</h4>
-                <p>6 bi-weekly online sessions over 3 months, email support, phone consultations. Lock in improvements and prevent regression.</p>
-            </div>
-
-            <div class="feature-card">
-                <h4>Process Assessment</h4>
-                <p>Structured evaluation of your current operations using QCD framework. Identify improvement opportunities.</p>
-            </div>
-
-            <div class="feature-card">
-                <h4>Implementation Roadmap</h4>
-                <p>Clear 90-day execution plan with milestones, ownership, KPI targets, and success metrics.</p>
-            </div>
+<!-- BLOG -->
+<section id="blog-section" class="section">
+  <div class="section-label">Insights & Articles</div>
+  <h2>Manufacturing Leadership Blog</h2>
+  <p class="section-desc">Practical guides on lean manufacturing, Kaizen, and operational excellence. Written from factory-floor experience, not theory.</p>
+  <div class="blog-preview">
+    <div class="blog-card">
+      <a href="/blog/why-kaizen-events-fail/">
+        <div class="blog-card-img">
+          <img src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=600&h=400&q=80" alt="Why Kaizen Events Fail" loading="lazy" onerror="this.style.opacity='.3'">
         </div>
+        <div class="blog-card-body">
+          <div class="blog-card-cat">Kaizen</div>
+          <h4>Why Kaizen Events Fail</h4>
+          <p>Most Kaizen events produce a report, not results. Here are the six root causes of failure.</p>
+        </div>
+        <div class="blog-card-meta">November 2024 · 9 min read</div>
+      </a>
     </div>
+    <div class="blog-card">
+      <a href="/blog/5s-implementation-problems/">
+        <div class="blog-card-img">
+          <img src="https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?auto=format&fit=crop&w=600&h=400&q=80" alt="5S Implementation" loading="lazy" onerror="this.style.opacity='.3'">
+        </div>
+        <div class="blog-card-body">
+          <div class="blog-card-cat">Lean Manufacturing</div>
+          <h4>5S Implementation Problems</h4>
+          <p>Why 5S Never Sticks After Training. What actually works instead.</p>
+        </div>
+        <div class="blog-card-meta">December 2024 · 8 min read</div>
+      </a>
+    </div>
+    <div class="blog-card">
+      <a href="/blog/value-stream-mapping-mistakes/">
+        <div class="blog-card-img">
+          <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=600&h=400&q=80" alt="Value Stream Mapping" loading="lazy" onerror="this.style.opacity='.3'">
+        </div>
+        <div class="blog-card-body">
+          <div class="blog-card-cat">Lean Manufacturing</div>
+          <h4>Value Stream Mapping Mistakes</h4>
+          <p>Common VSM errors that make the exercise useless. How to avoid them.</p>
+        </div>
+        <div class="blog-card-meta">February 2025 · 8 min read</div>
+      </a>
+    </div>
+  </div>
+  <a href="/blog/" class="view-blog-btn">View All Articles →</a>
 </section>
 
-<!-- ===== PRICING SECTION ===== -->
-<section id="pricing">
-    <div class="container">
-        <h2 class="text-center">Pricing</h2>
-
-        <div class="pricing-container">
-            <div class="pricing-card">
-                <h3>Early Bird</h3>
-                <p class="price-details">Register by April 30</p>
-                <div class="price">RM 4,500</div>
-                <ul>
-                    <li>5-day intensive program</li>
-                    <li>All tools & templates</li>
-                    <li>90-day coaching (6 sessions)</li>
-                    <li>Complete A3 Report</li>
-                    <li>90-day Implementation Roadmap</li>
-                </ul>
-                <a href="#register" class="btn btn-secondary" style="width: 100%; margin-top: 2rem;">Register</a>
-            </div>
-
-            <div class="pricing-card featured">
-                <h3>Standard</h3>
-                <p class="price-details">Regular rate</p>
-                <div class="price">RM 5,000</div>
-                <ul>
-                    <li>5-day intensive program</li>
-                    <li>All tools & templates</li>
-                    <li>90-day coaching (6 sessions)</li>
-                    <li>Complete A3 Report</li>
-                    <li>90-day Implementation Roadmap</li>
-                </ul>
-                <a href="#register" class="btn btn-primary" style="width: 100%; margin-top: 2rem;">Reserve Now</a>
-            </div>
-
-            <div class="pricing-card">
-                <h3>Group Rate</h3>
-                <p class="price-details">3 or more participants</p>
-                <div class="price">RM 4,500</div>
-                <ul>
-                    <li>5-day intensive program</li>
-                    <li>All tools & templates</li>
-                    <li>90-day coaching (6 sessions)</li>
-                    <li>Complete A3 Report</li>
-                    <li>90-day Implementation Roadmap</li>
-                </ul>
-                <a href="#register" class="btn btn-secondary" style="width: 100%; margin-top: 2rem;">Contact Sales</a>
-            </div>
-        </div>
-
-        <div style="background: white; padding: 2rem; max-width: 700px; margin: 3rem auto 0; box-shadow: 0 2px 8px rgba(0,0,0,0.06); border-left: 3px solid #c41e3a;">
-            <h4 style="margin-bottom: 1rem;">Investment Returns</h4>
-            <p style="margin: 0; font-size: 0.9rem; color: #666;">Typical kaizen projects eliminate RM 50,000–80,000 in annual waste (scrap, downtime, rework, inventory, labor). Average ROI: 10x within 6 months. Most organizations recover the program investment from their first improvement initiative.</p>
-        </div>
-    </div>
+<!-- CTA -->
+<section id="contact" class="cta-section">
+  <h2>Ready to Transform Your Operations?</h2>
+  <p>Start with a free 90-day assessment or explore the Kaizen Champion program. Let's build sustainable improvement capability in your organization.</p>
+  <a href="/assessment.html" class="btn btn-primary">Start Free Assessment</a>
 </section>
 
-<!-- ===== FAQ SECTION ===== -->
-<section class="light" id="faq">
-    <div class="container">
-        <h2 class="text-center">Frequently Asked Questions</h2>
-
-        <div style="max-width: 800px; margin: 3rem auto;">
-            <div class="faq-item">
-                <div class="faq-question">
-                    <span>Do I need Lean or manufacturing experience?</span>
-                    <span class="faq-toggle">∧</span>
-                </div>
-                <div class="faq-answer">No. This program is self-contained and designed for operations professionals at any experience level. If you've done Lean before, this deepens that knowledge. If you haven't, this is a complete introduction. We assume only that you understand your process.</div>
-            </div>
-
-            <div class="faq-item">
-                <div class="faq-question">
-                    <span>We tried improvements before. Nothing lasted. Why would this be different?</span>
-                    <span class="faq-toggle">∧</span>
-                </div>
-                <div class="faq-answer">Most improvements fail during the 6 months after training—not because the solution is flawed, but because follow-up is missing. This program includes 90 days of structured coaching to ensure improvements lock in. You get a sustainability plan on Day 5 and support throughout implementation.</div>
-            </div>
-
-            <div class="faq-item">
-                <div class="faq-question">
-                    <span>Is this customized to our industry?</span>
-                    <span class="faq-toggle">∧</span>
-                </div>
-                <div class="faq-answer">Yes. 80% of the program is applied directly to YOUR process, YOUR challenges, and YOUR data. Whether you're automotive, electronics, food, pharma, or process manufacturing, we adapt examples and case studies. The assessment is on your operations.</div>
-            </div>
-
-            <div class="faq-item">
-                <div class="faq-question">
-                    <span>What happens after the 5 days?</span>
-                    <span class="faq-toggle">∧</span>
-                </div>
-                <div class="faq-answer">You receive 90 days of structured support: 6 bi-weekly online coaching sessions (1 hour each), 24-hour email response, phone consultations as needed, and alumni network access. We track implementation milestones, refine your KPI dashboard, and help scale improvements across your operation.</div>
-            </div>
-
-            <div class="faq-item">
-                <div class="faq-question">
-                    <span>How do we measure ROI?</span>
-                    <span class="faq-toggle">∧</span>
-                </div>
-                <div class="faq-answer">We track QCD metrics: defect rate, scrap %, cost per unit, lead time, on-time delivery %. You create a KPI dashboard on Day 5 with baseline, targets, and RM impact. Most companies see measurable savings within 90 days. Average ROI: 10x.</div>
-            </div>
-
-            <div class="faq-item">
-                <div class="faq-question">
-                    <span>Who should attend?</span>
-                    <span class="faq-toggle">∧</span>
-                </div>
-                <div class="faq-answer">Manufacturing supervisors, engineers, operations managers, plant leaders, quality managers. Anyone responsible for process improvement or who directly manages teams on the floor. Mixed cohorts (different industries, functions) are ideal—peer learning is powerful. We limit to 15 participants for hands-on engagement.</div>
-            </div>
-
-            <div class="faq-item">
-                <div class="faq-question">
-                    <span>Can you run this at our facility?</span>
-                    <span class="faq-toggle">∧</span>
-                </div>
-                <div class="faq-answer">Yes, for larger groups (8+). In-house delivery at your facility. Contact us to discuss dates, location, and customization options.</div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- ===== REGISTRATION SECTION ===== -->
-<section id="register">
-    <div class="container">
-        <h2 class="text-center">Reserve Your Spot</h2>
-        <p class="text-center" style="font-size: 1rem; font-weight: 600; color: #000; margin-bottom: 0.5rem;"><strong>May 18–22, 2026 | 9:00 AM – 5:00 PM | De Palma, Shah Alam</strong></p>
-        <p class="text-center" style="color: #888; font-size: 0.95rem; margin-bottom: 3rem;">Limited to 15 participants per cohort</p>
-
-        <div class="form-container">
-            <form name="kaizen-registration" method="POST" netlify>
-                <div class="form-group">
-                    <label for="name">Full Name *</label>
-                    <input type="text" id="name" name="name" required>
-                </div>
-
-                <div class="form-group">
-                    <label for="email">Email Address *</label>
-                    <input type="email" id="email" name="email" required>
-                </div>
-
-                <div class="form-group">
-                    <label for="phone">Phone Number *</label>
-                    <input type="tel" id="phone" name="phone" placeholder="+60 16 XXXX XXXX" required>
-                </div>
-
-                <div class="form-group">
-                    <label for="company">Company Name *</label>
-                    <input type="text" id="company" name="company" required>
-                </div>
-
-                <div class="form-group">
-                    <label for="role">Job Title *</label>
-                    <input type="text" id="role" name="role" placeholder="e.g., Operations Manager" required>
-                </div>
-
-                <div class="form-group">
-                    <label for="industry">Industry *</label>
-                    <select id="industry" name="industry" required>
-                        <option value="">Select your industry</option>
-                        <option value="automotive">Automotive</option>
-                        <option value="electronics">Electronics</option>
-                        <option value="food">Food & Beverage</option>
-                        <option value="pharma">Pharmaceutical</option>
-                        <option value="medical">Medical Devices</option>
-                        <option value="manufacturing">General Manufacturing</option>
-                        <option value="logistics">Logistics & Warehousing</option>
-                        <option value="other">Other</option>
-                    </select>
-                </div>
-
-                <div class="form-group">
-                    <label for="challenge">Your biggest operational challenge *</label>
-                    <textarea id="challenge" name="challenge" placeholder="e.g., High defect rate, Downtime, Lead time delays" required></textarea>
-                </div>
-
-                <div class="form-group">
-                    <label for="pricing">Pricing tier *</label>
-                    <select id="pricing" name="pricing" required>
-                        <option value="">Select pricing</option>
-                        <option value="early-bird">Early Bird (RM 4,500)</option>
-                        <option value="standard">Standard (RM 5,000)</option>
-                        <option value="group">Group Rate (RM 4,500 for 3+)</option>
-                    </select>
-                </div>
-
-                <div style="margin: 1.5rem 0; padding: 1rem; background: #f5f5f5;">
-                    <label>
-                        <input type="checkbox" name="commitment" required>
-                        <span style="margin-left: 0.5rem;">I confirm attendance for all 5 days *</span>
-                    </label>
-                </div>
-
-                <button type="submit" class="form-submit">Reserve Your Spot</button>
-            </form>
-
-            <div style="text-align: center; margin-top: 2rem; padding-top: 2rem; border-top: 1px solid #e8e8e8;">
-                <p style="margin: 0; color: #666; font-size: 0.9rem;">
-                    <strong>Questions?</strong><br>
-                    Husni Halim | Principal Consultant<br>
-                    +60 16-526-1901 | husnihalim@visiarmada.com<br>
-                    <a href="https://visiarmada.com">visiarmada.com</a>
-                </p>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- ===== FOOTER ===== -->
+<!-- FOOTER -->
 <footer>
-    <div class="container">
-        <h4>Kaizen Champion Development Program</h4>
-        <p>May 18–22, 2026<br>Selangor, Malaysia</p>
-
-        <div class="divider"></div>
-
-        <p><strong>Delivered by Visi Armada Consulting</strong><br>
-        16+ years in manufacturing process improvement</p>
-
-        <p>
-            Phone: <a href="tel:+60165261901">+60 16-526-1901</a><br>
-            Email: <a href="mailto:husnihalim@visiarmada.com">husnihalim@visiarmada.com</a><br>
-            Web: <a href="https://visiarmada.com">visiarmada.com</a>
-        </p>
+  <div class="max-w">
+    <div class="footer-grid">
+      <div class="footer-col">
+        <h4>Services</h4>
+        <ul>
+          <li><a href="/assessment.html">Free Assessment</a></li>
+          <li><a href="/kaizen-champion">Kaizen Champion Program</a></li>
+          <li><a href="#contact">Consulting</a></li>
+          <li><a href="#training">Training Programs</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Resources</h4>
+        <ul>
+          <li><a href="/blog/">Blog</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#expertise">Expertise</a></li>
+          <li><a href="#contact">Get In Touch</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>About</h4>
+        <ul>
+          <li><a href="#about">Lean Manufacturing Expert</a></li>
+          <li><a href="#about">HRDC Certified Trainer</a></li>
+          <li>Serving Malaysian Manufacturing</li>
+        </ul>
+      </div>
     </div>
-
     <div class="footer-bottom">
-        <p>&copy; 2026 Visi Armada Consulting. All rights reserved.</p>
+      <p>&copy; 2026 Husni Halim. All rights reserved. | <a href="#" style="color:#666">Privacy</a></p>
     </div>
+  </div>
 </footer>
-
-<!-- ===== JAVASCRIPT ===== -->
-<script>
-    // FAQ Accordion
-    const faqItems = document.querySelectorAll('.faq-item');
-    faqItems.forEach(item => {
-        const question = item.querySelector('.faq-question');
-        question.addEventListener('click', () => {
-            faqItems.forEach(other => {
-                if (other !== item) {
-                    other.classList.remove('open');
-                }
-            });
-            item.classList.toggle('open');
-        });
-    });
-
-    // Smooth scrolling
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener('click', function (e) {
-            e.preventDefault();
-            const target = document.querySelector(this.getAttribute('href'));
-            if (target) {
-                target.scrollIntoView({ behavior: 'smooth' });
-            }
-        });
-    });
-</script>
 
 </body>
 </html>
