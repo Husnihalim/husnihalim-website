@@ -1,0 +1,812 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="index, follow">
+  <meta name="description" content="Kaizen Champion Development Program — 5-day intensive training for manufacturing engineers and operations managers in Malaysia. HRDC claimable. May 18–22, 2026.">
+  <link rel="canonical" href="https://husnihalim.com/kaizenchampion"/>
+  <meta property="og:type" content="website"/>
+  <meta property="og:url" content="https://husnihalim.com/kaizenchampion"/>
+  <meta property="og:title" content="Kaizen Champion Development Program | Husni Halim"/>
+  <meta property="og:description" content="5-day intensive Kaizen training for manufacturing leaders. HRDC claimable. Proven methodology. Limited to 15 participants."/>
+  <meta property="og:image" content="https://husnihalim.com/assets/og-image.png"/>
+  <meta property="og:locale" content="en_MY"/>
+  <title>Kaizen Champion Development Program | Husni Halim</title>
+  <link rel="icon" href="/favicon.ico">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/style.css">
+
+  <style>
+    /* ===== PAGE-SPECIFIC OVERRIDES ===== */
+    body { background: #fff; color: #1a1a1a; }
+
+    .kc-hero {
+      background: var(--c-dark);
+      padding: 120px 0 80px;
+      position: relative;
+      overflow: hidden;
+    }
+    .kc-hero::before {
+      content: '';
+      position: absolute;
+      top: -100px; right: -100px;
+      width: 600px; height: 600px;
+      background: radial-gradient(ellipse, rgba(139,34,82,0.25) 0%, transparent 70%);
+      border-radius: 50%;
+      pointer-events: none;
+    }
+    .kc-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 40px;
+    }
+    .kc-hero-grid {
+      display: grid;
+      grid-template-columns: 1fr 380px;
+      gap: 60px;
+      align-items: center;
+    }
+    .kc-hero h1 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 3.4rem;
+      font-weight: 700;
+      color: #fff;
+      line-height: 1.1;
+      margin-bottom: 1rem;
+    }
+    .kc-hero h1 em { color: var(--c-secondary); font-style: italic; }
+    .kc-hero .subhead {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 1.1rem;
+      color: rgba(255,255,255,0.75);
+      margin-bottom: 1.5rem;
+      line-height: 1.6;
+    }
+    .kc-hero p {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.95rem;
+      color: rgba(255,255,255,0.65);
+      line-height: 1.7;
+      margin-bottom: 2rem;
+    }
+    .kc-hero-cta {
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+      margin-top: 2rem;
+    }
+    .kc-btn-primary {
+      display: inline-block;
+      padding: 14px 32px;
+      background: var(--c-accent);
+      color: #fff;
+      font-family: 'DM Sans', sans-serif;
+      font-weight: 600;
+      font-size: 0.95rem;
+      border-radius: 6px;
+      text-decoration: none;
+      transition: background 0.2s, transform 0.2s;
+    }
+    .kc-btn-primary:hover { background: #6e1a40; transform: translateY(-1px); }
+    .kc-btn-outline {
+      display: inline-block;
+      padding: 14px 32px;
+      background: transparent;
+      color: #fff;
+      font-family: 'DM Sans', sans-serif;
+      font-weight: 600;
+      font-size: 0.95rem;
+      border-radius: 6px;
+      border: 1.5px solid rgba(255,255,255,0.4);
+      text-decoration: none;
+      transition: border-color 0.2s, background 0.2s;
+    }
+    .kc-btn-outline:hover { border-color: #fff; background: rgba(255,255,255,0.08); }
+
+    .kc-stats-card {
+      background: rgba(255,255,255,0.07);
+      border: 1px solid rgba(255,255,255,0.12);
+      border-radius: 12px;
+      padding: 2.5rem;
+    }
+    .kc-stat { margin-bottom: 1.8rem; padding-bottom: 1.8rem; border-bottom: 1px solid rgba(255,255,255,0.1); }
+    .kc-stat:last-child { margin-bottom: 0; padding-bottom: 0; border-bottom: none; }
+    .kc-stat .num { font-family: 'Cormorant Garamond', serif; font-size: 2.5rem; font-weight: 700; color: var(--c-secondary); line-height: 1; }
+    .kc-stat .lbl { font-family: 'DM Sans', sans-serif; font-size: 0.8rem; color: rgba(255,255,255,0.5); text-transform: uppercase; letter-spacing: 0.8px; margin-top: 4px; }
+
+    .kc-badge {
+      display: inline-block;
+      background: var(--c-secondary);
+      color: #fff;
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.78rem;
+      font-weight: 600;
+      padding: 4px 12px;
+      border-radius: 20px;
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+      margin-bottom: 1.2rem;
+    }
+
+    /* sections */
+    .kc-section { padding: 80px 0; }
+    .kc-section.light { background: #f7f7f7; }
+    .kc-section.dark { background: var(--c-dark); }
+    .kc-section h2 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 2.4rem;
+      font-weight: 700;
+      color: #000;
+      margin-bottom: 0.5rem;
+    }
+    .kc-section.dark h2 { color: #fff; }
+    .kc-section .section-sub {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.95rem;
+      color: #777;
+      margin-bottom: 3rem;
+    }
+    .kc-section.dark .section-sub { color: rgba(255,255,255,0.55); }
+
+    /* objectives grid */
+    .obj-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+      margin-top: 2.5rem;
+    }
+    .obj-card {
+      background: #fff;
+      border: 1px solid #e8e8e8;
+      border-top: 3px solid var(--c-accent);
+      border-radius: 4px;
+      padding: 1.5rem;
+    }
+    .obj-card h4 { font-family: 'DM Sans', sans-serif; font-size: 0.9rem; font-weight: 600; color: #111; margin-bottom: 0.5rem; }
+    .obj-card p { font-family: 'DM Sans', sans-serif; font-size: 0.85rem; color: #666; line-height: 1.6; margin: 0; }
+
+    /* curriculum */
+    .kc-day { background: #fff; border: 1px solid #e8e8e8; border-radius: 6px; margin-bottom: 12px; overflow: hidden; box-shadow: 0 1px 4px rgba(0,0,0,0.05); }
+    .kc-day-header {
+      background: var(--c-dark);
+      color: #fff;
+      padding: 1.2rem 1.5rem;
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-family: 'DM Sans', sans-serif;
+      font-weight: 600;
+      font-size: 0.95rem;
+      transition: background 0.2s;
+    }
+    .kc-day-header:hover { background: #162030; }
+    .day-num { background: var(--c-accent); color: #fff; padding: 3px 12px; border-radius: 20px; font-size: 0.78rem; margin-right: 10px; font-weight: 700; letter-spacing: 0.5px; }
+    .kc-day-body { display: none; padding: 1.5rem 2rem; }
+    .kc-day.open .kc-day-body { display: block; }
+    .kc-day.open .kc-toggle { transform: rotate(180deg); }
+    .kc-toggle { transition: transform 0.3s; font-size: 1rem; color: rgba(255,255,255,0.6); }
+    .session-hd { background: #f5f5f5; padding: 0.7rem 1rem; border-radius: 4px; font-family: 'DM Sans', sans-serif; font-weight: 600; font-size: 0.85rem; color: #333; margin-bottom: 0.8rem; margin-top: 1.2rem; }
+    .session-hd:first-child { margin-top: 0; }
+    .topic-list { list-style: none; padding: 0; margin: 0 0 0.5rem 0; }
+    .topic-list li { font-family: 'DM Sans', sans-serif; font-size: 0.88rem; color: #555; padding: 0.5rem 0 0.5rem 1.6rem; position: relative; line-height: 1.5; border-bottom: 1px solid #f0f0f0; }
+    .topic-list li:last-child { border-bottom: none; }
+    .topic-list li::before { content: '→'; position: absolute; left: 0; color: var(--c-accent); font-weight: 700; }
+    .topic-list li strong { color: #111; }
+
+    /* features */
+    .feat-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; margin-top: 2.5rem; }
+    .feat-card { background: #fff; border-radius: 8px; padding: 2rem; box-shadow: 0 2px 12px rgba(0,0,0,0.06); }
+    .feat-icon { font-size: 2rem; margin-bottom: 1rem; }
+    .feat-card h4 { font-family: 'DM Sans', sans-serif; font-weight: 600; font-size: 0.95rem; color: #111; margin-bottom: 0.5rem; }
+    .feat-card p { font-family: 'DM Sans', sans-serif; font-size: 0.87rem; color: #666; line-height: 1.6; margin: 0; }
+
+    /* pricing */
+    .price-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; margin-top: 2.5rem; }
+    .price-card { background: #fff; border: 1px solid #e8e8e8; border-radius: 8px; padding: 2rem; display: flex; flex-direction: column; transition: box-shadow 0.2s; }
+    .price-card:hover { box-shadow: 0 4px 20px rgba(0,0,0,0.1); }
+    .price-card.featured { border: 2px solid var(--c-accent); box-shadow: 0 4px 20px rgba(139,34,82,0.15); }
+    .price-card h3 { font-family: 'DM Sans', sans-serif; font-weight: 600; font-size: 1rem; color: #333; margin-bottom: 0.3rem; }
+    .price-amt { font-family: 'Cormorant Garamond', serif; font-size: 2.6rem; font-weight: 700; color: var(--c-accent); line-height: 1; margin: 1rem 0 0.3rem; }
+    .price-note { font-family: 'DM Sans', sans-serif; font-size: 0.78rem; color: #aaa; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 1.5rem; }
+    .price-features { list-style: none; padding: 0; margin: 0 0 2rem 0; flex-grow: 1; }
+    .price-features li { font-family: 'DM Sans', sans-serif; font-size: 0.88rem; color: #555; padding: 0.5rem 0 0.5rem 1.6rem; position: relative; border-bottom: 1px solid #f5f5f5; }
+    .price-features li:last-child { border-bottom: none; }
+    .price-features li::before { content: '✓'; position: absolute; left: 0; color: #059669; font-weight: 700; }
+    .price-btn { display: block; text-align: center; padding: 12px; border-radius: 6px; font-family: 'DM Sans', sans-serif; font-weight: 600; font-size: 0.9rem; text-decoration: none; transition: all 0.2s; margin-top: auto; }
+    .price-btn.primary { background: var(--c-accent); color: #fff; }
+    .price-btn.primary:hover { background: #6e1a40; }
+    .price-btn.outline { border: 1.5px solid var(--c-accent); color: var(--c-accent); }
+    .price-btn.outline:hover { background: var(--c-accent); color: #fff; }
+
+    /* hrdc badge */
+    .hrdc-banner {
+      background: linear-gradient(135deg, var(--c-dark) 0%, #162030 100%);
+      border-radius: 10px;
+      padding: 1.5rem 2rem;
+      display: flex;
+      align-items: center;
+      gap: 1.5rem;
+      margin: 3rem auto 0;
+      max-width: 700px;
+      border: 1px solid rgba(255,255,255,0.1);
+    }
+    .hrdc-banner .hrdc-icon { font-size: 2.5rem; }
+    .hrdc-banner h4 { font-family: 'DM Sans', sans-serif; font-weight: 600; color: #fff; margin-bottom: 0.3rem; }
+    .hrdc-banner p { font-family: 'DM Sans', sans-serif; font-size: 0.88rem; color: rgba(255,255,255,0.6); margin: 0; }
+
+    /* faq */
+    .faq-wrap { max-width: 800px; margin: 2.5rem auto 0; }
+    .faq-item { border: 1px solid #e8e8e8; border-radius: 6px; margin-bottom: 10px; overflow: hidden; background: #fff; }
+    .faq-q { padding: 1.3rem 1.5rem; cursor: pointer; display: flex; justify-content: space-between; align-items: center; font-family: 'DM Sans', sans-serif; font-weight: 600; color: #111; font-size: 0.92rem; transition: background 0.2s; }
+    .faq-q:hover { background: #f9f9f9; }
+    .faq-toggle { color: var(--c-accent); font-size: 1.1rem; transition: transform 0.3s; }
+    .faq-item.open .faq-toggle { transform: rotate(180deg); }
+    .faq-a { display: none; padding: 1.2rem 1.5rem; border-top: 1px solid #f0f0f0; font-family: 'DM Sans', sans-serif; font-size: 0.9rem; color: #555; line-height: 1.7; }
+    .faq-item.open .faq-a { display: block; }
+
+    /* form */
+    .kc-form-wrap { background: #fff; border: 1px solid #e8e8e8; border-radius: 10px; padding: 2.5rem; max-width: 600px; margin: 2.5rem auto 0; box-shadow: 0 4px 20px rgba(0,0,0,0.07); }
+    .kc-form-wrap .fg { margin-bottom: 1.2rem; }
+    .kc-form-wrap label { display: block; font-family: 'DM Sans', sans-serif; font-size: 0.85rem; font-weight: 600; color: #333; margin-bottom: 5px; }
+    .kc-form-wrap input, .kc-form-wrap select, .kc-form-wrap textarea {
+      width: 100%; padding: 0.75rem 1rem; border: 1px solid #ddd; border-radius: 6px;
+      font-family: 'DM Sans', sans-serif; font-size: 0.9rem; transition: border-color 0.2s; background: #fafafa;
+    }
+    .kc-form-wrap input:focus, .kc-form-wrap select:focus, .kc-form-wrap textarea:focus {
+      outline: none; border-color: var(--c-accent); background: #fff; box-shadow: 0 0 0 3px rgba(139,34,82,0.1);
+    }
+    .kc-form-wrap textarea { resize: vertical; min-height: 90px; }
+    .kc-form-wrap .kc-submit {
+      width: 100%; background: var(--c-accent); color: #fff; border: none; border-radius: 6px;
+      padding: 14px; font-family: 'DM Sans', sans-serif; font-weight: 600; font-size: 0.95rem;
+      cursor: pointer; transition: background 0.2s; text-transform: uppercase; letter-spacing: 0.5px;
+    }
+    .kc-form-wrap .kc-submit:hover { background: #6e1a40; }
+    .kc-check-row { display: flex; align-items: flex-start; gap: 10px; padding: 1rem; background: #f8f8f8; border-radius: 6px; margin: 1rem 0; }
+    .kc-check-row input[type="checkbox"] { width: auto; margin-top: 3px; }
+    .kc-check-row span { font-family: 'DM Sans', sans-serif; font-size: 0.88rem; color: #444; }
+
+    /* outcomes */
+    .outcomes-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 40px; margin-top: 2.5rem; }
+    .outcome-col h3 { font-family: 'DM Sans', sans-serif; font-weight: 600; font-size: 0.9rem; color: var(--c-secondary); text-transform: uppercase; letter-spacing: 0.6px; margin-bottom: 1rem; padding-bottom: 0.8rem; border-bottom: 1px solid rgba(255,255,255,0.1); }
+    .outcome-col ul { list-style: none; padding: 0; margin: 0; }
+    .outcome-col li { font-family: 'DM Sans', sans-serif; font-size: 0.87rem; color: rgba(255,255,255,0.65); padding: 0.45rem 0 0.45rem 1.4rem; position: relative; line-height: 1.5; }
+    .outcome-col li::before { content: '→'; position: absolute; left: 0; color: var(--c-secondary); font-weight: 700; font-size: 0.8rem; }
+
+    /* responsive */
+    @media (max-width: 900px) {
+      .kc-hero-grid, .obj-grid, .feat-grid, .price-grid, .outcomes-grid { grid-template-columns: 1fr; }
+      .kc-hero h1 { font-size: 2.4rem; }
+      .kc-container { padding: 0 20px; }
+      .kc-section { padding: 50px 0; }
+      .price-card.featured { transform: none; }
+      .hrdc-banner { flex-direction: column; text-align: center; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ===== NAV (matches main site) ===== -->
+<nav class="nav" id="navbar">
+  <a href="/" class="nav-logo nav-logo-text">Husni<em>Halim</em></a>
+  <ul class="nav-links" id="navLinks">
+    <li><a href="/#about">About</a></li>
+    <li><a href="/#expertise">Expertise</a></li>
+    <li><a href="/#training">Training</a></li>
+    <li><a href="/blog/">Blog</a></li>
+    <li><a href="/kaizenchampion" class="nav-tool" style="color:var(--c-secondary);border-color:var(--c-secondary);">Kaizen Champion ✦</a></li>
+    <li><a href="/oee-calculator" class="nav-tool">OEE Calculator</a></li>
+    <li>
+      <a href="tel:+60165241901" class="nav-phone">
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 10.8 19.79 19.79 0 01.22 2.18 2 2 0 012.18 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 7.91a16 16 0 006.72 6.72l1.28-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"></path></svg>
+        +60 16-524 1901
+      </a>
+    </li>
+    <li><a href="#register" class="nav-cta">Reserve Now</a></li>
+  </ul>
+  <button class="hamburger" id="hamburger" aria-label="Toggle navigation" aria-expanded="false">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<!-- ===== HERO ===== -->
+<section class="kc-hero" id="program">
+  <div class="kc-container">
+    <div class="kc-hero-grid">
+      <div>
+        <span class="kc-badge">HRDC Claimable · May 18–22, 2026 · Shah Alam</span>
+        <h1>Kaizen Champion<br><em>Development Program</em></h1>
+        <p class="subhead">Embedded continuous improvement for manufacturing excellence</p>
+        <p>A comprehensive five-day program for engineers, operations managers, and team leaders who drive sustainable operational improvement. Learn proven methodologies from 16+ years of deployment across Malaysia and 6 countries.</p>
+        <div class="kc-hero-cta">
+          <a href="#register" class="kc-btn-primary">Reserve Your Spot</a>
+          <a href="#curriculum" class="kc-btn-outline">View Curriculum</a>
+        </div>
+      </div>
+      <div class="kc-stats-card">
+        <div class="kc-stat"><div class="num">5</div><div class="lbl">Intensive Days</div></div>
+        <div class="kc-stat"><div class="num">90</div><div class="lbl">Days Coaching</div></div>
+        <div class="kc-stat"><div class="num">10×</div><div class="lbl">Average ROI</div></div>
+        <div class="kc-stat"><div class="num">15</div><div class="lbl">Max Cohort Size</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== WHY KAIZEN ===== -->
+<section class="kc-section light">
+  <div class="kc-container">
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:start;">
+      <div>
+        <h2>Why Kaizen?</h2>
+        <p style="font-family:'DM Sans',sans-serif;color:#555;line-height:1.7;margin-bottom:1.5rem;">Kaizen — continuous improvement embedded in daily operations — is the difference between reactive firefighting and systematic, sustained improvement. Organizations that embed this methodology see measurable results within weeks.</p>
+        <div style="background:#fff;padding:1.5rem 2rem;border-left:3px solid var(--c-accent);box-shadow:0 2px 8px rgba(0,0,0,0.06);margin-bottom:1.5rem;">
+          <p style="font-family:'DM Sans',sans-serif;font-size:0.9rem;color:#444;margin:0;"><strong>Investment Returns:</strong> Typical kaizen projects eliminate RM 50,000–80,000 in annual waste (scrap, downtime, rework, inventory, labour). ROI ranges from 10× within 6 months. Most organizations recover the program investment from their first improvement initiative.</p>
+        </div>
+        <p style="font-family:'DM Sans',sans-serif;color:#555;line-height:1.7;margin:0;">This is not theoretical training. 80% of the curriculum is applied directly to your operations — using your data, solving your challenges.</p>
+      </div>
+      <div>
+        <div style="background:#fff;border:1px solid #e8e8e8;border-radius:8px;padding:1.5rem;margin-bottom:1rem;box-shadow:0 1px 4px rgba(0,0,0,0.05);">
+          <h4 style="font-family:'DM Sans',sans-serif;font-size:0.9rem;color:var(--c-accent);margin-bottom:0.5rem;">Root Cause Analysis</h4>
+          <p style="font-family:'DM Sans',sans-serif;font-size:0.87rem;color:#666;margin:0;">5 Why, Fishbone, and 7QC Tools applied to your actual operational data.</p>
+        </div>
+        <div style="background:#fff;border:1px solid #e8e8e8;border-radius:8px;padding:1.5rem;margin-bottom:1rem;box-shadow:0 1px 4px rgba(0,0,0,0.05);">
+          <h4 style="font-family:'DM Sans',sans-serif;font-size:0.9rem;color:var(--c-accent);margin-bottom:0.5rem;">A3 Report Methodology</h4>
+          <p style="font-family:'DM Sans',sans-serif;font-size:0.87rem;color:#666;margin:0;">Communicate improvement logic on one professional page — standard across leading manufacturers.</p>
+        </div>
+        <div style="background:#fff;border:1px solid #e8e8e8;border-radius:8px;padding:1.5rem;margin-bottom:1rem;box-shadow:0 1px 4px rgba(0,0,0,0.05);">
+          <h4 style="font-family:'DM Sans',sans-serif;font-size:0.9rem;color:var(--c-accent);margin-bottom:0.5rem;">90-Day Implementation Coaching</h4>
+          <p style="font-family:'DM Sans',sans-serif;font-size:0.87rem;color:#666;margin:0;">Structured coaching to ensure improvements lock in and prevent regression.</p>
+        </div>
+        <div style="background:#fff;border:1px solid #e8e8e8;border-radius:8px;padding:1.5rem;box-shadow:0 1px 4px rgba(0,0,0,0.05);">
+          <h4 style="font-family:'DM Sans',sans-serif;font-size:0.9rem;color:var(--c-accent);margin-bottom:0.5rem;">Online Coaching Sessions</h4>
+          <p style="font-family:'DM Sans',sans-serif;font-size:0.87rem;color:#666;margin:0;">6 bi-weekly sessions over 3 months. Email support and consultations throughout.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== OBJECTIVES ===== -->
+<section class="kc-section" id="objectives">
+  <div class="kc-container">
+    <h2 class="text-center">Program Objectives</h2>
+    <p class="section-sub text-center">Participants will develop the knowledge, skills, and mindset to lead sustainable operational improvement.</p>
+    <div class="obj-grid">
+      <div class="obj-card"><h4>Kaizen Philosophy & Leadership</h4><p>Understand the history, principles, and role of a Champion in embedding continuous improvement culture.</p></div>
+      <div class="obj-card"><h4>Waste Identification</h4><p>Recognize and quantify the 8 Wastes in your operations — overproduction to underutilized talent.</p></div>
+      <div class="obj-card"><h4>Baseline Assessment</h4><p>Establish current state using Quality, Cost, and Delivery (QCD) framework.</p></div>
+      <div class="obj-card"><h4>Root Cause Analysis</h4><p>Apply 5 Why, Fishbone diagrams, and systematic thinking to find true causes, not symptoms.</p></div>
+      <div class="obj-card"><h4>Data-Driven Problem Solving</h4><p>Master 7QC Tools: Check Sheets, Pareto, Histograms, Control Charts. Decisions on data, not opinion.</p></div>
+      <div class="obj-card"><h4>Countermeasure Design</h4><p>Create effective solutions using Poka Yoke, Jidoka, Visual Management, and Standard Work.</p></div>
+      <div class="obj-card"><h4>A3 Reporting</h4><p>Develop professional one-page improvement reports. Communicate logic, data, and action plans clearly.</p></div>
+      <div class="obj-card"><h4>Implementation Leadership</h4><p>Plan and execute kaizen initiatives with clear ownership, KPIs, pilot strategies, and daily accountability.</p></div>
+      <div class="obj-card"><h4>Culture & Sustainability</h4><p>Lock in gains, prevent regression, build internal capability, develop future champions through mentorship.</p></div>
+      <div class="obj-card"><h4>KPI Management</h4><p>Design dashboards, quantify business impact, communicate improvement ROI to leadership.</p></div>
+      <div class="obj-card"><h4>Team Development</h4><p>Coach team members through PDCA cycles, build problem-solving capability, scale continuous improvement.</p></div>
+      <div class="obj-card"><h4>Change Leadership</h4><p>Lead teams through transformation. Manage resistance, build buy-in, sustain momentum.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== LEARNING OUTCOMES ===== -->
+<section class="kc-section dark">
+  <div class="kc-container">
+    <h2 class="text-center">Learning Outcomes</h2>
+    <p class="section-sub text-center">What participants leave with after 5 days</p>
+    <div class="outcomes-grid">
+      <div class="outcome-col">
+        <h3>Knowledge</h3>
+        <ul>
+          <li>Kaizen philosophy and competitive advantage</li>
+          <li>The 8 Wastes (Muda) framework</li>
+          <li>QCD business impact model</li>
+          <li>PDCA continuous improvement cycle</li>
+          <li>Root cause analysis methodologies</li>
+          <li>7 Quality Control Tools</li>
+          <li>Poka Yoke and Jidoka concepts</li>
+          <li>A3 Report structure and logic</li>
+        </ul>
+      </div>
+      <div class="outcome-col">
+        <h3>Technical Skills</h3>
+        <ul>
+          <li>Baseline assessment and data collection</li>
+          <li>Systematic root cause analysis</li>
+          <li>Apply 7QC Tools for data analysis</li>
+          <li>Design countermeasures and controls</li>
+          <li>Facilitate 5S audits and assessments</li>
+          <li>Document standard work procedures</li>
+          <li>Create professional A3 Reports</li>
+          <li>Lead daily management reviews</li>
+          <li>Develop KPI dashboards</li>
+          <li>Coach team members through PDCA</li>
+        </ul>
+      </div>
+      <div class="outcome-col">
+        <h3>Leadership Mindset</h3>
+        <ul>
+          <li>Waste exists in every process</li>
+          <li>Reality is on the factory floor</li>
+          <li>Data drives every decision</li>
+          <li>Root causes are systemic, not personal</li>
+          <li>Small improvements compound exponentially</li>
+          <li>Culture sustains results long-term</li>
+          <li>Frontline staff are your best experts</li>
+          <li>Lead by coaching, not controlling</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 5-DAY CURRICULUM ===== -->
+<section class="kc-section" id="curriculum">
+  <div class="kc-container">
+    <h2 class="text-center">5-Day Curriculum</h2>
+    <p class="section-sub text-center" style="margin-bottom:0.3rem;"><strong style="color:#111;">May 18–22, 2026 &nbsp;|&nbsp; 9:00 AM – 5:00 PM &nbsp;|&nbsp; De Palma, Shah Alam</strong></p>
+    <p class="section-sub text-center">Limited to 15 participants per cohort</p>
+
+    <div class="kc-day open">
+      <div class="kc-day-header" onclick="this.parentElement.classList.toggle('open')">
+        <span><span class="day-num">Day 1</span>Foundation of Kaizen</span>
+        <span class="kc-toggle">▲</span>
+      </div>
+      <div class="kc-day-body">
+        <div class="session-hd">MORNING: 9:00 AM – 1:00 PM</div>
+        <ul class="topic-list">
+          <li><strong>Program Overview & Participant Introductions</strong> — Setting context and building group cohesion</li>
+          <li><strong>Kaizen: Philosophy & Historical Context</strong> — Origins, evolution, and relevance to modern operations</li>
+          <li><strong>The Role of a Kaizen Champion</strong> — Responsibilities, required competencies, organizational impact</li>
+          <li><strong>QCD Framework</strong> — Quality, Cost, Delivery and their interconnection to profitability</li>
+          <li><strong>The PDCA Cycle</strong> — Plan-Do-Check-Act as the engine of continuous improvement</li>
+        </ul>
+        <div class="session-hd">AFTERNOON: 2:00 PM – 5:00 PM</div>
+        <ul class="topic-list">
+          <li><strong>Reactive vs. Proactive Mindset</strong> — From crisis management to prevention</li>
+          <li><strong>Champion Competencies Framework</strong> — Technical, leadership, and change management skills</li>
+          <li><strong>Operational Excellence Case Study</strong> — Analysis of successful improvement methodologies</li>
+          <li><strong>PDCA Exercise: Applied Problem Solving</strong> — Small group practice on operational challenges</li>
+          <li><strong>Personal Goal Setting</strong> — Individual commitment to learning and action</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="kc-day">
+      <div class="kc-day-header" onclick="this.parentElement.classList.toggle('open')">
+        <span><span class="day-num">Day 2</span>Baseline & Problem Identification</span>
+        <span class="kc-toggle">▲</span>
+      </div>
+      <div class="kc-day-body">
+        <div class="session-hd">MORNING: 9:00 AM – 1:00 PM</div>
+        <ul class="topic-list">
+          <li><strong>The 8 Wastes (Muda)</strong> — Overproduction, Waiting, Transport, Processing, Inventory, Motion, Defects, Talent</li>
+          <li><strong>Baseline Metrics & KPIs</strong> — Cycle time, defect rate, downtime, lead time, labour productivity</li>
+          <li><strong>Assessment Methodology</strong> — Systematic approach to understanding current state</li>
+        </ul>
+        <div class="session-hd">AFTERNOON: 2:00 PM – 5:00 PM</div>
+        <ul class="topic-list">
+          <li><strong>Waste Identification Workshop</strong> — Recognize each type of waste in your process</li>
+          <li><strong>5S Framework</strong> — Sort, Set, Shine, Standardize, Sustain: organizing for efficiency</li>
+          <li><strong>Data Collection Planning</strong> — Define process, select metrics, assign ownership, establish timeline</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="kc-day">
+      <div class="kc-day-header" onclick="this.parentElement.classList.toggle('open')">
+        <span><span class="day-num">Day 3</span>Root Cause Analysis & Solutions</span>
+        <span class="kc-toggle">▲</span>
+      </div>
+      <div class="kc-day-body">
+        <div class="session-hd">MORNING: 9:00 AM – 1:00 PM</div>
+        <ul class="topic-list">
+          <li><strong>5 Why Analysis Method</strong> — Drilling down to true root causes</li>
+          <li><strong>Fishbone Diagram Construction</strong> — Man, Machine, Method, Material, Environment framework</li>
+          <li><strong>7 Quality Control Tools</strong> — Check Sheet, Pareto, Histogram, Run Chart, Scatter Plot, Stratification, Control Chart</li>
+        </ul>
+        <div class="session-hd">AFTERNOON: 2:00 PM – 5:00 PM</div>
+        <ul class="topic-list">
+          <li><strong>Data Analysis Workshop</strong> — Apply 7QC Tools to your baseline data, identify patterns</li>
+          <li><strong>Countermeasure Development</strong> — Design specific, testable solutions to root causes</li>
+          <li><strong>Implementation Plan Framework</strong> — Who, what, when, resources, success metrics</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="kc-day">
+      <div class="kc-day-header" onclick="this.parentElement.classList.toggle('open')">
+        <span><span class="day-num">Day 4</span>Implementation & Leadership</span>
+        <span class="kc-toggle">▲</span>
+      </div>
+      <div class="kc-day-body">
+        <div class="session-hd">MORNING: 9:00 AM – 1:00 PM</div>
+        <ul class="topic-list">
+          <li><strong>A3 Report Development</strong> — One-page improvement communication: background, analysis, solutions, plan, results</li>
+          <li><strong>Poka Yoke (Mistake-Proofing)</strong> — Design processes to prevent errors before they occur</li>
+          <li><strong>Jidoka (Autonomation)</strong> — Build in quality; processes stop when abnormality detected</li>
+        </ul>
+        <div class="session-hd">AFTERNOON: 2:00 PM – 5:00 PM</div>
+        <ul class="topic-list">
+          <li><strong>Visual Management Systems</strong> — Make status, problems, and targets visible at a glance</li>
+          <li><strong>Standard Work Documentation</strong> — Best known method: sequence, timing, quality criteria</li>
+          <li><strong>Leading Change</strong> — Communicate why, involve staff, train thoroughly, celebrate early wins</li>
+          <li><strong>Pilot & Rollout Strategy</strong> — Start small, monitor daily, adjust quickly, scale to full deployment</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="kc-day">
+      <div class="kc-day-header" onclick="this.parentElement.classList.toggle('open')">
+        <span><span class="day-num">Day 5</span>Sustainability & Culture</span>
+        <span class="kc-toggle">▲</span>
+      </div>
+      <div class="kc-day-body">
+        <div class="session-hd">MORNING: 9:00 AM – 1:00 PM</div>
+        <ul class="topic-list">
+          <li><strong>Sustainability Strategy</strong> — Standard work audits, visual metrics, accountability, recognition</li>
+          <li><strong>Preventing Regression</strong> — Monthly reviews, quick-fix protocols, training refreshes</li>
+          <li><strong>Managing Resistance</strong> — Address fear, habit, effort, ownership barriers with empathy</li>
+        </ul>
+        <div class="session-hd">AFTERNOON: 2:00 PM – 5:00 PM</div>
+        <ul class="topic-list">
+          <li><strong>KPI Tracking & Dashboards</strong> — Quality, Cost, Delivery metrics over 90+ days</li>
+          <li><strong>Business Impact Calculation</strong> — RM savings, ROI, payback period, link to business strategy</li>
+          <li><strong>Capstone Presentations</strong> — Each participant presents A3 Report, peer feedback</li>
+          <li><strong>90-Day Action Plan Review</strong> — Coaching schedule, email support, alumni network, next steps</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== PROGRAM INCLUDES ===== -->
+<section class="kc-section light">
+  <div class="kc-container">
+    <h2 class="text-center">Program Includes</h2>
+    <p class="section-sub text-center">Everything you need to implement from Day 1 back on the floor</p>
+    <div class="feat-grid">
+      <div class="feat-card"><div class="feat-icon">📋</div><h4>Complete Tools Handbook</h4><p>A3 templates, Fishbone diagrams, Check Sheets, Pareto charts, 5S assessments, Standard Work forms, Visual Management templates.</p></div>
+      <div class="feat-card"><div class="feat-icon">📊</div><h4>Data Analysis Workshop</h4><p>Apply 7QC Tools to your baseline data. Analyze patterns. Develop countermeasures specific to your operation.</p></div>
+      <div class="feat-card"><div class="feat-icon">📄</div><h4>A3 Report Guidance</h4><p>Template, worked example, peer review during program. Leave with a complete, ready-to-present improvement plan.</p></div>
+      <div class="feat-card"><div class="feat-icon">🎓</div><h4>90-Day Coaching</h4><p>6 bi-weekly online sessions over 3 months, email support, phone consultations. Lock in improvements and prevent regression.</p></div>
+      <div class="feat-card"><div class="feat-icon">🔍</div><h4>Process Assessment</h4><p>Structured evaluation of your current operations using QCD framework. Identify improvement opportunities.</p></div>
+      <div class="feat-card"><div class="feat-icon">🗺️</div><h4>Implementation Roadmap</h4><p>Clear 90-day execution plan with milestones, ownership, KPI targets, and success metrics.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== PRICING ===== -->
+<section class="kc-section" id="pricing">
+  <div class="kc-container">
+    <h2 class="text-center">Pricing</h2>
+    <p class="section-sub text-center">HRDC claimable for Malaysian companies</p>
+    <div class="price-grid">
+      <div class="price-card">
+        <h3>Early Bird</h3>
+        <p class="price-note">Register by April 30</p>
+        <div class="price-amt">RM 4,500</div>
+        <ul class="price-features">
+          <li>5-day intensive program</li>
+          <li>All tools &amp; templates</li>
+          <li>90-day coaching (6 sessions)</li>
+          <li>Complete A3 Report</li>
+          <li>90-day Implementation Roadmap</li>
+        </ul>
+        <a href="#register" class="price-btn outline">Register Now</a>
+      </div>
+      <div class="price-card featured">
+        <h3>Standard</h3>
+        <p class="price-note">Regular rate</p>
+        <div class="price-amt">RM 5,000</div>
+        <ul class="price-features">
+          <li>5-day intensive program</li>
+          <li>All tools &amp; templates</li>
+          <li>90-day coaching (6 sessions)</li>
+          <li>Complete A3 Report</li>
+          <li>90-day Implementation Roadmap</li>
+        </ul>
+        <a href="#register" class="price-btn primary">Reserve Now</a>
+      </div>
+      <div class="price-card">
+        <h3>Group Rate</h3>
+        <p class="price-note">3 or more participants</p>
+        <div class="price-amt">RM 4,500</div>
+        <ul class="price-features">
+          <li>5-day intensive program</li>
+          <li>All tools &amp; templates</li>
+          <li>90-day coaching (6 sessions)</li>
+          <li>Complete A3 Report</li>
+          <li>90-day Implementation Roadmap</li>
+        </ul>
+        <a href="#register" class="price-btn outline">Contact Sales</a>
+      </div>
+    </div>
+
+    <div class="hrdc-banner">
+      <div class="hrdc-icon">🏛️</div>
+      <div>
+        <h4>HRDC Claimable</h4>
+        <p>This program is claimable under HRDC (Human Resource Development Corporation). Malaysian companies can offset the full training fee through their HRDC levy. Husni Halim is an HRDC accredited trainer (TTT Trainer ID 11294).</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== FAQ ===== -->
+<section class="kc-section light" id="faq">
+  <div class="kc-container">
+    <h2 class="text-center">Frequently Asked Questions</h2>
+    <div class="faq-wrap">
+      <div class="faq-item">
+        <div class="faq-q"><span>Do I need Lean or manufacturing experience?</span><span class="faq-toggle">▲</span></div>
+        <div class="faq-a">No. This program is self-contained and designed for operations professionals at any experience level. If you've done Lean before, this deepens that knowledge. We assume only that you understand your process.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q"><span>We tried improvements before. Nothing lasted. Why would this be different?</span><span class="faq-toggle">▲</span></div>
+        <div class="faq-a">Most improvements fail during the 6 months after training — not because the solution is flawed, but because follow-up is missing. This program includes 90 days of structured coaching to ensure improvements lock in. You get a sustainability plan on Day 5 and support throughout implementation.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q"><span>Is this customized to our industry?</span><span class="faq-toggle">▲</span></div>
+        <div class="faq-a">Yes. 80% of the program is applied directly to YOUR process, YOUR challenges, and YOUR data. Whether you're automotive, electronics, food, pharma, or process manufacturing, examples and case studies are adapted accordingly.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q"><span>What happens after the 5 days?</span><span class="faq-toggle">▲</span></div>
+        <div class="faq-a">You receive 90 days of structured support: 6 bi-weekly online coaching sessions (1 hour each), 24-hour email response, phone consultations as needed, and alumni network access. We track implementation milestones, refine your KPI dashboard, and help scale improvements.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q"><span>Is this HRDC claimable?</span><span class="faq-toggle">▲</span></div>
+        <div class="faq-a">Yes. Husni Halim is an HRDC accredited trainer (TTT ID 11294). Malaysian companies can claim this training under their HRDC levy. Contact us for the SBL-Khas application documents.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q"><span>Who should attend?</span><span class="faq-toggle">▲</span></div>
+        <div class="faq-a">Manufacturing supervisors, engineers, operations managers, plant leaders, quality managers. Anyone responsible for process improvement or who directly manages teams on the floor. Limited to 15 participants for hands-on engagement.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q"><span>Can you run this at our facility?</span><span class="faq-toggle">▲</span></div>
+        <div class="faq-a">Yes, for larger groups (8+). In-house delivery at your facility across Malaysia. Contact us to discuss dates, location, and customization options.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== REGISTRATION ===== -->
+<section class="kc-section" id="register">
+  <div class="kc-container">
+    <h2 class="text-center">Reserve Your Spot</h2>
+    <p class="section-sub text-center" style="color:#111;font-weight:600;">May 18–22, 2026 &nbsp;|&nbsp; De Palma Hotel, Shah Alam &nbsp;|&nbsp; Limited to 15 participants</p>
+
+    <div class="kc-form-wrap">
+      <form name="kaizen-registration" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+        <input type="hidden" name="form-name" value="kaizen-registration">
+        <p style="display:none"><label>Skip: <input name="bot-field"></label></p>
+
+        <div class="fg"><label for="name">Full Name *</label><input type="text" id="name" name="name" required placeholder="Your full name"></div>
+        <div class="fg"><label for="email">Email Address *</label><input type="email" id="email" name="email" required placeholder="your@email.com"></div>
+        <div class="fg"><label for="phone">Phone Number *</label><input type="tel" id="phone" name="phone" placeholder="+60 16 XXXX XXXX" required></div>
+        <div class="fg"><label for="company">Company Name *</label><input type="text" id="company" name="company" required placeholder="Your company"></div>
+        <div class="fg"><label for="role">Job Title *</label><input type="text" id="role" name="role" placeholder="e.g., Operations Manager" required></div>
+        <div class="fg">
+          <label for="industry">Industry *</label>
+          <select id="industry" name="industry" required>
+            <option value="">Select your industry</option>
+            <option value="automotive">Automotive</option>
+            <option value="electronics">Electronics / Semiconductor</option>
+            <option value="food">Food &amp; Beverage</option>
+            <option value="pharma">Pharmaceutical</option>
+            <option value="medical">Medical Devices</option>
+            <option value="manufacturing">General Manufacturing</option>
+            <option value="logistics">Logistics &amp; Warehousing</option>
+            <option value="other">Other</option>
+          </select>
+        </div>
+        <div class="fg"><label for="challenge">Your biggest operational challenge *</label><textarea id="challenge" name="challenge" placeholder="e.g., High defect rate, downtime, lead time delays" required></textarea></div>
+        <div class="fg">
+          <label for="pricing">Pricing tier *</label>
+          <select id="pricing" name="pricing" required>
+            <option value="">Select pricing</option>
+            <option value="early-bird">Early Bird — RM 4,500 (by Apr 30)</option>
+            <option value="standard">Standard — RM 5,000</option>
+            <option value="group">Group Rate — RM 4,500 (3+ participants)</option>
+          </select>
+        </div>
+        <div class="kc-check-row">
+          <input type="checkbox" name="commitment" id="commitment" required>
+          <span>I confirm attendance for all 5 days (May 18–22, 2026) *</span>
+        </div>
+        <button type="submit" class="kc-submit">Reserve Your Spot →</button>
+      </form>
+
+      <div style="text-align:center;margin-top:1.5rem;padding-top:1.5rem;border-top:1px solid #eee;">
+        <p style="font-family:'DM Sans',sans-serif;font-size:0.88rem;color:#777;margin:0;">
+          <strong>Questions?</strong><br>
+          Husni Halim · Principal Consultant<br>
+          <a href="tel:+60165241901" style="color:var(--c-accent);">+60 16-524 1901</a> ·
+          <a href="https://wa.me/60165241901" style="color:var(--c-accent);">WhatsApp</a> ·
+          <a href="mailto:husni@husnihalim.com" style="color:var(--c-accent);">husni@husnihalim.com</a>
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== FOOTER ===== -->
+<footer class="footer">
+  <div class="footer-inner">
+    <div class="footer-col">
+      <div class="footer-logo">Husni<em>Halim</em></div>
+      <p class="footer-tagline">Transforming Malaysian manufacturing through Lean, Kaizen, and Operational Excellence.</p>
+      <div class="footer-social">
+        <a href="https://linkedin.com/in/husnihalim" aria-label="LinkedIn">in</a>
+        <a href="https://wa.me/60165241901" aria-label="WhatsApp">W</a>
+      </div>
+    </div>
+    <div class="footer-col">
+      <h4 class="footer-heading">This Program</h4>
+      <ul class="footer-links">
+        <li><a href="#program">Overview</a></li>
+        <li><a href="#curriculum">Curriculum</a></li>
+        <li><a href="#pricing">Pricing</a></li>
+        <li><a href="#faq">FAQ</a></li>
+        <li><a href="#register">Register</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4 class="footer-heading">Services</h4>
+      <ul class="footer-links">
+        <li><a href="/#expertise">Lean Consulting</a></li>
+        <li><a href="/#training">HRDC Training</a></li>
+        <li><a href="/oee-calculator">OEE Calculator</a></li>
+        <li><a href="/blog/">Blog</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4 class="footer-heading">Contact</h4>
+      <ul class="footer-links">
+        <li><a href="tel:+60165241901">+60 16-524 1901</a></li>
+        <li><a href="https://wa.me/60165241901">WhatsApp</a></li>
+        <li><a href="/#contact">Book a Call</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>&copy; 2026 Husni Halim · Principal Consultant &amp; HRDC Accredited Trainer</p>
+    <p style="margin-top:4px;"><a href="/" style="color:rgba(255,255,255,0.4);">husnihalim.com</a></p>
+  </div>
+</footer>
+
+<script>
+  // Nav scroll
+  const nav = document.getElementById('navbar');
+  window.addEventListener('scroll', () => {
+    nav.classList.toggle('nav-scrolled', window.scrollY > 60);
+  });
+  // Hamburger
+  const hamburger = document.getElementById('hamburger');
+  const navLinks = document.getElementById('navLinks');
+  hamburger.addEventListener('click', () => {
+    const open = navLinks.classList.toggle('open');
+    hamburger.setAttribute('aria-expanded', open);
+    hamburger.classList.toggle('active', open);
+  });
+  // FAQ accordion
+  document.querySelectorAll('.faq-item').forEach(item => {
+    item.querySelector('.faq-q').addEventListener('click', () => {
+      document.querySelectorAll('.faq-item').forEach(other => { if (other !== item) other.classList.remove('open'); });
+      item.classList.toggle('open');
+    });
+  });
+  // Smooth scroll
+  document.querySelectorAll('a[href^="#"]').forEach(a => {
+    a.addEventListener('click', e => {
+      const target = document.querySelector(a.getAttribute('href'));
+      if (target) { e.preventDefault(); target.scrollIntoView({ behavior: 'smooth' }); }
+    });
+  });
+</script>
+</body>
+</html>
