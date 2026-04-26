@@ -728,39 +728,22 @@
 <body>
 
 <!-- NAVIGATION -->
-<nav id="site-nav">
-  <a href="/" class="nav-logo">Husni <em>Halim</em></a>
-  <button class="nav-hamburger" aria-label="Toggle navigation" onclick="this.closest('nav').classList.toggle('nav-open')">
+<nav class="nav" id="navbar">
+  <a href="/" class="nav-logo nav-logo-text">Husni<em>Halim</em></a>
+
+  <ul class="nav-links" id="navLinks">
+    <li><a href="/consulting/">Services</a></li>
+    <li><a href="/hrdc-training/">Training</a></li>
+    <li><a href="/case-studies/">Results</a></li>
+    <li><a href="/blog/">Insights</a></li>
+    <li><a href="/kaizenchampion/" class="nav-tool" style="color:var(--c-secondary);border-color:var(--c-secondary);">Kaizen Champion ✦</a></li>
+    <li><a href="/oee-calculator/" class="nav-tool">OEE</a></li>
+    <li><a href="/consulting/" class="nav-cta">Book a Call</a></li>
+  </ul>
+
+  <button class="hamburger" id="hamburger" aria-label="Toggle navigation" aria-expanded="false">
     <span></span><span></span><span></span>
   </button>
-    <ul class="nav-links" id="navLinks">
-    <li><a href="/#about">About</a></li>
-    <li><a href="/#expertise">Expertise</a></li>
-    <li><a href="/#training">Training</a></li>
-    <li><a href="/blog/">Blog</a></li>
-    <li><a href="/kaizenchampion" class="nav-tool" style="color:var(--c-secondary);border-color:var(--c-secondary);">Kaizen Champion ✦</a></li>
-    <li><a href="/oee-calculator" class="nav-tool">OEE Calculator</a></li>
-    <li>
-      <a href="tel:+60165241901" class="nav-phone">
-        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 10.8 19.79 19.79 0 01.22 2.18 2 2 0 012.18 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 7.91a16 16 0 006.72 6.72l1.28-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"></path></svg>
-        +60 16-524 1901
-      </a>
-    </li>
-    <li><a href="/#contact" class="nav-cta">Book a Call</a></li>
-  </ul>
-    </li>
-    <li class="nav-dropdown">
-      <a href="/industries/">Industries</a>
-      <ul class="dropdown-menu">
-        <li><a href="/industries/automotive/">Automotive</a></li>
-        <li><a href="/industries/semiconductor-electronics/">Semiconductor &amp; Electronics</a></li>
-      </ul>
-    </li>
-    <li class="active"><a href="/case-studies/">Case Studies</a></li>
-    <li><a href="/blog/">Blog</a></li>
-    <li><a href="/oee-calculator/">OEE Calculator</a></li>
-    <li><a href="/consulting/" class="nav-cta">Book Free Assessment</a></li>
-  </ul>
 </nav>
 <main>
 
@@ -1120,9 +1103,9 @@
    <a href="/consulting/" class="btn-primary">Book a Free Floor Assessment →</a>
    <a href="/hrdc-training/" class="btn-secondary">View HRDC Training</a>
    <div style="margin-top:28px;display:flex;justify-content:center;gap:24px;flex-wrap:wrap;">
-     <a href="/blog/oee-improvement-manufacturing-malaysia/" style="font-size:13px;color:var(--muted);text-decoration:underline;text-underline-offset:3px;">Read: OEE Improvement Guide</a>
-     <a href="/blog/kaizen-blitz-manufacturing-malaysia/" style="font-size:13px;color:var(--muted);text-decoration:underline;text-underline-offset:3px;">Read: Kaizen Blitz in Malaysia</a>
-     <a href="/blog/gemba-walk-manufacturing-malaysia/" style="font-size:13px;color:var(--muted);text-decoration:underline;text-underline-offset:3px;">Read: The Gemba Walk</a>
+     <a href="/blog/oee-training-malaysia/" style="font-size:13px;color:var(--muted);text-decoration:underline;text-underline-offset:3px;">Read: OEE Improvement Guide</a>
+     <a href="/blog/kaizen-blitz-vs-kaizen-culture/" style="font-size:13px;color:var(--muted);text-decoration:underline;text-underline-offset:3px;">Read: Kaizen Blitz in Malaysia</a>
+     <a href="/blog/gemba-walk-problems/" style="font-size:13px;color:var(--muted);text-decoration:underline;text-underline-offset:3px;">Read: The Gemba Walk</a>
    </div>
  </div>
 </section>

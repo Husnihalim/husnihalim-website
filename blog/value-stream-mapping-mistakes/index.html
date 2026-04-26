@@ -146,6 +146,26 @@ aside{padding-top:48px;position:sticky;top:70px}
 .bottom-cta-or a{color:var(--c-secondary)}
 @media(max-width:600px){.bottom-form{grid-template-columns:1fr}}
 
+
+/* Unified customer navigation */
+.nav{height:66px;padding:0 40px;background:var(--c-dark,var(--dark,#0c1b2e));display:flex;align-items:center;position:sticky;top:0;z-index:1000;box-shadow:0 2px 20px rgba(0,0,0,.18)}
+.nav-logo{font-family:var(--font-h,var(--font-serif,'Cormorant Garamond',Georgia,serif));font-size:22px;font-weight:700;color:#fff;text-decoration:none;letter-spacing:-.01em;margin-right:auto;flex-shrink:0}
+.nav-logo em{font-style:italic;color:var(--c-secondary,var(--gold,#c47832))}
+.nav-links{display:flex;align-items:center;gap:0;list-style:none;margin:0 0 0 auto;padding:0}
+.nav-links li{list-style:none}
+.nav-links a{display:flex;align-items:center;height:66px;padding:0 10px;border-radius:0;color:rgba(255,255,255,.78);font-family:var(--font-b,var(--font-body,'DM Sans',sans-serif));font-size:13px;font-weight:500;letter-spacing:.25px;text-decoration:none;white-space:nowrap;transition:color .2s,background .2s}
+.nav-links a:hover{color:#fff;background:rgba(255,255,255,.07)}
+.nav-tool{color:var(--c-secondary,var(--gold,#c47832))!important;border:1px solid rgba(196,120,50,.4);border-radius:6px;height:34px!important;margin-left:6px;padding:0 12px!important}
+.nav-tool:hover{background:rgba(196,120,50,.14)!important;color:#e09040!important}
+.nav-cta{background:var(--c-accent,var(--accent,#8b2252))!important;color:#fff!important;height:36px!important;padding:0 16px!important;border-radius:6px;margin-left:8px;font-weight:600!important}
+.nav-cta:hover{background:#721c45!important}
+.hamburger{display:none;flex-direction:column;justify-content:center;gap:5px;width:38px;height:38px;background:transparent;border:0;padding:4px;cursor:pointer;z-index:1100}
+.hamburger span{display:block;width:100%;height:2px;background:#fff;border-radius:2px;transition:transform .25s,opacity .25s}
+.hamburger.active span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+.hamburger.active span:nth-child(2){opacity:0}
+.hamburger.active span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+@media(max-width:900px){.nav{height:64px;padding:0 22px}.hamburger{display:flex}.nav-links{position:fixed;top:0;right:-100%;width:min(320px,82vw);height:100vh;background:var(--c-dark,var(--dark,#0c1b2e));flex-direction:column;align-items:flex-start;padding:88px 24px 40px;box-shadow:-8px 0 40px rgba(0,0,0,.28);transition:right .3s ease;overflow-y:auto}.nav-links.open,.nav-links.active{right:0}.nav-links li{width:100%}.nav-links a{width:100%;height:auto;min-height:48px;padding:13px 0!important;border-bottom:1px solid rgba(255,255,255,.07);font-size:15px}.nav-tool{margin-left:0;border:0;border-radius:0;height:auto!important}.nav-cta{margin:16px 0 0 0;justify-content:center;border-bottom:0!important;border-radius:6px!important;min-height:52px}}
+
 </style>
 <script type="application/ld+json">
 {
@@ -197,23 +217,22 @@ aside{padding-top:48px;position:sticky;top:70px}
 </script>
 </head>
 <body>
-<nav class="nav">
-  <a href="/" class="nav-logo">Husni<em>Halim</em></a>
-    <ul class="nav-links" id="navLinks">
-    <li><a href="/#about">About</a></li>
-    <li><a href="/#expertise">Expertise</a></li>
-    <li><a href="/#training">Training</a></li>
-    <li><a href="/blog/">Blog</a></li>
-    <li><a href="/kaizenchampion" class="nav-tool" style="color:var(--c-secondary);border-color:var(--c-secondary);">Kaizen Champion ✦</a></li>
-    <li><a href="/oee-calculator" class="nav-tool">OEE Calculator</a></li>
-    <li>
-      <a href="tel:+60165241901" class="nav-phone">
-        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 10.8 19.79 19.79 0 01.22 2.18 2 2 0 012.18 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 7.91a16 16 0 006.72 6.72l1.28-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"></path></svg>
-        +60 16-524 1901
-      </a>
-    </li>
-    <li><a href="/#contact" class="nav-cta">Book a Call</a></li>
+<nav class="nav" id="navbar">
+  <a href="/" class="nav-logo nav-logo-text">Husni<em>Halim</em></a>
+
+  <ul class="nav-links" id="navLinks">
+    <li><a href="/consulting/">Services</a></li>
+    <li><a href="/hrdc-training/">Training</a></li>
+    <li><a href="/case-studies/">Results</a></li>
+    <li><a href="/blog/">Insights</a></li>
+    <li><a href="/kaizenchampion/" class="nav-tool" style="color:var(--c-secondary);border-color:var(--c-secondary);">Kaizen Champion ✦</a></li>
+    <li><a href="/oee-calculator/" class="nav-tool">OEE</a></li>
+    <li><a href="/consulting/" class="nav-cta">Book a Call</a></li>
   </ul>
+
+  <button class="hamburger" id="hamburger" aria-label="Toggle navigation" aria-expanded="false">
+    <span></span><span></span><span></span>
+  </button>
 </nav>
 <main>
 
@@ -371,5 +390,26 @@ aside{padding-top:48px;position:sticky;top:70px}
 <footer class="footer">
   <p>© 2026 Husni Halim · <a href="/">husnihalim.com</a> · HRDC Accredited Trainer TTT/10228</p>
 </footer>
+<script>
+(function(){
+  var hamburger=document.getElementById('hamburger');
+  var navLinks=document.getElementById('navLinks');
+  if(!hamburger||!navLinks) return;
+  hamburger.addEventListener('click',function(){
+    var open=navLinks.classList.toggle('open');
+    hamburger.classList.toggle('active',open);
+    hamburger.setAttribute('aria-expanded',open?'true':'false');
+    document.body.style.overflow=open?'hidden':'';
+  });
+  navLinks.querySelectorAll('a').forEach(function(link){
+    link.addEventListener('click',function(){
+      navLinks.classList.remove('open');
+      hamburger.classList.remove('active');
+      hamburger.setAttribute('aria-expanded','false');
+      document.body.style.overflow='';
+    });
+  });
+})();
+</script>
 </body>
 </html>

@@ -173,6 +173,12 @@
     .kc-section.dark .section-sub { color: rgba(255,255,255,0.55); }
 
     /* objectives grid */
+    .kc-split-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 60px;
+      align-items: start;
+    }
     .obj-grid {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
@@ -300,35 +306,63 @@
 
     /* responsive */
     @media (max-width: 900px) {
-      .kc-hero-grid, .obj-grid, .feat-grid, .price-grid, .outcomes-grid { grid-template-columns: 1fr; }
+      .kc-hero-grid, .kc-split-grid, .obj-grid, .feat-grid, .price-grid, .outcomes-grid { grid-template-columns: 1fr; }
       .kc-hero h1 { font-size: 2.4rem; }
       .kc-container { padding: 0 20px; }
       .kc-section { padding: 50px 0; }
+      .kc-split-grid { gap: 24px; }
       .price-card.featured { transform: none; }
       .hrdc-banner { flex-direction: column; text-align: center; }
     }
-  </style>
+    @media (max-width: 600px) {
+      .kc-hero { padding: 96px 0 56px; }
+      .kc-hero h1 { font-size: 2.15rem; }
+      .kc-hero .subhead { font-size: 1rem; }
+      .kc-hero-cta { gap: 0.75rem; }
+      .kc-hero-cta a { width: 100%; text-align: center; }
+      .kc-stats-card { padding: 2rem 1.6rem; }
+      .kc-section h2 { font-size: 2rem; }
+      .kc-day-header { align-items: flex-start; gap: 12px; }
+      .kc-form-wrap { padding: 1.5rem; }
+    }
+
+/* Unified customer navigation */
+.nav{height:66px;padding:0 40px;background:var(--c-dark,var(--dark,#0c1b2e));display:flex;align-items:center;position:sticky;top:0;z-index:1000;box-shadow:0 2px 20px rgba(0,0,0,.18)}
+.nav-logo{font-family:var(--font-h,var(--font-serif,'Cormorant Garamond',Georgia,serif));font-size:22px;font-weight:700;color:#fff;text-decoration:none;letter-spacing:-.01em;margin-right:auto;flex-shrink:0}
+.nav-logo em{font-style:italic;color:var(--c-secondary,var(--gold,#c47832))}
+.nav-links{display:flex;align-items:center;gap:0;list-style:none;margin:0 0 0 auto;padding:0}
+.nav-links li{list-style:none}
+.nav-links a{display:flex;align-items:center;height:66px;padding:0 10px;border-radius:0;color:rgba(255,255,255,.78);font-family:var(--font-b,var(--font-body,'DM Sans',sans-serif));font-size:13px;font-weight:500;letter-spacing:.25px;text-decoration:none;white-space:nowrap;transition:color .2s,background .2s}
+.nav-links a:hover{color:#fff;background:rgba(255,255,255,.07)}
+.nav-tool{color:var(--c-secondary,var(--gold,#c47832))!important;border:1px solid rgba(196,120,50,.4);border-radius:6px;height:34px!important;margin-left:6px;padding:0 12px!important}
+.nav-tool:hover{background:rgba(196,120,50,.14)!important;color:#e09040!important}
+.nav-cta{background:var(--c-accent,var(--accent,#8b2252))!important;color:#fff!important;height:36px!important;padding:0 16px!important;border-radius:6px;margin-left:8px;font-weight:600!important}
+.nav-cta:hover{background:#721c45!important}
+.hamburger{display:none;flex-direction:column;justify-content:center;gap:5px;width:38px;height:38px;background:transparent;border:0;padding:4px;cursor:pointer;z-index:1100}
+.hamburger span{display:block;width:100%;height:2px;background:#fff;border-radius:2px;transition:transform .25s,opacity .25s}
+.hamburger.active span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+.hamburger.active span:nth-child(2){opacity:0}
+.hamburger.active span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+@media(max-width:900px){.nav{height:64px;padding:0 22px}.hamburger{display:flex}.nav-links{position:fixed;top:0;right:-100%;width:min(320px,82vw);height:100vh;background:var(--c-dark,var(--dark,#0c1b2e));flex-direction:column;align-items:flex-start;padding:88px 24px 40px;box-shadow:-8px 0 40px rgba(0,0,0,.28);transition:right .3s ease;overflow-y:auto}.nav-links.open,.nav-links.active{right:0}.nav-links li{width:100%}.nav-links a{width:100%;height:auto;min-height:48px;padding:13px 0!important;border-bottom:1px solid rgba(255,255,255,.07);font-size:15px}.nav-tool{margin-left:0;border:0;border-radius:0;height:auto!important}.nav-cta{margin:16px 0 0 0;justify-content:center;border-bottom:0!important;border-radius:6px!important;min-height:52px}}
+
+</style>
 </head>
 <body>
 
 <!-- ===== NAV (matches main site) ===== -->
 <nav class="nav" id="navbar">
   <a href="/" class="nav-logo nav-logo-text">Husni<em>Halim</em></a>
-    <ul class="nav-links" id="navLinks">
-    <li><a href="/#about">About</a></li>
-    <li><a href="/#expertise">Expertise</a></li>
-    <li><a href="/#training">Training</a></li>
-    <li><a href="/blog/">Blog</a></li>
-    <li><a href="/kaizenchampion" class="nav-tool" style="color:var(--c-secondary);border-color:var(--c-secondary);">Kaizen Champion ✦</a></li>
-    <li><a href="/oee-calculator" class="nav-tool">OEE Calculator</a></li>
-    <li>
-      <a href="tel:+60165241901" class="nav-phone">
-        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 10.8 19.79 19.79 0 01.22 2.18 2 2 0 012.18 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 7.91a16 16 0 006.72 6.72l1.28-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"></path></svg>
-        +60 16-524 1901
-      </a>
-    </li>
-    <li><a href="/#contact" class="nav-cta">Book a Call</a></li>
+
+  <ul class="nav-links" id="navLinks">
+    <li><a href="/consulting/">Services</a></li>
+    <li><a href="/hrdc-training/">Training</a></li>
+    <li><a href="/case-studies/">Results</a></li>
+    <li><a href="/blog/">Insights</a></li>
+    <li><a href="/kaizenchampion/" class="nav-tool" style="color:var(--c-secondary);border-color:var(--c-secondary);">Kaizen Champion ✦</a></li>
+    <li><a href="/oee-calculator/" class="nav-tool">OEE</a></li>
+    <li><a href="/consulting/" class="nav-cta">Book a Call</a></li>
   </ul>
+
   <button class="hamburger" id="hamburger" aria-label="Toggle navigation" aria-expanded="false">
     <span></span><span></span><span></span>
   </button>
@@ -340,11 +374,11 @@
 <section class="kc-hero" id="program">
   <div class="kc-container">
     <div class="kc-hero-grid">
-      <div>
+      <div class="kc-hero-content">
         <span class="kc-badge">HRDC Claimable · May 18–22, 2026 · Shah Alam</span>
         <h1>Kaizen Champion<br><em>Development Program</em></h1>
         <p class="subhead">Embedded continuous improvement for manufacturing excellence</p>
-        <p>A comprehensive five-day program for engineers, operations managers, and team leaders who drive sustainable operational improvement. Learn proven methodologies from 16+ years of deployment across Malaysia and 6 countries.</p>
+        <p>A comprehensive five-day program for engineers, operations managers, and team leaders who drive sustainable operational improvement. Learn proven methodologies from 16+ years of deployment across Malaysia and 11 countries.</p>
         <div class="kc-hero-cta">
           <a href="#register" class="kc-btn-primary">Reserve Your Spot</a>
           <a href="#curriculum" class="kc-btn-outline">View Curriculum</a>
@@ -360,10 +394,27 @@
   </div>
 </section>
 
+<!-- ===================== COMPANY MARQUEE ===================== -->
+<section class="section company-marquee-section" id="companies">
+  <div class="section-label">Worked With</div>
+  <h2>Trusted Across Industry</h2>
+  <p class="section-desc">A selection of 84 organisations and project sites from training, consulting, HRD Corp public programs, TERAJU Pritech4.0, and international improvement work across 11 countries.</p>
+  <div class="company-marquee" aria-label="Companies Husni Halim has worked with">
+    <div class="company-marquee-track">
+      <div class="company-marquee-group">
+        <span>Akif Cafe Sdn Bhd</span><span>Al Haddad</span><span>Ameen Products</span><span>Anramin Industry</span><span>Ayam Bismi</span><span>Bot Industries</span><span>Faiz Food &amp; Beverages</span><span>Fatiah Frozen Sdn Bhd</span><span>Jabi Rice Mill</span><span>Kopiah Industry</span><span>MGV Industries</span><span>Miwa Manufacturing</span><span>PNA Technologies</span><span>Tishas Food</span><span>Aerospace Composite Malaysia Sdn Bhd</span><span>Bintulu Port Holdings Berhad</span><span>Bomatec Sdn Bhd</span><span>BRB Malaysia Sdn Bhd</span><span>Careglove Global Sdn Bhd</span><span>Ciba Vision Sdn Bhd</span><span>DIMAL Asia Pacific</span><span>Eastman Chemical Sdn Bhd</span><span>Feoso Oil (M) Sdn Bhd</span><span>FLE (M) Sdn Bhd</span><span>H&amp;R Wax Malaysia Sdn Bhd</span><span>Hitachi Asia (M) Sdn Bhd</span><span>Huber Suhner (M) Sdn Bhd</span><span>Jaya Nets Sdn Bhd</span><span>KRAIBURG TPE Technology (M) Sdn Bhd</span><span>Negeri Sembilan Cement Industries Sdn Bhd</span><span>NI Malaysia Sdn Bhd</span><span>Novugen Oncology Sdn Bhd</span><span>Novugen Pharma Sdn Bhd</span><span>Petronas</span><span>Salutica Allied Solutions Sdn Bhd</span><span>San Miguel Yamamura Woven Products Sdn Bhd</span><span>Shinko Electronics (M) Sdn Bhd</span><span>SMART Modular Technologies Sdn Bhd</span><span>Stenta Films (M) Sdn Bhd</span><span>Tenaga Cable Industries Sdn Bhd</span><span>Terberg Manufacturing &amp; Assembly Sdn Bhd</span><span>Thales DIS (M) Sdn Bhd</span><span>The Italian Baker Sdn Bhd</span><span>Toyo Tires (M) Snd Bhd</span><span>Venator Asia Sdn Bhd</span><span>Wipro Unza (M) Sdn Bhd</span><span>Prysmian Arco Felice EHV Cables Plant</span><span>Prysmian Cikampek</span><span>Prysmian Power Cables Malaysia</span><span>Prysmian Sorocaba Building Wires Plant</span><span>Prysmian Tianjin Special Cables Plant</span><span>Aeon Bakery</span><span>Asian NDK Crystal Snd Bhd</span><span>Carotino Sdn Bhd</span><span>Chemi Con</span><span>Datasonic Group Berhad</span><span>Datasonic Sdn Bhd</span><span>Extech Pro (M) Sdn Bhd</span><span>Fakulti AI, UTM AI</span><span>FBK Manufacturing</span><span>FCL Components</span><span>FSR Technologies Sdn Bhd</span><span>Help University</span><span>HT Ceramics</span><span>Inari Technology</span><span>Intel Technology Sdn Bhd</span><span>Jabatan Pengangkutan Jalan (KA)</span><span>Kato Manufacturing</span><span>Koito Manufacturing Sdn Bhd</span><span>Kulim Technology Park</span><span>Lyndon Basell</span><span>Maxeon Solar Technologies</span><span>Mitsui High-Tec Malaysia Sdn Bhd</span><span>Munchy Food Industries Sdn Bhd</span><span>New Age Aluminium Ind Sdn Bhd</span><span>Panasonic Aircond Malaysia</span><span>Plastitechnic (M) Sdn Bhd</span><span>POS Logistic Berhad</span><span>Safran Landing Systems (M) Sdn Bhd</span><span>Sapura Industrial Berhad</span><span>Sato Manufacturing</span><span>Sharp TV Manufacturing</span><span>Smart Meter Tech (M) Sdn Bhd</span><span>WRP Gloves</span>
+      </div>
+      <div class="company-marquee-group" aria-hidden="true">
+        <span>Akif Cafe Sdn Bhd</span><span>Al Haddad</span><span>Ameen Products</span><span>Anramin Industry</span><span>Ayam Bismi</span><span>Bot Industries</span><span>Faiz Food &amp; Beverages</span><span>Fatiah Frozen Sdn Bhd</span><span>Jabi Rice Mill</span><span>Kopiah Industry</span><span>MGV Industries</span><span>Miwa Manufacturing</span><span>PNA Technologies</span><span>Tishas Food</span><span>Aerospace Composite Malaysia Sdn Bhd</span><span>Bintulu Port Holdings Berhad</span><span>Bomatec Sdn Bhd</span><span>BRB Malaysia Sdn Bhd</span><span>Careglove Global Sdn Bhd</span><span>Ciba Vision Sdn Bhd</span><span>DIMAL Asia Pacific</span><span>Eastman Chemical Sdn Bhd</span><span>Feoso Oil (M) Sdn Bhd</span><span>FLE (M) Sdn Bhd</span><span>H&amp;R Wax Malaysia Sdn Bhd</span><span>Hitachi Asia (M) Sdn Bhd</span><span>Huber Suhner (M) Sdn Bhd</span><span>Jaya Nets Sdn Bhd</span><span>KRAIBURG TPE Technology (M) Sdn Bhd</span><span>Negeri Sembilan Cement Industries Sdn Bhd</span><span>NI Malaysia Sdn Bhd</span><span>Novugen Oncology Sdn Bhd</span><span>Novugen Pharma Sdn Bhd</span><span>Petronas</span><span>Salutica Allied Solutions Sdn Bhd</span><span>San Miguel Yamamura Woven Products Sdn Bhd</span><span>Shinko Electronics (M) Sdn Bhd</span><span>SMART Modular Technologies Sdn Bhd</span><span>Stenta Films (M) Sdn Bhd</span><span>Tenaga Cable Industries Sdn Bhd</span><span>Terberg Manufacturing &amp; Assembly Sdn Bhd</span><span>Thales DIS (M) Sdn Bhd</span><span>The Italian Baker Sdn Bhd</span><span>Toyo Tires (M) Snd Bhd</span><span>Venator Asia Sdn Bhd</span><span>Wipro Unza (M) Sdn Bhd</span><span>Prysmian Arco Felice EHV Cables Plant</span><span>Prysmian Cikampek</span><span>Prysmian Power Cables Malaysia</span><span>Prysmian Sorocaba Building Wires Plant</span><span>Prysmian Tianjin Special Cables Plant</span><span>Aeon Bakery</span><span>Asian NDK Crystal Snd Bhd</span><span>Carotino Sdn Bhd</span><span>Chemi Con</span><span>Datasonic Group Berhad</span><span>Datasonic Sdn Bhd</span><span>Extech Pro (M) Sdn Bhd</span><span>Fakulti AI, UTM AI</span><span>FBK Manufacturing</span><span>FCL Components</span><span>FSR Technologies Sdn Bhd</span><span>Help University</span><span>HT Ceramics</span><span>Inari Technology</span><span>Intel Technology Sdn Bhd</span><span>Jabatan Pengangkutan Jalan (KA)</span><span>Kato Manufacturing</span><span>Koito Manufacturing Sdn Bhd</span><span>Kulim Technology Park</span><span>Lyndon Basell</span><span>Maxeon Solar Technologies</span><span>Mitsui High-Tec Malaysia Sdn Bhd</span><span>Munchy Food Industries Sdn Bhd</span><span>New Age Aluminium Ind Sdn Bhd</span><span>Panasonic Aircond Malaysia</span><span>Plastitechnic (M) Sdn Bhd</span><span>POS Logistic Berhad</span><span>Safran Landing Systems (M) Sdn Bhd</span><span>Sapura Industrial Berhad</span><span>Sato Manufacturing</span><span>Sharp TV Manufacturing</span><span>Smart Meter Tech (M) Sdn Bhd</span><span>WRP Gloves</span>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- ===== WHY KAIZEN ===== -->
 <section class="kc-section light">
   <div class="kc-container">
-    <div style="display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:start;">
+    <div class="kc-split-grid">
       <div>
         <h2>Why Kaizen?</h2>
         <p style="font-family:'DM Sans',sans-serif;color:#555;line-height:1.7;margin-bottom:1.5rem;">Kaizen — continuous improvement embedded in daily operations — is the difference between reactive firefighting and systematic, sustained improvement. Organizations that embed this methodology see measurable results within weeks.</p>
@@ -785,7 +836,7 @@
       <ul class="footer-links">
         <li><a href="/#expertise">Lean Consulting</a></li>
         <li><a href="/#training">HRDC Training</a></li>
-        <li><a href="/oee-calculator">OEE Calculator</a></li>
+        <li><a href="/oee-calculator/">OEE Calculator</a></li>
         <li><a href="/blog/">Blog</a></li>
       </ul>
     </div>
@@ -832,6 +883,30 @@
       if (target) { e.preventDefault(); target.scrollIntoView({ behavior: 'smooth' }); }
     });
   });
+  // Premium motion layer
+  const motionSelectors = [
+    '.kc-hero-content > *', '.kc-stats-card', '.kc-section h2', '.kc-section .section-sub',
+    '.obj-card', '.outcome-col', '.kc-day', '.feat-card', '.price-card',
+    '.hrdc-banner', '.faq-item', '.kc-form-wrap', '.footer-col'
+  ];
+  motionSelectors.forEach(selector => {
+    document.querySelectorAll(selector).forEach((el, index) => {
+      el.classList.add('reveal');
+      el.style.setProperty('--reveal-delay', `${Math.min(index % 8, 7) * 70}ms`);
+    });
+  });
+  document.querySelectorAll('.obj-card, .feat-card, .price-card, .faq-item, .kc-day').forEach(el => {
+    el.classList.add('premium-card');
+  });
+  const revealObserver = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('revealed');
+        revealObserver.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+  document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
 </script>
 </body>
 </html>

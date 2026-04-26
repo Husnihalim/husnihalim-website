@@ -13,6 +13,14 @@
 <meta property="og:image" content="https://images.unsplash.com/photo-1621905251918-48416bd8575a?auto=format&fit=crop&w=1200&h=630&q=80">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://husnihalim.com/blog/oee-training-malaysia/">
+<meta property="article:published_time" content="2024-10-15T00:00:00+08:00">
+<meta property="article:modified_time" content="2024-10-15T00:00:00+08:00">
+<meta property="article:section" content="OEE & TPM">
+<meta property="article:tag" content="OEE">
+<meta property="article:tag" content="TPM">
+<meta property="article:tag" content="HRDC Claimable">
+<meta property="article:tag" content="Manufacturing Malaysia">
+<meta property="article:tag" content="Productivity">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="OEE Training Malaysia Guide | HRDC Claimable Insights | Husni Halim">
 <meta name="twitter:description" content="Complete guide to OEE training in Malaysia, including benchmarks, calculation mistakes, and HRDC-claimable program design.">
@@ -146,6 +154,26 @@ aside{padding-top:48px;position:sticky;top:70px}
 .bottom-cta-or a{color:var(--c-secondary)}
 @media(max-width:600px){.bottom-form{grid-template-columns:1fr}}
 
+
+/* Unified customer navigation */
+.nav{height:66px;padding:0 40px;background:var(--c-dark,var(--dark,#0c1b2e));display:flex;align-items:center;position:sticky;top:0;z-index:1000;box-shadow:0 2px 20px rgba(0,0,0,.18)}
+.nav-logo{font-family:var(--font-h,var(--font-serif,'Cormorant Garamond',Georgia,serif));font-size:22px;font-weight:700;color:#fff;text-decoration:none;letter-spacing:-.01em;margin-right:auto;flex-shrink:0}
+.nav-logo em{font-style:italic;color:var(--c-secondary,var(--gold,#c47832))}
+.nav-links{display:flex;align-items:center;gap:0;list-style:none;margin:0 0 0 auto;padding:0}
+.nav-links li{list-style:none}
+.nav-links a{display:flex;align-items:center;height:66px;padding:0 10px;border-radius:0;color:rgba(255,255,255,.78);font-family:var(--font-b,var(--font-body,'DM Sans',sans-serif));font-size:13px;font-weight:500;letter-spacing:.25px;text-decoration:none;white-space:nowrap;transition:color .2s,background .2s}
+.nav-links a:hover{color:#fff;background:rgba(255,255,255,.07)}
+.nav-tool{color:var(--c-secondary,var(--gold,#c47832))!important;border:1px solid rgba(196,120,50,.4);border-radius:6px;height:34px!important;margin-left:6px;padding:0 12px!important}
+.nav-tool:hover{background:rgba(196,120,50,.14)!important;color:#e09040!important}
+.nav-cta{background:var(--c-accent,var(--accent,#8b2252))!important;color:#fff!important;height:36px!important;padding:0 16px!important;border-radius:6px;margin-left:8px;font-weight:600!important}
+.nav-cta:hover{background:#721c45!important}
+.hamburger{display:none;flex-direction:column;justify-content:center;gap:5px;width:38px;height:38px;background:transparent;border:0;padding:4px;cursor:pointer;z-index:1100}
+.hamburger span{display:block;width:100%;height:2px;background:#fff;border-radius:2px;transition:transform .25s,opacity .25s}
+.hamburger.active span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+.hamburger.active span:nth-child(2){opacity:0}
+.hamburger.active span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+@media(max-width:900px){.nav{height:64px;padding:0 22px}.hamburger{display:flex}.nav-links{position:fixed;top:0;right:-100%;width:min(320px,82vw);height:100vh;background:var(--c-dark,var(--dark,#0c1b2e));flex-direction:column;align-items:flex-start;padding:88px 24px 40px;box-shadow:-8px 0 40px rgba(0,0,0,.28);transition:right .3s ease;overflow-y:auto}.nav-links.open,.nav-links.active{right:0}.nav-links li{width:100%}.nav-links a{width:100%;height:auto;min-height:48px;padding:13px 0!important;border-bottom:1px solid rgba(255,255,255,.07);font-size:15px}.nav-tool{margin-left:0;border:0;border-radius:0;height:auto!important}.nav-cta{margin:16px 0 0 0;justify-content:center;border-bottom:0!important;border-radius:6px!important;min-height:52px}}
+
 </style>
 <script type="application/ld+json">
 {
@@ -195,25 +223,64 @@ aside{padding-top:48px;position:sticky;top:70px}
   ]
 }
 </script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is OEE and why is it misunderstood in Malaysian manufacturing?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "OEE (Overall Equipment Effectiveness) measures manufacturing productivity by multiplying Availability × Performance × Quality. It's misunderstood because most factories use target rates instead of theoretical maximums, exclude planned downtime, and measure only inspected output. This inflates OEE numbers—plants report 85%+ while actually achieving 55-65%."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is a good OEE score for Malaysian manufacturers?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Most Malaysian manufacturing plants achieve 55-65% OEE. World-class is considered 85% for discrete manufacturing and 90% for process manufacturing. However, the trend matters more than the absolute number—a plant at 60% OEE with improvement momentum is healthier than one at 75% that's stagnant."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is OEE training HRDC claimable in Malaysia?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. OEE training delivered by an HRDC-registered trainer (Trainer ID 11294) is 100% claimable under the SBL-Khas scheme. The training must be relevant to the employee's role and properly documented. All necessary documentation for grant applications is provided."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How long does OEE training take?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A comprehensive OEE training programme typically runs 2-3 days. Day 1 covers measurement methodology and the Six Big Losses. Day 2 focuses on data analysis and improvement project selection. Day 3 (optional) includes hands-on implementation at your facility. A condensed 1-day executive briefing is also available for senior management."
+      }
+    }
+  ]
+}
+</script>
 </head>
 <body>
-<nav class="nav">
-  <a href="/" class="nav-logo">Husni<em>Halim</em></a>
-    <ul class="nav-links" id="navLinks">
-    <li><a href="/#about">About</a></li>
-    <li><a href="/#expertise">Expertise</a></li>
-    <li><a href="/#training">Training</a></li>
-    <li><a href="/blog/">Blog</a></li>
-    <li><a href="/kaizenchampion" class="nav-tool" style="color:var(--c-secondary);border-color:var(--c-secondary);">Kaizen Champion ✦</a></li>
-    <li><a href="/oee-calculator" class="nav-tool">OEE Calculator</a></li>
-    <li>
-      <a href="tel:+60165241901" class="nav-phone">
-        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 10.8 19.79 19.79 0 01.22 2.18 2 2 0 012.18 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 7.91a16 16 0 006.72 6.72l1.28-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"></path></svg>
-        +60 16-524 1901
-      </a>
-    </li>
-    <li><a href="/#contact" class="nav-cta">Book a Call</a></li>
+<nav class="nav" id="navbar">
+  <a href="/" class="nav-logo nav-logo-text">Husni<em>Halim</em></a>
+
+  <ul class="nav-links" id="navLinks">
+    <li><a href="/consulting/">Services</a></li>
+    <li><a href="/hrdc-training/">Training</a></li>
+    <li><a href="/case-studies/">Results</a></li>
+    <li><a href="/blog/">Insights</a></li>
+    <li><a href="/kaizenchampion/" class="nav-tool" style="color:var(--c-secondary);border-color:var(--c-secondary);">Kaizen Champion ✦</a></li>
+    <li><a href="/oee-calculator/" class="nav-tool">OEE</a></li>
+    <li><a href="/consulting/" class="nav-cta">Book a Call</a></li>
   </ul>
+
+  <button class="hamburger" id="hamburger" aria-label="Toggle navigation" aria-expanded="false">
+    <span></span><span></span><span></span>
+  </button>
 </nav>
 <main>
 
@@ -247,6 +314,17 @@ aside{padding-top:48px;position:sticky;top:70px}
     </div>
 
     <p class="post-subtitle">Overall Equipment Effectiveness is the most widely misunderstood KPI in Malaysian manufacturing. This guide explains what OEE actually measures, why most OEE numbers are wrong, and what real OEE improvement requires.</p>
+
+<!-- AI SUMMARY BOX -->
+<div style="background:#f8f9fa;border:2px solid var(--c-secondary);border-radius:8px;padding:24px;margin:28px 0;">
+  <h3 style="font-family:var(--font-h);font-size:18px;color:var(--c-dark);margin:0 0 12px;">⚡ Quick Answer</h3>
+  <p style="font-size:15px;line-height:1.7;margin:0 0 16px;color:#333;">OEE (Overall Equipment Effectiveness) measures manufacturing productivity by multiplying Availability × Performance × Quality. Most Malaysian factories report 85%+ OEE while actually achieving 55-65% due to common calculation errors: using target rates instead of theoretical maximums, excluding planned downtime, and measuring only inspected output. World-class OEE is 85% for discrete manufacturing and 90% for process manufacturing.</p>
+  <div style="display:flex;flex-wrap:wrap;gap:8px;">
+    <span style="background:var(--c-secondary);color:#fff;font-size:11px;padding:4px 10px;border-radius:12px;">✓ HRDC Claimable Training Available</span>
+    <span style="background:var(--c-secondary);color:#fff;font-size:11px;padding:4px 10px;border-radius:12px;">✓ Proven Across 30+ Factories</span>
+    <span style="background:var(--c-secondary);color:#fff;font-size:11px;padding:4px 10px;border-radius:12px;">✓ Industry-Specific Benchmarks</span>
+  </div>
+</div>
 
     
 <p>Overall Equipment Effectiveness — OEE — is the most commonly reported manufacturing KPI in Malaysia. It is also the most consistently misunderstood, miscalculated, and misused metric in the industry. Plants report OEE numbers of 85% and above while producing at rates that suggest 45% or below. The gap between the number and reality is not fraud — it is a systematic misunderstanding of what OEE is designed to measure.</p>
@@ -282,6 +360,39 @@ aside{padding-top:48px;position:sticky;top:70px}
 <h2>HRDC Claimable OEE Training in Malaysia</h2>
 <p>OEE training programmes in Malaysia can be claimed under HRDC (Human Resource Development Corporation) for eligible employers. A structured OEE training programme covering measurement methodology, loss analysis, TPM fundamentals, and improvement project facilitation is typically delivered over two to three days, with a project component that applies the methodology to actual equipment in the participant's facility.</p>
 <p>The most effective OEE training programmes are not classroom programmes. They are delivered at the factory, using the factory's actual equipment and actual loss data, with participants who are responsible for the equipment's performance. This ensures that the training produces an improvement plan that is immediately actionable rather than a generic understanding that does not translate to implementation.</p>
+
+<!-- KEY TAKEAWAYS SECTION -->
+<h2>Key Takeaways for Malaysian Manufacturers</h2>
+<div style="background:#fff;border:1px solid #e0e0e0;border-left:4px solid var(--c-accent);border-radius:6px;padding:20px 24px;margin:20px 0;">
+  <ul style="margin:0;padding-left:20px;">
+    <li style="margin-bottom:12px;"><strong>Use theoretical maximum rates:</strong> Don't inflate Performance by using "practical" or target rates—measure against true equipment capability</li>
+    <li style="margin-bottom:12px;"><strong>Include all planned downtime:</strong> Planned maintenance and changeovers are real losses—excluding them removes incentive to improve</li>
+    <li style="margin-bottom:12px;"><strong>Measure first-pass yield:</strong> Count all output, not just inspected output, to get true Quality rates</li>
+    <li style="margin-bottom:12px;"><strong>Focus on losses, not scores:</strong> Attack the Six Big Losses—the OEE score is just a lag indicator</li>
+    <li style="margin-bottom:0;"><strong>Train on the factory floor:</strong> HRDC-claimable in-house training using your actual equipment delivers the best results</li>
+  </ul>
+</div>
+
+<!-- FAQ SECTION -->
+<h2>Frequently Asked Questions About OEE Training in Malaysia</h2>
+<div style="margin:24px 0;">
+  <div style="border-bottom:1px solid #eee;padding:16px 0;">
+    <h3 style="font-size:16px;font-weight:600;color:var(--c-dark);margin:0 0 8px;">What is a good OEE score for Malaysian manufacturers?</h3>
+    <p style="font-size:15px;line-height:1.7;margin:0;color:var(--c-body);">Most Malaysian manufacturing plants achieve 55-65% OEE. World-class is considered 85% for discrete manufacturing and 90% for process manufacturing. However, the more important metric is your trend—are you improving month-over-month? A plant at 60% OEE with a clear improvement trajectory is healthier than one at 75% that's been stagnant for years.</p>
+  </div>
+  <div style="border-bottom:1px solid #eee;padding:16px 0;">
+    <h3 style="font-size:16px;font-weight:600;color:var(--c-dark);margin:0 0 8px;">Is OEE training HRDC claimable in Malaysia?</h3>
+    <p style="font-size:15px;line-height:1.7;margin:0;color:var(--c-body);">Yes. OEE training delivered by an HRDC-registered trainer (like myself, Trainer ID 11294) is 100% claimable under the SBL-Khas scheme. The training must be relevant to the employee's role and documented properly. I provide all necessary documentation for grant applications.</p>
+  </div>
+  <div style="border-bottom:1px solid #eee;padding:16px 0;">
+    <h3 style="font-size:16px;font-weight:600;color:var(--c-dark);margin:0 0 8px;">How long does OEE training take?</h3>
+    <p style="font-size:15px;line-height:1.7;margin:0;color:var(--c-body);">A comprehensive OEE training programme typically runs 2-3 days. Day 1 covers measurement methodology and the Six Big Losses. Day 2 focuses on data analysis and improvement project selection. Day 3 (optional but recommended) includes hands-on implementation at your facility. I also offer a condensed 1-day executive briefing for senior management.</p>
+  </div>
+  <div style="padding:16px 0;">
+    <h3 style="font-size:16px;font-weight:600;color:var(--c-dark);margin:0 0 8px;">Can OEE be applied to non-manufacturing operations?</h3>
+    <p style="font-size:15px;line-height:1.7;margin:0;color:var(--c-body);">While OEE was designed for manufacturing equipment, the principles can be adapted for any process with measurable output—warehousing operations, service delivery, even administrative processes. I've applied OEE thinking to aviation MRO turnaround processes and logistics operations with good results. The key is identifying the "equipment" (even if it's a team of people) and measuring its effective output.</p>
+  </div>
+</div>
 
 
     <div class="author-bio">
@@ -380,5 +491,26 @@ aside{padding-top:48px;position:sticky;top:70px}
 <footer class="footer">
   <p>© 2026 Husni Halim · <a href="/">husnihalim.com</a> · HRDC Accredited Trainer TTT/10228</p>
 </footer>
+<script>
+(function(){
+  var hamburger=document.getElementById('hamburger');
+  var navLinks=document.getElementById('navLinks');
+  if(!hamburger||!navLinks) return;
+  hamburger.addEventListener('click',function(){
+    var open=navLinks.classList.toggle('open');
+    hamburger.classList.toggle('active',open);
+    hamburger.setAttribute('aria-expanded',open?'true':'false');
+    document.body.style.overflow=open?'hidden':'';
+  });
+  navLinks.querySelectorAll('a').forEach(function(link){
+    link.addEventListener('click',function(){
+      navLinks.classList.remove('open');
+      hamburger.classList.remove('active');
+      hamburger.setAttribute('aria-expanded','false');
+      document.body.style.overflow='';
+    });
+  });
+})();
+</script>
 </body>
 </html>
