@@ -479,6 +479,28 @@
    .footer-links a:hover { color: var(--gold-light, #c8a96e); }
    .footer-copy { font-size: 12px; color: rgba(255,255,255,.28); }
 </style>
+<style id="site-nav-consistency">
+/* Unified site navigation */
+.nav{height:66px!important;padding:0 40px!important;background:var(--c-dark,var(--dark,#0c1b2e))!important;display:flex!important;align-items:center!important;gap:0!important;position:sticky!important;top:0;left:0;right:0;z-index:1000;box-shadow:0 2px 20px rgba(0,0,0,.18);backdrop-filter:none!important;-webkit-backdrop-filter:none!important;transition:box-shadow .2s,background .2s!important}
+.nav-scrolled{background:var(--c-dark,var(--dark,#0c1b2e))!important;box-shadow:0 2px 20px rgba(0,0,0,.18)!important}
+.nav-logo{font-family:var(--font-h,var(--font-serif,'Cormorant Garamond',Georgia,serif))!important;font-size:22px!important;font-weight:700!important;color:#fff!important;text-decoration:none!important;letter-spacing:-.01em!important;margin-right:auto!important;flex-shrink:0!important;line-height:1!important}
+.nav-logo em{font-style:italic!important;color:var(--c-secondary,var(--gold,#c47832))!important}
+.nav-links{display:flex!important;align-items:center!important;gap:0!important;list-style:none!important;margin:0 0 0 auto!important;padding:0!important;position:static!important;width:auto!important;height:auto!important;background:transparent!important;box-shadow:none!important;overflow:visible!important}
+.nav-links li{list-style:none!important;position:relative!important;width:auto!important;margin:0!important;padding:0!important}
+.nav-links a{display:flex!important;align-items:center!important;justify-content:center!important;height:66px!important;min-height:0!important;padding:0 10px!important;border:0!important;border-radius:0!important;color:rgba(255,255,255,.78)!important;font-family:var(--font-b,var(--font-body,'DM Sans',sans-serif))!important;font-size:13px!important;font-weight:500!important;letter-spacing:.25px!important;text-decoration:none!important;white-space:nowrap!important;line-height:1.2!important;transition:color .2s,background .2s!important;transform:none!important}
+.nav-links a:hover{color:#fff!important;background:rgba(255,255,255,.07)!important;transform:none!important}
+.nav-phone{color:rgba(255,255,255,.68)!important;font-size:13px!important;padding:0 10px!important}
+.nav-tool{color:var(--c-secondary,var(--gold,#c47832))!important;border:1px solid rgba(196,120,50,.4)!important;border-radius:6px!important;height:34px!important;margin-left:6px!important;padding:0 12px!important}
+.nav-tool:hover{background:rgba(196,120,50,.14)!important;color:#e09040!important}
+.nav-cta{background:var(--c-accent,var(--accent,#8b2252))!important;color:#fff!important;height:36px!important;padding:0 16px!important;border-radius:6px!important;margin-left:8px!important;font-weight:600!important;border-bottom:0!important}
+.nav-cta:hover{background:#721c45!important;color:#fff!important}
+.hamburger{display:none;flex-direction:column;justify-content:center;gap:5px;width:38px;height:38px;background:transparent;border:0;padding:4px;cursor:pointer;z-index:1100;flex-shrink:0}
+.hamburger span{display:block;width:100%;height:2px;background:#fff;border-radius:2px;transition:transform .25s,opacity .25s}
+.hamburger.active span:nth-child(1),.hamburger.open span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+.hamburger.active span:nth-child(2),.hamburger.open span:nth-child(2){opacity:0}
+.hamburger.active span:nth-child(3),.hamburger.open span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+@media(max-width:900px){.nav{height:64px!important;padding:0 22px!important;position:sticky!important}.hamburger{display:flex!important}.nav-links{position:fixed!important;top:0!important;right:-100%!important;width:min(320px,82vw)!important;height:100vh!important;background:var(--c-dark,var(--dark,#0c1b2e))!important;flex-direction:column!important;align-items:flex-start!important;padding:88px 24px 40px!important;box-shadow:-8px 0 40px rgba(0,0,0,.28)!important;transition:right .3s ease!important;overflow-y:auto!important}.nav-links.open,.nav-links.active{right:0!important}.nav-links li{width:100%!important}.nav-links a{width:100%!important;height:auto!important;min-height:48px!important;padding:13px 0!important;justify-content:flex-start!important;border-bottom:1px solid rgba(255,255,255,.07)!important;font-size:15px!important}.nav-phone{font-size:15px!important}.nav-tool{margin-left:0!important;border:0!important;border-radius:0!important;height:auto!important}.nav-cta{margin:16px 0 0 0!important;justify-content:center!important;border-bottom:0!important;border-radius:6px!important;min-height:52px!important;width:100%!important}}
+</style>
 </head>
 <body>
 
@@ -746,6 +768,28 @@
  </nav>
  <div class="footer-copy">&copy; 2025 Husni Halim &middot; Visi Armada Consulting &middot; HRDC-Certified Lean Manufacturing Consultant Malaysia</div>
 </footer>
+<script id="site-nav-consistency-script">
+(function(){
+  var hamburger=document.getElementById('hamburger');
+  var navLinks=document.getElementById('navLinks');
+  if(!hamburger||!navLinks||hamburger.dataset.navReady==='true') return;
+  hamburger.dataset.navReady='true';
+  hamburger.addEventListener('click',function(){
+    var open=navLinks.classList.toggle('open');
+    hamburger.classList.toggle('active',open);
+    hamburger.setAttribute('aria-expanded',open?'true':'false');
+    document.body.style.overflow=open?'hidden':'';
+  });
+  navLinks.querySelectorAll('a').forEach(function(link){
+    link.addEventListener('click',function(){
+      navLinks.classList.remove('open');
+      hamburger.classList.remove('active');
+      hamburger.setAttribute('aria-expanded','false');
+      document.body.style.overflow='';
+    });
+  });
+})();
+</script>
 
 <script>
   // FAQ accordion

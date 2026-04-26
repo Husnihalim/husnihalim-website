@@ -19,7 +19,7 @@
   --c-soft:      #ece8e3;
   --c-body:      #374151;
 
-  --nav-h: 72px;
+  --nav-h: 66px;
   --section-pad: 96px 24px;
   --max-w: 1140px;
   --radius: 12px;
@@ -212,7 +212,7 @@ strong { color: var(--c-dark); }
    NAV
    ============================================================ */
 .nav {
-  position: fixed;
+  position: sticky;
   top: 0; left: 0; right: 0;
   z-index: 1000;
   display: flex;
@@ -220,15 +220,14 @@ strong { color: var(--c-dark); }
   gap: 0;
   height: var(--nav-h);
   padding: 0 40px;
-  background: transparent;
-  transition: background .3s, box-shadow .3s, backdrop-filter .3s;
+  background: var(--c-dark);
+  box-shadow: 0 2px 20px rgba(0,0,0,0.18);
+  transition: background .2s, box-shadow .2s;
 }
 
 .nav-scrolled {
-  background: rgba(12,27,46,0.96);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  box-shadow: 0 2px 20px rgba(0,0,0,0.25);
+  background: var(--c-dark);
+  box-shadow: 0 2px 20px rgba(0,0,0,0.18);
 }
 
 .nav-logo {
@@ -239,6 +238,7 @@ strong { color: var(--c-dark); }
   letter-spacing: -.01em;
   margin-right: auto;
   flex-shrink: 0;
+  line-height: 1;
 }
 .nav-logo em {
   font-style: italic;
@@ -250,30 +250,34 @@ strong { color: var(--c-dark); }
   align-items: center;
   gap: 0;
   list-style: none;
-  margin-left: auto;
+  margin: 0 0 0 auto;
+  padding: 0;
 }
 .nav-links a {
-  font-size: 12.5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: var(--nav-h);
+  padding: 0 10px;
+  border-radius: 0;
+  font-size: 13px;
   font-weight: 500;
-  color: rgba(255,255,255,0.82);
-  padding: 6px 8px;
-  border-radius: 6px;
-  transition: color .25s, background .25s, transform .25s var(--ease-out);
+  letter-spacing: .25px;
+  color: rgba(255,255,255,0.78);
+  transition: color .2s, background .2s;
   white-space: nowrap;
 }
 .nav-links a:hover {
   color: #fff;
-  background: rgba(255,255,255,0.1);
-  transform: translateY(-1px);
+  background: rgba(255,255,255,0.07);
 }
 
 .nav-phone {
   display: flex;
   align-items: center;
-  gap: 4px;
-  font-size: 11px !important;
-  color: rgba(255,255,255,0.7) !important;
-  padding: 5px 8px !important;
+  font-size: 13px !important;
+  color: rgba(255,255,255,0.68) !important;
+  padding: 0 10px !important;
 }
 .nav-phone:hover { color: #fff !important; }
 
@@ -281,6 +285,9 @@ strong { color: var(--c-dark); }
   color: var(--c-secondary) !important;
   border: 1px solid rgba(196,120,50,0.4);
   border-radius: 6px;
+  height: 34px !important;
+  margin-left: 6px;
+  padding: 0 12px !important;
 }
 .nav-tool:hover {
   background: rgba(196,120,50,0.15) !important;
@@ -290,9 +297,11 @@ strong { color: var(--c-dark); }
 .nav-cta {
   background: var(--c-accent) !important;
   color: #fff !important;
-  padding: 7px 14px !important;
+  height: 36px !important;
+  padding: 0 16px !important;
   border-radius: 6px;
-  font-size: 12px !important;
+  margin-left: 8px;
+  font-weight: 600 !important;
 }
 .nav-cta:hover { background: #721c45 !important; }
 
@@ -1655,29 +1664,35 @@ footer {
 /* Tablets */
 @media (max-width: 900px) {
   :root { --section-pad: 64px 24px; }
-  .nav { padding: 0 24px; }
+  .nav {
+    height: 64px;
+    padding: 0 22px;
+  }
   .hamburger { display: flex; }
   .nav-links {
     position: fixed;
     top: 0; right: -100%;
-    width: min(320px, 80vw);
+    width: min(320px, 82vw);
     height: 100vh;
     background: var(--c-dark);
     flex-direction: column;
     align-items: flex-start;
     gap: 0;
-    padding: calc(var(--nav-h) + 24px) 24px 40px;
-    transition: right .35s var(--ease-out);
+    padding: 88px 24px 40px;
+    transition: right .3s ease;
     overflow-y: auto;
-    box-shadow: -8px 0 40px rgba(0,0,0,0.3);
+    box-shadow: -8px 0 40px rgba(0,0,0,0.28);
   }
   .nav-links.active,
   .nav-links.open { right: 0; }
   .nav-links a {
     display: flex;
     align-items: center;
-    padding: 14px 0;
-    font-size: 16px;
+    justify-content: flex-start;
+    height: auto;
+    min-height: 48px;
+    padding: 13px 0 !important;
+    font-size: 15px;
     line-height: 1.25;
     border-radius: 0;
     border-bottom: 1px solid rgba(255,255,255,0.07);
@@ -1688,16 +1703,15 @@ footer {
     border: 0;
     border-bottom: 1px solid rgba(255,255,255,0.07);
     border-radius: 0;
-    padding: 14px 0 !important;
+    height: auto !important;
+    margin-left: 0;
   }
   .nav-links .nav-phone {
-    padding: 14px 0 !important;
-    font-size: 14px !important;
+    font-size: 15px !important;
   }
   .nav-cta {
-    margin-top: 16px;
+    margin: 16px 0 0 0;
     min-height: 52px;
-    padding: 0 24px !important;
     display: flex !important;
     align-items: center;
     justify-content: center;
