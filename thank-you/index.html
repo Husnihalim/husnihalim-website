@@ -77,7 +77,7 @@
 .site-updates-inner{display:grid;grid-template-columns:auto minmax(0,1fr);align-items:center;gap:18px;min-height:74px;padding:12px 0 12px 40px}
 .site-updates-label{display:flex;flex-direction:column;justify-content:center;gap:2px;min-width:142px;color:var(--c-dark,var(--navy,#0c1b2e));font-family:var(--font-b,var(--font-body,'DM Sans',sans-serif))}
 .site-updates-label span:first-child{font-size:10px;font-weight:800;letter-spacing:.16em;text-transform:uppercase;color:var(--c-accent,var(--accent,#8b2252))}
-.site-updates-label span:last-child{font-size:13px;font-weight:700;line-height:1.2}
+.site-updates-label span + span{font-size:13px;font-weight:700;line-height:1.2}
 .site-updates-viewport{position:relative;overflow:hidden;padding:2px 0}
 .site-updates-viewport::before,.site-updates-viewport::after{content:'';position:absolute;top:0;width:min(9vw,96px);height:100%;z-index:2;pointer-events:none}.site-updates-viewport::before{left:0;background:linear-gradient(90deg,#f7f3ed,rgba(247,243,237,0))}.site-updates-viewport::after{right:0;background:linear-gradient(270deg,#f7f3ed,rgba(247,243,237,0))}
 .site-updates-track{display:flex;width:max-content;gap:12px;animation:siteUpdatesScroll 58s linear infinite;will-change:transform}.site-updates:hover .site-updates-track{animation-play-state:paused}
@@ -85,7 +85,7 @@
 .site-update-card:hover{transform:translateY(-1px);border-color:rgba(196,120,50,.38);box-shadow:0 10px 24px rgba(12,27,46,.11)}
 .site-update-type{font-size:10px;font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:var(--c-secondary,var(--gold,#c47832))}.site-update-title{font-size:13px;font-weight:800;color:var(--c-dark,var(--navy,#0c1b2e))}.site-update-meta{font-size:12px;color:#667085}.site-update-dot{width:4px;height:4px;border-radius:50%;background:rgba(12,27,46,.28);flex:0 0 auto}
 @keyframes siteUpdatesScroll{from{transform:translateX(0)}to{transform:translateX(-50%)}}
-@media(max-width:900px){.site-updates-inner{grid-template-columns:1fr;gap:8px;min-height:0;padding:12px 0 12px 20px}.site-updates-label{min-width:0;flex-direction:row;align-items:center;gap:10px}.site-updates-label span:last-child{font-size:12px}.site-updates-track{animation-duration:46s}.site-update-card{min-height:42px;padding:8px 12px}.site-update-title{font-size:12px}.site-update-meta{font-size:11px}}
+@media(max-width:900px){.site-updates-inner{grid-template-columns:1fr;gap:8px;min-height:0;padding:12px 0 12px 20px}.site-updates-label{min-width:0;flex-direction:row;align-items:center;gap:10px}.site-updates-label span + span{font-size:12px}.site-updates-track{animation-duration:46s}.site-update-card{min-height:42px;padding:8px 12px}.site-update-title{font-size:12px}.site-update-meta{font-size:11px}}
 @media(prefers-reduced-motion:reduce){.site-updates-track{animation:none;flex-wrap:nowrap;overflow-x:auto;width:auto;padding-right:20px}.site-updates-viewport{overflow-x:auto}.site-updates-viewport::before,.site-updates-viewport::after{display:none}}
 </style>
 </head>
@@ -109,7 +109,7 @@
 </nav>
 <section class="site-updates" aria-label="Current updates from Husni Halim">
   <div class="site-updates-inner">
-    <div class="site-updates-label"><span>Current Updates</span><span>In Husni's world</span></div>
+    <div class="site-updates-label"><span>Current Updates</span></div>
     <div class="site-updates-viewport">
       <div class="site-updates-track">
         <a class="site-update-card" href="/kaizenchampion/"><span class="site-update-type">Program</span><span class="site-update-title">Kaizen Champion Development Program</span><span class="site-update-dot"></span><span class="site-update-meta">18-22 May 2026 · Shah Alam</span></a>

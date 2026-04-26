@@ -179,7 +179,7 @@ async function sendContactAutoReply(submission) {
     <h2 style="margin:0 0 12px;color:#111827;">Thanks for reaching out</h2>
     <p style="line-height:1.6;margin:0 0 14px;">Hi ${name},</p>
     <p style="line-height:1.6;margin:0 0 14px;">I received your enquiry about <strong>${interest}</strong> and will get back to you within 1 business day.</p>
-    <p style="line-height:1.6;margin:0 0 14px;">If there is anything urgent, you can reply to this email or WhatsApp me at <a href="https://wa.me/60165241901" style="color:#8b2252;">+60 16-524 1901</a>.</p>
+    <p style="line-height:1.6;margin:0 0 14px;">If there is anything urgent, you can reply to this email or WhatsApp me at <a href="https://wa.me/60165261901" style="color:#8b2252;">+60165261901</a>.</p>
     <p style="line-height:1.6;margin:20px 0 0;">Regards,<br><strong>Husni Halim</strong></p>
   </div>
 </body>
