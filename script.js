@@ -120,19 +120,29 @@
  body: JSON.stringify(data),
  });
  const result = await resp.json();
- if (!result.success) throw new Error(result.error || 'Submission failed');
+ if (!result.success) {
+ const error = new Error(result.error || 'Submission failed');
+ error.emailDeliveryFailed = Boolean(result.emailDeliveryFailed);
+ error.saved = Boolean(result.saved);
+ throw error;
+ }
  } else {
  const submissions = JSON.parse(localStorage.getItem('husni_submissions') || '[]');
  submissions.push({ ...data, timestamp: new Date().toISOString() });
  localStorage.setItem('husni_submissions', JSON.stringify(submissions));
  }
 
- btn.textContent = 'Inquiry Sent!';
+ btn.textContent = 'Enquiry Sent!';
  btn.style.background = '#22c55e';
  this.reset();
  } catch (err) {
+ if (err.emailDeliveryFailed && err.saved) {
+ btn.textContent = 'Received - Email Issue';
+ btn.style.background = '#f59e0b';
+ } else {
  btn.textContent = 'Failed - Try Again';
  btn.style.background = '#ef4444';
+ }
  console.error('Contact form error:', err);
  }
 

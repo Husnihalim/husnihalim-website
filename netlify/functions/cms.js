@@ -12,6 +12,16 @@ const JWT_SECRET = 'vac-cms-jwt-secret-2025';
 const VALID_SITES = ['vac', 'husni'];
 const MAILERLITE_API_KEY = process.env.MAILERLITE_API_KEY;
 const MAILERLITE_CONTACT_GROUP_ID = process.env.MAILERLITE_CONTACT_GROUP_ID || '182444406325904847';
+const RESEND_API_KEY = process.env.RESEND_API_KEY;
+const CONTACT_NOTIFICATION_EMAIL = process.env.CONTACT_NOTIFICATION_EMAIL || 'husnihalim@visiarmada.com';
+const CONTACT_CC_EMAILS = Array.from(new Set([
+ ...(process.env.CONTACT_CC_EMAILS || '').split(','),
+ 'admin@visiarmada.com',
+]
+ .map((email) => email.trim())
+ .filter(Boolean)));
+const CONTACT_FROM_EMAIL = process.env.CONTACT_FROM_EMAIL || 'noreply@husnihalim.com';
+const CONTACT_REPLY_TO_EMAIL = process.env.CONTACT_REPLY_TO_EMAIL || CONTACT_NOTIFICATION_EMAIL;
 
 // Simple JWT implementation for auth
 function createToken(payload) {
@@ -79,6 +89,109 @@ async function addContactToMailerLite(submission) {
  const message = await response.text();
  console.error('MailerLite contact sync failed:', message);
  }
+}
+
+function escapeHtml(value) {
+ return cleanString(value)
+ .replace(/&/g, '&amp;')
+ .replace(/</g, '&lt;')
+ .replace(/>/g, '&gt;')
+ .replace(/"/g, '&quot;')
+ .replace(/'/g, '&#039;');
+}
+
+async function sendResendEmail({ to, cc, replyTo, subject, html }) {
+ if (!RESEND_API_KEY) {
+ throw new Error('RESEND_API_KEY is not configured');
+ }
+
+ const response = await fetch('https://api.resend.com/emails', {
+ method: 'POST',
+ headers: {
+ Authorization: `Bearer ${RESEND_API_KEY}`,
+ 'Content-Type': 'application/json',
+ },
+ body: JSON.stringify({
+ from: `Husni Halim Website <${CONTACT_FROM_EMAIL}>`,
+ to: Array.isArray(to) ? to : [to],
+ cc,
+ reply_to: replyTo || undefined,
+ subject,
+ html,
+ }),
+ });
+
+ if (!response.ok) {
+ const messageText = await response.text();
+ throw new Error(`Resend email failed: ${messageText}`);
+ }
+}
+
+async function sendContactNotification(submission) {
+ const subjectName = cleanString(submission.name) || 'Website visitor';
+ const name = escapeHtml(submission.name) || 'Website visitor';
+ const email = cleanString(submission.email).toLowerCase();
+ const safeEmail = escapeHtml(email);
+ const company = escapeHtml(submission.company) || '-';
+ const interest = escapeHtml(submission.interest) || '-';
+ const message = escapeHtml(submission.message) || '-';
+ const submittedAt = new Date(submission.timestamp).toLocaleString('en-MY', { timeZone: 'Asia/Kuala_Lumpur' });
+
+ await sendResendEmail({
+ to: CONTACT_NOTIFICATION_EMAIL,
+ cc: CONTACT_CC_EMAILS,
+ replyTo: email,
+ subject: `New website enquiry: ${subjectName}`,
+ html: `<!doctype html>
+<html>
+<body style="font-family:Arial,sans-serif;background:#f6f7f9;margin:0;padding:24px;color:#111827;">
+  <div style="max-width:620px;margin:0 auto;background:#fff;border-radius:10px;padding:28px;border:1px solid #e5e7eb;">
+    <h2 style="margin:0 0 18px;color:#111827;">New website enquiry</h2>
+    <table style="width:100%;border-collapse:collapse;">
+      <tr><td style="padding:8px 0;color:#6b7280;width:120px;">Name</td><td style="padding:8px 0;"><strong>${name}</strong></td></tr>
+      <tr><td style="padding:8px 0;color:#6b7280;">Email</td><td style="padding:8px 0;"><a href="mailto:${safeEmail}">${safeEmail}</a></td></tr>
+      <tr><td style="padding:8px 0;color:#6b7280;">Company</td><td style="padding:8px 0;">${company}</td></tr>
+      <tr><td style="padding:8px 0;color:#6b7280;">Interest</td><td style="padding:8px 0;">${interest}</td></tr>
+      <tr><td style="padding:8px 0;color:#6b7280;">Submitted</td><td style="padding:8px 0;">${submittedAt} (KL)</td></tr>
+    </table>
+    <div style="margin-top:18px;padding:16px;background:#f9fafb;border-radius:8px;white-space:pre-wrap;line-height:1.5;">${message}</div>
+  </div>
+</body>
+</html>`,
+ });
+}
+
+async function sendContactAutoReply(submission) {
+ const email = cleanString(submission.email).toLowerCase();
+ if (!email) return;
+
+ const name = escapeHtml(submission.name) || 'there';
+ const interest = escapeHtml(submission.interest) || 'your enquiry';
+
+ await sendResendEmail({
+ to: email,
+ replyTo: CONTACT_REPLY_TO_EMAIL,
+ subject: 'Thanks for your enquiry - Husni Halim',
+ html: `<!doctype html>
+<html>
+<body style="font-family:Arial,sans-serif;background:#f6f7f9;margin:0;padding:24px;color:#111827;">
+  <div style="max-width:620px;margin:0 auto;background:#fff;border-radius:10px;padding:28px;border:1px solid #e5e7eb;">
+    <h2 style="margin:0 0 12px;color:#111827;">Thanks for reaching out</h2>
+    <p style="line-height:1.6;margin:0 0 14px;">Hi ${name},</p>
+    <p style="line-height:1.6;margin:0 0 14px;">I received your enquiry about <strong>${interest}</strong> and will get back to you within 1 business day.</p>
+    <p style="line-height:1.6;margin:0 0 14px;">If there is anything urgent, you can reply to this email or WhatsApp me at <a href="https://wa.me/60165241901" style="color:#8b2252;">+60 16-524 1901</a>.</p>
+    <p style="line-height:1.6;margin:20px 0 0;">Regards,<br><strong>Husni Halim</strong></p>
+  </div>
+</body>
+</html>`,
+ });
+}
+
+async function sendContactEmails(submission) {
+ await Promise.all([
+ sendContactNotification(submission),
+ sendContactAutoReply(submission),
+ ]);
 }
 
 // Get site from query params or body, default to 'vac'
@@ -478,6 +591,15 @@ exports.handler = async (event) => {
  // ==== CONTACT FORM SUBMISSION (public) ====
  if (path === '/contact' && event.httpMethod === 'POST') {
  const submission = JSON.parse(event.body);
+ const email = cleanString(submission.email).toLowerCase();
+ if (!email) {
+ return {
+ statusCode: 400,
+ headers,
+ body: JSON.stringify({ success: false, error: 'Email is required.' }),
+ };
+ }
+ submission.email = email;
  const submissionSite = submission.site && VALID_SITES.includes(submission.site) ? submission.site : siteId;
  submission.timestamp = new Date().toISOString();
  submission.id = Date.now().toString(36) + Math.random().toString(36).slice(2, 7);
@@ -490,11 +612,26 @@ exports.handler = async (event) => {
  } catch (error) {
  console.error('MailerLite contact sync failed:', error);
  }
+ try {
+ await sendContactEmails(submission);
+ } catch (error) {
+ console.error('Contact notification failed:', error);
+ return {
+ statusCode: 502,
+ headers,
+ body: JSON.stringify({
+ success: false,
+ saved: true,
+ emailDeliveryFailed: true,
+ error: 'Your enquiry was received, but email delivery failed. Please check RESEND_API_KEY and CONTACT_FROM_EMAIL in Netlify.',
+ }),
+ };
+ }
 
  return {
  statusCode: 200,
  headers,
- body: JSON.stringify({ success: true, message: 'Thank you for your inquiry. We will get back to you soon.' }),
+ body: JSON.stringify({ success: true, message: 'Thank you for your enquiry. We will get back to you soon.' }),
  };
  }
 
