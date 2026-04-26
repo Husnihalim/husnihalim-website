@@ -2027,25 +2027,29 @@ function showResults(){
  });
 }
 
-/* ── MAILERLITE INTEGRATION ── */
-const ML_API_KEY  = 'eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiI0IiwianRpIjoiZjRjOWU4ZDI5MzA1OWQzNTJhM2E5N2IyM2YyNzI0MGY1ZWFiZjgyYTczZjM0NGI3NzMxZDU0ODA3MzZjMmZmYWE3NWI2N2U1YzNkOGIwZDAiLCJpYXQiOjE3NzQ0MDk1NDQuOTczNDg3LCJuYmYiOjE3NzQ0MDk1NDQuOTczNDksImV4cCI6NDkzMDA4MzE0NC45NjkyNTUsInN1YiI6IjIyMjc2OTgiLCJzY29wZXMiOltdfQ.tgdzpLWAjSdhxQOsVFK94I6wzWFjMdBn5L2Ezdj9ewToVRi_UDPEegVScqB9JSdOM-KmBQOmtJCRgqpykkCs3J16fQb9GTHDC_er5rUHWjMoBJRp9VxUJHGvKpNM0oHFCXpP_XdVAn8M3wfa48y1-gMK1Fex-_idAebgcttJYUvsENX5z--bmJSQDatIKm5y7h7r1GqUjZqjlPnPQ5wm7BjAfbYBT8ALt5fUgGNhaAnd9hn68kk1HyhBfm25MS8KZLyjIibE7DdJ-Yr7iMNeCOVZisn5-boD5hjZi3JwGRMkdPsb3e4sjB2InIIHG7PFKZ1cTZajsYeRSbMkyFecJ2yFuFf5o4keMIwplTmKQxHtULOiw_R-Uwsv-kFeUQcNchkbCUbJ0Vap_zg0keay5cFdDB-uUxO67rT1QNJFn3A7gCFoQBAt11Nvf5oCPQe7bbdZhZEnVXT4inw9Rq7lI4S_SMQTeEXmeejqIxFEwLHNlQYV3xeo5izxJkAICaK8rpn_LzhlZvQQAScf8yVh8IGJUODb4j3IVS6U-TXsgoE5F4mJWacE7_FYOZaOmy8xjJJ5C4SjXYvecLF1svUtOlRGl7Qjpdi7iIX7lTqwjCahpyeEdiZ2M0ZykG3v4jgHeGDOy0BxSnF6U-6wdHwCy8Pe8xOyaSdH7DPZHDM15Hw';
-const ML_GROUP_ID = '182927163251492060';
-
 async function subscribeToMailerLite({ email, fname, lname, jobtitle, company, industry, oee, availability, performance, quality }) {
- if (!email || ML_GROUP_ID === 'YOUR_GROUP_ID') return;
+ if (!email) return;
  const payload = {
   email,
-  fields: { name: fname, last_name: lname, company: company || '' },
-  groups: [ML_GROUP_ID],
-  status: 'active'
+  fname,
+  lname,
+  jobtitle,
+  company,
+  industry,
+  oee,
+  availability,
+  performance,
+  quality,
+  group: 'oee',
+  source: 'oee-calculator'
  };
  try {
-  const res = await fetch('https://connect.mailerlite.com/api/subscribers', {
+  const res = await fetch('/api/subscribe', {
    method: 'POST',
-   headers: { 'Content-Type': 'application/json', 'Accept': 'application/json', 'Authorization': 'Bearer ' + ML_API_KEY },
+   headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
    body: JSON.stringify(payload)
   });
-  if (!res.ok) { const err = await res.json().catch(()=>({})); console.warn('MailerLite:', res.status, err?.message || ''); }
+  if (!res.ok) { const err = await res.json().catch(()=>({})); console.warn('MailerLite:', res.status, err?.error || ''); }
  } catch(e) { console.warn('MailerLite subscription failed silently:', e.message); }
 }
 

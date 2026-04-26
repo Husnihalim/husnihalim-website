@@ -10,6 +10,8 @@ const JWT_SECRET = 'vac-cms-jwt-secret-2025';
 
 // Valid site identifiers
 const VALID_SITES = ['vac', 'husni'];
+const MAILERLITE_API_KEY = process.env.MAILERLITE_API_KEY;
+const MAILERLITE_CONTACT_GROUP_ID = process.env.MAILERLITE_CONTACT_GROUP_ID || '182444406325904847';
 
 // Simple JWT implementation for auth
 function createToken(payload) {
@@ -36,6 +38,47 @@ function getAuth(event) {
  const authHeader = event.headers.authorization || event.headers.Authorization || '';
  const token = authHeader.replace('Bearer ', '');
  return verifyToken(token);
+}
+
+function cleanString(value) {
+ return typeof value === 'string' ? value.trim() : '';
+}
+
+async function addContactToMailerLite(submission) {
+ if (!MAILERLITE_API_KEY || !submission.email) return;
+
+ const nameParts = cleanString(submission.name).split(/\s+/).filter(Boolean);
+ const firstName = nameParts.shift() || '';
+ const lastName = nameParts.join(' ');
+ const fields = {
+ name: firstName,
+ last_name: lastName,
+ company: cleanString(submission.company),
+ };
+
+ Object.keys(fields).forEach((key) => {
+ if (!fields[key]) delete fields[key];
+ });
+
+ const response = await fetch('https://connect.mailerlite.com/api/subscribers', {
+ method: 'POST',
+ headers: {
+ 'Content-Type': 'application/json',
+ Accept: 'application/json',
+ Authorization: `Bearer ${MAILERLITE_API_KEY}`,
+ },
+ body: JSON.stringify({
+ email: cleanString(submission.email).toLowerCase(),
+ fields,
+ groups: [MAILERLITE_CONTACT_GROUP_ID],
+ status: 'active',
+ }),
+ });
+
+ if (!response.ok) {
+ const message = await response.text();
+ console.error('MailerLite contact sync failed:', message);
+ }
 }
 
 // Get site from query params or body, default to 'vac'
@@ -442,6 +485,11 @@ exports.handler = async (event) => {
  const submissions = await getData('submissions', submissionSite);
  submissions.push(submission);
  await setData('submissions', submissions, submissionSite);
+ try {
+ await addContactToMailerLite(submission);
+ } catch (error) {
+ console.error('MailerLite contact sync failed:', error);
+ }
 
  return {
  statusCode: 200,
