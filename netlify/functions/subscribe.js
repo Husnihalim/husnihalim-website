@@ -1,4 +1,11 @@
 const MAILERLITE_API_KEY = process.env.MAILERLITE_API_KEY;
+const RESEND_API_KEY = process.env.RESEND_API_KEY;
+const NOTIFICATION_EMAIL = process.env.CONTACT_NOTIFICATION_EMAIL || 'husnihalim@visiarmada.com';
+const CC_EMAILS = (process.env.CONTACT_CC_EMAILS || 'admin@visiarmada.com')
+  .split(',')
+  .map((email) => email.trim())
+  .filter(Boolean);
+const FROM_EMAIL = process.env.CONTACT_FROM_EMAIL || 'noreply@husnihalim.com';
 
 const GROUPS = {
   contact: process.env.MAILERLITE_CONTACT_GROUP_ID || '182444406325904847',
@@ -28,6 +35,63 @@ function buildFields(data) {
   });
 
   return fields;
+}
+
+function escapeHtml(value) {
+  return cleanString(value)
+    .replace(/&/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;')
+    .replace(/"/g, '&quot;')
+    .replace(/'/g, '&#039;');
+}
+
+async function sendSubscriptionNotification(data) {
+  if (!RESEND_API_KEY) {
+    console.error('Subscription notification skipped: RESEND_API_KEY is not configured');
+    return;
+  }
+
+  const email = cleanString(data.email).toLowerCase();
+  const name = [data.fname || data.firstname || data.name, data.lname || data.lastname].map(cleanString).filter(Boolean).join(' ') || 'Website visitor';
+  const source = cleanString(data.source || data.group || 'subscription');
+  const rows = Object.entries(data)
+    .map(([key, value]) => `
+      <tr>
+        <td style="padding:8px 12px;border-bottom:1px solid #e5e7eb;color:#6b7280;width:140px;">${escapeHtml(key)}</td>
+        <td style="padding:8px 12px;border-bottom:1px solid #e5e7eb;">${escapeHtml(value)}</td>
+      </tr>`)
+    .join('');
+
+  const response = await fetch('https://api.resend.com/emails', {
+    method: 'POST',
+    headers: {
+      Authorization: `Bearer ${RESEND_API_KEY}`,
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify({
+      from: `Husni Halim Website <${FROM_EMAIL}>`,
+      to: [NOTIFICATION_EMAIL],
+      cc: CC_EMAILS,
+      reply_to: email || undefined,
+      subject: `New ${source} lead: ${name}`,
+      html: `<!doctype html>
+<html>
+<body style="font-family:Arial,sans-serif;background:#f6f7f9;margin:0;padding:24px;color:#111827;">
+  <div style="max-width:680px;margin:0 auto;background:#fff;border-radius:10px;padding:28px;border:1px solid #e5e7eb;">
+    <h2 style="margin:0 0 6px;color:#111827;">New website lead</h2>
+    <p style="margin:0 0 18px;color:#6b7280;">${escapeHtml(source)}</p>
+    <table style="width:100%;border-collapse:collapse;">${rows}</table>
+  </div>
+</body>
+</html>`,
+    }),
+  });
+
+  if (!response.ok) {
+    const message = await response.text();
+    throw new Error(`Resend subscription notification failed: ${message}`);
+  }
 }
 
 async function addToMailerLite(data) {
@@ -81,6 +145,11 @@ exports.handler = async function(event) {
   try {
     const data = JSON.parse(event.body || '{}');
     const result = await addToMailerLite(data);
+    try {
+      await sendSubscriptionNotification(data);
+    } catch (error) {
+      console.error('Subscription notification failed:', error);
+    }
     return { ...result, headers };
   } catch (error) {
     console.error('subscribe error:', error);

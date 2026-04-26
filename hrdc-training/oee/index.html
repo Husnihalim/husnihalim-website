@@ -673,7 +673,7 @@
     <div class="trainer-inner">
       <div class="trainer-intro">
         <h2>Husni <em>Halim</em></h2>
-        <p>16+ years on the factory floor across semiconductors, aerospace, automotive, oil &amp; gas, and FMCG. Not a classroom-only trainer — a practitioner who ran Kaizen events at Prysmian global plants across five countries and delivered OEE programmes across 30 Malaysian factories under TERAJU Pritech 4.0 as Lead Consultant. Principal Consultant at <a href="https://visiarmada.com" target="_blank" rel="noopener" style="color:var(--gold);">Visi Armada Consulting</a>.</p>
+        <p>16+ years on the factory floor across semiconductors, aerospace, automotive, oil &amp; gas, and FMCG. Not a classroom-only trainer — a practitioner who ran Kaizen events at Prysmian global plants, delivered projects across 11 countries, and delivered OEE programmes across 30 Malaysian factories under TERAJU Pritech 4.0 as Lead Consultant. Principal Consultant at <a href="https://visiarmada.com" target="_blank" rel="noopener" style="color:var(--gold);">Visi Armada Consulting</a>.</p>
       </div>
       <div class="creds-grid">
         <div class="cred-item"><h4>HRDC Accredited Trainer</h4><p>Accredited by Human Resource Development Corporation (HRD Corp) Malaysia</p></div>
@@ -756,6 +756,23 @@
  </nav>
  <div class="footer-copy">&copy; 2025 Husni Halim &middot; Visi Armada Consulting &middot; HRDC-Certified Lean Manufacturing Consultant Malaysia</div>
 </footer>
+
+<script>
+  // FAQ accordion
+  document.querySelectorAll('.faq-q').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const expanded = btn.getAttribute('aria-expanded') === 'true';
+      document.querySelectorAll('.faq-q').forEach(b => {
+        b.setAttribute('aria-expanded', 'false');
+        b.nextElementSibling.classList.remove('open');
+      });
+      if (!expanded) {
+        btn.setAttribute('aria-expanded', 'true');
+        btn.nextElementSibling.classList.add('open');
+      }
+    });
+  });
+</script>
 <script id="site-nav-consistency-script">
 (function(){
   var hamburger=document.getElementById('hamburger');
@@ -777,23 +794,6 @@
     });
   });
 })();
-</script>
-
-<script>
-  // FAQ accordion
-  document.querySelectorAll('.faq-q').forEach(btn => {
-    btn.addEventListener('click', () => {
-      const expanded = btn.getAttribute('aria-expanded') === 'true';
-      document.querySelectorAll('.faq-q').forEach(b => {
-        b.setAttribute('aria-expanded', 'false');
-        b.nextElementSibling.classList.remove('open');
-      });
-      if (!expanded) {
-        btn.setAttribute('aria-expanded', 'true');
-        btn.nextElementSibling.classList.add('open');
-      }
-    });
-  });
 </script>
 </body>
 </html>

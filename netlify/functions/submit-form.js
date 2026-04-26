@@ -6,12 +6,16 @@
 
 const RESEND_API_KEY      = process.env.RESEND_API_KEY;
 const MAILERLITE_API_KEY  = process.env.MAILERLITE_API_KEY;
-const YOUR_EMAIL          = "mohdhusni@gmail.com";
+const YOUR_EMAIL          = process.env.CONTACT_NOTIFICATION_EMAIL || "husnihalim@visiarmada.com";
+const CC_EMAILS           = (process.env.CONTACT_CC_EMAILS || "admin@visiarmada.com")
+  .split(",")
+  .map(function(email) { return email.trim(); })
+  .filter(Boolean);
 const YOUR_NAME           = "Husni Halim";
 const FROM_EMAIL          = "noreply@husnihalim.com";
 const MAILERLITE_GROUP_ID = "182444406325904847";
 
-function sendEmail({ to, toName, subject, html }) {
+function sendEmail({ to, toName, cc, subject, html }) {
   return fetch("https://api.resend.com/emails", {
     method: "POST",
     headers: {
@@ -21,6 +25,7 @@ function sendEmail({ to, toName, subject, html }) {
     body: JSON.stringify({
       from: `${YOUR_NAME} <${FROM_EMAIL}>`,
       to: toName ? [`${toName} <${to}>`] : [to],
+      cc,
       subject,
       html,
     }),
@@ -111,7 +116,7 @@ td:first-child{color:#666;width:80px}
     // Run all 3 in parallel
     await Promise.all([
       sendEmail({ to: email, toName: fullName, subject: "Got your request — I'll reach out within 48 hours", html: visitorHtml }),
-      sendEmail({ to: YOUR_EMAIL, subject: `New lead: ${fullName} requested a floor assessment`, html: husniHtml }),
+      sendEmail({ to: YOUR_EMAIL, cc: CC_EMAILS, subject: `New lead: ${fullName} requested a floor assessment`, html: husniHtml }),
       addToMailerLite(email, firstname, lastname),
     ]);
 

@@ -2154,6 +2154,23 @@ function resetAll(){
   <p><strong>Can HRDC training help improve OEE?</strong> Yes — our HRDC-claimable OEE and TPM training programmes teach your team to measure, analyse, and improve OEE systematically. Fully claimable under the SBL-Khas scheme.</p>
 </section>
 
+<!-- OEE Calculator Schema -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "HowTo",
+  "name": "How to Calculate and Interpret OEE for Malaysian Factories",
+  "description": "Step-by-step guide to calculating Overall Equipment Effectiveness (OEE) and interpreting results to improve factory productivity.",
+  "author": { "@id": "https://husnihalim.com/#husni-halim" },
+  "step": [
+    { "@type": "HowToStep", "name": "Measure Availability", "text": "Divide actual run time by planned production time. Track unplanned stops and changeovers." },
+    { "@type": "HowToStep", "name": "Measure Performance", "text": "Divide actual output rate by ideal rate. Identify slow cycles and minor stoppages." },
+    { "@type": "HowToStep", "name": "Measure Quality", "text": "Divide good units by total units produced. Include rework and startup scrap." },
+    { "@type": "HowToStep", "name": "Calculate OEE", "text": "Multiply Availability × Performance × Quality. World-class target is 85%." },
+    { "@type": "HowToStep", "name": "Act on the Losses", "text": "Identify your biggest loss category and run a focused Kaizen event to eliminate it." }
+  ]
+}
+</script>
 <script id="site-nav-consistency-script">
 (function(){
   var hamburger=document.getElementById('hamburger');
@@ -2175,23 +2192,6 @@ function resetAll(){
     });
   });
 })();
-</script>
-<!-- OEE Calculator Schema -->
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "HowTo",
-  "name": "How to Calculate and Interpret OEE for Malaysian Factories",
-  "description": "Step-by-step guide to calculating Overall Equipment Effectiveness (OEE) and interpreting results to improve factory productivity.",
-  "author": { "@id": "https://husnihalim.com/#husni-halim" },
-  "step": [
-    { "@type": "HowToStep", "name": "Measure Availability", "text": "Divide actual run time by planned production time. Track unplanned stops and changeovers." },
-    { "@type": "HowToStep", "name": "Measure Performance", "text": "Divide actual output rate by ideal rate. Identify slow cycles and minor stoppages." },
-    { "@type": "HowToStep", "name": "Measure Quality", "text": "Divide good units by total units produced. Include rework and startup scrap." },
-    { "@type": "HowToStep", "name": "Calculate OEE", "text": "Multiply Availability × Performance × Quality. World-class target is 85%." },
-    { "@type": "HowToStep", "name": "Act on the Losses", "text": "Identify your biggest loss category and run a focused Kaizen event to eliminate it." }
-  ]
-}
 </script>
 </body>
 </html>

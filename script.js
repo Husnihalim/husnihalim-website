@@ -11,6 +11,53 @@
  const isLocal = location.protocol === 'file:';
  const SITE_ID = 'husni';
 
+ // ---- Premium motion layer ----
+ const motionGroups = [
+ '.section > .section-label',
+ '.section > h2',
+ '.section > .section-desc',
+ '.company-marquee',
+ '.kc-hero-content > *',
+ '.kc-stats-card',
+ '.kc-section > .kc-container > h2',
+ '.kc-section > .kc-container > .section-sub',
+ '.obj-card',
+ '.outcome-col',
+ '.kc-day',
+ '.feat-card',
+ '.price-card',
+ '.hrdc-banner',
+ '.faq-item',
+ '.kc-form-wrap',
+ '.service-card',
+ '.testimonial-card',
+ '.about-text > *',
+ '.cred-card',
+ '.exp-item',
+ '.case-card',
+ '.kaizen-hero-content > *',
+ '.training-card',
+ '.training-note',
+ '.blog-card',
+ '.contact-copy > *',
+ '.contact-method',
+ '.contact-form-wrap',
+ '.footer-col'
+ ];
+
+ motionGroups.forEach((selector) => {
+ const elements = document.querySelectorAll(selector);
+ elements.forEach((el, index) => {
+ if (!el.classList.contains('reveal')) el.classList.add('reveal');
+ const delay = Math.min(index % 8, 7) * 70;
+ el.style.setProperty('--reveal-delay', delay + 'ms');
+ });
+ });
+
+ document.querySelectorAll('.service-card, .testimonial-card, .cred-card, .exp-item, .case-card, .training-card, .blog-card, .obj-card, .feat-card, .price-card, .faq-item, .kc-day').forEach((el) => {
+ el.classList.add('premium-card');
+ });
+
  // ---- Scroll Reveal ----
  const revealElements = document.querySelectorAll('.reveal');
  const revealObserver = new IntersectionObserver(
