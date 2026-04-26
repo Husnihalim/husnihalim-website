@@ -1743,6 +1743,8 @@ footer {
   .contact-inner { grid-template-columns: 1fr; gap: 40px; padding: 60px 24px; }
   .footer-grid { grid-template-columns: 1fr 1fr; gap: 32px; }
   .kaizen-hero-inner { padding: 60px 24px; }
+  .kc-pain-grid { grid-template-columns: 1fr !important; }
+  .kc-roi-strip { grid-template-columns: 1fr !important; }
 }
 
 /* Phones */
