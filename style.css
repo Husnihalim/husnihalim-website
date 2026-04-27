@@ -419,17 +419,18 @@ strong { color: var(--c-dark); }
 }
 
 .hero-title {
-  font-size: clamp(56px, 8vw, 96px);
+  font-size: 82px;
   font-weight: 700;
   color: #fff;
-  line-height: 1;
-  letter-spacing: -.02em;
+  line-height: .96;
+  letter-spacing: 0;
   margin-bottom: 8px;
+  white-space: nowrap;
 }
 .hero-title em {
   font-style: italic;
   color: var(--c-secondary);
-  display: block;
+  display: inline;
 }
 
 .hero-role {
@@ -496,7 +497,8 @@ strong { color: var(--c-dark); }
 .hero-portrait-wrap {
   position: relative;
   flex-shrink: 0;
-  width: 360px;
+  width: 390px;
+  transform: translateY(-24px);
 }
 .hero-portrait-glow {
   position: absolute;
@@ -510,13 +512,13 @@ strong { color: var(--c-dark); }
   position: relative;
   z-index: 1;
   width: 100%;
-  height: 520px;
+  height: 560px;
   object-fit: cover;
   object-position: top center;
   border-radius: 16px;
   filter: grayscale(20%) contrast(1.05);
   box-shadow: var(--shadow-lg);
-  margin-top: -40px;
+  margin-top: -48px;
   animation: portraitFloat 7s ease-in-out infinite;
   transition: filter .45s ease, transform .45s var(--ease-out), box-shadow .45s ease;
 }
@@ -1703,6 +1705,10 @@ footer {
 
 /* Large tablets / small desktops */
 @media (max-width: 1100px) {
+  .hero-inner { gap: 44px; }
+  .hero-title { font-size: 62px; }
+  .hero-portrait-wrap { width: 340px; }
+  .hero-portrait { height: 500px; }
   .expertise-grid { grid-template-columns: repeat(2, 1fr); }
   .footer-grid { grid-template-columns: 1fr 1fr; gap: 32px; }
 }
@@ -1768,7 +1774,7 @@ footer {
   }
 
   .hero-inner { flex-direction: column-reverse; gap: 40px; padding: 60px 24px 80px; }
-  .hero-portrait-wrap { width: min(280px, 80vw); }
+  .hero-portrait-wrap { width: min(280px, 80vw); transform: none; }
   .hero-portrait { height: 340px; }
   .hero-portrait-cred { position: static; transform: none; white-space: normal; margin-top: 12px; }
   .hero-stats { gap: 20px; padding-right: 0; }
@@ -1802,7 +1808,7 @@ footer {
   :root { --section-pad: 48px 20px; }
   .nav { padding: 0 20px; }
 
-  .hero-title { font-size: clamp(44px, 14vw, 72px); }
+  .hero-title { font-size: 48px; white-space: normal; }
   .hero-inner { padding: 40px 20px 70px; }
   .hero-stats { flex-wrap: wrap; gap: 16px; }
   .hero-stat { min-width: 110px; }
