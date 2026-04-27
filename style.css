@@ -1577,22 +1577,6 @@ strong { color: var(--c-dark); }
   margin-top: 10px;
   margin-bottom: 0;
 }
-.form-note a {
-  color: var(--c-accent);
-  font-weight: 600;
-}
-.google-form-card {
-  display: flex;
-  flex-direction: column;
-  min-height: 720px;
-}
-.google-form-iframe {
-  width: 100%;
-  min-height: 980px;
-  border: 0;
-  border-radius: 6px;
-  background: #fff;
-}
 
 /* ============================================================
    FOOTER
@@ -1874,8 +1858,6 @@ footer {
   .footer-inner { padding: 48px 20px 24px; }
 
   .contact-form-wrap { padding: 24px 20px; }
-  .google-form-card { min-height: 760px; }
-  .google-form-iframe { min-height: 1080px; }
   .contact-inner { padding: 48px 20px; }
 
   .kaizen-hero-inner { padding: 48px 20px; }
