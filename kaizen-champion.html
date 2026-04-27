@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="robots" content="noindex, nofollow, noarchive">
-    <meta name="description" content="Kaizen Champion Development Program - 5-day intensive training for manufacturing leadership. May 18-22, 2026. Sustainable improvement methodology.">
+    <meta name="description" content="Kaizen Champion Development Program - 5-day intensive training for manufacturing leadership. 29 May–2 June 2026. Sustainable improvement methodology.">
 
     <link rel="canonical" href="https://visiarmada.com/kaizen-champion"/>
 
@@ -362,8 +362,8 @@
         /* ===== OBJECTIVES SECTION ===== */
         .objectives-grid {
             display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 30px;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 18px;
             margin-top: 3rem;
         }
 
@@ -392,6 +392,12 @@
             color: #666;
             margin: 0;
             line-height: 1.6;
+        }
+
+        @media (max-width: 1100px) and (min-width: 769px) {
+            .pricing-container {
+                grid-template-columns: repeat(2, 1fr);
+            }
         }
 
         @media (max-width: 768px) {
@@ -1084,7 +1090,7 @@
 <section id="curriculum">
     <div class="container">
         <h2 class="text-center">5-Day Curriculum</h2>
-        <p class="text-center" style="font-size: 1rem; font-weight: 600; color: #000; margin-bottom: 0.5rem;"><strong>May 18–22, 2026 | 9:00 AM – 5:00 PM | De Palma, Shah Alam</strong></p>
+        <p class="text-center" style="font-size: 1rem; font-weight: 600; color: #000; margin-bottom: 0.5rem;"><strong>29 May–2 June 2026 | 9:00 AM – 5:00 PM | De Palma, Shah Alam</strong></p>
         <p class="text-center" style="color: #888; font-size: 0.95rem; margin-bottom: 3rem;">Limited to 15 participants per cohort</p>
 
         <!-- DAY 1 -->
@@ -1298,8 +1304,8 @@
         <div class="pricing-container">
             <div class="pricing-card">
                 <h3>Early Bird</h3>
-                <p class="price-details">Register by April 30</p>
-                <div class="price">RM 4,500</div>
+                <p class="price-details">Register by 4 May 2026</p>
+                <div class="price">RM 6,250</div>
                 <ul>
                     <li>5-day intensive program</li>
                     <li>All tools & templates</li>
@@ -1310,10 +1316,10 @@
                 <a href="#register" class="btn btn-secondary" style="width: 100%; margin-top: 2rem;">Register</a>
             </div>
 
-            <div class="pricing-card featured">
+            <div class="pricing-card">
                 <h3>Standard</h3>
                 <p class="price-details">Regular rate</p>
-                <div class="price">RM 5,000</div>
+                <div class="price">RM 6,500</div>
                 <ul>
                     <li>5-day intensive program</li>
                     <li>All tools & templates</li>
@@ -1326,8 +1332,8 @@
 
             <div class="pricing-card">
                 <h3>Group Rate</h3>
-                <p class="price-details">3 or more participants</p>
-                <div class="price">RM 4,500</div>
+                <p class="price-details">2 or more participants</p>
+                <div class="price">RM 6,200</div>
                 <ul>
                     <li>5-day intensive program</li>
                     <li>All tools & templates</li>
@@ -1336,6 +1342,19 @@
                     <li>90-day Implementation Roadmap</li>
                 </ul>
                 <a href="#register" class="btn btn-secondary" style="width: 100%; margin-top: 2rem;">Contact Sales</a>
+            </div>
+            <div class="pricing-card featured">
+                <h3>Group + Early Bird</h3>
+                <p class="price-details">2+ participants by 4 May 2026</p>
+                <div class="price">RM 6,000</div>
+                <ul>
+                    <li>5-day intensive program</li>
+                    <li>All tools & templates</li>
+                    <li>90-day coaching (6 sessions)</li>
+                    <li>Complete A3 Report</li>
+                    <li>90-day Implementation Roadmap</li>
+                </ul>
+                <a href="#register" class="btn btn-primary" style="width: 100%; margin-top: 2rem;">Best Value</a>
             </div>
         </div>
 
@@ -1415,7 +1434,7 @@
 <section id="register">
     <div class="container">
         <h2 class="text-center">Reserve Your Spot</h2>
-        <p class="text-center" style="font-size: 1rem; font-weight: 600; color: #000; margin-bottom: 0.5rem;"><strong>May 18–22, 2026 | 9:00 AM – 5:00 PM | De Palma, Shah Alam</strong></p>
+        <p class="text-center" style="font-size: 1rem; font-weight: 600; color: #000; margin-bottom: 0.5rem;"><strong>29 May–2 June 2026 | 9:00 AM – 5:00 PM | De Palma, Shah Alam</strong></p>
         <p class="text-center" style="color: #888; font-size: 0.95rem; margin-bottom: 3rem;">Limited to 15 participants per cohort</p>
 
         <div class="form-container">
@@ -1469,9 +1488,10 @@
                     <label for="pricing">Pricing tier *</label>
                     <select id="pricing" name="pricing" required>
                         <option value="">Select pricing</option>
-                        <option value="early-bird">Early Bird (RM 4,500)</option>
-                        <option value="standard">Standard (RM 5,000)</option>
-                        <option value="group">Group Rate (RM 4,500 for 3+)</option>
+                        <option value="early-bird">Early Bird (RM 6,250)</option>
+                        <option value="standard">Standard (RM 6,500)</option>
+                        <option value="group">Group Discount (RM 6,200 for 2+)</option>
+                        <option value="group-early-bird">Group + Early Bird (RM 6,000 for 2+ by 4 May 2026)</option>
                     </select>
                 </div>
 
@@ -1489,7 +1509,7 @@
                 <p style="margin: 0; color: #666; font-size: 0.9rem;">
                     <strong>Questions?</strong><br>
                     Husni Halim | Principal Consultant<br>
-                    +60165261901 | husnihalim@visiarmada.com<br>
+                    +60 16-526 1901 | husnihalim@visiarmada.com<br>
                     <a href="https://visiarmada.com">visiarmada.com</a>
                 </p>
             </div>
@@ -1504,7 +1524,7 @@
             <!-- Program Info -->
             <div>
                 <h4 style="margin: 0 0 1rem 0; color: var(--c-dark);">Kaizen Champion Program</h4>
-                <p style="margin: 0.5rem 0; font-size: 0.9rem;">May 18–22, 2026<br>Selangor, Malaysia</p>
+                <p style="margin: 0.5rem 0; font-size: 0.9rem;">29 May–2 June 2026<br>Selangor, Malaysia</p>
                 <p style="margin: 0.5rem 0 0 0; font-size: 0.85rem; color: #666;">Limited to 15 participants</p>
             </div>
 
@@ -1514,7 +1534,7 @@
                 <p style="margin: 0; font-size: 0.9rem;">
                     <strong>Husni Halim</strong><br>
                     Principal Consultant<br>
-                    <a href="tel:+60165261901" style="color: var(--c-accent); text-decoration: none;">+60165261901</a><br>
+                    <a href="tel:+60165261901" style="color: var(--c-accent); text-decoration: none;">+60 16-526 1901</a><br>
                     <a href="mailto:husnihalim@visiarmada.com" style="color: var(--c-accent); text-decoration: none;">husnihalim@visiarmada.com</a>
                 </p>
             </div>

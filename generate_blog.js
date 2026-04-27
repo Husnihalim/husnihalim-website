@@ -982,9 +982,9 @@ const articles = [
 <p><strong>Module 5: Leadership & Change Management</strong> — Develop the soft skills and change management approaches needed to lead cross-functional teams through improvement initiatives in a Malaysian manufacturing context.</p>
 
 <h2>Three Program Options</h2>
-<p><strong>Standard Program (RM 5,000)</strong> — Full six-month curriculum with monthly workshops, one applied project, and peer group support. Best for plants starting their continuous improvement journey.</p>
-<p><strong>Early Bird Pricing (RM 4,500)</strong> — Enrol before the program start date and receive discounted pricing. Same content and duration as the standard program.</p>
-<p><strong>Group Program (RM 4,000 per person)</strong> — Minimum five participants from the same organisation. Customised content, on-site delivery, and dedicated facilitation of your improvement projects.</p>
+<p><strong>Standard Program (RM 6,500)</strong> — Full six-month curriculum with monthly workshops, one applied project, and peer group support. Best for plants starting their continuous improvement journey.</p>
+<p><strong>Early Bird Pricing (RM 6,250)</strong> — Enrol before the program start date and receive discounted pricing. Same content and duration as the standard program.</p>
+<p><strong>Group Discount (RM 6,200 per person)</strong> — Available for 2 or more participants. Group + Early Bird pricing is RM 6,000 per person when 2 or more participants register by 4 May 2026.</p>
 
 <h2>What Participants Receive</h2>
 <ul>
