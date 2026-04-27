@@ -80,7 +80,7 @@ body{font-family:Georgia,serif;background:#f9f7f4;margin:0;padding:0}
 .f{background:#f2f0ed;padding:20px 40px;font-size:12px;color:#888}
 .f a{color:#8b2252;text-decoration:none}
 </style></head><body><div class="w">
-<div class="h"><h1>Husni Halim</h1><p>Lean Manufacturing Consultant · Malaysia</p></div>
+<div class="h"><h1>Husni Halim</h1><p>Principal Consultant, Certified Process Kaizen Engineer</p></div>
 <div class="b">
 <p>Hi ${firstname || fullName},</p>
 <p>Got your request — I'll be in touch within <strong>48 hours</strong> to arrange your free floor walk.</p>
@@ -93,7 +93,7 @@ body{font-family:Georgia,serif;background:#f9f7f4;margin:0;padding:0}
 <p>If you have anything specific you'd like me to look at, just reply to this email.</p>
 <p>Talk soon,<br><strong>Husni</strong></p>
 </div>
-<div class="f"><a href="https://husnihalim.com">husnihalim.com</a> · Lean Manufacturing Consultant · Malaysia</div>
+<div class="f"><a href="https://husnihalim.com">husnihalim.com</a> · Principal Consultant, Certified Process Kaizen Engineer</div>
 </div></body></html>`;
 
     const husniHtml = `<!DOCTYPE html><html><head><meta charset="UTF-8"><style>
