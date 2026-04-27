@@ -332,7 +332,7 @@ def draw_intro(c):
     rows = [
         ("Date", "29 May–2 June 2026"),
         ("Time", "9:00 AM - 5:00 PM"),
-        ("Venue", "De Palma Hotel, Shah Alam"),
+        ("Venue", "AC Hotel by Marriot, Puchong"),
         ("Format", "Public cohort, hands-on workshop"),
         ("Cohort", "Maximum 15 participants"),
         ("Fee", "Regular RM 6,500; discounts from RM 6,000"),
