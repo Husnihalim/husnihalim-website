@@ -498,7 +498,7 @@ strong { color: var(--c-dark); }
   position: relative;
   flex-shrink: 0;
   width: 390px;
-  transform: translateY(-24px);
+  transform: translateY(-88px);
 }
 .hero-portrait-glow {
   position: absolute;
