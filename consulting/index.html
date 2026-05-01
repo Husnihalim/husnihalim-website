@@ -352,11 +352,11 @@
 
  /* Stats strip — mobile: column, desktop: row */
  .hero-stat-row {
- display: flex;
- flex-wrap: wrap;
- gap: 20px 32px;
+ display: grid;
+ grid-template-columns: repeat(5, minmax(0, 1fr));
+ gap: 20px 22px;
  }
- .h-stat { border-left: 2px solid var(--gold); padding-left: 14px; }
+ .h-stat { border-left: 2px solid var(--gold); padding-left: 14px; min-width: 0; }
  .h-stat-num {
  font-family: 'Cormorant Garamond', serif;
  font-size: 34px;
@@ -1069,7 +1069,7 @@
       "name": "What industries do you serve in Malaysia?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "We serve electronics and semiconductor manufacturing, automotive, food and beverage, palm oil, aerospace (MRO), and general industrial manufacturers across Penang, Johor, Selangor, nationwide, and internationally. Past organisations and project sites include Intel, Safran, Panasonic, Petronas, Maxeon, Sharp, Carotino, and 80+ companies across 11 countries."
+        "text": "We serve electronics and semiconductor manufacturing, automotive, food and beverage, palm oil, aerospace (MRO), and general industrial manufacturers across Penang, Johor, Selangor, nationwide, and internationally. Past organisations and project sites include Intel, Safran, Panasonic, Petronas, Maxeon, Sharp, Carotino, and 80+ companies across 11 countries and 21 international factories."
       }
     },
     {
@@ -1206,6 +1206,10 @@
  <div class="h-stat">
  <div class="h-stat-num">11</div>
  <div class="h-stat-label">Countries</div>
+ </div>
+ <div class="h-stat">
+ <div class="h-stat-num">21</div>
+ <div class="h-stat-label">International Factories</div>
  </div>
  </div>
  </div>
@@ -1463,7 +1467,7 @@
     <div class="hh-footer-grid">
       <div class="hh-footer-col hh-footer-brand">
         <a href="/" class="hh-footer-logo">Husni<em>Halim</em></a>
-        <p>Principal Consultant, Certified Process Kaizen Engineer. Helping Malaysian manufacturers build a culture of continuous improvement.</p>
+        <p>Principal Consultant, Certified Process Kaizen Engineer, GSDC Certified in Global Leadership Excellence. Helping Malaysian manufacturers build a culture of continuous improvement.</p>
         <p><strong>Visi Armada Consulting</strong><br>HRDC Registered Training Provider<br>Shah Alam, Selangor, Malaysia</p>
         <div class="hh-footer-social">
           <a href="https://www.linkedin.com/in/husni-halim-7436b01b/" target="_blank" rel="noopener" aria-label="LinkedIn"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/></svg></a>
