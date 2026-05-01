@@ -455,6 +455,7 @@ strong { color: var(--c-dark); }
   display: flex;
   gap: 12px;
   flex-wrap: wrap;
+  margin-top: 32px;
   margin-bottom: 48px;
 }
 .hero-actions .btn-outline {
