@@ -163,6 +163,17 @@
   color: #555;
 }
 
+.nav-tool[href="/kaizenchampion/"] {
+  color: #facc15 !important;
+  border-color: rgba(250, 204, 21, .7) !important;
+}
+
+.nav-tool[href="/kaizenchampion/"]:hover {
+  color: #fde68a !important;
+  background: rgba(250, 204, 21, .14) !important;
+  border-color: rgba(253, 230, 138, .85) !important;
+}
+
 @media (max-width: 900px) {
   .hh-footer-grid {
     grid-template-columns: 1fr 1fr;
