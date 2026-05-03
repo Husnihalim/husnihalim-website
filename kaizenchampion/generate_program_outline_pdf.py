@@ -230,7 +230,7 @@ def draw_cover(c):
 
     c.setFont(SANS_BOLD, 8.5)
     c.setFillColor(colors.white)
-    c.drawString(MARGIN + 21 * mm, PAGE_H - 24 * mm, "VISI ARMADA CONSULTING")
+    c.drawString(MARGIN + 21 * mm, PAGE_H - 24 * mm, "VISI ARMADA")
     c.setFont(SANS, 7.5)
     c.setFillColor(colors.Color(1, 1, 1, alpha=0.65))
     c.drawString(MARGIN + 21 * mm, PAGE_H - 29 * mm, "HRDC Registered Training Provider")
@@ -238,24 +238,25 @@ def draw_cover(c):
     y = PAGE_H - 68 * mm
     pill(c, MARGIN, y, "HRDC CLAIMABLE", GOLD)
     pill(c, MARGIN + 35 * mm, y, "29 MAY–2 JUNE 2026", BURGUNDY)
-    pill(c, MARGIN + 75 * mm, y, "DE PALMA, SHAH ALAM", colors.HexColor("#31435A"))
+    pill(c, MARGIN + 75 * mm, y, "AC HOTEL BY MARRIOTT, PUCHONG", colors.HexColor("#31435A"))
 
     y -= 13 * mm
     y = para(c, "Kaizen Champion<br/>Development Program", MARGIN, y, 122 * mm, styles["h1"])
     y -= 4 * mm
     c.setFont(SANS, 12)
     c.setFillColor(colors.Color(1, 1, 1, alpha=0.86))
-    c.drawString(MARGIN, y, "A 5-day intensive program for manufacturing leaders")
+    c.drawString(MARGIN, y, "A 5-day practical program for internal improvement owners")
     y -= 7 * mm
     c.setFont(SANS, 10)
     c.setFillColor(colors.Color(1, 1, 1, alpha=0.7))
-    c.drawString(MARGIN, y, "Build internal capability to lead practical, sustainable continuous improvement.")
+    c.drawString(MARGIN, y, "Build the person who owns improvement, drives action, and sustains the habit.")
 
     y -= 22 * mm
-    fact_w = (CONTENT_W - 14 * mm) / 3
+    fact_w = (CONTENT_W - 21 * mm) / 4
     facts = [
         ("5 days", "Applied classroom and workshop format"),
-        ("90 days", "Structured implementation coaching"),
+        ("90 days", "Six structured coaching sessions"),
+        ("1 visit", "Site progress assessment included"),
         ("15 pax", "Small cohort for hands-on support"),
     ]
     for i, (num, label) in enumerate(facts):
@@ -297,7 +298,7 @@ def draw_intro(c):
         y,
         "INTRODUCTION",
         "Program Brief",
-        "This program develops practical Kaizen Champions who can identify waste, lead structured problem solving, and sustain improvements after the training room closes.",
+        "This program develops internal Kaizen Champions who can take ownership of workplace problems, lead structured problem solving, and keep improvement moving after the training room closes.",
     )
 
     left_w = 102 * mm
@@ -307,7 +308,7 @@ def draw_intro(c):
     y_left = y
     y_left = para(
         c,
-        "Kaizen is continuous improvement embedded in daily operations. For manufacturing teams, it creates a disciplined way to move from firefighting to prevention, from opinion-based fixes to data-driven action, and from isolated projects to a culture of sustained improvement.",
+        "Most factories already know where many problems are. The harder part is ownership: who structures the problem, involves the team, tracks the action, and keeps the habit alive when daily production pressure returns.",
         MARGIN,
         y_left,
         left_w,
@@ -315,7 +316,7 @@ def draw_intro(c):
     )
     y_left = para(
         c,
-        "Across five intensive days, participants work through the full improvement cycle: understand current-state performance, identify waste, diagnose root causes, design countermeasures, build an A3 report, and prepare a 90-day implementation roadmap.",
+        "Across five practical days, participants work through the full improvement cycle: understand current-state performance, identify waste, diagnose root causes, design countermeasures, build an A3 report, and prepare a 90-day implementation roadmap.",
         MARGIN,
         y_left - 2 * mm,
         left_w,
@@ -332,11 +333,12 @@ def draw_intro(c):
     rows = [
         ("Date", "29 May–2 June 2026"),
         ("Time", "9:00 AM - 5:00 PM"),
-        ("Venue", "AC Hotel by Marriot, Puchong"),
-        ("Format", "Public cohort, hands-on workshop"),
+        ("Venue", "AC Hotel by Marriott, Puchong"),
+        ("Format", "Public cohort, practical workshop"),
         ("Cohort", "Maximum 15 participants"),
         ("Fee", "Regular RM 6,500; discounts from RM 6,000"),
         ("Claim", "HRDC claimable"),
+        ("Support", "6 coaching sessions + 1 site visit"),
     ]
     yy = y - 17 * mm
     for label, value in rows:
@@ -356,14 +358,14 @@ def draw_intro(c):
         "Process, production, industrial and quality engineers",
         "Operations managers, plant leaders and department heads",
         "Continuous improvement, Lean, TPM, OEE and 5S coordinators",
-        "Anyone responsible for improving process performance on the floor",
+        "Future internal Kaizen Champions expected to lead improvement with their teams",
     ]
     y2 = bullet_list(c, attend, MARGIN, y2, left_w)
 
     benefits = [
-        ("Measurable returns", "Typical Kaizen projects can eliminate RM 50,000-80,000 in annual waste through scrap, downtime, rework, inventory, and labour improvements."),
-        ("Internal capability", "Participants learn to lead improvements without depending on external consultants for every problem."),
-        ("Sustained implementation", "The program includes 90-day coaching so gains are reviewed, reinforced, and protected from regression."),
+        ("Internal ownership", "Participants learn how to take responsibility for a workplace issue, structure it, involve others, and follow through."),
+        ("Practical output", "Each participant works toward an A3 report, KPI tracking structure, and 90-day implementation roadmap."),
+        ("Progress review", "The program includes coaching plus one site visit to assess Kaizen initiative progress and guide the next action."),
     ]
     benefit_y = 125 * mm
     c.setFont(SERIF_BOLD, 18)
@@ -377,14 +379,14 @@ def draw_intro(c):
 
 
 def draw_outcomes(c):
-    header(c, "Benefits and Learning Outcomes", 3)
+    header(c, "Outputs and Learning Outcomes", 3)
     y = PAGE_H - 31 * mm
     y = section_title(
         c,
         y,
         "OUTCOMES",
         "What Participants Leave With",
-        "The program balances technical improvement tools with facilitation, communication, and leadership routines needed to make improvement stick.",
+        "The program balances technical improvement tools with ownership, facilitation, communication, and leadership routines needed to make improvement stick.",
     )
 
     col_w = (CONTENT_W - 10 * mm) / 3
@@ -447,12 +449,12 @@ def draw_outcomes(c):
     c.roundRect(MARGIN, y - 42 * mm, CONTENT_W, 42 * mm, 7, stroke=0, fill=1)
     c.setFont(SERIF_BOLD, 16)
     c.setFillColor(colors.white)
-    c.drawString(MARGIN + 8 * mm, y - 11 * mm, "Business Benefits")
+    c.drawString(MARGIN + 8 * mm, y - 11 * mm, "Program Output Guarantee")
     benefit_items = [
-        "Stronger internal ownership of improvement initiatives.",
-        "Clearer problem selection based on QCD impact, not opinions.",
-        "Better communication of improvement logic through A3 reporting.",
-        "Higher chance that improvements sustain after implementation.",
+        "Completed A3 improvement report by the end of the program.",
+        "Practical Kaizen toolkit and KPI tracking structure.",
+        "90-day implementation roadmap with ownership and milestones.",
+        "Six coaching sessions plus one site visit progress assessment.",
     ]
     bullet_list(c, benefit_items, MARGIN + 8 * mm, y - 18 * mm, CONTENT_W - 16 * mm, colors.Color(1, 1, 1, alpha=0.82), GOLD, 8.2, 10.6)
     c.showPage()
@@ -582,7 +584,7 @@ def draw_curriculum_2(c):
             ],
             [
                 "KPI tracking and dashboards",
-                "Business impact calculation: savings, ROI, payback",
+                "Business impact framing: KPI movement, evidence, management priorities",
                 "Capstone A3 presentations and peer feedback",
                 "90-day action plan review",
             ],
@@ -602,7 +604,8 @@ def draw_curriculum_2(c):
         ("Tools Handbook", "A3 templates, Fishbone diagrams, check sheets, Pareto charts, 5S assessments, standard work forms, and visual management templates."),
         ("A3 Report Guidance", "Template, worked example, peer review, and facilitation support so each participant leaves with a ready-to-present improvement plan."),
         ("Implementation Roadmap", "A 90-day execution plan with milestones, ownership, KPI targets, and follow-up rhythm."),
-        ("Coaching Support", "Six bi-weekly online sessions over three months, plus email and phone consultation support."),
+        ("Coaching Support", "Six bi-weekly online sessions over three months to review progress and refine the implementation plan."),
+        ("Site Visit Assessment", "One site visit to assess the participant's Kaizen initiative progress, evidence, blockers, and next practical action."),
     ]
     x = MARGIN
     w = (CONTENT_W - 8 * mm) / 2
@@ -621,7 +624,7 @@ def draw_investment(c):
         y,
         "REGISTRATION",
         "Investment and Next Steps",
-        "The program is designed for companies that want internal Kaizen capability, not a one-off classroom session.",
+        "The program is designed for companies that want internal Kaizen ownership, not a one-off classroom session.",
     )
 
     price_data = [
@@ -670,7 +673,7 @@ def draw_investment(c):
     c.drawString(MARGIN + 8 * mm, y - 10 * mm, "HRDC Claimable")
     para(
         c,
-        "This program is claimable under HRDC for eligible Malaysian companies. Husni Halim is an HRDC accredited trainer (Trainer ID 11294). Contact Visi Armada Consulting for SBL-Khas support documents.",
+        "This program is claimable under HRDC for eligible Malaysian companies. Husni Halim is an HRDC accredited trainer (Trainer ID 11294). Contact Visi Armada for SBL-Khas support documents.",
         MARGIN + 8 * mm,
         y - 15 * mm,
         CONTENT_W - 16 * mm,
@@ -686,7 +689,7 @@ def draw_investment(c):
         ("Website", "husnihalim.com/kaizenchampion"),
         ("Phone / WhatsApp", "+60 16-526 1901"),
         ("Email", "husnihalim@visiarmada.com"),
-        ("Provider", "Visi Armada Consulting, Shah Alam, Selangor"),
+        ("Provider", "Visi Armada, Shah Alam, Selangor"),
     ]
     for label, value in contact:
         c.setFont(SANS_BOLD, 8)
@@ -713,7 +716,7 @@ def build():
     OUT.parent.mkdir(parents=True, exist_ok=True)
     c = canvas.Canvas(str(OUT), pagesize=A4)
     c.setTitle("Kaizen Champion Development Program - Program Outline")
-    c.setAuthor("Visi Armada Consulting")
+    c.setAuthor("Visi Armada")
     c.setSubject("Professional program outline for the Kaizen Champion Development Program")
     draw_cover(c)
     draw_intro(c)

@@ -305,6 +305,123 @@ strong { color: var(--c-dark); }
 }
 .nav-cta:hover { background: #721c45 !important; }
 
+/* Compact current updates carousel */
+.site-updates {
+  background: #f7f3ed;
+  border-bottom: 1px solid rgba(12,27,46,0.1);
+  overflow: hidden;
+  position: relative;
+  z-index: 20;
+}
+.site-updates-inner {
+  display: grid;
+  grid-template-columns: auto minmax(0,1fr);
+  align-items: center;
+  gap: 18px;
+  min-height: 74px;
+  padding: 12px 0 12px 40px;
+}
+.site-updates-label {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 2px;
+  min-width: 142px;
+  color: var(--c-dark);
+  font-family: var(--font-sans);
+}
+.site-updates-label span:first-child {
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: .16em;
+  text-transform: uppercase;
+  color: var(--c-accent);
+}
+.site-updates-label span + span {
+  font-size: 13px;
+  font-weight: 700;
+  line-height: 1.2;
+}
+.site-updates-viewport {
+  position: relative;
+  overflow: hidden;
+  padding: 2px 0;
+}
+.site-updates-viewport::before,
+.site-updates-viewport::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  width: min(9vw,96px);
+  height: 100%;
+  z-index: 2;
+  pointer-events: none;
+}
+.site-updates-viewport::before {
+  left: 0;
+  background: linear-gradient(90deg,#f7f3ed,rgba(247,243,237,0));
+}
+.site-updates-viewport::after {
+  right: 0;
+  background: linear-gradient(270deg,#f7f3ed,rgba(247,243,237,0));
+}
+.site-updates-track {
+  display: flex;
+  width: max-content;
+  gap: 12px;
+  animation: siteUpdatesScroll 58s linear infinite;
+  will-change: transform;
+}
+.site-updates:hover .site-updates-track { animation-play-state: paused; }
+.site-update-card {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  min-height: 46px;
+  padding: 9px 14px;
+  border: 1px solid rgba(12,27,46,0.12);
+  border-radius: 8px;
+  background: #fff;
+  color: var(--c-body);
+  box-shadow: 0 6px 18px rgba(12,27,46,0.07);
+  text-decoration: none;
+  white-space: nowrap;
+  font-family: var(--font-sans);
+  transition: transform .2s ease, border-color .2s ease, box-shadow .2s ease;
+}
+.site-update-card:hover {
+  transform: translateY(-1px);
+  border-color: rgba(196,120,50,0.38);
+  box-shadow: 0 10px 24px rgba(12,27,46,0.11);
+}
+.site-update-type {
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  color: var(--c-secondary);
+}
+.site-update-title {
+  font-size: 13px;
+  font-weight: 800;
+  color: var(--c-dark);
+}
+.site-update-meta {
+  font-size: 12px;
+  color: #667085;
+}
+.site-update-dot {
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background: rgba(12,27,46,0.28);
+  flex: 0 0 auto;
+}
+@keyframes siteUpdatesScroll {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+
 /* Hamburger */
 .hamburger {
   display: none;
@@ -1778,6 +1895,26 @@ footer {
     border-bottom: 0 !important;
     border-radius: 4px !important;
   }
+  .site-updates-inner {
+    grid-template-columns: 1fr;
+    gap: 8px;
+    min-height: 0;
+    padding: 12px 0 12px 20px;
+  }
+  .site-updates-label {
+    min-width: 0;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+  }
+  .site-updates-label span + span { font-size: 12px; }
+  .site-updates-track { animation-duration: 46s; }
+  .site-update-card {
+    min-height: 42px;
+    padding: 8px 12px;
+  }
+  .site-update-title { font-size: 12px; }
+  .site-update-meta { font-size: 11px; }
 
   .hero-inner { flex-direction: column-reverse; gap: 40px; padding: 60px 24px 80px; }
   .hero-portrait-wrap { width: min(280px, 80vw); transform: none; }
@@ -1917,4 +2054,17 @@ footer {
   .nav, .hamburger, .hero-scroll-indicator, .hero-bg-shapes { display: none; }
   .hero { min-height: auto; padding: 40px 24px; }
   body { color: #000; background: #fff; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .site-updates-track {
+    animation: none;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    width: auto;
+    padding-right: 20px;
+  }
+  .site-updates-viewport { overflow-x: auto; }
+  .site-updates-viewport::before,
+  .site-updates-viewport::after { display: none; }
 }
