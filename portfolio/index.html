@@ -19,7 +19,7 @@
 <meta property="og:locale" content="en_MY">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Work Portfolio | Manufacturing Training & Factory Improvement Malaysia">
-<meta name="twitter:description" content="Selected proof from Husni Halim's manufacturing training, factory visit, Kaizen, OEE, and improvement consulting work in Malaysia.">
+<meta name="twitter:description" content="Selected photos from Husni Halim's manufacturing training, factory visits, Kaizen, OEE, and improvement consulting work in Malaysia.">
 <meta name="twitter:image" content="https://husnihalim.com/assets/portfolio/training-pictures/husni-halim-manufacturing-team-site-photo-team-photo-malaysia.jpg">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -674,7 +674,7 @@
       "name": "What does Husni Halim's gallery of work show?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "The gallery shows selected moments from Husni Halim's manufacturing training, lean consulting, Kaizen implementation, OEE improvement, 5S, TPM, factory visit, and operational excellence work with factory teams in Malaysia."
+        "text": "The gallery includes selected training sessions, factory visits, team discussions, Kaizen activities, OEE improvement sessions, 5S, TPM, and operational excellence work with factory teams in Malaysia."
       }
     },
     {
@@ -718,7 +718,7 @@ body { background: var(--pf-cream); color: var(--pf-text); }
 .portfolio-hero {
   background: var(--pf-navy);
   color: #fff;
-  padding: 76px 24px 44px;
+  padding: 64px 24px 48px;
   position: relative;
   overflow: hidden;
 }
@@ -734,12 +734,9 @@ body { background: var(--pf-cream); color: var(--pf-text); }
 .portfolio-hero-inner {
   position: relative;
   z-index: 1;
-  width: min(1120px, 100%);
+  width: min(980px, 100%);
   margin: 0 auto;
-  display: grid;
-  grid-template-columns: minmax(0, 1.08fr) minmax(280px, .72fr);
-  gap: 44px;
-  align-items: end;
+  display: block;
 }
 .breadcrumb {
   display: flex;
@@ -766,9 +763,9 @@ body { background: var(--pf-cream); color: var(--pf-text); }
 .eyebrow::before { content: ""; width: 28px; height: 1px; background: currentColor; opacity: .7; }
 .portfolio-hero h1 {
   color: #fff;
-  font-size: clamp(40px, 7vw, 74px);
+  font-size: clamp(42px, 7vw, 72px);
   max-width: 760px;
-  margin: 0 0 20px;
+  margin: 0;
 }
 .portfolio-hero h1 em { color: var(--pf-gold); font-style: italic; }
 .portfolio-lede {
@@ -779,56 +776,11 @@ body { background: var(--pf-cream); color: var(--pf-text); }
   margin-bottom: 28px;
 }
 .hero-actions { display: flex; flex-wrap: wrap; gap: 12px; }
-.hero-proof {
-  background: rgba(255,255,255,.08);
-  border: 1px solid rgba(255,255,255,.14);
-  border-radius: 8px;
-  padding: 22px;
-  backdrop-filter: blur(12px);
-}
-.hero-proof h2 {
-  color: #fff;
-  font-family: var(--font-sans);
-  font-size: 13px;
-  line-height: 1.4;
-  letter-spacing: .12em;
-  text-transform: uppercase;
-  margin: 0 0 14px;
-}
-.hero-proof p {
-  color: rgba(255,255,255,.76);
-  font-size: 14px;
-  line-height: 1.75;
-  margin: 0 0 16px;
-}
-.proof-grid {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 12px;
-  margin-top: 18px;
-}
-.proof-item {
-  border-top: 1px solid rgba(196,120,50,.5);
-  padding-top: 10px;
-}
-.proof-number {
-  display: block;
-  color: #fff;
-  font-family: var(--font-serif);
-  font-size: 30px;
-  line-height: 1;
-}
-.proof-label {
-  display: block;
-  color: rgba(255,255,255,.55);
-  font-size: 11px;
-  margin-top: 4px;
-}
 
 .portfolio-section {
   width: min(1120px, calc(100% - 40px));
   margin: 0 auto;
-  padding: 76px 0;
+  padding: 54px 0 76px;
 }
 .section-head {
   display: grid;
@@ -911,12 +863,6 @@ body { background: var(--pf-cream); color: var(--pf-text); }
   transition: transform .5s ease, opacity .3s ease;
 }
 .portfolio-card:hover img { transform: scale(1.04); }
-.portfolio-card::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(180deg, rgba(12,27,46,0) 28%, rgba(12,27,46,.88) 100%);
-}
 .portfolio-card button {
   position: absolute;
   inset: 0;
@@ -927,15 +873,6 @@ body { background: var(--pf-cream); color: var(--pf-text); }
   color: inherit;
   text-align: left;
 }
-.card-copy {
-  position: absolute;
-  left: 20px;
-  right: 20px;
-  bottom: 20px;
-  z-index: 3;
-  color: #fff;
-  pointer-events: none;
-}
 .card-kicker {
   display: inline-flex;
   color: var(--pf-gold);
@@ -945,20 +882,6 @@ body { background: var(--pf-cream); color: var(--pf-text); }
   text-transform: uppercase;
   margin-bottom: 8px;
 }
-.card-copy h3 {
-  color: #fff;
-  font-family: var(--font-sans);
-  font-size: 20px;
-  line-height: 1.25;
-  margin: 0 0 8px;
-}
-.card-copy p {
-  color: rgba(255,255,255,.76);
-  font-size: 13px;
-  line-height: 1.55;
-  margin: 0;
-}
-
 .seo-block {
   background: #fff;
   border-top: 1px solid var(--pf-border);
@@ -1032,13 +955,13 @@ body { background: var(--pf-cream); color: var(--pf-text); }
 }
 .lightbox.open { display: flex; }
 .lightbox-panel {
-  width: min(1020px, 100%);
+  width: min(1040px, 100%);
   max-height: calc(100vh - 44px);
-  display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(280px, 340px);
+  display: block;
   background: #fff;
   border-radius: 8px;
   overflow: hidden;
+  position: relative;
 }
 .lightbox-image {
   background: var(--pf-navy);
@@ -1051,24 +974,26 @@ body { background: var(--pf-cream); color: var(--pf-text); }
   object-fit: contain;
 }
 .lightbox-copy {
-  padding: 28px;
-  overflow-y: auto;
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  padding: 0;
 }
 .lightbox-copy h3 {
-  font-family: var(--font-sans);
-  font-size: 22px;
-  margin: 8px 0 12px;
+  display: none;
+}
+.lightbox-copy .card-kicker {
+  display: none;
 }
 .lightbox-copy p {
-  color: var(--pf-muted);
-  line-height: 1.7;
+  display: none;
 }
 .close-lightbox {
-  border: 1px solid var(--pf-border);
-  background: #fff;
-  color: var(--pf-navy);
-  width: 40px;
-  height: 40px;
+  border: 1px solid rgba(255,255,255,.35);
+  background: rgba(12,27,46,.72);
+  color: #fff;
+  width: 42px;
+  height: 42px;
   border-radius: 50%;
   font-size: 24px;
   line-height: 1;
@@ -1076,9 +1001,7 @@ body { background: var(--pf-cream); color: var(--pf-text); }
 
 @media (max-width: 980px) {
   .portfolio-hero-inner,
-  .section-head,
-  .seo-inner,
-  .lightbox-panel {
+  .seo-inner {
     grid-template-columns: 1fr;
   }
   .portfolio-card,
@@ -1096,7 +1019,6 @@ body { background: var(--pf-cream); color: var(--pf-text); }
     min-height: 390px;
   }
   .portfolio-card.tall { min-height: 430px; }
-  .proof-grid { grid-template-columns: 1fr; }
   .lightbox { padding: 12px; }
   .lightbox-panel { max-height: calc(100vh - 24px); }
   .lightbox-image { min-height: 46vh; }
@@ -1133,551 +1055,251 @@ body { background: var(--pf-cream); color: var(--pf-text); }
           <span>/</span>
           <span>Portfolio</span>
         </nav>
-        <div class="eyebrow">Work Portfolio</div>
-        <h1>Manufacturing Training and <em>Factory Improvement</em> Work in Action</h1>
-        <p class="portfolio-lede">Selected field and training-room moments from Husni Halim's work with Malaysian manufacturing teams, connecting Lean, Kaizen, OEE, 5S, TPM, and problem solving to real operating conditions.</p>
-        <div class="hero-actions">
-          <a class="btn btn-primary" href="#gallery">View Gallery</a>
-          <a class="btn btn-white" href="/consulting/">Discuss a Project</a>
-        </div>
+        <h1>Photo <em>Gallery</em></h1>
       </div>
-      <aside class="hero-proof" aria-label="Quick answer for search and AI assistants">
-        <h2>Quick Proof</h2>
-        <p>Husni Halim works with factory teams through practical training, site observation, shop-floor coaching, and management discussion.</p>
-        <p>The photos are intentionally privacy-safe: client-sensitive names, floor details, and project specifics are kept out while the nature of the work remains clear.</p>
-        <div class="proof-grid">
-          <div class="proof-item"><span class="proof-number">16+</span><span class="proof-label">Years experience</span></div>
-          <div class="proof-item"><span class="proof-number">80+</span><span class="proof-label">Companies served</span></div>
-          <div class="proof-item"><span class="proof-number">11</span><span class="proof-label">Countries</span></div>
-          <div class="proof-item"><span class="proof-number">500+</span><span class="proof-label">Professionals trained</span></div>
-        </div>
-      </aside>
     </div>
   </section>
 
   <section class="portfolio-section" id="gallery">
-    <div class="section-head">
-      <div>
-        <div class="eyebrow">Selected Work Photos</div>
-        <h2>Proof of Practical Work With Factory Teams</h2>
-        <p>These photos show the kind of work that matters beyond a training brochure: preparing teams, observing the floor, discussing losses, guiding exercises, and helping people connect improvement methods to their own workplace.</p>
-      </div>
-      <div class="ai-summary">
-        <strong>How to Read This Page</strong>
-        <p>This is not a client-name showcase. It is a privacy-safe view of the working situations behind training, consulting, and improvement support.</p>
-      </div>
-    </div>
-
-    <div class="filters" aria-label="Portfolio filters">
-      <button class="filter-btn active" type="button" data-filter="all">All Work Photos</button>
-      <button class="filter-btn" type="button" data-filter="training">Training Delivery</button>
-      <button class="filter-btn" type="button" data-filter="factory">Factory and Gemba Work</button>
-      <button class="filter-btn" type="button" data-filter="consulting">Improvement Discussions</button>
-      <button class="filter-btn" type="button" data-filter="team">Team Engagements</button>
-      <button class="filter-btn" type="button" data-filter="online">Online Sessions</button>
-    </div>
-
     <div class="portfolio-grid" id="portfolioGrid" aria-live="polite">
       <article class="portfolio-card wide" data-category="training">
         <img src="/assets/portfolio/training-pictures/husni-halim-training-room-briefing-training-malaysia.jpg" alt="Husni Halim facilitating a practical training room briefing for a Malaysian manufacturing team" width="1080" height="810" loading="eager">
-        <button type="button" data-title="Training Room Briefing" data-category-label="Training Delivery" data-src="/assets/portfolio/training-pictures/husni-halim-training-room-briefing-training-malaysia.jpg" data-caption="Setting the improvement direction before participants apply the method to real workplace issues.">
-          <span class="card-copy">
-            <span class="card-kicker">Training Delivery</span>
-            <h3>Training Room Briefing</h3>
-            <p>Setting the improvement direction before participants apply the method to real workplace issues.</p>
-          </span>
+        <button type="button" data-title="Training Room Briefing" data-category-label="Training Delivery" data-src="/assets/portfolio/training-pictures/husni-halim-training-room-briefing-training-malaysia.jpg" data-caption="Training room briefing with a manufacturing team during the workshop opening.">
         </button>
       </article>
       <article class="portfolio-card" data-category="training">
         <img src="/assets/portfolio/training-pictures/husni-halim-shop-floor-coaching-briefing-training-malaysia.jpg" alt="Lean manufacturing coaching briefing with participants near the production area" width="1080" height="810" loading="eager">
-        <button type="button" data-title="Shop-Floor Coaching Briefing" data-category-label="Training Delivery" data-src="/assets/portfolio/training-pictures/husni-halim-shop-floor-coaching-briefing-training-malaysia.jpg" data-caption="Connecting classroom learning with the actual production environment before improvement actions are discussed.">
-          <span class="card-copy">
-            <span class="card-kicker">Training Delivery</span>
-            <h3>Shop-Floor Coaching Briefing</h3>
-            <p>Connecting classroom learning with the actual production environment before improvement actions are discussed.</p>
-          </span>
+        <button type="button" data-title="Shop-Floor Coaching Briefing" data-category-label="Training Delivery" data-src="/assets/portfolio/training-pictures/husni-halim-shop-floor-coaching-briefing-training-malaysia.jpg" data-caption="Briefing near the shop floor with discussion around the production environment.">
         </button>
       </article>
       <article class="portfolio-card" data-category="consulting">
         <img src="/assets/portfolio/training-pictures/husni-halim-leadership-discussion-session-consulting-malaysia.jpg" alt="Manufacturing leadership discussion session for operational excellence improvement" width="1080" height="810" loading="eager">
-        <button type="button" data-title="Leadership Discussion Session" data-category-label="Improvement Discussion" data-src="/assets/portfolio/training-pictures/husni-halim-leadership-discussion-session-consulting-malaysia.jpg" data-caption="Aligning leaders on the operational problems that need attention before training or improvement work begins.">
-          <span class="card-copy">
-            <span class="card-kicker">Improvement Discussion</span>
-            <h3>Leadership Discussion Session</h3>
-            <p>Aligning leaders on the operational problems that need attention before training or improvement work begins.</p>
-          </span>
+        <button type="button" data-title="Leadership Discussion Session" data-category-label="Improvement Discussion" data-src="/assets/portfolio/training-pictures/husni-halim-leadership-discussion-session-consulting-malaysia.jpg" data-caption="Leadership discussion around current factory priorities and operating challenges.">
         </button>
       </article>
       <article class="portfolio-card" data-category="factory">
         <img src="/assets/portfolio/training-pictures/husni-halim-factory-equipment-review-factory-visit-malaysia.jpg" alt="Factory equipment review during a manufacturing improvement site visit" width="1080" height="810" loading="lazy">
-        <button type="button" data-title="Factory Equipment Review" data-category-label="Factory and Gemba Work" data-src="/assets/portfolio/training-pictures/husni-halim-factory-equipment-review-factory-visit-malaysia.jpg" data-caption="Reviewing equipment, flow, and working conditions directly at the source of the production problem.">
-          <span class="card-copy">
-            <span class="card-kicker">Factory and Gemba Work</span>
-            <h3>Factory Equipment Review</h3>
-            <p>Reviewing equipment, flow, and working conditions directly at the source of the production problem.</p>
-          </span>
+        <button type="button" data-title="Factory Equipment Review" data-category-label="Factory and Gemba Work" data-src="/assets/portfolio/training-pictures/husni-halim-factory-equipment-review-factory-visit-malaysia.jpg" data-caption="Discussion around equipment condition, work flow, and daily production issues.">
         </button>
       </article>
       <article class="portfolio-card" data-category="training">
         <img src="/assets/portfolio/training-pictures/husni-halim-training-room-facilitation-training-malaysia.jpg" alt="Husni Halim facilitating a lean manufacturing training session in a meeting room" width="1080" height="810" loading="lazy">
-        <button type="button" data-title="Training Room Facilitation" data-category-label="Training Delivery" data-src="/assets/portfolio/training-pictures/husni-halim-training-room-facilitation-training-malaysia.jpg" data-caption="Facilitating manufacturing improvement content in a way teams can connect back to their daily work.">
-          <span class="card-copy">
-            <span class="card-kicker">Training Delivery</span>
-            <h3>Training Room Facilitation</h3>
-            <p>Facilitating manufacturing improvement content in a way teams can connect back to their daily work.</p>
-          </span>
+        <button type="button" data-title="Training Room Facilitation" data-category-label="Training Delivery" data-src="/assets/portfolio/training-pictures/husni-halim-training-room-facilitation-training-malaysia.jpg" data-caption="Manufacturing training session with discussion around daily workplace practices.">
         </button>
       </article>
       <article class="portfolio-card wide" data-category="team">
         <img src="/assets/portfolio/training-pictures/husni-halim-manufacturing-team-site-photo-team-photo-malaysia.jpg" alt="Group photo with a Malaysian manufacturing team after a consulting or training engagement" width="1280" height="960" loading="lazy">
-        <button type="button" data-title="Manufacturing Team Site Photo" data-category-label="Team Engagement" data-src="/assets/portfolio/training-pictures/husni-halim-manufacturing-team-site-photo-team-photo-malaysia.jpg" data-caption="A completed on-site engagement with the people expected to carry improvement work forward.">
-          <span class="card-copy">
-            <span class="card-kicker">Team Engagement</span>
-            <h3>Manufacturing Team Site Photo</h3>
-            <p>A completed on-site engagement with the people expected to carry improvement work forward.</p>
-          </span>
+        <button type="button" data-title="Manufacturing Team Site Photo" data-category-label="Team Engagement" data-src="/assets/portfolio/training-pictures/husni-halim-manufacturing-team-site-photo-team-photo-malaysia.jpg" data-caption="Group photo with the manufacturing team after an on-site session.">
         </button>
       </article>
       <article class="portfolio-card" data-category="training">
         <img src="/assets/portfolio/training-pictures/husni-halim-classroom-practical-training-training-malaysia.jpg" alt="Manufacturing training participants working on practical classroom exercises" width="1280" height="960" loading="lazy">
-        <button type="button" data-title="Classroom Practical Training" data-category-label="Training Delivery" data-src="/assets/portfolio/training-pictures/husni-halim-classroom-practical-training-training-malaysia.jpg" data-caption="Participants working through structured exercises before translating the method into workplace action.">
-          <span class="card-copy">
-            <span class="card-kicker">Training Delivery</span>
-            <h3>Classroom Practical Training</h3>
-            <p>Participants working through structured exercises before translating the method into workplace action.</p>
-          </span>
+        <button type="button" data-title="Classroom Practical Training" data-category-label="Training Delivery" data-src="/assets/portfolio/training-pictures/husni-halim-classroom-practical-training-training-malaysia.jpg" data-caption="Participants working through practical exercises during a structured training session.">
         </button>
       </article>
       <article class="portfolio-card tall" data-category="team">
         <img src="/assets/portfolio/training-pictures/husni-halim-participant-recognition-photo-team-photo-malaysia.jpg" alt="Participant recognition photo from a manufacturing training engagement" width="864" height="1152" loading="lazy">
-        <button type="button" data-title="Participant Recognition Photo" data-category-label="Team Engagement" data-src="/assets/portfolio/training-pictures/husni-halim-participant-recognition-photo-team-photo-malaysia.jpg" data-caption="Recognising participation while reinforcing the expectation that learning should continue back at work.">
-          <span class="card-copy">
-            <span class="card-kicker">Team Engagement</span>
-            <h3>Participant Recognition Photo</h3>
-            <p>Recognising participation while reinforcing the expectation that learning should continue back at work.</p>
-          </span>
+        <button type="button" data-title="Participant Recognition Photo" data-category-label="Team Engagement" data-src="/assets/portfolio/training-pictures/husni-halim-participant-recognition-photo-team-photo-malaysia.jpg" data-caption="Participant recognition moment after a workplace learning session.">
         </button>
       </article>
       <article class="portfolio-card tall" data-category="online">
         <img src="/assets/portfolio/training-pictures/husni-halim-online-training-screen-online-session-malaysia.jpg" alt="Online manufacturing training participant screen with remote attendees" width="452" height="1158" loading="lazy">
-        <button type="button" data-title="Online Training Screen" data-category-label="Online Session" data-src="/assets/portfolio/training-pictures/husni-halim-online-training-screen-online-session-malaysia.jpg" data-caption="Remote training support for teams that need structured learning without waiting for a full on-site session.">
-          <span class="card-copy">
-            <span class="card-kicker">Online Session</span>
-            <h3>Online Training Screen</h3>
-            <p>Remote training support for teams that need structured learning without waiting for a full on-site session.</p>
-          </span>
+        <button type="button" data-title="Online Training Screen" data-category-label="Online Session" data-src="/assets/portfolio/training-pictures/husni-halim-online-training-screen-online-session-malaysia.jpg" data-caption="Online training session with remote participants.">
         </button>
       </article>
       <article class="portfolio-card tall" data-category="training">
         <img src="/assets/portfolio/training-pictures/husni-halim-whiteboard-training-session-training-malaysia.jpg" alt="Whiteboard training session for manufacturing improvement participants" width="809" height="1080" loading="lazy">
-        <button type="button" data-title="Whiteboard Training Session" data-category-label="Training Delivery" data-src="/assets/portfolio/training-pictures/husni-halim-whiteboard-training-session-training-malaysia.jpg" data-caption="Breaking down an improvement concept visually so the team can discuss it in plain operational terms.">
-          <span class="card-copy">
-            <span class="card-kicker">Training Delivery</span>
-            <h3>Whiteboard Training Session</h3>
-            <p>Breaking down an improvement concept visually so the team can discuss it in plain operational terms.</p>
-          </span>
+        <button type="button" data-title="Whiteboard Training Session" data-category-label="Training Delivery" data-src="/assets/portfolio/training-pictures/husni-halim-whiteboard-training-session-training-malaysia.jpg" data-caption="Whiteboard explanation during a manufacturing training discussion.">
         </button>
       </article>
       <article class="portfolio-card" data-category="consulting">
         <img src="/assets/portfolio/training-pictures/husni-halim-management-discussion-session-consulting-malaysia.jpg" alt="Management discussion session for manufacturing consulting and process improvement" width="1080" height="810" loading="lazy">
-        <button type="button" data-title="Management Discussion Session" data-category-label="Improvement Discussion" data-src="/assets/portfolio/training-pictures/husni-halim-management-discussion-session-consulting-malaysia.jpg" data-caption="Clarifying improvement priorities with management so the work is tied to real operational needs.">
-          <span class="card-copy">
-            <span class="card-kicker">Improvement Discussion</span>
-            <h3>Management Discussion Session</h3>
-            <p>Clarifying improvement priorities with management so the work is tied to real operational needs.</p>
-          </span>
+        <button type="button" data-title="Management Discussion Session" data-category-label="Improvement Discussion" data-src="/assets/portfolio/training-pictures/husni-halim-management-discussion-session-consulting-malaysia.jpg" data-caption="Management discussion around operating priorities and improvement topics.">
         </button>
       </article>
       <article class="portfolio-card tall" data-category="factory">
         <img src="/assets/portfolio/training-pictures/husni-halim-gemba-walk-machine-area-factory-visit-malaysia.jpg" alt="Gemba walk around machinery during a manufacturing site assessment" width="809" height="1080" loading="lazy">
-        <button type="button" data-title="Gemba Walk Machine Area" data-category-label="Factory and Gemba Work" data-src="/assets/portfolio/training-pictures/husni-halim-gemba-walk-machine-area-factory-visit-malaysia.jpg" data-caption="Observing the work area directly so discussions about losses and improvement are grounded in facts.">
-          <span class="card-copy">
-            <span class="card-kicker">Factory and Gemba Work</span>
-            <h3>Gemba Walk Machine Area</h3>
-            <p>Observing the work area directly so discussions about losses and improvement are grounded in facts.</p>
-          </span>
+        <button type="button" data-title="Gemba Walk Machine Area" data-category-label="Factory and Gemba Work" data-src="/assets/portfolio/training-pictures/husni-halim-gemba-walk-machine-area-factory-visit-malaysia.jpg" data-caption="Gemba-style walk around machinery and the surrounding work area.">
         </button>
       </article>
       <article class="portfolio-card tall" data-category="team">
         <img src="/assets/portfolio/training-pictures/husni-halim-client-team-visit-photo-team-photo-malaysia.jpg" alt="Client team photo during a manufacturing improvement site visit" width="809" height="1080" loading="lazy">
-        <button type="button" data-title="Client Team Visit Photo" data-category-label="Team Engagement" data-src="/assets/portfolio/training-pictures/husni-halim-client-team-visit-photo-team-photo-malaysia.jpg" data-caption="A team moment after the working session, with the improvement conversation already started.">
-          <span class="card-copy">
-            <span class="card-kicker">Team Engagement</span>
-            <h3>Client Team Visit Photo</h3>
-            <p>A team moment after the working session, with the improvement conversation already started.</p>
-          </span>
+        <button type="button" data-title="Client Team Visit Photo" data-category-label="Team Engagement" data-src="/assets/portfolio/training-pictures/husni-halim-client-team-visit-photo-team-photo-malaysia.jpg" data-caption="Team photo after a site visit and improvement discussion.">
         </button>
       </article>
       <article class="portfolio-card" data-category="consulting">
         <img src="/assets/portfolio/training-pictures/husni-halim-training-consultation-table-consulting-malaysia.jpg" alt="Husni Halim leading a table discussion during a manufacturing consultation" width="1280" height="960" loading="lazy">
-        <button type="button" data-title="Training Consultation Table" data-category-label="Improvement Discussion" data-src="/assets/portfolio/training-pictures/husni-halim-training-consultation-table-consulting-malaysia.jpg" data-caption="Using discussion time to connect training content with the team's actual factory concerns.">
-          <span class="card-copy">
-            <span class="card-kicker">Improvement Discussion</span>
-            <h3>Training Consultation Table</h3>
-            <p>Using discussion time to connect training content with the team's actual factory concerns.</p>
-          </span>
+        <button type="button" data-title="Training Consultation Table" data-category-label="Improvement Discussion" data-src="/assets/portfolio/training-pictures/husni-halim-training-consultation-table-consulting-malaysia.jpg" data-caption="Table discussion with the team around training content and factory concerns.">
         </button>
       </article>
       <article class="portfolio-card tall" data-category="training">
         <img src="/assets/portfolio/training-pictures/husni-halim-group-workshop-discussion-training-malaysia.jpg" alt="Group workshop discussion for lean manufacturing training participants" width="864" height="1152" loading="lazy">
-        <button type="button" data-title="Group Workshop Discussion" data-category-label="Training Delivery" data-src="/assets/portfolio/training-pictures/husni-halim-group-workshop-discussion-training-malaysia.jpg" data-caption="Getting participants to work through improvement ideas together instead of only listening to theory.">
-          <span class="card-copy">
-            <span class="card-kicker">Training Delivery</span>
-            <h3>Group Workshop Discussion</h3>
-            <p>Getting participants to work through improvement ideas together instead of only listening to theory.</p>
-          </span>
+        <button type="button" data-title="Group Workshop Discussion" data-category-label="Training Delivery" data-src="/assets/portfolio/training-pictures/husni-halim-group-workshop-discussion-training-malaysia.jpg" data-caption="Group workshop discussion with participants during a training session.">
         </button>
       </article>
       <article class="portfolio-card wide" data-category="training">
         <img src="/assets/portfolio/training-pictures/husni-halim-kaizen-workshop-group-session-training-malaysia.jpg" alt="Kaizen workshop group session with manufacturing participants" width="1280" height="960" loading="lazy">
-        <button type="button" data-title="Kaizen Workshop Group Session" data-category-label="Training Delivery" data-src="/assets/portfolio/training-pictures/husni-halim-kaizen-workshop-group-session-training-malaysia.jpg" data-caption="Building a shared Kaizen language before teams identify practical improvement actions.">
-          <span class="card-copy">
-            <span class="card-kicker">Training Delivery</span>
-            <h3>Kaizen Workshop Group Session</h3>
-            <p>Building a shared Kaizen language before teams identify practical improvement actions.</p>
-          </span>
+        <button type="button" data-title="Kaizen Workshop Group Session" data-category-label="Training Delivery" data-src="/assets/portfolio/training-pictures/husni-halim-kaizen-workshop-group-session-training-malaysia.jpg" data-caption="Kaizen workshop session with group discussion and participant activities.">
         </button>
       </article>
       <article class="portfolio-card" data-category="training">
         <img src="/assets/portfolio/training-pictures/husni-halim-hands-on-workshop-exercise-training-malaysia.jpg" alt="Hands-on workshop exercise during lean manufacturing training" width="1152" height="864" loading="lazy">
-        <button type="button" data-title="Hands-On Workshop Exercise" data-category-label="Training Delivery" data-src="/assets/portfolio/training-pictures/husni-halim-hands-on-workshop-exercise-training-malaysia.jpg" data-caption="Moving participants from concept to practice through hands-on exercises and team discussion.">
-          <span class="card-copy">
-            <span class="card-kicker">Training Delivery</span>
-            <h3>Hands-On Workshop Exercise</h3>
-            <p>Moving participants from concept to practice through hands-on exercises and team discussion.</p>
-          </span>
+        <button type="button" data-title="Hands-On Workshop Exercise" data-category-label="Training Delivery" data-src="/assets/portfolio/training-pictures/husni-halim-hands-on-workshop-exercise-training-malaysia.jpg" data-caption="Hands-on workshop exercise with participants working through the activity.">
         </button>
       </article>
       <article class="portfolio-card tall" data-category="training">
         <img src="/assets/portfolio/training-pictures/husni-halim-participant-discussion-session-training-malaysia.jpg" alt="Participant discussion session during manufacturing improvement training" width="864" height="1152" loading="lazy">
-        <button type="button" data-title="Participant Discussion Session" data-category-label="Training Delivery" data-src="/assets/portfolio/training-pictures/husni-halim-participant-discussion-session-training-malaysia.jpg" data-caption="Drawing out participant experience so improvement ideas come from the people closest to the work.">
-          <span class="card-copy">
-            <span class="card-kicker">Training Delivery</span>
-            <h3>Participant Discussion Session</h3>
-            <p>Drawing out participant experience so improvement ideas come from the people closest to the work.</p>
-          </span>
+        <button type="button" data-title="Participant Discussion Session" data-category-label="Training Delivery" data-src="/assets/portfolio/training-pictures/husni-halim-participant-discussion-session-training-malaysia.jpg" data-caption="Participant discussion during a manufacturing improvement programme.">
         </button>
       </article>
       <article class="portfolio-card" data-category="training">
         <img src="/assets/portfolio/training-pictures/husni-halim-facilitated-group-training-training-malaysia.jpg" alt="Facilitated group training for operational excellence and continuous improvement" width="1280" height="960" loading="lazy">
-        <button type="button" data-title="Facilitated Group Training" data-category-label="Training Delivery" data-src="/assets/portfolio/training-pictures/husni-halim-facilitated-group-training-training-malaysia.jpg" data-caption="Guiding a group through operational excellence concepts with room for questions, examples, and application.">
-          <span class="card-copy">
-            <span class="card-kicker">Training Delivery</span>
-            <h3>Facilitated Group Training</h3>
-            <p>Guiding a group through operational excellence concepts with room for questions, examples, and application.</p>
-          </span>
+        <button type="button" data-title="Facilitated Group Training" data-category-label="Training Delivery" data-src="/assets/portfolio/training-pictures/husni-halim-facilitated-group-training-training-malaysia.jpg" data-caption="Facilitated group training session on operational excellence topics.">
         </button>
       </article>
       <article class="portfolio-card wide" data-category="team">
         <img src="/assets/portfolio/training-pictures/husni-halim-training-group-photo-team-photo-malaysia.jpg" alt="Training group photo with manufacturing participants and facilitator" width="1080" height="810" loading="lazy">
-        <button type="button" data-title="Training Group Photo" data-category-label="Team Engagement" data-src="/assets/portfolio/training-pictures/husni-halim-training-group-photo-team-photo-malaysia.jpg" data-caption="A completed session with the team that will carry the improvement language back into the workplace.">
-          <span class="card-copy">
-            <span class="card-kicker">Team Engagement</span>
-            <h3>Training Group Photo</h3>
-            <p>A completed session with the team that will carry the improvement language back into the workplace.</p>
-          </span>
+        <button type="button" data-title="Training Group Photo" data-category-label="Team Engagement" data-src="/assets/portfolio/training-pictures/husni-halim-training-group-photo-team-photo-malaysia.jpg" data-caption="Group photo from a completed training or workshop session.">
         </button>
       </article>
       <article class="portfolio-card tall" data-category="training">
         <img src="/assets/portfolio/training-pictures/husni-halim-front-room-training-delivery-training-malaysia.jpg" alt="Front room training delivery by Husni Halim for manufacturing participants" width="960" height="1280" loading="lazy">
-        <button type="button" data-title="Front-Room Training Delivery" data-category-label="Training Delivery" data-src="/assets/portfolio/training-pictures/husni-halim-front-room-training-delivery-training-malaysia.jpg" data-caption="Explaining improvement methods in a structured way before teams test the ideas through discussion and exercises.">
-          <span class="card-copy">
-            <span class="card-kicker">Training Delivery</span>
-            <h3>Front-Room Training Delivery</h3>
-            <p>Explaining improvement methods in a structured way before teams test the ideas through discussion and exercises.</p>
-          </span>
+        <button type="button" data-title="Front-Room Training Delivery" data-category-label="Training Delivery" data-src="/assets/portfolio/training-pictures/husni-halim-front-room-training-delivery-training-malaysia.jpg" data-caption="Front-room training delivery during a manufacturing workshop.">
         </button>
       </article>
       <article class="portfolio-card" data-category="factory">
         <img src="/assets/portfolio/training-pictures/husni-halim-factory-process-observation-factory-visit-malaysia.jpg" alt="Factory process observation during a manufacturing operational excellence visit" width="1080" height="810" loading="lazy">
-        <button type="button" data-title="Factory Process Observation" data-category-label="Factory and Gemba Work" data-src="/assets/portfolio/training-pictures/husni-halim-factory-process-observation-factory-visit-malaysia.jpg" data-caption="Observing the process flow first-hand before suggesting countermeasures or training focus areas.">
-          <span class="card-copy">
-            <span class="card-kicker">Factory and Gemba Work</span>
-            <h3>Factory Process Observation</h3>
-            <p>Observing the process flow first-hand before suggesting countermeasures or training focus areas.</p>
-          </span>
+        <button type="button" data-title="Factory Process Observation" data-category-label="Factory and Gemba Work" data-src="/assets/portfolio/training-pictures/husni-halim-factory-process-observation-factory-visit-malaysia.jpg" data-caption="Factory process observation during a site visit.">
         </button>
       </article>
       <article class="portfolio-card tall" data-category="factory">
         <img src="/assets/portfolio/training-pictures/husni-halim-shop-floor-machine-coaching-factory-visit-malaysia.jpg" alt="Shop floor coaching around machine operation and manufacturing losses" width="809" height="1080" loading="lazy">
-        <button type="button" data-title="Shop-Floor Machine Coaching" data-category-label="Factory and Gemba Work" data-src="/assets/portfolio/training-pictures/husni-halim-shop-floor-machine-coaching-factory-visit-malaysia.jpg" data-caption="Coaching the team around machine conditions, production losses, and practical improvement opportunities.">
-          <span class="card-copy">
-            <span class="card-kicker">Factory and Gemba Work</span>
-            <h3>Shop-Floor Machine Coaching</h3>
-            <p>Coaching the team around machine conditions, production losses, and practical improvement opportunities.</p>
-          </span>
+        <button type="button" data-title="Shop-Floor Machine Coaching" data-category-label="Factory and Gemba Work" data-src="/assets/portfolio/training-pictures/husni-halim-shop-floor-machine-coaching-factory-visit-malaysia.jpg" data-caption="Shop-floor discussion around machine conditions and production issues.">
         </button>
       </article>
       <article class="portfolio-card tall" data-category="team">
         <img src="/assets/portfolio/training-pictures/husni-halim-site-visit-team-photo-team-photo-malaysia.jpg" alt="Team photo from a manufacturing site visit with Husni Halim" width="864" height="1152" loading="lazy">
-        <button type="button" data-title="Site Visit Team Photo" data-category-label="Team Engagement" data-src="/assets/portfolio/training-pictures/husni-halim-site-visit-team-photo-team-photo-malaysia.jpg" data-caption="Documenting a site engagement after working through the team's operational context together.">
-          <span class="card-copy">
-            <span class="card-kicker">Team Engagement</span>
-            <h3>Site Visit Team Photo</h3>
-            <p>Documenting a site engagement after working through the team's operational context together.</p>
-          </span>
+        <button type="button" data-title="Site Visit Team Photo" data-category-label="Team Engagement" data-src="/assets/portfolio/training-pictures/husni-halim-site-visit-team-photo-team-photo-malaysia.jpg" data-caption="Team photo from a manufacturing site visit.">
         </button>
       </article>
       <article class="portfolio-card" data-category="factory">
         <img src="/assets/portfolio/training-pictures/husni-halim-factory-equipment-observation-factory-visit-malaysia.jpg" alt="Factory equipment observation during manufacturing process assessment" width="1080" height="810" loading="lazy">
-        <button type="button" data-title="Factory Equipment Observation" data-category-label="Factory and Gemba Work" data-src="/assets/portfolio/training-pictures/husni-halim-factory-equipment-observation-factory-visit-malaysia.jpg" data-caption="Looking at equipment conditions directly so improvement recommendations are based on the real work area.">
-          <span class="card-copy">
-            <span class="card-kicker">Factory and Gemba Work</span>
-            <h3>Factory Equipment Observation</h3>
-            <p>Looking at equipment conditions directly so improvement recommendations are based on the real work area.</p>
-          </span>
+        <button type="button" data-title="Factory Equipment Observation" data-category-label="Factory and Gemba Work" data-src="/assets/portfolio/training-pictures/husni-halim-factory-equipment-observation-factory-visit-malaysia.jpg" data-caption="Factory equipment observation during a practical site assessment.">
         </button>
       </article>
       <article class="portfolio-card" data-category="consulting">
         <img src="/assets/portfolio/training-pictures/husni-halim-small-group-problem-solving-consulting-malaysia.jpg" alt="Small group problem solving discussion in a manufacturing improvement session" width="1080" height="810" loading="lazy">
-        <button type="button" data-title="Small-Group Problem Solving" data-category-label="Improvement Discussion" data-src="/assets/portfolio/training-pictures/husni-halim-small-group-problem-solving-consulting-malaysia.jpg" data-caption="Helping a small group clarify the problem, test assumptions, and turn discussion into action.">
-          <span class="card-copy">
-            <span class="card-kicker">Improvement Discussion</span>
-            <h3>Small-Group Problem Solving</h3>
-            <p>Helping a small group clarify the problem, test assumptions, and turn discussion into action.</p>
-          </span>
+        <button type="button" data-title="Small-Group Problem Solving" data-category-label="Improvement Discussion" data-src="/assets/portfolio/training-pictures/husni-halim-small-group-problem-solving-consulting-malaysia.jpg" data-caption="Small-group problem-solving discussion during an improvement session.">
         </button>
       </article>
       <article class="portfolio-card" data-category="consulting">
         <img src="/assets/portfolio/training-pictures/husni-halim-kaizen-small-group-discussion-consulting-malaysia.jpg" alt="Kaizen small group discussion for manufacturing improvement action planning" width="1080" height="809" loading="lazy">
-        <button type="button" data-title="Kaizen Small-Group Discussion" data-category-label="Improvement Discussion" data-src="/assets/portfolio/training-pictures/husni-halim-kaizen-small-group-discussion-consulting-malaysia.jpg" data-caption="Using Kaizen thinking to help teams identify workplace problems they can act on quickly.">
-          <span class="card-copy">
-            <span class="card-kicker">Improvement Discussion</span>
-            <h3>Kaizen Small-Group Discussion</h3>
-            <p>Using Kaizen thinking to help teams identify workplace problems they can act on quickly.</p>
-          </span>
+        <button type="button" data-title="Kaizen Small-Group Discussion" data-category-label="Improvement Discussion" data-src="/assets/portfolio/training-pictures/husni-halim-kaizen-small-group-discussion-consulting-malaysia.jpg" data-caption="Kaizen small-group discussion around workplace issues and action planning.">
         </button>
       </article>
       <article class="portfolio-card tall" data-category="factory">
         <img src="/assets/portfolio/training-pictures/husni-halim-control-panel-gemba-review-factory-visit-malaysia.jpg" alt="Control panel gemba review during a manufacturing site assessment" width="960" height="1280" loading="lazy">
-        <button type="button" data-title="Control Panel Gemba Review" data-category-label="Factory and Gemba Work" data-src="/assets/portfolio/training-pictures/husni-halim-control-panel-gemba-review-factory-visit-malaysia.jpg" data-caption="Reviewing information at the work area so discussion stays connected to actual operating conditions.">
-          <span class="card-copy">
-            <span class="card-kicker">Factory and Gemba Work</span>
-            <h3>Control Panel Gemba Review</h3>
-            <p>Reviewing information at the work area so discussion stays connected to actual operating conditions.</p>
-          </span>
+        <button type="button" data-title="Control Panel Gemba Review" data-category-label="Factory and Gemba Work" data-src="/assets/portfolio/training-pictures/husni-halim-control-panel-gemba-review-factory-visit-malaysia.jpg" data-caption="Discussion near a control panel during an on-site factory review.">
         </button>
       </article>
       <article class="portfolio-card" data-category="team">
         <img src="/assets/portfolio/training-pictures/husni-halim-manufacturing-site-exterior-team-photo-malaysia.jpg" alt="Manufacturing site exterior photo from a client visit in Malaysia" width="1152" height="864" loading="lazy">
-        <button type="button" data-title="Manufacturing Site Exterior" data-category-label="Team Engagement" data-src="/assets/portfolio/training-pictures/husni-halim-manufacturing-site-exterior-team-photo-malaysia.jpg" data-caption="Marking a manufacturing site engagement while keeping confidential project details out of public view.">
-          <span class="card-copy">
-            <span class="card-kicker">Team Engagement</span>
-            <h3>Manufacturing Site Exterior</h3>
-            <p>Marking a manufacturing site engagement while keeping confidential project details out of public view.</p>
-          </span>
+        <button type="button" data-title="Manufacturing Site Exterior" data-category-label="Team Engagement" data-src="/assets/portfolio/training-pictures/husni-halim-manufacturing-site-exterior-team-photo-malaysia.jpg" data-caption="Manufacturing site exterior photo from a client visit.">
         </button>
       </article>
       <article class="portfolio-card" data-category="consulting">
         <img src="/assets/portfolio/training-pictures/husni-halim-operations-discussion-meeting-consulting-malaysia.jpg" alt="Operations discussion meeting for manufacturing process improvement" width="1152" height="864" loading="lazy">
-        <button type="button" data-title="Operations Discussion Meeting" data-category-label="Improvement Discussion" data-src="/assets/portfolio/training-pictures/husni-halim-operations-discussion-meeting-consulting-malaysia.jpg" data-caption="Working with operations stakeholders to understand process issues before deciding the improvement path.">
-          <span class="card-copy">
-            <span class="card-kicker">Improvement Discussion</span>
-            <h3>Operations Discussion Meeting</h3>
-            <p>Working with operations stakeholders to understand process issues before deciding the improvement path.</p>
-          </span>
+        <button type="button" data-title="Operations Discussion Meeting" data-category-label="Improvement Discussion" data-src="/assets/portfolio/training-pictures/husni-halim-operations-discussion-meeting-consulting-malaysia.jpg" data-caption="Operations discussion with team members around process issues and improvement priorities.">
         </button>
       </article>
       <article class="portfolio-card tall" data-category="factory">
         <img src="/assets/portfolio/training-pictures/husni-halim-product-observation-review-factory-visit-malaysia.jpg" alt="Product observation review during manufacturing process assessment" width="864" height="1152" loading="lazy">
-        <button type="button" data-title="Product Observation Review" data-category-label="Factory and Gemba Work" data-src="/assets/portfolio/training-pictures/husni-halim-product-observation-review-factory-visit-malaysia.jpg" data-caption="Reviewing product or material conditions as part of understanding quality, flow, and process behaviour.">
-          <span class="card-copy">
-            <span class="card-kicker">Factory and Gemba Work</span>
-            <h3>Product Observation Review</h3>
-            <p>Reviewing product or material conditions as part of understanding quality, flow, and process behaviour.</p>
-          </span>
+        <button type="button" data-title="Product Observation Review" data-category-label="Factory and Gemba Work" data-src="/assets/portfolio/training-pictures/husni-halim-product-observation-review-factory-visit-malaysia.jpg" data-caption="Product and material observation during a factory visit.">
         </button>
       </article>
       <article class="portfolio-card tall" data-category="team">
         <img src="/assets/portfolio/training-pictures/husni-halim-manufacturing-site-visit-photo-team-photo-malaysia.jpg" alt="Manufacturing site visit photo with Husni Halim" width="864" height="1152" loading="lazy">
-        <button type="button" data-title="Manufacturing Site Visit Photo" data-category-label="Team Engagement" data-src="/assets/portfolio/training-pictures/husni-halim-manufacturing-site-visit-photo-team-photo-malaysia.jpg" data-caption="A site visit moment from a practical manufacturing improvement engagement.">
-          <span class="card-copy">
-            <span class="card-kicker">Team Engagement</span>
-            <h3>Manufacturing Site Visit Photo</h3>
-            <p>A site visit moment from a practical manufacturing improvement engagement.</p>
-          </span>
+        <button type="button" data-title="Manufacturing Site Visit Photo" data-category-label="Team Engagement" data-src="/assets/portfolio/training-pictures/husni-halim-manufacturing-site-visit-photo-team-photo-malaysia.jpg" data-caption="Site visit photo from a manufacturing improvement engagement.">
         </button>
       </article>
       <article class="portfolio-card wide" data-category="consulting">
         <img src="/assets/portfolio/training-pictures/husni-halim-data-review-consulting-session-consulting-malaysia.jpg" alt="Data review consulting session for manufacturing improvement project planning" width="1152" height="864" loading="lazy">
-        <button type="button" data-title="Data Review Consulting Session" data-category-label="Improvement Discussion" data-src="/assets/portfolio/training-pictures/husni-halim-data-review-consulting-session-consulting-malaysia.jpg" data-caption="Using data and working documents to move the discussion from opinion toward improvement direction.">
-          <span class="card-copy">
-            <span class="card-kicker">Improvement Discussion</span>
-            <h3>Data Review Consulting Session</h3>
-            <p>Using data and working documents to move the discussion from opinion toward improvement direction.</p>
-          </span>
+        <button type="button" data-title="Data Review Consulting Session" data-category-label="Improvement Discussion" data-src="/assets/portfolio/training-pictures/husni-halim-data-review-consulting-session-consulting-malaysia.jpg" data-caption="Data review discussion during a consulting session.">
         </button>
       </article>
       <article class="portfolio-card" data-category="consulting">
         <img src="/assets/portfolio/training-pictures/husni-halim-management-roundtable-discussion-consulting-malaysia.jpg" alt="Management roundtable discussion for operational excellence consulting" width="1280" height="960" loading="lazy">
-        <button type="button" data-title="Management Roundtable Discussion" data-category-label="Improvement Discussion" data-src="/assets/portfolio/training-pictures/husni-halim-management-roundtable-discussion-consulting-malaysia.jpg" data-caption="Creating space for management stakeholders to align on priorities, constraints, and the next practical step.">
-          <span class="card-copy">
-            <span class="card-kicker">Improvement Discussion</span>
-            <h3>Management Roundtable Discussion</h3>
-            <p>Creating space for management stakeholders to align on priorities, constraints, and the next practical step.</p>
-          </span>
+        <button type="button" data-title="Management Roundtable Discussion" data-category-label="Improvement Discussion" data-src="/assets/portfolio/training-pictures/husni-halim-management-roundtable-discussion-consulting-malaysia.jpg" data-caption="Roundtable discussion with management stakeholders during a site engagement.">
         </button>
       </article>
       <article class="portfolio-card tall" data-category="consulting">
         <img src="/assets/portfolio/training-pictures/husni-halim-consulting-interview-session-consulting-malaysia.jpg" alt="Consulting interview session with manufacturing team members" width="864" height="1152" loading="lazy">
-        <button type="button" data-title="Consulting Interview Session" data-category-label="Improvement Discussion" data-src="/assets/portfolio/training-pictures/husni-halim-consulting-interview-session-consulting-malaysia.jpg" data-caption="Listening to the people involved in the process before framing the real problem to solve.">
-          <span class="card-copy">
-            <span class="card-kicker">Improvement Discussion</span>
-            <h3>Consulting Interview Session</h3>
-            <p>Listening to the people involved in the process before framing the real problem to solve.</p>
-          </span>
+        <button type="button" data-title="Consulting Interview Session" data-category-label="Improvement Discussion" data-src="/assets/portfolio/training-pictures/husni-halim-consulting-interview-session-consulting-malaysia.jpg" data-caption="Consulting interview session with team members involved in the process.">
         </button>
       </article>
       <article class="portfolio-card" data-category="team">
         <img src="/assets/portfolio/training-pictures/husni-halim-client-team-meeting-photo-team-photo-malaysia.jpg" alt="Client team meeting photo during a manufacturing training engagement" width="1080" height="809" loading="lazy">
-        <button type="button" data-title="Client Team Meeting Photo" data-category-label="Team Engagement" data-src="/assets/portfolio/training-pictures/husni-halim-client-team-meeting-photo-team-photo-malaysia.jpg" data-caption="A team moment after discussion, training, or alignment work with the people involved in improvement.">
-          <span class="card-copy">
-            <span class="card-kicker">Team Engagement</span>
-            <h3>Client Team Meeting Photo</h3>
-            <p>A team moment after discussion, training, or alignment work with the people involved in improvement.</p>
-          </span>
+        <button type="button" data-title="Client Team Meeting Photo" data-category-label="Team Engagement" data-src="/assets/portfolio/training-pictures/husni-halim-client-team-meeting-photo-team-photo-malaysia.jpg" data-caption="Team photo following a client meeting or training discussion.">
         </button>
       </article>
       <article class="portfolio-card wide" data-category="training">
         <img src="/assets/portfolio/training-pictures/husni-halim-classroom-table-training-training-malaysia.jpg" alt="Classroom table training session for manufacturing improvement participants" width="1080" height="810" loading="lazy">
-        <button type="button" data-title="Classroom Table Training" data-category-label="Training Delivery" data-src="/assets/portfolio/training-pictures/husni-halim-classroom-table-training-training-malaysia.jpg" data-caption="Structured table work that lets participants discuss how the method applies to their own area.">
-          <span class="card-copy">
-            <span class="card-kicker">Training Delivery</span>
-            <h3>Classroom Table Training</h3>
-            <p>Structured table work that lets participants discuss how the method applies to their own area.</p>
-          </span>
+        <button type="button" data-title="Classroom Table Training" data-category-label="Training Delivery" data-src="/assets/portfolio/training-pictures/husni-halim-classroom-table-training-training-malaysia.jpg" data-caption="Classroom table session with participants during practical training.">
         </button>
       </article>
       <article class="portfolio-card" data-category="training">
         <img src="/assets/portfolio/training-pictures/husni-halim-workshop-presentation-discussion-training-malaysia.jpg" alt="Workshop presentation discussion for lean manufacturing training" width="1152" height="864" loading="lazy">
-        <button type="button" data-title="Workshop Presentation Discussion" data-category-label="Training Delivery" data-src="/assets/portfolio/training-pictures/husni-halim-workshop-presentation-discussion-training-malaysia.jpg" data-caption="Using presentation material as a starting point for discussion, not as the whole training experience.">
-          <span class="card-copy">
-            <span class="card-kicker">Training Delivery</span>
-            <h3>Workshop Presentation Discussion</h3>
-            <p>Using presentation material as a starting point for discussion, not as the whole training experience.</p>
-          </span>
+        <button type="button" data-title="Workshop Presentation Discussion" data-category-label="Training Delivery" data-src="/assets/portfolio/training-pictures/husni-halim-workshop-presentation-discussion-training-malaysia.jpg" data-caption="Workshop discussion supported by presentation visuals and group participation.">
         </button>
       </article>
       <article class="portfolio-card" data-category="training">
         <img src="/assets/portfolio/training-pictures/husni-halim-shop-floor-table-session-training-malaysia.jpg" alt="Shop floor table session for manufacturing training and improvement discussion" width="1080" height="810" loading="lazy">
-        <button type="button" data-title="Shop-Floor Table Session" data-category-label="Training Delivery" data-src="/assets/portfolio/training-pictures/husni-halim-shop-floor-table-session-training-malaysia.jpg" data-caption="Holding the learning conversation close to the work area so the examples stay real.">
-          <span class="card-copy">
-            <span class="card-kicker">Training Delivery</span>
-            <h3>Shop-Floor Table Session</h3>
-            <p>Holding the learning conversation close to the work area so the examples stay real.</p>
-          </span>
+        <button type="button" data-title="Shop-Floor Table Session" data-category-label="Training Delivery" data-src="/assets/portfolio/training-pictures/husni-halim-shop-floor-table-session-training-malaysia.jpg" data-caption="Table discussion near the shop floor during a training session.">
         </button>
       </article>
       <article class="portfolio-card tall" data-category="training">
         <img src="/assets/portfolio/training-pictures/husni-halim-training-materials-preparation-training-malaysia.jpg" alt="Training materials prepared for manufacturing workshop participants" width="809" height="1080" loading="lazy">
-        <button type="button" data-title="Training Materials Preparation" data-category-label="Training Delivery" data-src="/assets/portfolio/training-pictures/husni-halim-training-materials-preparation-training-malaysia.jpg" data-caption="Preparing practical materials so participants can work through the topic instead of only receiving slides.">
-          <span class="card-copy">
-            <span class="card-kicker">Training Delivery</span>
-            <h3>Training Materials Preparation</h3>
-            <p>Preparing practical materials so participants can work through the topic instead of only receiving slides.</p>
-          </span>
+        <button type="button" data-title="Training Materials Preparation" data-category-label="Training Delivery" data-src="/assets/portfolio/training-pictures/husni-halim-training-materials-preparation-training-malaysia.jpg" data-caption="Training materials prepared for a practical learning session.">
         </button>
       </article>
       <article class="portfolio-card" data-category="training">
         <img src="/assets/portfolio/training-pictures/husni-halim-workshop-materials-and-tools-training-malaysia.jpg" alt="Workshop materials and tools for practical manufacturing training" width="1080" height="809" loading="lazy">
-        <button type="button" data-title="Workshop Materials and Tools" data-category-label="Training Delivery" data-src="/assets/portfolio/training-pictures/husni-halim-workshop-materials-and-tools-training-malaysia.jpg" data-caption="Simple workshop tools used to make improvement concepts easier to handle, discuss, and remember.">
-          <span class="card-copy">
-            <span class="card-kicker">Training Delivery</span>
-            <h3>Workshop Materials and Tools</h3>
-            <p>Simple workshop tools used to make improvement concepts easier to handle, discuss, and remember.</p>
-          </span>
+        <button type="button" data-title="Workshop Materials and Tools" data-category-label="Training Delivery" data-src="/assets/portfolio/training-pictures/husni-halim-workshop-materials-and-tools-training-malaysia.jpg" data-caption="Workshop materials and simple tools prepared for participant activities.">
         </button>
       </article>
       <article class="portfolio-card tall" data-category="factory">
         <img src="/assets/portfolio/training-pictures/husni-halim-hands-on-process-mapping-factory-visit-malaysia.jpg" alt="Hands-on process mapping activity during manufacturing improvement training" width="809" height="1080" loading="lazy">
-        <button type="button" data-title="Hands-On Process Mapping" data-category-label="Factory and Gemba Work" data-src="/assets/portfolio/training-pictures/husni-halim-hands-on-process-mapping-factory-visit-malaysia.jpg" data-caption="Mapping the process in a practical way so the team can see flow, handoffs, and improvement points.">
-          <span class="card-copy">
-            <span class="card-kicker">Factory and Gemba Work</span>
-            <h3>Hands-On Process Mapping</h3>
-            <p>Mapping the process in a practical way so the team can see flow, handoffs, and improvement points.</p>
-          </span>
+        <button type="button" data-title="Hands-On Process Mapping" data-category-label="Factory and Gemba Work" data-src="/assets/portfolio/training-pictures/husni-halim-hands-on-process-mapping-factory-visit-malaysia.jpg" data-caption="Hands-on process mapping activity during a factory improvement session.">
         </button>
       </article>
       <article class="portfolio-card tall" data-category="factory">
         <img src="/assets/portfolio/training-pictures/husni-halim-factory-line-discussion-factory-visit-malaysia.jpg" alt="Factory line discussion during manufacturing process improvement visit" width="809" height="1080" loading="lazy">
-        <button type="button" data-title="Factory Line Discussion" data-category-label="Factory and Gemba Work" data-src="/assets/portfolio/training-pictures/husni-halim-factory-line-discussion-factory-visit-malaysia.jpg" data-caption="Discussing the work near the line, where the team can point to the real constraints and losses.">
-          <span class="card-copy">
-            <span class="card-kicker">Factory and Gemba Work</span>
-            <h3>Factory Line Discussion</h3>
-            <p>Discussing the work near the line, where the team can point to the real constraints and losses.</p>
-          </span>
+        <button type="button" data-title="Factory Line Discussion" data-category-label="Factory and Gemba Work" data-src="/assets/portfolio/training-pictures/husni-halim-factory-line-discussion-factory-visit-malaysia.jpg" data-caption="Discussion with team members near the production line during a site visit.">
         </button>
       </article>
       <article class="portfolio-card" data-category="team">
         <img src="/assets/portfolio/training-pictures/husni-halim-manufacturing-site-selfie-team-photo-malaysia.jpg" alt="Informal site photo from a manufacturing consulting visit in Malaysia" width="1152" height="864" loading="lazy">
-        <button type="button" data-title="Manufacturing Site Selfie" data-category-label="Team Engagement" data-src="/assets/portfolio/training-pictures/husni-halim-manufacturing-site-selfie-team-photo-malaysia.jpg" data-caption="An informal site moment after a manufacturing visit, kept general to protect project confidentiality.">
-          <span class="card-copy">
-            <span class="card-kicker">Team Engagement</span>
-            <h3>Manufacturing Site Selfie</h3>
-            <p>An informal site moment after a manufacturing visit, kept general to protect project confidentiality.</p>
-          </span>
+        <button type="button" data-title="Manufacturing Site Selfie" data-category-label="Team Engagement" data-src="/assets/portfolio/training-pictures/husni-halim-manufacturing-site-selfie-team-photo-malaysia.jpg" data-caption="Informal site photo from a manufacturing visit.">
         </button>
       </article>
       <article class="portfolio-card" data-category="training">
         <img src="/assets/portfolio/training-pictures/husni-halim-workshop-table-facilitation-training-malaysia.jpg" alt="Workshop table facilitation for manufacturing training participants" width="1080" height="809" loading="lazy">
-        <button type="button" data-title="Workshop Table Facilitation" data-category-label="Training Delivery" data-src="/assets/portfolio/training-pictures/husni-halim-workshop-table-facilitation-training-malaysia.jpg" data-caption="Facilitating table-level discussion so participants can connect the lesson to their own work areas.">
-          <span class="card-copy">
-            <span class="card-kicker">Training Delivery</span>
-            <h3>Workshop Table Facilitation</h3>
-            <p>Facilitating table-level discussion so participants can connect the lesson to their own work areas.</p>
-          </span>
+        <button type="button" data-title="Workshop Table Facilitation" data-category-label="Training Delivery" data-src="/assets/portfolio/training-pictures/husni-halim-workshop-table-facilitation-training-malaysia.jpg" data-caption="Facilitated table discussion during a manufacturing workshop.">
         </button>
       </article>
       <article class="portfolio-card tall" data-category="training">
         <img src="/assets/portfolio/training-pictures/husni-halim-performance-dashboard-training-training-malaysia.jpg" alt="Performance dashboard training session for manufacturing improvement teams" width="864" height="1152" loading="lazy">
-        <button type="button" data-title="Performance Dashboard Training" data-category-label="Training Delivery" data-src="/assets/portfolio/training-pictures/husni-halim-performance-dashboard-training-training-malaysia.jpg" data-caption="Using performance information to help teams read results, spot gaps, and discuss improvement priorities.">
-          <span class="card-copy">
-            <span class="card-kicker">Training Delivery</span>
-            <h3>Performance Dashboard Training</h3>
-            <p>Using performance information to help teams read results, spot gaps, and discuss improvement priorities.</p>
-          </span>
+        <button type="button" data-title="Performance Dashboard Training" data-category-label="Training Delivery" data-src="/assets/portfolio/training-pictures/husni-halim-performance-dashboard-training-training-malaysia.jpg" data-caption="Training discussion supported by a performance dashboard or improvement presentation.">
         </button>
       </article>
       <article class="portfolio-card wide" data-category="online">
         <img src="/assets/portfolio/training-pictures/husni-halim-remote-online-training-session-online-session-malaysia.jpg" alt="Remote online manufacturing training session with multiple participants" width="1005" height="595" loading="lazy">
-        <button type="button" data-title="Remote Online Training Session" data-category-label="Online Session" data-src="/assets/portfolio/training-pictures/husni-halim-remote-online-training-session-online-session-malaysia.jpg" data-caption="Delivering structured improvement learning for remote participants while keeping the discussion practical.">
-          <span class="card-copy">
-            <span class="card-kicker">Online Session</span>
-            <h3>Remote Online Training Session</h3>
-            <p>Delivering structured improvement learning for remote participants while keeping the discussion practical.</p>
-          </span>
+        <button type="button" data-title="Remote Online Training Session" data-category-label="Online Session" data-src="/assets/portfolio/training-pictures/husni-halim-remote-online-training-session-online-session-malaysia.jpg" data-caption="Online training session with remote participants for manufacturing improvement learning.">
         </button>
       </article>
     </div>
   </section>
 
-  <section class="seo-block" aria-labelledby="seo-heading">
-    <div class="seo-inner">
-      <div>
-        <h2 id="seo-heading">What the Photos Are Meant to Show</h2>
-        <p>The strongest proof is not a posed room shot. It is seeing how training and consulting are connected to actual factory conversations, practical exercises, leadership alignment, and shop-floor realities.</p>
-        <p>Some client names, equipment details, and site information are intentionally not shown. That protects confidentiality while still giving visitors a clear sense of the work involved.</p>
-        <p>Behind the page, each image still carries descriptive titles, alt text, structured data, and search context for manufacturing training, Kaizen, OEE, 5S, TPM, factory visits, and operational excellence in Malaysia.</p>
-      </div>
-      <div>
-        <ul>
-          <li>Training-room facilitation and participant exercises.</li>
-          <li>Factory visits, gemba observation, and workplace discussion.</li>
-          <li>Management alignment, data review, and improvement planning.</li>
-          <li>Team engagement across operators, supervisors, engineers, and managers.</li>
-          <li>Privacy-safe presentation without exposing sensitive client details.</li>
-        </ul>
-      </div>
-    </div>
-  </section>
-
-  <section class="portfolio-cta">
-    <div class="portfolio-cta-inner">
-      <h2>Want Practical Improvement Support for Your Team?</h2>
-      <p>Start with a focused conversation about your production losses, capability gaps, or improvement programme. The right engagement begins with the real floor condition, not a generic slide deck.</p>
-      <a class="btn btn-white" href="/#contact">Book a Free Call</a>
-    </div>
-  </section>
 </main>
 
 <footer class="hh-footer">
