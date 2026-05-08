@@ -4,17 +4,17 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="robots" content="index, follow">
-  <meta name="description" content="Kaizen Champion Development Program — build Kaizen capability where the work happens. 5-day HRDC claimable program plus 90-day Field Challenge for Malaysian manufacturers.">
+  <meta name="description" content="Kaizen Champion Development Program — build Kaizen capability where the work happens. 5-day HRDC claimable public cohort or in-house program for Malaysian manufacturers.">
   <link rel="canonical" href="https://husnihalim.com/kaizenchampion/"/>
   <meta property="og:type" content="website"/>
   <meta property="og:url" content="https://husnihalim.com/kaizenchampion/"/>
   <meta property="og:title" content="Kaizen Champion Development Program | Husni Halim"/>
-  <meta property="og:description" content="5-day practical Kaizen Champion program plus 90-day Field Challenge for manufacturers developing internal improvement leadership and structured project ownership."/>
+  <meta property="og:description" content="5-day practical Kaizen Champion public cohort or in-house program for manufacturers developing internal improvement leadership and structured project ownership."/>
   <meta property="og:image" content="https://husnihalim.com/assets/og-image.png?v=20260427"/>
   <meta property="og:locale" content="en_MY"/>
   <meta name="twitter:card" content="summary_large_image"/>
   <meta name="twitter:title" content="Kaizen Champion Development Program | Husni Halim"/>
-  <meta name="twitter:description" content="Build Kaizen capability where the work happens. 5-day practical program plus 90-day Field Challenge for Malaysian manufacturing teams."/>
+  <meta name="twitter:description" content="Build Kaizen capability where the work happens. 5-day public cohort or in-house program for Malaysian manufacturing teams."/>
   <meta name="twitter:image" content="https://husnihalim.com/assets/og-image.png?v=20260427"/>
   <title>Kaizen Champion Development Program | Husni Halim</title>
   <link rel="icon" href="/favicon.ico">
@@ -28,7 +28,7 @@
     "@context": "https://schema.org",
     "@type": "Course",
     "name": "Kaizen Champion Development Program",
-    "description": "A 5-day practical Kaizen Champion program plus 90-day Field Challenge for Malaysian manufacturing teams to build internal ownership, A3 problem solving, KPI tracking, and implementation follow-through.",
+    "description": "A 5-day practical Kaizen Champion public cohort or in-house program for Malaysian manufacturing teams to build internal ownership, A3 problem solving, KPI tracking, and implementation follow-through.",
     "provider": {
       "@type": "Person",
       "name": "Husni Halim",
@@ -299,11 +299,113 @@
       color: #555;
       line-height: 1.65;
     }
-    .kc-fit-grid {
+    .kc-delivery-grid {
       display: grid;
-      grid-template-columns: 1fr 1fr;
+      grid-template-columns: repeat(2, 1fr);
       gap: 24px;
       margin-top: 2.5rem;
+    }
+    .kc-delivery-card {
+      background: #fff;
+      border: 1px solid #e8e8e8;
+      border-radius: 8px;
+      padding: 2rem;
+      box-shadow: 0 3px 16px rgba(12,27,46,0.06);
+    }
+    .kc-delivery-card.featured {
+      border: 2px solid var(--c-accent);
+      box-shadow: 0 6px 24px rgba(139,34,82,0.12);
+    }
+    .kc-delivery-tag {
+      display: inline-block;
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.72rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--c-accent);
+      margin-bottom: 0.85rem;
+    }
+    .kc-delivery-card h3 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.8rem;
+      color: var(--c-dark);
+      margin-bottom: 0.75rem;
+    }
+    .kc-delivery-card p {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.92rem;
+      line-height: 1.7;
+      color: #555;
+      margin: 0 0 1.4rem;
+    }
+    .kc-delivery-list {
+      list-style: none;
+      padding: 0;
+      margin: 0 0 1.8rem;
+    }
+    .kc-delivery-list li {
+      position: relative;
+      padding: 0.5rem 0 0.5rem 1.5rem;
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.88rem;
+      color: #4f5867;
+      line-height: 1.5;
+      border-bottom: 1px solid #f3f3f3;
+    }
+    .kc-delivery-list li:last-child { border-bottom: none; }
+    .kc-delivery-list li::before {
+      content: '✓';
+      position: absolute;
+      left: 0;
+      color: #059669;
+      font-weight: 700;
+    }
+    .kc-inhouse-price {
+      margin-top: 2rem;
+      background: #fff;
+      border: 1px solid #e8e8e8;
+      border-left: 4px solid var(--c-accent);
+      border-radius: 8px;
+      padding: 1.8rem 2rem;
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 24px;
+      align-items: center;
+      box-shadow: 0 2px 14px rgba(0,0,0,0.06);
+    }
+    .kc-inhouse-price h3 {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 1rem;
+      color: #111;
+      margin-bottom: 0.55rem;
+    }
+    .kc-inhouse-price p {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.9rem;
+      color: #555;
+      line-height: 1.7;
+      margin: 0;
+    }
+    .kc-register-note {
+      max-width: 760px;
+      margin: 1.8rem auto 0;
+      padding: 1rem 1.2rem;
+      background: #f8f8f8;
+      border: 1px solid #e8e8e8;
+      border-radius: 8px;
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.9rem;
+      color: #555;
+      line-height: 1.7;
+      text-align: center;
+    }
+    .kc-fit-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 24px;
+      max-width: 760px;
+      margin: 2.5rem auto 0;
     }
     .kc-fit-panel {
       background: #fff;
@@ -493,7 +595,7 @@
       .price-grid { grid-template-columns: repeat(2, 1fr); }
     }
     @media (max-width: 900px) {
-      .kc-hero-grid, .kc-split-grid, .obj-grid, .feat-grid, .price-grid, .outcomes-grid, .kc-story-grid, .kc-challenge-grid, .kc-proof-grid, .kc-value-frame, .kc-fit-grid, .kc-trainer-panel { grid-template-columns: 1fr; }
+      .kc-hero-grid, .kc-split-grid, .obj-grid, .feat-grid, .price-grid, .outcomes-grid, .kc-story-grid, .kc-challenge-grid, .kc-proof-grid, .kc-value-frame, .kc-fit-grid, .kc-trainer-panel, .kc-delivery-grid, .kc-inhouse-price { grid-template-columns: 1fr; }
       .kc-hero h1 { font-size: 2.4rem; }
       .kc-container { padding: 0 20px; }
       .kc-section { padding: 50px 0; }
@@ -631,17 +733,17 @@
         <span class="kc-badge">HRDC Claimable · 29 May–2 June 2026 · AC Hotel by Marriott, Puchong</span>
         <h1>Build Kaizen Capability<br><em>Where the Work Happens</em></h1>
         <p class="subhead">For manufacturing organisations developing internal improvement leadership, structured problem ownership, and measurable execution beyond classroom training.</p>
-        <p>A 5-day practical program plus 90-day Field Challenge. Participants bring one real operational problem, build the project during the program, and continue after training with baseline, progress, and final proof checkpoints.</p>
+        <p>A 5-day practical program where participants bring one real operational problem, build the project during the program, and leave with an A3 report, KPI structure, and implementation action plan.</p>
         <div class="kc-hero-cta">
           <a href="#register" class="kc-btn-primary">Check Seat Availability</a>
+          <a href="#delivery-options" class="kc-btn-outline">Public Cohort or In-House</a>
           <a href="Kaizen-Champion-Program-Outline.pdf" class="kc-btn-outline">Download Program Outline</a>
-          <a href="#field-challenge" class="kc-btn-outline">See the Field Challenge</a>
         </div>
       </div>
       <div class="kc-stats-card">
         <div class="kc-stat"><div class="num">5</div><div class="lbl">Practical Training Days</div></div>
-        <div class="kc-stat"><div class="num">90</div><div class="lbl">Day Field Challenge</div></div>
-        <div class="kc-stat"><div class="num">3</div><div class="lbl">Proof Checkpoints</div></div>
+        <div class="kc-stat"><div class="num">A3</div><div class="lbl">Improvement Report</div></div>
+        <div class="kc-stat"><div class="num">KPI</div><div class="lbl">Tracking Structure</div></div>
         <div class="kc-stat"><div class="num">1</div><div class="lbl">Real Improvement Project</div></div>
       </div>
     </div>
@@ -682,32 +784,40 @@
   </div>
 </section>
 
-<!-- ===== FIELD CHALLENGE ===== -->
-<section class="kc-section light" id="field-challenge">
+<!-- ===== DELIVERY OPTIONS ===== -->
+<section class="kc-section" id="delivery-options">
   <div class="kc-container">
-    <h2 class="text-center">The 90-Day Kaizen Champion Field Challenge</h2>
-    <p class="section-sub text-center">The program does not end after five days. Participants continue with one real improvement project, three practical proof checkpoints, and private project review by Husni Halim / Visi Armada.</p>
-    <div class="kc-challenge-grid">
-      <div class="kc-challenge-card">
-        <span class="kc-step">1</span>
-        <h4>Baseline Proof</h4>
-        <p>Before implementation: problem statement, current condition photo/video, and selected KPI or observable waste.</p>
+    <h2 class="text-center">Choose the Delivery Route That Fits Your Factory</h2>
+    <p class="section-sub text-center">The same Kaizen Champion structure can be taken through a public cohort or delivered in-house for a company team that needs shared language, shared ownership, and one improvement rhythm.</p>
+    <div class="kc-delivery-grid">
+      <div class="kc-delivery-card">
+        <span class="kc-delivery-tag">Public Cohort</span>
+        <h3>Send Selected Kaizen Champions</h3>
+        <p>Best when your company wants to develop one or a few internal improvement owners through a structured public program with external peer learning.</p>
+        <ul class="kc-delivery-list">
+          <li>29 May-2 June 2026 at AC Hotel by Marriott, Puchong</li>
+          <li>Suitable for 1-5 nominated participants</li>
+          <li>Limited cohort size for practical project review</li>
+          <li>Same 5-day Kaizen Champion structure</li>
+          <li>HRDC claimable, subject to company eligibility</li>
+        </ul>
+        <a href="#register" class="price-btn outline">Reserve Public Cohort Seat</a>
       </div>
-      <div class="kc-challenge-card">
-        <span class="kc-step">2</span>
-        <h4>Progress Proof</h4>
-        <p>Around day 30-45: evidence of the trial, countermeasure, team activity, or changed condition.</p>
+      <div class="kc-delivery-card featured">
+        <span class="kc-delivery-tag">In-House Company Program</span>
+        <h3>Train One Internal Factory Team</h3>
+        <p>Best when your factory wants supervisors, engineers, production, quality, maintenance, and CI teams to work from the same improvement method using your own workplace problems.</p>
+        <ul class="kc-delivery-list">
+          <li>Run at your facility</li>
+          <li>Custom dates</li>
+          <li>Suitable for 8+ participants</li>
+          <li>Examples can be aligned to your process</li>
+          <li>Same 5-day Kaizen Champion structure</li>
+          <li>HRDC claimable, subject to company eligibility</li>
+          <li>More cost-efficient for company groups</li>
+        </ul>
+        <a href="https://wa.me/60165261901?text=Hi%20Husni%2C%20I%20would%20like%20to%20discuss%20the%20Kaizen%20Champion%20in-house%20program." class="price-btn primary">Discuss In-House Program</a>
       </div>
-      <div class="kc-challenge-card">
-        <span class="kc-step">3</span>
-        <h4>Final Proof</h4>
-        <p>By day 90: before/after evidence, a short project summary, and proof that the improvement was implemented.</p>
-      </div>
-    </div>
-    <div class="kc-note">
-      <strong>Private by default.</strong> Factory evidence is reviewed privately and will not be used publicly unless the company gives written approval. If photos or videos are restricted, evidence can be shown in a private review call with sensitive areas hidden, blurred, cropped, or shown only briefly.
-      <br><br>
-      <strong>Recognition wording:</strong> Kaizen Champion Graduate is a program-based recognition by Husni Halim / Visi Armada Consulting. It is not an external professional certification.
     </div>
   </div>
 </section>
@@ -802,15 +912,6 @@
           <li>Someone trusted by supervisors, engineers, or operators.</li>
           <li>Someone who can bring one live operational issue into the program.</li>
           <li>Someone whose manager will review progress after training.</li>
-        </ul>
-      </div>
-      <div class="kc-fit-panel warning">
-        <h4>Do not send</h4>
-        <ul>
-          <li>Someone with no real problem to work on.</li>
-          <li>Someone attending only to use HRDC budget.</li>
-          <li>Someone whose manager will not support implementation.</li>
-          <li>Someone who cannot commit to the 90-day Field Challenge.</li>
         </ul>
       </div>
     </div>
@@ -1000,10 +1101,10 @@
         </ul>
         <div class="session-hd">AFTERNOON: 2:00 PM – 5:00 PM</div>
         <ul class="topic-list">
-          <li><strong>KPI Tracking & Dashboards</strong> — Quality, Cost, Delivery metrics over 90+ days</li>
+          <li><strong>KPI Tracking & Dashboards</strong> — Quality, Cost, Delivery metrics linked to improvement ownership</li>
           <li><strong>Business Impact Framing</strong> — connect KPI movement, waste reduction, and improvement evidence to management priorities</li>
           <li><strong>Capstone Presentations</strong> — Each participant presents A3 Report, peer feedback</li>
-          <li><strong>90-Day Action Plan Review</strong> — Coaching schedule, email support, alumni network, next steps</li>
+          <li><strong>Implementation Action Plan Review</strong> — next steps, owner rhythm, support needed, and management follow-through</li>
         </ul>
       </div>
     </div>
@@ -1019,9 +1120,9 @@
       <div class="feat-card"><div class="feat-icon">1</div><h4>One Scoped Improvement Project</h4><p>A real workplace problem translated into an A3, KPI, action plan, and ownership structure.</p></div>
       <div class="feat-card"><div class="feat-icon">2</div><h4>Kaizen Toolkit</h4><p>5S, waste walk, 5 Why, Fishbone, 7QC tools, visual management, standard work, and A3 reporting.</p></div>
       <div class="feat-card"><div class="feat-icon">3</div><h4>Management Briefing Structure</h4><p>A simple way to explain the project, business case, progress, support needed, and next decision.</p></div>
-      <div class="feat-card"><div class="feat-icon">4</div><h4>90-Day Field Challenge Tracker</h4><p>Baseline, progress, and final proof checkpoints to keep implementation moving after the program.</p></div>
+      <div class="feat-card"><div class="feat-icon">4</div><h4>Implementation Action Plan</h4><p>A practical next-step plan with owners, dates, KPI review points, and support needed from management.</p></div>
       <div class="feat-card"><div class="feat-icon">5</div><h4>Private Project Review</h4><p>Practical review by Husni Halim / Visi Armada without exposing company-sensitive information publicly.</p></div>
-      <div class="feat-card"><div class="feat-icon">6</div><h4>Kaizen Champion Graduate Recognition</h4><p>Program-based recognition awarded only after attendance, checkpoint completion, implemented improvement evidence, and review.</p></div>
+      <div class="feat-card"><div class="feat-icon">6</div><h4>Kaizen Champion Completion</h4><p>Program-based completion recognition for participants who attend the program and complete the practical project work.</p></div>
     </div>
   </div>
 </section>
@@ -1029,11 +1130,11 @@
 <!-- ===== PROGRAM OUTPUT GUARANTEE ===== -->
 <section class="kc-section">
   <div class="kc-container">
-    <h2 class="text-center">Implementation Evidence Beyond Classroom Attendance</h2>
-    <p class="section-sub text-center">A structured pathway from learning to project execution, evidence, and management review.</p>
+    <h2 class="text-center">Practical Output From the 5-Day Program</h2>
+    <p class="section-sub text-center">A structured pathway from learning to project planning, review, and management discussion.</p>
     <div class="promise-card">
       <h3>Program deliverables</h3>
-      <p>Every participant who completes the 5-day program leaves with a developed A3 improvement report, practical Kaizen toolkit, KPI tracking structure, and 90-day Field Challenge roadmap. The follow-through structure is designed to move the first Kaizen initiative from classroom planning into documented implementation evidence.</p>
+      <p>Every participant who completes the 5-day program leaves with a developed A3 improvement report, practical Kaizen toolkit, KPI tracking structure, and implementation action plan. The structure is designed to help the first Kaizen initiative move from classroom learning into a clear management discussion.</p>
     </div>
     <div class="kc-hero-cta" style="justify-content:center;margin-top:2rem;">
       <a href="Kaizen-Champion-Program-Outline.pdf" class="kc-btn-primary">Download Program Outline</a>
@@ -1041,8 +1142,8 @@
     </div>
     <div class="feat-grid">
       <div class="feat-card"><div class="feat-icon">📄</div><h4>Clear Project Output</h4><p>A structured A3 and action plan linked to a real workplace issue, ready for management review and team discussion.</p></div>
-      <div class="feat-card"><div class="feat-icon">🧭</div><h4>Guided Follow-Up</h4><p>Field Challenge checkpoints help participants review progress, remove blockers, and refine the implementation plan.</p></div>
-      <div class="feat-card"><div class="feat-icon">🏭</div><h4>Implementation Evidence</h4><p>The participant must submit baseline, progress, and final proof before receiving Kaizen Champion Graduate recognition.</p></div>
+      <div class="feat-card"><div class="feat-icon">🧭</div><h4>Management Discussion</h4><p>A practical way to explain the issue, expected impact, support needed, and next action after training.</p></div>
+      <div class="feat-card"><div class="feat-icon">🏭</div><h4>Factory-Relevant Planning</h4><p>The participant works from a real operational problem, not a generic classroom case study.</p></div>
     </div>
   </div>
 </section>
@@ -1054,7 +1155,7 @@
     <p class="section-sub text-center">HRDC claimable for Malaysian companies</p>
     <div class="promise-card">
       <h3>The value is not five days in a room. The value is one person who can keep removing waste.</h3>
-      <p>RM6,500 is expensive if the participant only attends class. It becomes easier to justify when the participant returns with a real project, management briefing, implementation tracker, and 90-day Field Challenge. If one improvement saves RM250 per working day and sustains across the working year, the annual impact is about RM66,000. Most factories have more than one hidden waste stream waiting for an owner.</p>
+      <p>RM6,500 is expensive if the participant only attends class. It becomes easier to justify when the participant returns with a real project, management briefing, KPI structure, and implementation action plan. If one improvement saves RM250 per working day and sustains across the working year, the annual impact is about RM66,000. Most factories have more than one hidden waste stream waiting for an owner.</p>
     </div>
     <div class="price-grid">
       <div class="price-card">
@@ -1064,10 +1165,10 @@
         <ul class="price-features">
           <li>5-day intensive program</li>
           <li>All tools &amp; templates</li>
-          <li>90-day Field Challenge</li>
-          <li>3 proof checkpoints</li>
+          <li>A3 project development</li>
+          <li>KPI tracking structure</li>
           <li>Complete A3 Report</li>
-          <li>Kaizen Champion Graduate eligibility</li>
+          <li>Implementation action plan</li>
         </ul>
         <a href="#register" class="price-btn outline">Register Now</a>
       </div>
@@ -1078,10 +1179,10 @@
         <ul class="price-features">
           <li>5-day intensive program</li>
           <li>All tools &amp; templates</li>
-          <li>90-day Field Challenge</li>
-          <li>3 proof checkpoints</li>
+          <li>A3 project development</li>
+          <li>KPI tracking structure</li>
           <li>Complete A3 Report</li>
-          <li>Kaizen Champion Graduate eligibility</li>
+          <li>Implementation action plan</li>
         </ul>
         <a href="#register" class="price-btn primary">Reserve Now</a>
       </div>
@@ -1092,10 +1193,10 @@
         <ul class="price-features">
           <li>5-day intensive program</li>
           <li>All tools &amp; templates</li>
-          <li>90-day Field Challenge</li>
-          <li>3 proof checkpoints</li>
+          <li>A3 project development</li>
+          <li>KPI tracking structure</li>
           <li>Complete A3 Report</li>
-          <li>Kaizen Champion Graduate eligibility</li>
+          <li>Implementation action plan</li>
         </ul>
         <a href="#register" class="price-btn outline">Contact Sales</a>
       </div>
@@ -1106,13 +1207,21 @@
         <ul class="price-features">
           <li>5-day intensive program</li>
           <li>All tools &amp; templates</li>
-          <li>90-day Field Challenge</li>
-          <li>3 proof checkpoints</li>
+          <li>A3 project development</li>
+          <li>KPI tracking structure</li>
           <li>Complete A3 Report</li>
-          <li>Kaizen Champion Graduate eligibility</li>
+          <li>Implementation action plan</li>
         </ul>
         <a href="#register" class="price-btn primary">Best Value</a>
       </div>
+    </div>
+
+    <div class="kc-inhouse-price">
+      <div>
+        <h3>In-House Company Cohort</h3>
+        <p>For company groups, the program can be delivered at your facility on custom dates. Pricing is quoted based on participant count, location, customization level, and follow-up scope. For 8+ participants, in-house delivery is often more cost-efficient per participant than sending multiple people to a public cohort.</p>
+      </div>
+      <a href="https://wa.me/60165261901?text=Hi%20Husni%2C%20I%20would%20like%20to%20discuss%20the%20Kaizen%20Champion%20in-house%20program." class="price-btn primary">Request In-House Quote</a>
     </div>
 
     <div class="hrdc-banner">
@@ -1136,7 +1245,7 @@
       </div>
       <div class="faq-item">
         <div class="faq-q"><span>We tried improvements before. Nothing lasted. Why would this be different?</span><span class="faq-toggle">▲</span></div>
-        <div class="faq-a">Most improvements fade because no one owns the follow-up rhythm. This program builds the internal Champion role, gives the participant a 90-day action plan, and includes coaching plus one site visit to assess progress on the Kaizen initiative.</div>
+        <div class="faq-a">Most improvements fade because no one owns the follow-through rhythm. This program builds the internal Champion role and gives the participant a practical A3 report, KPI structure, and implementation action plan to bring back to management.</div>
       </div>
       <div class="faq-item">
         <div class="faq-q"><span>Is this customized to our industry?</span><span class="faq-toggle">▲</span></div>
@@ -1144,23 +1253,11 @@
       </div>
       <div class="faq-item">
         <div class="faq-q"><span>What happens after the 5 days?</span><span class="faq-toggle">▲</span></div>
-        <div class="faq-a">Participants continue into the 90-day Kaizen Champion Field Challenge. They submit Baseline Proof, Progress Proof, and Final Proof while working on one real improvement project. The review focuses on practical implementation evidence, not just a written report.</div>
+        <div class="faq-a">Participants return with a structured A3 report, selected KPI, and implementation action plan based on one real workplace problem. The next step is for the company sponsor or manager to review the plan and support execution at the workplace.</div>
       </div>
       <div class="faq-item">
-        <div class="faq-q"><span>Is Kaizen Champion Graduate a certification?</span><span class="faq-toggle">▲</span></div>
-        <div class="faq-a">No. Kaizen Champion Graduate is a program-based recognition by Husni Halim / Visi Armada Consulting. It is not an external professional certification. Recognition is awarded after the participant completes the 5-day program, completes the Field Challenge checkpoints, submits implementation evidence, and passes practical review.</div>
-      </div>
-      <div class="faq-item">
-        <div class="faq-q"><span>Why do participants need photo or video proof?</span><span class="faq-toggle">▲</span></div>
-        <div class="faq-a">The Field Challenge is designed to avoid paper-only Kaizen. Practical evidence helps confirm that the participant worked on a real condition and implemented a real improvement.</div>
-      </div>
-      <div class="faq-item">
-        <div class="faq-q"><span>What if our factory does not allow photos or videos?</span><span class="faq-toggle">▲</span></div>
-        <div class="faq-a">Evidence can be shown privately during a review call. Sensitive areas may be hidden, blurred, cropped, or shown only briefly. Public use of photos, videos, company names, or savings figures requires written company approval.</div>
-      </div>
-      <div class="faq-item">
-        <div class="faq-q"><span>Can someone qualify with only a written report?</span><span class="faq-toggle">▲</span></div>
-        <div class="faq-a">No. Written reports alone are not enough for Kaizen Champion Graduate recognition. Participants must complete the checkpoint proof system and pass practical review.</div>
+        <div class="faq-q"><span>Is Kaizen Champion completion a certification?</span><span class="faq-toggle">▲</span></div>
+        <div class="faq-a">No. Kaizen Champion completion is a program-based recognition by Husni Halim / Visi Armada Consulting. It is not an external professional certification.</div>
       </div>
       <div class="faq-item">
         <div class="faq-q"><span>Is this HRDC claimable?</span><span class="faq-toggle">▲</span></div>
@@ -1183,6 +1280,7 @@
   <div class="kc-container">
     <h2 class="text-center">Reserve Your Spot</h2>
     <p class="section-sub text-center" style="color:#111;font-weight:600;">29 May–2 June 2026 &nbsp;|&nbsp; AC Hotel by Marriott, Puchong &nbsp;|&nbsp; Limited to 15 participants</p>
+    <p class="kc-register-note"><strong>Planning to train a company group?</strong> For in-house delivery, contact Husni directly to discuss dates, participant count, HRDC documentation, and factory-specific needs.</p>
 
     <div class="kc-form-wrap">
       <div class="kc-google-form-card" aria-label="Kaizen Champion registration Google Form">
