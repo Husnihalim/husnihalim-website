@@ -43,14 +43,14 @@
     "isPartOf": { "@id": "https://husnihalim.com/" },
     "author": { "@type": "Person", "name": "Husni Halim", "url": "https://husnihalim.com" },
     "datePublished": "2026-03-25",
-    "dateModified": "2026-03-27"
+    "dateModified": "2026-05-09"
    },
    {
     "@type": "SoftwareApplication",
     "name": "OEE Calculator",
     "applicationCategory": "BusinessApplication",
     "operatingSystem": "Web",
-    "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+    "offers": { "@type": "Offer", "price": "0", "priceCurrency": "MYR" },
     "description": "A free, self-explanatory OEE calculator for manufacturing managers. Enter your production data and get an instant OEE score, industry benchmark comparison, and financial impact analysis.",
     "url": "https://husnihalim.com/oee-calculator/"
    },
@@ -71,6 +71,11 @@
       "@type": "Question",
       "name": "What is a good OEE score?",
       "acceptedAnswer": { "@type": "Answer", "text": "World-class OEE is generally 85% for discrete manufacturing. Benchmarks vary by industry — Food & Beverage world-class is around 65%, while Automotive is 85%. This calculator shows your score versus your specific industry benchmark." }
+     },
+     {
+      "@type": "Question",
+      "name": "How should food manufacturing factories use OEE?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Food manufacturing teams should use OEE to separate availability losses such as cleaning, changeover and breakdowns from performance losses such as slow running and quality losses such as reject, rework or giveaway." }
      }
     ]
    }
@@ -1036,6 +1041,13 @@
  </div>
 </section>
 
+<!-- QUICK ANSWER -->
+<section style="background:#fff;border-bottom:1px solid var(--border);padding:26px 20px;">
+ <div style="max-width:980px;margin:0 auto;">
+  <p style="font-size:16px;line-height:1.8;color:#475569;margin:0;"><strong style="color:var(--navy);">Quick answer:</strong> OEE is calculated as Availability x Performance x Quality. It shows how much planned production time becomes good output at the expected speed. If your OEE is low, use the score to identify whether the line is losing capacity through downtime, speed loss, quality loss, changeover, minor stops or rework. For a deeper floor review, see <a href="/production-line-improvement-malaysia/" style="color:var(--gold);font-weight:700;">production line improvement in Malaysia</a>.</p>
+ </div>
+</section>
+
 <!-- CALCULATOR WIZARD -->
 <div class="calc-section">
 <div id="wizard" style="display:none;">
@@ -1780,6 +1792,7 @@
           <li><a href="/assessment/">Free Site Assessment</a></li>
           <li><a href="/kaizenchampion/">Kaizen Champion Program</a></li>
           <li><a href="/hrdc-training/">HRDC Training Programs</a></li>
+          <li><a href="/production-line-improvement-malaysia/">Production Line Improvement</a></li>
           <li><a href="/consulting/">Consulting Engagement</a></li>
           <li><a href="/oee-calculator/">Free OEE Calculator</a></li>
         </ul>
@@ -2229,6 +2242,7 @@ function resetAll(){
   <h3 style="font-size:1.2rem;font-weight:700;margin-top:32px;">What to Do After You Calculate Your OEE</h3>
   <p>Your OEE score is a starting point, not the answer. The value is in the breakdown. Once you have your A × P × Q numbers, find your single biggest loss category and run a focused Kaizen event on it. A 5% improvement in Availability on a RM2 million machine is worth more than any training budget.</p>
   <p>If you want help interpreting your OEE results and identifying where your factory is losing the most, <a href="/consulting/" style="color:#c47832;font-weight:600;">book a free factory assessment</a>. We'll walk your floor with you and show you exactly where the losses are hiding.</p>
+  <p>For food manufacturing, start by separating cleaning, changeover, material waiting, slow running, rejects, rework, giveaway, and packing delays. These losses often sit in different departments, so the improvement work should connect OEE, TPM, quality, and <a href="/production-line-improvement-malaysia/" style="color:#c47832;font-weight:600;">production line improvement</a> rather than treating the calculator score as the final answer.</p>
 
   <h3 style="font-size:1.2rem;font-weight:700;margin-top:32px;">Frequently Asked Questions About OEE</h3>
   <p><strong>What is OEE in simple terms?</strong> OEE tells you what percentage of your planned production time is truly productive — no downtime, no slow running, no defects. 100% OEE means perfect production. Real-world best is around 85%.</p>
@@ -2275,5 +2289,6 @@ function resetAll(){
   });
 })();
 </script>
+<script src="/assets/analytics-events.js" defer></script>
 </body>
 </html>

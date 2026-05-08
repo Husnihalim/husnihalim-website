@@ -222,14 +222,21 @@
     <!-- Right: Portrait -->
     <div class="hero-portrait-wrap">
       <div class="hero-portrait-glow"></div>
-      <img
-        class="hero-portrait"
-        data-image="hh-portrait"
-        src="assets/husni-portrait.png"
-        alt="Husni Halim — Principal Consultant, Certified Process Kaizen Engineer"
-        loading="eager"
-        onerror="this.style.opacity='0'"
-      >
+      <picture>
+        <source srcset="assets/husni-portrait.webp" type="image/webp">
+        <img
+          class="hero-portrait"
+          data-image="hh-portrait"
+          src="assets/husni-portrait.png"
+          alt="Husni Halim — Principal Consultant, Certified Process Kaizen Engineer"
+          width="1534"
+          height="2120"
+          loading="eager"
+          decoding="async"
+          fetchpriority="high"
+          onerror="this.style.opacity='0'"
+        >
+      </picture>
     </div>
   </div>
   <div class="hero-scroll-indicator">
@@ -301,9 +308,15 @@
     </div>
     <div class="service-card">
       <div class="service-icon">🏭</div>
+      <h3>Production Line Improvement</h3>
+      <p>Focused support for missed output, bottlenecks, downtime, rework, unstable cycle time, and daily firefighting on Malaysian production lines.</p>
+      <a href="/production-line-improvement-malaysia/" class="btn btn-primary">Improve the Line</a>
+    </div>
+    <div class="service-card">
+      <div class="service-icon">⚙️</div>
       <h3>Consulting Engagements</h3>
       <p>Tailored consulting to implement lean systems, optimise processes, and embed continuous improvement culture. Short-term projects or ongoing partnership — your choice. HRDC claimable.</p>
-      <a href="#contact" class="btn btn-primary">Discuss Consulting</a>
+      <a href="/consulting/" class="btn btn-primary">Discuss Consulting</a>
     </div>
     <div class="service-card">
       <div class="service-icon">🎓</div>
@@ -449,7 +462,7 @@
     </div>
     <div class="exp-item reveal">
       <h4>Overall Equipment Effectiveness (OEE)</h4>
-      <p>Measure and improve OEE with data-driven dashboards and analytics. Practical OEE implementation for IR 4.0 applications — proven across 30+ factories through TERAJU Pritech 4.0.</p>
+      <p>Measure and improve OEE with data-driven dashboards and analytics. Practical OEE implementation for IR 4.0 applications — proven across 30+ factories through TERAJU Pritech 4.0. <a href="/oee-calculator/" style="color:var(--c-accent);font-weight:700;">Use the OEE calculator</a>.</p>
     </div>
     <div class="exp-item reveal">
       <h4>5S &amp; Visual Management</h4>
@@ -469,11 +482,11 @@
     </div>
     <div class="exp-item reveal">
       <h4>Total Productive Maintenance (TPM)</h4>
-      <p>Reduce breakdowns, increase uptime, and build a maintenance culture that operators own. Practical TPM implementation aligned with production realities.</p>
+      <p>Reduce breakdowns, increase uptime, and build a maintenance culture that operators own. Practical TPM implementation aligned with production realities. <a href="/hrdc-training/tpm/" style="color:var(--c-accent);font-weight:700;">View TPM training</a>.</p>
     </div>
     <div class="exp-item reveal">
       <h4>Production Leadership Coaching</h4>
-      <p>Coaching for plant managers, supervisors, and team leads to lead lean transformation. Build internal champions, not dependency on external consultants.</p>
+      <p>Coaching for plant managers, supervisors, and team leads to lead lean transformation. Build internal champions, not dependency on external consultants. <a href="/production-line-improvement-malaysia/" style="color:var(--c-accent);font-weight:700;">Explore production line improvement</a>.</p>
     </div>
   </div>
 </section>
@@ -925,5 +938,6 @@
 
 <script src="script.js"></script>
 <script src="/assets/share.js" defer></script>
+<script src="/assets/analytics-events.js" defer></script>
 </body>
 </html>
