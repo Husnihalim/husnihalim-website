@@ -80,4 +80,44 @@
     if (button.tagName !== 'A' || action === 'copy' || action === 'native') return;
     button.href = buildUrl(action, getShareData(button));
   });
+
+  document.querySelectorAll('form[name="blog-enquiry"]').forEach(function (form) {
+    form.addEventListener('submit', function (event) {
+      event.preventDefault();
+      var submit = form.querySelector('button[type="submit"]');
+      var originalText = submit ? submit.textContent : '';
+      var formData = new FormData(form);
+      var data = {};
+      formData.forEach(function (value, key) {
+        data[key] = value;
+      });
+      data.page = window.location.href;
+
+      if (submit) {
+        submit.disabled = true;
+        submit.textContent = 'Sending...';
+      }
+
+      fetch('/.netlify/functions/submission-created', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          form_name: data['form-name'] || 'blog-enquiry',
+          data: data
+        })
+      }).then(function (response) {
+        if (!response.ok) throw new Error('Submission failed');
+        window.location.href = '/thank-you/';
+      }).catch(function () {
+        if (submit) {
+          submit.disabled = false;
+          submit.textContent = 'Try again';
+          window.setTimeout(function () {
+            submit.textContent = originalText;
+          }, 3000);
+        }
+        alert('Sorry, the request did not go through. Please WhatsApp or email Husni directly.');
+      });
+    });
+  });
 })();

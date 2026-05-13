@@ -13,9 +13,14 @@ const CC_EMAILS           = (process.env.CONTACT_CC_EMAILS || "admin@visiarmada.
   .filter(Boolean);
 const YOUR_NAME           = "Husni Halim";
 const FROM_EMAIL          = "noreply@husnihalim.com";
+const REPLY_TO_EMAIL      = process.env.CONTACT_REPLY_TO_EMAIL || YOUR_EMAIL;
 const MAILERLITE_GROUP_ID = "182444406325904847";
 
-function sendEmail({ to, toName, cc, subject, html }) {
+function sendEmail({ to, toName, cc, replyTo, subject, html }) {
+  if (!RESEND_API_KEY) {
+    throw new Error("RESEND_API_KEY is not configured");
+  }
+
   return fetch("https://api.resend.com/emails", {
     method: "POST",
     headers: {
@@ -26,6 +31,7 @@ function sendEmail({ to, toName, cc, subject, html }) {
       from: `${YOUR_NAME} <${FROM_EMAIL}>`,
       to: toName ? [`${toName} <${to}>`] : [to],
       cc,
+      reply_to: replyTo || undefined,
       subject,
       html,
     }),
@@ -36,6 +42,11 @@ function sendEmail({ to, toName, cc, subject, html }) {
 }
 
 function addToMailerLite(email, firstname, lastname) {
+  if (!MAILERLITE_API_KEY) {
+    console.error("MailerLite skipped: MAILERLITE_API_KEY is not configured");
+    return Promise.resolve();
+  }
+
   return fetch("https://connect.mailerlite.com/api/subscribers", {
     method: "POST",
     headers: {
@@ -83,15 +94,15 @@ body{font-family:Georgia,serif;background:#f9f7f4;margin:0;padding:0}
 <div class="h"><h1>Husni Halim</h1><p>Principal Consultant, Certified Process Kaizen Engineer</p></div>
 <div class="b">
 <p>Hi ${firstname || fullName},</p>
-<p>Got your request — I'll be in touch within <strong>48 hours</strong> to arrange your free floor walk.</p>
+<p>I received your request for a free floor assessment.</p>
 <p>Here's what to expect:</p>
 <div class="hi"><ul>
 <li><strong>A quick call</strong> to understand your specific situation (15–20 min)</li>
 <li><strong>The floor walk</strong> — I come to your site, eyes on the actual operation</li>
 <li><strong>A clear picture</strong> of your top recurring problems and where to start</li>
 </ul></div>
-<p>If you have anything specific you'd like me to look at, just reply to this email.</p>
-<p>Talk soon,<br><strong>Husni</strong></p>
+<p>I will reply personally within 1 business day to arrange the next step. If there is anything urgent or specific you want me to look at, just reply to this email.</p>
+<p>Regards,<br><strong>Husni Halim</strong><br>Principal Consultant, Visi Armada Consulting</p>
 </div>
 <div class="f"><a href="https://husnihalim.com">husnihalim.com</a> · Principal Consultant, Certified Process Kaizen Engineer</div>
 </div></body></html>`;
@@ -113,12 +124,14 @@ td:first-child{color:#666;width:80px}
 <div class="a"><strong>Next step:</strong> Reply within 48 hours to arrange the discovery call and floor walk.</div>
 </div></body></html>`;
 
-    // Run all 3 in parallel
+    // Send the visitor and owner emails together; keep MailerLite from blocking the lead notification.
     await Promise.all([
-      sendEmail({ to: email, toName: fullName, subject: "Got your request — I'll reach out within 48 hours", html: visitorHtml }),
+      sendEmail({ to: email, toName: fullName, replyTo: REPLY_TO_EMAIL, subject: "I received your floor assessment request - Husni Halim", html: visitorHtml }),
       sendEmail({ to: YOUR_EMAIL, cc: CC_EMAILS, subject: `New lead: ${fullName} requested a floor assessment`, html: husniHtml }),
-      addToMailerLite(email, firstname, lastname),
     ]);
+    addToMailerLite(email, firstname, lastname).catch(function(error) {
+      console.error("MailerLite:", error);
+    });
 
     return {
       statusCode: 200,

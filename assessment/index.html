@@ -1134,11 +1134,14 @@
       headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
       body: new URLSearchParams(data).toString()
     })
-    .then(function() {
+    .then(function(response) {
+      if (!response.ok) throw new Error('Submission failed');
       window.location.href = '/thank-you/';
     })
     .catch(function() {
-      window.location.href = '/thank-you/';
+      btn.disabled = false;
+      btn.textContent = 'Try again';
+      alert('Sorry, the request did not go through. Please WhatsApp or email Husni directly.');
     });
   });
 </script>

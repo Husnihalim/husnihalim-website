@@ -167,20 +167,21 @@ async function sendContactAutoReply(submission) {
 
  const name = escapeHtml(submission.name) || 'there';
  const interest = escapeHtml(submission.interest) || 'your enquiry';
+ const company = escapeHtml(submission.company);
 
  await sendResendEmail({
  to: email,
  replyTo: CONTACT_REPLY_TO_EMAIL,
- subject: 'Thanks for your enquiry - Husni Halim',
+ subject: 'I received your enquiry - Husni Halim',
  html: `<!doctype html>
 <html>
 <body style="font-family:Arial,sans-serif;background:#f6f7f9;margin:0;padding:24px;color:#111827;">
   <div style="max-width:620px;margin:0 auto;background:#fff;border-radius:10px;padding:28px;border:1px solid #e5e7eb;">
     <h2 style="margin:0 0 12px;color:#111827;">Thanks for reaching out</h2>
     <p style="line-height:1.6;margin:0 0 14px;">Hi ${name},</p>
-    <p style="line-height:1.6;margin:0 0 14px;">I received your enquiry about <strong>${interest}</strong> and will get back to you within 1 business day.</p>
-    <p style="line-height:1.6;margin:0 0 14px;">If there is anything urgent, you can reply to this email or WhatsApp me at <a href="https://wa.me/60165261901" style="color:#8b2252;">+60165261901</a>.</p>
-    <p style="line-height:1.6;margin:20px 0 0;">Regards,<br><strong>Husni Halim</strong></p>
+    <p style="line-height:1.6;margin:0 0 14px;">I received your enquiry${company ? ` from <strong>${company}</strong>` : ''} about <strong>${interest}</strong>.</p>
+    <p style="line-height:1.6;margin:0 0 14px;">I will review the details and reply personally within 1 business day. If the matter is urgent, you can reply to this email or WhatsApp me at <a href="https://wa.me/60165261901" style="color:#8b2252;">+60165261901</a>.</p>
+    <p style="line-height:1.6;margin:20px 0 0;">Regards,<br><strong>Husni Halim</strong><br>Principal Consultant, Visi Armada Consulting</p>
   </div>
 </body>
 </html>`,

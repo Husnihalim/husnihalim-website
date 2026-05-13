@@ -6,6 +6,7 @@ const CC_EMAILS = (process.env.CONTACT_CC_EMAILS || 'admin@visiarmada.com')
   .map((email) => email.trim())
   .filter(Boolean);
 const FROM_EMAIL = process.env.CONTACT_FROM_EMAIL || 'noreply@husnihalim.com';
+const REPLY_TO_EMAIL = process.env.CONTACT_REPLY_TO_EMAIL || NOTIFICATION_EMAIL;
 const FROM_NAME = 'Husni Halim Website';
 const MAILERLITE_GROUP_ID = process.env.MAILERLITE_CONTACT_GROUP_ID || '182444406325904847';
 
@@ -68,6 +69,34 @@ async function sendEmail({ to, cc, replyTo, subject, html }) {
   }
 }
 
+async function sendVisitorAutoReply(data, formName) {
+  const email = getField(data, ['email']);
+  if (!email) return;
+
+  const fullName = getFullName(data);
+  const firstName = escapeHtml(fullName.split(/\s+/).filter(Boolean)[0] || 'there');
+  const company = escapeHtml(getField(data, ['company']));
+  const topic = formName === 'blog-enquiry' ? 'your enquiry from the article page' : 'your website enquiry';
+
+  await sendEmail({
+    to: email,
+    replyTo: REPLY_TO_EMAIL,
+    subject: 'I received your enquiry - Husni Halim',
+    html: `<!doctype html>
+<html>
+<body style="font-family:Arial,sans-serif;background:#f6f7f9;margin:0;padding:24px;color:#111827;">
+  <div style="max-width:620px;margin:0 auto;background:#fff;border-radius:10px;padding:28px;border:1px solid #e5e7eb;">
+    <h2 style="margin:0 0 12px;color:#111827;">Thanks for reaching out</h2>
+    <p style="line-height:1.6;margin:0 0 14px;">Hi ${firstName},</p>
+    <p style="line-height:1.6;margin:0 0 14px;">I received ${topic}${company ? ` from <strong>${company}</strong>` : ''}.</p>
+    <p style="line-height:1.6;margin:0 0 14px;">I will review it and reply personally within 1 business day. If the matter is urgent, you can reply to this email or WhatsApp me at <a href="https://wa.me/60165261901" style="color:#8b2252;">+60165261901</a>.</p>
+    <p style="line-height:1.6;margin:20px 0 0;">Regards,<br><strong>Husni Halim</strong><br>Principal Consultant, Visi Armada Consulting</p>
+  </div>
+</body>
+</html>`,
+  });
+}
+
 async function addToMailerLite(data) {
   const email = getField(data, ['email']);
   if (!MAILERLITE_API_KEY || !email) return;
@@ -110,8 +139,8 @@ async function addToMailerLite(data) {
 exports.handler = async function submissionCreated(event) {
   try {
     const payload = getPayload(event);
-    const data = payload.data || {};
-    const formName = payload.form_name || data['form-name'] || 'website-form';
+    const data = payload.data || payload;
+    const formName = payload.form_name || payload.formName || data['form-name'] || 'website-form';
     const fullName = getFullName(data) || 'Website visitor';
     const email = getField(data, ['email']);
     const submittedAt = new Date().toLocaleString('en-MY', { timeZone: 'Asia/Kuala_Lumpur' });
@@ -124,12 +153,13 @@ exports.handler = async function submissionCreated(event) {
         </tr>`)
       .join('');
 
-    await sendEmail({
-      to: NOTIFICATION_EMAIL,
-      cc: CC_EMAILS,
-      replyTo: email,
-      subject: `New ${formName} submission: ${fullName}`,
-      html: `<!doctype html>
+    await Promise.all([
+      sendEmail({
+        to: NOTIFICATION_EMAIL,
+        cc: CC_EMAILS,
+        replyTo: email,
+        subject: `New ${formName} submission: ${fullName}`,
+        html: `<!doctype html>
 <html>
 <body style="font-family:Arial,sans-serif;background:#f6f7f9;margin:0;padding:24px;color:#111827;">
   <div style="max-width:680px;margin:0 auto;background:#fff;border-radius:10px;padding:28px;border:1px solid #e5e7eb;">
@@ -139,7 +169,9 @@ exports.handler = async function submissionCreated(event) {
   </div>
 </body>
 </html>`,
-    });
+      }),
+      sendVisitorAutoReply(data, formName),
+    ]);
 
     try {
       await addToMailerLite(data);

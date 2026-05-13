@@ -28,184 +28,185 @@
  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400;1,600&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&display=swap" rel="stylesheet">
 
-<!-- Combined Schema using @graph -->
-<script type="application/ld+json">
-{
-"@context": "https://schema.org",
-"@graph": [
-{
-"@type": "BreadcrumbList",
-"@id": "https://husnihalim.com/consulting/#breadcrumb",
-"itemListElement": [
-{ "@type": "ListItem", "position": 1, "name": "Home", "item": "https://husnihalim.com/" },
-{ "@type": "ListItem", "position": 2, "name": "Manufacturing Consulting", "item": "https://husnihalim.com/consulting/" }
-]
-},
-{
-"@type": "ProfessionalService",
-"@id": "https://husnihalim.com/consulting/#service",
-"name": "Husni Halim — Manufacturing Consulting",
-"description": "On-site manufacturing consulting in Malaysia — OEE implementation, Kaizen and continuous improvement programs, factory productivity audits, and Industry 4.0 readiness advisory.",
-"url": "https://husnihalim.com/consulting/",
-"image": "https://husnihalim.com/assets/og-image.png",
-"provider": {
-"@type": "Person",
-"@id": "https://husnihalim.com/#person",
-"name": "Husni Halim",
-"url": "https://husnihalim.com",
-"jobTitle": "Principal Consultant",
-"worksFor": { "@type": "Organization", "name": "Visi Armada Consulting" },
-"telephone": "+60165261901",
-"email": "husnihalim@visiarmada.com"
-},
-"areaServed": {
-"@type": "Country",
-"name": "Malaysia"
-},
-"hasOfferCatalog": {
-"@type": "OfferCatalog",
-"name": "Manufacturing Consulting Services",
-"itemListElement": [
-{
-"@type": "Offer",
-"itemOffered": {
-"@type": "Service",
-"name": "Production Line Improvement",
-"description": "On-site diagnosis and implementation support for missed output, bottlenecks, downtime, rework, unstable cycle time, and daily production management routines."
-}
-},
-{
-"@type": "Offer",
-"itemOffered": {
-"@type": "Service",
-"name": "OEE Implementation Consulting",
-"description": "Full OEE system design and deployment — measurement setup, Six Big Losses analysis, improvement project management, and KPI dashboard systems."
-}
-},
-{
-"@type": "Offer",
-"itemOffered": {
-"@type": "Service",
-"name": "Process Kaizen & Continuous Improvement",
-"description": "Running Kaizen projects inside your factory — rapid improvement events, waste mapping, standard work development, and internal CI team setup."
-}
-},
-{
-"@type": "Offer",
-"itemOffered": {
-"@type": "Service",
-"name": "Factory Productivity Audit",
-"description": "Structured assessment of current operational state — production flow analysis, equipment utilization review, quality system analysis, and prioritized improvement roadmap."
-}
-},
-{
-"@type": "Offer",
-"itemOffered": {
-"@type": "Service",
-"name": "Industry 4.0 Readiness Advisory",
-"description": "Digital transformation assessment and roadmap — digital maturity assessment, technology gap identification, IoT recommendations, and phased implementation planning."
-}
-}
-]
-}
-},
-{
-"@type": "FAQPage",
-"@id": "https://husnihalim.com/consulting/#faq",
-"mainEntity": [
-{
-"@type": "Question",
-"name": "What is the difference between your training and consulting services?",
-"acceptedAnswer": {
-"@type": "Answer",
-"text": "Training transfers knowledge and skills to your team — typically 1–2 day programs, HRDC claimable, focused on building capability. Consulting is hands-on operational work where I join your team on-site for weeks or months to design, implement, and sustain actual improvements in your factory."
-}
-},
-{
-"@type": "Question",
-"name": "How long does a typical consulting engagement last?",
-"acceptedAnswer": {
-"@type": "Answer",
-"text": "Engagement length depends on scope. A factory productivity audit can be completed in 1–2 weeks. OEE implementation typically runs 3–6 months for full system deployment. Kaizen and CI programs commonly run 3–12 months depending on the number of improvement projects targeted."
-}
-},
-{
-"@type": "Question",
-"name": "Do you work with SMEs or only large manufacturers?",
-"acceptedAnswer": {
-"@type": "Answer",
-"text": "Both. I have worked with multinational manufacturers and Malaysian SMEs across 80+ organisations and project sites, including Intel, Safran, Panasonic, Petronas, Maxeon, Sharp, Carotino, and companies under TERAJU Pritech4.0. The approach is scaled to the size and complexity of your operation."
-}
-},
-{
-"@type": "Question",
-"name": "Which industries do you serve?",
-"acceptedAnswer": {
-"@type": "Answer",
-"text": "Primarily manufacturing — electronics, automotive, food & beverage, palm oil, aerospace, and general industrial. I also have aviation MRO experience from my earlier career with Malaysia Airlines Engineering."
-}
-},
-{
-"@type": "Question",
-"name": "How do I get started with a consulting engagement?",
-"acceptedAnswer": {
-"@type": "Answer",
-"text": "Contact me directly at husnihalim@visiarmada.com or call +60165261901. Share a brief description of your operational challenge. I will follow up to arrange an initial discovery conversation — no commitment required at that stage."
-}
-},
-{
-"@type": "Question",
-"name": "How do I claim HRDC (HRDF) for Lean Manufacturing training in Malaysia?",
-"acceptedAnswer": {
-"@type": "Answer",
-"text": "HRDC-registered employers can claim training fees under the SBL-Khas scheme. Husni Halim is an HRDC Accredited Trainer (TTT No. 10228), so all training programmes are fully claimable. Submit your application via the HRDC e-TRiS portal before the training date. We assist clients with the paperwork."
-}
-},
-{
-"@type": "Question",
-"name": "How long does a factory consulting engagement take?",
-"acceptedAnswer": {
-"@type": "Answer",
-"text": "Our signature programme is a 90-Day Floor Turnaround. Most clients see measurable OEE improvements within the first 30 days. The full engagement covers diagnosis, kaizen implementation, and capability building to sustain results after we leave."
-}
-},
-{
-"@type": "Question",
-"name": "What industries do you serve in Malaysia?",
-"acceptedAnswer": {
-"@type": "Answer",
-"text": "We serve electronics and semiconductor manufacturing, automotive, food and beverage, palm oil, aerospace (MRO), and general industrial manufacturers across Penang, Johor, Selangor, nationwide, and internationally. Past organisations and project sites include Intel, Safran, Panasonic, Petronas, Maxeon, Sharp, Carotino, and 80+ companies across 11 countries and 21 international factories."
-}
-},
-{
-"@type": "Question",
-"name": "What results can I expect from Lean or OEE consulting?",
-"acceptedAnswer": {
-"@type": "Answer",
-"text": "Based on our track record across 30+ Malaysian factories: average 37% reduction in production waste, 29% reduction in operational mistakes, and measurable OEE improvements within 90 days. Results vary by baseline and industry."
-}
-},
-{
-"@type": "Question",
-"name": "What is the difference between Kaizen training and Lean consulting?",
-"acceptedAnswer": {
-"@type": "Answer",
-"text": "Kaizen training builds your team's continuous improvement skills — tools, mindset, and problem-solving. Lean consulting is hands-on work alongside your team on the factory floor to implement improvements and drive measurable results. We offer both, and often combine them for sustained change."
-}
-},
-{
-"@type": "Question",
-"name": "Do you offer on-site consulting outside Kuala Lumpur?",
-"acceptedAnswer": {
-"@type": "Answer",
-"text": "Yes. We serve manufacturers nationwide — Penang, Johor Bahru, Shah Alam, Ipoh, Melaka, and beyond. Our consultants travel to your facility. Contact us for a free factory assessment."
-}
-}
-]
-}
-]
-}
-</script>
+ <!-- Schema: BreadcrumbList -->
+ <script type="application/ld+json">
+ {
+ "@context": "https://schema.org",
+ "@type": "BreadcrumbList",
+ "itemListElement": [
+ { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://husnihalim.com/" },
+ { "@type": "ListItem", "position": 2, "name": "Manufacturing Consulting", "item": "https://husnihalim.com/consulting/" }
+ ]
+ }
+ </script>
+
+ <!-- Schema: ProfessionalService -->
+ <script type="application/ld+json">
+ {
+ "@context": "https://schema.org",
+ "@type": "ProfessionalService",
+ "name": "Husni Halim — Manufacturing Consulting",
+ "description": "On-site manufacturing consulting in Malaysia — OEE implementation, Kaizen and continuous improvement programs, factory productivity audits, and Industry 4.0 readiness advisory.",
+ "url": "https://husnihalim.com/consulting/",
+ "provider": {
+ "@type": "Person",
+ "name": "Husni Halim",
+ "url": "https://husnihalim.com",
+ "jobTitle": "Principal Consultant",
+ "worksFor": { "@type": "Organization", "name": "Visi Armada Consulting" },
+ "telephone": "+60165261901",
+ "email": "husnihalim@visiarmada.com"
+ },
+ "areaServed": {
+ "@type": "Country",
+ "name": "Malaysia"
+ },
+ "hasOfferCatalog": {
+ "@type": "OfferCatalog",
+ "name": "Manufacturing Consulting Services",
+ "itemListElement": [
+ {
+ "@type": "Offer",
+ "itemOffered": {
+ "@type": "Service",
+ "name": "Production Line Improvement",
+ "description": "On-site diagnosis and implementation support for missed output, bottlenecks, downtime, rework, unstable cycle time, and daily production management routines."
+ }
+ },
+ {
+ "@type": "Offer",
+ "itemOffered": {
+ "@type": "Service",
+ "name": "OEE Implementation Consulting",
+ "description": "Full OEE system design and deployment — measurement setup, Six Big Losses analysis, improvement project management, and KPI dashboard systems."
+ }
+ },
+ {
+ "@type": "Offer",
+ "itemOffered": {
+ "@type": "Service",
+ "name": "Process Kaizen & Continuous Improvement",
+ "description": "Running Kaizen projects inside your factory — rapid improvement events, waste mapping, standard work development, and internal CI team setup."
+ }
+ },
+ {
+ "@type": "Offer",
+ "itemOffered": {
+ "@type": "Service",
+ "name": "Factory Productivity Audit",
+ "description": "Structured assessment of current operational state — production flow analysis, equipment utilization review, quality system analysis, and prioritized improvement roadmap."
+ }
+ },
+ {
+ "@type": "Offer",
+ "itemOffered": {
+ "@type": "Service",
+ "name": "Industry 4.0 Readiness Advisory",
+ "description": "Digital transformation assessment and roadmap — digital maturity assessment, technology gap identification, IoT recommendations, and phased implementation planning."
+ }
+ }
+ ]
+ }
+ }
+ </script>
+
+ <!-- Schema: FAQPage -->
+ <script type="application/ld+json">
+ {
+ "@context": "https://schema.org",
+ "@type": "FAQPage",
+ "mainEntity": [
+ {
+ "@type": "Question",
+ "name": "What is the difference between your training and consulting services?",
+ "acceptedAnswer": {
+ "@type": "Answer",
+ "text": "Training transfers knowledge and skills to your team — typically 1–2 day programs, HRDC claimable, focused on building capability. Consulting is hands-on operational work where I join your team on-site for weeks or months to design, implement, and sustain actual improvements in your factory."
+ }
+ },
+ {
+ "@type": "Question",
+ "name": "How long does a typical consulting engagement last?",
+ "acceptedAnswer": {
+ "@type": "Answer",
+ "text": "Engagement length depends on scope. A factory productivity audit can be completed in 1–2 weeks. OEE implementation typically runs 3–6 months for full system deployment. Kaizen and CI programs commonly run 3–12 months depending on the number of improvement projects targeted."
+ }
+ },
+ {
+ "@type": "Question",
+ "name": "Do you work with SMEs or only large manufacturers?",
+ "acceptedAnswer": {
+ "@type": "Answer",
+        "text": "Both. I have worked with multinational manufacturers and Malaysian SMEs across 80+ organisations and project sites, including Intel, Safran, Panasonic, Petronas, Maxeon, Sharp, Carotino, and companies under TERAJU Pritech4.0. The approach is scaled to the size and complexity of your operation."
+ }
+ },
+ {
+ "@type": "Question",
+ "name": "Which industries do you serve?",
+ "acceptedAnswer": {
+ "@type": "Answer",
+ "text": "Primarily manufacturing — electronics, automotive, food & beverage, palm oil, aerospace, and general industrial. I also have aviation MRO experience from my earlier career with Malaysia Airlines Engineering."
+ }
+ },
+ {
+ "@type": "Question",
+ "name": "How do I get started with a consulting engagement?",
+ "acceptedAnswer": {
+ "@type": "Answer",
+ "text": "Contact me directly at husnihalim@visiarmada.com or call +60165261901. Share a brief description of your operational challenge. I will follow up to arrange an initial discovery conversation — no commitment required at that stage."
+ }
+ },
+ {
+ "@type": "Question",
+ "name": "How do I claim HRDC (HRDF) for Lean Manufacturing training in Malaysia?",
+ "acceptedAnswer": {
+ "@type": "Answer",
+ "text": "HRDC-registered employers can claim training fees under the SBL-Khas scheme. Husni Halim is an HRDC Accredited Trainer (TTT No. 10228), so all training programmes are fully claimable. Submit your application via the HRDC e-TRiS portal before the training date. We assist clients with the paperwork."
+ }
+ },
+ {
+ "@type": "Question",
+ "name": "How long does a factory consulting engagement take?",
+ "acceptedAnswer": {
+ "@type": "Answer",
+ "text": "Our signature programme is a 90-Day Floor Turnaround. Most clients see measurable OEE improvements within the first 30 days. The full engagement covers diagnosis, kaizen implementation, and capability building to sustain results after we leave."
+ }
+ },
+ {
+ "@type": "Question",
+ "name": "What industries do you serve in Malaysia?",
+ "acceptedAnswer": {
+ "@type": "Answer",
+ "text": "We serve electronics and semiconductor manufacturing, automotive, food and beverage, palm oil, aerospace (MRO), and general industrial manufacturers across Penang, Johor, Selangor, nationwide, and internationally. Past organisations and project sites include Intel, Safran, Panasonic, Petronas, Maxeon, Sharp, Carotino, and 80+ companies across 11 countries and 21 international factories."
+ }
+ },
+ {
+ "@type": "Question",
+ "name": "What results can I expect from Lean or OEE consulting?",
+ "acceptedAnswer": {
+ "@type": "Answer",
+ "text": "Based on our track record across 30+ Malaysian factories: average 37% reduction in production waste, 29% reduction in operational mistakes, and measurable OEE improvements within 90 days. Results vary by baseline and industry."
+ }
+ },
+ {
+ "@type": "Question",
+ "name": "What is the difference between Kaizen training and Lean consulting?",
+ "acceptedAnswer": {
+ "@type": "Answer",
+ "text": "Kaizen training builds your team's continuous improvement skills — tools, mindset, and problem-solving. Lean consulting is hands-on work alongside your team on the factory floor to implement improvements and drive measurable results. We offer both, and often combine them for sustained change."
+ }
+ },
+ {
+ "@type": "Question",
+ "name": "Do you offer on-site consulting outside Kuala Lumpur?",
+ "acceptedAnswer": {
+ "@type": "Answer",
+ "text": "Yes. We serve manufacturers nationwide — Penang, Johor Bahru, Shah Alam, Ipoh, Melaka, and beyond. Our consultants travel to your facility. Contact us for a free factory assessment."
+ }
+ }
+ ]
+ }
+ </script>
 
  <style>
  /* ===========================
