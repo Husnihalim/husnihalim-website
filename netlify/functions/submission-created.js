@@ -1,6 +1,6 @@
 const RESEND_API_KEY = process.env.RESEND_API_KEY;
 const MAILERLITE_API_KEY = process.env.MAILERLITE_API_KEY;
-const NOTIFICATION_EMAIL = process.env.CONTACT_NOTIFICATION_EMAIL || 'husnihalim@visiarmada.com';
+const NOTIFICATION_EMAIL = process.env.CONTACT_NOTIFICATION_EMAIL || 'admin@visiarmada.com';
 const CC_EMAILS = (process.env.CONTACT_CC_EMAILS || 'admin@visiarmada.com')
   .split(',')
   .map((email) => email.trim())
@@ -89,7 +89,7 @@ async function sendVisitorAutoReply(data, formName) {
     <h2 style="margin:0 0 12px;color:#111827;">Thanks for reaching out</h2>
     <p style="line-height:1.6;margin:0 0 14px;">Hi ${firstName},</p>
     <p style="line-height:1.6;margin:0 0 14px;">I received ${topic}${company ? ` from <strong>${company}</strong>` : ''}.</p>
-    <p style="line-height:1.6;margin:0 0 14px;">I will review it and reply personally within 1 business day. If the matter is urgent, you can reply to this email or WhatsApp me at <a href="https://wa.me/60165261901" style="color:#8b2252;">+60165261901</a>.</p>
+    <p style="line-height:1.6;margin:0 0 14px;">I will review it and reply personally within 1 business day. If the matter is urgent, you can reply to this email or WhatsApp me at <a href="https://wa.me/60165241901" style="color:#8b2252;">+60165241901</a>.</p>
     <p style="line-height:1.6;margin:20px 0 0;">Regards,<br><strong>Husni Halim</strong><br>Principal Consultant, Visi Armada Consulting</p>
   </div>
 </body>

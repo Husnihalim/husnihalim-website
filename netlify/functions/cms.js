@@ -13,7 +13,7 @@ const VALID_SITES = ['vac', 'husni'];
 const MAILERLITE_API_KEY = process.env.MAILERLITE_API_KEY;
 const MAILERLITE_CONTACT_GROUP_ID = process.env.MAILERLITE_CONTACT_GROUP_ID || '182444406325904847';
 const RESEND_API_KEY = process.env.RESEND_API_KEY;
-const CONTACT_NOTIFICATION_EMAIL = process.env.CONTACT_NOTIFICATION_EMAIL || 'husnihalim@visiarmada.com';
+const CONTACT_NOTIFICATION_EMAIL = process.env.CONTACT_NOTIFICATION_EMAIL || 'admin@visiarmada.com';
 const CONTACT_CC_EMAILS = Array.from(new Set([
  ...(process.env.CONTACT_CC_EMAILS || '').split(','),
  'admin@visiarmada.com',
@@ -180,7 +180,7 @@ async function sendContactAutoReply(submission) {
     <h2 style="margin:0 0 12px;color:#111827;">Thanks for reaching out</h2>
     <p style="line-height:1.6;margin:0 0 14px;">Hi ${name},</p>
     <p style="line-height:1.6;margin:0 0 14px;">I received your enquiry${company ? ` from <strong>${company}</strong>` : ''} about <strong>${interest}</strong>.</p>
-    <p style="line-height:1.6;margin:0 0 14px;">I will review the details and reply personally within 1 business day. If the matter is urgent, you can reply to this email or WhatsApp me at <a href="https://wa.me/60165261901" style="color:#8b2252;">+60165261901</a>.</p>
+    <p style="line-height:1.6;margin:0 0 14px;">I will review the details and reply personally within 1 business day. If the matter is urgent, you can reply to this email or WhatsApp me at <a href="https://wa.me/60165241901" style="color:#8b2252;">+60165241901</a>.</p>
     <p style="line-height:1.6;margin:20px 0 0;">Regards,<br><strong>Husni Halim</strong><br>Principal Consultant, Visi Armada Consulting</p>
   </div>
 </body>

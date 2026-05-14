@@ -1,6 +1,6 @@
 const MAILERLITE_API_KEY = process.env.MAILERLITE_API_KEY;
 const RESEND_API_KEY = process.env.RESEND_API_KEY;
-const NOTIFICATION_EMAIL = process.env.CONTACT_NOTIFICATION_EMAIL || 'husnihalim@visiarmada.com';
+const NOTIFICATION_EMAIL = process.env.CONTACT_NOTIFICATION_EMAIL || 'admin@visiarmada.com';
 const CC_EMAILS = (process.env.CONTACT_CC_EMAILS || 'admin@visiarmada.com')
   .split(',')
   .map((email) => email.trim())
