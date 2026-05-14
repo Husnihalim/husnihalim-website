@@ -1029,6 +1029,92 @@ body { background: var(--pf-cream); color: var(--pf-text); }
   line-height: 1.5;
 }
 
+.trusted-section {
+  background: #fff;
+  border-top: 1px solid var(--pf-border);
+  border-bottom: 1px solid var(--pf-border);
+  padding: 78px 24px 84px;
+}
+.results-inner > .trusted-section {
+  margin: 28px 0 32px;
+  padding: 56px 22px 62px;
+  border: 1px solid var(--pf-border);
+  border-radius: 8px;
+}
+.trusted-inner {
+  width: min(1180px, 100%);
+  margin: 0 auto;
+}
+.trusted-head {
+  text-align: center;
+  max-width: 760px;
+  margin: 0 auto 36px;
+}
+.trusted-head .eyebrow {
+  justify-content: center;
+  margin-bottom: 12px;
+}
+.trusted-head .eyebrow::before { display: none; }
+.trusted-head h2 {
+  font-size: clamp(34px, 5vw, 58px);
+  margin-bottom: 12px;
+}
+.trusted-head p {
+  color: var(--pf-muted);
+  line-height: 1.75;
+}
+.client-logo-grid {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 14px;
+}
+.client-logo-card {
+  min-height: 104px;
+  border: 1px solid rgba(12,27,46,.12);
+  border-radius: 8px;
+  background: #fff;
+  color: rgba(12,27,46,.42);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 18px 16px;
+  text-align: center;
+  box-shadow: 0 8px 26px rgba(12,27,46,.04);
+}
+.client-wordmark {
+  display: block;
+  max-width: 100%;
+  color: currentColor;
+  font-family: var(--font-sans);
+  font-size: clamp(15px, 1.5vw, 21px);
+  font-weight: 900;
+  letter-spacing: .08em;
+  line-height: 1.1;
+  text-transform: uppercase;
+  overflow-wrap: anywhere;
+  filter: grayscale(1);
+}
+.client-logo-card.is-serif .client-wordmark {
+  font-family: var(--font-serif);
+  font-weight: 700;
+  letter-spacing: .06em;
+}
+.client-logo-card.is-small .client-wordmark {
+  font-size: clamp(12px, 1.1vw, 16px);
+  letter-spacing: .09em;
+}
+.client-logo-card.is-wide {
+  grid-column: span 2;
+}
+.client-wordmark small {
+  display: block;
+  margin-top: 4px;
+  color: rgba(12,27,46,.34);
+  font-size: .58em;
+  font-weight: 700;
+  letter-spacing: .18em;
+}
+
 .portfolio-cta {
   background: var(--pf-navy);
   color: #fff;
@@ -1122,6 +1208,9 @@ body { background: var(--pf-cream); color: var(--pf-text); }
   .portfolio-card.wide {
     grid-column: span 6;
   }
+  .client-logo-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
 }
 @media (max-width: 680px) {
   .portfolio-hero { padding-top: 54px; }
@@ -1142,6 +1231,19 @@ body { background: var(--pf-cream); color: var(--pf-text); }
   .lightbox { padding: 12px; }
   .lightbox-panel { max-height: calc(100vh - 24px); }
   .lightbox-image { min-height: 46vh; }
+  .trusted-section { padding: 56px 16px 62px; }
+  .trusted-head { text-align: left; margin-bottom: 24px; }
+  .trusted-head .eyebrow { justify-content: flex-start; }
+  .client-logo-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 10px;
+  }
+  .client-logo-card,
+  .client-logo-card.is-wide {
+    grid-column: auto;
+    min-height: 86px;
+    padding: 14px 10px;
+  }
 }
 </style>
 </head>
@@ -1174,7 +1276,7 @@ body { background: var(--pf-cream); color: var(--pf-text); }
           <span>/</span>
           <span>Portfolio</span>
         </nav>
-        <h1>Photo <em>Gallery</em></h1>
+        <h1>Portfolio</h1>
       </div>
     </div>
   </section>
@@ -1187,6 +1289,107 @@ body { background: var(--pf-cream); color: var(--pf-text); }
         <div class="proof-stat"><strong>500+</strong><span>professionals trained across manufacturing functions</span></div>
         <div class="proof-stat"><strong>30</strong><span>SME factories assessed under a national lean programme</span></div>
       </div>
+
+  <section class="trusted-section" aria-labelledby="trusted-title">
+    <div class="trusted-inner">
+      <div class="trusted-head">
+        <div class="eyebrow">Client and project sites</div>
+        <h2 id="trusted-title">Trusted By Industry Leaders</h2>
+        <p>Selected organisations, manufacturers, public programmes, and project sites where Husni Halim has delivered training, consulting, coaching, or operational improvement work.</p>
+      </div>
+
+      <div class="client-logo-grid" aria-label="Companies and organisations Husni Halim has worked with">
+        <div class="client-logo-card is-serif"><span class="client-wordmark">Intel</span></div>
+        <div class="client-logo-card"><span class="client-wordmark">Petronas</span></div>
+        <div class="client-logo-card"><span class="client-wordmark">Safran</span></div>
+        <div class="client-logo-card"><span class="client-wordmark">Panasonic</span></div>
+        <div class="client-logo-card is-small"><span class="client-wordmark">Mitsui High-Tec</span></div>
+        <div class="client-logo-card"><span class="client-wordmark">Maxeon</span></div>
+        <div class="client-logo-card is-serif"><span class="client-wordmark">Carotino</span></div>
+        <div class="client-logo-card"><span class="client-wordmark">Munchy's</span></div>
+        <div class="client-logo-card"><span class="client-wordmark">Inari</span></div>
+        <div class="client-logo-card is-small"><span class="client-wordmark">Datasonic</span></div>
+        <div class="client-logo-card"><span class="client-wordmark">Sharp</span></div>
+        <div class="client-logo-card"><span class="client-wordmark">Koito</span></div>
+        <div class="client-logo-card is-small"><span class="client-wordmark">HRD Corp<small>Malaysia</small></span></div>
+        <div class="client-logo-card"><span class="client-wordmark">MARii</span></div>
+        <div class="client-logo-card"><span class="client-wordmark">TERAJU</span></div>
+        <div class="client-logo-card"><span class="client-wordmark">Sapura<small>Industrial</small></span></div>
+        <div class="client-logo-card is-small"><span class="client-wordmark">MAB Engineering</span></div>
+        <div class="client-logo-card is-small"><span class="client-wordmark">JPA</span></div>
+        <div class="client-logo-card is-small"><span class="client-wordmark">JPJ</span></div>
+        <div class="client-logo-card is-small"><span class="client-wordmark">UTM AI</span></div>
+        <div class="client-logo-card is-small"><span class="client-wordmark">Aeon Bakery</span></div>
+        <div class="client-logo-card is-small"><span class="client-wordmark">Asian NDK Crystal</span></div>
+        <div class="client-logo-card is-small"><span class="client-wordmark">Chemi Con</span></div>
+        <div class="client-logo-card is-small"><span class="client-wordmark">Extech Pro</span></div>
+        <div class="client-logo-card is-small"><span class="client-wordmark">FBK Manufacturing</span></div>
+        <div class="client-logo-card is-small"><span class="client-wordmark">FCL Components</span></div>
+        <div class="client-logo-card is-small"><span class="client-wordmark">FSR Technologies</span></div>
+        <div class="client-logo-card is-small"><span class="client-wordmark">HT Ceramics</span></div>
+        <div class="client-logo-card is-small"><span class="client-wordmark">Kato Manufacturing</span></div>
+        <div class="client-logo-card is-small"><span class="client-wordmark">Kulim Technology Park</span></div>
+        <div class="client-logo-card is-small"><span class="client-wordmark">LyondellBasell</span></div>
+        <div class="client-logo-card is-small"><span class="client-wordmark">New Age Aluminium</span></div>
+        <div class="client-logo-card is-small"><span class="client-wordmark">Plastitechnic</span></div>
+        <div class="client-logo-card is-small"><span class="client-wordmark">POS Logistics</span></div>
+        <div class="client-logo-card is-small"><span class="client-wordmark">Sato Manufacturing</span></div>
+        <div class="client-logo-card is-small"><span class="client-wordmark">Smart Meter Tech</span></div>
+        <div class="client-logo-card is-small"><span class="client-wordmark">WRP Gloves</span></div>
+        <div class="client-logo-card is-small"><span class="client-wordmark">Aerospace Composite Malaysia</span></div>
+        <div class="client-logo-card is-small"><span class="client-wordmark">Bintulu Port</span></div>
+        <div class="client-logo-card is-small"><span class="client-wordmark">Bomatec</span></div>
+        <div class="client-logo-card is-small"><span class="client-wordmark">BRB Malaysia</span></div>
+        <div class="client-logo-card is-small"><span class="client-wordmark">Careglove Global</span></div>
+        <div class="client-logo-card is-small"><span class="client-wordmark">Ciba Vision</span></div>
+        <div class="client-logo-card is-small"><span class="client-wordmark">DIMAL Asia Pacific</span></div>
+        <div class="client-logo-card is-small"><span class="client-wordmark">Eastman Chemical</span></div>
+        <div class="client-logo-card is-small"><span class="client-wordmark">Feoso Oil</span></div>
+        <div class="client-logo-card is-small"><span class="client-wordmark">FLE</span></div>
+        <div class="client-logo-card is-small"><span class="client-wordmark">H&amp;R Wax Malaysia</span></div>
+        <div class="client-logo-card is-small"><span class="client-wordmark">Hitachi Asia</span></div>
+        <div class="client-logo-card is-small"><span class="client-wordmark">Huber Suhner</span></div>
+        <div class="client-logo-card is-small"><span class="client-wordmark">Jaya Nets</span></div>
+        <div class="client-logo-card is-small"><span class="client-wordmark">KRAIBURG TPE</span></div>
+        <div class="client-logo-card is-small"><span class="client-wordmark">Negeri Sembilan Cement</span></div>
+        <div class="client-logo-card is-small"><span class="client-wordmark">NI Malaysia</span></div>
+        <div class="client-logo-card is-small"><span class="client-wordmark">Novugen Oncology</span></div>
+        <div class="client-logo-card is-small"><span class="client-wordmark">Novugen Pharma</span></div>
+        <div class="client-logo-card is-small"><span class="client-wordmark">Salutica</span></div>
+        <div class="client-logo-card is-small"><span class="client-wordmark">San Miguel Yamamura</span></div>
+        <div class="client-logo-card is-small"><span class="client-wordmark">Shinko Electronics</span></div>
+        <div class="client-logo-card is-small"><span class="client-wordmark">SMART Modular</span></div>
+        <div class="client-logo-card is-small"><span class="client-wordmark">Stenta Films</span></div>
+        <div class="client-logo-card is-small"><span class="client-wordmark">Tenaga Cable</span></div>
+        <div class="client-logo-card is-small"><span class="client-wordmark">Terberg Manufacturing</span></div>
+        <div class="client-logo-card is-small"><span class="client-wordmark">Thales DIS</span></div>
+        <div class="client-logo-card is-small"><span class="client-wordmark">The Italian Baker</span></div>
+        <div class="client-logo-card is-small"><span class="client-wordmark">Toyo Tires</span></div>
+        <div class="client-logo-card is-small"><span class="client-wordmark">Venator Asia</span></div>
+        <div class="client-logo-card is-small"><span class="client-wordmark">Wipro Unza</span></div>
+        <div class="client-logo-card is-small"><span class="client-wordmark">Prysmian Arco Felice</span></div>
+        <div class="client-logo-card is-small"><span class="client-wordmark">Prysmian Cikampek</span></div>
+        <div class="client-logo-card is-small"><span class="client-wordmark">Prysmian Malaysia</span></div>
+        <div class="client-logo-card is-small"><span class="client-wordmark">Prysmian Sorocaba</span></div>
+        <div class="client-logo-card is-small"><span class="client-wordmark">Prysmian Tianjin</span></div>
+        <div class="client-logo-card is-small"><span class="client-wordmark">Akif Cafe</span></div>
+        <div class="client-logo-card is-small"><span class="client-wordmark">Al Haddad</span></div>
+        <div class="client-logo-card is-small"><span class="client-wordmark">Ameen Products</span></div>
+        <div class="client-logo-card is-small"><span class="client-wordmark">Anramin Industry</span></div>
+        <div class="client-logo-card is-small"><span class="client-wordmark">Ayam Bismi</span></div>
+        <div class="client-logo-card is-small"><span class="client-wordmark">Bot Industries</span></div>
+        <div class="client-logo-card is-small"><span class="client-wordmark">Faiz Food &amp; Beverages</span></div>
+        <div class="client-logo-card is-small"><span class="client-wordmark">Fatiah Frozen</span></div>
+        <div class="client-logo-card is-small"><span class="client-wordmark">Jabi Rice Mill</span></div>
+        <div class="client-logo-card is-small"><span class="client-wordmark">Kopiah Industry</span></div>
+        <div class="client-logo-card is-small"><span class="client-wordmark">MGV Industries</span></div>
+        <div class="client-logo-card is-small"><span class="client-wordmark">Miwa Manufacturing</span></div>
+        <div class="client-logo-card is-small"><span class="client-wordmark">PNA Technologies</span></div>
+        <div class="client-logo-card is-small"><span class="client-wordmark">Tishas Food</span></div>
+      </div>
+    </div>
+  </section>
+
 
       <div class="result-grid">
         <article class="result-card featured">
