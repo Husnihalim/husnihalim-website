@@ -1068,6 +1068,52 @@ body { background: var(--pf-cream); color: var(--pf-text); }
   grid-template-columns: repeat(5, minmax(0, 1fr));
   gap: 14px;
 }
+.client-logo-grid.is-marquee {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  overflow: hidden;
+  margin-inline: -22px;
+  padding: 4px 0;
+}
+.client-logo-row {
+  position: relative;
+  overflow: hidden;
+}
+.client-logo-row::before,
+.client-logo-row::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  width: min(12vw, 120px);
+  height: 100%;
+  z-index: 2;
+  pointer-events: none;
+}
+.client-logo-row::before {
+  left: 0;
+  background: linear-gradient(90deg, #fff, rgba(255,255,255,0));
+}
+.client-logo-row::after {
+  right: 0;
+  background: linear-gradient(270deg, #fff, rgba(255,255,255,0));
+}
+.client-logo-track {
+  display: flex;
+  gap: 14px;
+  width: max-content;
+  animation: clientLogoScroll var(--logo-speed, 48s) linear infinite;
+  will-change: transform;
+}
+.client-logo-row:nth-child(even) .client-logo-track {
+  animation-direction: reverse;
+}
+.trusted-section:hover .client-logo-track {
+  animation-play-state: paused;
+}
+.client-logo-track .client-logo-card {
+  flex: 0 0 212px;
+}
 .client-logo-card {
   min-height: 104px;
   border: 1px solid rgba(12,27,46,.12);
@@ -1080,6 +1126,18 @@ body { background: var(--pf-cream); color: var(--pf-text); }
   padding: 18px 16px;
   text-align: center;
   box-shadow: 0 8px 26px rgba(12,27,46,.04);
+}
+.client-logo-card img {
+  display: block;
+  width: auto;
+  max-width: min(150px, 82%);
+  max-height: 44px;
+  object-fit: contain;
+  filter: grayscale(1);
+  opacity: .42;
+}
+.client-logo-card.is-tall img {
+  max-height: 56px;
 }
 .client-wordmark {
   display: block;
@@ -1113,6 +1171,10 @@ body { background: var(--pf-cream); color: var(--pf-text); }
   font-size: .58em;
   font-weight: 700;
   letter-spacing: .18em;
+}
+@keyframes clientLogoScroll {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
 }
 
 .portfolio-cta {
@@ -1211,6 +1273,12 @@ body { background: var(--pf-cream); color: var(--pf-text); }
   .client-logo-grid {
     grid-template-columns: repeat(3, minmax(0, 1fr));
   }
+  .client-logo-grid.is-marquee {
+    margin-inline: -16px;
+  }
+  .client-logo-track .client-logo-card {
+    flex-basis: 190px;
+  }
 }
 @media (max-width: 680px) {
   .portfolio-hero { padding-top: 54px; }
@@ -1238,11 +1306,29 @@ body { background: var(--pf-cream); color: var(--pf-text); }
     grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 10px;
   }
+  .client-logo-grid.is-marquee {
+    gap: 10px;
+    margin-inline: -12px;
+  }
+  .client-logo-track {
+    gap: 10px;
+  }
+  .client-logo-track .client-logo-card {
+    flex-basis: 178px;
+  }
   .client-logo-card,
   .client-logo-card.is-wide {
     grid-column: auto;
     min-height: 86px;
     padding: 14px 10px;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .client-logo-track {
+    animation: none;
+    flex-wrap: wrap;
+    width: auto;
+    justify-content: center;
   }
 }
 </style>
@@ -1299,23 +1385,23 @@ body { background: var(--pf-cream); color: var(--pf-text); }
       </div>
 
       <div class="client-logo-grid" aria-label="Companies and organisations Husni Halim has worked with">
-        <div class="client-logo-card is-serif"><span class="client-wordmark">Intel</span></div>
-        <div class="client-logo-card"><span class="client-wordmark">Petronas</span></div>
-        <div class="client-logo-card"><span class="client-wordmark">Safran</span></div>
-        <div class="client-logo-card"><span class="client-wordmark">Panasonic</span></div>
-        <div class="client-logo-card is-small"><span class="client-wordmark">Mitsui High-Tec</span></div>
-        <div class="client-logo-card"><span class="client-wordmark">Maxeon</span></div>
-        <div class="client-logo-card is-serif"><span class="client-wordmark">Carotino</span></div>
-        <div class="client-logo-card"><span class="client-wordmark">Munchy's</span></div>
-        <div class="client-logo-card"><span class="client-wordmark">Inari</span></div>
-        <div class="client-logo-card is-small"><span class="client-wordmark">Datasonic</span></div>
-        <div class="client-logo-card"><span class="client-wordmark">Sharp</span></div>
-        <div class="client-logo-card"><span class="client-wordmark">Koito</span></div>
-        <div class="client-logo-card is-small"><span class="client-wordmark">HRD Corp<small>Malaysia</small></span></div>
-        <div class="client-logo-card"><span class="client-wordmark">MARii</span></div>
-        <div class="client-logo-card"><span class="client-wordmark">TERAJU</span></div>
-        <div class="client-logo-card"><span class="client-wordmark">Sapura<small>Industrial</small></span></div>
-        <div class="client-logo-card is-small"><span class="client-wordmark">MAB Engineering</span></div>
+        <div class="client-logo-card"><img src="https://logo.clearbit.com/intel.com" alt="Intel logo" loading="lazy"></div>
+        <div class="client-logo-card is-tall"><img src="https://logo.clearbit.com/petronas.com" alt="Petronas logo" loading="lazy"></div>
+        <div class="client-logo-card"><img src="https://logo.clearbit.com/safran-group.com" alt="Safran logo" loading="lazy"></div>
+        <div class="client-logo-card"><img src="https://logo.clearbit.com/panasonic.com" alt="Panasonic logo" loading="lazy"></div>
+        <div class="client-logo-card"><img src="https://logo.clearbit.com/mitsui-high-tec.com" alt="Mitsui High-Tec logo" loading="lazy"></div>
+        <div class="client-logo-card"><img src="https://logo.clearbit.com/maxeon.com" alt="Maxeon logo" loading="lazy"></div>
+        <div class="client-logo-card"><img src="https://logo.clearbit.com/carotino.com" alt="Carotino logo" loading="lazy"></div>
+        <div class="client-logo-card"><img src="https://logo.clearbit.com/munchys.com" alt="Munchy's logo" loading="lazy"></div>
+        <div class="client-logo-card"><img src="https://logo.clearbit.com/inariberhad.com" alt="Inari logo" loading="lazy"></div>
+        <div class="client-logo-card"><img src="https://logo.clearbit.com/datasonic.com.my" alt="Datasonic logo" loading="lazy"></div>
+        <div class="client-logo-card"><img src="https://logo.clearbit.com/global.sharp" alt="Sharp logo" loading="lazy"></div>
+        <div class="client-logo-card"><img src="https://logo.clearbit.com/koito.co.jp" alt="Koito logo" loading="lazy"></div>
+        <div class="client-logo-card"><img src="https://logo.clearbit.com/hrdcorp.gov.my" alt="HRD Corp logo" loading="lazy"></div>
+        <div class="client-logo-card"><img src="https://logo.clearbit.com/marii.my" alt="MARii logo" loading="lazy"></div>
+        <div class="client-logo-card"><img src="https://logo.clearbit.com/teraju.gov.my" alt="TERAJU logo" loading="lazy"></div>
+        <div class="client-logo-card"><img src="https://logo.clearbit.com/sapuraindustrial.com.my" alt="Sapura Industrial logo" loading="lazy"></div>
+        <div class="client-logo-card"><img src="/assets/portfolio/logos/mab-engineering-logo.jpg" alt="MAB Engineering logo" loading="lazy"></div>
         <div class="client-logo-card is-small"><span class="client-wordmark">JPA</span></div>
         <div class="client-logo-card is-small"><span class="client-wordmark">JPJ</span></div>
         <div class="client-logo-card is-small"><span class="client-wordmark">UTM AI</span></div>
@@ -1815,6 +1901,40 @@ body { background: var(--pf-cream); color: var(--pf-text); }
       });
     });
   });
+
+  var logoGrid = document.querySelector('.client-logo-grid');
+  var reduceLogoMotion = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if (logoGrid && !reduceLogoMotion) {
+    var logoCards = Array.prototype.slice.call(logoGrid.children);
+    var rowCount = 4;
+    var rows = Array.from({ length: rowCount }, function(){ return []; });
+    logoCards.forEach(function(card, index){
+      rows[index % rowCount].push(card);
+    });
+
+    logoGrid.textContent = '';
+    logoGrid.classList.add('is-marquee');
+
+    rows.forEach(function(rowCards, rowIndex){
+      var row = document.createElement('div');
+      var track = document.createElement('div');
+      row.className = 'client-logo-row';
+      track.className = 'client-logo-track';
+      track.style.setProperty('--logo-speed', (86 + rowIndex * 10) + 's');
+
+      rowCards.forEach(function(card){
+        track.appendChild(card);
+      });
+      rowCards.forEach(function(card){
+        var clone = card.cloneNode(true);
+        clone.setAttribute('aria-hidden', 'true');
+        track.appendChild(clone);
+      });
+
+      row.appendChild(track);
+      logoGrid.appendChild(row);
+    });
+  }
 
   var lightbox = document.getElementById('portfolioLightbox');
   var lightboxImage = document.getElementById('lightboxImage');
