@@ -1071,7 +1071,7 @@ body { background: var(--pf-cream); color: var(--pf-text); }
 .client-logo-grid.is-marquee {
   display: flex;
   flex-direction: column;
-  gap: 12px;
+  gap: 8px;
   overflow: hidden;
   margin-inline: -22px;
   padding: 4px 0;
@@ -1100,7 +1100,7 @@ body { background: var(--pf-cream); color: var(--pf-text); }
 }
 .client-logo-track {
   display: flex;
-  gap: 14px;
+  gap: 10px;
   width: max-content;
   animation: clientLogoScroll var(--logo-speed, 48s) linear infinite;
   will-change: transform;
@@ -1112,10 +1112,10 @@ body { background: var(--pf-cream); color: var(--pf-text); }
   animation-play-state: paused;
 }
 .client-logo-track .client-logo-card {
-  flex: 0 0 212px;
+  flex: 0 0 164px;
 }
 .client-logo-card {
-  min-height: 104px;
+  min-height: 74px;
   border: 1px solid rgba(12,27,46,.12);
   border-radius: 8px;
   background: #fff;
@@ -1123,28 +1123,28 @@ body { background: var(--pf-cream); color: var(--pf-text); }
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 18px 16px;
+  padding: 12px 14px;
   text-align: center;
   box-shadow: 0 8px 26px rgba(12,27,46,.04);
 }
 .client-logo-card img {
   display: block;
   width: auto;
-  max-width: min(150px, 82%);
-  max-height: 44px;
+  max-width: min(122px, 84%);
+  max-height: 34px;
   object-fit: contain;
   filter: grayscale(1);
-  opacity: .42;
+  opacity: .5;
 }
 .client-logo-card.is-tall img {
-  max-height: 56px;
+  max-height: 44px;
 }
 .client-wordmark {
   display: block;
   max-width: 100%;
   color: currentColor;
   font-family: var(--font-sans);
-  font-size: clamp(15px, 1.5vw, 21px);
+  font-size: clamp(12px, 1.1vw, 16px);
   font-weight: 900;
   letter-spacing: .08em;
   line-height: 1.1;
@@ -1158,7 +1158,7 @@ body { background: var(--pf-cream); color: var(--pf-text); }
   letter-spacing: .06em;
 }
 .client-logo-card.is-small .client-wordmark {
-  font-size: clamp(12px, 1.1vw, 16px);
+  font-size: clamp(10px, .95vw, 13px);
   letter-spacing: .09em;
 }
 .client-logo-card.is-wide {
@@ -1277,7 +1277,7 @@ body { background: var(--pf-cream); color: var(--pf-text); }
     margin-inline: -16px;
   }
   .client-logo-track .client-logo-card {
-    flex-basis: 190px;
+    flex-basis: 154px;
   }
 }
 @media (max-width: 680px) {
@@ -1314,13 +1314,13 @@ body { background: var(--pf-cream); color: var(--pf-text); }
     gap: 10px;
   }
   .client-logo-track .client-logo-card {
-    flex-basis: 178px;
+    flex-basis: 144px;
   }
   .client-logo-card,
   .client-logo-card.is-wide {
     grid-column: auto;
-    min-height: 86px;
-    padding: 14px 10px;
+    min-height: 68px;
+    padding: 10px 9px;
   }
 }
 @media (prefers-reduced-motion: reduce) {
@@ -1935,6 +1935,25 @@ body { background: var(--pf-cream); color: var(--pf-text); }
       logoGrid.appendChild(row);
     });
   }
+
+  function replaceMissingClientLogo(img) {
+    if (!img || !img.parentElement) return;
+    if (img.dataset.fallbackApplied === 'true') return;
+    img.dataset.fallbackApplied = 'true';
+      var label = (img.getAttribute('alt') || '').replace(/\s+logo$/i, '').trim();
+      var fallback = document.createElement('span');
+      fallback.className = 'client-wordmark';
+      fallback.textContent = label || 'Client';
+      img.parentElement.classList.add('is-small');
+      img.replaceWith(fallback);
+  }
+
+  document.querySelectorAll('.client-logo-card img').forEach(function(img){
+    img.addEventListener('error', function(){
+      replaceMissingClientLogo(img);
+    });
+    if (img.complete && img.naturalWidth === 0) replaceMissingClientLogo(img);
+  });
 
   var lightbox = document.getElementById('portfolioLightbox');
   var lightboxImage = document.getElementById('lightboxImage');
