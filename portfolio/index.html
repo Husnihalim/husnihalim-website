@@ -993,8 +993,12 @@ body { background: var(--pf-cream); color: var(--pf-text); }
   font-size: 14px;
 }
 .result-card ul {
+  list-style: disc;
   margin: 14px 0 0;
-  padding-left: 18px;
+  padding-left: 20px;
+}
+.result-card li::marker {
+  color: var(--pf-gold);
 }
 .result-metrics {
   display: grid;
