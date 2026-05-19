@@ -96,12 +96,13 @@ async function sendSubscriptionNotification(data) {
 
 async function addToMailerLite(data) {
   if (!MAILERLITE_API_KEY) {
-    throw new Error('MAILERLITE_API_KEY is not configured');
+    console.error('MailerLite skipped: MAILERLITE_API_KEY is not configured');
+    return;
   }
 
   const email = cleanString(data.email).toLowerCase();
   if (!email) {
-    return { statusCode: 400, body: JSON.stringify({ success: false, error: 'Email is required' }) };
+    throw new Error('Email is required');
   }
 
   const groupKey = cleanString(data.group || data.source) === 'oee' ? 'oee' : 'contact';
@@ -127,10 +128,7 @@ async function addToMailerLite(data) {
     throw new Error(`MailerLite error: ${message}`);
   }
 
-  return {
-    statusCode: 200,
-    body: JSON.stringify({ success: true }),
-  };
+  return { synced: true };
 }
 
 exports.handler = async function(event) {
@@ -144,13 +142,31 @@ exports.handler = async function(event) {
 
   try {
     const data = JSON.parse(event.body || '{}');
-    const result = await addToMailerLite(data);
+    if (!cleanString(data.email)) {
+      return {
+        statusCode: 400,
+        headers,
+        body: JSON.stringify({ success: false, error: 'Email is required' }),
+      };
+    }
+
     try {
       await sendSubscriptionNotification(data);
     } catch (error) {
       console.error('Subscription notification failed:', error);
     }
-    return { ...result, headers };
+
+    try {
+      await addToMailerLite(data);
+    } catch (error) {
+      console.error('MailerLite sync failed:', error);
+    }
+
+    return {
+      statusCode: 200,
+      headers,
+      body: JSON.stringify({ success: true }),
+    };
   } catch (error) {
     console.error('subscribe error:', error);
     return {
