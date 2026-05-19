@@ -331,10 +331,9 @@ def draw_intro(c):
     c.setFillColor(NAVY)
     c.drawString(right_x + 7 * mm, y - 9 * mm, "At a Glance")
     rows = [
-        ("Date", "29 May–2 June 2026"),
+        ("Dates", "Confirmed directly with interested companies"),
         ("Time", "9:00 AM - 5:00 PM"),
-        ("Venue", "AC Hotel by Marriott, Puchong"),
-        ("Format", "Public cohort, practical workshop"),
+        ("Format", "Public cohort or in-house practical workshop"),
         ("Cohort", "Maximum 15 participants"),
         ("Fee", "Regular RM 6,500; discounts from RM 6,000"),
         ("Claim", "HRDC claimable"),
@@ -629,7 +628,7 @@ def draw_investment(c):
 
     price_data = [
         [
-            Paragraph("<b>Early Bird</b><br/><font color='#5D6673'>Register by 4 May 2026</font>", styles["body"]),
+            Paragraph("<b>Early Bird</b><br/><font color='#5D6673'>Contact for current schedule</font>", styles["body"]),
             Paragraph("<b>RM 6,250</b><br/><font color='#5D6673'>per participant</font>", styles["body"]),
         ],
         [
@@ -641,7 +640,7 @@ def draw_investment(c):
             Paragraph("<b>RM 6,200</b><br/><font color='#5D6673'>per participant</font>", styles["body"]),
         ],
         [
-            Paragraph("<b>Group + Early Bird</b><br/><font color='#5D6673'>2+ participants by 4 May 2026</font>", styles["body"]),
+            Paragraph("<b>Group + Early Bird</b><br/><font color='#5D6673'>For eligible company nominations</font>", styles["body"]),
             Paragraph("<b>RM 6,000</b><br/><font color='#5D6673'>per participant</font>", styles["body"]),
         ],
     ]

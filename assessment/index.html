@@ -1030,12 +1030,12 @@
     <div class="site-updates-label"><span>Current Updates</span></div>
     <div class="site-updates-viewport">
       <div class="site-updates-track">
-        <a class="site-update-card" href="/kaizenchampion/"><span class="site-update-type">Program</span><span class="site-update-title">Kaizen Champion Development Program</span><span class="site-update-dot"></span><span class="site-update-meta">29 May–2 June 2026 · AC Hotel by Marriot, Puchong</span></a>
+        <a class="site-update-card" href="/kaizenchampion/"><span class="site-update-type">Program</span><span class="site-update-title">Kaizen Champion Development Program</span><span class="site-update-dot"></span><span class="site-update-meta">Public cohort or in-house delivery</span></a>
         <a class="site-update-card" href="/hrdc-training/"><span class="site-update-type">Training</span><span class="site-update-title">HRDC Claimable In-House Training</span><span class="site-update-dot"></span><span class="site-update-meta">OEE · Kaizen · 5S · TPM · Lean</span></a>
         <a class="site-update-card" href="/blog/oee-training-malaysia/"><span class="site-update-type">Blog</span><span class="site-update-title">OEE Training Malaysia Guide</span><span class="site-update-dot"></span><span class="site-update-meta">For manufacturing leaders</span></a>
         <a class="site-update-card" href="/#contact"><span class="site-update-type">Consulting</span><span class="site-update-title">Free Manufacturing Assessment</span><span class="site-update-dot"></span><span class="site-update-meta">Start with the floor, not slides</span></a>
         <a class="site-update-card" href="/hrdc-training/ai-industry-4-0/"><span class="site-update-type">New Offer</span><span class="site-update-title">AI for Industry 4.0 Training</span><span class="site-update-dot"></span><span class="site-update-meta">Practical manufacturing use cases</span></a>
-        <a class="site-update-card" href="/kaizenchampion/"><span class="site-update-type">Program</span><span class="site-update-title">Kaizen Champion Development Program</span><span class="site-update-dot"></span><span class="site-update-meta">29 May–2 June 2026 · AC Hotel by Marriot, Puchong</span></a>
+        <a class="site-update-card" href="/kaizenchampion/"><span class="site-update-type">Program</span><span class="site-update-title">Kaizen Champion Development Program</span><span class="site-update-dot"></span><span class="site-update-meta">Public cohort or in-house delivery</span></a>
         <a class="site-update-card" href="/hrdc-training/"><span class="site-update-type">Training</span><span class="site-update-title">HRDC Claimable In-House Training</span><span class="site-update-dot"></span><span class="site-update-meta">OEE · Kaizen · 5S · TPM · Lean</span></a>
         <a class="site-update-card" href="/blog/oee-training-malaysia/"><span class="site-update-type">Blog</span><span class="site-update-title">OEE Training Malaysia Guide</span><span class="site-update-dot"></span><span class="site-update-meta">For manufacturing leaders</span></a>
         <a class="site-update-card" href="/#contact"><span class="site-update-type">Consulting</span><span class="site-update-title">Free Manufacturing Assessment</span><span class="site-update-dot"></span><span class="site-update-meta">Start with the floor, not slides</span></a>
@@ -1108,6 +1108,8 @@
     </ul>
     <form class="email-form" name="floor-assessment" method="POST" data-netlify="true" action="/thank-you/">
       <input type="hidden" name="form-name" value="floor-assessment" />
+      <input type="hidden" name="form-started-at" value="" />
+      <p style="display:none"><label>Don't fill this out: <input name="bot-field" /></label></p>
       <div class="name-row">
         <input type="text" name="firstname" placeholder="First name" required />
         <input type="text" name="lastname" placeholder="Last name" required />
@@ -1124,6 +1126,8 @@
     e.preventDefault();
     var form = e.target;
     var btn  = form.querySelector('button[type="submit"]');
+    var startedAt = form.querySelector('input[name="form-started-at"]');
+    if (startedAt && !startedAt.value) startedAt.value = String(Date.now());
     btn.disabled = true;
     btn.textContent = 'Sending…';
 
@@ -1143,6 +1147,8 @@
       alert('Sorry, the request did not go through. Please WhatsApp or email Husni directly.');
     });
   });
+  var floorAssessmentStartedAt = document.querySelector('form[name="floor-assessment"] input[name="form-started-at"]');
+  if (floorAssessmentStartedAt) floorAssessmentStartedAt.value = String(Date.now());
 </script>
   </div>
 

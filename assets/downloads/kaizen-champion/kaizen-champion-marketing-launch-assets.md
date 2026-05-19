@@ -15,8 +15,8 @@ Avoid positioning this as an external fix. The message is internal ownership, da
 ## Program Facts
 
 - Program: Kaizen Champion Development Program
-- Date: 29 May-2 June 2026
-- Venue: AC Hotel by Marriott, Puchong
+- Dates: Confirmed directly with interested companies
+- Format: Public cohort or in-house delivery
 - Fee: RM 6,500 per participant
 - Status: HRDC claimable for eligible Malaysian companies
 - Cohort: limited intake
@@ -104,7 +104,7 @@ If your team needs internal people who can own improvement and drive follow-thro
 4. The difference between attending training and becoming a Kaizen Champion.
 5. What an internal improvement owner does every week.
 6. Why supervisors are often the best Kaizen Champion candidates.
-7. Program announcement: 29 May-2 June 2026.
+7. Program announcement: dates confirmed directly with interested companies.
 
 ### Week 2: Education
 
@@ -138,7 +138,7 @@ If your team needs internal people who can own improvement and drive follow-thro
 
 ## WhatsApp Message
 
-Hi [Name], I am opening a limited cohort for the Kaizen Champion Development Program on 29 May-2 June 2026 at AC Hotel by Marriott, Puchong.
+Hi [Name], I am opening interest for the Kaizen Champion Development Program through public cohort and in-house delivery options.
 
 The program is RM 6,500 and HRDC claimable for eligible companies.
 
@@ -152,11 +152,11 @@ Would you like me to send the brochure and registration details?
 
 ### Email 1: Announcement
 
-Subject: Kaizen Champion Program | 29 May-2 June 2026
+Subject: Kaizen Champion Program
 
 Hi [Name],
 
-We are opening a limited cohort for the Kaizen Champion Development Program at AC Hotel by Marriott, Puchong from 29 May-2 June 2026.
+We are opening interest for the Kaizen Champion Development Program through public cohort and in-house delivery options.
 
 This HRDC-claimable program is designed for manufacturing teams that want to build internal people who can own workplace improvement, use A3 problem solving, track KPIs, and sustain follow-through after training.
 
@@ -195,8 +195,8 @@ Participants in the Kaizen Champion Development Program will complete clear prog
 - 6 coaching sessions
 - 1 site visit progress assessment
 
-Dates: 29 May-2 June 2026
-Venue: AC Hotel by Marriott, Puchong
+Dates: Confirmed directly with interested companies
+Format: Public cohort or in-house delivery
 Fee: RM 6,500
 Status: HRDC claimable for eligible companies
 
@@ -208,7 +208,7 @@ Subject: Limited Kaizen Champion cohort closing soon
 
 Hi [Name],
 
-Quick reminder: seats are limited for the Kaizen Champion Development Program happening 29 May-2 June 2026 at AC Hotel by Marriott, Puchong.
+Quick reminder: seats are limited for the Kaizen Champion Development Program.
 
 The program is RM 6,500 and HRDC claimable for eligible companies, with 90-day coaching and 1 site visit progress assessment included.
 
@@ -216,7 +216,7 @@ Would you like the registration form?
 
 ## Phone Follow-Up Script
 
-Hi [Name], this is [Your Name]. I am calling about the Kaizen Champion Development Program happening from 29 May to 2 June 2026 at AC Hotel by Marriott, Puchong.
+Hi [Name], this is [Your Name]. I am calling about the Kaizen Champion Development Program for manufacturing teams that want to build internal improvement ownership.
 
 It is a limited-cohort, HRDC-claimable program at RM 6,500 per participant. The focus is practical workplace implementation, with outputs including A3, toolkit, KPI tracking, a 90-day roadmap, 90-day coaching, and one site visit progress assessment.
 
