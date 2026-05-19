@@ -617,10 +617,8 @@
       cursor: pointer; transition: background 0.2s; text-transform: uppercase; letter-spacing: 0.5px;
     }
     .kc-form-wrap .kc-submit:hover { background: #6e1a40; }
-    .kc-google-form-card { display: flex; flex-direction: column; min-height: 1120px; }
-    .kc-google-form-iframe { width: 100%; min-height: 1120px; border: 0; border-radius: 6px; background: #fff; overflow: hidden; }
-    .kc-form-fallback { font-family: 'DM Sans', sans-serif; font-size: 0.82rem; color: #777; text-align: center; margin: 0.9rem 0 0; }
-    .kc-form-fallback a { color: var(--c-accent); font-weight: 700; }
+    .kc-form-wrap .form-title { margin-bottom: 1.4rem; }
+    .kc-form-wrap .form-note { font-family: 'DM Sans', sans-serif; font-size: 0.82rem; color: #777; text-align: center; margin: 0.9rem 0 0; }
     .kc-check-row { display: flex; align-items: flex-start; gap: 10px; padding: 1rem; background: #f8f8f8; border-radius: 6px; margin: 1rem 0; }
     .kc-check-row input[type="checkbox"] { width: auto; margin-top: 3px; }
     .kc-check-row span { font-family: 'DM Sans', sans-serif; font-size: 0.88rem; color: #444; }
@@ -657,8 +655,6 @@
       .kc-section h2 { font-size: 2rem; }
       .kc-day-header { align-items: flex-start; gap: 12px; }
       .kc-form-wrap { padding: 1.5rem; }
-      .kc-google-form-card { min-height: 1240px; }
-      .kc-google-form-iframe { min-height: 1240px; }
     }
 
 /* Unified customer navigation */
@@ -1324,20 +1320,41 @@
     <p class="kc-register-note"><strong>Planning to train a company group?</strong> For in-house delivery, contact Husni directly to discuss dates, participant count, HRDC documentation, and factory-specific needs.</p>
 
     <div class="kc-form-wrap">
-      <div class="kc-google-form-card" aria-label="Kaizen Champion registration Google Form">
-        <iframe
-          class="kc-google-form-iframe"
-          src="https://docs.google.com/forms/d/e/1FAIpQLScBqhB2neC6-2BFKyJfHGRaCt6M62LXEvuh2qp-XbFguTXTkg/viewform?embedded=true"
-          title="Kaizen Champion Development Program registration form"
-          loading="lazy"
-          marginheight="0"
-          marginwidth="0">
-          Loading...
-        </iframe>
-        <p class="kc-form-fallback">
-          If the form does not load, <a href="https://forms.gle/wo7C9ho61s9xEz8VA" target="_blank" rel="noopener">open it directly</a>.
-        </p>
-      </div>
+      <form class="contact-form" id="contactForm" name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+        <input type="hidden" name="form-name" value="contact">
+        <input type="hidden" name="form-started-at" value="">
+        <p style="display:none"><label>Don't fill this out: <input name="bot-field"></label></p>
+        <h3 class="form-title">Send a Quick Enquiry</h3>
+        <div class="form-group">
+          <label for="name">Your Name</label>
+          <input type="text" id="name" name="name" placeholder="Ahmad bin Hassan" required>
+        </div>
+        <div class="form-group">
+          <label for="company">Company</label>
+          <input type="text" id="company" name="company" placeholder="XYZ Manufacturing Sdn Bhd">
+        </div>
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" placeholder="ahmad@company.com.my" required>
+        </div>
+        <div class="form-group">
+          <label for="interest">I'm interested in</label>
+          <select id="interest" name="interest">
+            <option value="kaizen-champion" selected>Kaizen Champion Program</option>
+            <option value="consulting">Consulting Engagement</option>
+            <option value="in-house-training">In-House Training</option>
+            <option value="public-training">Public Training Program</option>
+            <option value="assessment">Free Site Assessment</option>
+            <option value="other">Other / General Enquiry</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="message">How can I help?</label>
+          <textarea id="message" name="message" rows="4" placeholder="Tell me about your current training need, participant count, or preferred delivery option..."></textarea>
+        </div>
+        <button type="submit" class="kc-submit">Send Enquiry</button>
+        <p class="form-note">I respond within 1 business day. All enquiries are confidential.</p>
+      </form>
 
       <div style="text-align:center;margin-top:1.5rem;padding-top:1.5rem;border-top:1px solid #eee;">
         <p style="font-family:'DM Sans',sans-serif;font-size:0.88rem;color:#777;margin:0;">
