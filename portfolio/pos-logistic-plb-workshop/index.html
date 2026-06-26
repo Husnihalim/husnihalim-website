@@ -294,8 +294,12 @@ p { text-align: left; }
   .plb-note li { font-size: 13px; margin: 8px 0; }
 }
 </style>
+<link rel="stylesheet" href="/assets/global.css">
+<script src="https://cdn.tailwindcss.com"></script>
+<script src="https://unpkg.com/htmx.org@2.0.4"></script>
 </head>
 <body>
+<a href="#main-content" class="skip-link">Skip to main content</a>
 
 <nav class="nav" id="navbar">
   <a href="/" class="nav-logo nav-logo-text">Husni<em>Halim</em></a>
@@ -314,9 +318,10 @@ p { text-align: left; }
   <button class="hamburger" id="hamburger" aria-label="Toggle navigation" aria-expanded="false">
     <span></span><span></span><span></span>
   </button>
+  <div class="nav-backdrop" id="navBackdrop"></div>
 </nav>
 
-<main>
+<main id="main-content">
   <section class="plb-hero">
     <div class="plb-wrap">
       <nav class="plb-breadcrumb" aria-label="Breadcrumb">
@@ -463,5 +468,10 @@ p { text-align: left; }
   </div>
 </footer>
 <script src="/script.js"></script>
+<div class="mobile-cta-bar">
+  <a href="https://wa.me/60165241901?text=Hi%20Husni,%20I%27d%20like%20to%20enquire%20about%20your%20consulting%20services." class="btn btn-outline" style="border-color:rgba(255,255,255,0.3);color:#fff;" target="_blank" rel="noopener">WhatsApp</a>
+  <a href="/#contact" class="btn btn-primary">Book a Call</a>
+</div>
+
 </body>
 </html>

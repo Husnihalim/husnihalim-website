@@ -73,43 +73,53 @@
  );
  revealElements.forEach((el) => revealObserver.observe(el));
 
- // ---- Navbar scroll effect ----
- const navbar = document.getElementById('navbar');
- let lastScrollY = 0;
+  // ---- Navbar scroll effect ----
+  const navbar = document.getElementById('navbar');
 
- function handleNavScroll() {
- const y = window.scrollY;
- if (y > 60) {
- navbar.classList.add('nav-scrolled');
- } else {
- navbar.classList.remove('nav-scrolled');
- }
- lastScrollY = y;
- }
- window.addEventListener('scroll', handleNavScroll, { passive: true });
- handleNavScroll();
+  function handleNavScroll() {
+    const y = window.scrollY;
+    navbar.classList.toggle('nav-scrolled', y > 60);
+  }
+  window.addEventListener('scroll', handleNavScroll, { passive: true });
+  handleNavScroll();
 
- // ---- Mobile hamburger menu ----
- const hamburger = document.getElementById('hamburger');
- const navLinks = document.getElementById('navLinks');
+  // ---- Mobile hamburger menu ----
+  const hamburger = document.getElementById('hamburger');
+  const navLinks = document.getElementById('navLinks');
+  const navBackdrop = document.getElementById('navBackdrop');
 
- if (hamburger && navLinks) {
- hamburger.addEventListener('click', () => {
- const isOpen = hamburger.classList.toggle('active');
- navLinks.classList.toggle('open');
- hamburger.setAttribute('aria-expanded', isOpen);
- document.body.style.overflow = isOpen ? 'hidden' : '';
- });
+  function closeNav() {
+    if (hamburger) hamburger.classList.remove('active');
+    if (navLinks) navLinks.classList.remove('open');
+    if (hamburger) hamburger.setAttribute('aria-expanded', 'false');
+    document.body.style.overflow = '';
+  }
 
- navLinks.querySelectorAll('a').forEach((link) => {
- link.addEventListener('click', () => {
- hamburger.classList.remove('active');
- navLinks.classList.remove('open');
- hamburger.setAttribute('aria-expanded', 'false');
- document.body.style.overflow = '';
- });
- });
- }
+  function openNav() {
+    if (hamburger) hamburger.classList.add('active');
+    if (navLinks) navLinks.classList.add('open');
+    if (hamburger) hamburger.setAttribute('aria-expanded', 'true');
+    document.body.style.overflow = 'hidden';
+  }
+
+  if (hamburger && navLinks) {
+    hamburger.addEventListener('click', () => {
+      const isOpen = hamburger.classList.contains('active');
+      isOpen ? closeNav() : openNav();
+    });
+
+    navLinks.querySelectorAll('a').forEach((link) => {
+      link.addEventListener('click', closeNav);
+    });
+
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && navLinks.classList.contains('open')) closeNav();
+    });
+
+    if (navBackdrop) {
+      navBackdrop.addEventListener('click', closeNav);
+    }
+  }
 
  // ---- Active nav link highlight ----
  const sections = document.querySelectorAll('section[id]');
@@ -148,6 +158,9 @@
  // ---- Contact form handling ----
  const contactForm = document.getElementById('contactForm');
  if (contactForm) {
+ const startedAt = contactForm.querySelector('input[name="form-started-at"]');
+ if (startedAt) startedAt.value = String(Date.now());
+
  contactForm.addEventListener('submit', async function (e) {
  e.preventDefault();
  const formData = new FormData(this);

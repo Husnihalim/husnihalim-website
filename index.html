@@ -80,6 +80,9 @@
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400;1,600&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&display=swap" rel="stylesheet">
 
 <link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="/assets/global.css">
+<script src="https://cdn.tailwindcss.com"></script>
+<script src="https://unpkg.com/htmx.org@2.0.4"></script>
 <style id="site-nav-consistency">
 /* Unified site navigation */
 .nav{height:66px!important;padding:0 40px!important;background:var(--c-dark,var(--dark,#0c1b2e))!important;display:flex!important;align-items:center!important;gap:0!important;position:sticky!important;top:0;left:0;right:0;z-index:1000;box-shadow:0 2px 20px rgba(0,0,0,.18);backdrop-filter:none!important;-webkit-backdrop-filter:none!important;transition:box-shadow .2s,background .2s!important}
@@ -123,6 +126,8 @@
 </head>
 <body>
 
+<a href="#main-content" class="skip-link">Skip to main content</a>
+
 <!-- ===================== NAV ===================== -->
 <nav class="nav" id="navbar">
   <a href="/" class="nav-logo nav-logo-text">Husni<em>Halim</em></a>
@@ -133,6 +138,7 @@
     <li><a href="/kaizen/">Kaizen</a></li>
     <li><a href="/hrdc-training/">Training</a></li>
     <li><a href="/portfolio/">Portfolio</a></li>
+    <li><a href="/industries/">Industries</a></li>
     <li><a href="/blog/">Insights</a></li>
     <li><a href="/kaizenchampion/" class="nav-tool">Kaizen Champion &#10022;</a></li>
     <li><a href="/oee-calculator/" class="nav-tool">OEE</a></li>
@@ -142,27 +148,15 @@
   <button class="hamburger" id="hamburger" aria-label="Toggle navigation" aria-expanded="false">
     <span></span><span></span><span></span>
   </button>
+  <div class="nav-backdrop" id="navBackdrop"></div>
 </nav>
 <section class="site-updates" aria-label="Current updates from Husni Halim">
   <div class="site-updates-inner">
     <div class="site-updates-label"><span>Current Updates</span></div>
-    <div class="site-updates-viewport">
-      <div class="site-updates-track">
-        <a class="site-update-card" href="/kaizenchampion/"><span class="site-update-type">Program</span><span class="site-update-title">Kaizen Champion Development Program</span><span class="site-update-dot"></span><span class="site-update-meta">Public cohort or in-house delivery</span></a>
-        <a class="site-update-card" href="/hrdc-training/"><span class="site-update-type">Training</span><span class="site-update-title">HRDC Claimable In-House Training</span><span class="site-update-dot"></span><span class="site-update-meta">OEE · Kaizen · 5S · TPM · Lean</span></a>
-        <a class="site-update-card" href="/blog/oee-training-malaysia/"><span class="site-update-type">Blog</span><span class="site-update-title">OEE Training Malaysia Guide</span><span class="site-update-dot"></span><span class="site-update-meta">For manufacturing leaders</span></a>
-        <a class="site-update-card" href="/#contact"><span class="site-update-type">Consulting</span><span class="site-update-title">Free Manufacturing Assessment</span><span class="site-update-dot"></span><span class="site-update-meta">Start with the floor, not slides</span></a>
-        <a class="site-update-card" href="/hrdc-training/ai-industry-4-0/"><span class="site-update-type">New Offer</span><span class="site-update-title">AI for Industry 4.0 Training</span><span class="site-update-dot"></span><span class="site-update-meta">Practical manufacturing use cases</span></a>
-        <a class="site-update-card" href="/kaizenchampion/"><span class="site-update-type">Program</span><span class="site-update-title">Kaizen Champion Development Program</span><span class="site-update-dot"></span><span class="site-update-meta">Public cohort or in-house delivery</span></a>
-        <a class="site-update-card" href="/hrdc-training/"><span class="site-update-type">Training</span><span class="site-update-title">HRDC Claimable In-House Training</span><span class="site-update-dot"></span><span class="site-update-meta">OEE · Kaizen · 5S · TPM · Lean</span></a>
-        <a class="site-update-card" href="/blog/oee-training-malaysia/"><span class="site-update-type">Blog</span><span class="site-update-title">OEE Training Malaysia Guide</span><span class="site-update-dot"></span><span class="site-update-meta">For manufacturing leaders</span></a>
-        <a class="site-update-card" href="/#contact"><span class="site-update-type">Consulting</span><span class="site-update-title">Free Manufacturing Assessment</span><span class="site-update-dot"></span><span class="site-update-meta">Start with the floor, not slides</span></a>
-        <a class="site-update-card" href="/hrdc-training/ai-industry-4-0/"><span class="site-update-type">New Offer</span><span class="site-update-title">AI for Industry 4.0 Training</span><span class="site-update-dot"></span><span class="site-update-meta">Practical manufacturing use cases</span></a>
-      </div>
-    </div>
+    <div data-render-announcements></div>
   </div>
 </section>
-<main>
+<main id="main-content">
 
 
 <!-- ===================== HERO ===================== -->
@@ -205,7 +199,7 @@
           <span class="hero-stat-label" data-editable="hh-hero-stat-2-label">Professionals Trained</span>
         </div>
         <div class="hero-stat">
-          <span class="hero-stat-number" data-editable="hh-hero-stat-3-num">80+</span>
+          <span class="hero-stat-number" data-editable="hh-hero-stat-3-num">90+</span>
           <span class="hero-stat-label" data-editable="hh-hero-stat-3-label">Companies Served</span>
         </div>
         <div class="hero-stat">
@@ -248,10 +242,10 @@
 <section class="section company-marquee-section" id="companies">
   <div class="section-label">Worked With</div>
   <h2>Trusted Across Industry</h2>
-  <p class="section-desc">A selection of 84 organisations and project sites from training, consulting, HRD Corp public programs, TERAJU Pritech4.0, and international improvement work across 11 countries and 21 international factories.</p>
+  <p class="section-desc">A selection of 90 organisations and project sites from training, consulting, HRD Corp public programs, TERAJU Pritech4.0, and international improvement work across 11 countries and 21 international factories.</p>
   <div class="company-proof-grid" aria-label="Experience scale and coverage">
     <div class="company-proof-card">
-      <span class="company-proof-number">84</span>
+      <span class="company-proof-number">90</span>
       <span class="company-proof-label">Organisations and sites</span>
     </div>
     <div class="company-proof-card">
@@ -281,15 +275,8 @@
     <span>Ports and Logistics</span>
     <span>Education</span>
   </div>
-  <div class="company-marquee" aria-label="Companies Husni Halim has worked with">
-    <div class="company-marquee-track">
-      <div class="company-marquee-group">
-        <span>Akif Cafe Sdn Bhd</span><span>Al Haddad</span><span>Ameen Products</span><span>Anramin Industry</span><span>Ayam Bismi</span><span>Bot Industries</span><span>Faiz Food &amp; Beverages</span><span>Fatiah Frozen Sdn Bhd</span><span>Jabi Rice Mill</span><span>Kopiah Industry</span><span>MGV Industries</span><span>Miwa Manufacturing</span><span>PNA Technologies</span><span>Tishas Food</span><span>Aerospace Composite Malaysia Sdn Bhd</span><span>Bintulu Port Holdings Berhad</span><span>Bomatec Sdn Bhd</span><span>BRB Malaysia Sdn Bhd</span><span>Careglove Global Sdn Bhd</span><span>Ciba Vision Sdn Bhd</span><span>DIMAL Asia Pacific</span><span>Eastman Chemical Sdn Bhd</span><span>Feoso Oil (M) Sdn Bhd</span><span>FLE (M) Sdn Bhd</span><span>H&amp;R Wax Malaysia Sdn Bhd</span><span>Hitachi Asia (M) Sdn Bhd</span><span>Huber Suhner (M) Sdn Bhd</span><span>Jaya Nets Sdn Bhd</span><span>KRAIBURG TPE Technology (M) Sdn Bhd</span><span>Negeri Sembilan Cement Industries Sdn Bhd</span><span>NI Malaysia Sdn Bhd</span><span>Novugen Oncology Sdn Bhd</span><span>Novugen Pharma Sdn Bhd</span><span>Petronas</span><span>Salutica Allied Solutions Sdn Bhd</span><span>San Miguel Yamamura Woven Products Sdn Bhd</span><span>Shinko Electronics (M) Sdn Bhd</span><span>SMART Modular Technologies Sdn Bhd</span><span>Stenta Films (M) Sdn Bhd</span><span>Tenaga Cable Industries Sdn Bhd</span><span>Terberg Manufacturing &amp; Assembly Sdn Bhd</span><span>Thales DIS (M) Sdn Bhd</span><span>The Italian Baker Sdn Bhd</span><span>Toyo Tires (M) Snd Bhd</span><span>Venator Asia Sdn Bhd</span><span>Wipro Unza (M) Sdn Bhd</span><span>Prysmian Arco Felice EHV Cables Plant</span><span>Prysmian Cikampek</span><span>Prysmian Power Cables Malaysia</span><span>Prysmian Sorocaba Building Wires Plant</span><span>Prysmian Tianjin Special Cables Plant</span><span>Aeon Bakery</span><span>Asian NDK Crystal Snd Bhd</span><span>Carotino Sdn Bhd</span><span>Chemi Con</span><span>Datasonic Group Berhad</span><span>Datasonic Sdn Bhd</span><span>Extech Pro (M) Sdn Bhd</span><span>Fakulti AI, UTM AI</span><span>FBK Manufacturing</span><span>FCL Components</span><span>FSR Technologies Sdn Bhd</span><span>Help University</span><span>HT Ceramics</span><span>Inari Technology</span><span>Intel Technology Sdn Bhd</span><span>Jabatan Pengangkutan Jalan (KA)</span><span>Kato Manufacturing</span><span>Koito Manufacturing Sdn Bhd</span><span>Kulim Technology Park</span><span>Lyndon Basell</span><span>Maxeon Solar Technologies</span><span>Mitsui High-Tec Malaysia Sdn Bhd</span><span>Munchy Food Industries Sdn Bhd</span><span>New Age Aluminium Ind Sdn Bhd</span><span>Panasonic Aircond Malaysia</span><span>Plastitechnic (M) Sdn Bhd</span><span>POS Logistic Berhad</span><span>Safran Landing Systems (M) Sdn Bhd</span><span>Sapura Industrial Berhad</span><span>Sato Manufacturing</span><span>Sharp TV Manufacturing</span><span>Smart Meter Tech (M) Sdn Bhd</span><span>WRP Gloves</span>
-      </div>
-      <div class="company-marquee-group" aria-hidden="true">
-        <span>Akif Cafe Sdn Bhd</span><span>Al Haddad</span><span>Ameen Products</span><span>Anramin Industry</span><span>Ayam Bismi</span><span>Bot Industries</span><span>Faiz Food &amp; Beverages</span><span>Fatiah Frozen Sdn Bhd</span><span>Jabi Rice Mill</span><span>Kopiah Industry</span><span>MGV Industries</span><span>Miwa Manufacturing</span><span>PNA Technologies</span><span>Tishas Food</span><span>Aerospace Composite Malaysia Sdn Bhd</span><span>Bintulu Port Holdings Berhad</span><span>Bomatec Sdn Bhd</span><span>BRB Malaysia Sdn Bhd</span><span>Careglove Global Sdn Bhd</span><span>Ciba Vision Sdn Bhd</span><span>DIMAL Asia Pacific</span><span>Eastman Chemical Sdn Bhd</span><span>Feoso Oil (M) Sdn Bhd</span><span>FLE (M) Sdn Bhd</span><span>H&amp;R Wax Malaysia Sdn Bhd</span><span>Hitachi Asia (M) Sdn Bhd</span><span>Huber Suhner (M) Sdn Bhd</span><span>Jaya Nets Sdn Bhd</span><span>KRAIBURG TPE Technology (M) Sdn Bhd</span><span>Negeri Sembilan Cement Industries Sdn Bhd</span><span>NI Malaysia Sdn Bhd</span><span>Novugen Oncology Sdn Bhd</span><span>Novugen Pharma Sdn Bhd</span><span>Petronas</span><span>Salutica Allied Solutions Sdn Bhd</span><span>San Miguel Yamamura Woven Products Sdn Bhd</span><span>Shinko Electronics (M) Sdn Bhd</span><span>SMART Modular Technologies Sdn Bhd</span><span>Stenta Films (M) Sdn Bhd</span><span>Tenaga Cable Industries Sdn Bhd</span><span>Terberg Manufacturing &amp; Assembly Sdn Bhd</span><span>Thales DIS (M) Sdn Bhd</span><span>The Italian Baker Sdn Bhd</span><span>Toyo Tires (M) Snd Bhd</span><span>Venator Asia Sdn Bhd</span><span>Wipro Unza (M) Sdn Bhd</span><span>Prysmian Arco Felice EHV Cables Plant</span><span>Prysmian Cikampek</span><span>Prysmian Power Cables Malaysia</span><span>Prysmian Sorocaba Building Wires Plant</span><span>Prysmian Tianjin Special Cables Plant</span><span>Aeon Bakery</span><span>Asian NDK Crystal Snd Bhd</span><span>Carotino Sdn Bhd</span><span>Chemi Con</span><span>Datasonic Group Berhad</span><span>Datasonic Sdn Bhd</span><span>Extech Pro (M) Sdn Bhd</span><span>Fakulti AI, UTM AI</span><span>FBK Manufacturing</span><span>FCL Components</span><span>FSR Technologies Sdn Bhd</span><span>Help University</span><span>HT Ceramics</span><span>Inari Technology</span><span>Intel Technology Sdn Bhd</span><span>Jabatan Pengangkutan Jalan (KA)</span><span>Kato Manufacturing</span><span>Koito Manufacturing Sdn Bhd</span><span>Kulim Technology Park</span><span>Lyndon Basell</span><span>Maxeon Solar Technologies</span><span>Mitsui High-Tec Malaysia Sdn Bhd</span><span>Munchy Food Industries Sdn Bhd</span><span>New Age Aluminium Ind Sdn Bhd</span><span>Panasonic Aircond Malaysia</span><span>Plastitechnic (M) Sdn Bhd</span><span>POS Logistic Berhad</span><span>Safran Landing Systems (M) Sdn Bhd</span><span>Sapura Industrial Berhad</span><span>Sato Manufacturing</span><span>Sharp TV Manufacturing</span><span>Smart Meter Tech (M) Sdn Bhd</span><span>WRP Gloves</span>
-      </div>
-    </div>
+  <div class="company-marquee" aria-label="Companies Husni Halim has worked with" data-render-companies-marquee>
+    <div class="company-marquee-track"></div>
   </div>
 </section>
 
@@ -830,6 +817,7 @@
         <div class="form-group">
           <label for="name">Your Name</label>
           <input type="text" id="name" name="name" placeholder="Ahmad bin Hassan" required>
+          <span class="field-error">Please enter your name</span>
         </div>
         <div class="form-group">
           <label for="company">Company</label>
@@ -838,6 +826,7 @@
         <div class="form-group">
           <label for="email">Email</label>
           <input type="email" id="email" name="email" placeholder="ahmad@company.com.my" required>
+          <span class="field-error">Please enter a valid email address</span>
         </div>
         <div class="form-group">
           <label for="interest">I'm interested in</label>
@@ -853,7 +842,8 @@
         </div>
         <div class="form-group">
           <label for="message">How can I help?</label>
-          <textarea id="message" name="message" rows="4" placeholder="Tell me about your current challenge or what you're hoping to achieve..."></textarea>
+          <textarea id="message" name="message" rows="4" placeholder="Tell me about your current challenge or what you're hoping to achieve..." required></textarea>
+          <span class="field-error">Please describe how I can help</span>
         </div>
         <button type="submit" class="btn btn-primary btn-submit btn-full">Send Enquiry</button>
         <p class="form-note">I respond within 1 business day. All enquiries are confidential.</p>
@@ -936,6 +926,12 @@
   </div>
 </footer>
 
+<div class="mobile-cta-bar">
+  <a href="https://wa.me/60165241901?text=Hi%20Husni,%20I%27d%20like%20to%20enquire%20about%20your%20consulting%20services." class="btn btn-outline" style="border-color:rgba(255,255,255,0.3);color:#fff;" target="_blank" rel="noopener">WhatsApp</a>
+  <a href="#contact" class="btn btn-primary">Book a Call</a>
+</div>
+
+<script src="assets/site-data.js"></script>
 <script src="script.js"></script>
 <script src="/assets/share.js" defer></script>
 <script src="/assets/analytics-events.js" defer></script>

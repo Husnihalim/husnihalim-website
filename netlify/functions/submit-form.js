@@ -16,6 +16,43 @@ const FROM_EMAIL          = "noreply@husnihalim.com";
 const REPLY_TO_EMAIL      = process.env.CONTACT_REPLY_TO_EMAIL || YOUR_EMAIL;
 const MAILERLITE_GROUP_ID = "182444406325904847";
 
+function cleanString(value) {
+  return typeof value === "string" ? value.trim() : "";
+}
+
+function isLikelyBotSubmission(params) {
+  if (cleanString(params.get("bot-field"))) return true;
+
+  const startedAt = Number(params.get("form-started-at") || 0);
+  if (!startedAt) return true;
+
+  if (Date.now() - startedAt < 3000) return true;
+
+  const firstname = cleanString(params.get("firstname"));
+  const lastname = cleanString(params.get("lastname"));
+  return hasBotNamePattern(`${firstname}${lastname}`);
+}
+
+function hasBotNamePattern(value) {
+  const text = cleanString(value);
+  if (text.length < 12) return false;
+
+  const lettersOnly = text.replace(/[^a-z]/gi, "");
+  if (lettersOnly.length < 12) return false;
+
+  const uppercaseCount = (lettersOnly.match(/[A-Z]/g) || []).length;
+  const lowercaseCount = (lettersOnly.match(/[a-z]/g) || []).length;
+  const hasNormalSeparator = /[\s.'-]/.test(text);
+  const hasCommonNamePart = /(bin|binti|mohd|muhammad|ahmad|abdul|siti|nur|lee|lim|tan|wong|aziz|rahman|husni)/i.test(text);
+  const randomCamelCase = uppercaseCount >= 4 && lowercaseCount >= 6 && !hasNormalSeparator && !hasCommonNamePart;
+
+  const vowelCount = (lettersOnly.match(/[aeiou]/gi) || []).length;
+  const vowelRatio = vowelCount / lettersOnly.length;
+  const lowVowelLongToken = lettersOnly.length >= 16 && vowelRatio < 0.22 && !hasCommonNamePart;
+
+  return randomCamelCase || lowVowelLongToken;
+}
+
 function sendEmail({ to, toName, cc, replyTo, subject, html }) {
   if (!RESEND_API_KEY) {
     throw new Error("RESEND_API_KEY is not configured");
@@ -72,6 +109,14 @@ exports.handler = async function(event) {
 
   try {
     const params    = new URLSearchParams(event.body);
+    if (isLikelyBotSubmission(params)) {
+      return {
+        statusCode: 200,
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ ok: true }),
+      };
+    }
+
     const firstname = params.get("firstname") || "";
     const lastname  = params.get("lastname")  || "";
     const email     = params.get("email")     || "";

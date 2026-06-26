@@ -82,6 +82,15 @@
   });
 
   document.querySelectorAll('form[name="blog-enquiry"]').forEach(function (form) {
+    var startedAt = form.querySelector('input[name="form-started-at"]');
+    if (!startedAt) {
+      startedAt = document.createElement('input');
+      startedAt.type = 'hidden';
+      startedAt.name = 'form-started-at';
+      form.appendChild(startedAt);
+    }
+    startedAt.value = String(Date.now());
+
     form.addEventListener('submit', function (event) {
       event.preventDefault();
       var submit = form.querySelector('button[type="submit"]');

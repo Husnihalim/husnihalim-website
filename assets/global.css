@@ -1,0 +1,231 @@
+/* ============================================================
+   HUSNI HALIM — global.css
+   Shared UI/UX enhancements loaded on all pages.
+   ============================================================ */
+
+/* ---- Accessibility: Focus-visible outlines ---- */
+:root {
+  --focus-ring: 0 0 0 3px rgba(139, 34, 82, 0.35);
+  --focus-ring-light: 0 0 0 3px rgba(255, 255, 255, 0.35);
+  --focus-ring-gold: 0 0 0 3px rgba(196, 120, 50, 0.35);
+}
+
+:focus-visible {
+  outline: 2px solid var(--c-accent, #8b2252);
+  outline-offset: 2px;
+}
+
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+  border-radius: 2px;
+}
+
+/* Light outlines for dark backgrounds */
+.nav a:focus-visible,
+.nav button:focus-visible,
+.hero a:focus-visible,
+.hero button:focus-visible,
+.expertise-section a:focus-visible,
+.company-marquee-section a:focus-visible,
+.kaizen-hero a:focus-visible,
+.kaizen-hero button:focus-visible,
+.contact-section a:focus-visible,
+.contact-section button:focus-visible,
+footer a:focus-visible,
+footer button:focus-visible {
+  outline-color: var(--c-secondary, #c47832);
+}
+
+/* ---- Nav backdrop overlay ---- */
+.nav-backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 999;
+  background: rgba(0, 0, 0, 0.35);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+}
+
+.nav-links.open ~ .nav-backdrop,
+.nav-links.active ~ .nav-backdrop {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+@media (max-width: 900px) {
+  .nav-backdrop {
+    display: block !important;
+  }
+}
+
+@media (min-width: 901px) {
+  .nav-backdrop {
+    display: none !important;
+  }
+}
+
+/* ---- Form validation styles ---- */
+.form-group input:user-invalid,
+.form-group select:user-invalid,
+.form-group textarea:user-invalid {
+  border-color: #dc2626 !important;
+  box-shadow: 0 0 0 3px rgba(220, 38, 38, 0.12) !important;
+  background: #fffbfb;
+}
+
+.form-group input:user-valid,
+.form-group select:user-valid,
+.form-group textarea:user-valid {
+  border-color: #16a34a !important;
+  box-shadow: 0 0 0 3px rgba(22, 163, 74, 0.12) !important;
+}
+
+.form-group .field-error {
+  font-size: 12px;
+  color: #dc2626;
+  margin-top: 2px;
+  display: none;
+}
+
+.form-group input:user-invalid ~ .field-error,
+.form-group select:user-invalid ~ .field-error,
+.form-group textarea:user-invalid ~ .field-error {
+  display: block;
+}
+
+/* Focus state improvements for form fields */
+.form-group input:focus-visible,
+.form-group select:focus-visible,
+.form-group textarea:focus-visible {
+  border-color: var(--c-accent, #8b2252) !important;
+  box-shadow: 0 0 0 3px rgba(139, 34, 82, 0.15) !important;
+  outline: none !important;
+}
+
+/* ---- CTA improvements ---- */
+.hero-actions .btn {
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-actions .btn-primary {
+  box-shadow: 0 4px 20px rgba(139, 34, 82, 0.25);
+}
+
+.hero-actions .btn-primary:hover {
+  box-shadow: 0 8px 32px rgba(139, 34, 82, 0.35);
+  transform: translateY(-3px);
+}
+
+.hero-actions .btn-outline {
+  border-width: 2px;
+}
+
+/* ---- Button touch targets (mobile) ---- */
+@media (max-width: 600px) {
+  .btn {
+    min-height: 48px;
+    padding: 12px 24px;
+  }
+
+  .nav-cta {
+    min-height: 52px !important;
+  }
+}
+
+/* ---- Reduced motion safety ---- */
+@media (prefers-reduced-motion: reduce) {
+  .nav-backdrop {
+    transition: none;
+  }
+  a,
+  button,
+  input,
+  select,
+  textarea {
+    transition: none !important;
+  }
+}
+
+/* ---- Smooth card hover touch-up ---- */
+.service-card,
+.testimonial-card,
+.case-card,
+.training-card,
+.blog-card {
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* ---- Skip-to-content link (hidden until focused) ---- */
+.skip-link {
+  position: absolute;
+  top: -100%;
+  left: 0;
+  z-index: 10000;
+  padding: 8px 16px;
+  background: var(--c-accent, #8b2252);
+  color: #fff;
+  font-size: 14px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: top 0.2s;
+}
+
+.skip-link:focus {
+  top: 0;
+  outline: 2px solid #fff;
+  outline-offset: 2px;
+}
+
+/* ---- Section heading underline (cosmetic) ---- */
+.section > h2::after {
+  content: '';
+  display: block;
+  width: 48px;
+  height: 3px;
+  background: var(--c-accent, #8b2252);
+  margin-top: 12px;
+  border-radius: 2px;
+  opacity: 0.5;
+}
+
+.expertise-section > h2::after,
+.company-marquee-section > h2::after {
+  background: var(--c-secondary, #c47832);
+}
+
+/* ---- Mobile CTA sticky bar ---- */
+.mobile-cta-bar {
+  display: none;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 900;
+  background: var(--c-dark, #0c1b2e);
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 10px 16px;
+  gap: 10px;
+  box-shadow: 0 -4px 24px rgba(0, 0, 0, 0.15);
+}
+
+.mobile-cta-bar .btn {
+  flex: 1;
+  justify-content: center;
+  font-size: 13px;
+  min-height: 44px;
+}
+
+@media (max-width: 600px) {
+  .mobile-cta-bar {
+    display: flex;
+  }
+
+  body {
+    padding-bottom: 70px;
+  }
+}

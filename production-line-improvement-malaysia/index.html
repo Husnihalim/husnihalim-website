@@ -25,6 +25,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="/assets/site-footer.css">
 
+<script src="/assets/site-data.js"></script>
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -145,7 +146,7 @@ a{color:inherit}
 .nav-links a:hover{color:#fff}
 .nav-tool{color:var(--gold)!important;border:1px solid rgba(196,120,50,.45);border-radius:6px;padding:8px 12px}
 .nav-cta{background:var(--plum);color:#fff!important;padding:9px 14px;border-radius:6px;font-weight:700}
-.hero{background:var(--navy);color:#fff;padding:86px 40px 68px}
+.hero{background:var(--navy);color:#fff;padding:60px 24px 48px}
 .hero-inner{max-width:1120px;margin:0 auto;display:grid;grid-template-columns:minmax(0,1.15fr) minmax(280px,.85fr);gap:56px;align-items:center}
 .eyebrow{font-size:11px;letter-spacing:2px;text-transform:uppercase;color:var(--gold);font-weight:700;margin-bottom:14px}
 h1,h2,h3{font-family:var(--font-h);line-height:1.12}
@@ -159,7 +160,7 @@ h1 em,h2 em{color:var(--gold);font-style:italic}
 .quick-answer{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.14);border-radius:8px;padding:22px}
 .quick-answer h2{font-size:25px;color:#fff;margin-bottom:10px}
 .quick-answer p{color:rgba(255,255,255,.76);font-size:15px}
-.section{padding:72px 40px}
+.section{padding:56px 24px}
 .section.white{background:#fff}
 .container{max-width:1120px;margin:0 auto}
 .section-label{font-size:11px;text-transform:uppercase;letter-spacing:2px;color:var(--plum);font-weight:800;margin-bottom:12px}
@@ -176,7 +177,7 @@ h2{font-size:clamp(30px,4vw,48px);color:var(--navy);margin-bottom:16px}
 .step{background:#fff;border:1px solid #ece7df;border-radius:8px;padding:18px 20px;position:relative}
 .step::before{counter-increment:step;content:counter(step);position:absolute;right:18px;top:14px;width:30px;height:30px;border-radius:50%;background:var(--navy);color:#fff;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:13px}
 .step h3{font-size:22px;color:var(--navy);padding-right:42px;margin-bottom:6px}
-.proof{background:var(--navy);color:#fff;border-radius:8px;padding:34px;display:grid;grid-template-columns:1fr 1fr;gap:24px}
+.proof{background:var(--navy);color:#fff;border-radius:8px;padding:24px;display:grid;grid-template-columns:1fr 1fr;gap:24px}
 .proof h2{color:#fff}
 .proof p,.proof li{color:rgba(255,255,255,.75)}
 .proof ul{padding-left:18px}
@@ -199,8 +200,12 @@ h2{font-size:clamp(30px,4vw,48px);color:var(--navy);margin-bottom:16px}
   .grid,.link-row{grid-template-columns:1fr}
 }
 </style>
+<link rel="stylesheet" href="/assets/global.css">
+<script src="https://cdn.tailwindcss.com"></script>
+<script src="https://unpkg.com/htmx.org@2.0.4"></script>
 </head>
 <body>
+<a href="#main-content" class="skip-link">Skip to main content</a>
 <nav class="nav" aria-label="Main navigation">
   <a href="/" class="nav-logo">Husni <em>Halim</em></a>
   <ul class="nav-links">
@@ -214,7 +219,7 @@ h2{font-size:clamp(30px,4vw,48px);color:var(--navy);margin-bottom:16px}
   </ul>
 </nav>
 
-<main>
+<main id="main-content">
 <section class="hero">
   <div class="hero-inner">
     <div>
@@ -462,5 +467,10 @@ h2{font-size:clamp(30px,4vw,48px);color:var(--navy);margin-bottom:16px}
   </div>
 </footer>
 <script src="/assets/analytics-events.js" defer></script>
+<div class="mobile-cta-bar">
+  <a href="https://wa.me/60165241901?text=Hi%20Husni,%20I%27d%20like%20to%20enquire%20about%20your%20consulting%20services." class="btn btn-outline" style="border-color:rgba(255,255,255,0.3);color:#fff;" target="_blank" rel="noopener">WhatsApp</a>
+  <a href="/#contact" class="btn btn-primary">Book a Call</a>
+</div>
+
 </body>
 </html>

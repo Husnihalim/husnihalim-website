@@ -41,6 +41,35 @@ function getFullName(data) {
   return [data.firstname, data.lastname].map(cleanString).filter(Boolean).join(' ');
 }
 
+function hasBotTextPattern(value) {
+  const text = cleanString(value);
+  if (text.length < 12) return false;
+
+  const lettersOnly = text.replace(/[^a-z]/gi, '');
+  if (lettersOnly.length < 12) return false;
+
+  const uppercaseCount = (lettersOnly.match(/[A-Z]/g) || []).length;
+  const lowercaseCount = (lettersOnly.match(/[a-z]/g) || []).length;
+  const hasNormalSeparator = /[\s.'&-]/.test(text);
+  const hasCommonNamePart = /(sdn|bhd|plt|enterprise|resources|trading|services|manufacturing|bin|binti|mohd|muhammad|ahmad|abdul|siti|nur|lee|lim|tan|wong|aziz|rahman|husni)/i.test(text);
+  const randomCamelCase = uppercaseCount >= 4 && lowercaseCount >= 6 && !hasNormalSeparator && !hasCommonNamePart;
+
+  const vowelCount = (lettersOnly.match(/[aeiou]/gi) || []).length;
+  const vowelRatio = vowelCount / lettersOnly.length;
+  const lowVowelLongToken = lettersOnly.length >= 16 && vowelRatio < 0.22 && !hasCommonNamePart;
+
+  return randomCamelCase || lowVowelLongToken;
+}
+
+function isLikelyBotSubmission(data) {
+  if (getField(data, ['bot-field', 'botField'])) return true;
+
+  const startedAt = Number(data['form-started-at'] || data.formStartedAt || 0);
+  if (startedAt && Date.now() - startedAt < 3000) return true;
+
+  return hasBotTextPattern(getFullName(data)) || hasBotTextPattern(data.company);
+}
+
 async function sendEmail({ to, cc, replyTo, subject, html }) {
   if (!RESEND_API_KEY) {
     console.error('Email skipped: RESEND_API_KEY is not configured');
@@ -141,6 +170,10 @@ exports.handler = async function submissionCreated(event) {
     const payload = getPayload(event);
     const data = payload.data || payload;
     const formName = payload.form_name || payload.formName || data['form-name'] || 'website-form';
+    if (isLikelyBotSubmission(data)) {
+      return { statusCode: 200, body: 'OK' };
+    }
+
     const fullName = getFullName(data) || 'Website visitor';
     const email = getField(data, ['email']);
     const submittedAt = new Date().toLocaleString('en-MY', { timeZone: 'Asia/Kuala_Lumpur' });

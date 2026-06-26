@@ -29,7 +29,8 @@
  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400;1,600&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&display=swap" rel="stylesheet">
 
  <!-- Schema.org structured data -->
- <script type="application/ld+json">
+ <script src="/assets/site-data.js"></script>
+<script type="application/ld+json">
  {
   "@context": "https://schema.org",
   "@graph": [
@@ -306,7 +307,7 @@
  .card {
   background: var(--white);
   border-radius: 16px;
-  padding: 30px 26px;
+  padding: 24px 22px;
   box-shadow: var(--shadow);
   margin-bottom: 14px;
   border: 1px solid var(--warm);
@@ -473,7 +474,7 @@
  .score-hero {
   background: linear-gradient(135deg, #070e1c 0%, var(--navy) 100%);
   border-radius: 16px;
-  padding: 40px 24px;
+  padding: 30px 20px;
   text-align: center;
   color: var(--white);
   margin-bottom: 14px;
@@ -517,7 +518,7 @@
  /* Section card */
  .section-card {
   background: var(--white); border-radius: 16px;
-  padding: 28px; box-shadow: var(--shadow);
+  padding: 22px; box-shadow: var(--shadow);
   margin-bottom: 14px; border: 1px solid var(--warm);
  }
  .section-title { font-size: 17px; font-weight: 800; margin-bottom: 20px; color: var(--navy); }
@@ -544,7 +545,7 @@
  /* Financial impact */
  .dollar-card {
   background: linear-gradient(135deg, #064e3b, #065f46);
-  border-radius: 16px; padding: 28px; color: var(--white); margin-bottom: 14px;
+  border-radius: 16px; padding: 22px; color: var(--white); margin-bottom: 14px;
  }
  .dollar-title { font-size: 17px; font-weight: 800; margin-bottom: 4px; }
  .dollar-sub   { font-size: 13px; opacity: .75; margin-bottom: 20px; line-height: 1.6; }
@@ -572,7 +573,7 @@
  /* CTA card */
  .cta-card {
   background: var(--white); border-radius: 16px;
-  padding: 32px 28px; box-shadow: var(--shadow-lg);
+  padding: 24px 22px; box-shadow: var(--shadow-lg);
   border: 2px solid var(--warm); text-align: center; margin-bottom: 14px;
  }
  .cta-title { font-size: 21px; font-weight: 900; margin-bottom: 8px; color: var(--navy); font-family: 'Cormorant Garamond', serif; }
@@ -618,10 +619,20 @@
  .reset-line { text-align: center; font-size: 12px; color: var(--muted); margin-top: 18px; }
  .reset-line a { color: var(--gold); cursor: pointer; }
 
- /* =====================================================
-  FOOTER
- ===================================================== */
- .site-footer {
+  @media (max-width: 600px) {
+  .page-hero { padding: 40px 16px 36px; }
+  .card { padding: 20px 16px; }
+  .score-hero { padding: 24px 16px; }
+  .seo-content { padding: 40px 16px 48px; }
+  .cta-card { padding: 20px 16px; }
+  .section-card { padding: 18px; }
+  .dollar-card { padding: 18px; }
+}
+
+  /* =====================================================
+   FOOTER
+  ===================================================== */
+  .site-footer {
   background: var(--navy);
   border-top: 1px solid rgba(255,255,255,.07);
   padding: 28px 20px;
@@ -654,7 +665,7 @@
  }
 
 /* ── SEO CONTENT SECTION ── */
-.seo-content { background: var(--cream); padding: 80px 24px 96px; }
+.seo-content { background: var(--cream); padding: 56px 20px 64px; }
 .seo-inner { max-width: 860px; margin: 0 auto; }
 .seo-label { display: inline-block; font-family: 'DM Sans', sans-serif; font-size: 11px; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: var(--gold); margin-bottom: 14px; }
 .seo-intro h2 { font-family: 'Cormorant Garamond', serif; font-size: clamp(2rem, 4vw, 2.8rem); font-weight: 600; color: var(--navy); line-height: 1.2; margin: 0 0 20px; }
@@ -662,7 +673,7 @@
 .seo-content h3 { font-family: 'Cormorant Garamond', serif; font-size: clamp(1.5rem, 3vw, 2rem); font-weight: 600; color: var(--navy); margin: 56px 0 18px; line-height: 1.25; }
 .seo-content h4 { font-family: 'DM Sans', sans-serif; font-size: 1rem; font-weight: 700; color: var(--navy); margin: 0 0 10px; }
 .seo-content h5 { font-family: 'DM Sans', sans-serif; font-size: 0.95rem; font-weight: 700; color: var(--navy); margin: 0 0 8px; }
-.seo-formula-block { background: var(--navy); border-radius: 12px; padding: 32px; margin: 40px 0; }
+.seo-formula-block { background: var(--navy); border-radius: 12px; padding: 24px; margin: 40px 0; }
 .seo-formula-block h3 { color: #fff; margin: 0 0 14px; }
 .seo-formula-block p { color: rgba(255,255,255,0.8); }
 .formula-display { display: flex; flex-wrap: wrap; align-items: center; gap: 12px; margin: 20px 0; }
@@ -674,7 +685,7 @@
 .seo-col { background: #fff; border: 1px solid var(--warm); border-top: 3px solid var(--gold); border-radius: 10px; padding: 24px; }
 .seo-col-icon { font-size: 1.6rem; margin-bottom: 12px; }
 .seo-col p { font-size: 0.93rem; color: var(--muted); line-height: 1.75; }
-.seo-highlight-box { background: #fff; border-left: 4px solid var(--gold); border-radius: 0 10px 10px 0; padding: 32px; margin: 40px 0; }
+.seo-highlight-box { background: #fff; border-left: 4px solid var(--gold); border-radius: 0 10px 10px 0; padding: 24px; margin: 40px 0; }
 .seo-highlight-box h3 { margin-top: 0; }
 .seo-losses-grid { display: grid; grid-template-columns: 1fr; gap: 16px; margin: 24px 0 40px; }
 @media (min-width: 700px) { .seo-losses-grid { grid-template-columns: repeat(2, 1fr); } }
@@ -979,8 +990,12 @@
 @media(prefers-reduced-motion:reduce){.site-updates-track{animation:none;flex-wrap:nowrap;overflow-x:auto;width:auto;padding-right:20px}.site-updates-viewport{overflow-x:auto}.site-updates-viewport::before,.site-updates-viewport::after{display:none}}
 </style>
 <link rel="stylesheet" href="/assets/site-footer.css">
+<link rel="stylesheet" href="/assets/global.css">
+<script src="https://cdn.tailwindcss.com"></script>
+<script src="https://unpkg.com/htmx.org@2.0.4"></script>
 </head>
 <body>
+<a href="#main-content" class="skip-link">Skip to main content</a>
 
 <!-- NAV -->
 <nav class="nav" id="navbar">
@@ -992,6 +1007,7 @@
     <li><a href="/kaizen/">Kaizen</a></li>
     <li><a href="/hrdc-training/">Training</a></li>
     <li><a href="/portfolio/">Portfolio</a></li>
+    <li><a href="/industries/">Industries</a></li>
     <li><a href="/blog/">Insights</a></li>
     <li><a href="/kaizenchampion/" class="nav-tool">Kaizen Champion &#10022;</a></li>
     <li><a href="/oee-calculator/" class="nav-tool">OEE</a></li>
@@ -1001,6 +1017,7 @@
   <button class="hamburger" id="hamburger" aria-label="Toggle navigation" aria-expanded="false">
     <span></span><span></span><span></span>
   </button>
+  <div class="nav-backdrop" id="navBackdrop"></div>
 </nav>
 <section class="site-updates" aria-label="Current updates from Husni Halim">
   <div class="site-updates-inner">
@@ -1021,7 +1038,7 @@
     </div>
   </div>
 </section>
-<main>
+<main id="main-content">
 
 
 <!-- PAGE HERO -->
@@ -2272,6 +2289,12 @@ function resetAll(){
   var navLinks=document.getElementById('navLinks');
   if(!hamburger||!navLinks||hamburger.dataset.navReady==='true') return;
   hamburger.dataset.navReady='true';
+  function closeNav(){
+    navLinks.classList.remove('open');
+    hamburger.classList.remove('active');
+    hamburger.setAttribute('aria-expanded','false');
+    document.body.style.overflow='';
+  }
   hamburger.addEventListener('click',function(){
     var open=navLinks.classList.toggle('open');
     hamburger.classList.toggle('active',open);
@@ -2279,15 +2302,21 @@ function resetAll(){
     document.body.style.overflow=open?'hidden':'';
   });
   navLinks.querySelectorAll('a').forEach(function(link){
-    link.addEventListener('click',function(){
-      navLinks.classList.remove('open');
-      hamburger.classList.remove('active');
-      hamburger.setAttribute('aria-expanded','false');
-      document.body.style.overflow='';
-    });
+    link.addEventListener('click',closeNav);
   });
+  document.addEventListener('keydown',function(e){
+    if(e.key==='Escape'&&navLinks.classList.contains('open')) closeNav();
+  });
+  var backdrop=document.getElementById('navBackdrop');
+  if(backdrop) backdrop.addEventListener('click',closeNav);
 })();
 </script>
+</script>
 <script src="/assets/analytics-events.js" defer></script>
+<div class="mobile-cta-bar">
+  <a href="https://wa.me/60165241901?text=Hi%20Husni,%20I%27d%20like%20to%20enquire%20about%20your%20consulting%20services." class="btn btn-outline" style="border-color:rgba(255,255,255,0.3);color:#fff;" target="_blank" rel="noopener">WhatsApp</a>
+  <a href="/#contact" class="btn btn-primary">Book a Call</a>
+</div>
+
 </body>
 </html>
