@@ -1342,20 +1342,33 @@ body { background: var(--pf-cream); color: var(--pf-text); }
   .lightbox { padding: 12px; }
   .lightbox-panel { max-height: calc(100vh - 24px); }
   .lightbox-image { min-height: 46vh; }
-  .trusted-section { padding: 36px 16px 42px; }
-  .trusted-head { text-align: left; margin-bottom: 20px; }
+  .trusted-section { padding: 28px 16px 32px; }
+  .trusted-head { text-align: left; margin-bottom: 16px; }
   .trusted-head .eyebrow { justify-content: flex-start; }
-  .trusted-head h2 { font-size: clamp(24px, 5vw, 34px); }
-  .trusted-head p { font-size: 14px; }
-  .client-logo-grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 8px;
+  .trusted-head h2 { font-size: clamp(20px, 5vw, 28px); margin-bottom: 6px; }
+  .trusted-head p { font-size: 13px; }
+  .client-logo-grid.is-marquee-mobile {
+    gap: 6px;
+    margin-inline: -12px;
+    padding: 2px 0;
   }
-  .client-logo-card,
-  .client-logo-card.is-wide {
-    grid-column: auto;
-    min-height: 56px;
-    padding: 8px 8px;
+  .client-logo-grid.is-marquee-mobile .client-logo-track {
+    gap: 6px;
+  }
+  .client-logo-grid.is-marquee-mobile .client-logo-track .client-logo-card {
+    flex: 0 0 120px;
+    min-height: 46px;
+    padding: 6px 8px;
+  }
+  .client-logo-grid.is-marquee-mobile .client-logo-card img {
+    max-height: 24px;
+  }
+  .client-logo-grid.is-marquee-mobile .client-wordmark {
+    font-size: clamp(8px, .95vw, 11px);
+  }
+  .client-logo-row::before,
+  .client-logo-row::after {
+    width: min(8vw, 60px);
   }
 }
 @media (prefers-reduced-motion: reduce) {
@@ -1898,23 +1911,24 @@ body { background: var(--pf-cream); color: var(--pf-text); }
   function buildLogoMarquee() {
     var logoGrid = document.querySelector('.client-logo-grid');
     var reduceLogoMotion = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-    var isMobile = window.innerWidth <= 680;
-    if (!logoGrid || reduceLogoMotion || isMobile) return;
+    if (!logoGrid || reduceLogoMotion) return;
     var logoCards = Array.prototype.slice.call(logoGrid.children);
     if (!logoCards.length) return;
-    var rowCount = 4;
+    var isMobile = window.innerWidth <= 680;
+    var rowCount = isMobile ? 2 : 4;
     var rows = Array.from({ length: rowCount }, function(){ return []; });
     logoCards.forEach(function(card, index){
       rows[index % rowCount].push(card);
     });
     logoGrid.textContent = '';
     logoGrid.classList.add('is-marquee');
+    if (isMobile) logoGrid.classList.add('is-marquee-mobile');
     rows.forEach(function(rowCards, rowIndex){
       var row = document.createElement('div');
       var track = document.createElement('div');
       row.className = 'client-logo-row';
       track.className = 'client-logo-track';
-      track.style.setProperty('--logo-speed', (86 + rowIndex * 10) + 's');
+      track.style.setProperty('--logo-speed', (isMobile ? 36 : 86 + rowIndex * 10) + 's');
       rowCards.forEach(function(card){ track.appendChild(card); });
       rowCards.forEach(function(card){
         var clone = card.cloneNode(true);
