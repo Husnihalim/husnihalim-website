@@ -276,13 +276,37 @@ body { background: #fbfaf8; color: var(--plb-ink); }
     grid-template-columns: 1fr;
   }
   .plb-highlight-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .plb-hero h1 { font-size: clamp(36px, 6vw, 76px); }
+  .plb-section-head { gap: 16px; }
+  .plb-cta-inner { gap: 20px; }
 }
 @media (max-width: 640px) {
   .plb-wrap { width: min(100% - 32px, 1120px); }
-  .plb-hero { padding-top: 54px; }
-  .plb-section { padding: 54px 0; }
+  .plb-hero { padding: 48px 16px 28px; }
+  .plb-section { padding: 44px 0; }
+  .plb-hero h1 { font-size: clamp(30px, 7vw, 52px); margin-bottom: 16px; }
+  .plb-hero-card { padding: 18px; }
+  .plb-hero-card span { font-size: 13px; }
+  .plb-hero-image { margin-top: 28px; }
+  .plb-section-head { gap: 12px; margin-bottom: 24px; }
+  .plb-section h2 { font-size: clamp(26px, 7vw, 40px); }
+  .plb-section-head p, .plb-copy p { font-size: 16px; }
   .plb-highlight-grid,
   .plb-gallery { grid-template-columns: 1fr; }
+  .plb-gallery { gap: 10px; }
+  .plb-copy h3 { font-size: 21px; margin: 22px 0 10px; }
+  .plb-note { padding: 20px; }
+  .plb-note h3 { font-size: 24px; }
+  .plb-cta { padding: 44px 0; }
+  .plb-cta h2 { font-size: 26px; }
+  .plb-button { width: 100%; }
+}
+@media (max-width: 420px) {
+  .plb-hero h1 { font-size: 26px; }
+  .plb-section h2 { font-size: 24px; }
+  .plb-section-head p, .plb-copy p { font-size: 15px; line-height: 1.7; }
+  .plb-note ul { padding-left: 14px; }
+  .plb-note li { font-size: 14px; }
 }
 </style>
 </head>
