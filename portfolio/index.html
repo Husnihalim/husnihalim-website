@@ -1149,29 +1149,29 @@ body { background: var(--pf-cream); color: var(--pf-text); }
   flex: 0 0 164px;
 }
 .client-logo-card {
-  min-height: 74px;
+  min-height: 56px;
   border: 1px solid rgba(12,27,46,.12);
-  border-radius: 8px;
+  border-radius: 6px;
   background: #fff;
   color: rgba(12,27,46,.42);
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 12px 14px;
+  padding: 8px 12px;
   text-align: center;
-  box-shadow: 0 8px 26px rgba(12,27,46,.04);
+  box-shadow: 0 4px 14px rgba(12,27,46,.04);
 }
 .client-logo-card img {
   display: block;
   width: auto;
-  max-width: min(122px, 84%);
-  max-height: 34px;
+  max-width: min(100px, 80%);
+  max-height: 26px;
   object-fit: contain;
   filter: grayscale(1);
   opacity: .5;
 }
 .client-logo-card.is-tall img {
-  max-height: 44px;
+  max-height: 34px;
 }
 .client-wordmark {
   display: block;
@@ -1330,9 +1330,9 @@ body { background: var(--pf-cream); color: var(--pf-text); }
     display: flex;
     flex-direction: column;
   }
-  .results-inner > .results-proof { order: 1; }
-  .results-inner > .result-grid { order: 2; }
-  .results-inner > .trusted-section { order: 3; }
+  .results-inner > .trusted-section { order: 1; }
+  .results-inner > .results-proof { order: 2; }
+  .results-inner > .result-grid { order: 3; }
   .results-proof,
   .result-grid,
   .result-card.featured,
@@ -1356,15 +1356,15 @@ body { background: var(--pf-cream); color: var(--pf-text); }
     gap: 6px;
   }
   .client-logo-grid.is-marquee-mobile .client-logo-track .client-logo-card {
-    flex: 0 0 120px;
-    min-height: 46px;
-    padding: 6px 8px;
+    flex: 0 0 110px;
+    min-height: 36px;
+    padding: 4px 6px;
   }
   .client-logo-grid.is-marquee-mobile .client-logo-card img {
-    max-height: 24px;
+    max-height: 20px;
   }
   .client-logo-grid.is-marquee-mobile .client-wordmark {
-    font-size: clamp(8px, .95vw, 11px);
+    font-size: clamp(7px, .85vw, 10px);
   }
   .client-logo-row::before,
   .client-logo-row::after {
@@ -1929,7 +1929,7 @@ body { background: var(--pf-cream); color: var(--pf-text); }
       var track = document.createElement('div');
       row.className = 'client-logo-row';
       track.className = 'client-logo-track';
-      track.style.setProperty('--logo-speed', (isMobile ? 36 : 86 + rowIndex * 10) + 's');
+      track.style.setProperty('--logo-speed', (isMobile ? 80 : 140 + rowIndex * 10) + 's');
       rowCards.forEach(function(card){ track.appendChild(card); });
       rowCards.forEach(function(card){
         var clone = card.cloneNode(true);
