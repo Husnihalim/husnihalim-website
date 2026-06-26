@@ -322,6 +322,26 @@
     document.querySelectorAll('[data-render-client-logos]').forEach(el => {
       renderClientLogoGrid(el);
     });
+
+    /* Make updates bar touch-scrollable on mobile */
+    makeUpdatesTouchable();
+  }
+
+  function makeUpdatesTouchable() {
+    const isTouch = 'ontouchstart' in window || navigator.maxTouchPoints > 0;
+    if (!isTouch) return;
+    document.querySelectorAll('.site-updates-viewport').forEach(vp => {
+      vp.style.overflowX = 'auto';
+      vp.style.webkitOverflowScrolling = 'touch';
+      vp.style.touchAction = 'pan-x';
+      vp.style.scrollbarWidth = 'none';
+      vp.style.msOverflowStyle = 'none';
+      const track = vp.querySelector('.site-updates-track');
+      if (track) {
+        track.style.animation = 'none';
+        track.style.flexWrap = 'nowrap';
+      }
+    });
   }
 
   if (document.readyState === 'loading') {
