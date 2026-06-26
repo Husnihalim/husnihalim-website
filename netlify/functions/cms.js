@@ -3,10 +3,51 @@
 // Supports multiple sites: vac (default) and husni
 // Uses Netlify Blobs for persistent storage
 
-// Admin credentials (hardcoded for Netlify free tier)
-const ADMIN_USERNAME = 'admin';
-const ADMIN_PASSWORD = 'vacadmin2025';
-const JWT_SECRET = 'vac-cms-jwt-secret-2025';
+const crypto = require('crypto');
+
+// Admin credentials from environment variables (set in Netlify dashboard)
+const ADMIN_USERNAME = process.env.ADMIN_USERNAME;
+const ADMIN_PASSWORD = process.env.ADMIN_PASSWORD;
+const JWT_SECRET = process.env.JWT_SECRET;
+
+if (!ADMIN_USERNAME || !ADMIN_PASSWORD || !JWT_SECRET) {
+  console.error('CMS ERROR: ADMIN_USERNAME, ADMIN_PASSWORD, and JWT_SECRET must be set in Netlify environment variables');
+}
+
+// Rate limiting for login attempts
+const loginAttempts = new Map();
+const MAX_LOGIN_ATTEMPTS = 5;
+const LOGIN_WINDOW_MS = 15 * 60 * 1000;
+
+function checkRateLimit(ip) {
+  const now = Date.now();
+  const record = loginAttempts.get(ip);
+  if (!record) return true;
+  if (now - record.windowStart > LOGIN_WINDOW_MS) {
+    loginAttempts.delete(ip);
+    return true;
+  }
+  return record.attempts < MAX_LOGIN_ATTEMPTS;
+}
+
+function recordLoginAttempt(ip, success) {
+  const now = Date.now();
+  const record = loginAttempts.get(ip) || { attempts: 0, windowStart: now };
+  if (now - record.windowStart > LOGIN_WINDOW_MS) {
+    record.attempts = 0;
+    record.windowStart = now;
+  }
+  if (!success) record.attempts++;
+  else loginAttempts.delete(ip);
+  loginAttempts.set(ip, record);
+}
+
+function getClientIp(event) {
+  return event.headers['x-nf-client-connection-ip']
+    || event.headers['x-forwarded-for']
+    || event.headers['client-ip']
+    || 'unknown';
+}
 
 // Valid site identifiers
 const VALID_SITES = ['vac', 'husni'];
@@ -23,25 +64,41 @@ const CONTACT_CC_EMAILS = Array.from(new Set([
 const CONTACT_FROM_EMAIL = process.env.CONTACT_FROM_EMAIL || 'noreply@husnihalim.com';
 const CONTACT_REPLY_TO_EMAIL = process.env.CONTACT_REPLY_TO_EMAIL || CONTACT_NOTIFICATION_EMAIL;
 
-// Simple JWT implementation for auth
+// Proper HMAC-SHA256 JWT (no npm dependencies)
+function base64url(str) {
+  return Buffer.from(str).toString('base64url');
+}
+
+function base64urlFromBuffer(buf) {
+  return buf.toString('base64url');
+}
+
 function createToken(payload) {
- const header = btoa(JSON.stringify({ alg: 'HS256', typ: 'JWT' }));
- const body = btoa(JSON.stringify({ ...payload, exp: Date.now() + 86400000 })); // 24h
- const signature = btoa(JSON.stringify({ s: JWT_SECRET + header + body }));
- return `${header}.${body}.${signature}`;
+  if (!JWT_SECRET) return null;
+  const header = base64url(JSON.stringify({ alg: 'HS256', typ: 'JWT' }));
+  const body = base64url(JSON.stringify({ ...payload, exp: Date.now() + 86400000 }));
+  const signature = base64urlFromBuffer(
+    crypto.createHmac('sha256', JWT_SECRET).update(header + '.' + body).digest()
+  );
+  return `${header}.${body}.${signature}`;
 }
 
 function verifyToken(token) {
- try {
- const [header, body, signature] = token.split('.');
- const payload = JSON.parse(atob(body));
- const expectedSig = btoa(JSON.stringify({ s: JWT_SECRET + header + body }));
- if (signature !== expectedSig) return null;
- if (payload.exp < Date.now()) return null;
- return payload;
- } catch {
- return null;
- }
+  if (!JWT_SECRET) return null;
+  try {
+    const parts = token.split('.');
+    if (parts.length !== 3) return null;
+    const [header, body, signature] = parts;
+    const expectedSig = base64urlFromBuffer(
+      crypto.createHmac('sha256', JWT_SECRET).update(header + '.' + body).digest()
+    );
+    if (signature !== expectedSig) return null;
+    const payload = JSON.parse(Buffer.from(body, 'base64url').toString());
+    if (payload.exp < Date.now()) return null;
+    return payload;
+  } catch {
+    return null;
+  }
 }
 
 function getAuth(event) {
@@ -52,6 +109,39 @@ function getAuth(event) {
 
 function cleanString(value) {
  return typeof value === 'string' ? value.trim() : '';
+}
+
+function isLikelyBotSubmission(submission) {
+ const honeypot = cleanString(submission['bot-field'] || submission.botField);
+ if (honeypot) return true;
+
+ const startedAt = Number(submission['form-started-at'] || submission.formStartedAt || 0);
+ if (!startedAt) return true;
+
+ const elapsed = Date.now() - startedAt;
+ if (elapsed < 3000) return true;
+
+ return hasBotTextPattern(submission.name) || hasBotTextPattern(submission.company);
+}
+
+function hasBotTextPattern(value) {
+ const text = cleanString(value);
+ if (text.length < 12) return false;
+
+ const lettersOnly = text.replace(/[^a-z]/gi, '');
+ if (lettersOnly.length < 12) return false;
+
+ const uppercaseCount = (lettersOnly.match(/[A-Z]/g) || []).length;
+ const lowercaseCount = (lettersOnly.match(/[a-z]/g) || []).length;
+ const hasNormalSeparator = /[\s.'&-]/.test(text);
+ const hasCommonNamePart = /(sdn|bhd|plt|enterprise|resources|trading|services|manufacturing|bin|binti|mohd|muhammad|ahmad|abdul|siti|nur|lee|lim|tan|wong|aziz|rahman|husni)/i.test(text);
+ const randomCamelCase = uppercaseCount >= 4 && lowercaseCount >= 6 && !hasNormalSeparator && !hasCommonNamePart;
+
+ const vowelCount = (lettersOnly.match(/[aeiou]/gi) || []).length;
+ const vowelRatio = vowelCount / lettersOnly.length;
+ const lowVowelLongToken = lettersOnly.length >= 16 && vowelRatio < 0.22 && !hasCommonNamePart;
+
+ return randomCamelCase || lowVowelLongToken;
 }
 
 async function addContactToMailerLite(submission) {
@@ -344,23 +434,40 @@ exports.handler = async (event) => {
  const siteId = getSiteId(event);
 
  try {
- // ==== LOGIN (shared across all sites) ====
- if (path === '/login' && event.httpMethod === 'POST') {
- const { username, password } = JSON.parse(event.body);
- if (username === ADMIN_USERNAME && password === ADMIN_PASSWORD) {
- const token = createToken({ role: 'admin' });
- return {
- statusCode: 200,
- headers,
- body: JSON.stringify({ success: true, token }),
- };
- }
- return {
- statusCode: 401,
- headers,
- body: JSON.stringify({ success: false, error: 'Invalid credentials' }),
- };
- }
+  // ==== LOGIN (shared across all sites) ====
+  if (path === '/login' && event.httpMethod === 'POST') {
+  const clientIp = getClientIp(event);
+  if (!checkRateLimit(clientIp)) {
+  return {
+  statusCode: 429,
+  headers,
+  body: JSON.stringify({ success: false, error: 'Too many login attempts. Try again in 15 minutes.' }),
+  };
+  }
+  const { username, password } = JSON.parse(event.body);
+  if (username === ADMIN_USERNAME && password === ADMIN_PASSWORD) {
+  recordLoginAttempt(clientIp, true);
+  const token = createToken({ role: 'admin' });
+  if (!token) {
+  return {
+  statusCode: 500,
+  headers,
+  body: JSON.stringify({ success: false, error: 'Server configuration error: JWT_SECRET not set.' }),
+  };
+  }
+  return {
+  statusCode: 200,
+  headers,
+  body: JSON.stringify({ success: true, token }),
+  };
+  }
+  recordLoginAttempt(clientIp, false);
+  return {
+  statusCode: 401,
+  headers,
+  body: JSON.stringify({ success: false, error: 'Invalid credentials' }),
+  };
+  }
 
  // ==== GET CONTENT (public - used by main sites) ====
  if (path === '/content' && event.httpMethod === 'GET') {
@@ -592,6 +699,13 @@ exports.handler = async (event) => {
  // ==== CONTACT FORM SUBMISSION (public) ====
  if (path === '/contact' && event.httpMethod === 'POST') {
  const submission = JSON.parse(event.body);
+ if (isLikelyBotSubmission(submission)) {
+ return {
+ statusCode: 200,
+ headers,
+ body: JSON.stringify({ success: true, message: 'Thank you for your enquiry. We will get back to you soon.' }),
+ };
+ }
  const email = cleanString(submission.email).toLowerCase();
  if (!email) {
  return {

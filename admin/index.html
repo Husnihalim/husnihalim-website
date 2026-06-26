@@ -3,8 +3,18 @@
 <head>
  <meta charset="UTF-8">
  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="robots" content="noindex, nofollow, noarchive">
- <title>VAC Multi-Site CMS</title>
+  <meta name="robots" content="noindex, nofollow, noarchive">
+  <meta name="description" content="Administrative dashboard for the VAC Multi-Site Content Management System, allowing comprehensive management of site content, media assets, sections, and theme customization across multiple sites.">
+  <link rel="canonical" href="https://husnihalim.com/admin/">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://husnihalim.com/admin/">
+  <meta property="og:title" content="VAC Multi-Site CMS Admin">
+  <meta property="og:description" content="Admin dashboard for VAC Multi-Site CMS. Manage content, media, and site settings.">
+  <meta property="og:image" content="https://husnihalim.com/assets/og-image.png?v=20260427">
+
+
+  <meta property="og:image" content="https://husnihalim.com/assets/og-image.png?v=20260427"/>
+  <title>VAC Multi-Site Content Management System Admin Dashboard</title>
  <link rel="preconnect" href="https://fonts.googleapis.com">
  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
@@ -614,18 +624,8 @@ async function login() {
  const pass = $('#loginPass').value;
  if (!user || !pass) return;
 
- try {
- if (isLocal) {
- if (user === 'admin' && pass === 'admin') {
- token = 'local-dev-token';
- localStorage.setItem('cms_token', token);
- showAdmin();
- } else {
- showLoginError('Invalid credentials');
- }
- return;
- }
- const resp = await fetch(API + '/login', {
+  try {
+  const resp = await fetch(API + '/login', {
  method: 'POST',
  headers: {'Content-Type':'application/json'},
  body: JSON.stringify({username: user, password: pass})
