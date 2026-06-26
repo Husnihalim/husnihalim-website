@@ -1866,6 +1866,7 @@ footer {
     transition: right .3s ease;
     overflow-y: auto;
     box-shadow: -8px 0 40px rgba(0,0,0,0.28);
+    z-index: 1000;
   }
   .nav-links.active,
   .nav-links.open { right: 0; }
