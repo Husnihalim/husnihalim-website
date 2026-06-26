@@ -1326,6 +1326,13 @@ body { background: var(--pf-cream); color: var(--pf-text); }
   }
   .portfolio-card.tall { min-height: 430px; }
   .results-section { padding: 56px 16px; }
+  .results-inner {
+    display: flex;
+    flex-direction: column;
+  }
+  .results-inner > .results-proof { order: 1; }
+  .results-inner > .result-grid { order: 2; }
+  .results-inner > .trusted-section { order: 3; }
   .results-proof,
   .result-grid,
   .result-card.featured,
@@ -1335,28 +1342,20 @@ body { background: var(--pf-cream); color: var(--pf-text); }
   .lightbox { padding: 12px; }
   .lightbox-panel { max-height: calc(100vh - 24px); }
   .lightbox-image { min-height: 46vh; }
-  .trusted-section { padding: 56px 16px 62px; }
-  .trusted-head { text-align: left; margin-bottom: 24px; }
+  .trusted-section { padding: 36px 16px 42px; }
+  .trusted-head { text-align: left; margin-bottom: 20px; }
   .trusted-head .eyebrow { justify-content: flex-start; }
+  .trusted-head h2 { font-size: clamp(24px, 5vw, 34px); }
+  .trusted-head p { font-size: 14px; }
   .client-logo-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 10px;
-  }
-  .client-logo-grid.is-marquee {
-    gap: 10px;
-    margin-inline: -12px;
-  }
-  .client-logo-track {
-    gap: 10px;
-  }
-  .client-logo-track .client-logo-card {
-    flex-basis: 144px;
+    gap: 8px;
   }
   .client-logo-card,
   .client-logo-card.is-wide {
     grid-column: auto;
-    min-height: 68px;
-    padding: 10px 9px;
+    min-height: 56px;
+    padding: 8px 8px;
   }
 }
 @media (prefers-reduced-motion: reduce) {
@@ -1896,38 +1895,40 @@ body { background: var(--pf-cream); color: var(--pf-text); }
     });
   });
 
-  var logoGrid = document.querySelector('.client-logo-grid');
-  var reduceLogoMotion = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-  if (logoGrid && !reduceLogoMotion) {
+  function buildLogoMarquee() {
+    var logoGrid = document.querySelector('.client-logo-grid');
+    var reduceLogoMotion = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    var isMobile = window.innerWidth <= 680;
+    if (!logoGrid || reduceLogoMotion || isMobile) return;
     var logoCards = Array.prototype.slice.call(logoGrid.children);
+    if (!logoCards.length) return;
     var rowCount = 4;
     var rows = Array.from({ length: rowCount }, function(){ return []; });
     logoCards.forEach(function(card, index){
       rows[index % rowCount].push(card);
     });
-
     logoGrid.textContent = '';
     logoGrid.classList.add('is-marquee');
-
     rows.forEach(function(rowCards, rowIndex){
       var row = document.createElement('div');
       var track = document.createElement('div');
       row.className = 'client-logo-row';
       track.className = 'client-logo-track';
       track.style.setProperty('--logo-speed', (86 + rowIndex * 10) + 's');
-
-      rowCards.forEach(function(card){
-        track.appendChild(card);
-      });
+      rowCards.forEach(function(card){ track.appendChild(card); });
       rowCards.forEach(function(card){
         var clone = card.cloneNode(true);
         clone.setAttribute('aria-hidden', 'true');
         track.appendChild(clone);
       });
-
       row.appendChild(track);
       logoGrid.appendChild(row);
     });
+  }
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', buildLogoMarquee);
+  } else {
+    buildLogoMarquee();
   }
 
   function replaceMissingClientLogo(img) {
