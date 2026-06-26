@@ -973,6 +973,40 @@ body { background: var(--pf-cream); color: var(--pf-text); }
   gap: 24px;
   border-top: 4px solid var(--pf-gold);
 }
+.result-card.update {
+  grid-column: 1 / -1;
+  display: grid;
+  grid-template-columns: minmax(0, .74fr) minmax(280px, .48fr);
+  gap: 24px;
+  align-items: center;
+  background: var(--pf-navy);
+  border-color: rgba(255,255,255,.12);
+}
+.result-card.update h3 { color: #fff; }
+.result-card.update p,
+.result-card.update li { color: rgba(255,255,255,.72); }
+.result-card.update .result-kicker { color: var(--pf-gold-light); }
+.result-card.update .result-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 42px;
+  margin-top: 18px;
+  padding: 10px 18px;
+  border-radius: 4px;
+  background: var(--pf-gold);
+  color: #fff;
+  font-size: 13px;
+  font-weight: 800;
+}
+.result-photo {
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  border-radius: 6px;
+  box-shadow: 0 18px 42px rgba(0,0,0,.24);
+}
 .result-kicker {
   color: var(--pf-gold);
   font-size: 11px;
@@ -1263,7 +1297,8 @@ body { background: var(--pf-cream); color: var(--pf-text); }
   }
   .results-proof,
   .result-grid,
-  .result-card.featured {
+  .result-card.featured,
+  .result-card.update {
     grid-template-columns: 1fr 1fr;
   }
   .portfolio-card,
@@ -1293,7 +1328,8 @@ body { background: var(--pf-cream); color: var(--pf-text); }
   .results-section { padding: 56px 16px; }
   .results-proof,
   .result-grid,
-  .result-card.featured {
+  .result-card.featured,
+  .result-card.update {
     grid-template-columns: 1fr;
   }
   .lightbox { padding: 12px; }
@@ -1343,6 +1379,7 @@ body { background: var(--pf-cream); color: var(--pf-text); }
     <li><a href="/kaizen/">Kaizen</a></li>
     <li><a href="/hrdc-training/">Training</a></li>
     <li><a href="/portfolio/">Portfolio</a></li>
+    <li><a href="/industries/">Industries</a></li>
     <li><a href="/blog/">Insights</a></li>
     <li><a href="/kaizenchampion/" class="nav-tool">Kaizen Champion &#10022;</a></li>
     <li><a href="/oee-calculator/" class="nav-tool">OEE</a></li>
@@ -1470,6 +1507,7 @@ body { background: var(--pf-cream); color: var(--pf-text); }
         <div class="client-logo-card is-small"><span class="client-wordmark">Kopiah Industry</span></div>
         <div class="client-logo-card is-small"><span class="client-wordmark">MGV Industries</span></div>
         <div class="client-logo-card is-small"><span class="client-wordmark">Miwa Manufacturing</span></div>
+        <div class="client-logo-card is-small"><span class="client-wordmark">Pesaka Nuri</span></div>
         <div class="client-logo-card is-small"><span class="client-wordmark">PNA Technologies</span></div>
         <div class="client-logo-card is-small"><span class="client-wordmark">Tishas Food</span></div>
       </div>
@@ -1478,6 +1516,36 @@ body { background: var(--pf-cream); color: var(--pf-text); }
 
 
       <div class="result-grid">
+        <article class="result-card update">
+          <div>
+            <div class="result-kicker">Latest update &middot; Training session &middot; Jan &ndash; Feb 2026</div>
+            <h3>Pos Logistics Berhad As-Is Process Validation &amp; Challenge Workshop</h3>
+            <p>Business Process Mapping workshop for Pos Logistics Berhad (PLB) using SIPOC &rarr; ICOR &rarr; Deployment Chart methodology across two batches.</p>
+            <ul>
+              <li><strong>Batch 1:</strong> 29 &ndash; 31 January 2026</li>
+              <li><strong>Batch 2:</strong> 6 &ndash; 8 February 2026</li>
+              <li>As-Is Process Validation, Key Objectives, KRIs, SIPOC, ICOR &amp; Deployment Chart</li>
+            </ul>
+            <a class="result-link" href="/portfolio/pos-logistic-plb-workshop/">View PLB workshop update</a>
+          </div>
+          <img class="result-photo" src="/assets/portfolio/pos-logistic-plb-workshop/plb-training-01.jpg" alt="Pos Logistics Berhad workshop session" width="1600" height="901" loading="lazy">
+        </article>
+
+        <article class="result-card update">
+          <div>
+            <div class="result-kicker">Training session &middot; June 2026</div>
+            <h3>Pesaka Nuri 2 Days Kaizen Principles Training for leaders</h3>
+            <p>Photos from a two-day Kaizen Principles training session for the Pesaka Nuri leadership team.</p>
+            <ul>
+              <li>Training facilitation with practical workplace discussion</li>
+              <li>Visual review using wall notes and group input</li>
+              <li>Reusable update format for future client and company stories</li>
+            </ul>
+            <a class="result-link" href="/portfolio/pesaka-nuri-training-update/">View Pesaka Nuri update</a>
+          </div>
+          <img class="result-photo" src="/assets/portfolio/pesaka-nuri/pesaka-nuri-training-group-photo.jpg" alt="Pesaka Nuri team photo after a practical training session" width="1600" height="901" loading="lazy">
+        </article>
+
         <article class="result-card featured">
           <div>
             <div class="result-kicker">Current engagement · Aviation MRO · Kuala Lumpur</div>
@@ -1858,7 +1926,7 @@ body { background: var(--pf-cream); color: var(--pf-text); }
 
 <div class="lightbox" id="portfolioLightbox" role="dialog" aria-modal="true" aria-labelledby="lightboxTitle" aria-hidden="true">
   <div class="lightbox-panel">
-    <div class="lightbox-image"><img id="lightboxImage" src="" alt=""></div>
+    <div class="lightbox-image"><img id="lightboxImage" src="" alt="Portfolio image preview"></div>
     <div class="lightbox-copy">
       <button type="button" class="close-lightbox" id="closeLightbox" aria-label="Close portfolio image">&times;</button>
       <div class="card-kicker" id="lightboxCategory"></div>
