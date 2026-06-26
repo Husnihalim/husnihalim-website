@@ -197,10 +197,8 @@ p { text-align: left; }
   text-transform: uppercase;
 }
 .plb-story {
-  display: grid;
-  grid-template-columns: minmax(0, .72fr) minmax(280px, .38fr);
-  gap: 44px;
-  align-items: start;
+  display: block;
+  max-width: 720px;
 }
 .plb-copy h2 { margin-bottom: 22px; }
 .plb-copy h3 {
@@ -208,25 +206,6 @@ p { text-align: left; }
   font-family: 'Cormorant Garamond', serif;
   font-size: 24px;
   margin: 24px 0 10px;
-}
-.plb-note {
-  background: var(--plb-navy);
-  color: rgba(255,255,255,.78);
-  border-radius: 6px;
-  padding: 28px;
-}
-.plb-note h3 {
-  color: #fff;
-  font-size: 28px;
-  margin-bottom: 16px;
-}
-.plb-note ul {
-  padding-left: 20px;
-  list-style: disc;
-}
-.plb-note li {
-  margin: 10px 0;
-  padding-left: 4px;
 }
 .plb-gallery {
   display: grid;
@@ -384,20 +363,6 @@ p { text-align: left; }
           <p>Next came <strong>SIPOC</strong> (Supplier, Input, Process, Output, Customer), a high-level map of the department's core processes and their stakeholders. Each process in the SIPOC was then broken down into <strong>ICOR</strong> (Input, Control, Output, Resource) diagrams, which describe the detailed activities, controls, and resources required. Finally, select ICOR steps were converted into <strong>Deployment Charts</strong> — swimlane-format visualisations showing exactly who does what, when, and how long each step takes.</p>
           <p>Participants also used AI-assisted tools including NotebookLM and Gemini to support consistent and structured analysis throughout the workshop.</p>
         </div>
-        <aside class="plb-note" aria-label="Key details">
-          <h3>Key details</h3>
-          <ul>
-            <li><strong>Client:</strong> Pos Logistics Berhad (PLB)</li>
-            <li><strong>Programme:</strong> As-Is Process Validation and Challenge Workshop</li>
-            <li><strong>Topic:</strong> Business Process Mapping — SIPOC, ICOR &amp; Deployment Chart</li>
-            <li><strong>Duration:</strong> 3 days per batch</li>
-            <li><strong>Batches:</strong> 2 (Jan &amp; Feb 2026)</li>
-            <li><strong>Role:</strong> Principal Trainer</li>
-            <li><strong>Participants:</strong> Cross-functional teams from Commercial, General Logistics Solutions (Haulage, FFDS Import/Export, Warehouse, Tallyman, FFDA, MSA)</li>
-            <li><strong>Venue:</strong> 101 Resort, Kampung Janda Baik, Pahang</li>
-            <li><strong>Organised by:</strong> Jasmiza Solutions Sdn Bhd (JSSB)</li>
-          </ul>
-        </aside>
       </div>
     </div>
   </section>
