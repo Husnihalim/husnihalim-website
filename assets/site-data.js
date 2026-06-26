@@ -26,22 +26,22 @@
   */
   const SITE_COMPANIES = [
     /* ----- logos (major clients) ----- */
-    { name: "Intel Technology Sdn Bhd", display: "Intel", logo: "https://logo.clearbit.com/intel.com" },
-    { name: "Petronas", display: "Petronas", logo: "https://logo.clearbit.com/petronas.com", tall: true },
-    { name: "Safran Landing Systems (M) Sdn Bhd", display: "Safran", logo: "https://logo.clearbit.com/safran-group.com" },
-    { name: "Panasonic Aircond Malaysia", display: "Panasonic", logo: "https://logo.clearbit.com/panasonic.com" },
-    { name: "Mitsui High-Tec Malaysia Sdn Bhd", display: "Mitsui High-Tec", logo: "https://logo.clearbit.com/mitsui-high-tec.com" },
-    { name: "Maxeon Solar Technologies", display: "Maxeon", logo: "https://logo.clearbit.com/maxeon.com" },
-    { name: "Carotino Sdn Bhd", display: "Carotino", logo: "https://logo.clearbit.com/carotino.com" },
-    { name: "Munchy Food Industries Sdn Bhd", display: "Munchy's", logo: "https://logo.clearbit.com/munchys.com" },
-    { name: "Inari Technology", display: "Inari", logo: "https://logo.clearbit.com/inariberhad.com" },
-    { name: "Datasonic Group Berhad", display: "Datasonic", logo: "https://logo.clearbit.com/datasonic.com.my" },
-    { name: "Sharp TV Manufacturing", display: "Sharp", logo: "https://logo.clearbit.com/global.sharp" },
-    { name: "Koito Manufacturing Sdn Bhd", display: "Koito", logo: "https://logo.clearbit.com/koito.co.jp" },
-    { name: "HRD Corp Malaysia", display: "HRD Corp", logo: "https://logo.clearbit.com/hrdcorp.gov.my" },
-    { name: "Malaysian Automotive Research & Innovation Institute (MARii)", display: "MARii", logo: "https://logo.clearbit.com/marii.my" },
-    { name: "TERAJU", display: "TERAJU", logo: "https://logo.clearbit.com/teraju.gov.my" },
-    { name: "Sapura Industrial Berhad", display: "Sapura Industrial", logo: "https://logo.clearbit.com/sapuraindustrial.com.my" },
+    { name: "Intel Technology Sdn Bhd", display: "Intel", logo: "https://logos-api.apistemic.com/domain:intel.com" },
+    { name: "Petronas", display: "Petronas", logo: "https://logos-api.apistemic.com/domain:petronas.com", tall: true },
+    { name: "Safran Landing Systems (M) Sdn Bhd", display: "Safran", logo: "https://logos-api.apistemic.com/domain:safran-group.com" },
+    { name: "Panasonic Aircond Malaysia", display: "Panasonic", logo: "https://logos-api.apistemic.com/domain:panasonic.com" },
+    { name: "Mitsui High-Tec Malaysia Sdn Bhd", display: "Mitsui High-Tec", logo: "https://logos-api.apistemic.com/domain:mitsui-high-tec.com" },
+    { name: "Maxeon Solar Technologies", display: "Maxeon", logo: "https://logos-api.apistemic.com/domain:maxeon.com" },
+    { name: "Carotino Sdn Bhd", display: "Carotino", logo: "https://logos-api.apistemic.com/domain:carotino.com" },
+    { name: "Munchy Food Industries Sdn Bhd", display: "Munchy's", logo: "https://logos-api.apistemic.com/domain:munchys.com" },
+    { name: "Inari Technology", display: "Inari", logo: "https://logos-api.apistemic.com/domain:inariberhad.com" },
+    { name: "Datasonic Group Berhad", display: "Datasonic", logo: "https://logos-api.apistemic.com/domain:datasonic.com.my" },
+    { name: "Sharp TV Manufacturing", display: "Sharp", logo: "https://logos-api.apistemic.com/domain:global.sharp" },
+    { name: "Koito Manufacturing Sdn Bhd", display: "Koito", logo: "https://logos-api.apistemic.com/domain:koito.co.jp" },
+    { name: "HRD Corp Malaysia", display: "HRD Corp", logo: "https://logos-api.apistemic.com/domain:hrdcorp.gov.my" },
+    { name: "Malaysian Automotive Research & Innovation Institute (MARii)", display: "MARii", logo: "https://logos-api.apistemic.com/domain:marii.my" },
+    { name: "TERAJU", display: "TERAJU", logo: "https://logos-api.apistemic.com/domain:teraju.gov.my" },
+    { name: "Sapura Industrial Berhad", display: "Sapura Industrial", logo: "https://logos-api.apistemic.com/domain:sapuraindustrial.com.my" },
     { name: "MAB Engineering Services", display: "MAB Engineering", logo: "/assets/portfolio/logos/mab-engineering-logo.jpg" },
 
     /* ----- text wordmarks (portfolio grid) ----- */
@@ -281,7 +281,9 @@
       const cls = classes.join(' ');
 
       if (c.logo) {
-        return `<div class="${cls}"><img src="${escapeHtml(c.logo)}" alt="${escapeHtml(c.display || c.name)} logo" loading="lazy"></div>`;
+        const alt = escapeHtml(c.display || c.name);
+        const jsAlt = escapeHtml(JSON.stringify(c.display || c.name));
+        return `<div class="${cls}"><img src="${escapeHtml(c.logo)}" alt="${alt} logo" loading="lazy" onerror="var p=this.parentElement;var s=document.createElement('span');s.className='client-wordmark';s.textContent=${jsAlt};p.classList.add('is-small');this.replaceWith(s);"></div>`;
       }
       return `<div class="${cls}"><span class="client-wordmark">${escapeHtml(c.display || c.name)}</span></div>`;
     }).join('');
