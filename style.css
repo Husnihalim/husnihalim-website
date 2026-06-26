@@ -72,7 +72,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 h2 { font-size: clamp(28px, 4vw, 42px); margin-bottom: 16px; }
 h3 { font-size: clamp(20px, 2.5vw, 26px); }
-h4 { font-size: 20px; }
+h4 { font-size: clamp(18px, 2.5vw, 20px); }
 p  { margin-bottom: 16px; }
 p:last-child { margin-bottom: 0; }
 
@@ -109,7 +109,7 @@ strong { color: var(--c-dark); }
   position: relative;
 }
 .section-desc {
-  font-size: 17px;
+  font-size: 16px;
   color: #5a6578;
   max-width: 640px;
   margin-bottom: 36px;
@@ -873,7 +873,7 @@ strong { color: var(--c-dark); }
   background: linear-gradient(180deg, rgba(255,255,255,0.16), rgba(255,255,255,0.075));
   color: rgba(255,255,255,0.9);
   box-shadow: 0 14px 34px rgba(0,0,0,0.18);
-  font-size: 16px;
+  font-size: 15px;
   font-weight: 700;
   white-space: nowrap;
   transition: background .3s ease, border-color .3s ease, transform .3s var(--ease-out), color .3s ease;
@@ -957,7 +957,7 @@ strong { color: var(--c-dark); }
   margin-bottom: 0;
 }
 .service-card p {
-  font-size: 14.5px;
+  font-size: 15px;
   color: #5a6578;
   line-height: 1.7;
   flex: 1;
@@ -1009,7 +1009,7 @@ strong { color: var(--c-dark); }
   user-select: none;
 }
 .testimonial-text {
-  font-size: 14.5px;
+  font-size: 15px;
   line-height: 1.75;
   color: var(--c-body);
   flex: 1;
@@ -1059,7 +1059,7 @@ strong { color: var(--c-dark); }
   margin-top: 32px;
 }
 .about-text p {
-  font-size: 15.5px;
+  font-size: 16px;
   line-height: 1.8;
   color: #4a5568;
 }
@@ -1162,7 +1162,7 @@ strong { color: var(--c-dark); }
   font-family: var(--font-sans);
 }
 .exp-item p {
-  font-size: 13.5px;
+  font-size: 14px;
   color: rgba(255,255,255,0.55);
   line-height: 1.7;
   margin-bottom: 0;
@@ -1215,7 +1215,7 @@ strong { color: var(--c-dark); }
   display: grid;
   grid-template-columns: 72px 1fr;
   gap: 12px;
-  font-size: 13.5px;
+  font-size: 14px;
   line-height: 1.5;
 }
 .case-label {
@@ -1256,7 +1256,7 @@ strong { color: var(--c-dark); }
 }
 .kaizen-hero p {
   color: rgba(255,255,255,0.72);
-  font-size: 15.5px;
+  font-size: 16px;
   line-height: 1.75;
   max-width: 600px;
 }
@@ -1270,7 +1270,7 @@ strong { color: var(--c-dark); }
   margin: 24px 0;
 }
 .kaizen-list li {
-  font-size: 14.5px;
+  font-size: 15px;
   color: rgba(255,255,255,0.72);
   display: flex;
   align-items: flex-start;
@@ -1435,7 +1435,7 @@ strong { color: var(--c-dark); }
   color: var(--c-secondary);
 }
 .training-card > p {
-  font-size: 14px;
+  font-size: 15px;
   color: #5a6578;
   line-height: 1.7;
 }
@@ -1447,7 +1447,7 @@ strong { color: var(--c-dark); }
   flex: 1;
 }
 .training-card ul li {
-  font-size: 13.5px;
+  font-size: 14px;
   color: #5a6578;
   display: flex;
   gap: 8px;
@@ -1579,7 +1579,7 @@ strong { color: var(--c-dark); }
   font-family: var(--font-sans);
 }
 .blog-card-body p {
-  font-size: 13.5px;
+  font-size: 14px;
   color: #5a6578;
   line-height: 1.65;
   margin-bottom: 0;
@@ -2014,7 +2014,7 @@ footer {
     padding: 12px 12px;
   }
   .company-proof-number { font-size: clamp(26px, 8vw, 38px); margin-bottom: 6px; }
-  .company-proof-label { font-size: 9px; }
+  .company-proof-label { font-size: 10px; }
   .company-sector-strip {
     justify-content: flex-start;
     gap: 6px;
@@ -2023,7 +2023,7 @@ footer {
   .company-sector-strip span {
     min-height: 28px;
     padding: 5px 8px;
-    font-size: 9px;
+    font-size: 10px;
   }
   .company-marquee { margin-top: 0; padding: 12px 0; }
   .company-marquee-track { animation-duration: 95s; }
@@ -2056,7 +2056,7 @@ footer {
   .case-card { padding: 18px; gap: 10px; }
   .case-row { grid-template-columns: 60px 1fr; gap: 8px; font-size: 13px; }
   .case-card h3 { font-size: 17px; }
-  .case-tag { font-size: 9px; padding: 3px 8px; }
+  .case-tag { font-size: 10px; padding: 3px 8px; }
 
   .training-cards { gap: 14px; }
   .training-card { padding: 18px; gap: 10px; }
