@@ -33,6 +33,15 @@ function isLikelyBotSubmission(params) {
   return hasBotNamePattern(`${firstname}${lastname}`);
 }
 
+function hasRequiredLeadFields(params) {
+  const firstname = cleanString(params.get("firstname"));
+  const lastname = cleanString(params.get("lastname"));
+  const name = cleanString(params.get("name"));
+  const email = cleanString(params.get("email"));
+  const phone = cleanString(params.get("phone"));
+  return Boolean((name || (firstname && lastname)) && email && phone);
+}
+
 function hasBotNamePattern(value) {
   const text = cleanString(value);
   if (text.length < 12) return false;
@@ -117,9 +126,14 @@ exports.handler = async function(event) {
       };
     }
 
+    if (!hasRequiredLeadFields(params)) {
+      return { statusCode: 400, body: "Name, email, and phone are required" };
+    }
+
     const firstname = params.get("firstname") || "";
     const lastname  = params.get("lastname")  || "";
     const email     = params.get("email")     || "";
+    const phone     = params.get("phone")     || "";
     const fullName  = `${firstname} ${lastname}`.trim() || "there";
     const time      = new Date().toLocaleString("en-MY", { timeZone: "Asia/Kuala_Lumpur" });
 
@@ -164,6 +178,7 @@ td:first-child{color:#666;width:80px}
 <table>
 <tr><td>Name</td><td><strong>${fullName}</strong></td></tr>
 <tr><td>Email</td><td><a href="mailto:${email}">${email}</a></td></tr>
+<tr><td>Phone</td><td>${phone}</td></tr>
 <tr><td>Time</td><td>${time} (KL)</td></tr>
 </table>
 <div class="a"><strong>Next step:</strong> Reply within 48 hours to arrange the discovery call and floor walk.</div>

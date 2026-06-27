@@ -363,13 +363,6 @@
     border-radius:10px; padding:26px; color:#fff;
     position:sticky; top:90px;
   }
-  .stat-grid { display:grid; grid-template-columns:1fr 1fr; gap:14px; margin-bottom:24px; }
-  .stat-box { background:rgba(255,255,255,0.05); border-radius:8px; padding:20px; border:1px solid rgba(255,255,255,0.06); }
-  .stat-num {
-    font-family:var(--font-h); font-size:2.2rem; font-weight:700;
-    color:var(--accent); line-height:1;
-  }
-  .stat-lbl { font-size:0.72rem; color:rgba(255,255,255,0.68); margin-top:5px; line-height:1.45; }
   .quote-box {
     background:rgba(255,255,255,0.04);
     border-left:2px solid var(--accent);
@@ -581,20 +574,6 @@
     font-size:1rem; color:rgba(255,255,255,0.80); line-height:1.8;
     font-weight:300; max-width:520px; margin-bottom:36px;
   }
-  .about-stats {
-    display:flex; gap:40px; padding:28px 0;
-    border-top:1px solid rgba(255,255,255,0.08);
-    border-bottom:1px solid rgba(255,255,255,0.08);
-  }
-  .about-stat { display:flex; flex-direction:column; gap:4px; }
-  .as-num {
-    font-family:var(--font-h); font-size:2.4rem; font-weight:700;
-    color:var(--accent); line-height:1;
-  }
-  .as-lbl {
-    font-size:0.68rem; text-transform:uppercase; letter-spacing:1px;
-    color:rgba(255,255,255,0.65); font-weight:400; line-height:1.4;
-  }
   .about-right { position:relative; }
   .about-img-wrap {
     border-radius:8px; overflow:hidden;
@@ -626,8 +605,6 @@
 
     .hiw-inner { flex-direction:column; padding:56px 24px; gap:40px; }
     .hiw-left, .hiw-right { width:100%; }
-    .stat-grid { grid-template-columns:1fr 1fr; }
-
     .testimonials-inner { padding:56px 24px; }
     .t-grid { grid-template-columns:1fr; }
 
@@ -639,7 +616,6 @@
     .about-inner { grid-template-columns:1fr; gap:48px; }
     .about-name { font-size:3.5rem; }
     .about-right { order:-1; max-width:320px; margin:0 auto; }
-    .about-stats { gap:24px; }
 
     footer { padding:24px; flex-direction:column; text-align:center; gap:12px; }
   }
@@ -654,8 +630,6 @@
     .proof-strip { flex-direction:column; gap:10px; }
     .t-result-num { font-size:2.8rem; }
     .about-name { font-size:2.8rem; }
-    .as-num { font-size:2rem; }
-    .about-stats { gap:18px; }
     .blog-callout { flex-direction:column; gap:16px; }
   }
 
@@ -1015,14 +989,11 @@
   <a href="/" class="nav-logo nav-logo-text">Husni<em>Halim</em></a>
 
   <ul class="nav-links" id="navLinks">
-    <li><a href="/#about">About</a></li>
     <li><a href="/consulting/">Consulting</a></li>
-    <li><a href="/kaizen/">Kaizen</a></li>
     <li><a href="/hrdc-training/">Training</a></li>
-    <li><a href="/portfolio/">Portfolio</a></li>
+    <li><a href="/portfolio/">Results</a></li>
     <li><a href="/blog/">Insights</a></li>
-    <li><a href="/kaizenchampion/" class="nav-tool">Kaizen Champion &#10022;</a></li>
-    <li><a href="/oee-calculator/" class="nav-tool">OEE</a></li>
+    <li><a href="/oee-calculator/" class="nav-tool">OEE Tool</a></li>
     <li><a href="/#contact" class="nav-cta">Book a Call</a></li>
   </ul>
 
@@ -1088,25 +1059,13 @@
       <a href="#how-it-works" class="btn-text">▶ How it works</a>
     </div>
 
-    <div class="proof-strip">
-      <div class="proof-faces">
-        <div class="pface pf1">ZA</div>
-        <div class="pface pf2">NR</div>
-        <div class="pface pf3">KS</div>
-        <div class="pface pf4">AR</div>
-      </div>
-      <div class="proof-text">
-        <strong>35+ corporate projects</strong> across Malaysia ·
-        <strong>500+ professionals trained</strong> · avg. <strong>37% waste reduction</strong>
-      </div>
-    </div>
   </div>
 
   <!-- RIGHT: CAPTURE FORM -->
   <div class="capture-card" id="book-assessment">
     <div class="card-eyebrow">Free — No Obligation</div>
     <h3>Start Your 90-Day Floor Turnaround</h3>
-    <p>Leave your email and I'll reach out within 48 hours to arrange a free floor walk. No pitch — just a clear picture of what's holding your team back and where to start.</p>
+    <p>Leave your contact details and I'll reach out within 48 hours to arrange a free floor walk. No pitch — just a clear picture of what's holding your team back and where to start.</p>
     <ul class="checklist">
       <li><span class="ck">✓</span> Identify your top recurring problems — fast</li>
       <li><span class="ck">✓</span> Get a clear 90-day fix roadmap</li>
@@ -1117,20 +1076,47 @@
       <input type="hidden" name="form-started-at" value="" />
       <p style="display:none"><label>Don't fill this out: <input name="bot-field" /></label></p>
       <div class="name-row">
-        <input type="text" name="firstname" placeholder="First name" required />
-        <input type="text" name="lastname" placeholder="Last name" required />
+        <input type="text" name="firstname" placeholder="First name *" required />
+        <input type="text" name="lastname" placeholder="Last name *" required />
       </div>
       <div class="email-row">
-        <input type="email" name="email" placeholder="your@email.com" required />
+        <input type="email" name="email" placeholder="Email address *" required />
+      </div>
+      <div class="email-row">
+        <input type="tel" name="phone" placeholder="Phone number *" required />
         <button type="submit">Send →</button>
       </div>
     </form>
     <div class="card-note">🔒 No spam. I'll reach out within 48 hours.</div>
 
 <script>
-  document.querySelector('form[name="floor-assessment"]').addEventListener('submit', function(e) {
+  var floorAssessmentForm = document.querySelector('form[name="floor-assessment"]');
+  var floorAssessmentDraftKey = 'husni_floor_assessment_draft';
+  var floorAssessmentDraftFields = Array.prototype.slice.call(floorAssessmentForm.querySelectorAll('input[name]')).filter(function(field) {
+    return field.type !== 'hidden' && field.name !== 'bot-field';
+  });
+  try {
+    var floorAssessmentDraft = JSON.parse(localStorage.getItem(floorAssessmentDraftKey) || '{}');
+    floorAssessmentDraftFields.forEach(function(field) {
+      if (floorAssessmentDraft[field.name] && !field.value) field.value = floorAssessmentDraft[field.name];
+    });
+  } catch (error) {}
+  function saveFloorAssessmentDraft() {
+    var draft = {};
+    floorAssessmentDraftFields.forEach(function(field) {
+      draft[field.name] = field.value;
+    });
+    localStorage.setItem(floorAssessmentDraftKey, JSON.stringify(draft));
+  }
+  floorAssessmentDraftFields.forEach(function(field) {
+    field.addEventListener('input', saveFloorAssessmentDraft);
+  });
+
+  floorAssessmentForm.addEventListener('submit', function(e) {
     e.preventDefault();
     var form = e.target;
+    if (!form.reportValidity()) return;
+    saveFloorAssessmentDraft();
     var btn  = form.querySelector('button[type="submit"]');
     var startedAt = form.querySelector('input[name="form-started-at"]');
     if (startedAt && !startedAt.value) startedAt.value = String(Date.now());
@@ -1145,6 +1131,7 @@
     })
     .then(function(response) {
       if (!response.ok) throw new Error('Submission failed');
+      localStorage.removeItem(floorAssessmentDraftKey);
       window.location.href = '/thank-you/';
     })
     .catch(function() {
@@ -1274,24 +1261,6 @@
     </div>
 
     <div class="hiw-right">
-      <div class="stat-grid">
-        <div class="stat-box">
-          <div class="stat-num">35+</div>
-          <div class="stat-lbl">Corporate projects delivered across Malaysia</div>
-        </div>
-        <div class="stat-box">
-          <div class="stat-num">500+</div>
-          <div class="stat-lbl">Professionals trained across industries</div>
-        </div>
-        <div class="stat-box">
-          <div class="stat-num">16 yrs</div>
-          <div class="stat-lbl">In heavy manufacturing &amp; oil and gas</div>
-        </div>
-        <div class="stat-box">
-          <div class="stat-num">100%</div>
-          <div class="stat-lbl">HRDC-claimable programmes</div>
-        </div>
-      </div>
       <div class="quote-box">
         <p>"We reduced rework by 42% in the first two months. The ROI was immediate and the team now runs kaizens on their own."</p>
         <div class="q-author">— Operations Manager, Electronics Manufacturer · Penang</div>
@@ -1386,20 +1355,6 @@
       <h2 class="about-name">Husni<br/><em>Halim</em></h2>
       <div class="about-role">Managing Director &amp; Principal Consultant</div>
       <p class="about-bio">A seasoned manufacturing professional and accredited HRDC trainer with over 16 years of hands-on experience in heavy manufacturing. Specialising in High Voltage (HV) Power Cable and Oil &amp; Gas sectors, with a global perspective on operational excellence gained from working across Norway, Brazil, China, Indonesia, and Italy.</p>
-      <div class="about-stats">
-        <div class="about-stat">
-          <span class="as-num">16+</span>
-          <span class="as-lbl">Years Industry<br/>Experience</span>
-        </div>
-        <div class="about-stat">
-          <span class="as-num">35+</span>
-          <span class="as-lbl">Corporate<br/>Projects</span>
-        </div>
-        <div class="about-stat">
-          <span class="as-num">500+</span>
-          <span class="as-lbl">Professionals<br/>Trained</span>
-        </div>
-      </div>
       <a href="/consulting/" class="btn-primary" style="display:inline-block;margin-top:32px;">Work With Me →</a>
     </div>
     <div class="about-right">

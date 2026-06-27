@@ -23,6 +23,51 @@ textarea:focus-visible {
   border-radius: 2px;
 }
 
+/* ---- Professional paragraph alignment ---- */
+@media (min-width: 760px) {
+  main p:not(
+    .hero-role,
+    .hero-subtitle,
+    .section-desc,
+    .form-note,
+    .contact-method,
+    .bottom-cta-or,
+    .site-update-meta,
+    .testimonial-role,
+    .testimonial-text,
+    .case-industry,
+    .case-tag,
+    .card-note,
+    .q-author,
+    .hh-share__label
+  ) {
+    text-align: justify;
+    text-justify: inter-word;
+    hyphens: auto;
+  }
+
+  main :where(
+    .hero,
+    .site-updates,
+    .contact-form,
+    .email-form,
+    .hh-share,
+    .footer,
+    .site-footer,
+    .stats,
+    .proof-strip,
+    .company-proof-grid,
+    .company-sector-strip
+  ) p {
+    text-align: initial;
+    hyphens: manual;
+  }
+
+  main :where(.text-center, [style*="text-align:center"], [style*="text-align: center"]) p {
+    text-align: center;
+  }
+}
+
 /* Light outlines for dark backgrounds */
 .nav a:focus-visible,
 .nav button:focus-visible,

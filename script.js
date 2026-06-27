@@ -158,11 +158,29 @@
  // ---- Contact form handling ----
  const contactForm = document.getElementById('contactForm');
  if (contactForm) {
+ const draftKey = 'husni_contact_draft_' + (contactForm.getAttribute('name') || 'contact') + '_' + location.pathname;
+ const draftFields = Array.from(contactForm.querySelectorAll('input[name], select[name], textarea[name]'))
+ .filter((field) => field.type !== 'hidden' && field.name !== 'bot-field');
+ try {
+ const savedDraft = JSON.parse(localStorage.getItem(draftKey) || '{}');
+ draftFields.forEach((field) => {
+ if (savedDraft[field.name] && !field.value) field.value = savedDraft[field.name];
+ });
+ } catch {}
+ const saveDraft = () => {
+ const draft = {};
+ draftFields.forEach((field) => { draft[field.name] = field.value; });
+ localStorage.setItem(draftKey, JSON.stringify(draft));
+ };
+ draftFields.forEach((field) => field.addEventListener('input', saveDraft));
+
  const startedAt = contactForm.querySelector('input[name="form-started-at"]');
  if (startedAt) startedAt.value = String(Date.now());
 
  contactForm.addEventListener('submit', async function (e) {
  e.preventDefault();
+ if (!this.reportValidity()) return;
+ saveDraft();
  const formData = new FormData(this);
  const data = Object.fromEntries(formData.entries());
  data.site = SITE_ID;
@@ -194,7 +212,7 @@
 
  btn.textContent = 'Enquiry Sent!';
  btn.style.background = '#22c55e';
- this.reset();
+ localStorage.removeItem(draftKey);
  } catch (err) {
  if (err.emailDeliveryFailed && err.saved) {
  btn.textContent = 'Received - Email Issue';

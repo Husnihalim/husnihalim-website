@@ -82,6 +82,27 @@
   });
 
   document.querySelectorAll('form[name="blog-enquiry"]').forEach(function (form) {
+    var draftKey = 'husni_blog_enquiry_' + window.location.pathname + '_' + Array.prototype.indexOf.call(document.querySelectorAll('form[name="blog-enquiry"]'), form);
+    var draftFields = Array.prototype.slice.call(form.querySelectorAll('input[name], select[name], textarea[name]')).filter(function (field) {
+      return field.type !== 'hidden' && field.name !== 'bot-field';
+    });
+    try {
+      var savedDraft = JSON.parse(localStorage.getItem(draftKey) || '{}');
+      draftFields.forEach(function (field) {
+        if (savedDraft[field.name] && !field.value) field.value = savedDraft[field.name];
+      });
+    } catch (error) {}
+    function saveDraft() {
+      var draft = {};
+      draftFields.forEach(function (field) {
+        draft[field.name] = field.value;
+      });
+      localStorage.setItem(draftKey, JSON.stringify(draft));
+    }
+    draftFields.forEach(function (field) {
+      field.addEventListener('input', saveDraft);
+    });
+
     var startedAt = form.querySelector('input[name="form-started-at"]');
     if (!startedAt) {
       startedAt = document.createElement('input');
@@ -93,6 +114,8 @@
 
     form.addEventListener('submit', function (event) {
       event.preventDefault();
+      if (!form.reportValidity()) return;
+      saveDraft();
       var submit = form.querySelector('button[type="submit"]');
       var originalText = submit ? submit.textContent : '';
       var formData = new FormData(form);
@@ -116,6 +139,7 @@
         })
       }).then(function (response) {
         if (!response.ok) throw new Error('Submission failed');
+        localStorage.removeItem(draftKey);
         window.location.href = '/thank-you/';
       }).catch(function () {
         if (submit) {

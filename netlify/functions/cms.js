@@ -124,6 +124,15 @@ function isLikelyBotSubmission(submission) {
  return hasBotTextPattern(submission.name) || hasBotTextPattern(submission.company);
 }
 
+function hasRequiredLeadFields(submission) {
+ const name = cleanString(submission.name || submission.full_name || submission.fullname);
+ const firstname = cleanString(submission.firstname);
+ const lastname = cleanString(submission.lastname);
+ const email = cleanString(submission.email);
+ const phone = cleanString(submission.phone || submission.tel || submission.telephone);
+ return Boolean((name || (firstname && lastname)) && email && phone);
+}
+
 function hasBotTextPattern(value) {
  const text = cleanString(value);
  if (text.length < 12) return false;
@@ -707,11 +716,11 @@ exports.handler = async (event) => {
  };
  }
  const email = cleanString(submission.email).toLowerCase();
- if (!email) {
+ if (!hasRequiredLeadFields(submission)) {
  return {
  statusCode: 400,
  headers,
- body: JSON.stringify({ success: false, error: 'Email is required.' }),
+ body: JSON.stringify({ success: false, error: 'Name, email, and phone are required.' }),
  };
  }
  submission.email = email;

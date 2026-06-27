@@ -41,6 +41,13 @@ function getFullName(data) {
   return [data.firstname, data.lastname].map(cleanString).filter(Boolean).join(' ');
 }
 
+function hasRequiredLeadFields(data) {
+  const fullName = getFullName(data);
+  const email = getField(data, ['email']);
+  const phone = getField(data, ['phone', 'tel', 'telephone']);
+  return Boolean(fullName && email && phone);
+}
+
 function hasBotTextPattern(value) {
   const text = cleanString(value);
   if (text.length < 12) return false;
@@ -172,6 +179,10 @@ exports.handler = async function submissionCreated(event) {
     const formName = payload.form_name || payload.formName || data['form-name'] || 'website-form';
     if (isLikelyBotSubmission(data)) {
       return { statusCode: 200, body: 'OK' };
+    }
+
+    if (!hasRequiredLeadFields(data)) {
+      return { statusCode: 400, body: 'Name, email, and phone are required' };
     }
 
     const fullName = getFullName(data) || 'Website visitor';
