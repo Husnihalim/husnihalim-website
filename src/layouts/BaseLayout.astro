@@ -1,0 +1,79 @@
+---
+import '../styles/tokens.css';
+
+export interface Props {
+  title: string;
+  description: string;
+  canonical?: string;
+  ogImage?: string;
+  ogType?: string;
+  publishedTime?: string;
+  modifiedTime?: string;
+  noindex?: boolean;
+}
+
+const {
+  title,
+  description,
+  canonical = 'https://husnihalim.com/',
+  ogImage = 'https://husnihalim.com/assets/og-image.png',
+  ogType = 'website',
+  publishedTime,
+  modifiedTime,
+  noindex = false,
+} = Astro.props;
+
+const siteName = 'Husni Halim';
+const fullTitle = title.endsWith(`| ${siteName}`) ? title : `${title} | ${siteName}`;
+---
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{fullTitle}</title>
+  <meta name="description" content={description}>
+  <meta name="author" content="Mohd Husni Bin Abd Halim">
+  {!noindex && <meta name="robots" content="index, follow">}
+  {noindex && <meta name="robots" content="noindex, nofollow">}
+  <link rel="canonical" href={canonical}>
+
+  <meta property="og:type" content={ogType}>
+  <meta property="og:url" content={canonical}>
+  <meta property="og:title" content={fullTitle}>
+  <meta property="og:description" content={description}>
+  <meta property="og:image" content={ogImage}>
+  <meta property="og:locale" content="en_MY">
+  {publishedTime && <meta property="article:published_time" content={publishedTime}>}
+  {modifiedTime && <meta property="article:modified_time" content={modifiedTime}>}
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content={fullTitle}>
+  <meta name="twitter:description" content={description}>
+  <meta name="twitter:image" content={ogImage}>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400;1,600&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="/assets/global.css">
+  <link rel="stylesheet" href="/assets/site-footer.css">
+  <link rel="stylesheet" href="/assets/share.css">
+  <link rel="icon" href="/favicon.ico">
+</head>
+<body>
+  <slot name="skip" />
+
+  <slot name="nav" />
+  <slot name="announcements" />
+
+  <slot />
+
+  <slot name="footer" />
+  <slot name="mobile-cta" />
+
+  <script is:inline src="/assets/site-data.js"></script>
+  <script is:inline src="/assets/share.js" defer></script>
+  <script is:inline src="/assets/analytics-events.js" defer></script>
+</body>
+</html>

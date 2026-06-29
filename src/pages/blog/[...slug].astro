@@ -1,0 +1,416 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Nav from '../../components/Nav.astro';
+import { getCollection } from 'astro:content';
+
+export async function getStaticPaths() {
+  const posts = await getCollection('blog');
+  return posts.map((post) => ({
+    params: { slug: post.slug },
+    props: { post },
+  }));
+}
+
+const { post } = Astro.props;
+const { data, body } = post;
+const { title, description, category, readTime, image, tags, pubDate } = data;
+const cleanTitle = title.replace(/ \| Husni Halim.*$/, '');
+
+const allPosts = await getCollection('blog');
+const related = allPosts
+  .filter((p) => p.slug !== post.slug)
+  .sort((a, b) => {
+    const categoryMatch = Number(b.data.category === category) - Number(a.data.category === category);
+    if (categoryMatch !== 0) return categoryMatch;
+    return new Date(b.data.pubDate).getTime() - new Date(a.data.pubDate).getTime();
+  })
+  .slice(0, 4);
+
+// Extract TOC from h2 tags in the body
+const tocItems = [...body.matchAll(/<h2>(.*?)<\/h2>/g)].map((m) => m[1]);
+
+const dateDisplay = pubDate.toLocaleDateString('en-US', {
+  year: 'numeric',
+  month: 'long',
+});
+---
+
+<BaseLayout
+  title={cleanTitle}
+  description={description}
+  canonical={`https://husnihalim.com/blog/${post.slug}/`}
+  ogImage={image}
+  ogType="article"
+  publishedTime={pubDate.toISOString()}
+>
+  <Nav slot="nav" />
+
+  <main id="main-content">
+    <div class="post-hero">
+      {image && <img src={image} alt={title} loading="lazy" onerror="this.style.display='none'" />}
+      <div class="post-hero-overlay"></div>
+      <div class="post-hero-content">
+        <div class="post-cat">{category}</div>
+        <h1 class="post-title">{cleanTitle}</h1>
+        <div class="post-meta">
+          <span>{dateDisplay}</span>
+          <span>·</span>
+          <span>{readTime}</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="breadcrumb">
+      <a href="/">Home</a><span>›</span>
+      <a href="/blog/">Blog</a><span>›</span>
+      {cleanTitle}
+    </div>
+
+    <div class="page-wrap">
+      <article>
+        <a class="back-btn" href="/blog/">← Back to Blog</a>
+
+        {tags && tags.length > 0 && (
+          <div class="tags">
+            {tags.map((tag) => <span class="tag">{tag}</span>)}
+          </div>
+        )}
+
+        <div class="post-body" set:html={body} />
+
+        <div class="author-bio">
+          <div class="author-av">H</div>
+          <div>
+            <strong>Husni Halim</strong>
+            <p>Principal Consultant, Certified Process Kaizen Engineer. HRDC Certified Trainer (TTT/10228) and MPC Certified Productivity Expert at Visi Armada Consulting, specialising in lean manufacturing, OEE, and Kaizen for Malaysian manufacturers.</p>
+          </div>
+        </div>
+      </article>
+
+      <aside>
+        {tocItems.length > 0 && (
+          <div class="s-card">
+            <h4>In this article</h4>
+            <ul class="toc">
+              {tocItems.map((item) => <li set:html={item} />)}
+            </ul>
+          </div>
+        )}
+        <div class="s-card">
+          <h4>Related Articles</h4>
+          {related.map((r) => (
+            <a class="rel-post" href={`/blog/${r.slug}/`}>{r.data.title.replace(/ \| Husni Halim.*$/, '')}</a>
+          ))}
+        </div>
+        <div class="cta-card">
+          <h4>Need help implementing this in your factory?</h4>
+          <p>HRDC claimable training available across Malaysia.</p>
+          <a href="/#contact" class="cta-btn">Get In Touch →</a>
+        </div>
+      </aside>
+    </div>
+  </main>
+</BaseLayout>
+
+<style>
+  .post-hero {
+    position: relative;
+    height: 440px;
+    overflow: hidden;
+    background: var(--c-dark);
+  }
+  .post-hero img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: .45;
+  }
+  .post-hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, rgba(12,27,46,.95) 30%, rgba(12,27,46,.4));
+  }
+  .post-hero-content {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 48px;
+    max-width: 900px;
+  }
+  .post-cat {
+    font-family: var(--font-sans);
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--c-secondary);
+    margin-bottom: 14px;
+  }
+  .post-title {
+    font-family: var(--font-serif);
+    font-size: clamp(26px, 4vw, 44px);
+    line-height: 1.2;
+    color: #fff;
+    margin-bottom: 16px;
+    font-weight: 600;
+  }
+  .post-meta {
+    font-size: 13px;
+    color: rgba(255,255,255,.6);
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+  }
+
+  .breadcrumb {
+    max-width: 1160px;
+    margin: 0 auto;
+    padding: 20px 24px 0;
+    font-size: 12px;
+    color: #999;
+    font-family: var(--font-sans);
+  }
+  .breadcrumb a { color: var(--c-mid, #6b7280); text-decoration: none; }
+  .breadcrumb a:hover { color: var(--c-accent); }
+  .breadcrumb span { margin: 0 6px; }
+
+  .page-wrap {
+    max-width: 1160px;
+    margin: 0 auto;
+    padding: 0 24px;
+    display: grid;
+    grid-template-columns: 1fr 300px;
+    gap: 64px;
+    align-items: start;
+  }
+  article { padding: 32px 0 56px; }
+
+  .back-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    color: var(--c-accent);
+    font-size: 13px;
+    text-decoration: none;
+    font-weight: 500;
+    padding: 0 0 24px;
+  }
+  .back-btn:hover { gap: 12px; }
+
+  .tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 36px;
+  }
+  .tag {
+    background: var(--c-soft, #ece8e3);
+    color: #555;
+    font-size: 11px;
+    padding: 5px 12px;
+    border-radius: 20px;
+    font-weight: 500;
+    letter-spacing: .4px;
+  }
+
+  /* Article body styles */
+  .post-body h2 {
+    font-family: var(--font-serif);
+    font-size: 26px;
+    font-weight: 600;
+    color: var(--c-dark);
+    margin: 44px 0 16px;
+    padding-left: 16px;
+    border-left: 3px solid var(--c-accent);
+  }
+  .post-body h3 {
+    font-family: var(--font-serif);
+    font-size: 20px;
+    font-weight: 600;
+    color: #222;
+    margin: 28px 0 10px;
+  }
+  .post-body p {
+    font-size: 16px;
+    line-height: 1.85;
+    color: var(--c-body, #374151);
+    margin-bottom: 20px;
+  }
+  .post-body ul,
+  .post-body ol {
+    margin: 10px 0 20px 22px;
+  }
+  .post-body li {
+    font-size: 16px;
+    line-height: 1.75;
+    margin-bottom: 8px;
+    color: var(--c-body, #374151);
+  }
+  .post-body .callout {
+    background: #fff8f2;
+    border-left: 3px solid var(--c-secondary);
+    border-radius: 4px;
+    padding: 16px 18px;
+    margin: 32px 0;
+    font-size: 16px;
+    line-height: 1.7;
+    color: #444;
+  }
+  .post-body .callout strong { color: var(--c-accent); }
+  .post-body blockquote {
+    padding: 18px 24px;
+    margin: 36px 0;
+    background: #f4f0fb;
+    border-radius: 6px;
+    font-family: var(--font-serif);
+    font-size: 22px;
+    line-height: 1.6;
+    color: #2a1a4e;
+    font-style: italic;
+    text-align: center;
+  }
+  .post-body table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 28px 0;
+    font-size: 14px;
+  }
+  .post-body th {
+    background: var(--c-dark);
+    color: #fff;
+    padding: 12px 16px;
+    text-align: left;
+    font-family: var(--font-sans);
+    font-weight: 600;
+    letter-spacing: .3px;
+  }
+  .post-body td {
+    padding: 12px 16px;
+    border-bottom: 1px solid #eee;
+    color: var(--c-body, #374151);
+    line-height: 1.5;
+    font-size: 14px;
+  }
+  .post-body tr:nth-child(even) td { background: #f9f7f4; }
+  .post-body tr:hover td { background: #fff8f2; }
+
+  .author-bio {
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
+    background: #fff;
+    border: 1px solid #eee;
+    border-radius: 8px;
+    padding: 18px;
+    margin-top: 40px;
+  }
+  .author-av {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: var(--c-dark);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--c-secondary);
+    font-family: var(--font-serif);
+    font-size: 22px;
+    font-weight: 600;
+    flex-shrink: 0;
+  }
+  .author-bio p {
+    font-size: 14px;
+    line-height: 1.6;
+    color: #555;
+    margin-bottom: 4px;
+  }
+  .author-bio strong {
+    color: #111;
+    font-size: 15px;
+    display: block;
+    margin-bottom: 4px;
+  }
+
+  aside {
+    padding-top: 48px;
+    position: sticky;
+    top: 70px;
+  }
+  .s-card {
+    background: #fff;
+    border: 1px solid #eee;
+    border-radius: 8px;
+    padding: 18px;
+    margin-bottom: 22px;
+  }
+  .s-card h4 {
+    font-family: var(--font-sans);
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #999;
+    margin-bottom: 14px;
+  }
+  .toc li {
+    list-style: none;
+    padding: 8px 0;
+    border-bottom: 1px solid #f0f0f0;
+    font-size: 13px;
+    color: #555;
+  }
+  .toc li:last-child { border-bottom: none; }
+  .toc li::before { content: "→ "; color: var(--c-secondary); }
+  .rel-post {
+    display: block;
+    padding: 9px 0;
+    border-bottom: 1px solid #f0f0f0;
+    font-size: 13px;
+    color: #444;
+    text-decoration: none;
+    line-height: 1.4;
+  }
+  .rel-post:last-child { border-bottom: none; }
+  .rel-post:hover { color: var(--c-accent); }
+  .cta-card {
+    background: var(--c-dark);
+    border-radius: 8px;
+    padding: 18px;
+    text-align: center;
+  }
+  .cta-card h4 {
+    color: #fff;
+    font-size: 17px;
+    line-height: 1.5;
+    margin-bottom: 8px;
+    font-family: var(--font-serif);
+    font-style: italic;
+    text-transform: none;
+    letter-spacing: normal;
+  }
+  .cta-card p {
+    font-size: 12px;
+    color: #aaa;
+    margin-bottom: 14px;
+    line-height: 1.5;
+  }
+  .cta-btn {
+    display: block;
+    background: var(--c-accent);
+    color: #fff;
+    padding: 10px;
+    border-radius: 4px;
+    font-size: 13px;
+    font-weight: 600;
+    text-decoration: none;
+    letter-spacing: .4px;
+  }
+  .cta-btn:hover { background: #a0285e; }
+
+  @media (max-width: 800px) {
+    .page-wrap { grid-template-columns: 1fr; }
+    aside { display: none; }
+    .post-hero-content { padding: 24px; }
+  }
+</style>

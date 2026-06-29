@@ -1,12 +1,13 @@
 [build]
-  publish = "."
+  command = "npm run build"
+  publish = "dist"
 
 [functions]
   directory = "netlify/functions"
   node_bundler = "esbuild"
 
 [build.environment]
-  NODE_VERSION = "18"
+  NODE_VERSION = "20"
 
 # Redirect /api/* to serverless functions
 [[redirects]]

@@ -1,0 +1,2316 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>Free OEE Calculator — Production Efficiency | Husni Halim</title>
+ <meta name="description" content="Calculate your OEE score in 2 minutes. Get a free industry benchmark report and discover how much productive capacity your factory is losing.">
+ <meta name="keywords" content="OEE calculator, overall equipment effectiveness, manufacturing efficiency, production efficiency, factory KPI, lean manufacturing, industry benchmark, OEE score, manufacturing calculator Malaysia">
+ <meta name="author" content="Husni Halim">
+ <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+ <link rel="canonical" href="https://husnihalim.com/oee-calculator/">
+
+ <!-- Open Graph -->
+ <meta property="og:type" content="website">
+ <meta property="og:url" content="https://husnihalim.com/oee-calculator/">
+ <meta property="og:title" content="Free OEE Calculator — Is Your Production Line Running at Full Potential?">
+ <meta property="og:description" content="Most factories lose up to 40% of productive capacity without realising it. Calculate your OEE score in 2 minutes and get a free industry benchmark report.">
+ <meta property="og:image" content="https://husnihalim.com/assets/og-image.png?v=20260427">
+ <meta property="og:locale" content="en_MY">
+ <meta property="og:site_name" content="Husni Halim">
+ <meta name="twitter:card" content="summary_large_image">
+ <meta name="twitter:title" content="Free OEE Calculator — Discover Your Production Efficiency">
+ <meta name="twitter:description" content="Calculate your OEE score in 2 minutes. Free industry benchmark + personalised report for manufacturing managers.">
+<meta name="twitter:image" content="https://husnihalim.com/assets/og-image.png?v=20260427">
+
+ <!-- Fonts -->
+ <link rel="preconnect" href="https://fonts.googleapis.com">
+ <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+ <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400;1,600&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&display=swap" rel="stylesheet">
+
+ <!-- Schema.org structured data -->
+ <script src="/assets/site-data.js"></script>
+<script type="application/ld+json">
+ {
+  "@context": "https://schema.org",
+  "@graph": [
+   {
+    "@type": "WebPage",
+    "@id": "https://husnihalim.com/oee-calculator/",
+    "url": "https://husnihalim.com/oee-calculator/",
+    "name": "Free OEE Calculator — Discover Your Production Efficiency",
+    "description": "Calculate your Overall Equipment Effectiveness (OEE) score in 2 minutes. Get a personalised industry benchmark and free report.",
+    "inLanguage": "en",
+    "isPartOf": { "@id": "https://husnihalim.com/" },
+    "author": { "@type": "Person", "name": "Husni Halim", "url": "https://husnihalim.com" },
+    "datePublished": "2026-03-25",
+    "dateModified": "2026-05-09"
+   },
+   {
+    "@type": "SoftwareApplication",
+    "name": "OEE Calculator",
+    "applicationCategory": "BusinessApplication",
+    "operatingSystem": "Web",
+    "offers": { "@type": "Offer", "price": "0", "priceCurrency": "MYR" },
+    "description": "A free, self-explanatory OEE calculator for manufacturing managers. Enter your production data and get an instant OEE score, industry benchmark comparison, and financial impact analysis.",
+    "url": "https://husnihalim.com/oee-calculator/"
+   },
+   {
+    "@type": "FAQPage",
+    "mainEntity": [
+     {
+      "@type": "Question",
+      "name": "What is OEE?",
+      "acceptedAnswer": { "@type": "Answer", "text": "OEE (Overall Equipment Effectiveness) equals Availability × Performance × Quality. It tells you what percentage of planned production time is truly productive. World-class is around 85%." }
+     },
+     {
+      "@type": "Question",
+      "name": "How do I calculate OEE?",
+      "acceptedAnswer": { "@type": "Answer", "text": "OEE = Availability × Performance × Quality. Availability measures uptime vs planned time. Performance measures actual vs ideal speed. Quality measures good units vs total produced. Use this free calculator to get your score in 2 minutes." }
+     },
+     {
+      "@type": "Question",
+      "name": "What is a good OEE score?",
+      "acceptedAnswer": { "@type": "Answer", "text": "World-class OEE is generally 85% for discrete manufacturing. Benchmarks vary by industry — Food & Beverage world-class is around 65%, while Automotive is 85%. This calculator shows your score versus your specific industry benchmark." }
+     },
+     {
+      "@type": "Question",
+      "name": "How should food manufacturing factories use OEE?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Food manufacturing teams should use OEE to separate availability losses such as cleaning, changeover and breakdowns from performance losses such as slow running and quality losses such as reject, rework or giveaway." }
+     }
+    ]
+   }
+  ]
+ }
+ </script>
+
+ <style>
+ /* =====================================================
+  RESET & SITE TOKENS (matches husnihalim.com)
+ ===================================================== */
+ *, *::before, *::after { margin:0; padding:0; box-sizing:border-box; }
+
+ :root {
+   --navy:  var(--c-dark, #0c1b2e);
+   --gold:  var(--c-secondary, #c47832);
+   --cream: var(--c-warm, #f9f7f4);
+   --warm:  var(--c-soft, #ece8e3);
+   --plum:  var(--c-accent, #8b2252);
+   --text:  var(--c-body, #374151);
+   --muted: #6b7280;
+   --white: #ffffff;
+   /* Calculator functional colours */
+   --green:  #10b981;
+   --amber:  #f59e0b;
+   --red:    #ef4444;
+   --border: #e2e8f0;
+   --shadow: 0 4px 6px -1px rgba(0,0,0,.07), 0 2px 4px -2px rgba(0,0,0,.05);
+   --shadow-lg: 0 10px 25px -5px rgba(0,0,0,.10), 0 4px 10px -5px rgba(0,0,0,.07);
+ }
+
+ html { scroll-behavior: smooth; }
+
+ body {
+  font-family: 'DM Sans', sans-serif;
+  background: var(--cream);
+  color: var(--text);
+  font-size: 15px;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+ }
+
+ img { max-width:100%; height:auto; display:block; }
+ a   { color: inherit; text-decoration: none; }
+
+ h1, h2, h3 { font-family: 'Cormorant Garamond', serif; font-weight: 600; line-height: 1.15; }
+ h1 { font-size: clamp(38px, 9vw, 64px); color: var(--white); }
+ h1 em { color: var(--gold); font-style: italic; }
+
+ /* =====================================================
+  NAVIGATION
+ ===================================================== */
+ nav {
+  background: var(--navy);
+  padding: 0 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 60px;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+ }
+
+ .nav-logo {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 20px;
+  color: var(--white);
+  font-weight: 600;
+  letter-spacing: .3px;
+ }
+ .nav-logo em { color: var(--gold); font-style: italic; }
+
+ .nav-links { display: none; }
+
+ @media (min-width: 900px) {
+  nav { padding: 0 40px; height: 66px; }
+  .nav-links {
+   display: flex;
+   gap: 26px;
+   list-style: none;
+   align-items: center;
+  }
+  .nav-links a {
+   color: rgba(255,255,255,.72);
+   font-size: 13px;
+   letter-spacing: .4px;
+   transition: color .2s;
+  }
+  .nav-links a:hover { color: var(--white); }
+  .nav-links .active { color: var(--gold); }
+  .nav-cta {
+   background: var(--gold);
+   color: var(--white) !important;
+   padding: 8px 18px;
+   border-radius: 3px;
+  }
+ }
+
+ /* =====================================================
+  PAGE HERO
+ ===================================================== */
+ .page-hero {
+  background: var(--navy);
+  padding: 56px 20px 52px;
+  position: relative;
+  overflow: hidden;
+ }
+ .page-hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse at 30% 60%, rgba(139,34,82,.18) 0%, transparent 65%);
+  pointer-events: none;
+ }
+
+ .hero-inner {
+  max-width: 720px;
+  margin: 0 auto;
+  position: relative;
+ }
+
+ .page-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  color: var(--gold);
+  font-size: 11px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  margin-bottom: 16px;
+ }
+ .page-label::before {
+  content: '';
+  width: 28px; height: 1px;
+  background: var(--gold);
+  opacity: .5;
+ }
+
+ .hero-tagline {
+  color: rgba(255,255,255,.62);
+  font-size: 15px;
+  line-height: 1.8;
+  margin: 16px 0 28px;
+  max-width: 560px;
+ }
+
+ .hero-pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 32px;
+ }
+ .hero-pill {
+  background: rgba(255,255,255,.08);
+  border: 1px solid rgba(255,255,255,.16);
+  border-radius: 100px;
+  padding: 6px 16px;
+  font-size: 12px;
+  font-weight: 600;
+  color: rgba(255,255,255,.85);
+ }
+
+ .btn-start {
+  display: inline-block;
+  background: var(--gold);
+  color: var(--white);
+  padding: 15px 38px;
+  border-radius: 3px;
+  font-size: 15px;
+  font-weight: 700;
+  cursor: pointer;
+  border: none;
+  letter-spacing: .3px;
+  transition: background .2s, transform .18s;
+ }
+ .btn-start:hover { background: #a8642a; transform: translateY(-2px); }
+
+ /* =====================================================
+  CALCULATOR SECTION WRAPPER
+ ===================================================== */
+ .calc-section {
+  background: var(--cream);
+  padding-bottom: 80px;
+ }
+
+ /* =====================================================
+  WIZARD LAYOUT
+ ===================================================== */
+ .wizard-wrap {
+  max-width: 680px;
+  margin: 0 auto;
+  padding: 40px 20px 20px;
+ }
+
+ /* Progress */
+ .prog-row {
+  display: flex;
+  justify-content: space-between;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--muted);
+  margin-bottom: 8px;
+ }
+ .prog-track {
+  background: var(--warm);
+  border-radius: 100px;
+  height: 7px;
+  overflow: hidden;
+  margin-bottom: 36px;
+ }
+ .prog-fill {
+  height: 100%;
+  border-radius: 100px;
+  background: linear-gradient(90deg, var(--navy), var(--gold));
+  transition: width .45s ease;
+ }
+
+ /* Steps */
+ .step { display: none; }
+ .step.active { display: block; animation: popIn .28s ease; }
+ @keyframes popIn {
+  from { opacity: 0; transform: translateY(12px); }
+  to   { opacity: 1; transform: translateY(0); }
+ }
+
+ /* Card */
+ .card {
+  background: var(--white);
+  border-radius: 16px;
+  padding: 24px 22px;
+  box-shadow: var(--shadow);
+  margin-bottom: 14px;
+  border: 1px solid var(--warm);
+ }
+ @media(max-width:480px){ .card { padding: 22px 16px; } }
+
+ .step-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: .7px;
+  color: var(--gold);
+  margin-bottom: 6px;
+ }
+ .eyebrow-dot {
+  width: 20px; height: 20px;
+  background: var(--navy);
+  color: var(--white);
+  border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 11px; font-weight: 800;
+ }
+ .step-title {
+  font-size: 22px;
+  font-weight: 800;
+  margin-bottom: 6px;
+  color: var(--navy);
+ }
+ .step-sub {
+  font-size: 14px;
+  color: var(--muted);
+  line-height: 1.6;
+  margin-bottom: 26px;
+ }
+
+ /* Formula bar */
+ .formula-bar {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: var(--cream);
+  border-radius: 12px;
+  padding: 14px 12px;
+  margin-bottom: 26px;
+  flex-wrap: wrap;
+  border: 1px solid var(--warm);
+ }
+ .fbox {
+  flex: 1; min-width: 80px;
+  background: var(--white);
+  border: 2px solid var(--border);
+  border-radius: 10px;
+  padding: 10px 14px;
+  text-align: center;
+  transition: border-color .2s;
+ }
+ .fbox.active { border-color: var(--gold); background: #fdf8f0; }
+ .fbox-val { display: block; font-size: 20px; font-weight: 900; color: var(--navy); }
+ .fbox-lbl {
+  display: block;
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: .5px;
+  font-weight: 700;
+  color: var(--muted);
+  margin-top: 2px;
+ }
+ .fop { font-size: 22px; font-weight: 800; color: var(--muted); }
+
+ /* Field */
+ .field { margin-bottom: 22px; }
+ .field-label {
+  font-size: 14px; font-weight: 700; color: var(--text);
+  margin-bottom: 6px;
+  display: flex; align-items: center; gap: 6px;
+ }
+ .field-label .opt { font-weight: 400; font-size: 12px; color: var(--muted); }
+ .input-wrap {
+  display: flex; align-items: stretch;
+  border: 2px solid var(--border);
+  border-radius: 10px;
+  overflow: hidden;
+  transition: border-color .2s, box-shadow .2s;
+ }
+ .input-wrap:focus-within {
+  border-color: var(--gold);
+  box-shadow: 0 0 0 3px rgba(196,120,50,.12);
+ }
+ .input-wrap input, .input-wrap select {
+  flex: 1; padding: 13px 15px;
+  border: none; font-size: 15px;
+  color: var(--text); background: var(--white);
+  outline: none; min-width: 0;
+  font-family: 'DM Sans', sans-serif;
+ }
+ .input-wrap select {
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='none' stroke='%236b7280' stroke-width='2' viewBox='0 0 24 24'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 14px center;
+  cursor: pointer;
+ }
+ .unit-badge {
+  background: var(--cream);
+  border-left: 2px solid var(--border);
+  padding: 13px 14px;
+  font-size: 13px; font-weight: 700;
+  color: var(--muted);
+  white-space: nowrap;
+  display: flex; align-items: center;
+ }
+ .err { display: none; font-size: 12px; color: var(--red); margin-top: 5px; font-weight: 600; }
+ .err.on { display: block; }
+
+ /* Info toggle */
+ .info-toggle {
+  display: inline-flex; align-items: center; gap: 5px;
+  background: none; border: none;
+  color: var(--gold); font-size: 12px; font-weight: 700;
+  cursor: pointer; margin-top: 6px; padding: 0;
+  transition: color .15s; font-family: 'DM Sans', sans-serif;
+ }
+ .info-toggle:hover { color: var(--plum); }
+ .info-panel {
+  display: none;
+  background: #fdf8f0;
+  border: 1px solid #e8d5b0;
+  border-radius: 10px;
+  padding: 14px 16px;
+  margin-top: 8px;
+  font-size: 13px; line-height: 1.65;
+  color: #5a3e1b;
+ }
+ .info-panel.on { display: block; }
+ .info-example {
+  background: rgba(255,255,255,.65);
+  border-left: 3px solid var(--gold);
+  border-radius: 0 6px 6px 0;
+  padding: 8px 12px; margin-top: 10px; font-size: 12px;
+ }
+ .info-example strong { display: block; color: #7a4f1a; margin-bottom: 2px; }
+
+ /* Buttons */
+ .btn-row { display: flex; gap: 12px; }
+ .btn {
+  display: inline-flex; align-items: center; justify-content: center;
+  gap: 6px; padding: 14px 24px; border-radius: 8px;
+  font-size: 15px; font-weight: 700; cursor: pointer;
+  border: none; transition: all .18s;
+  font-family: 'DM Sans', sans-serif;
+ }
+ .btn-primary { flex: 1; background: var(--navy); color: var(--white); font-size: 16px; }
+ .btn-primary:hover { background: #070e1c; transform: translateY(-1px); }
+ .btn-back {
+  background: var(--white); color: var(--muted);
+  border: 2px solid var(--border); padding: 14px 20px;
+ }
+ .btn-back:hover { border-color: var(--muted); color: var(--text); }
+
+ /* Results — Score hero */
+ .score-hero {
+  background: linear-gradient(135deg, #070e1c 0%, var(--navy) 100%);
+  border-radius: 16px;
+  padding: 30px 20px;
+  text-align: center;
+  color: var(--white);
+  margin-bottom: 14px;
+  position: relative;
+  overflow: hidden;
+ }
+ .score-hero::before {
+  content: '';
+  position: absolute; inset: 0;
+  background: radial-gradient(ellipse at 70% 20%, rgba(196,120,50,.25) 0%, transparent 60%);
+ }
+ .score-lbl { font-size: 11px; font-weight: 800; letter-spacing: 1.2px; text-transform: uppercase; opacity: .6; margin-bottom: 6px; }
+ .score-num { font-family: 'Cormorant Garamond', serif; font-size: 84px; font-weight: 700; line-height: 1; margin-bottom: 8px; color: var(--gold); }
+ .score-verdict { font-size: 19px; font-weight: 700; opacity: .92; }
+ .score-context { font-size: 13px; opacity: .55; margin-top: 6px; }
+
+ /* Component cards */
+ .comp-grid {
+  display: grid; grid-template-columns: repeat(3, 1fr);
+  gap: 12px; margin-bottom: 14px;
+ }
+ @media(max-width:480px){ .comp-grid { grid-template-columns: 1fr; } }
+ .comp-card {
+  background: var(--white); border-radius: 14px;
+  padding: 20px 14px; text-align: center;
+  box-shadow: var(--shadow); border-top: 4px solid var(--border);
+ }
+ .comp-card.good  { border-top-color: var(--green); }
+ .comp-card.ok    { border-top-color: var(--amber); }
+ .comp-card.poor  { border-top-color: var(--red);   }
+ .comp-score { font-size: 30px; font-weight: 900; display: block; margin-bottom: 2px; }
+ .comp-score.good { color: var(--green); }
+ .comp-score.ok   { color: var(--amber); }
+ .comp-score.poor { color: var(--red);   }
+ .comp-name   { font-size: 12px; font-weight: 700; color: var(--text); margin-bottom: 3px; }
+ .comp-status { font-size: 10px; font-weight: 800; text-transform: uppercase; letter-spacing: .5px; }
+ .comp-status.good { color: var(--green); }
+ .comp-status.ok   { color: var(--amber); }
+ .comp-status.poor { color: var(--red);   }
+
+ /* Section card */
+ .section-card {
+  background: var(--white); border-radius: 16px;
+  padding: 22px; box-shadow: var(--shadow);
+  margin-bottom: 14px; border: 1px solid var(--warm);
+ }
+ .section-title { font-size: 17px; font-weight: 800; margin-bottom: 20px; color: var(--navy); }
+
+ /* Benchmark bars */
+ .bench-row { margin-bottom: 15px; }
+ .bench-labels { display: flex; justify-content: space-between; font-size: 13px; margin-bottom: 6px; }
+ .bench-name { font-weight: 600; color: var(--text); }
+ .bench-pct  { font-weight: 800; color: var(--text); }
+ .bench-track { background: var(--warm); border-radius: 100px; height: 11px; overflow: hidden; }
+ .bench-fill  { height: 100%; border-radius: 100px; transition: width 1s ease; }
+ .fill-you  { background: var(--navy); }
+ .fill-avg  { background: var(--amber); }
+ .fill-wc   { background: var(--green); }
+ #bench-note { font-size: 13px; color: var(--muted); line-height: 1.65; margin-top: 14px; }
+
+ /* Insight */
+ .narrative { font-size: 14px; line-height: 1.75; color: var(--text); margin-bottom: 16px; }
+ .alert-box { background: #fff7ed; border: 1px solid #fed7aa; border-radius: 10px; padding: 16px; }
+ .alert-box-title { font-weight: 800; font-size: 14px; color: #c2410c; margin-bottom: 6px; }
+ .alert-box-body  { font-size: 13px; color: #9a3412; line-height: 1.65; }
+ .loss-line { margin-top: 14px; font-size: 13px; color: var(--muted); }
+
+ /* Financial impact */
+ .dollar-card {
+  background: linear-gradient(135deg, #064e3b, #065f46);
+  border-radius: 16px; padding: 22px; color: var(--white); margin-bottom: 14px;
+ }
+ .dollar-title { font-size: 17px; font-weight: 800; margin-bottom: 4px; }
+ .dollar-sub   { font-size: 13px; opacity: .75; margin-bottom: 20px; line-height: 1.6; }
+ .dollar-input-wrap {
+  display: flex; align-items: center;
+  background: rgba(255,255,255,.15);
+  border: 1px solid rgba(255,255,255,.22);
+  border-radius: 10px; overflow: hidden;
+ }
+ .dollar-input-wrap span { padding: 13px 14px; font-weight: 800; font-size: 16px; opacity: .8; }
+ .dollar-input-wrap input {
+  flex: 1; background: transparent; border: none;
+  color: var(--white); font-size: 14px; padding: 13px 8px; outline: none; min-width: 0;
+  font-family: 'DM Sans', sans-serif;
+ }
+ .dollar-input-wrap input::placeholder { color: rgba(255,255,255,.4); }
+ .impact-row td { padding: 11px 10px; border-bottom: 1px solid rgba(255,255,255,.1); vertical-align: middle; }
+ .impact-row:last-child td { border-bottom: none; }
+ .impact-row.highlight { background: rgba(255,255,255,.1); border-radius: 8px; }
+ .impact-label { font-weight: 700; font-size: 14px; }
+ .impact-label small { display:block; font-size:11px; font-weight:500; opacity:.65; margin-top:1px; }
+ .impact-val    { text-align:right; font-weight:800; font-size:15px; }
+ .impact-val-yr { text-align:right; font-weight:900; font-size:17px; }
+
+ /* CTA card */
+ .cta-card {
+  background: var(--white); border-radius: 16px;
+  padding: 24px 22px; box-shadow: var(--shadow-lg);
+  border: 2px solid var(--warm); text-align: center; margin-bottom: 14px;
+ }
+ .cta-title { font-size: 21px; font-weight: 900; margin-bottom: 8px; color: var(--navy); font-family: 'Cormorant Garamond', serif; }
+ .cta-sub   { font-size: 14px; color: var(--muted); line-height: 1.65; margin-bottom: 26px; }
+ .cta-btns  { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
+ .btn-book {
+  background: var(--gold); color: var(--white);
+  padding: 14px 32px; border-radius: 3px;
+  font-size: 15px; font-weight: 700; border: none; cursor: pointer;
+  transition: all .2s; text-decoration: none; display: inline-block;
+  font-family: 'DM Sans', sans-serif;
+ }
+ .btn-book:hover { background: #a8642a; transform: translateY(-2px); box-shadow: 0 8px 20px rgba(196,120,50,.35); }
+ .btn-print-r {
+  background: var(--cream); border: 2px solid var(--warm);
+  color: var(--text); padding: 14px 24px; border-radius: 3px;
+  font-size: 14px; font-weight: 600; cursor: pointer;
+  transition: all .2s; font-family: 'DM Sans', sans-serif;
+ }
+ .btn-print-r:hover { border-color: var(--muted); }
+
+ /* Lead form extras */
+ .name-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-bottom: 16px; }
+ @media(max-width:480px){ .name-grid { grid-template-columns: 1fr; } }
+ .teaser-box {
+  background: var(--cream); border: 1px solid var(--warm);
+  border-radius: 14px; padding: 24px; text-align: center; margin-bottom: 24px;
+ }
+ .teaser-lbl  { font-size: 11px; font-weight: 800; text-transform: uppercase; letter-spacing: .8px; color: var(--muted); margin-bottom: 8px; }
+ .teaser-num  { font-size: 60px; font-weight: 900; color: var(--navy); filter: blur(18px) brightness(1.15); user-select: none; line-height: 1; opacity: .9; pointer-events: none; letter-spacing: -2px; font-family: 'Cormorant Garamond', serif; }
+ .teaser-hint { font-size: 12px; color: var(--muted); margin-top: 8px; }
+ .tc-scroll {
+  background: var(--cream); border: 1px solid var(--warm);
+  border-radius: 10px; padding: 16px; max-height: 180px;
+  overflow-y: auto; font-size: 12px; color: var(--muted);
+  line-height: 1.7; margin-bottom: 16px;
+ }
+ .tc-scroll h4 { font-size: 13px; font-weight: 800; color: var(--text); margin-bottom: 10px; font-family: 'DM Sans', sans-serif; }
+ .chk-row { display: flex; align-items: flex-start; gap: 10px; font-size: 13px; color: var(--muted); line-height: 1.5; margin-bottom: 20px; }
+ .chk-row input[type=checkbox] { margin-top: 2px; flex-shrink: 0; accent-color: var(--navy); }
+
+ /* Reset link */
+ .reset-line { text-align: center; font-size: 12px; color: var(--muted); margin-top: 18px; }
+ .reset-line a { color: var(--gold); cursor: pointer; }
+
+  @media (max-width: 600px) {
+  .page-hero { padding: 40px 16px 36px; }
+  .card { padding: 20px 16px; }
+  .score-hero { padding: 24px 16px; }
+  .seo-content { padding: 40px 16px 48px; }
+  .cta-card { padding: 20px 16px; }
+  .section-card { padding: 18px; }
+  .dollar-card { padding: 18px; }
+}
+
+  /* =====================================================
+   FOOTER
+  ===================================================== */
+  .site-footer {
+  background: var(--navy);
+  border-top: 1px solid rgba(255,255,255,.07);
+  padding: 28px 20px;
+  text-align: center;
+ }
+ .footer-links {
+  display: flex; flex-wrap: wrap; justify-content: center;
+  gap: 10px 20px; margin-bottom: 14px; list-style: none;
+ }
+ .footer-links a { font-size: 12px; color: rgba(255,255,255,.45); letter-spacing: .3px; }
+ .footer-links a:hover { color: var(--gold); }
+ .footer-copy { font-size: 11px; color: rgba(255,255,255,.3); letter-spacing: .5px; }
+ @media (min-width: 768px) { .site-footer { padding: 32px 40px; } }
+
+ /* =====================================================
+  PRINT
+ ===================================================== */
+ @media print {
+  nav, .page-hero, .prog-track, .prog-row,
+  .btn-row, .cta-card, .dollar-card, .site-footer,
+  .info-toggle, .info-panel { display: none !important; }
+  body { background: #fff; }
+  .step { display: block !important; }
+  .score-hero {
+   background: var(--navy) !important;
+   -webkit-print-color-adjust: exact;
+   print-color-adjust: exact;
+  }
+  .card, .section-card, .comp-card { box-shadow: none; border: 1px solid var(--border); }
+ }
+
+/* ── SEO CONTENT SECTION ── */
+.seo-content { background: var(--cream); padding: 56px 20px 64px; }
+.seo-inner { max-width: 860px; margin: 0 auto; }
+.seo-label { display: inline-block; font-family: 'DM Sans', sans-serif; font-size: 11px; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: var(--gold); margin-bottom: 14px; }
+.seo-intro h2 { font-family: 'Cormorant Garamond', serif; font-size: clamp(2rem, 4vw, 2.8rem); font-weight: 600; color: var(--navy); line-height: 1.2; margin: 0 0 20px; }
+.seo-intro p, .seo-content p { font-family: 'DM Sans', sans-serif; font-size: 1.05rem; line-height: 1.8; color: var(--text); margin-bottom: 16px; }
+.seo-content h3 { font-family: 'Cormorant Garamond', serif; font-size: clamp(1.5rem, 3vw, 2rem); font-weight: 600; color: var(--navy); margin: 56px 0 18px; line-height: 1.25; }
+.seo-content h4 { font-family: 'DM Sans', sans-serif; font-size: 1rem; font-weight: 700; color: var(--navy); margin: 0 0 10px; }
+.seo-content h5 { font-family: 'DM Sans', sans-serif; font-size: 0.95rem; font-weight: 700; color: var(--navy); margin: 0 0 8px; }
+.seo-formula-block { background: var(--navy); border-radius: 12px; padding: 24px; margin: 40px 0; }
+.seo-formula-block h3 { color: #fff; margin: 0 0 14px; }
+.seo-formula-block p { color: rgba(255,255,255,0.8); }
+.formula-display { display: flex; flex-wrap: wrap; align-items: center; gap: 12px; margin: 20px 0; }
+.f-term { background: rgba(196,120,50,0.2); border: 1px solid var(--gold); color: var(--gold); font-family: 'DM Sans', sans-serif; font-weight: 700; font-size: 1rem; padding: 8px 16px; border-radius: 6px; }
+.f-op { color: rgba(255,255,255,0.6); font-size: 1.4rem; font-weight: 300; }
+.f-result { background: var(--gold); color: var(--navy); font-family: 'DM Sans', sans-serif; font-weight: 700; font-size: 1rem; padding: 8px 16px; border-radius: 6px; }
+.seo-three-cols { display: grid; grid-template-columns: 1fr; gap: 24px; margin: 24px 0 40px; }
+@media (min-width: 700px) { .seo-three-cols { grid-template-columns: repeat(3, 1fr); } }
+.seo-col { background: #fff; border: 1px solid var(--warm); border-top: 3px solid var(--gold); border-radius: 10px; padding: 24px; }
+.seo-col-icon { font-size: 1.6rem; margin-bottom: 12px; }
+.seo-col p { font-size: 0.93rem; color: var(--muted); line-height: 1.75; }
+.seo-highlight-box { background: #fff; border-left: 4px solid var(--gold); border-radius: 0 10px 10px 0; padding: 24px; margin: 40px 0; }
+.seo-highlight-box h3 { margin-top: 0; }
+.seo-losses-grid { display: grid; grid-template-columns: 1fr; gap: 16px; margin: 24px 0 40px; }
+@media (min-width: 700px) { .seo-losses-grid { grid-template-columns: repeat(2, 1fr); } }
+.loss-item { background: #fff; border: 1px solid var(--warm); border-radius: 10px; padding: 22px; }
+.loss-item p { font-size: 0.92rem; color: var(--muted); line-height: 1.7; margin: 0; }
+.loss-tag { display: inline-block; font-family: 'DM Sans', sans-serif; font-size: 10px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; padding: 3px 8px; border-radius: 4px; margin-bottom: 10px; }
+.loss-avail .loss-tag { background: #fef3e2; color: #b45309; }
+.loss-perf  .loss-tag { background: #e8f4fd; color: #1e6fa8; }
+.loss-qual  .loss-tag { background: #edfbf0; color: #16783a; }
+.bench-table-wrap { overflow-x: auto; margin: 24px 0 40px; border-radius: 10px; border: 1px solid var(--warm); }
+.bench-table { width: 100%; border-collapse: collapse; font-family: 'DM Sans', sans-serif; font-size: 0.93rem; }
+.bench-table th { background: var(--navy); color: #fff; padding: 12px 18px; text-align: left; font-weight: 600; }
+.bench-table td { padding: 11px 18px; border-bottom: 1px solid var(--warm); color: var(--text); }
+.bench-table tr:last-child td { border-bottom: none; }
+.bench-table tr:nth-child(even) td { background: var(--cream); }
+.seo-steps { margin: 24px 0 40px; }
+.step-list { display: flex; flex-direction: column; gap: 20px; margin-top: 20px; }
+.step-item { display: flex; gap: 20px; align-items: flex-start; }
+.step-num { flex-shrink: 0; width: 38px; height: 38px; border-radius: 50%; background: var(--navy); color: var(--gold); font-family: 'Cormorant Garamond', serif; font-size: 1.1rem; font-weight: 700; display: flex; align-items: center; justify-content: center; margin-top: 2px; }
+.step-body h5 { margin: 0 0 6px; }
+.step-body p { font-size: 0.93rem; color: var(--muted); line-height: 1.75; margin: 0; }
+.seo-faq { margin-top: 40px; }
+.faq-item { border: 1px solid var(--warm); border-radius: 10px; margin-bottom: 12px; overflow: hidden; }
+.faq-item summary { font-family: 'DM Sans', sans-serif; font-size: 0.97rem; font-weight: 600; color: var(--navy); padding: 18px 22px; cursor: pointer; list-style: none; display: flex; justify-content: space-between; align-items: center; gap: 12px; }
+.faq-item summary::-webkit-details-marker { display: none; }
+.faq-item summary::after { content: '+'; font-size: 1.3rem; color: var(--gold); flex-shrink: 0; transition: transform 0.2s; }
+.faq-item[open] summary::after { transform: rotate(45deg); }
+.faq-item p { padding: 0 22px 20px; font-size: 0.93rem; color: var(--muted); line-height: 1.8; margin: 0; }
+.faq-item a { color: var(--gold); }
+
+   /* ============================================================
+      SITE NAV — unified across all pages
+   ============================================================ */
+   nav#site-nav {
+     background: var(--navy);
+     padding: 0 20px;
+     display: flex;
+     align-items: center;
+     justify-content: space-between;
+     height: 60px;
+     position: sticky;
+     top: 0;
+     z-index: 100;
+     flex-wrap: wrap;
+   }
+
+   .nav-logo {
+     font-family: 'Cormorant Garamond', serif;
+     font-size: 20px;
+     color: #fff;
+     font-weight: 600;
+     letter-spacing: .3px;
+     text-decoration: none;
+     flex-shrink: 0;
+   }
+   .nav-logo em { color: var(--gold); font-style: italic; }
+
+   /* Hamburger button — visible on mobile only */
+   .nav-hamburger {
+     display: flex;
+     flex-direction: column;
+     justify-content: center;
+     gap: 5px;
+     width: 36px;
+     height: 36px;
+     cursor: pointer;
+     background: none;
+     border: none;
+     padding: 4px;
+   }
+   .nav-hamburger span {
+     display: block;
+     width: 22px;
+     height: 2px;
+     background: rgba(255,255,255,.72);
+     border-radius: 2px;
+     transition: all .25s;
+   }
+
+   /* Desktop nav links — hidden on mobile by default */
+   .nav-links {
+     display: none;
+     list-style: none;
+     margin: 0;
+     padding: 0;
+   }
+
+   /* Mobile open state */
+   nav#site-nav.nav-open {
+     height: auto;
+     padding-bottom: 12px;
+     align-items: flex-start;
+   }
+   nav#site-nav.nav-open > .nav-logo,
+   nav#site-nav.nav-open > .nav-hamburger {
+     margin-top: 14px;
+   }
+   nav#site-nav.nav-open .nav-links {
+     display: flex;
+     flex-direction: column;
+     width: 100%;
+     border-top: 1px solid rgba(255,255,255,.08);
+     padding-top: 6px;
+     margin-top: 10px;
+     gap: 0;
+   }
+   nav#site-nav.nav-open .nav-links > li > a {
+     display: block;
+     padding: 11px 4px;
+     border-bottom: 1px solid rgba(255,255,255,.05);
+     color: rgba(255,255,255,.78);
+     font-size: 14px;
+     text-decoration: none;
+   }
+   nav#site-nav.nav-open .dropdown-menu {
+     display: flex !important;
+     flex-direction: column;
+     padding-left: 16px;
+     padding-bottom: 4px;
+   }
+   nav#site-nav.nav-open .dropdown-menu a {
+     padding: 7px 0;
+     color: rgba(255,255,255,.5);
+     font-size: 13px;
+     border: none !important;
+   }
+
+   /* Desktop (≥ 960px) */
+   @media (min-width: 960px) {
+     nav#site-nav {
+       padding: 0 40px;
+       height: 66px;
+       flex-wrap: nowrap;
+       align-items: center;
+     }
+     .nav-hamburger { display: none; }
+
+     .nav-links {
+       display: flex !important;
+       flex-direction: row;
+       align-items: center;
+       gap: 0;
+       width: auto;
+       border: none;
+       margin: 0;
+       padding: 0;
+     }
+     .nav-links > li {
+       position: relative;
+     }
+     .nav-links > li > a {
+       display: flex;
+       align-items: center;
+       height: 66px;
+       padding: 0 13px;
+       color: rgba(255,255,255,.68);
+       font-size: 13px;
+       letter-spacing: .4px;
+       white-space: nowrap;
+       transition: color .2s;
+       text-decoration: none;
+     }
+     .nav-links > li > a:hover { color: #fff; }
+     .nav-links > li.active > a { color: var(--gold); }
+
+     /* Dropdown chevron */
+     .nav-dropdown > a::after {
+       content: '';
+       display: inline-block;
+       width: 0;
+       height: 0;
+       border-left: 3.5px solid transparent;
+       border-right: 3.5px solid transparent;
+       border-top: 4px solid rgba(255,255,255,.4);
+       margin-left: 5px;
+       vertical-align: middle;
+       transition: transform .2s;
+     }
+     .nav-dropdown:hover > a::after { transform: rotate(180deg); }
+
+     /* Dropdown panel */
+     .dropdown-menu {
+       display: none;
+       position: absolute;
+       top: 100%;
+       left: -8px;
+       background: #0d2035;
+       border: 1px solid rgba(255,255,255,.09);
+       border-top: 2px solid var(--gold);
+       border-radius: 0 0 6px 6px;
+       padding: 6px 0;
+       min-width: 230px;
+       z-index: 200;
+       box-shadow: 0 12px 32px rgba(0,0,0,.4);
+     }
+     .nav-dropdown:hover .dropdown-menu { display: block; }
+     .dropdown-menu a {
+       display: block;
+       padding: 10px 20px;
+       color: rgba(255,255,255,.62);
+       font-size: 13px;
+       white-space: nowrap;
+       transition: background .15s, color .15s;
+       text-decoration: none;
+     }
+     .dropdown-menu a:hover {
+       background: rgba(255,255,255,.05);
+       color: #fff;
+     }
+     .dropdown-divider {
+       height: 1px;
+       background: rgba(255,255,255,.07);
+       margin: 5px 0;
+     }
+
+     /* CTA button */
+     .nav-links .nav-cta {
+       background: var(--gold) !important;
+       color: #fff !important;
+       height: 34px !important;
+       padding: 0 18px !important;
+       border-radius: 3px;
+       margin-left: 10px;
+       font-weight: 600 !important;
+       font-size: 13px !important;
+       letter-spacing: .3px !important;
+     }
+     .nav-links .nav-cta:hover { background: #b36c2b !important; }
+   }
+
+   /* ============================================================
+      SITE FOOTER — unified
+   ============================================================ */
+   footer {
+     background: var(--navy, #0c1b2e);
+     padding: 40px 20px;
+     text-align: center;
+   }
+   .footer-logo {
+     font-family: 'Cormorant Garamond', serif;
+     font-size: 20px;
+     color: #fff;
+     font-weight: 600;
+     margin-bottom: 18px;
+     display: block;
+   }
+   .footer-logo em { color: var(--gold, #c47832); font-style: italic; }
+   .footer-links {
+     display: flex;
+     justify-content: center;
+     flex-wrap: wrap;
+     gap: 6px 20px;
+     margin-bottom: 20px;
+   }
+   .footer-links a {
+     font-size: 13px;
+     color: rgba(255,255,255,.5);
+     text-decoration: none;
+     transition: color .2s;
+   }
+   .footer-links a:hover { color: var(--gold-light, #c8a96e); }
+   .footer-copy { font-size: 12px; color: rgba(255,255,255,.28); }
+</style>
+
+<style id="site-nav-consistency">
+/* Unified site navigation */
+.nav{height:66px!important;padding:0 40px!important;background:var(--c-dark,var(--dark,#0c1b2e))!important;display:flex!important;align-items:center!important;gap:0!important;position:sticky!important;top:0;left:0;right:0;z-index:1000;box-shadow:0 2px 20px rgba(0,0,0,.18);backdrop-filter:none!important;-webkit-backdrop-filter:none!important;transition:box-shadow .2s,background .2s!important}
+.nav-scrolled{background:var(--c-dark,var(--dark,#0c1b2e))!important;box-shadow:0 2px 20px rgba(0,0,0,.18)!important}
+.nav-logo{font-family:var(--font-h,var(--font-serif,'Cormorant Garamond',Georgia,serif))!important;font-size:22px!important;font-weight:700!important;color:#fff!important;text-decoration:none!important;letter-spacing:-.01em!important;margin-right:auto!important;flex-shrink:0!important;line-height:1!important}
+.nav-logo em{font-style:italic!important;color:var(--c-secondary,var(--gold,#c47832))!important}
+.nav-links{display:flex!important;align-items:center!important;gap:0!important;list-style:none!important;margin:0 0 0 auto!important;padding:0!important;position:static!important;width:auto!important;height:auto!important;background:transparent!important;box-shadow:none!important;overflow:visible!important}
+.nav-links li{list-style:none!important;position:relative!important;width:auto!important;margin:0!important;padding:0!important}
+.nav-links a{display:flex!important;align-items:center!important;justify-content:center!important;height:66px!important;min-height:0!important;padding:0 10px!important;border:0!important;border-radius:0!important;color:rgba(255,255,255,.78)!important;font-family:var(--font-b,var(--font-body,'DM Sans',sans-serif))!important;font-size:13px!important;font-weight:500!important;letter-spacing:.25px!important;text-decoration:none!important;white-space:nowrap!important;line-height:1.2!important;transition:color .2s,background .2s!important;transform:none!important}
+.nav-links a:hover{color:#fff!important;background:rgba(255,255,255,.07)!important;transform:none!important}
+.nav-phone{color:rgba(255,255,255,.68)!important;font-size:13px!important;padding:0 10px!important}
+.nav-tool{color:var(--c-secondary,var(--gold,#c47832))!important;border:1px solid rgba(196,120,50,.4)!important;border-radius:6px!important;height:34px!important;margin-left:6px!important;padding:0 12px!important}
+.nav-tool:hover{background:rgba(196,120,50,.14)!important;color:#e09040!important}
+.nav-cta{background:var(--c-accent,var(--accent,#8b2252))!important;color:#fff!important;height:36px!important;padding:0 16px!important;border-radius:6px!important;margin-left:8px!important;font-weight:600!important;border-bottom:0!important}
+.nav-cta:hover{background:#721c45!important;color:#fff!important}
+.hamburger{display:none;flex-direction:column;justify-content:center;gap:5px;width:38px;height:38px;background:transparent;border:0;padding:4px;cursor:pointer;z-index:1100;flex-shrink:0}
+.hamburger span{display:block;width:100%;height:2px;background:#fff;border-radius:2px;transition:transform .25s,opacity .25s}
+.hamburger.active span:nth-child(1),.hamburger.open span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+.hamburger.active span:nth-child(2),.hamburger.open span:nth-child(2){opacity:0}
+.hamburger.active span:nth-child(3),.hamburger.open span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+@media(max-width:900px){.nav{height:64px!important;padding:0 22px!important;position:sticky!important}.hamburger{display:flex!important}.nav-links{position:fixed!important;top:0!important;right:-100%!important;z-index:1000!important;width:min(320px,82vw)!important;height:100vh!important;background:var(--c-dark,var(--dark,#0c1b2e))!important;flex-direction:column!important;align-items:flex-start!important;padding:88px 24px 40px!important;box-shadow:-8px 0 40px rgba(0,0,0,.28)!important;transition:right .3s ease!important;overflow-y:auto!important}.nav-links.open,.nav-links.active{right:0!important}.nav-links li{width:100%!important}.nav-links a{width:100%!important;height:auto!important;min-height:48px!important;padding:13px 0!important;justify-content:flex-start!important;border-bottom:1px solid rgba(255,255,255,.07)!important;font-size:15px!important}.nav-phone{font-size:15px!important}.nav-tool{margin-left:0!important;border:0!important;border-radius:0!important;height:auto!important}.nav-cta{margin:16px 0 0 0!important;justify-content:center!important;border-bottom:0!important;border-radius:6px!important;min-height:52px!important;width:100%!important}}
+</style>
+<style id="site-updates-strip">
+/* Compact current updates carousel */
+.site-updates{background:#f7f3ed;border-bottom:1px solid rgba(12,27,46,.1);overflow:hidden;position:relative;z-index:20}
+.site-updates-inner{display:grid;grid-template-columns:auto minmax(0,1fr);align-items:center;gap:18px;min-height:74px;padding:12px 0 12px 40px}
+.site-updates-label{display:flex;flex-direction:column;justify-content:center;gap:2px;min-width:142px;color:var(--c-dark,var(--navy,#0c1b2e));font-family:var(--font-b,var(--font-body,'DM Sans',sans-serif))}
+.site-updates-label span:first-child{font-size:10px;font-weight:800;letter-spacing:.16em;text-transform:uppercase;color:var(--c-accent,var(--accent,#8b2252))}
+.site-updates-label span + span{font-size:13px;font-weight:700;line-height:1.2}
+.site-updates-viewport{position:relative;overflow:hidden;padding:2px 0}
+.site-updates-viewport::before,.site-updates-viewport::after{content:'';position:absolute;top:0;width:min(9vw,96px);height:100%;z-index:2;pointer-events:none}.site-updates-viewport::before{left:0;background:linear-gradient(90deg,#f7f3ed,rgba(247,243,237,0))}.site-updates-viewport::after{right:0;background:linear-gradient(270deg,#f7f3ed,rgba(247,243,237,0))}
+.site-updates-track{display:flex;width:max-content;gap:12px;animation:siteUpdatesScroll 58s linear infinite;will-change:transform}.site-updates:hover .site-updates-track{animation-play-state:paused}
+.site-update-card{display:inline-flex;align-items:center;gap:10px;min-height:46px;padding:9px 14px;border:1px solid rgba(12,27,46,.12);border-radius:8px;background:#fff;color:var(--c-body,#374151);box-shadow:0 6px 18px rgba(12,27,46,.07);text-decoration:none;white-space:nowrap;font-family:var(--font-b,var(--font-body,'DM Sans',sans-serif));transition:transform .2s ease,border-color .2s ease,box-shadow .2s ease}
+.site-update-card:hover{transform:translateY(-1px);border-color:rgba(196,120,50,.38);box-shadow:0 10px 24px rgba(12,27,46,.11)}
+.site-update-type{font-size:10px;font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:var(--c-secondary,var(--gold,#c47832))}.site-update-title{font-size:13px;font-weight:800;color:var(--c-dark,var(--navy,#0c1b2e))}.site-update-meta{font-size:12px;color:#667085}.site-update-dot{width:4px;height:4px;border-radius:50%;background:rgba(12,27,46,.28);flex:0 0 auto}
+@keyframes siteUpdatesScroll{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+@media(max-width:900px){.site-updates-inner{grid-template-columns:1fr;gap:8px;min-height:0;padding:12px 0 12px 20px}.site-updates-label{min-width:0;flex-direction:row;align-items:center;gap:10px}.site-updates-label span + span{font-size:12px}.site-updates-track{animation-duration:46s}.site-update-card{min-height:42px;padding:8px 12px}.site-update-title{font-size:12px}.site-update-meta{font-size:11px}}
+@media(prefers-reduced-motion:reduce){.site-updates-track{animation:none;flex-wrap:nowrap;overflow-x:auto;width:auto;padding-right:20px}.site-updates-viewport{overflow-x:auto}.site-updates-viewport::before,.site-updates-viewport::after{display:none}}
+</style>
+<link rel="stylesheet" href="/assets/site-footer.css">
+<link rel="stylesheet" href="/assets/global.css">
+</head>
+<body>
+<a href="#main-content" class="skip-link">Skip to main content</a>
+
+<!-- NAV -->
+<nav class="nav" id="navbar">
+  <a href="/" class="nav-logo nav-logo-text">Husni<em>Halim</em></a>
+
+  <ul class="nav-links" id="navLinks">
+    <li><a href="/consulting/">Consulting</a></li>
+    <li><a href="/hrdc-training/">Training</a></li>
+    <li><a href="/portfolio/">Results</a></li>
+    <li><a href="/blog/">Insights</a></li>
+    <li><a href="/oee-calculator/" class="nav-tool">OEE Tool</a></li>
+    <li><a href="/#contact" class="nav-cta">Book a Call</a></li>
+  </ul>
+
+  <button class="hamburger" id="hamburger" aria-label="Toggle navigation" aria-expanded="false">
+    <span></span><span></span><span></span>
+  </button>
+  <div class="nav-backdrop" id="navBackdrop"></div>
+</nav>
+<section class="site-updates" aria-label="Current updates from Husni Halim">
+  <div class="site-updates-inner">
+    <div class="site-updates-label"><span>Current Updates</span></div>
+    <div class="site-updates-viewport">
+      <div class="site-updates-track">
+        <a class="site-update-card" href="/kaizenchampion/"><span class="site-update-type">Program</span><span class="site-update-title">Kaizen Champion Development Program</span><span class="site-update-dot"></span><span class="site-update-meta">Public cohort or in-house delivery</span></a>
+        <a class="site-update-card" href="/hrdc-training/"><span class="site-update-type">Training</span><span class="site-update-title">HRDC Claimable In-House Training</span><span class="site-update-dot"></span><span class="site-update-meta">OEE · Kaizen · 5S · TPM · Lean</span></a>
+        <a class="site-update-card" href="/blog/oee-training-malaysia/"><span class="site-update-type">Blog</span><span class="site-update-title">OEE Training Malaysia Guide</span><span class="site-update-dot"></span><span class="site-update-meta">For manufacturing leaders</span></a>
+        <a class="site-update-card" href="/#contact"><span class="site-update-type">Consulting</span><span class="site-update-title">Free Manufacturing Assessment</span><span class="site-update-dot"></span><span class="site-update-meta">Start with the floor, not slides</span></a>
+        <a class="site-update-card" href="/hrdc-training/ai-industry-4-0/"><span class="site-update-type">New Offer</span><span class="site-update-title">AI for Industry 4.0 Training</span><span class="site-update-dot"></span><span class="site-update-meta">Practical manufacturing use cases</span></a>
+        <a class="site-update-card" href="/kaizenchampion/"><span class="site-update-type">Program</span><span class="site-update-title">Kaizen Champion Development Program</span><span class="site-update-dot"></span><span class="site-update-meta">Public cohort or in-house delivery</span></a>
+        <a class="site-update-card" href="/hrdc-training/"><span class="site-update-type">Training</span><span class="site-update-title">HRDC Claimable In-House Training</span><span class="site-update-dot"></span><span class="site-update-meta">OEE · Kaizen · 5S · TPM · Lean</span></a>
+        <a class="site-update-card" href="/blog/oee-training-malaysia/"><span class="site-update-type">Blog</span><span class="site-update-title">OEE Training Malaysia Guide</span><span class="site-update-dot"></span><span class="site-update-meta">For manufacturing leaders</span></a>
+        <a class="site-update-card" href="/#contact"><span class="site-update-type">Consulting</span><span class="site-update-title">Free Manufacturing Assessment</span><span class="site-update-dot"></span><span class="site-update-meta">Start with the floor, not slides</span></a>
+        <a class="site-update-card" href="/hrdc-training/ai-industry-4-0/"><span class="site-update-type">New Offer</span><span class="site-update-title">AI for Industry 4.0 Training</span><span class="site-update-dot"></span><span class="site-update-meta">Practical manufacturing use cases</span></a>
+      </div>
+    </div>
+  </div>
+</section>
+<main id="main-content">
+
+
+<!-- PAGE HERO -->
+<section class="page-hero" id="hero">
+ <div class="hero-inner">
+  <div class="page-label">Free Tool</div>
+  <h1>OEE <em>Calculator</em></h1>
+  <p class="hero-tagline">Most factories lose up to 40% of productive capacity without realising it. Find out exactly where your line stands — compared to your industry benchmark — in under 2 minutes.</p>
+  <div class="hero-pills">
+   <span class="hero-pill">⏱ 2-minute calculator</span>
+   <span class="hero-pill">📊 Industry benchmark included</span>
+   <span class="hero-pill">💰 Financial impact analysis</span>
+   <span class="hero-pill">🔒 Free — no credit card</span>
+  </div>
+  <button class="btn-start" onclick="startWizard()">Calculate My OEE Now →</button>
+ </div>
+</section>
+
+<!-- QUICK ANSWER -->
+<section style="background:#fff;border-bottom:1px solid var(--border);padding:26px 20px;">
+ <div style="max-width:980px;margin:0 auto;">
+  <p style="font-size:16px;line-height:1.8;color:#475569;margin:0;"><strong style="color:var(--navy);">Quick answer:</strong> OEE is calculated as Availability x Performance x Quality. It shows how much planned production time becomes good output at the expected speed. If your OEE is low, use the score to identify whether the line is losing capacity through downtime, speed loss, quality loss, changeover, minor stops or rework. For a deeper floor review, see <a href="/production-line-improvement-malaysia/" style="color:var(--gold);font-weight:700;">production line improvement in Malaysia</a>.</p>
+ </div>
+</section>
+
+<!-- CALCULATOR WIZARD -->
+<div class="calc-section">
+<div id="wizard" style="display:none;">
+<div class="wizard-wrap">
+
+ <!-- Progress -->
+ <div class="prog-row">
+  <span id="prog-label">Step 1 of 5</span>
+  <span id="prog-pct">20%</span>
+ </div>
+ <div class="prog-track">
+  <div class="prog-fill" id="prog-fill" style="width:20%"></div>
+ </div>
+
+ <!-- ──────── STEP 1 · Industry ──────── -->
+ <div class="step active" id="s1">
+  <div class="card">
+   <div class="step-eyebrow"><div class="eyebrow-dot">1</div> Getting Started</div>
+   <div class="step-title">Let's set your baseline</div>
+   <div class="step-sub">Selecting your industry ensures you're compared to the right benchmark — OEE targets vary significantly between sectors.</div>
+
+   <div class="field">
+    <div class="field-label">Your Industry</div>
+    <div class="input-wrap">
+     <select id="industry">
+      <option value="">— Select your industry —</option>
+      <option value="automotive">Automotive</option>
+      <option value="food_bev">Food &amp; Beverage</option>
+      <option value="pharma">Pharmaceutical</option>
+      <option value="packaging">Packaging</option>
+      <option value="electronics">Electronics / PCB Assembly</option>
+      <option value="plastics">Plastics &amp; Rubber</option>
+      <option value="metal">Metal Fabrication &amp; Machining</option>
+      <option value="chemical">Chemical Processing</option>
+      <option value="printing">Printing &amp; Publishing</option>
+      <option value="textile">Textile &amp; Apparel</option>
+      <option value="general">General / Other Manufacturing</option>
+     </select>
+    </div>
+    <div class="err" id="e-industry">Please select your industry to continue.</div>
+   </div>
+
+   <div class="field">
+    <div class="field-label">Company Name <span class="opt">(optional)</span></div>
+    <div class="input-wrap">
+     <input type="text" id="company" placeholder="e.g. Acme Industries Sdn Bhd">
+    </div>
+   </div>
+
+   <!-- Financial context -->
+   <div style="background:var(--cream);border:1px solid var(--warm);border-radius:12px;padding:18px 16px;margin-bottom:22px;">
+    <div style="font-size:12px;font-weight:800;text-transform:uppercase;letter-spacing:.7px;color:var(--gold);margin-bottom:14px;">
+     💰 Optional — for financial impact calculation
+    </div>
+    <div style="font-size:13px;color:var(--muted);margin-bottom:16px;line-height:1.55;">
+     Enter these three numbers now and we'll automatically show you what every 1% of OEE is worth — per shift and per year — in your results.
+    </div>
+
+    <div class="field" style="margin-bottom:14px;">
+     <div class="field-label">Revenue per Shift <span class="opt">(optional)</span></div>
+     <div class="input-wrap">
+      <div class="unit-badge" style="border-left:none;border-right:2px solid var(--border);">$</div>
+      <input type="number" id="rev-shift" min="0" placeholder="e.g. 50,000">
+     </div>
+     <button class="info-toggle" onclick="flip('ip-rev')">ℹ️ How do I estimate this?</button>
+     <div class="info-panel" id="ip-rev">
+      This is the total revenue (or value of output) your production line generates in a single shift when running normally.
+      <div class="info-example">
+       <strong>Example:</strong> Your line produces 1,800 units × average selling price of $28 = <strong>$50,400 per shift</strong>.
+      </div>
+     </div>
+    </div>
+
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;">
+     <div class="field" style="margin:0;">
+      <div class="field-label">Shifts per Day <span class="opt">(optional)</span></div>
+      <div class="input-wrap">
+       <input type="number" id="shifts-day" min="1" max="3" placeholder="e.g. 2">
+       <div class="unit-badge">shifts</div>
+      </div>
+     </div>
+     <div class="field" style="margin:0;">
+      <div class="field-label">Working Days / Year <span class="opt">(optional)</span></div>
+      <div class="input-wrap">
+       <input type="number" id="work-days" min="1" max="365" placeholder="e.g. 250">
+       <div class="unit-badge">days</div>
+      </div>
+     </div>
+    </div>
+    <div style="font-size:11px;color:var(--muted);margin-top:10px;">Typical defaults: 2 shifts/day · 250 working days/year.</div>
+   </div>
+
+   <div class="info-panel on" style="margin-top:0;">
+    <strong>💡 What is OEE?</strong><br>
+    OEE (Overall Equipment Effectiveness) is the manufacturing world's gold-standard metric for productivity. It answers one question: <em>of all the time your line is planned to run, how much is truly productive?</em>
+    <br><br>
+    <strong>OEE = Availability × Performance × Quality</strong>
+    <br><br>
+    A score of 100% means perfect production — zero downtime, full speed, zero defects. World-class manufacturers typically achieve around 85%. Most first-time measurements land between 40–60%, which means significant untapped capacity.
+   </div>
+  </div>
+
+  <div class="btn-row">
+   <button class="btn btn-primary" onclick="go(1)">Next: Availability →</button>
+  </div>
+ </div>
+
+ <!-- ──────── STEP 2 · Availability ──────── -->
+ <div class="step" id="s2">
+  <div class="card">
+   <div class="step-eyebrow"><div class="eyebrow-dot">2</div> Component 1 of 3</div>
+   <div class="step-title">⏱ Availability</div>
+   <div class="step-sub">Measures how often your equipment is actually running versus how often it was <em>supposed</em> to run. Captures all unplanned stoppages.</div>
+
+   <div class="formula-bar">
+    <div class="fbox active"><span class="fbox-val" id="fv-a1">—</span><span class="fbox-lbl">Availability</span></div>
+    <div class="fop">×</div>
+    <div class="fbox"><span class="fbox-val">—</span><span class="fbox-lbl">Performance</span></div>
+    <div class="fop">×</div>
+    <div class="fbox"><span class="fbox-val">—</span><span class="fbox-lbl">Quality</span></div>
+   </div>
+
+   <div class="field">
+    <div class="field-label">Planned Production Time</div>
+    <div class="input-wrap">
+     <input type="number" id="planned" min="1" placeholder="e.g. 480" oninput="liveAvail()">
+     <div class="unit-badge">minutes / shift</div>
+    </div>
+    <button class="info-toggle" onclick="flip('ip1')">ℹ️ How do I find this number?</button>
+    <div class="info-panel" id="ip1">
+     This is the total time your line is <strong>scheduled to operate</strong> during the shift — after subtracting planned breaks, scheduled maintenance, and changeovers already in the schedule.
+     <div class="info-example">
+      <strong>Example:</strong> 8-hour shift = 480 minutes. If your schedule allows 30 min of breaks, enter 450.
+     </div>
+    </div>
+    <div class="err" id="e-planned">Please enter a valid planned production time.</div>
+   </div>
+
+   <div class="field">
+    <div class="field-label">Total Unplanned Downtime</div>
+    <div class="input-wrap">
+     <input type="number" id="downtime" min="0" placeholder="e.g. 60" oninput="liveAvail()">
+     <div class="unit-badge">minutes</div>
+    </div>
+    <button class="info-toggle" onclick="flip('ip2')">ℹ️ How do I find this number?</button>
+    <div class="info-panel" id="ip2">
+     The total time the machine was <strong>unexpectedly stopped</strong> during the shift — breakdowns, waiting for materials, operator unavailability, jams, etc.
+     <br><br>
+     <strong>Not sure?</strong> Think back to the biggest stoppages during a typical shift. If you don't track it yet, estimate — you can refine this later.
+     <div class="info-example">
+      <strong>Example:</strong> Conveyor jam: 25 min + Waiting for materials: 20 min + Operator call: 15 min = <strong>60 min downtime</strong>.
+     </div>
+    </div>
+    <div class="err" id="e-downtime">Downtime cannot exceed planned production time.</div>
+   </div>
+  </div>
+
+  <div class="btn-row">
+   <button class="btn btn-back" onclick="back(2)">← Back</button>
+   <button class="btn btn-primary" onclick="go(2)">Next: Performance →</button>
+  </div>
+ </div>
+
+ <!-- ──────── STEP 3 · Performance ──────── -->
+ <div class="step" id="s3">
+  <div class="card">
+   <div class="step-eyebrow"><div class="eyebrow-dot">3</div> Component 2 of 3</div>
+   <div class="step-title">⚡ Performance</div>
+   <div class="step-sub">When the machine was running, was it running at <em>full speed</em>? This captures speed losses, minor stops, and reduced cycle rates.</div>
+
+   <div class="formula-bar">
+    <div class="fbox"><span class="fbox-val" id="fv-a2">—</span><span class="fbox-lbl">Availability</span></div>
+    <div class="fop">×</div>
+    <div class="fbox active"><span class="fbox-val" id="fv-p2">—</span><span class="fbox-lbl">Performance</span></div>
+    <div class="fop">×</div>
+    <div class="fbox"><span class="fbox-val">—</span><span class="fbox-lbl">Quality</span></div>
+   </div>
+
+   <div class="field">
+    <div class="field-label">Ideal (Maximum) Production Rate</div>
+    <div class="input-wrap">
+     <input type="number" id="ideal-rate" min="1" placeholder="e.g. 2,400" oninput="livePerf()">
+     <div class="unit-badge">units / shift</div>
+    </div>
+    <button class="info-toggle" onclick="flip('ip3')">ℹ️ How do I find this number?</button>
+    <div class="info-panel" id="ip3">
+     This is the <strong>maximum number of units your machine could produce in a full shift</strong> if it ran perfectly — no stoppages, no slowdowns, full speed. Sometimes called "nameplate capacity."
+     <br><br>
+     Check your machine's specification sheet or manual. If the spec shows an hourly rate, multiply it by your planned shift hours.
+     <div class="info-example">
+      <strong>Example:</strong> Your filling machine runs at 300 bottles/hour. Your shift is 8 hours. Enter <strong>2,400</strong> (= 300 × 8).
+     </div>
+    </div>
+    <div class="err" id="e-ideal">Please enter the ideal production rate.</div>
+   </div>
+
+   <!-- Live capacity breakdown -->
+   <div id="capacity-breakdown" style="display:none;background:#fdf8f0;border:1px solid #e8d5b0;border-radius:12px;padding:16px 18px;margin-bottom:22px;">
+    <div style="font-size:12px;font-weight:800;text-transform:uppercase;letter-spacing:.6px;color:var(--gold);margin-bottom:12px;">📊 Your Shift Capacity — Based on Your Inputs</div>
+    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:10px;text-align:center;">
+     <div style="background:var(--white);border-radius:8px;padding:12px 8px;border:1px solid var(--warm);">
+      <div style="font-size:20px;font-weight:900;color:var(--navy);" id="cb-ideal">—</div>
+      <div style="font-size:10px;font-weight:700;text-transform:uppercase;color:var(--muted);margin-top:3px;">Ideal Full-Shift Max</div>
+     </div>
+     <div style="background:var(--white);border-radius:8px;padding:12px 8px;border:1px solid #fed7aa;">
+      <div style="font-size:20px;font-weight:900;color:var(--amber);" id="cb-lost">—</div>
+      <div style="font-size:10px;font-weight:700;text-transform:uppercase;color:var(--muted);margin-top:3px;">Lost to Downtime</div>
+     </div>
+     <div style="background:#fdf8f0;border-radius:8px;padding:12px 8px;border:2px solid var(--gold);">
+      <div style="font-size:20px;font-weight:900;color:var(--navy);" id="cb-max">—</div>
+      <div style="font-size:10px;font-weight:700;text-transform:uppercase;color:var(--gold);margin-top:3px;">Your Actual Max</div>
+     </div>
+    </div>
+    <div style="font-size:12px;color:#7a4f1a;margin-top:12px;line-height:1.6;" id="cb-note">
+     Your actual production capacity this shift is reduced by your downtime. Enter your actual output below.
+    </div>
+   </div>
+
+   <div class="field">
+    <div class="field-label">Total Units Produced This Shift</div>
+    <div class="input-wrap">
+     <input type="number" id="total-units" min="1" placeholder="e.g. 1,850" oninput="livePerf()">
+     <div class="unit-badge">units / shift</div>
+    </div>
+    <button class="info-toggle" onclick="flip('ip4')">ℹ️ How do I find this number?</button>
+    <div class="info-panel" id="ip4">
+     The <strong>total count of everything produced</strong> during the shift — both good units and any rejects or defective parts. You'll separate out the good ones in the next step.
+     <div class="info-example">
+      <strong>Example:</strong> Shift counter at end of day: <strong>580 units</strong> (including 12 that failed QC).
+     </div>
+    </div>
+    <div class="err" id="e-total">Please enter the total units produced.</div>
+   </div>
+
+   <!-- Performance context note -->
+   <div id="perf-note" style="display:none;border-radius:10px;padding:12px 14px;font-size:13px;line-height:1.6;margin-top:4px;"></div>
+  </div>
+
+  <div class="btn-row">
+   <button class="btn btn-back" onclick="back(3)">← Back</button>
+   <button class="btn btn-primary" onclick="go(3)">Next: Quality →</button>
+  </div>
+ </div>
+
+ <!-- ──────── STEP 4 · Quality ──────── -->
+ <div class="step" id="s4">
+  <div class="card">
+   <div class="step-eyebrow"><div class="eyebrow-dot">4</div> Component 3 of 3</div>
+   <div class="step-title">✅ Quality</div>
+   <div class="step-sub">Of everything produced, how much was good on the <em>first attempt</em>? Reworked units that eventually pass still count as quality losses.</div>
+
+   <div class="formula-bar">
+    <div class="fbox"><span class="fbox-val" id="fv-a3">—</span><span class="fbox-lbl">Availability</span></div>
+    <div class="fop">×</div>
+    <div class="fbox"><span class="fbox-val" id="fv-p3">—</span><span class="fbox-lbl">Performance</span></div>
+    <div class="fop">×</div>
+    <div class="fbox active"><span class="fbox-val" id="fv-q3">—</span><span class="fbox-lbl">Quality</span></div>
+   </div>
+
+   <div class="field">
+    <div class="field-label">Good Units (First-Pass, No Rework)</div>
+    <div class="input-wrap">
+     <input type="number" id="good-units" min="0" placeholder="e.g. 568" oninput="liveQual()">
+     <div class="unit-badge">good units</div>
+    </div>
+    <button class="info-toggle" onclick="flip('ip5')">ℹ️ How do I find this number?</button>
+    <div class="info-panel" id="ip5">
+     Count only units that <strong>passed quality inspection the first time</strong> — no touchups, no rework, no second chances. A reworked unit that eventually shipped still counts as a defect for OEE.
+     <div class="info-example">
+      <strong>Example:</strong> 580 total produced − 12 rejected/scrapped = <strong>568 good units</strong>.
+     </div>
+    </div>
+    <div class="err" id="e-good">Good units cannot exceed total units produced (<span id="total-reminder">—</span>).</div>
+   </div>
+
+   <!-- Live quality breakdown -->
+   <div style="background:#f0fdf4;border:1px solid #bbf7d0;border-radius:12px;padding:16px 18px;margin-top:4px;">
+    <div style="font-size:12px;font-weight:800;text-transform:uppercase;letter-spacing:.6px;color:#065f46;margin-bottom:12px;">📊 Your Quality Capacity — Based on Units Produced</div>
+    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:10px;text-align:center;">
+     <div style="background:var(--white);border-radius:8px;padding:12px 8px;border:1px solid #bbf7d0;">
+      <div style="font-size:20px;font-weight:900;color:#065f46;" id="qc-total">—</div>
+      <div style="font-size:10px;font-weight:700;text-transform:uppercase;color:var(--muted);margin-top:3px;">Total Units Produced</div>
+     </div>
+     <div style="background:var(--white);border-radius:8px;padding:12px 8px;border:1px solid #fecaca;">
+      <div style="font-size:20px;font-weight:900;color:var(--red);" id="qc-defects">—</div>
+      <div style="font-size:10px;font-weight:700;text-transform:uppercase;color:var(--muted);margin-top:3px;">Defects / Rejects</div>
+     </div>
+     <div style="background:#f0fdf4;border-radius:8px;padding:12px 8px;border:2px solid var(--green);">
+      <div style="font-size:20px;font-weight:900;color:var(--green);" id="qc-good">—</div>
+      <div style="font-size:10px;font-weight:700;text-transform:uppercase;color:#065f46;margin-top:3px;">Good Units (Max)</div>
+     </div>
+    </div>
+    <div style="font-size:12px;color:#065f46;margin-top:12px;line-height:1.6;" id="qc-note">
+     Maximum good units = <strong id="total-echo">—</strong> (your total units produced). Enter the number that <em>passed first-time</em> — rejects and reworked units do not count.
+    </div>
+   </div>
+  </div>
+
+  <div class="btn-row">
+   <button class="btn btn-back" onclick="back(4)">← Back</button>
+   <button class="btn btn-primary" onclick="go(4)">Almost Done →</button>
+  </div>
+ </div>
+
+ <!-- ──────── STEP 5 · Lead Capture ──────── -->
+ <div class="step" id="s5">
+  <div class="card">
+   <div class="step-eyebrow"><div class="eyebrow-dot">5</div> One Last Step</div>
+   <div class="step-title">Your results are ready! 🎉</div>
+   <div class="step-sub">Enter your details to unlock your personalised OEE report — including your industry benchmark and action recommendations.</div>
+
+   <div class="teaser-box">
+    <div class="teaser-lbl">Your OEE Score</div>
+    <div class="teaser-num" id="teaser-num">—%</div>
+    <div class="teaser-hint">Unlock your full report below ↓</div>
+   </div>
+
+   <div class="name-grid">
+    <div class="field" style="margin:0">
+     <div class="field-label">First Name</div>
+     <div class="input-wrap"><input type="text" id="fname" placeholder="Ahmad"></div>
+     <div class="err" id="e-fname">Required</div>
+    </div>
+    <div class="field" style="margin:0">
+     <div class="field-label">Last Name</div>
+     <div class="input-wrap"><input type="text" id="lname" placeholder="Razali"></div>
+     <div class="err" id="e-lname">Required</div>
+    </div>
+   </div>
+
+   <div class="field" style="margin-top:16px">
+    <div class="field-label">Work Email</div>
+    <div class="input-wrap"><input type="email" id="email" placeholder="ahmad@company.com.my"></div>
+    <div class="err" id="e-email">Please enter a valid email address.</div>
+   </div>
+
+   <div class="field">
+    <div class="field-label">Job Title <span class="opt">(optional)</span></div>
+    <div class="input-wrap"><input type="text" id="jobtitle" placeholder="e.g. Production Manager, Plant Engineer"></div>
+   </div>
+
+   <div class="tc-scroll">
+    <h4>Terms &amp; Conditions</h4>
+    1. <strong>Data Use:</strong> Your name, email, and calculator inputs will be used to deliver your OEE report and relevant manufacturing efficiency resources. We will not sell or share your data with third parties without your explicit consent.<br><br>
+    2. <strong>Communications:</strong> By submitting, you consent to receive educational content and occasional service updates from us. You may unsubscribe at any time, free of charge.<br><br>
+    3. <strong>Accuracy of Results:</strong> This calculator provides an estimate based on the data you enter. Results are for guidance and educational purposes only and do not constitute professional engineering advice.<br><br>
+    4. <strong>Benchmark Data:</strong> Industry benchmarks shown are based on published research and industry averages. Actual performance varies by specific process, equipment age, and operating conditions.<br><br>
+    5. <strong>Privacy:</strong> Your data is handled in accordance with applicable privacy regulations. You may request deletion of your information at any time by contacting us.<br><br>
+    6. <strong>No Liability:</strong> We accept no liability for decisions made based on this calculator's output. Always consult a qualified professional for implementation planning.
+   </div>
+
+   <div class="chk-row">
+    <input type="checkbox" id="tc">
+    <label for="tc">I have read and agree to the Terms &amp; Conditions, and I consent to receiving my OEE report and related resources by email.</label>
+   </div>
+   <div class="err" id="e-tc" style="margin-top:-14px;margin-bottom:16px">Please accept the terms to continue.</div>
+  </div>
+
+  <div class="btn-row">
+   <button class="btn btn-back" onclick="back(5)">← Back</button>
+   <button class="btn btn-primary" onclick="showResults()">🔓 Unlock My OEE Report</button>
+  </div>
+ </div>
+
+ <!-- ──────── STEP 6 · Results ──────── -->
+ <div class="step" id="s6">
+
+  <!-- Score Hero -->
+  <div class="score-hero">
+   <div class="score-lbl">YOUR OEE SCORE</div>
+   <div class="score-num" id="r-score">—%</div>
+   <div class="score-verdict" id="r-verdict">—</div>
+   <div class="score-context" id="r-context"></div>
+  </div>
+
+  <!-- Components -->
+  <div class="comp-grid">
+   <div class="comp-card" id="c-avail">
+    <span class="comp-score" id="cs-avail">—</span>
+    <div class="comp-name">Availability</div>
+    <div class="comp-status" id="cx-avail">—</div>
+   </div>
+   <div class="comp-card" id="c-perf">
+    <span class="comp-score" id="cs-perf">—</span>
+    <div class="comp-name">Performance</div>
+    <div class="comp-status" id="cx-perf">—</div>
+   </div>
+   <div class="comp-card" id="c-qual">
+    <span class="comp-score" id="cs-qual">—</span>
+    <div class="comp-name">Quality</div>
+    <div class="comp-status" id="cx-qual">—</div>
+   </div>
+  </div>
+
+  <!-- Benchmark -->
+  <div class="section-card">
+   <div class="section-title" id="bench-title">📊 Industry Benchmark</div>
+   <div class="bench-row">
+    <div class="bench-labels"><span class="bench-name">🔵 Your OEE</span><span class="bench-pct" id="b-yours">—</span></div>
+    <div class="bench-track"><div class="bench-fill fill-you" id="bb-yours" style="width:0%"></div></div>
+   </div>
+   <div class="bench-row">
+    <div class="bench-labels"><span class="bench-name">🟡 Industry Average</span><span class="bench-pct" id="b-avg">—</span></div>
+    <div class="bench-track"><div class="bench-fill fill-avg" id="bb-avg" style="width:0%"></div></div>
+   </div>
+   <div class="bench-row">
+    <div class="bench-labels"><span class="bench-name">🟢 World Class</span><span class="bench-pct" id="b-wc">—</span></div>
+    <div class="bench-track"><div class="bench-fill fill-wc" id="bb-wc" style="width:0%"></div></div>
+   </div>
+   <div id="bench-note"></div>
+  </div>
+
+  <!-- Insights -->
+  <div class="section-card">
+   <div class="section-title">🧠 What Your Score Means</div>
+   <div class="narrative" id="r-narrative">—</div>
+   <div id="r-weakness"></div>
+   <div class="loss-line" id="r-losses"></div>
+  </div>
+
+  <!-- Dollar Impact -->
+  <div class="dollar-card">
+   <div class="dollar-title">💰 What Is 1% OEE Worth to You?</div>
+   <div class="dollar-sub">Based on the revenue and schedule you entered — here's the financial value of improving your OEE by 1%, 5%, and 10%.</div>
+
+   <div id="dollar-fallback" style="display:none;margin-bottom:18px;">
+    <div style="font-size:13px;font-weight:700;color:rgba(255,255,255,.85);margin-bottom:8px;">Enter your revenue per shift to see the numbers:</div>
+    <div style="display:grid;grid-template-columns:2fr 1fr 1fr;gap:8px;">
+     <div class="dollar-input-wrap">
+      <span>$</span>
+      <input type="number" id="rps-fallback" placeholder="Revenue / shift" oninput="renderImpactTable()">
+     </div>
+     <div class="dollar-input-wrap">
+      <input type="number" id="spd-fallback" placeholder="Shifts/day" min="1" max="3" oninput="renderImpactTable()">
+     </div>
+     <div class="dollar-input-wrap">
+      <input type="number" id="wd-fallback" placeholder="Days/yr" min="1" oninput="renderImpactTable()">
+     </div>
+    </div>
+    <div style="font-size:11px;color:rgba(255,255,255,.5);margin-top:6px;">Revenue/shift · Shifts per day · Working days per year</div>
+   </div>
+
+   <div id="impact-table-wrap" style="display:none;">
+    <table id="impact-table" style="width:100%;border-collapse:collapse;font-size:14px;">
+     <thead>
+      <tr>
+       <th style="text-align:left;padding:8px 10px;font-size:11px;font-weight:800;text-transform:uppercase;letter-spacing:.5px;opacity:.65;border-bottom:1px solid rgba(255,255,255,.15);">OEE Improvement</th>
+       <th style="text-align:right;padding:8px 10px;font-size:11px;font-weight:800;text-transform:uppercase;letter-spacing:.5px;opacity:.65;border-bottom:1px solid rgba(255,255,255,.15);">Per Shift</th>
+       <th style="text-align:right;padding:8px 10px;font-size:11px;font-weight:800;text-transform:uppercase;letter-spacing:.5px;opacity:.65;border-bottom:1px solid rgba(255,255,255,.15);">Per Year</th>
+      </tr>
+     </thead>
+     <tbody id="impact-table-body"></tbody>
+    </table>
+    <div id="impact-note" style="font-size:11px;color:rgba(255,255,255,.5);margin-top:12px;line-height:1.6;"></div>
+   </div>
+
+   <div id="impact-no-revenue" style="font-size:13px;opacity:.6;font-style:italic;">
+    Fill in the revenue fields above to see your impact numbers.
+   </div>
+  </div>
+
+  <!-- CTA -->
+  <div class="cta-card">
+   <div class="cta-title">Ready to Turn Your OEE Around?</div>
+   <div class="cta-sub">Most manufacturers achieve a 10–20% OEE improvement within 90 days with focused, structured effort. Book a free floor assessment — I'll walk through your specific losses and give you a clear starting point.</div>
+   <div class="cta-btns">
+    <button class="btn-print-r" onclick="window.print()">🖨️ Print / Save Report</button>
+    <a class="btn-book" href="/consulting/" id="book-link">📅 Book Free Assessment</a>
+   </div>
+  </div>
+
+  <div class="reset-line">
+   Report sent to <strong id="r-email">your email</strong>. &nbsp;·&nbsp;
+   <a onclick="resetAll()">Calculate again →</a>
+  </div>
+
+  <!-- Disclaimer -->
+  <div style="margin-top:28px;background:var(--white);border:1px solid var(--warm);border-radius:14px;padding:24px 22px;">
+   <div style="display:flex;align-items:flex-start;gap:12px;">
+    <div style="font-size:20px;flex-shrink:0;margin-top:2px;">📋</div>
+    <div>
+     <div style="font-size:13px;font-weight:800;color:var(--text);margin-bottom:10px;text-transform:uppercase;letter-spacing:.5px;">
+      Important Disclaimer — Please Read
+     </div>
+     <div style="font-size:12px;color:var(--muted);line-height:1.8;">
+      <strong style="color:var(--text);">This is a simplified, educational OEE calculator.</strong>
+      It is designed to introduce the concept of Overall Equipment Effectiveness (OEE) to those who are new to manufacturing performance metrics, and to provide a general indication of where a production line may stand.
+      <br><br>
+      The results generated are based solely on the figures you entered and are intended for <strong style="color:var(--text);">awareness and learning purposes only</strong>. They do not represent a formal, certified, or audited assessment of any production facility, machine, or process.
+      <br><br>
+      <strong style="color:var(--text);">The following limitations apply:</strong>
+      <br><br>
+      <span style="display:block;padding-left:12px;border-left:2px solid var(--warm);margin-bottom:8px;">
+       <strong style="color:var(--text);">Industry benchmarks</strong> shown are broad averages drawn from published research (MESA International, ISA, and publicly available industry studies). Actual world-class and average OEE figures vary significantly depending on product mix, equipment age, process type, facility size, shift patterns, and management maturity. The benchmarks shown should not be treated as universal targets.
+      </span>
+      <span style="display:block;padding-left:12px;border-left:2px solid var(--warm);margin-bottom:8px;">
+       <strong style="color:var(--text);">Financial impact estimates</strong> are illustrative projections based on your stated revenue per shift. They assume a linear relationship between OEE improvement and revenue gain, which is a simplification. Real-world improvements depend on bottleneck analysis, capital availability, workforce capability, and other operational factors not captured here.
+      </span>
+      <span style="display:block;padding-left:12px;border-left:2px solid var(--warm);margin-bottom:8px;">
+       <strong style="color:var(--text);">OEE in practice</strong> is typically measured using data collected directly from machine counters, MES systems, or structured shop-floor logging over a meaningful period — not from a single shift estimate. A single data point may not reflect your true baseline performance.
+      </span>
+      <span style="display:block;padding-left:12px;border-left:2px solid var(--warm);">
+       <strong style="color:var(--text);">No liability</strong> is accepted for any decisions — operational, financial, or strategic — made on the basis of this calculator's output. For a reliable OEE assessment, we recommend working with a qualified manufacturing improvement professional who can conduct a structured on-site analysis.
+      </span>
+      <br>
+      This tool is provided free of charge as an educational resource. If your results surprise you — positively or negatively — we encourage you to treat them as a starting point for a deeper conversation, not as a definitive conclusion.
+     </div>
+    </div>
+   </div>
+  </div>
+
+ </div><!-- end step 6 -->
+
+</div><!-- end wizard-wrap -->
+</div><!-- end wizard -->
+</div><!-- end calc-section -->
+
+<!-- ═══════════════════ SEO CONTENT SECTION ═══════════════════ -->
+<section class="seo-content">
+ <div class="seo-inner">
+
+  <!-- INTRO -->
+  <div class="seo-intro">
+   <span class="seo-label">Understanding OEE</span>
+   <h2>What Is OEE — and Why Does Every Manufacturer Need to Track It?</h2>
+   <p>If you run a production facility, there is one number that cuts through all the noise and tells you, plainly, how well your factory is really performing. That number is <strong>OEE — Overall Equipment Effectiveness</strong>. It is the gold-standard KPI used by lean manufacturers, plant managers, and operations directors worldwide to measure and improve production efficiency.</p>
+   <p>Most factories assume they are running at 70–80% efficiency. When they calculate OEE properly for the first time, they discover the real number is often closer to 40–55%. The gap between perceived and actual productivity represents hundreds of thousands — sometimes millions — of ringgit in lost output every year. OEE makes that invisible loss visible.</p>
+  </div>
+
+  <!-- FORMULA -->
+  <div class="seo-formula-block">
+   <h3>The OEE Formula Explained</h3>
+   <p>OEE is calculated by multiplying three separate performance ratios together:</p>
+   <div class="formula-display">
+    <span class="f-term">Availability</span>
+    <span class="f-op">×</span>
+    <span class="f-term">Performance</span>
+    <span class="f-op">×</span>
+    <span class="f-term">Quality</span>
+    <span class="f-op">=</span>
+    <span class="f-result">OEE %</span>
+   </div>
+   <p>Each factor is expressed as a percentage, so a machine with 90% Availability, 95% Performance, and 99% Quality achieves an OEE of just 84.6% — and that is already considered world-class. In practice, most lines run at 50–60% OEE, which means nearly half of all planned production time produces no value whatsoever.</p>
+  </div>
+
+  <!-- THREE PILLARS -->
+  <h3>The Three Components of OEE</h3>
+  <div class="seo-three-cols">
+
+   <div class="seo-col">
+    <div class="seo-col-icon">⏱</div>
+    <h4>Availability</h4>
+    <p>Availability measures the proportion of planned production time that your equipment is actually running. It is reduced by any event that stops production for a meaningful period — unplanned breakdowns, changeovers that run long, waiting for materials, operator shortages, and scheduled maintenance that overruns.</p>
+    <p>A machine planned to run for 8 hours but stopped for 1.5 hours has an Availability of 81.25%. For most Malaysian manufacturers, unplanned downtime is the single biggest contributor to low OEE — and the most immediately fixable one.</p>
+   </div>
+
+   <div class="seo-col">
+    <div class="seo-col-icon">⚡</div>
+    <h4>Performance</h4>
+    <p>Performance captures how fast your equipment runs compared to its designed or ideal cycle time. Even when a machine is running, it may not be producing at full speed. Causes include minor stoppages (jams, sensor faults, material jams that self-clear), operators deliberately slowing machines to avoid defects, worn tooling that increases cycle time, and suboptimal machine settings.</p>
+    <p>Performance losses are the most under-reported category in manufacturing. Because the machine appears to be running, operators rarely log these events — yet they consistently account for 15–25% of total OEE loss in factories that have never done a proper time study.</p>
+   </div>
+
+   <div class="seo-col">
+    <div class="seo-col-icon">✅</div>
+    <h4>Quality</h4>
+    <p>Quality is the ratio of good units produced to total units started. It accounts for scrap, rework, and any product that does not meet specification on the first pass — including units produced during warm-up periods and process adjustments. If you produce 1,000 units but 80 are rejected or reworked, your Quality rate is 92%.</p>
+    <p>Poor first-pass quality is expensive in two ways: you consume material and machine time producing defective product, and then you spend additional time and labour either scrapping or reworking it. Every defect costs you twice.</p>
+   </div>
+
+  </div>
+
+  <!-- WHY IT MATTERS -->
+  <div class="seo-highlight-box">
+   <h3>Why OEE Matters More Than Any Other Manufacturing KPI</h3>
+   <p>There is no shortage of metrics in manufacturing — cycle time, yield, MTBF, MTTR, throughput, utilisation. Most of them measure one dimension of performance in isolation. OEE is different because it is a <em>composite</em> metric: it forces you to account for all three sources of loss simultaneously. A machine with excellent uptime but slow speed and poor quality will still show a low OEE. There is nowhere to hide.</p>
+   <p>This is why lean manufacturing practitioners, TPM (Total Productive Maintenance) programmes, and Industry 4.0 frameworks all treat OEE as a foundational KPI. It gives management a single, unambiguous number that reflects how much of the factory's potential is actually being realised — and it drives the right conversations about where to focus improvement effort.</p>
+   <p>Beyond the operational benefits, OEE has a direct financial implication. Every percentage point of OEE improvement represents additional output from the same asset base, without additional capital investment. For a line running 20 hours a day with a product value of RM 500 per hour, moving OEE from 55% to 65% — a 10-point improvement — adds RM 2,000 of output per day, or roughly RM 500,000 per year. That is the kind of return that no capital expenditure project can match.</p>
+  </div>
+
+  <!-- SIX BIG LOSSES -->
+  <h3>The Six Big Losses That Drive Down OEE</h3>
+  <p>The OEE framework was developed alongside Total Productive Maintenance (TPM) and identifies six categories of loss — three that affect each OEE component. Understanding which category is your biggest loss is the first step to improvement.</p>
+
+  <div class="seo-losses-grid">
+   <div class="loss-item loss-avail">
+    <span class="loss-tag">Availability Loss</span>
+    <h5>1. Breakdowns</h5>
+    <p>Unplanned equipment failures that stop production. The most visible and disruptive loss — and often the one that gets the most management attention, even when it is not the largest loss in percentage terms.</p>
+   </div>
+   <div class="loss-item loss-avail">
+    <span class="loss-tag">Availability Loss</span>
+    <h5>2. Setup &amp; Adjustments</h5>
+    <p>Time lost during planned changeovers, product switches, tooling changes, and any subsequent adjustments before the line runs stably again. SMED (Single Minute Exchange of Die) techniques can dramatically reduce this loss.</p>
+   </div>
+   <div class="loss-item loss-perf">
+    <span class="loss-tag">Performance Loss</span>
+    <h5>3. Minor Stoppages</h5>
+    <p>Brief interruptions — typically under 5 minutes — where the machine stops or idles and an operator restarts it without logging a formal downtime. Individually small, but collectively these account for enormous losses on high-speed lines.</p>
+   </div>
+   <div class="loss-item loss-perf">
+    <span class="loss-tag">Performance Loss</span>
+    <h5>4. Reduced Speed</h5>
+    <p>Any situation where the machine runs below its design speed or ideal cycle time. Often invisible because the machine is technically "running" — but it is producing less than it should. Detailed time studies are the only way to surface this loss accurately.</p>
+   </div>
+   <div class="loss-item loss-qual">
+    <span class="loss-tag">Quality Loss</span>
+    <h5>5. Startup &amp; Yield Losses</h5>
+    <p>Defects produced during the warm-up phase after a changeover or startup, before the process stabilises. Many plants fail to count these units against their quality rate, which inflates their reported OEE.</p>
+   </div>
+   <div class="loss-item loss-qual">
+    <span class="loss-tag">Quality Loss</span>
+    <h5>6. Production Defects &amp; Rework</h5>
+    <p>Scrap and rework produced during steady-state production. Even if defective units are successfully reworked and sold, the time and material consumed in rework is pure waste that reduces your effective OEE.</p>
+   </div>
+  </div>
+
+  <!-- BENCHMARKS -->
+  <h3>OEE Benchmarks: How Does Your Industry Compare?</h3>
+  <p>OEE benchmarks vary significantly by industry. A food and beverage line running at 60% OEE may be performing well given the complexity of their changeovers and cleaning requirements, while a dedicated automotive stamping press at 60% OEE would be considered a serious underperformer. The table below shows typical industry benchmarks for Malaysian and Southeast Asian manufacturers.</p>
+
+  <div class="bench-table-wrap">
+   <table class="bench-table">
+    <thead>
+     <tr><th>Industry</th><th>Average OEE</th><th>World-Class OEE</th></tr>
+    </thead>
+    <tbody>
+     <tr><td>Automotive</td><td>62%</td><td>85%</td></tr>
+     <tr><td>Food &amp; Beverage</td><td>48%</td><td>65%</td></tr>
+     <tr><td>Pharmaceutical</td><td>58%</td><td>80%</td></tr>
+     <tr><td>Electronics / PCB Assembly</td><td>55%</td><td>78%</td></tr>
+     <tr><td>Plastics &amp; Rubber</td><td>52%</td><td>72%</td></tr>
+     <tr><td>Metal Fabrication</td><td>55%</td><td>78%</td></tr>
+     <tr><td>Chemical Processing</td><td>62%</td><td>82%</td></tr>
+     <tr><td>Packaging</td><td>55%</td><td>75%</td></tr>
+     <tr><td>Textile &amp; Apparel</td><td>50%</td><td>68%</td></tr>
+     <tr><td>Printing &amp; Publishing</td><td>50%</td><td>72%</td></tr>
+    </tbody>
+   </table>
+  </div>
+
+  <p>If your OEE score is more than 15 points below your industry's world-class benchmark, you have a significant and addressable performance gap. The good news is that most of the improvement required does not come from capital investment — it comes from identifying and eliminating the specific losses that are dragging your number down.</p>
+
+  <!-- HOW TO IMPROVE -->
+  <div class="seo-steps">
+   <h3>How to Improve Your OEE: A Practical Starting Point</h3>
+   <p>Calculating your OEE score is the beginning, not the end. Here is the approach I use with manufacturing clients across Malaysia to turn an OEE number into a focused improvement plan.</p>
+
+   <div class="step-list">
+    <div class="step-item">
+     <div class="step-num">1</div>
+     <div class="step-body">
+      <h5>Establish an Honest Baseline</h5>
+      <p>Most factories do not know their real OEE because they are not capturing data consistently. The first step is to commit to logging every downtime event, speed reduction, and quality reject for a minimum of four consecutive weeks on your target line. Use this calculator to compute your current baseline, then use it again after one month of disciplined data collection — the results often differ substantially.</p>
+     </div>
+    </div>
+    <div class="step-item">
+     <div class="step-num">2</div>
+     <div class="step-body">
+      <h5>Identify Your Biggest Loss Category</h5>
+      <p>Look at your Availability, Performance, and Quality scores individually. The lowest score is almost always where the most improvement opportunity lies. Resist the temptation to work on all three simultaneously — focused effort on one loss category consistently outperforms a scattered approach across all three.</p>
+     </div>
+    </div>
+    <div class="step-item">
+     <div class="step-num">3</div>
+     <div class="step-body">
+      <h5>Use a Pareto Analysis to Find the Vital Few</h5>
+      <p>Within your biggest loss category, run a Pareto analysis on specific causes. If Availability is your main issue, list every downtime event by frequency and duration over the four weeks. In virtually every factory, 20% of the failure modes account for 80% of the total downtime. Fix those three or four root causes and your OEE will improve measurably without touching the others.</p>
+     </div>
+    </div>
+    <div class="step-item">
+     <div class="step-num">4</div>
+     <div class="step-body">
+      <h5>Implement Countermeasures Using a Structured Problem-Solving Method</h5>
+      <p>Use a structured tool — 5 Why analysis, A3 Problem Solving, or a basic Cause-and-Effect diagram — to get to the root cause of your top losses. Surface-level fixes (replacing a part, retraining an operator) often provide temporary relief but allow the same problem to recur. Root cause countermeasures last.</p>
+     </div>
+    </div>
+    <div class="step-item">
+     <div class="step-num">5</div>
+     <div class="step-body">
+      <h5>Set a Realistic Improvement Target and Review Monthly</h5>
+      <p>A sustainable OEE improvement programme targets 3–5 percentage points per quarter on a focused line. Set a specific target, review your OEE data every month, and adjust your actions based on what the data is telling you. OEE improvement is not a one-time project — it is an ongoing management discipline.</p>
+     </div>
+    </div>
+   </div>
+  </div>
+
+  <!-- FAQ -->
+  <div class="seo-faq">
+   <h3>Frequently Asked Questions About OEE</h3>
+
+   <details class="faq-item">
+    <summary>What is a good OEE score for my factory?</summary>
+    <p>World-class OEE is generally cited as 85% for discrete manufacturing, but this benchmark does not apply equally to all industries. A food and beverage plant with complex cleaning-in-place requirements and frequent SKU changeovers may consider 65% OEE world-class, while a single-product, high-volume automotive press should be targeting above 85%. Use the benchmark comparison in this calculator to assess your score against your specific industry rather than a generic global benchmark.</p>
+   </details>
+
+   <details class="faq-item">
+    <summary>What is the difference between OEE and utilisation?</summary>
+    <p>Utilisation measures what percentage of total calendar time the machine is running — it is the broadest measure and does not account for speed or quality. OEE is more precise: it measures only the planned production time (excluding scheduled maintenance, planned holidays, etc.) and within that time, it accounts for all three dimensions of loss — downtime, speed, and quality. A machine can have high utilisation but very low OEE if it runs slowly or produces many defects.</p>
+   </details>
+
+   <details class="faq-item">
+    <summary>Can OEE exceed 100%?</summary>
+    <p>In theory, OEE cannot exceed 100% because it is a measure of efficiency relative to ideal performance. However, if you set your ideal cycle time incorrectly (slower than the machine's true capability), your Performance score can exceed 100%, which inflates your OEE beyond 100%. This is a data quality issue — it means your ideal cycle time needs to be recalibrated based on actual machine capability.</p>
+   </details>
+
+   <details class="faq-item">
+    <summary>How often should I calculate OEE?</summary>
+    <p>For a meaningful operational KPI, OEE should ideally be calculated per shift or at minimum per day. Weekly or monthly OEE averages are useful for management reporting and trend analysis, but they hide the shift-to-shift variation that reveals the real causes of loss. If your data collection is manual, a weekly calculation using a structured log sheet is a practical starting point. Use this calculator to compute your OEE manually using your collected data before investing in automated monitoring systems.</p>
+   </details>
+
+   <details class="faq-item">
+    <summary>My OEE score is low. Where do I start?</summary>
+    <p>Start with the component that scored lowest — Availability, Performance, or Quality. Then spend two weeks doing nothing but observing and logging on that specific dimension. If Availability is lowest, log every downtime event with its duration and probable cause. If Performance is lowest, do a time study and count every micro-stop. Data quality is the foundation of OEE improvement. Once you have four weeks of clean data, a Pareto analysis will tell you exactly where to focus. If you want help interpreting your data and building a focused improvement plan, <a href="/consulting/">reach out for a floor assessment</a>.</p>
+   </details>
+
+  </div><!-- end faq -->
+
+ </div><!-- end seo-inner -->
+</section>
+
+<!-- FOOTER -->
+
+</main>
+<footer class="hh-footer">
+  <div class="hh-footer-inner">
+    <div class="hh-footer-grid">
+      <div class="hh-footer-col hh-footer-brand">
+        <a href="/" class="hh-footer-logo">Husni<em>Halim</em></a>
+        <p>Principal Consultant, Certified Process Kaizen Engineer, GSDC Certified in Global Leadership Excellence. Helping Malaysian manufacturers build a culture of continuous improvement.</p>
+        <p><strong>Visi Armada Consulting</strong><br>HRDC Registered Training Provider<br>Shah Alam, Selangor, Malaysia</p>
+        <div class="hh-footer-social">
+          <a href="https://www.linkedin.com/in/husni-halim-7436b01b/" target="_blank" rel="noopener" aria-label="LinkedIn"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/></svg></a>
+          <a href="https://wa.me/60165241901" target="_blank" rel="noopener" aria-label="WhatsApp"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg></a>
+        </div>
+      </div>
+
+      <div class="hh-footer-col">
+        <h4>Services</h4>
+        <ul>
+          <li><a href="/#about">About Husni</a></li>
+          <li><a href="/assessment/">Free Site Assessment</a></li>
+          <li><a href="/kaizenchampion/">Kaizen Champion Program</a></li>
+          <li><a href="/hrdc-training/">HRDC Training Programs</a></li>
+          <li><a href="/production-line-improvement-malaysia/">Production Line Improvement</a></li>
+          <li><a href="/consulting/">Consulting Engagement</a></li>
+          <li><a href="/oee-calculator/">Free OEE Calculator</a></li>
+        </ul>
+      </div>
+
+      <div class="hh-footer-col">
+        <h4>Training Topics</h4>
+        <ul>
+          <li><a href="/hrdc-training/kaizen/">Kaizen Principles</a></li>
+          <li><a href="/hrdc-training/5s/">5S &amp; Workplace Organisation</a></li>
+          <li><a href="/hrdc-training/oee/">OEE Improvement</a></li>
+          <li><a href="/hrdc-training/lean-manufacturing/">Value Stream Mapping</a></li>
+          <li><a href="/hrdc-training/problem-solving/">Root Cause Analysis</a></li>
+          <li><a href="/hrdc-training/tpm/">Total Productive Maintenance</a></li>
+        </ul>
+      </div>
+
+      <div class="hh-footer-col">
+        <h4>Contact</h4>
+        <ul class="hh-footer-contact-list">
+          <li><a href="https://wa.me/60165241901" target="_blank" rel="noopener"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>+60165241901</a></li>
+          <li><a href="mailto:admin@visiarmada.com">admin@visiarmada.com</a></li>
+          <li><a href="https://www.linkedin.com/in/husni-halim-7436b01b/" target="_blank" rel="noopener">LinkedIn Profile</a></li>
+          <li>Shah Alam, Selangor, Malaysia</li>
+        </ul>
+        <a href="/consulting/" class="hh-footer-cta">Book a Free Call</a>
+      </div>
+    </div>
+
+    <div class="hh-footer-bottom">
+      <p>&copy; 2026 Mohd Husni Bin Abd Halim &middot; Visi Armada Consulting. All rights reserved.</p>
+      <p>HRDC Registered Training Provider &middot; Trainer ID 11294</p>
+    </div>
+  </div>
+</footer>
+
+<!-- ═══════════════════ JAVASCRIPT (unchanged logic) ═══════════════════ -->
+<script>
+/* ── BENCHMARK DATA ── */
+const BENCH = {
+ automotive: { name:'Automotive',                  avg:62, wc:85 },
+ food_bev:   { name:'Food & Beverage',             avg:48, wc:65 },
+ pharma:     { name:'Pharmaceutical',              avg:58, wc:80 },
+ packaging:  { name:'Packaging',                   avg:55, wc:75 },
+ electronics:{ name:'Electronics / PCB Assembly',  avg:55, wc:78 },
+ plastics:   { name:'Plastics & Rubber',           avg:52, wc:72 },
+ metal:      { name:'Metal Fabrication',           avg:55, wc:78 },
+ chemical:   { name:'Chemical Processing',         avg:62, wc:82 },
+ printing:   { name:'Printing & Publishing',       avg:50, wc:72 },
+ textile:    { name:'Textile & Apparel',           avg:50, wc:68 },
+ general:    { name:'General Manufacturing',       avg:55, wc:80 }
+};
+
+const WEAK_INFO = {
+ availability:{
+  title:'⚠️ Availability is Your #1 Loss',
+  body:'Your machine is spending too much time unexpectedly stopped. Common causes: unplanned breakdowns, waiting for materials or operators, and tooling issues. Start by logging every downtime event for one week — most plants find 2–3 recurring issues they can fix quickly without capital investment.'
+ },
+ performance:{
+  title:'⚠️ Performance is Your #1 Loss',
+  body:'Your machine runs, but not at full speed. Typical causes: minor stoppages (jams, sensor trips), worn tooling causing slow cycles, or operators manually reducing speed to avoid quality issues. Shadow your line for one shift and count every micro-stop — the results are often eye-opening.'
+ },
+ quality:{
+  title:'⚠️ Quality is Your #1 Loss',
+  body:'Too many units are failing first-pass inspection. Root causes are usually upstream — raw material variation, machine parameters drifting out of tolerance, or inadequate process controls. Map where in your process defects are <em>created</em> (not just detected) and you\'ll find your leverage point.'
+ }
+};
+
+/* ── STATE ── */
+let S = { avail:0, perf:0, qual:0, oee:0, totalUnits:0, revShift:0, shiftsDay:0, workDays:0 };
+
+/* ── NAVIGATION ── */
+function startWizard(){
+ document.getElementById('hero').style.display='none';
+ document.getElementById('wizard').style.display='block';
+ window.scrollTo({top:0,behavior:'smooth'});
+}
+
+function showStep(n){
+ document.querySelectorAll('.step').forEach(s=>s.classList.remove('active'));
+ document.getElementById('s'+n).classList.add('active');
+ setProgress(n);
+ window.scrollTo({top:0,behavior:'smooth'});
+}
+
+function setProgress(n){
+ const total=5, pct=Math.round((Math.min(n,total)/total)*100);
+ document.getElementById('prog-fill').style.width=pct+'%';
+ document.getElementById('prog-pct').textContent=pct+'%';
+ document.getElementById('prog-label').textContent = n<=5 ? 'Step '+n+' of '+total : 'Your Report';
+ if(n===6){
+  document.getElementById('prog-fill').style.width='100%';
+  document.getElementById('prog-pct').textContent='100%';
+ }
+}
+
+function back(from){ showStep(from-1); }
+
+function go(from){
+ if(!validate(from)) return;
+ if(from===4){
+  const oee = Math.round(S.oee*100);
+  document.getElementById('teaser-num').textContent = oee+'%';
+  document.getElementById('total-reminder').textContent = document.getElementById('total-units').value||'—';
+  liveQual();
+ }
+ showStep(from+1);
+}
+
+/* ── VALIDATE ── */
+function validate(step){
+ let ok=true;
+ function show(id,cond){ const e=document.getElementById(id); cond?e.classList.add('on'):e.classList.remove('on'); if(cond)ok=false; }
+
+ if(step===1){ show('e-industry', !document.getElementById('industry').value); }
+ if(step===2){
+  const pt=+document.getElementById('planned').value;
+  const dt=+document.getElementById('downtime').value;
+  show('e-planned', !pt||pt<=0);
+  show('e-downtime', isNaN(dt)||dt<0||dt>pt);
+  if(ok){ S.avail=(pt-dt)/pt; updateFVs(); }
+ }
+ if(step===3){
+  const ir=+document.getElementById('ideal-rate').value;
+  const tu=+document.getElementById('total-units').value;
+  show('e-ideal', !ir||ir<=0);
+  show('e-total', !tu||tu<=0);
+  if(ok){ S.perf=Math.min(tu/(ir*S.avail),1); S.totalUnits=tu; updateFVs(); }
+ }
+ if(step===4){
+  const gu=+document.getElementById('good-units').value;
+  const tu=S.totalUnits;
+  show('e-good', isNaN(gu)||gu<0||gu>tu);
+  if(ok){ S.qual=gu/tu; S.oee=S.avail*S.perf*S.qual; updateFVs(); }
+ }
+ if(step===5){
+  const fn=document.getElementById('fname').value.trim();
+  const ln=document.getElementById('lname').value.trim();
+  const em=document.getElementById('email').value.trim();
+  const tc=document.getElementById('tc').checked;
+  show('e-fname',!fn); show('e-lname',!ln);
+  show('e-email',!em||!em.includes('@')||!em.includes('.'));
+  show('e-tc',!tc);
+ }
+ return ok;
+}
+
+/* ── LIVE CALCS ── */
+function liveAvail(){
+ const pt=+document.getElementById('planned').value;
+ const dt=+document.getElementById('downtime').value||0;
+ if(pt>0){ S.avail=Math.max(0,(pt-dt)/pt); document.getElementById('fv-a1').textContent=Math.round(S.avail*100)+'%'; }
+}
+
+function livePerf(){
+ const ir=+document.getElementById('ideal-rate').value;
+ const tu=+document.getElementById('total-units').value;
+ const note=document.getElementById('perf-note');
+ const cb=document.getElementById('capacity-breakdown');
+
+ if(ir>0&&S.avail>0){
+  const maxAchievable = Math.round(ir*S.avail);
+  const lostToDowntime = Math.round(ir*(1-S.avail));
+  document.getElementById('cb-ideal').textContent = ir.toLocaleString();
+  document.getElementById('cb-lost').textContent  = '− '+lostToDowntime.toLocaleString();
+  document.getElementById('cb-max').textContent   = maxAchievable.toLocaleString();
+  document.getElementById('cb-note').innerHTML =
+   `With <strong>${Math.round(S.avail*100)}% availability</strong>, your line lost <strong>${lostToDowntime.toLocaleString()} units</strong> of potential output to downtime. ` +
+   `Your realistic maximum this shift was <strong>${maxAchievable.toLocaleString()} units</strong>. ` +
+   `Enter your actual output below — we'll compare it against this number to calculate your Performance score.`;
+  cb.style.display='block';
+ } else {
+  cb.style.display='none';
+ }
+
+ if(ir>0&&tu>0&&S.avail>0){
+  const rawPerf = tu/(ir*S.avail);
+  S.perf=Math.min(rawPerf,1);
+  document.getElementById('fv-a2').textContent=Math.round(S.avail*100)+'%';
+  document.getElementById('fv-p2').textContent=Math.round(S.perf*100)+'%';
+
+  const expectedDuringRunTime = Math.round(ir*S.avail);
+  if(rawPerf>1){
+   note.style.display='block';
+   note.style.background='#f0fdf4';
+   note.style.border='1px solid #bbf7d0';
+   note.style.color='#14532d';
+   note.innerHTML=`✅ <strong>Why 100%?</strong> Performance is measured against your machine's expected output <em>during its actual run time</em>, not the full shift. With ${Math.round(S.avail*100)}% availability, the expected output during run time was <strong>${expectedDuringRunTime.toLocaleString()} units</strong>. You produced <strong>${tu.toLocaleString()} units</strong> — which means your machine actually ran slightly above ideal speed while it was running. Performance is capped at 100%.`;
+  } else if(rawPerf>=0.85){
+   note.style.display='block';
+   note.style.background='#f0fdf4';
+   note.style.border='1px solid #bbf7d0';
+   note.style.color='#14532d';
+   note.innerHTML=`✅ <strong>Good performance.</strong> During its actual run time, your machine was expected to produce <strong>${expectedDuringRunTime.toLocaleString()} units</strong>. You produced <strong>${tu.toLocaleString()} units</strong> — that's ${Math.round(rawPerf*100)}% of the ideal run-time output.`;
+  } else {
+   note.style.display='block';
+   note.style.background='#fff7ed';
+   note.style.border='1px solid #fed7aa';
+   note.style.color='#9a3412';
+   note.innerHTML=`⚠️ <strong>Speed loss detected.</strong> During its actual run time, your machine was expected to produce <strong>${expectedDuringRunTime.toLocaleString()} units</strong>. You produced <strong>${tu.toLocaleString()}</strong> — that's only ${Math.round(rawPerf*100)}% of the ideal run-time output. This gap is a Performance loss.`;
+  }
+ }
+}
+
+function liveQual(){
+ const gu=+document.getElementById('good-units').value;
+ const tu=S.totalUnits;
+
+ if(tu>0){
+  const defects = gu>=0 && gu<=tu ? tu-gu : null;
+  document.getElementById('qc-total').textContent = tu.toLocaleString();
+  document.getElementById('qc-good').textContent  = tu.toLocaleString();
+  document.getElementById('qc-defects').textContent = defects!==null ? defects.toLocaleString() : '—';
+  document.getElementById('total-echo').textContent = tu.toLocaleString();
+
+  const pct = gu>0&&gu<=tu ? Math.round((gu/tu)*100) : null;
+  document.getElementById('qc-note').innerHTML =
+   `Maximum good units = <strong>${tu.toLocaleString()}</strong> (your total produced). ` +
+   (pct!==null
+    ? `You entered <strong>${gu.toLocaleString()} good units</strong> — that's <strong>${pct}% first-pass yield</strong>. ` +
+      (defects>0 ? `${defects.toLocaleString()} unit${defects>1?'s were':' was'} rejected or reworked.` : '✅ Zero defects — excellent!')
+    : 'Enter your good units below — they cannot exceed the total units produced.');
+ }
+
+ if(gu>=0&&tu>0&&gu<=tu){
+  S.qual=gu/tu; S.oee=S.avail*S.perf*S.qual;
+  document.getElementById('fv-a3').textContent=Math.round(S.avail*100)+'%';
+  document.getElementById('fv-p3').textContent=Math.round(S.perf*100)+'%';
+  document.getElementById('fv-q3').textContent=Math.round(S.qual*100)+'%';
+ }
+}
+
+function updateFVs(){
+ ['a1','a2','a3'].forEach(id=>{ const el=document.getElementById('fv-'+id); if(el) el.textContent=Math.round(S.avail*100)+'%'; });
+ ['p2','p3'].forEach(id=>{ const el=document.getElementById('fv-'+id); if(el) el.textContent=Math.round(S.perf*100)+'%'; });
+ const q3=document.getElementById('fv-q3'); if(q3) q3.textContent=Math.round(S.qual*100)+'%';
+}
+
+/* ── SHOW RESULTS ── */
+function showResults(){
+ if(!validate(5)) return;
+
+ const oee=Math.round(S.oee*100);
+ const a=Math.round(S.avail*100);
+ const p=Math.round(S.perf*100);
+ const q=Math.round(S.qual*100);
+ const ind=document.getElementById('industry').value;
+ const bench=BENCH[ind];
+ const fname=document.getElementById('fname').value;
+ const email=document.getElementById('email').value;
+ const co=document.getElementById('company').value;
+
+ S.revShift  = +document.getElementById('rev-shift').value  || 0;
+ S.shiftsDay = +document.getElementById('shifts-day').value || 0;
+ S.workDays  = +document.getElementById('work-days').value  || 0;
+
+ let verdict;
+ if(oee>=bench.wc)          verdict='🏆 World Class Performance!';
+ else if(oee>=bench.avg+10) verdict='✅ Above Average — Keep Pushing';
+ else if(oee>=bench.avg)    verdict='📈 At Industry Average — Room to Grow';
+ else if(oee>=bench.avg-15) verdict='⚠️ Below Average — Action Needed';
+ else                       verdict='🚨 Significant Hidden Losses Detected';
+
+ document.getElementById('r-score').textContent=oee+'%';
+ document.getElementById('r-verdict').textContent=verdict;
+ document.getElementById('r-context').textContent=(co?co+' · ':'')+fname+"'s "+bench.name+' Production Line';
+
+ function cls(v){ return v>=85?'good':v>=65?'ok':'poor'; }
+ function lbl(v){ return v>=85?'Strong':v>=65?'Needs Work':'Critical'; }
+ [['avail',a],['perf',p],['qual',q]].forEach(([key,val])=>{
+  const c=cls(val);
+  document.getElementById('cs-'+key).textContent=val+'%';
+  document.getElementById('cs-'+key).className='comp-score '+c;
+  document.getElementById('c-'+key).className='comp-card '+c;
+  document.getElementById('cx-'+key).textContent=lbl(val);
+  document.getElementById('cx-'+key).className='comp-status '+c;
+ });
+
+ document.getElementById('bench-title').textContent='📊 How You Compare — '+bench.name;
+ document.getElementById('b-yours').textContent=oee+'%';
+ document.getElementById('b-avg').textContent=bench.avg+'%';
+ document.getElementById('b-wc').textContent=bench.wc+'%';
+ setTimeout(()=>{
+  document.getElementById('bb-yours').style.width=Math.min(oee,100)+'%';
+  document.getElementById('bb-avg').style.width=bench.avg+'%';
+  document.getElementById('bb-wc').style.width=bench.wc+'%';
+ },350);
+
+ const gap=bench.wc-oee, vsAvg=oee-bench.avg;
+ let note='';
+ if(vsAvg>0) note=`You are <strong>${vsAvg} points above</strong> the industry average for ${bench.name}. `;
+ else if(vsAvg<0) note=`You are <strong>${Math.abs(vsAvg)} points below</strong> the industry average for ${bench.name}. `;
+ else note=`You are right at the industry average for ${bench.name}. `;
+ note += gap>0
+  ? `Bridging the gap to world class (<strong>${bench.wc}%</strong>) would add <strong>${gap} points</strong> of productive capacity to your line.`
+  : `You have reached world-class OEE for your sector — outstanding work.`;
+ document.getElementById('bench-note').innerHTML=note;
+
+ const components={availability:a,performance:p,quality:q};
+ const weakest=Object.keys(components).reduce((a,b)=>components[a]<components[b]?a:b);
+ let narr=`Your production line is running at <strong>${oee}% OEE</strong>. In practical terms, for every 60 minutes of planned production time, only <strong>${Math.round(oee*0.6)} minutes</strong> are genuinely productive.`;
+ if(oee<50) narr+=` This is significantly below typical performance for ${bench.name}, but it also means there is substantial capacity waiting to be unlocked — often without major capital investment.`;
+ else if(oee<bench.avg) narr+=` This is below the ${bench.name} industry average of ${bench.avg}%. Focused improvements on your weakest component can typically close this gap within 3–6 months.`;
+ else if(oee<bench.wc) narr+=` You are performing at or above the ${bench.name} average (${bench.avg}%). The path to world class (${bench.wc}%) is realistic with a structured continuous improvement programme.`;
+ else narr+=` You have reached world-class OEE for ${bench.name}. The focus now shifts to sustaining results and driving incremental gains through advanced optimisation techniques.`;
+ document.getElementById('r-narrative').innerHTML=narr;
+
+ const wi=WEAK_INFO[weakest];
+ document.getElementById('r-weakness').innerHTML=`
+  <div class="alert-box">
+   <div class="alert-box-title">${wi.title}</div>
+   <div class="alert-box-body">${wi.body}</div>
+  </div>`;
+
+ document.getElementById('r-losses').innerHTML=
+  `<strong>Your three OEE losses:</strong>&nbsp;&nbsp;
+   Availability loss: <strong>${100-a}%</strong> &nbsp;·&nbsp;
+   Performance loss: <strong>${100-p}%</strong> &nbsp;·&nbsp;
+   Quality loss: <strong>${100-q}%</strong>`;
+
+ document.getElementById('r-email').textContent=email;
+ showStep(6);
+ renderImpactTable();
+
+ subscribeToMailerLite({
+  email, fname,
+  lname: document.getElementById('lname').value,
+  jobtitle: document.getElementById('jobtitle').value,
+  company: co,
+  industry: BENCH[ind]?.name || ind,
+  oee, availability: a, performance: p, quality: q
+ });
+}
+
+async function subscribeToMailerLite({ email, fname, lname, jobtitle, company, industry, oee, availability, performance, quality }) {
+ if (!email) return;
+ const payload = {
+  email,
+  fname,
+  lname,
+  jobtitle,
+  company,
+  industry,
+  oee,
+  availability,
+  performance,
+  quality,
+  group: 'oee',
+  source: 'oee-calculator'
+ };
+ try {
+  const res = await fetch('/api/subscribe', {
+   method: 'POST',
+   headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+   body: JSON.stringify(payload)
+  });
+  if (!res.ok) { const err = await res.json().catch(()=>({})); console.warn('MailerLite:', res.status, err?.error || ''); }
+ } catch(e) { console.warn('MailerLite subscription failed silently:', e.message); }
+}
+
+/* ── IMPACT TABLE ── */
+function renderImpactTable(){
+ const rev  = S.revShift  || +document.getElementById('rps-fallback').value || 0;
+ const spd  = S.shiftsDay || +document.getElementById('spd-fallback').value || 0;
+ const wd   = S.workDays  || +document.getElementById('wd-fallback').value  || 0;
+
+ const hasFallback = document.getElementById('dollar-fallback');
+ if(hasFallback) hasFallback.style.display = S.revShift > 0 ? 'none' : 'block';
+
+ const noRevEl   = document.getElementById('impact-no-revenue');
+ const tableWrap = document.getElementById('impact-table-wrap');
+
+ if(!rev || !spd || !wd){ noRevEl.style.display='block'; tableWrap.style.display='none'; return; }
+ noRevEl.style.display='none'; tableWrap.style.display='block';
+
+ const fmt = n => '$' + Math.round(n).toLocaleString('en-US');
+ const rows = [
+  { pct:1,  label:'1% OEE improvement',  note:'The minimum realistic target' },
+  { pct:5,  label:'5% OEE improvement',  note:'Achievable within 3–6 months', highlight:true },
+  { pct:10, label:'10% OEE improvement', note:'With a structured programme' }
+ ];
+
+ document.getElementById('impact-table-body').innerHTML = rows.map(r=>{
+  const perShift = rev * (r.pct/100);
+  const perYear  = perShift * spd * wd;
+  return `<tr class="impact-row${r.highlight?' highlight':''}">
+   <td class="impact-label">+${r.pct}% OEE<small>${r.note}</small></td>
+   <td class="impact-val">${fmt(perShift)}</td>
+   <td class="impact-val-yr">${fmt(perYear)}</td>
+  </tr>`;
+ }).join('');
+
+ document.getElementById('impact-note').innerHTML =
+  `Based on <strong>${fmt(rev)}/shift</strong> · <strong>${spd} shift${spd>1?'s':''}/day</strong> · <strong>${wd} working days/year</strong>. ` +
+  `Values represent additional revenue from recapturing lost productive capacity.`;
+}
+
+/* ── INFO FLIP ── */
+function flip(id){ document.getElementById(id).classList.toggle('on'); }
+
+/* ── RESET ── */
+function resetAll(){
+ document.getElementById('hero').style.display='block';
+ document.getElementById('wizard').style.display='none';
+ document.querySelectorAll('input,select').forEach(el=>{
+  if(el.type==='checkbox') el.checked=false;
+  else el.value='';
+ });
+ S={avail:0,perf:0,qual:0,oee:0,totalUnits:0,revShift:0,shiftsDay:0,workDays:0};
+ showStep(1);
+ window.scrollTo(0,0);
+}
+</script>
+
+<!-- OEE Guide: Long-form content for AI search and SEO -->
+<section id="oee-interpretation-guide" style="max-width:820px;margin:60px auto;padding:0 24px 60px;font-family:system-ui,sans-serif;color:#1a1a2e;line-height:1.7;">
+  <h2 style="font-size:1.75rem;font-weight:700;border-left:4px solid #c47832;padding-left:16px;margin-bottom:24px;">How to Interpret Your OEE Score: A Factory Manager's Guide</h2>
+
+  <div style="background:#f0f4ff;border-radius:10px;padding:20px 24px;margin-bottom:32px;">
+    <strong>Key Takeaways:</strong>
+    <ul style="margin:8px 0 0 20px;">
+      <li>World-class OEE is 85%+ — most Malaysian SMEs run at 40–60%</li>
+      <li>OEE below 65% means you are losing more than a third of your available production capacity</li>
+      <li>Availability losses are usually the biggest hidden cost</li>
+      <li>Don't just measure OEE — act on the losses it reveals</li>
+    </ul>
+  </div>
+
+  <h3 style="font-size:1.2rem;font-weight:700;margin-top:32px;">What Is a Good OEE Score?</h3>
+  <p>OEE (Overall Equipment Effectiveness) measures how much of your planned production time is truly productive. The global benchmark for world-class manufacturing is <strong>85% OEE</strong>. In Malaysian SME manufacturing, the average sits between 40–65% — which means most factories are wasting 35–60% of their production capacity without realising it.</p>
+  <p>Here's how to read your score:</p>
+  <ul style="margin:8px 0 0 20px;">
+    <li><strong>85%+</strong> — World-class. Rare in Malaysia except in MNC-run facilities.</li>
+    <li><strong>65–85%</strong> — Good. Losses exist but are manageable with targeted action.</li>
+    <li><strong>40–65%</strong> — Typical Malaysian SME. Significant improvement potential.</li>
+    <li><strong>Below 40%</strong> — Critical. Major structural or process issues need immediate attention.</li>
+  </ul>
+
+  <h3 style="font-size:1.2rem;font-weight:700;margin-top:32px;">Understanding the Three OEE Components</h3>
+  <p><strong>Availability (A)</strong> measures how often your equipment is actually running versus planned. The biggest killers: unplanned breakdowns, changeover time, and waiting for materials or operators. In my 16 years on Malaysian factory floors, Availability is almost always the biggest loss — especially in food & beverage and palm oil processing.</p>
+  <p><strong>Performance (P)</strong> measures how fast your equipment runs versus its ideal speed. Slow cycles, minor stoppages, and operator hesitation eat into Performance. This is where poor Standard Work and unclear SOPs show up in the numbers.</p>
+  <p><strong>Quality (Q)</strong> measures the proportion of output that meets spec on the first pass. Rework, scrap, and startup rejects all reduce Quality. A high OEE with low Quality is a false comfort — you're making defects efficiently.</p>
+
+  <h3 style="font-size:1.2rem;font-weight:700;margin-top:32px;">Why OEE in Malaysian SMEs Is Often Understated</h3>
+  <p>Most Malaysian factories I visit undercount their OEE losses in two ways. First, they only track planned downtime — scheduled maintenance and changeovers — and miss the "minor stoppages" that operators handle without logging. These micro-stops can add up to 2–3 hours per shift. Second, they use theoretical cycle times from the equipment manual, not the actual best-achieved rate from their own production data. Both errors make your OEE look better than it is.</p>
+
+  <h3 style="font-size:1.2rem;font-weight:700;margin-top:32px;">What to Do After You Calculate Your OEE</h3>
+  <p>Your OEE score is a starting point, not the answer. The value is in the breakdown. Once you have your A × P × Q numbers, find your single biggest loss category and run a focused Kaizen event on it. A 5% improvement in Availability on a RM2 million machine is worth more than any training budget.</p>
+  <p>If you want help interpreting your OEE results and identifying where your factory is losing the most, <a href="/consulting/" style="color:#c47832;font-weight:600;">book a free factory assessment</a>. We'll walk your floor with you and show you exactly where the losses are hiding.</p>
+  <p>For food manufacturing, start by separating cleaning, changeover, material waiting, slow running, rejects, rework, giveaway, and packing delays. These losses often sit in different departments, so the improvement work should connect OEE, TPM, quality, and <a href="/production-line-improvement-malaysia/" style="color:#c47832;font-weight:600;">production line improvement</a> rather than treating the calculator score as the final answer.</p>
+
+  <h3 style="font-size:1.2rem;font-weight:700;margin-top:32px;">Frequently Asked Questions About OEE</h3>
+  <p><strong>What is OEE in simple terms?</strong> OEE tells you what percentage of your planned production time is truly productive — no downtime, no slow running, no defects. 100% OEE means perfect production. Real-world best is around 85%.</p>
+  <p><strong>What causes low OEE in Malaysian factories?</strong> The most common causes I see: unplanned breakdowns from poor preventive maintenance, excessive changeover time from no SMED, slow cycle times from unclear Standard Work, and quality losses from inadequate process controls. All of these are fixable.</p>
+  <p><strong>Can HRDC training help improve OEE?</strong> Yes — our HRDC-claimable OEE and TPM training programmes teach your team to measure, analyse, and improve OEE systematically. Fully claimable under the SBL-Khas scheme.</p>
+</section>
+
+<!-- OEE Calculator Schema -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "HowTo",
+  "name": "How to Calculate and Interpret OEE for Malaysian Factories",
+  "description": "Step-by-step guide to calculating Overall Equipment Effectiveness (OEE) and interpreting results to improve factory productivity.",
+  "author": { "@id": "https://husnihalim.com/#husni-halim" },
+  "step": [
+    { "@type": "HowToStep", "name": "Measure Availability", "text": "Divide actual run time by planned production time. Track unplanned stops and changeovers." },
+    { "@type": "HowToStep", "name": "Measure Performance", "text": "Divide actual output rate by ideal rate. Identify slow cycles and minor stoppages." },
+    { "@type": "HowToStep", "name": "Measure Quality", "text": "Divide good units by total units produced. Include rework and startup scrap." },
+    { "@type": "HowToStep", "name": "Calculate OEE", "text": "Multiply Availability × Performance × Quality. World-class target is 85%." },
+    { "@type": "HowToStep", "name": "Act on the Losses", "text": "Identify your biggest loss category and run a focused Kaizen event to eliminate it." }
+  ]
+}
+</script>
+<script id="site-nav-consistency-script">
+(function(){
+  var hamburger=document.getElementById('hamburger');
+  var navLinks=document.getElementById('navLinks');
+  if(!hamburger||!navLinks||hamburger.dataset.navReady==='true') return;
+  hamburger.dataset.navReady='true';
+  function closeNav(){
+    navLinks.classList.remove('open');
+    hamburger.classList.remove('active');
+    hamburger.setAttribute('aria-expanded','false');
+    document.body.style.overflow='';
+  }
+  hamburger.addEventListener('click',function(){
+    var open=navLinks.classList.toggle('open');
+    hamburger.classList.toggle('active',open);
+    hamburger.setAttribute('aria-expanded',open?'true':'false');
+    document.body.style.overflow=open?'hidden':'';
+  });
+  navLinks.querySelectorAll('a').forEach(function(link){
+    link.addEventListener('click',closeNav);
+  });
+  document.addEventListener('keydown',function(e){
+    if(e.key==='Escape'&&navLinks.classList.contains('open')) closeNav();
+  });
+  var backdrop=document.getElementById('navBackdrop');
+  if(backdrop) backdrop.addEventListener('click',closeNav);
+})();
+</script>
+</script>
+<script src="/assets/analytics-events.js" defer></script>
+<div class="mobile-cta-bar">
+  <a href="https://wa.me/60165241901?text=Hi%20Husni,%20I%27d%20like%20to%20enquire%20about%20your%20consulting%20services." class="btn btn-outline" style="border-color:rgba(255,255,255,0.3);color:#fff;" target="_blank" rel="noopener">WhatsApp</a>
+  <a href="/#contact" class="btn btn-primary">Book a Call</a>
+</div>
+
+</body>
+</html>
