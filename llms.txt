@@ -124,6 +124,6 @@ A: Both. Experience includes multinational manufacturers and Malaysian SMEs acro
 
 # UPDATES AND VERSION
 Version: 1.0
-Last Updated: 2026-06-06
+Last Updated: 2026-07-06
 Update Frequency: Monthly or when major changes occur
-Next Review: 2026-07-06
+Next Review: 2026-08-06

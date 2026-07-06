@@ -33,6 +33,36 @@ const dateDisplay = pubDate.toLocaleDateString('en-US', {
   year: 'numeric',
   month: 'long',
 });
+
+const articleSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'BlogPosting',
+  headline: cleanTitle,
+  description,
+  image: image ? [image.replace(/&amp;/g, '&')] : ['https://husnihalim.com/assets/og-image.png'],
+  datePublished: pubDate.toISOString(),
+  dateModified: pubDate.toISOString(),
+  author: {
+    '@type': 'Person',
+    name: 'Mohd Husni Bin Abd Halim',
+    url: 'https://husnihalim.com/',
+  },
+  publisher: {
+    '@type': 'Organization',
+    name: 'Visi Armada Consulting',
+    url: 'https://husnihalim.com/',
+    logo: {
+      '@type': 'ImageObject',
+      url: 'https://husnihalim.com/assets/og-image.png',
+    },
+  },
+  mainEntityOfPage: {
+    '@type': 'WebPage',
+    '@id': `https://husnihalim.com/blog/${post.slug}/`,
+  },
+  articleSection: category,
+  keywords: tags?.join(', '),
+};
 ---
 
 <BaseLayout
@@ -42,8 +72,10 @@ const dateDisplay = pubDate.toLocaleDateString('en-US', {
   ogImage={image}
   ogType="article"
   publishedTime={pubDate.toISOString()}
+  modifiedTime={pubDate.toISOString()}
 >
   <Nav slot="nav" />
+  <script type="application/ld+json" set:html={JSON.stringify(articleSchema)} />
 
   <main id="main-content">
     <div class="post-hero">
