@@ -128,8 +128,7 @@
     { name: "Taylor's University", display: "Taylor's University", small: true },
     { name: "Federation of Malaysian Manufacturers (FMM)", display: "FMM", small: true },
     { name: "Help University", display: "Help University", small: true },
-    { name: "Datasonic Sdn Bhd", display: "Datasonic", small: true },
-  ];
+    { name: "Datasonic Sdn Bhd", display: "Datasonic", small: true }];
 
   /* ---- ANNOUNCEMENTS ----
      type  : badge label (e.g. "New Client", "Program", "Blog")
@@ -139,34 +138,6 @@
      date  : ISO date string YYYY-MM-DD (used for "NEW" badge)
   */
   const SITE_ANNOUNCEMENTS = [
-    {
-      type: "Blog",
-      title: "Verify Kaizen Gains Across Shifts",
-      url: "/blog/verify-kaizen-improvements-across-shifts/",
-      meta: "Supervisor Kaizen · Verification and standard work",
-      date: "2026-09-09"
-    },
-    {
-      type: "Training",
-      title: "FMM — Production Planning and Control Certification Program",
-      url: "/portfolio/fmm-production-planning-control-certification/",
-      meta: "August 2026 · 5-day certification programme",
-      date: "2026-08-22"
-    },
-    {
-      type: "Training",
-      title: "PlastiTechnic — 8D Reporting Course",
-      url: "/portfolio/plastitechnic-8d-reporting-course/",
-      meta: "August 2026 · 2-day practical problem-solving course",
-      date: "2026-08-22"
-    },
-    {
-      type: "Engagement",
-      title: "MABES — Supervisory Coaching Series",
-      url: "/portfolio/mabes-supervisory-coaching-series/",
-      meta: "August 2026 · Cohorts 3 and 4 · Project PACE",
-      date: "2026-08-22"
-    },
     {
       type: "New Client",
       title: "Taylor's University Engineering Labs — 5S Consulting",
