@@ -3,14 +3,14 @@
 
   <url>
     <loc>https://husnihalim.com/</loc>
-    <lastmod>2026-05-09</lastmod>
+    <lastmod>2026-08-22</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
 
   <url>
     <loc>https://husnihalim.com/blog/</loc>
-    <lastmod>2026-07-01</lastmod>
+    <lastmod>2026-09-09</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
@@ -24,21 +24,21 @@
 
   <url>
     <loc>https://husnihalim.com/consulting/</loc>
-    <lastmod>2026-05-09</lastmod>
+    <lastmod>2026-08-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
 
   <url>
     <loc>https://husnihalim.com/oee-calculator/</loc>
-    <lastmod>2026-05-09</lastmod>
+    <lastmod>2026-08-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
 
   <url>
     <loc>https://husnihalim.com/production-line-improvement-malaysia/</loc>
-    <lastmod>2026-05-09</lastmod>
+    <lastmod>2026-08-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
@@ -73,7 +73,7 @@
 
   <url>
     <loc>https://husnihalim.com/hrdc-training/tpm/</loc>
-    <lastmod>2026-05-09</lastmod>
+    <lastmod>2026-08-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.85</priority>
   </url>
@@ -101,14 +101,14 @@
 
   <url>
     <loc>https://husnihalim.com/blog/oee-training-malaysia/</loc>
-    <lastmod>2026-05-09</lastmod>
+    <lastmod>2026-07-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
     <loc>https://husnihalim.com/blog/why-kaizen-events-fail/</loc>
-    <lastmod>2026-05-09</lastmod>
+    <lastmod>2026-07-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -233,6 +233,48 @@
   </url>
 
   <url>
+    <loc>https://husnihalim.com/blog/coaching-operators-without-blame-supervisor-kaizen/</loc>
+    <lastmod>2026-07-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://husnihalim.com/blog/5s-sustainment-supervisor-kaizen/</loc>
+    <lastmod>2026-07-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://husnihalim.com/blog/from-firefighting-to-daily-improvement-supervisor-kaizen/</loc>
+    <lastmod>2026-08-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://husnihalim.com/blog/supervisor-standard-work-daily-kaizen/</loc>
+    <lastmod>2026-08-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://husnihalim.com/blog/abnormality-escalation-supervisor-kaizen/</loc>
+    <lastmod>2026-08-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://husnihalim.com/blog/first-piece-confirmation-supervisor-kaizen/</loc>
+    <lastmod>2026-09-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
     <loc>https://husnihalim.com/blog/production-targets-missed-supervisor-kaizen/</loc>
     <lastmod>2026-05-09</lastmod>
     <changefreq>monthly</changefreq>
@@ -283,9 +325,63 @@
 
   <url>
     <loc>https://husnihalim.com/portfolio/</loc>
-    <lastmod>2026-06-17</lastmod>
+    <lastmod>2026-08-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://husnihalim.com/case-studies/</loc>
+    <lastmod>2026-08-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://husnihalim.com/portfolio/taylors-university-engineering-labs-5s-consulting/</loc>
+    <lastmod>2026-08-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://husnihalim.com/portfolio/fmm-production-planning-control-certification/</loc>
+    <lastmod>2026-08-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://husnihalim.com/portfolio/mabes-supervisory-coaching-series/</loc>
+    <lastmod>2026-08-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://husnihalim.com/portfolio/plastitechnic-8d-reporting-course/</loc>
+    <lastmod>2026-08-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://husnihalim.com/portfolio/pesaka-nuri-data-analysis-rca-consulting/</loc>
+    <lastmod>2026-08-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://husnihalim.com/portfolio/petronas-kaizen-principles-august-training/</loc>
+    <lastmod>2026-08-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://husnihalim.com/portfolio/petronas-carigali-psm-kaizen-training/</loc>
+    <lastmod>2026-06-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://husnihalim.com/portfolio/pos-logistic-plb-workshop/</loc>
+    <lastmod>2026-02-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://husnihalim.com/portfolio/pesaka-nuri-training-update/</loc>
@@ -331,4 +427,11 @@
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
+  <url>
+    <loc>https://husnihalim.com/blog/verify-kaizen-improvements-across-shifts/</loc>
+    <lastmod>2026-09-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
 </urlset>
