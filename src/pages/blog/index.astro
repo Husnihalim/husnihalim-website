@@ -7,8 +7,27 @@ const posts = await getCollection('blog');
 posts.sort((a, b) => new Date(b.data.pubDate).getTime() - new Date(a.data.pubDate).getTime());
 ---
 
-<BaseLayout title="Blog | Lean Manufacturing & Kaizen Insights" description="Practical lean manufacturing, Kaizen, OEE, and continuous improvement insights from HRDC certified consultant Husni Halim. For Malaysian manufacturing leaders and SMEs." canonical="https://husnihalim.com/blog/">
+<BaseLayout title="Blog | Lean Manufacturing & Kaizen Insights" description="Practical lean manufacturing, Kaizen, OEE, and improvement guides for Malaysian manufacturers from HRDC-certified consultant Husni Halim." canonical="https://husnihalim.com/blog/">
   <Nav slot="nav" />
+
+  
+  <script type="application/ld+json" set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    "name": "Blog | Lean Manufacturing & Kaizen Insights",
+    "url": "https://husnihalim.com/blog/",
+    "description": "Practical lean manufacturing, Kaizen, OEE, and improvement guides for Malaysian manufacturers from HRDC-certified consultant Husni Halim.",
+    "isPartOf": { "@type": "WebSite", "name": "Husni Halim", "url": "https://husnihalim.com/" },
+    "mainEntity": {
+      "@type": "ItemList",
+      "itemListElement": posts.slice(0, 20).map((post, i) => ({
+        "@type": "ListItem",
+        "position": i + 1,
+        "url": `https://husnihalim.com/blog/${post.slug}/`,
+        "name": post.data.title
+      }))
+    }
+  })} />
 
   <main id="main-content">
     <div class="blog-hero">

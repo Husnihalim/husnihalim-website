@@ -125,6 +125,8 @@
     /* ----- added after initial list ----- */
     { name: "Petronas Carigali Sdn Bhd", display: "Petronas Carigali", small: true },
     { name: "Pesaka Nuri", display: "Pesaka Nuri", small: true },
+    { name: "Taylor's University", display: "Taylor's University", small: true },
+    { name: "Federation of Malaysian Manufacturers (FMM)", display: "FMM", small: true },
     { name: "Help University", display: "Help University", small: true },
     { name: "Datasonic Sdn Bhd", display: "Datasonic", small: true },
   ];
@@ -138,9 +140,58 @@
   */
   const SITE_ANNOUNCEMENTS = [
     {
+      type: "Blog",
+      title: "Verify Kaizen Gains Across Shifts",
+      url: "/blog/verify-kaizen-improvements-across-shifts/",
+      meta: "Supervisor Kaizen · Verification and standard work",
+      date: "2026-09-09"
+    },
+    {
+      type: "Training",
+      title: "FMM — Production Planning and Control Certification Program",
+      url: "/portfolio/fmm-production-planning-control-certification/",
+      meta: "August 2026 · 5-day certification programme",
+      date: "2026-08-22"
+    },
+    {
+      type: "Training",
+      title: "PlastiTechnic — 8D Reporting Course",
+      url: "/portfolio/plastitechnic-8d-reporting-course/",
+      meta: "August 2026 · 2-day practical problem-solving course",
+      date: "2026-08-22"
+    },
+    {
+      type: "Engagement",
+      title: "MABES — Supervisory Coaching Series",
+      url: "/portfolio/mabes-supervisory-coaching-series/",
+      meta: "August 2026 · Cohorts 3 and 4 · Project PACE",
+      date: "2026-08-22"
+    },
+    {
+      type: "New Client",
+      title: "Taylor's University Engineering Labs — 5S Consulting",
+      url: "/portfolio/taylors-university-engineering-labs-5s-consulting/",
+      meta: "August 2026 · 11-day workshop and practical activities",
+      date: "2026-08-16"
+    },
+    {
+      type: "Consulting",
+      title: "Pesaka Nuri — Data Analysis and RCA Consulting",
+      url: "/portfolio/pesaka-nuri-data-analysis-rca-consulting/",
+      meta: "July 2026 · Day 6 of 15-day engagement",
+      date: "2026-07-31"
+    },
+    {
+      type: "New Client",
+      title: "Petronas — Kaizen Principles Training",
+      url: "/portfolio/petronas-kaizen-principles-august-training/",
+      meta: "August 2026 · Different department",
+      date: "2026-08-16"
+    },
+    {
       type: "New Client",
       title: "Petronas Carigali PSM — Kaizen Principles Training",
-      url: "/portfolio/petronas-cargali-psm-kaizen-training/",
+      url: "/portfolio/petronas-carigali-psm-kaizen-training/",
       meta: "June 2026 · PECC Kerteh · PSM department",
       date: "2026-06-27"
     },
@@ -192,13 +243,6 @@
       url: "/hrdc-training/ai-industry-4-0/",
       meta: "Practical manufacturing use cases",
       date: "2025-12-20"
-    },
-    {
-      type: "Engagement",
-      title: "MAB Engineering Coaching Series 2026",
-      url: "/portfolio/#results",
-      meta: "Aviation MRO · Kaizen for LAEs",
-      date: "2026-04-01"
     }
   ];
 
