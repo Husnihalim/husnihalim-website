@@ -1,3 +1,4 @@
+const { enquirySource, sourceRows } = require('./lib/enquiry-source.cjs');
 const RESEND_API_KEY = process.env.RESEND_API_KEY;
 const MAILERLITE_API_KEY = process.env.MAILERLITE_API_KEY;
 const NOTIFICATION_EMAIL = process.env.CONTACT_NOTIFICATION_EMAIL || 'admin@visiarmada.com';
@@ -175,7 +176,9 @@ async function addToMailerLite(data) {
 exports.handler = async function submissionCreated(event) {
   try {
     const payload = getPayload(event);
-    const data = payload.data || payload;
+    const data = { ...(payload.data || payload) };
+    Object.assign(data, enquirySource(data, 'husni'));
+    if ('page' in data) data.page = data.sourcePage;
     const formName = payload.form_name || payload.formName || data['form-name'] || 'website-form';
     if (isLikelyBotSubmission(data)) {
       return { statusCode: 200, body: 'OK' };
@@ -189,7 +192,7 @@ exports.handler = async function submissionCreated(event) {
     const email = getField(data, ['email']);
     const submittedAt = new Date().toLocaleString('en-MY', { timeZone: 'Asia/Kuala_Lumpur' });
     const rows = Object.entries(data)
-      .filter(([key]) => key !== 'bot-field')
+      .filter(([key]) => !['bot-field', 'sourceWebsite', 'sourcePage', 'sourceForm'].includes(key))
       .map(([key, value]) => `
         <tr>
           <td style="padding:8px 12px;border-bottom:1px solid #e5e7eb;color:#6b7280;width:140px;">${escapeHtml(key)}</td>
@@ -202,14 +205,14 @@ exports.handler = async function submissionCreated(event) {
         to: NOTIFICATION_EMAIL,
         cc: CC_EMAILS,
         replyTo: email,
-        subject: `New ${formName} submission: ${fullName}`,
+        subject: `[${data.sourceWebsite}] New ${formName} submission: ${fullName}`,
         html: `<!doctype html>
 <html>
 <body style="font-family:Arial,sans-serif;background:#f6f7f9;margin:0;padding:24px;color:#111827;">
   <div style="max-width:680px;margin:0 auto;background:#fff;border-radius:10px;padding:28px;border:1px solid #e5e7eb;">
     <h2 style="margin:0 0 6px;color:#111827;">New website form submission</h2>
     <p style="margin:0 0 18px;color:#6b7280;">${escapeHtml(formName)} submitted at ${escapeHtml(submittedAt)} (KL)</p>
-    <table style="width:100%;border-collapse:collapse;">${rows}</table>
+    <table style="width:100%;border-collapse:collapse;">${sourceRows(data)}${rows}</table>
   </div>
 </body>
 </html>`,

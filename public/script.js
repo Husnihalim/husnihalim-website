@@ -184,6 +184,8 @@
  const formData = new FormData(this);
  const data = Object.fromEntries(formData.entries());
  data.site = SITE_ID;
+      data.sourcePage = location.origin + location.pathname;
+      data.sourceForm = this.getAttribute('name') || this.id || 'contact';
  const btn = this.querySelector('.btn-submit');
  const originalText = btn.textContent;
 

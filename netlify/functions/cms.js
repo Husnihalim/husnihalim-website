@@ -1,3 +1,4 @@
+const { enquirySource, sourceRows } = require('./lib/enquiry-source.cjs');
 // Netlify Serverless Function - Multi-Site CMS API v2
 // Full CMS with media library, text styling, section backgrounds, theme control
 // Supports multiple sites: vac (default) and husni
@@ -240,13 +241,13 @@ async function sendContactNotification(submission) {
  to: CONTACT_NOTIFICATION_EMAIL,
  cc: CONTACT_CC_EMAILS,
  replyTo: email,
- subject: `New website enquiry: ${subjectName}`,
+ subject: `[${submission.sourceWebsite}] New website enquiry: ${subjectName}`,
  html: `<!doctype html>
 <html>
 <body style="font-family:Arial,sans-serif;background:#f6f7f9;margin:0;padding:24px;color:#111827;">
   <div style="max-width:620px;margin:0 auto;background:#fff;border-radius:10px;padding:28px;border:1px solid #e5e7eb;">
     <h2 style="margin:0 0 18px;color:#111827;">New website enquiry</h2>
-    <table style="width:100%;border-collapse:collapse;">
+    <table style="width:100%;border-collapse:collapse;">${sourceRows(submission)}
       <tr><td style="padding:8px 0;color:#6b7280;width:120px;">Name</td><td style="padding:8px 0;"><strong>${name}</strong></td></tr>
       <tr><td style="padding:8px 0;color:#6b7280;">Email</td><td style="padding:8px 0;"><a href="mailto:${safeEmail}">${safeEmail}</a></td></tr>
       <tr><td style="padding:8px 0;color:#6b7280;">Company</td><td style="padding:8px 0;">${company}</td></tr>
@@ -728,6 +729,7 @@ exports.handler = async (event) => {
  submission.timestamp = new Date().toISOString();
  submission.id = Date.now().toString(36) + Math.random().toString(36).slice(2, 7);
  submission.site = submissionSite;
+      Object.assign(submission, enquirySource(submission, 'husni'));
  const submissions = await getData('submissions', submissionSite);
  submissions.push(submission);
  await setData('submissions', submissions, submissionSite);
