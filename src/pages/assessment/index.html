@@ -1122,6 +1122,8 @@
     btn.textContent = 'Sending…';
 
     var data = new FormData(form);
+    data.set('sourcePage', location.origin + location.pathname);
+    data.set('sourceForm', 'floor-assessment');
     fetch('/.netlify/functions/submit-form', {
       method: 'POST',
       headers: { 'Content-Type': 'application/x-www-form-urlencoded' },

@@ -141,21 +141,21 @@
     {
       type: "New Client",
       title: "Taylor's University Engineering Labs — 5S Consulting",
-      url: "/portfolio/taylors-university-engineering-labs-5s-consulting/",
+      url: "https://visiarmada.com/portfolio/taylors-university-engineering-labs-5s-consulting/",
       meta: "August 2026 · 11-day workshop and practical activities",
       date: "2026-08-16"
     },
     {
       type: "Consulting",
       title: "Pesaka Nuri — Data Analysis and RCA Consulting",
-      url: "/portfolio/pesaka-nuri-data-analysis-rca-consulting/",
+      url: "https://visiarmada.com/portfolio/pesaka-nuri-data-analysis-rca-consulting/",
       meta: "July 2026 · Day 6 of 15-day engagement",
       date: "2026-07-31"
     },
     {
       type: "New Client",
       title: "Petronas — Kaizen Principles Training",
-      url: "/portfolio/petronas-kaizen-principles-august-training/",
+      url: "https://visiarmada.com/portfolio/petronas-kaizen-principles-august-training/",
       meta: "August 2026 · Different department",
       date: "2026-08-16"
     },

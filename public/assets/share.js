@@ -123,7 +123,9 @@
       formData.forEach(function (value, key) {
         data[key] = value;
       });
-      data.page = window.location.href;
+      data.page = window.location.origin + window.location.pathname;
+      data.sourcePage = data.page;
+      data.sourceForm = data['form-name'] || 'blog-enquiry';
 
       if (submit) {
         submit.disabled = true;

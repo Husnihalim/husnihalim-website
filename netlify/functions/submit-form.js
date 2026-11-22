@@ -1,3 +1,4 @@
+const { enquirySource, sourceRows } = require('./lib/enquiry-source.cjs');
 // ============================================================
 // Netlify Serverless Function: submit-form.js
 // Called directly by the floor-assessment form via fetch().
@@ -118,6 +119,7 @@ exports.handler = async function(event) {
 
   try {
     const params    = new URLSearchParams(event.body);
+    const source = enquirySource(Object.fromEntries(params), 'husni');
     if (isLikelyBotSubmission(params)) {
       return {
         statusCode: 200,
@@ -175,7 +177,7 @@ td:first-child{color:#666;width:80px}
 .a{margin-top:20px;padding:16px;background:#f0fdf4;border-radius:6px;font-size:14px}
 </style></head><body><div class="c">
 <h2>New Floor Assessment Request</h2>
-<table>
+<table>${sourceRows(source)}
 <tr><td>Name</td><td><strong>${fullName}</strong></td></tr>
 <tr><td>Email</td><td><a href="mailto:${email}">${email}</a></td></tr>
 <tr><td>Phone</td><td>${phone}</td></tr>
@@ -187,7 +189,7 @@ td:first-child{color:#666;width:80px}
     // Send the visitor and owner emails together; keep MailerLite from blocking the lead notification.
     await Promise.all([
       sendEmail({ to: email, toName: fullName, replyTo: REPLY_TO_EMAIL, subject: "I received your floor assessment request - Husni Halim", html: visitorHtml }),
-      sendEmail({ to: YOUR_EMAIL, cc: CC_EMAILS, subject: `New lead: ${fullName} requested a floor assessment`, html: husniHtml }),
+      sendEmail({ to: YOUR_EMAIL, cc: CC_EMAILS, subject: `[${source.sourceWebsite}] New lead: ${fullName} requested a floor assessment`, html: husniHtml }),
     ]);
     addToMailerLite(email, firstname, lastname).catch(function(error) {
       console.error("MailerLite:", error);
